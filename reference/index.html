@@ -1,0 +1,1331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://ragdolldynamics.com/reference/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="search" type="application/opensearchdescription+xml" href="../search.xml" title="Learn Ragdoll Search">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>Reference - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.699f7955.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.47d7edde.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#menu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Learn Ragdoll
+          </span>
+        </div>
+        <div class="md-header-nav__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header-nav__options">
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../download/" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Reference
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#menu" class="md-nav__link">
+    Menu
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+    <nav class="md-nav" aria-label="Create">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-rigid" class="md-nav__link">
+    Active Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-rigid" class="md-nav__link">
+    Passive Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muscle" class="md-nav__link">
+    Muscle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-rigid" class="md-nav__link">
+    Convert Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-constraint" class="md-nav__link">
+    Convert Constraint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point" class="md-nav__link">
+    Point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orient" class="md-nav__link">
+    Orient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent" class="md-nav__link">
+    Parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    Socket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge" class="md-nav__link">
+    Hinge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    Character
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-control" class="md-nav__link">
+    Dynamic Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-global-scale" class="md-nav__link">
+    Edit Global Scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    Node Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Node Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scene" class="md-nav__link">
+    Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigid" class="md-nav__link">
+    Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint_1" class="md-nav__link">
+    Constraint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    
+    <label class="md-nav__link" for="nav-5">
+      Releases
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Releases" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.12.07/" class="md-nav__link">
+      2020.12.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.12.01/" class="md-nav__link">
+      2020.12.01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.24/" class="md-nav__link">
+      2020.11.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.23/" class="md-nav__link">
+      2020.11.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.22/" class="md-nav__link">
+      2020.11.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.17/" class="md-nav__link">
+      2020.11.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.16/" class="md-nav__link">
+      2020.11.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.10/" class="md-nav__link">
+      2020.11.10
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#menu" class="md-nav__link">
+    Menu
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+    <nav class="md-nav" aria-label="Create">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-rigid" class="md-nav__link">
+    Active Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-rigid" class="md-nav__link">
+    Passive Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muscle" class="md-nav__link">
+    Muscle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-rigid" class="md-nav__link">
+    Convert Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-constraint" class="md-nav__link">
+    Convert Constraint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point" class="md-nav__link">
+    Point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orient" class="md-nav__link">
+    Orient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent" class="md-nav__link">
+    Parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    Socket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge" class="md-nav__link">
+    Hinge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    Character
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-control" class="md-nav__link">
+    Dynamic Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-global-scale" class="md-nav__link">
+    Edit Global Scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    Node Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Node Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scene" class="md-nav__link">
+    Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigid" class="md-nav__link">
+    Rigid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint_1" class="md-nav__link">
+    Constraint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                
+                  <h1>Reference</h1>
+                
+                <p><img class="hero-image" src=/car9.png></p>
+<p>A summary of concepts and commands found in Ragdoll.</p>
+<p><br></p>
+<h2 id="menu">Menu</h2>
+<p>All items found in the <code>Ragdoll</code> menu at the top of Maya's main window.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/rigid.png> Active Rigid</nobr></td>
+<td align="left">Customise the creation of a new rigid body.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/collider.png> Passive Rigid</nobr></td>
+<td align="left">Customise the creation of a new passive rigid body.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/muscle.png> Muscle</nobr></td>
+<td align="left">Make a muscle from the selected anchor points.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/constraint.png> Constraint</nobr></td>
+<td align="left">Constrain one rigid to another.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/point_constraint.png> Point</nobr></td>
+<td align="left">Constraint the position of two rigid bodies.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/orient_constraint.png> Orient</nobr></td>
+<td align="left">Constrain the orientation of two rigid bodies.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/parent_constraint.png> Parent</nobr></td>
+<td align="left">Constrain both the position and orientation of two rigid bodies.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/hinge_constraint.png> Hinge</nobr></td>
+<td align="left">A special kind of Socket Constraint</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/socket_constraint.png> Socket</nobr></td>
+<td align="left">Constraint the position and limit the orientation between two rigid bodies.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/convert.png> Convert Rigid</nobr></td>
+<td align="left">Convert selected Rigid to a different type.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/convert.png> Convert Constraint</nobr></td>
+<td align="left">Convert selected Constraint to a different type.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/kinematic.png> Kinematic</nobr></td>
+<td align="left">Animate a passive rigid body with an external transform.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/control.png> Guide</nobr></td>
+<td align="left">Animate an active rigid body with an external transform.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/magnet.png> Push</nobr></td>
+<td align="left">Create a force which acts like a magnet, pushing rigids away from it.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/magnet2.png> Pull</nobr></td>
+<td align="left">Create a force which acts like an inverse magnet, pushing rigids towards it.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/uniformforce.png> Directional</nobr></td>
+<td align="left">Create a force which acts like gravity, applying a constant force in a particular direction.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/turbulence.png> Wind</nobr></td>
+<td align="left">Create a force similar to wind, with editable turbulence.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/slice.png> Visualiser</nobr></td>
+<td align="left">Visualise 3D forces with a 2D slice, much like an MRI.</td>
+</tr>
+<tr>
+<td align="left"><nobr><p class="filler icon"></p> Assign to Selected</nobr></td>
+<td align="left">Assign force to the selected rigids.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/ragdoll.png> Character</nobr></td>
+<td align="left">Generate a character from the selected joint hierarchy.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/dynamic_control.png> Create Dynamic Control</nobr></td>
+<td align="left">Create a new <b>dynamic</b> control from the currently selected <i>regular</i> control(s).</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/frame.png> Edit Constraint Frames</nobr></td>
+<td align="left">Edit the parent and child frames using a native Maya transform.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/duplicate.png> Duplicate Selected</nobr></td>
+<td align="left">Create a new rigid, using the selected rigid as a template for position, orientation and shape.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/transfer_attributes.png> Transfer Attributes</nobr></td>
+<td align="left">Copy attributes from one rigid body to another.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/convert.png> Convert to Polygons</nobr></td>
+<td align="left">Convert selected rigids and controls into polygons.</td>
+</tr>
+<tr>
+<td align="left"><nobr><p class="filler icon"></p> Normalise shapes</nobr></td>
+<td align="left">Resize shapes within a hierarchy to avoid some being too different.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/initial_state.png> Set Initial State</nobr></td>
+<td align="left">Re-establish the starting position and orientation of selected rigids.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/delete.png> Delete All Physics</nobr></td>
+<td align="left">Clear the Maya scene of anything related to Ragdoll.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/orient_constraint.png> Edit Global Scale</nobr></td>
+<td align="left">Edit the scale at which Ragdoll draws things, like constraints.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/logo.png> Ragdoll</nobr></td>
+<td align="left">View your version, and eventually look for updates and tutorials. Not yet though.</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<img class="hero-image" src=/yoga2.png>
+<br>
+<br>
+<br></p>
+<h3 id="create">Create</h3>
+<p>The top part of the menu contain commands to create new rigids.</p>
+<p><br></p>
+<h4 id="active-rigid">Active Rigid</h4>
+<p>The rigid body, this outputs the translate and rotate channels that typically plug into your animation control. It lives as a shape, underneath your control, and is accessible via the Channel Box.<br><br>Rigids either output or input a transform. The <em>active</em> rigid outputs a transform, passing information from solver into your Maya scene.</p>
+<details class="example"><summary>Basics</summary><p><div class="overlaid-media">
+    <img src=/rigid.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Basics</h3>
+        <p>Turn any native Maya polygon or NURBS object into a rigid by selecting it and clicking 'Active Rigid'.</p>
+    </div>
+</div></p>
+</details>
+<details class="example"><summary>Multiple Selection</summary><p><div class="overlaid-media">
+    <img src=/rigid_multiselect.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Multiple Selection</h3>
+        <p>When two or more objects are selected - whether it be polygons, NURBS or joints - they'll all be turned into rigids.</p>
+    </div>
+</div></p>
+</details>
+<details class="example"><summary>Blend Existing Animation</summary><p><div class="overlaid-media">
+    <img src=/rigid_blend.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Blend Existing Animation</h3>
+        <p>If the selected node(s) are animated, the animation can be used as a target for the subsequent simulation using the 'Blend' option.</p>
+    </div>
+</div></p>
+</details>
+<details class="example"><summary>Blend and Edit</summary><p><div class="overlaid-media">
+    <img src=/rigid_blendedit.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Blend and Edit</h3>
+        <p>Once turned into rigids, your original animation remains intact and can be edited just like before. You can also blend between the original input and final simulation via the <code>blendSimulation</code> node.</p>
+    </div>
+</div></p>
+</details>
+<p><br></p>
+<h4 id="passive-rigid">Passive Rigid</h4>
+<p>Customise the creation of a new passive rigid body.</p>
+<details class="example"><summary>Basics</summary><p><div class="overlaid-media">
+    <img src=/rigid_passive.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Basics</h3>
+        <p>Turn any polygonal, NURBS surface or joint into a rigid which can be animated but isn't affected by the simulation.</p>
+    </div>
+</div></p>
+</details>
+<h4 id="muscle">Muscle</h4>
+<p>Make a muscle from the selected anchor points.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Aim Axis</td>
+<td align="left">Which axis to treat as aim for the resulting muscle.</td>
+<td align="left"><nobr><code>X</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Up Axis</td>
+<td align="left">Which axis to treat as the up-axis for the resulting muscle.</td>
+<td align="left"><nobr><code>Y</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Flex</td>
+<td align="left">How much to allow the muscle to contract, from not-at-all to all-the-way.</td>
+<td align="left"><nobr><code>0.75</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Radius</td>
+<td align="left">Capsule radius, how thick of a muscle to make.</td>
+<td align="left"><nobr><code>1.0</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<h4 id="convert-rigid">Convert Rigid</h4>
+<p>Convert selected Rigid to a different type.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Rigid Type</td>
+<td align="left">Convert a rigid from dynamic to kinematic, or vice versa. 'Auto' turns dynamic into kinematic and vice versa.</td>
+<td align="left"><nobr><code>Auto</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<h4 id="convert-constraint">Convert Constraint</h4>
+<p>Convert selected Constraint to a different type.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Convert Constraint Type</td>
+<td align="left">The type of constraint to convert to.</td>
+<td align="left"><nobr><code>Point</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<img class="hero-image" src=/car5.png>
+<br></p>
+<h3 id="constraint">Constraint</h3>
+<p>Like normal Maya constraints, these limit the motion of one rigid relative another. For example, the <code>Parent Constraint</code> will make one rigid move as though it was a child of the other, whereas the <code>Point Constraint</code> will only limit position whilst letting orientation roam free.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Constraint Type</td>
+<td align="left">The type of constraint created.</td>
+<td align="left"><nobr><code>Point</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Maintain Offset</td>
+<td align="left">Keep rigids where they are, or snap them together. Offsets can be manipulated with the Edit Constraint Frames menu item.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Auto Orient</td>
+<td align="left">Orient constraint automatically by aiming towards the immediate child. Otherwise use the local orientation of the node.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Guide Strength</td>
+<td align="left">Include some guide strength with this constraint.</td>
+<td align="left"><nobr><code>1.0</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="point">Point</h4>
+<p>Constraint the position of two rigid bodies.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/101615112-a4427b80-3a05-11eb-97c0-3a8448d64dd3.png></p>
+<p><br></p>
+<h4 id="orient">Orient</h4>
+<p>Constrain the orientation of two rigid bodies. This doesn't have a physical equivalent, as you can't have something rotate the same as another object without also having some sort of positional relationship.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/101614998-89700700-3a05-11eb-8444-de5c842b2606.png></p>
+<p><br></p>
+<h4 id="parent">Parent</h4>
+<p>Constrain both the position and orientation of two rigid bodies. Useful for when you need multiple shapes for a single rigid.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/101615021-8ffe7e80-3a05-11eb-9b1d-65ccf9d8ec99.png></p>
+<p><br></p>
+<h4 id="socket">Socket</h4>
+<p>Constraint the position and limit the orientation between two rigid bodies. Useful for things like shoulder and hip joints.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/101614998-89700700-3a05-11eb-8444-de5c842b2606.png></p>
+<p><br></p>
+<h4 id="hinge">Hinge</h4>
+<p>A special kind of Socket Constraint where the X-axis (a.k.a. 'twist') is rotated 90 degrees. This constraint is especially well suited for hinge-like appendages, like elbows and knees.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/101614979-8248f900-3a05-11eb-9a18-baa9c571a12d.png></p>
+<p><br></p>
+<h3 id="utilities">Utilities</h3>
+<p>High-level tools for animators and riggers that build upon the lower-level concepts above. Everything here can be created manually using a combination of the above commends or by making the connections yourself.</p>
+<p><br></p>
+<h4 id="character">Character</h4>
+<p>An auto-rigger, designed to produce an animatable character from a skeleton hierarchy.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Copy</td>
+<td align="left">Turn a copy of the selected hierarchy into a character, rather than the hierarchy itself.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Control</td>
+<td align="left">Create an additional control hierarchy from generated character.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Normalise Shapes</td>
+<td align="left">Make sure shapes are relatively evenly sized. This can help prevent 'stick-figures' which are tougher to control.</td>
+<td align="left"><nobr><code>False</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Stop Behaviour</td>
+<td align="left">Whether to include the joint with a 'Stop' label in the generated character or not.</td>
+<td align="left"><nobr><code>Inclusive</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="dynamic-control">Dynamic Control</h4>
+<p>Turn your regular character animation control into a rigid body, where the input animation is used as a dynamic guide for the simulation. The animation remains editable and the final result can be switched or blended between.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Shape Type</td>
+<td align="left">The initial shape to represent the selected control. Don't worry, this can be changed afterwards.<br><br>- <b>Mesh</b>: Suitable for controls that <em>wrap</em> around the model<br>- <b>Capsule</b>: Suitable for flat controls, e.g. a circle</td>
+<td align="left"><nobr><code>Mesh</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Last For Length</td>
+<td align="left">Do not turn the last selected node into a dynamic control, use it to determine capsule length of the previous control.</td>
+<td align="left"><nobr><code>False</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="edit-global-scale">Edit Global Scale</h4>
+<p>Edit the scale of manipulators and visual elements of Ragdoll, especially constriants. If you work at a scale other than Maya's currently set units, this command is your friend.</p>
+<p><img width=500 class="boxshadow" src=https://user-images.githubusercontent.com/2152766/101982250-6befa700-3c6a-11eb-8650-40dad38c9f30.png></p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Gizmo Scale</td>
+<td align="left">Scale at which to draw viewport widgets, like constraints.</td>
+<td align="left"><nobr><code>1.0</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<img class="hero-image" src=/car4.png>
+<br></p>
+<h2 id="node-types">Node Types</h2>
+<p>All roads lead to Rome. In the case of Ragdoll, all nodes plug into <code>rdScene</code> which is where simulation takes place. Anything connected to it is able to interact with each other, it is typically where all rigids, constraints and forces related to a given character connects.</p>
+<blockquote>
+<p>Each Ragdoll node starts with <code>rd</code>, e.g. <code>rdRigid</code></p>
+</blockquote>
+<h3 id="scene">Scene</h3>
+<p>Container of all rigids, constraints and forces that interact.</p>
+<p>The scene represents the knowledge each simulation has, including rigids and their properties, constraints, forces. The works. There can be more than one Ragdoll scene in your Maya scene, but much like Maya scenes they cannot interact. The order in which scenes are simulated is also undefined, so you cannot expect e.g. fingers in one solver to run after the body in another solver.</p>
+<p><br></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/101984249-04405880-3c78-11eb-8392-6e00e7afd3b6.png" /></p>
+<p><br></p>
+<h3 id="rigid">Rigid</h3>
+<p>A single transform in or out of Ragdoll.</p>
+<p>The rigid is the physical equivalent of native Maya geometry. It can either feed into the simulation (passive) or come <em>out</em> of the simulation (active).</p>
+<ul>
+<li><code>Passive Rigid</code> pass data from Maya to Ragdoll</li>
+<li><code>Active Rigid</code> pass data from Ragdoll to Maya</li>
+</ul>
+<p><br></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/101984241-fab6f080-3c77-11eb-9473-ed3a32a1fbf4.png" /></p>
+<h3 id="constraint_1">Constraint</h3>
+<p>A relationship between two rigids.</p>
+<p>Typically this relationship is something to limit one or more axes - e.g. <code>translateXYZ</code> and <code>rotateZ</code> - of one rigid relative another rigid, like a door "constrained" to a wall. In that case, the wall would be considered a "parent" and the door a "child". </p>
+<p>However it is important to keep in mind that in the real world, there is no such thing. The door is as constrained to the wall as the wall is constrained to the door. This is especially apparent when the two constrained rigids are both active and have a similar mass, such as your upper and lower leg. As you bend your knee, both the thigh and lower leg are affected equally.</p>
+<p><br></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/101984234-f12d8880-3c77-11eb-8a7b-6f3054e1ef63.png" /></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2020-12-12
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../download/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Download
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../releases/2020.12.07/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2020.12.07
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 mottosso
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d95a11d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.0f64ce30.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../extra.js"></script>
+      
+    
+  </body>
+</html>

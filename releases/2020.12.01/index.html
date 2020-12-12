@@ -1,0 +1,832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://ragdolldynamics.com/releases/2020.12.01/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="search" type="application/opensearchdescription+xml" href="../../search.xml" title="Learn Ragdoll Search">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>2020.12.01 - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.699f7955.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.47d7edde.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#active-passive-rigid-body" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Learn Ragdoll
+          </span>
+        </div>
+        <div class="md-header-nav__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2020.12.01
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header-nav__options">
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../download/" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../reference/" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Releases
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Releases" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.12.07/" class="md-nav__link">
+      2020.12.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2020.12.01
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      2020.12.01
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#active-passive-rigid-body" class="md-nav__link">
+    Active &amp; Passive Rigid Body
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-20-auto-ragger" class="md-nav__link">
+    Character 2.0 - "Auto-Ragger"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-control-capsules" class="md-nav__link">
+    Dynamic Control Capsules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalise-shapes" class="md-nav__link">
+    Normalise Shapes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-multiplier" class="md-nav__link">
+    Time Multiplier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-order" class="md-nav__link">
+    Rotate Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-orient" class="md-nav__link">
+    Auto Orient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-bug" class="md-nav__link">
+    Undo Bug
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stick-figures" class="md-nav__link">
+    Stick Figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-in-1995" class="md-nav__link">
+    Animation in 1995
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.24/" class="md-nav__link">
+      2020.11.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.23/" class="md-nav__link">
+      2020.11.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.22/" class="md-nav__link">
+      2020.11.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.17/" class="md-nav__link">
+      2020.11.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.16/" class="md-nav__link">
+      2020.11.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.10/" class="md-nav__link">
+      2020.11.10
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#active-passive-rigid-body" class="md-nav__link">
+    Active &amp; Passive Rigid Body
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-20-auto-ragger" class="md-nav__link">
+    Character 2.0 - "Auto-Ragger"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-control-capsules" class="md-nav__link">
+    Dynamic Control Capsules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalise-shapes" class="md-nav__link">
+    Normalise Shapes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-multiplier" class="md-nav__link">
+    Time Multiplier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-order" class="md-nav__link">
+    Rotate Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-orient" class="md-nav__link">
+    Auto Orient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-bug" class="md-nav__link">
+    Undo Bug
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stick-figures" class="md-nav__link">
+    Stick Figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-in-1995" class="md-nav__link">
+    Animation in 1995
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                
+                  <h1>2020.12.01</h1>
+                
+                <p><img alt="ragdoll20201201_4" src="https://user-images.githubusercontent.com/2152766/101986244-cb5ab080-3c84-11eb-85b7-d7a706a2294b.gif" /></p>
+<p>Lots of good stuff!</p>
+<ul>
+<li><a href="#active-passive-rigid-body"><strong>CHANGED</strong> Active &amp; Passive Rigid</a> More intuitive jargon for these suckers</li>
+<li><a href="#character-20-auto-ragger"><strong>CHANGED</strong> Character 2.0</a> New and improved, now with cup-holders!</li>
+<li><a href="#dynamic-control-capsules"><strong>ADDED</strong> Dynamic Control Capsules</a> For those flat controls</li>
+<li><a href="#time-multiplier"><strong>ADDED</strong> Time Multiplier</a> Speed up or slow down your simulation, can be animated!</li>
+<li><a href="#normalise-shapes"><strong>ADDED</strong> Normalise Shapes</a> Evenly distribute shapes across a hierarchy</li>
+<li><a href="#auto-orient"><strong>ADDED</strong> Auto Orient</a> Don't bother orienting your joints with this nifty automation, now the X-axis always means "length"</li>
+<li><strong>CHANGED</strong> <code>Delete all Physics</code> now also deletes Ragdoll's attributes on your animation controls, for that squeaky clean feeling</li>
+<li><a href="#rotate-order"><strong>ADDED</strong> Support for custom Rotate Order</a> means more character controls now work out-of-the-box.</li>
+<li><a href="#undo-bug"><strong>FIXED</strong> Undo bug and <code>rdRigid</code></a> The rigids should now clean up after themselves better</li>
+<li><strong>FIXED</strong> Simulation start time now uses the start <em>range</em> rather than start time, which is what you would expect</li>
+<li><a href="#stick-figures"><strong>NOTES</strong> Stick figures</a> Learn about how thickness affects your simulation</li>
+<li><a href="#animation-in-1995"><strong>NOTES</strong> Animation in 1995</a> Witness how little our industry has changed since then, let's fix that!</li>
+</ul>
+<p><br></p>
+<h3 id="active-passive-rigid-body">Active &amp; Passive Rigid Body</h3>
+<p>The terminology for "Rigid" and "Collider" wasn't clear. Surely, a "Rigid" collides too?</p>
+<p>With this release, I've updated the jargon to make a little more sense.</p>
+<ul>
+<li><code>Active Rigid</code> A rigid that moves is active</li>
+<li><code>Passive Rigid</code> A rigid that doesn't move is passive</li>
+</ul>
+<p>This also goes for the <code>kinematic</code> attribute which has been renamed <code>passive</code>, highlighting that an active rigid can made passive by flicking this switch. Backwards compatibility is preserved by keeping the underlying attribute name, and only changing it in the Channel Box and Attribute Editor (i.e. the "nice name").</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/100196847-61ef4980-2ef1-11eb-8167-908169800dca.png" /></p>
+<p><br></p>
+<h3 id="character-20-auto-ragger">Character 2.0 - "Auto-Ragger"</h3>
+<p>This release expands on the "Character" tool with some nifty new features. But since I haven't mentioned what 1.0 was capable of, here's an overall round down of what it is and when to use it.</p>
+<p><code>Character</code> is a one-click character creation tool - and <em>auto-rigger</em> (or auto-ragger, if you will). It's designed to give you the essential tools for turning any native Maya skeleton into an animatable rigid body hierarchy.</p>
+<p>Read more about it on this new dedicated page I've made for it.</p>
+<ul>
+<li><a href="/character">Character Page</a></li>
+</ul>
+<p><br></p>
+<h3 id="dynamic-control-capsules">Dynamic Control Capsules</h3>
+<p>Now Dynamic Control can be configured to generate capsules between selected controls, instead of assuming that the NURBS CVs neatly wrap around the model.</p>
+<p><strong>Current and Default behaviour</strong></p>
+<p>The tool uses the <code>Mesh</code> shape per default like before.</p>
+<p><img alt="ragdolldynamic4" src="https://user-images.githubusercontent.com/2152766/100746824-2107a100-33d9-11eb-9498-e2f4bcacff6e.gif" /></p>
+<p><strong>Alternative Capsules</strong></p>
+<p>But if your controls do not have volume, or do not nicely wrap the underlying model, you can now use Capsules instead.</p>
+<p><img alt="ragdolldynamic3" src="https://user-images.githubusercontent.com/2152766/100735662-82277880-33c9-11eb-9704-a154d9077ae8.gif" /></p>
+<p>The caveat with capsules is that the tool cannot know how <em>long</em> to make your capsules. Therefore, there is an option to use the last-selected node as a hint for how long to make it.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/100737665-5a85df80-33cc-11eb-8e3f-a1341a0a6b4a.png" /></p>
+<p>In this example, 5 nodes selected, 1 passive and 3 active rigids comes out. If you don't use a last selection for length, the last selected capsule will have a length of 0 (it'll be a sphere). That can work in some cases, but is generally discouraged. The center of mass would be wrong and you should expect unrealistic results until you tweak it to fit your model.</p>
+<p>Gathering information about Dynamic Control on the..</p>
+<ul>
+<li><a href="/dynamiccontrol">Dynamic Control Page</a></li>
+</ul>
+<p><br></p>
+<h3 id="normalise-shapes">Normalise Shapes</h3>
+<p>An early version of the "Normalise Sizes" tool, meant to more evenly distribute sizes of shapes across a hierarchy. Per default, shapes are sized based on the geometry of the Maya node. If it's a box, it'll get the dimensions of the box. If it's a joint, it'll get the length and radius of that joint.</p>
+<p>But because this mechanism can't see past the one node it's looking at, it's an uphill battle making shapes evenly distributed in a greater network.</p>
+<p>The "Normalise Sizes" tool is meant to address that.</p>
+<p><img alt="ragdollorient" src="https://user-images.githubusercontent.com/2152766/100626183-65356b80-331d-11eb-9377-262eb779ead8.gif" /></p>
+<p>It's still early, and a few things are missing.</p>
+<ol>
+<li><strong>Resolve Self-intersections</strong> These are more likely to happen the larger shapes get.</li>
+<li><strong>Handle spine</strong> It tends to become too thin and desperately needs to be thickened up</li>
+</ol>
+<p><br></p>
+<h3 id="time-multiplier">Time Multiplier</h3>
+<p>Now you can speed up or slow down your simulation with a multiplier attribute found on the <code>rdScene</code> node!</p>
+<ul>
+<li>If you need something happening <em>really-really fast</em>, don't forget to also up your <code>Substeps</code>.</li>
+<li>If you need something <em>even</em> faster, like a bullet moving across the room in 2 frames, activate <code>Continuous Collision Detection</code> to prevent it from flying through stuff without noticing.</li>
+<li>
+<p>For anything slower than real-time, remember contacts and constraints are solved each frame, so more frames means more accurate simulation. If you don't like that, you can either (1) half the substeps alongside halving time or (2) bake out the simulation and scale the bake instead.</p>
+</li>
+<li>
+<p><a href="https://files.ragdolldynamics.com/share/aYAN53w-">Example Scene</a></p>
+</li>
+</ul>
+<p><img alt="ragdollslowmo" src="https://user-images.githubusercontent.com/2152766/100639365-fa8c2c00-332c-11eb-86e7-a10a74e6fe15.gif" /></p>
+<p><br></p>
+<h3 id="rotate-order">Rotate Order</h3>
+<p>Now rigids plya well with non-standard rotation orders, very common your everyday character animation rigs to ensure axes don't go gimbal.</p>
+<p><img alt="ragdollrotateorder" src="https://user-images.githubusercontent.com/2152766/100214905-522f2f80-2f08-11eb-9f13-33ac275e00d1.gif" /></p>
+<blockquote>
+<p>Thanks to Peter Jemstedt for help on this one!</p>
+</blockquote>
+<p><br></p>
+<h3 id="auto-orient">Auto Orient</h3>
+<p>Shapes and constraints can now be automatically oriented based on the parent and child of each joint (soon coming to controls). This should help sort out those pesky joint orientations any manner of skeletons.</p>
+<p><img alt="ragdollautoorient" src="https://user-images.githubusercontent.com/2152766/100625476-7f227e80-331c-11eb-80ad-caf744f7f0a0.gif" /></p>
+<p><br></p>
+<h3 id="undo-bug">Undo Bug</h3>
+<p>There was this nasty bug that caused <code>rdRigid</code> nodes to remain behind after creating and then undoing. But what got left behind wasn't your normal nodes. They only appeared in the Node Editor and could not be selected or even deleted. They would show themselves out when re-opening the Maya scene which is great.</p>
+<p><img alt="ragdollundobug" src="https://user-images.githubusercontent.com/2152766/100438154-b0d7e300-3099-11eb-924f-6427214f1ec0.gif" /></p>
+<p>This visibility isn't a problem in itself, if it wasn't for them also being visible from Python. If any command needed to know "hey, animation control, are you connected to a rigid?" then it would happily reply "yes! for sure!".</p>
+<p>And that's bad. But not anymore, because it's fixed!</p>
+<p><br></p>
+<h3 id="stick-figures">Stick Figures</h3>
+<p>In a <a href="/releases/2020.11.23">previous release</a> I touched on <a href="/releases/2020.11.23#angular-mass">"angular mass"</a> and what it meant for your simulations.</p>
+<p>Let's look at this in practice.</p>
+<p><img alt="ragdolldance2" src="https://user-images.githubusercontent.com/2152766/100082488-33656600-2e40-11eb-93a5-02429565672f.gif" />
+<img alt="ragdolldancethin" src="https://user-images.githubusercontent.com/2152766/100082505-3a8c7400-2e40-11eb-96d7-43e2f513ea94.gif" /></p>
+<p>Here's one character with identical settings, the only difference is the radius of her capsules, and yet the move differently. Why is that?</p>
+<p>Remember that angular mass is 3-dimensional. Just like normal mass, when mass is high, more force is required to introduce motion. In the case of angular mass, the force required is divided into three axes.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/100083039-d9b16b80-2e40-11eb-9f7d-d3e6dc6114d8.png" /></p>
+<p>In this illustration, the angular mass along the X axis is much larger than Y and Z, so in to rotate around this axis you need much more force than the other two axes.</p>
+<p>There is however only 1 value for "guide strength". You can think of this force as being distributed across each axis, relative its mass.</p>
+<p>For example, if your <code>Guide Strength</code> is 10.0, then the distribution might look something like this.</p>
+<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Y</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Z</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Whereas if <code>angularMassX</code> was equal like a square cube..</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/100088130-99092080-2e47-11eb-9a9d-f40dc0394e42.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Y</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Z</span> <span class="n">Strength</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+<p>In light of this, what are your options?</p>
+<ol>
+<li><strong>Fit your geometry</strong> The most realistic behaviour is what you get when model your shapes to the geometry you are animating.</li>
+<li><strong>Adjust to taste</strong> If there is no geometry, or if the geometry is of an <em>actual</em> stick figure that you would like to act like a person, thicknen up your shapes. To separate between behaviour and collisions, add a second rigid and disable collisions on the first.</li>
+<li><strong>Edit <code>angularMass</code></strong> The least intrusive but perhaps most complex option is to manually specify a preferred angular mass.</li>
+</ol>
+<p>Here's the scene and one more gif to keep you warm at night.</p>
+<ul>
+<li><a href="https://files.ragdolldynamics.com/share/rKN1sryQ">https://files.ragdolldynamics.com/share/rKN1sryQ</a></li>
+</ul>
+<p><img alt="ragdolldance" src="https://user-images.githubusercontent.com/2152766/100082496-36605680-2e40-11eb-99e7-0bd632508de0.gif" /></p>
+<p>Some things to experiment with:</p>
+<ol>
+<li>What if she has a really heavy head?</li>
+<li>..really heavy <em>hand</em>?</li>
+<li>What if the <code>Guide Strength</code> was halved?</li>
+<li>..or 10x?!</li>
+<li>What if you remove <code>Guide Strength</code> on her hip?</li>
+<li>What if you add an extra <code>Guide</code> to her head?</li>
+</ol>
+<p><br></p>
+<h3 id="animation-in-1995">Animation in 1995</h3>
+<p>Stumbled upon this (thanks Jarl!) which I think is a great example of what I think we're ready to move away from as an industry. :)</p>
+<ul>
+<li><a href="https://twitter.com/jeandenishaas/status/1330671654477860864">https://twitter.com/jeandenishaas/status/1330671654477860864</a></li>
+</ul>
+<p>Here's a prediction for you - about a year from now, you won't be keyframing anymore. You'll be <em>recording</em>.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2020-12-12
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../2020.12.07/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2020.12.07
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2020.11.24/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2020.11.24
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 mottosso
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d95a11d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.0f64ce30.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../../extra.js"></script>
+      
+    
+  </body>
+</html>
