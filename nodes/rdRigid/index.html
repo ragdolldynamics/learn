@@ -1,0 +1,978 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/nodes/rdRigid/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="search" type="application/opensearchdescription+xml" href="../../search.xml" title="Learn Ragdoll Search">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>Rigid - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.699f7955.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.47d7edde.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attributes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Learn Ragdoll
+          </span>
+        </div>
+        <div class="md-header-nav__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rigid
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header-nav__options">
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../download/" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../reference/" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Nodes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Nodes" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../rdScene/" class="md-nav__link">
+      Scene
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Rigid
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Rigid
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../rdConstraint/" class="md-nav__link">
+      Constraint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    
+    <label class="md-nav__link" for="nav-7">
+      Releases
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Releases" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.12.07/" class="md-nav__link">
+      2020.12.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.12.01/" class="md-nav__link">
+      2020.12.01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.24/" class="md-nav__link">
+      2020.11.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.23/" class="md-nav__link">
+      2020.11.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.22/" class="md-nav__link">
+      2020.11.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.17/" class="md-nav__link">
+      2020.11.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.16/" class="md-nav__link">
+      2020.11.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/2020.11.10/" class="md-nav__link">
+      2020.11.10
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                
+                  <h1>Rigid</h1>
+                
+                <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/101984241-fab6f080-3c77-11eb-9473-ed3a32a1fbf4.png" /></p>
+<p>Reference sheet for the <code>rdRigid</code> node type.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;rdRigid&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Keyable</th>
+<th align="left">Type</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.airDensity</code></td>
+<td align="left">Multiplier of both <code>linearDamping</code> and <code>angularDamping</code>. The two damping attributes are typically used together, but can also be used separately in which case this attribute could be left at 1.0 and forgotten.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.angularDamping</code></td>
+<td align="left">Resistance along the opposite direction of rotation for a rigid. Like <code>linearDamping</code> but along the rotation axes.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.angularMass</code></td>
+<td align="left">Like mass, but for changes in orientation.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float3</code></nobr></td>
+<td align="left">-1.0<br>-1.0<br>-1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.centerOfMass</code></td>
+<td align="left">The point at which a rigid may be balanced Or put another way, the point whereby the weight of a rigid is equal in all directions.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.collide</code></td>
+<td align="left">Whether this rigid should collide with other rigids. This can be useful in areas of many overlapping rigids that aren't necessarily constrained, such as a shoulder or hip.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">True</td>
+</tr>
+<tr>
+<td align="left"><code>.color</code></td>
+<td align="left">Color of the rigid when drawn in the viewport, used for vertex color when used as polygons.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float3</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.currentState</code></td>
+<td align="left">The scene pulls this attribute <em>on every frame</em> to update itself on attributes that can be animated, such as the linear and angular damping.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.currentTime</code></td>
+<td align="left">This attribute is meant to be dirtied whenever time changes; it's how a rigid keeps an eye on what Maya is up to. The actual value isn't used.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>time</code></nobr></td>
+<td align="left">0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.drawShaded</code></td>
+<td align="left">Whether to draw this rigid shaded or wireframe-only.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">True</td>
+</tr>
+<tr>
+<td align="left"><code>.enabled</code></td>
+<td align="left">Whether or not to include this node in the simulation. A value of False is the same as the node not existing in the first place.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">True</td>
+</tr>
+<tr>
+<td align="left"><code>.friction</code></td>
+<td align="left">The resistance at which two rigids rub against each other. A value of 0 creates an appearance of ice, whereas a value of 1.0 represents 100% friction, no sliding allowed. The value may exceed 1.0, but it is unclear what happens. Use at your own risk.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">0.8</td>
+</tr>
+<tr>
+<td align="left"><code>.inputCurve</code></td>
+<td align="left">NURBS input to the <code>Mesh</code> shape type.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>nurbsCurve</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.inputForce</code></td>
+<td align="left">An array attribute with references to all forces that act upon this rigid.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.inputMatrix</code></td>
+<td align="left">Passive position and orientation, this may be animated.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>matrix</code></nobr></td>
+<td align="left">identity</td>
+</tr>
+<tr>
+<td align="left"><code>.inputMesh</code></td>
+<td align="left">Polygonal input to the <code>Mesh</code> shape type.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>mesh</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.inputParentInverseMatrix</code></td>
+<td align="left">Used to cancel out any Maya parent prior to outputting the outputMatrix.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>matrix</code></nobr></td>
+<td align="left">identity</td>
+</tr>
+<tr>
+<td align="left"><code>.jointOrient</code></td>
+<td align="left">Input attribute for the formatting of outputMatrix.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>angle3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.kinematic</code></td>
+<td align="left">Whether this rigid should be affected by contacts, constraints and forces.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left"><code>.linearDamping</code></td>
+<td align="left">Resistance in the opposite direction of travel for a rigid. This creates an underwater look, or at high-enough values resembles honey or eventually cement.</td>
+<td align="left">✔️</td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.mass</code></td>
+<td align="left">The 'weight' of a rigid. Except 'weight' is technically the result of mass and gravity, and a rigid still has mass even when there isn't any gravity. This attribute is mostly relevant when two active rigids interact, think of a pool table where one of the balls is heavier than another. On the other hand, dropping a feather from high on up onto a static ground yields an identical result to dropping much heavier bowling ball. The ground being static will not move regardless and the speed at which your rigid falls to the ground is independent of its mass given there is no actual air in the simulation to apply counterforce like in the real world.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.maxContactImpulse</code></td>
+<td align="left">How strong contact forces are allowed to be. A value of -1 means 'infinite' and anything less can help produce soft collisions.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">-1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.maxDepenetrationVelocity</code></td>
+<td align="left">How quickly two intersecting rigids are allowed to de-intersect. This can help avoid explosions and maintain a soft appearance.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">-1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.nextState</code></td>
+<td align="left">This attribute is pulled whenever the rigid needs to know its position and orientation from the solver.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.outputMatrix</code></td>
+<td align="left">The primary output from each Rigid, and from Ragdoll overall. The final position and orientation following the simulation at the current time step.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>matrix</code></nobr></td>
+<td align="left">identity</td>
+</tr>
+<tr>
+<td align="left"><code>.outputMesh</code></td>
+<td align="left">Polygonal version of the rigid, for rendering and export.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>mesh</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.outputRotate</code></td>
+<td align="left">The rotation part in Euler format of the <code>outputMatrix</code>.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>angle3</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.outputTranslate</code></td>
+<td align="left">The translation part of the <code>outputMatrix</code>, that's all it is.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>double3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.positionIterations</code></td>
+<td align="left">Accuracy of non-intersecting constraints and contacts. If the drive (guide) strength isn't strong enough, increase this value.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left"><code>.ragdollId</code></td>
+<td align="left">Internal identifier for this node in the solver.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.restMatrix</code></td>
+<td align="left">Starting position and orientation of a rigid in the simulation. This attribute is typically initialised with wherever the chosen Maya transform is located at the time of creating the rigid. It is also the attribute manipulated when setting the initial state.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>matrix</code></nobr></td>
+<td align="left">identity</td>
+</tr>
+<tr>
+<td align="left"><code>.restitution</code></td>
+<td align="left">The 'bounciness' of a rigid body. Bounce is an opposite force applied whenever two rigids come into contact. The bounce is however also dependent on the <code>rdScene.bounceThresholdVelocity</code> which determines how strong a contact must be in order for an opposing force to be added. Without a threshold, a rigid would bounce at increasingly small intervals into infinity. However, for high-frequency bounces, like a billiard ball bouncing on a marble floor, don't forget to increase your substeps so as to capture the very small and fast motion happening towards the end of its bounce lifetime.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left"><code>.rotateOrder</code></td>
+<td align="left">Input attribute such that the output matrix and rotation respects the chosen rotate order of the target transform.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>enum</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.rotatePivot</code></td>
+<td align="left">Input attribute to properly format the outputMatrix and friends.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>double3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.rotatePivotTranslate</code></td>
+<td align="left">Input attribute for the formatting of outputMatrix.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>double3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.shapeExtents</code></td>
+<td align="left">The dimensions of the 'Box' <code>shapeType</code>.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float3</code></nobr></td>
+<td align="left">1.0<br>1.0<br>1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.shapeLength</code></td>
+<td align="left">Length of the 'Capsule' and 'Cylinder' <code>shapeType</code>.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.shapeOffset</code></td>
+<td align="left">Position of a shape relative the rigid. Think of the shape as being a child of the rigid, and this is its child position. It'll be in the orientation of the parent, as you would expect.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>double3</code></nobr></td>
+<td align="left">0.0<br>0.0<br>0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.shapeRadius</code></td>
+<td align="left">Radius of the 'Sphere', 'Capsule' and 'Cylinder' <code>shapeType</code>.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">1.0</td>
+</tr>
+<tr>
+<td align="left"><code>.shapeRotation</code></td>
+<td align="left">Rotation of the shape relative the rigid.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>angle3</code></nobr></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>.shapeType</code></td>
+<td align="left">Shape used for collision detection and automatic computation of <code>centerOfMass</code> and <code>angularMass</code>.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>enum</code></nobr></td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>.startState</code></td>
+<td align="left">The scene pulls on this attribute at the start frame to set-up the initial state of the rigid, including its rest position and shape properties.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.thickness</code></td>
+<td align="left">Additional offset from the surface of a shape. Think of this as the shape being extruded by this amount along the surface normals of the shape. It's meant to create some padding between two rigids that collide and can help stabilise complex or strong contacts.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.velocityIterations</code></td>
+<td align="left">Accuracy of intersecting constraints and contacts. If intersecting bodies are being depenetrated too violently, increase the number of velocity iterations. More velocity iterations will drive the relative exit velocity of the intersecting objects closer to the correct value given the restitution.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><code>.version</code></td>
+<td align="left">Version of Ragdoll used to create this node. Saved with scene to keep track of what version of Ragdoll the node was created with.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2020-12-13
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../rdScene/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Scene
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../rdConstraint/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Constraint
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 mottosso
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d95a11d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.0f64ce30.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../../extra.js"></script>
+      
+    
+  </body>
+</html>

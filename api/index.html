@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://ragdolldynamics.com/api/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/api/">
       
       
         <meta name="author" content="mottosso">
@@ -87,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -169,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -225,6 +225,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
     <a href="../reference/" class="md-nav__link">
       Reference
     </a>
@@ -241,14 +254,82 @@
   <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
+      Nodes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Nodes" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../nodes/rdScene/" class="md-nav__link">
+      Scene
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../nodes/rdRigid/" class="md-nav__link">
+      Rigid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../nodes/rdConstraint/" class="md-nav__link">
+      Constraint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    
+    <label class="md-nav__link" for="nav-7">
       Releases
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Releases" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Releases
       </label>
@@ -484,8 +565,11 @@
                 
                   <h1>API</h1>
                 
-                <p><img class="hero-image" src=/yoga5.png></p>
-<p>Everything Ragdoll can do you can do, via <code>ragdoll.api</code>.</p>
+                <div class="hero-container">
+  <img class="hero-image" src=/yoga13.png>
+</div>
+
+<p>Ragdoll consists of custom (locator) nodes written in C++, but everything involved in connecting these up and generating the dependency network happens in Python. This API is exposed to you for integration with auto-rigging, tools development and generally just extend the capabilities of the system.</p>
 <p><br></p>
 <h2 id="overview">Overview</h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
@@ -588,7 +672,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2020-12-13
     
   </small>
 </div>

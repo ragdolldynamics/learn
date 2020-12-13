@@ -1,16 +1,6 @@
 /* Styling specifically for the landing page */
 
-.vboxlayout {
-  display: flex;
-  flex-direction: column;
-}
 
-.hboxlayout {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 /*
 .md-main {
   background: url( "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'> <path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(0, 0%, 100%, 1)' /></svg>") no-repeat bottom, linear-gradient( to bottom, #0f3229, #405858 99%, yellow 99% );
@@ -257,21 +247,6 @@
 
 /* Mobile */
 @media only screen and (max-width: 60em) {
-  .hboxlayout {
-    flex-direction: column;
-    justify-content: center;
-    align-content: start;
-    align-items: center;
-  }
-
-  .vboxlayout {
-    align-items: center;
-  }
-
-  .vboxlayout p {
-    width: 75%;
-  }
-
   .md-typeset img {
     margin: 0 auto;
   }
