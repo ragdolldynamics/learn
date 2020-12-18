@@ -1,71 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://learn.ragdolldynamics.com/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/overview/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/download/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/examples/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://learn.ragdolldynamics.com/reference/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <loc>https://learn.ragdolldynamics.com/menu/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://learn.ragdolldynamics.com/nodes/rdScene/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/nodes/rdRigid/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/nodes/rdConstraint/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.12.07/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.12.01/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.24/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.23/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.22/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.17/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.16/</loc>
-     <lastmod>2020-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://learn.ragdolldynamics.com/releases/2020.11.10/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <loc>https://learn.ragdolldynamics.com/nodes/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/api/</loc>
-     <lastmod>2020-12-13</lastmod>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.12.20/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.12.07/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.12.01/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.24/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.23/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.22/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.17/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.16/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/2020.11.10/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

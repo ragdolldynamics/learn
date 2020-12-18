@@ -26,6 +26,10 @@
   display: none;
 }
 
+.md-content {
+  max-width: none;
+}
+
 #pypiBadge {
   padding-top: 5px;
 }
@@ -93,10 +97,6 @@
 .poster {
   box-shadow: 0 0 1.2rem rgba(0,0,0,.2), 0 0.2rem 0.4rem rgba(0,0,0,.2);
   border-radius: 10px;
-
-  /* Keep video area from being collapsed until video has been loaded */
-  min-width: 640px;
-  min-height: 360px;
 }
 
 .spacing {

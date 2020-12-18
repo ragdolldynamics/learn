@@ -265,7 +265,7 @@ Tables
 }
 
 .boxshadow {
-  box-shadow: 0 0 0.5rem rgba(0,0,0,.2), 0 0.2rem 0.4rem rgba(0,0,0,.2);
+  box-shadow: 0 0 0.5rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.1);
 }
 
 .hero-image {
@@ -309,10 +309,6 @@ img.hero-image {
 .poster {
   box-shadow: 0 0 1.2rem rgba(0,0,0,.2), 0 0.2rem 0.4rem rgba(0,0,0,.2);
   border-radius: 10px;
-
-  /* Keep video area from being collapsed until video has been loaded */
-  min-width: 640px;
-  min-height: 360px;
 }
 
 .overlaid-container code {
@@ -525,6 +521,10 @@ button.tab.active div.tab-gap {
   justify-content: center;
 }
 
+.justify-left {
+  justify-content: left;
+}
+
 .button:active {
   position: relative;
   top: 6px;
@@ -663,6 +663,10 @@ div.tabs button.active p {
   }
 }
 
+[data-md-color-primary="white"] .md-search__form {
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
 @media only screen and (min-width: 60em) {
   [data-md-toggle]:checked~.md-header .md-search__input+.md-search__icon, [data-md-toggle]:checked~.md-header .md-search__input::placeholder {
       color: rgba(0, 0, 0, .30);
@@ -671,7 +675,6 @@ div.tabs button.active p {
   .md-search__input+.md-search__icon, .md-search__input::placeholder {
       color: rgba(0, 0, 0, .30);
   }
-
   .floating-image {
     float: right;
     display: inherit;

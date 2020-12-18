@@ -238,8 +238,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../reference/" class="md-nav__link">
-      Reference
+    <a href="../../menu/" class="md-nav__link">
+      Menu Reference
     </a>
   </li>
 
@@ -250,65 +250,23 @@
 
 
 
-  
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item">
+    <a href="../../nodes/" class="md-nav__link">
+      Node Reference
+    </a>
+  </li>
+
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
-    
-    <label class="md-nav__link" for="nav-6">
-      Nodes
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Nodes" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon"></span>
-        Nodes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      
+      
+      
 
 
 
   <li class="md-nav__item">
-    <a href="../../nodes/rdScene/" class="md-nav__link">
-      Scene
+    <a href="../../api/" class="md-nav__link">
+      API Reference
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nodes/rdRigid/" class="md-nav__link">
-      Rigid
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nodes/rdConstraint/" class="md-nav__link">
-      Constraint
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -324,19 +282,32 @@
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
-    <label class="md-nav__link" for="nav-7">
-      Releases
+    <label class="md-nav__link" for="nav-8">
+      Release History
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Releases" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+    <nav class="md-nav" aria-label="Release History" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
         <span class="md-nav__icon md-icon"></span>
-        Releases
+        Release History
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.12.20/" class="md-nav__link">
+      2020.12.20
+    </a>
+  </li>
+
         
           
           
@@ -508,19 +479,6 @@
   </li>
 
     
-      
-      
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../../api/" class="md-nav__link">
-      API
-    </a>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -628,82 +586,32 @@
 <p>Maya 2019 introduced support for Cached Playback, and Maya 2020 added support for Cached <strong>Simulation</strong>, which is now supported by Ragdoll!</p>
 <p><img alt="ragdollcached6" src="https://user-images.githubusercontent.com/2152766/99081696-1cf71900-25bb-11eb-9714-6c2b6b16c679.gif" /></p>
 <p><img alt="ragdollcached7" src="https://user-images.githubusercontent.com/2152766/99081780-39935100-25bb-11eb-8da2-4c9ee6f83dcd.gif" /></p>
-<table>
-<tr>
-<td>Create new rigids</td>
-<td>Edit existing rigids</td>
-</tr>
-<tr>
-<td>
-
-![ragdollcached1](https://user-images.githubusercontent.com/2152766/98826001-0fac2400-242d-11eb-9261-9b6e19034076.gif)
-
-</td>
-<td>
-
-![ragdollcached2](https://user-images.githubusercontent.com/2152766/98825995-0e7af700-242d-11eb-835d-355756fcaf9d.gif)
-
-</td>
-</tr>
-</table>
-
+<p><strong>Create new rigids</strong></p>
+<p><img alt="ragdollcached1" src="https://user-images.githubusercontent.com/2152766/98826001-0fac2400-242d-11eb-9261-9b6e19034076.gif" /></p>
+<p><strong>Edit existing rigids</strong></p>
+<p><img alt="ragdollcached2" src="https://user-images.githubusercontent.com/2152766/98825995-0e7af700-242d-11eb-835d-355756fcaf9d.gif" /></p>
 <blockquote>
 <p>Trajectories can be enabled with the <code>rdScene.drawTrajectories</code> attribute, under <code>Visualisation</code> of the Attribute Editor</p>
 </blockquote>
 <h4 id="known-limitations-with-cached-playback">Known Limitations with Cached Playback</h4>
 <p>There is still work to be done. Currently, animated visualisations aren't updating in cached mode. However the simulation still runs correctly and your driven character animation will behave identically to non-cached mode.</p>
-<table>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Slice</b></td>
-<td><b>Connection</b></td>
-</tr>
-<tr>
-<td>The animation of the slice visualisation doesn't represent the current, animated state</td>
-<td>The connection visualisation is not up-to-date, you can disable the drawing with rdConstraint.drawConnection</td>
-</tr>
-<tr>
-<td>
-
-<img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831495-8b10d400-2433-11eb-81c2-1d9339c3a459.gif>
-
-</td>
-<td>
-
-<img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831501-8cda9780-2433-11eb-98f6-735ddd148d91.gif>
-
-</td>
-</tr>
-<tr>
-<td>
-
-<img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/99082785-84fa2f00-25bc-11eb-867c-78d7c82b7519.png>
-
-</td>
-<td>
-
-<img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831489-89dfa700-2433-11eb-8fa0-574108837bb7.gif>
-
-</td>
-<tr>
-<td><b>Output Geometry</b></td>
-<td><b>Guide</b></td>
-</tr>
-<td>
-
-`rdRigid.ouputGeometry` Remove any geometries when working with cached playback, these cause instant death to Maya and it's still unclear why.
-
-</td>
-<td>The guide delta drawn to represent the difference between simulation and your animation only draws the latest result, rather than the result on the current frame.</td>
-</tr>
-<tr>
-</tr>
-</table>
-
+<blockquote>
+<p>The animation of the slice visualisation doesn't represent the current, animated state</p>
+</blockquote>
+<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831495-8b10d400-2433-11eb-81c2-1d9339c3a459.gif></p>
+<blockquote>
+<p>The connection visualisation is not up-to-date, you can disable the drawing with rdConstraint.drawConnection</p>
+</blockquote>
+<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831501-8cda9780-2433-11eb-98f6-735ddd148d91.gif></p>
+<blockquote>
+<p>The guide delta drawn to represent the difference between simulation and your animation only draws the latest result, rather than the result on the current frame.</p>
+</blockquote>
+<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/99082785-84fa2f00-25bc-11eb-867c-78d7c82b7519.png></p>
+<blockquote>
 <p>Note that these are <em>only visual</em> and does <em>not</em> affect the simulation. These will all be addressed in a future release!</p>
+</blockquote>
+<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831489-89dfa700-2433-11eb-8fa0-574108837bb7.gif></p>
+<p><code>rdRigid.ouputGeometry</code> Remove any geometries when working with cached playback, these cause instant death to Maya and it's still unclear why.</p>
 <p><br>
 <br>
 <br></p>
@@ -731,7 +639,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2020-12-17
     
   </small>
 </div>
