@@ -438,6 +438,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#locked-rotate-pivot" class="md-nav__link">
+    Locked Rotate Pivot
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -699,6 +706,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#locked-rotate-pivot" class="md-nav__link">
+    Locked Rotate Pivot
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -717,33 +731,53 @@
                 
                 <p>This release introduces proper licencing to Ragdoll.</p>
 <ul>
-<li><a href="website"><strong>ADDED</strong> Official Website</a> Something shiny</li>
+<li><a href="website"><strong>ADDED</strong> Official Website</a> Tell your friends!</li>
 <li><a href="#licencing"><strong>ADDED</strong> Licencing</a> Read all about it!</li>
+<li><a href="#rotate-pivot"><strong>FIXED</strong> Locked rotatePivot</a> Minor bug patched up and ready to go</li>
+<li><strong>FIXED</strong> Centered Option Window - On Linux, the option window would sometimes appear in the top-left corner of the screen. No more!</li>
 </ul>
 <p><br></p>
 <h3 id="website">Website</h3>
-<p>I've launched the next generation of Ragdoll's website. Something a little more flashy and intended to wet your appetite for what lies ahead.</p>
+<p>Happy New Year, the year of Ragdoll. :)</p>
+<p>I've launched the next generation of Ragdoll's website. Something a little more flashy and intended to wet people's appetite for what lies ahead. Feel free to tell people about it, I've added a note about when it'll become a reality.</p>
 <ul>
 <li><a href="https://ragdolldynamics.com">https://ragdolldynamics.com</a></li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/47274066/103458138-1eaca580-4cfd-11eb-8a7b-5a75a52a24fa.png" /></p>
+<p>Also see this news coverage happening in Japan! :D</p>
+<ul>
+<li><a href="https://3dnchu.com/archives/ragdoll-dynamics-maya/">https://3dnchu.com/archives/ragdoll-dynamics-maya/</a></li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/103482978-f5af1200-4ddb-11eb-93f6-135f04318f4b.png" /></p>
 <p>The old website can still be accessed, although it is a little crippled.</p>
 <ul>
 <li><a href="https://alanjfs.github.io/ragdoll-web/">https://alanjfs.github.io/ragdoll-web/</a></li>
 </ul>
-<p>If any link fails, just make sure it's prefixed with <code>ragdoll-web/</code> as the landing page, e.g. <a href="https://alanjfs.github.io/ragdoll-web/howto">https://alanjfs.github.io/ragdoll-web/howto</a>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/103482986-065f8800-4ddc-11eb-857d-3b6cdacafe79.png" /></p>
+<p>If any link fails, just make sure it's prefixed with <code>ragdoll-web/</code> as the landing page, e.g. <code>https://alanjfs.github.io/ragdoll-web/howto</code></p>
 <p><br></p>
 <h3 id="licencing">Licencing</h3>
-<p>Happy New Year, the year of Ragdoll. :)</p>
-<p>On January 10, all previous versions of Ragdoll will have expired. It means you'll need to upgrade to this version in order to continue enjoying life.</p>
-<p>Let's cover what this means.</p>
+<p>Ragdoll is growing up and now understands the "product key" which means users can now purchase a copy and register it to themselves.</p>
+<p>Here's the short version, with a longer version below.</p>
+<ul>
+<li>Can I use it on more than one machine? Yes</li>
+<li>Can I move a licence between two machines? Yes</li>
+<li>Do I need an internet connection to use Ragdoll? Yes and no</li>
+<li>What if someone steals my licence key? Bummer</li>
+<li>Can I have a floating licence? Soon</li>
+<li>Can I activate offline? Soon</li>
+<li>When exactly is internet required? See long answer</li>
+<li>Can I manage my licence via Python? Yes</li>
+</ul>
+<p>Now let's cover the nitty gritty details, at the time of this writing.</p>
+<ul>
+<li>See <a href="/licencing">licencing</a> for current up-to-date information if you are reading this from the future.</li>
+</ul>
+<p><br></p>
 <h4 id="whats-changed">What's changed?</h4>
 <p>You won't notice a change, other than a new UI.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/103455839-81477680-4ce8-11eb-81ca-dc76762a0a77.png" /></p>
 <p>Rather than Ragdoll expiring on a fixed date, it'll now expire 30 days after first launch, unless you activate.</p>
-<ul>
-<li>See <a href="/licencing">licencing</a> for up-to-date information, the content is copied from here at the time of this writing.</li>
-</ul>
 <p><br></p>
 <p>Activation requires a <code>product key</code> which you get by either <a href="https://ragdolldynamics.com/pricing">purchasing a licence</a> or being really awesome.</p>
 <h4 id="how-does-it-work">How does it work?</h4>
@@ -838,6 +872,21 @@
     <span class="s2">&quot;trialDays&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><br></p>
+<h3 id="locked-rotate-pivot">Locked Rotate Pivot</h3>
+<p>Ragdoll doesn't support a custom <code>rotatePivot</code> attribute and would zero this out whenever a transform is turned dynamic. It'll provide a warning to the end user that this would happen.</p>
+<p>But, it wasn't taking into account the <code>rotatePivot</code> being connected or locked. If that happened, Ragdoll would flat out refuse and print something cryptic in the Script Editor.</p>
+<p>This has now been fixed.</p>
+<ol>
+<li>If the attribute is zero, nothing changes</li>
+<li>If the attribute is modified, it'll be zeroed out</li>
+<li>If the attribute is locked or connected, a warning is printed, but nothing changes.</li>
+</ol>
+<p>Ragdoll still doesn't actually support a custom rotate pivot. So this fixes only the situation where..</p>
+<ol>
+<li>The <code>rotatePivot</code> is zero (default), and..</li>
+<li>The <code>rotatePivot</code> is locked</li>
+</ol>
                 
                   
                     
