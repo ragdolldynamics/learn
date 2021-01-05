@@ -188,6 +188,7 @@ nobr {
 }
 
 
+
 /*
 
 Tables
@@ -407,7 +408,7 @@ a strong {
   font-size: 1rem;
 }
 
-.md-footer-copyright__highlight {
+.md-footer-copyright__highlight, .md-footer-copyright {
   display: none;
 }
 
@@ -428,6 +429,10 @@ nav.md-nav.md-nav--primary {
 
 .md-footer {
   margin-top: 100px;
+}
+
+.md-footer-meta__inner {
+    padding: 0.8rem;
 }
 
 div.tabs {
