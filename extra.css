@@ -385,6 +385,10 @@ h2, h3, h4, b, strong {
   color: #333;
 }
 
+.button b {
+  color: inherit;
+}
+
 a strong {
   color: #03a9f4;
 }
@@ -518,6 +522,8 @@ button.tab.active div.tab-gap {
 .vboxlayout {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .hboxlayout {
@@ -660,6 +666,13 @@ div.tabs button.active p {
   max-height: inherit !important;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.align-right {
+  text-align: right;
+}
 
 @media only screen and (max-width: 60em) {
   .hboxlayout {
