@@ -674,6 +674,10 @@ div.tabs button.active p {
   text-align: right;
 }
 
+.padding-top {
+  padding-top: 10px;
+}
+
 @media only screen and (max-width: 60em) {
   .hboxlayout {
     flex-direction: column;

@@ -331,6 +331,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -573,6 +580,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -724,6 +738,40 @@
 <span class="n">api</span><span class="o">.</span><span class="n">editConstraintFrames</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(</span><span class="n">rigid</span><span class="p">)</span>
 </code></pre></div>
+<p><br></p>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>Gain more control over the integration of Ragdoll into your pipeline with these optional environment variables.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">RAGDOLL_PLUGIN</td>
+<td align="left">Absolute path to binary plugin, .mll on Windows .so on Linux. This overrides whatever is on <code>MAYA_PLUG_IN_PATH</code></td>
+<td align="left"><nobr><code>"ragdoll"</code></nobr></td>
+</tr>
+<tr>
+<td align="left">RAGDOLL_NO_AUTOLOAD</td>
+<td align="left">Do not automatically load the plug-in and add the menu on startup of Maya.</td>
+<td align="left"><code>False</code></td>
+</tr>
+<tr>
+<td align="left">RAGDOLL_NO_STARTUP_DIALOG</td>
+<td align="left">Do not display the startup-dialog on first launch.</td>
+<td align="left"><code>False</code></td>
+</tr>
+<tr>
+<td align="left">RAGDOLL_AUTO_SERIAL</td>
+<td align="left">Automatically activate Ragdoll on install using this serial number.</td>
+<td align="left">Unset</td>
+</tr>
+</tbody>
+</table>
                 
                   
                     

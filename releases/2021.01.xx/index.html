@@ -1,0 +1,622 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.01.xx/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="search" type="application/opensearchdescription+xml" href="../../search.xml" title="Learn Ragdoll Search">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>2021.01.xx - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.699f7955.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.47d7edde.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multiplier-nodes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Learn Ragdoll
+          </span>
+        </div>
+        <div class="md-header-nav__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2021.01.xx
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header-nav__options">
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../download/" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../menu/" class="md-nav__link">
+      Menu Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nodes/" class="md-nav__link">
+      Node Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    
+    <label class="md-nav__link" for="nav-8">
+      Release History
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Release History" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Release History
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2021.01.04/" class="md-nav__link">
+      2021.01.04
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.12.18/" class="md-nav__link">
+      2020.12.18
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.12.07/" class="md-nav__link">
+      2020.12.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.12.01/" class="md-nav__link">
+      2020.12.01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.24/" class="md-nav__link">
+      2020.11.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.23/" class="md-nav__link">
+      2020.11.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.22/" class="md-nav__link">
+      2020.11.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.17/" class="md-nav__link">
+      2020.11.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.16/" class="md-nav__link">
+      2020.11.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2020.11.10/" class="md-nav__link">
+      2020.11.10
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../licencing/" class="md-nav__link">
+      Licencing
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiplier-nodes" class="md-nav__link">
+    Multiplier Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entt" class="md-nav__link">
+    EnTT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bounding-box" class="md-nav__link">
+    Bounding Box
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-warnings" class="md-nav__link">
+    Cycle Warnings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nan" class="md-nav__link">
+    NaN
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                
+                  <h1>2021.01.xx</h1>
+                
+                <p>Minor maintenance release, with some polish here and there.</p>
+<ul>
+<li><a href="#multiplier-nodes"><strong>ADDED Multiplier Nodes</strong></a> Animate in bulk with this nifty utility node!</li>
+<li><a href="#entt"><strong>PUBLICITY EnTT</strong></a> We got mentioned in this great project :)</li>
+<li><a href="#bounding-box"><strong>OPTIMISATION Bounding Box</strong></a> Minor performance and stability improvements with native bounding box support</li>
+<li><a href="#nan"><strong>FIXED NaN and Dynamic Control</strong></a> Got bogus values on the <code>Rotate Limit</code> of Dynamic Controls? No longer!</li>
+<li><strong>FIXED Zero limit strength</strong> Used to be interpreted as "inifinitely strong", but now is "off" as one would expect.</li>
+<li><a href="#cycle-warnings"><strong>FIXED Cycle warnings on create</strong></a> In rare occasions, Maya would complain that there's a cycle just as you turn a control dynamic. No more.</li>
+</ul>
+<p><br></p>
+<h3 id="multiplier-nodes">Multiplier Nodes</h3>
+<p><br></p>
+<h3 id="entt">EnTT</h3>
+<p>Getting some more recognition on the interwebs from EnTT, the library used to keep Ragdoll fast and clean!</p>
+<ul>
+<li><a href="https://github.com/skypjack/entt">https://github.com/skypjack/entt</a></li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/104007607-21e1de80-51a0-11eb-9a46-6724eedc3311.png" /></p>
+<p><br></p>
+<h3 id="bounding-box">Bounding Box</h3>
+<p>Maya uses bounding box information to avoid drawing things that aren't visible in camera. The previous version of Ragdoll didn't provide Maya with any bounding box, which left Maya with no choice but to draw these always; even when behind the camera.</p>
+<p>Now this isn't so. You shouldn't notice much for smaller scenes, but drawing typically consumes 20-30% of the total CPU impact Ragdoll has on your character rigs. So for larger scenes this should reap a significant performance boost.</p>
+<blockquote>
+<p>Pro tip: You can also disable drawing of <strong>all</strong> Ragdoll primitives by disabling <code>Locators</code> in your viewport; that's how Maya classifies any and all Ragdoll nodes.</p>
+</blockquote>
+<p><img alt="ragdollboundinbox" src="https://user-images.githubusercontent.com/2152766/104439939-a611d880-5589-11eb-879d-f02a23e66671.gif" /></p>
+<p><br></p>
+<h3 id="cycle-warnings">Cycle Warnings</h3>
+<p>Whenever you create a rigid from any Maya node, like an animation control, Ragdoll makes a note of the position and orientation of that control. It takes into account that you may not be on the start frame when you create the control, which is what you most likely intended to do. When that happens, Maya will silently roll back time in the background to query an attribute at the start frame.</p>
+<p>This silent roll back has a tendency to trigger evaluation of unrelated nodes, like IK handles, which in turn trigger other nodes, ultimately leading back to where it came from, and thus cause a cycle. These were somewhat harmless, but could mask a real cycle from happening.</p>
+<p>In this release, this silent roll back only happens when you actually aren't on the start frame. So you should see less of it. There's still room for improvement however, so if you still find warnings or any odd behaviors being due to cycles, do reach out!</p>
+<p><br></p>
+<h3 id="nan">NaN</h3>
+<p>If you've ever gotten these, you can now rest easy. They are gone. They could happen on occasion, especially after repeated undo. It had to do with memory access violation by Maya being naughty, something it really shouldn't be able to do in the first place. We now <a href="https://github.com/mottosso/cmdx/pull/50/commits/90f1765c55d9dcdd3fe274aa824a016cd4ac1068">guard against this</a>, so all is well.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/104442948-add37c00-558d-11eb-9a0e-48ecb953b7cf.png" /></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-01-11
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 mottosso
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d95a11d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.0f64ce30.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../../extra.js"></script>
+      
+    
+  </body>
+</html>
