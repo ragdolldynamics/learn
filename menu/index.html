@@ -1155,6 +1155,14 @@
 <td align="left">Edit global Ragdoll preferences, like the scale at which Ragdoll draws things.</td>
 </tr>
 <tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/rigid.png> Select Rigids</nobr></td>
+<td align="left">Select all rigids, or filter rigids from selection.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/constraint.png> Select Constraints</nobr></td>
+<td align="left">Select all constraints, or filter constraints from selection.</td>
+</tr>
+<tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/logo.png> Ragdoll</nobr></td>
 <td align="left">View your version, and eventually look for updates and tutorials. Not yet though.</td>
 </tr>
@@ -1555,13 +1563,28 @@
 <tbody>
 <tr>
 <td align="left">Shape Type</td>
-<td align="left">The initial shape to represent the selected control. Don't worry, this can be changed afterwards.<br><br>- <b>Mesh</b>: Suitable for controls that <em>wrap</em> around the model<br>- <b>Capsule</b>: Suitable for flat controls, e.g. a circle</td>
-<td align="left"><nobr><code>Mesh</code></nobr></td>
+<td align="left">The initial shape to represent the selected control.<br>- <b>Mesh</b>: Suitable for NURBS controls that <em>wrap</em> around the model<br>- <b>Capsule</b>: Suitable for flat controls, e.g. a circle or square.</td>
+<td align="left"><nobr><code>Capsule</code></nobr></td>
 </tr>
 <tr>
-<td align="left">Last For Length</td>
-<td align="left">Do not turn the last selected node into a dynamic control, use it to determine capsule length of the previous control.</td>
-<td align="left"><nobr></nobr></td>
+<td align="left">Auto Blend</td>
+<td align="left">Add a <code>blendSimulation</code> attribute to blend between animation and simulation.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Blend Method</td>
+<td align="left">Blend simulation from the root control, or per-control.</td>
+<td align="left"><nobr><code>From Root</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Auto Influence</td>
+<td align="left">Use blended animation as input to the simulation.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Auto Multiplier</td>
+<td align="left">Automatically add a constraint multiplier to the dynamic control root.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 </tbody>
 </table>
