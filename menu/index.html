@@ -211,6 +211,48 @@
 
 
 
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Animators Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Animators Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Animators Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../quick-tail-setup/" class="md-nav__link">
+      Quick Tail Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
   <li class="md-nav__item">
     <a href="../download/" class="md-nav__link">
       Download
@@ -296,20 +338,6 @@
           <li class="md-nav__item">
   <a href="#muscle" class="md-nav__link">
     Muscle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-rigid" class="md-nav__link">
-    Convert Rigid
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-constraint" class="md-nav__link">
-    Convert Constraint
   </a>
   
 </li>
@@ -553,14 +581,14 @@
   <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Release History
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Release History" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         <span class="md-nav__icon md-icon"></span>
         Release History
       </label>
@@ -808,20 +836,6 @@
           <li class="md-nav__item">
   <a href="#muscle" class="md-nav__link">
     Muscle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-rigid" class="md-nav__link">
-    Convert Rigid
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#convert-constraint" class="md-nav__link">
-    Convert Constraint
   </a>
   
 </li>
@@ -1093,14 +1107,6 @@
 <td align="left">Constraint the position and limit the orientation between two rigid bodies.</td>
 </tr>
 <tr>
-<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/convert.png> Convert Rigid</nobr></td>
-<td align="left">Convert selected Rigid to a different type.</td>
-</tr>
-<tr>
-<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/convert.png> Convert Constraint</nobr></td>
-<td align="left">Convert selected Constraint to a different type.</td>
-</tr>
-<tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/kinematic.png> Passive</nobr></td>
 <td align="left">Animate a passive rigid body with an external transform.</td>
 </tr>
@@ -1283,44 +1289,6 @@
 <td align="left">Radius</td>
 <td align="left">Capsule radius, how thick of a muscle to make.</td>
 <td align="left"><nobr><code>1.0</code></nobr></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="convert-rigid">Convert Rigid</h3>
-<p>This turns an Active Rigid into a Passive Rigid, or vice versa. Convert to a Passive means (1) the <code>.kinematic</code> attribute is set to True, (2) connections to translate/rotate channels are broken and (3) the <code>rdRigid.inputMatrix</code> is connected to the parent transform <code>.worldMatrix</code> attribute. This is how animation is passed into Ragdoll.<br><br>The opposite is true for conversion to an Active Rigid, in which case Ragdoll is in charge of feeding the translate/rotate channels.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-<th align="left">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Rigid Type</td>
-<td align="left">Convert a rigid from active to kinematic or vice versa. 'Opposite' turns passive into active and vice versa automatically.</td>
-<td align="left"><nobr><code>Auto</code></nobr></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="convert-constraint">Convert Constraint</h3>
-<p>Convert selected Constraint to a different type.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-<th align="left">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Convert Constraint Type</td>
-<td align="left">The type of constraint to convert to.</td>
-<td align="left"><nobr><code>Point</code></nobr></td>
 </tr>
 </tbody>
 </table>
@@ -1578,42 +1546,24 @@
 <p><br></p>
 <h3 id="dynamic-control">Dynamic Control</h3>
 <p>Turn your regular character animation control into a rigid body, where the input animation is used as a dynamic guide for the simulation. The animation remains editable and the final result can be switched or blended between.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-<th align="left">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shape Type</td>
-<td align="left">The initial shape to represent the selected control.<br>- <b>Mesh</b>: Suitable for NURBS controls that <em>wrap</em> around the model<br>- <b>Capsule</b>: Suitable for flat controls, e.g. a circle or square.</td>
-<td align="left"><nobr><code>Capsule</code></nobr></td>
-</tr>
-<tr>
-<td align="left">Auto Blend</td>
-<td align="left">Add a <code>blendSimulation</code> attribute to blend between animation and simulation.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
-</tr>
-<tr>
-<td align="left">Blend Method</td>
-<td align="left">Blend simulation from the root control, or per-control.</td>
-<td align="left"><nobr><code>From Root</code></nobr></td>
-</tr>
-<tr>
-<td align="left">Auto Influence</td>
-<td align="left">Use blended animation as input to the simulation.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
-</tr>
-<tr>
-<td align="left">Auto Multiplier</td>
-<td align="left">Automatically add a constraint multiplier to the dynamic control root.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
-</tr>
-</tbody>
-</table>
+<details class="example"><summary>Basics</summary><p><div class="overlaid-media">
+    <img src=/dynamic_control_1.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Basics</h3>
+        <p>Turn any FK hierarchy into a dynamic chain.</p>
+    </div>
+</div></p>
+</details>
+<details class="example"><summary>Every other control</summary><p><div class="overlaid-media">
+    <img src=/dynamic_control_2.gif>
+    <div class="overlaid-background"></div>
+    <div class="overlaid-container">
+        <h3>Every other control</h3>
+        <p>Skip some FK controls, for a simplified dynamic hierarchy.</p>
+    </div>
+</div></p>
+</details>
 <p><br></p>
 <h3 id="global-preferences">Global Preferences</h3>
 <p>Edit the scale of manipulators and visual elements of Ragdoll, especially constriants. If you work at a scale other than Maya's currently set units, this command is your friend.</p>
@@ -1680,7 +1630,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-01-18
     
   </small>
 </div>
