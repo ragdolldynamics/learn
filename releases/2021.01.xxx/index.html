@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.01.xx/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.01.xxx/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>2021.01.xx - Learn Ragdoll</title>
+        <title>2021.01.xxx - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solver-iterations" class="md-skip">
+        <a href="#replay" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2021.01.xx
+              2021.01.xxx
             
           </span>
         </div>
@@ -343,6 +343,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../2021.01.24/" class="md-nav__link">
+      2021.01.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../2021.01.17/" class="md-nav__link">
       2021.01.17
     </a>
@@ -546,15 +559,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solver-iterations" class="md-nav__link">
-    Solver Iterations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-line" class="md-nav__link">
-    Help Line
+  <a href="#replay" class="md-nav__link">
+    Replay
   </a>
   
 </li>
@@ -573,61 +579,12 @@
 
                 
                 
-                  <h1>2021.01.xx</h1>
+                  <h1>2021.01.xxx</h1>
                 
-                <ul>
-<li><a href="#solver-iterations"><strong>ADDED</strong> Solver Iterations</a> Achieve greater precision, at the expense of performance</li>
-<li><a href="#help-line"><strong>ADDED</strong> Help Line</a> The Help Line now displays a summary of what menu items do</li>
-</ul>
-<p><br></p>
-<h3 id="solver-iterations">Solver Iterations</h3>
-<p>Anything called <code>strength</code> in Ragdoll is a multipler for <code>stiffness</code> and <code>damping</code>. And currently there's a ceiling to how high <code>stiffness</code> and <code>damping</code> values can go, after which point they just stop having an effect.</p>
-<p>The values are limited by how many "iterations" you let the solver perform. Per default, they are set to <code>8</code> and can be found at <code>rdRigid.positionIterations</code>.</p>
-<p>This release sheds some more light on this somewhat obscure attribute by exposing it directly on the solver, right next to <code>Substeps</code>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/104897430-442de600-5970-11eb-8489-4b91fc6d5cd4.png" /></p>
-<p>This value <em>multiplies</em> each <code>rdRigid.positionIterations</code> attribute, meaning a value of <code>2</code> yields a total iteration count for every rigid in the solver of <code>16</code> (i.e. <code>2 * 8</code>).</p>
-<p>Which means you can now do this!</p>
-<p><img alt="ragdolliterations2" src="https://user-images.githubusercontent.com/2152766/104897389-37a98d80-5970-11eb-9550-96e8d3f04360.gif" /></p>
-<p>You can further customise iteration counts per rigid, under the Advanced tab.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/104898625-c965ca80-5971-11eb-9c67-62ea919f2c54.png" /> </p>
-<p>There's no limit to how many iterations you can allow; more iterations means greater accuracy. However, I have found that values beyond 128 tend to get funky.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Iteration Count</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>8</code></td>
-<td align="left">Default, sensible for most uses</td>
-</tr>
-<tr>
-<td align="left"><code>16</code></td>
-<td align="left">High</td>
-</tr>
-<tr>
-<td align="left"><code>32</code></td>
-<td align="left">Really, really high</td>
-</tr>
-<tr>
-<td align="left"><code>64</code></td>
-<td align="left">Ultra Nightmare</td>
-</tr>
-</tbody>
-</table>
-<p>So, for completeness, here's how <code>Iterations</code> differ from <code>Substeps</code>.</p>
-<ul>
-<li><strong>Substep</strong> Divide each frame into smaller time steps</li>
-<li><strong>Iterations</strong> Number of times a constraint is "resolved"</li>
-</ul>
-<p>They both provide accuracy in slightly different ways. With a greater amount of substeps, the solver is effectively working in slow-motion. Everything is easier in slow-motion. Resolving constraints is independent of time and a little more technical to describe, so you can instead kind of think of it a little bit like rubbing dirt of a silver platter. The first rub, you'll get most of it off. But the more you rub, the shinier it gets. There's no limit to how much you can rub, but eventually rubbing will stop having a visible effect.</p>
-<p><br></p>
-<h3 id="help-line">Help Line</h3>
-<p>Hovering over any menu item now reveals a short description of what it does in the native Maya Help Line (typically at the bottom of the Maya window).</p>
-<p><img alt="ragdollhelpline" src="https://user-images.githubusercontent.com/2152766/105036041-d529bd80-5a53-11eb-8c99-5b8ea6e5cf17.gif" /></p>
-<p>This is the same information as can be found in the <a href="/menu">Menu Reference</a>.</p>
+                <p><br></p>
+<h3 id="replay">Replay</h3>
+<p>Ever set-up a character with physics, only to have to do it all over again on some other shot or character? With <strong>Replay</strong> this can be a thing of the past. :)</p>
+<p>If you've ever worked with Photoshop and it's "Actions" panel, you'll know what to expect. It'll record the things you do, such that you can replay them later. For every recorded action, selection and preferences are stored. You can edit the names of selected nodes with <em>wildcards</em> to support alternative naming conventions, for example if a control has a different namespace than originally recorded at. Preferences can be manipulated post-recording as well, such as the initial shapes of things.</p>
                 
                   
                     
@@ -636,7 +593,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-18
+      Last update: 2021-01-24
     
   </small>
 </div>
