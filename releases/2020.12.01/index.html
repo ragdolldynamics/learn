@@ -345,6 +345,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../2021.02.07/" class="md-nav__link">
+      2021.02.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../2021.01.27/" class="md-nav__link">
       2021.01.27
     </a>
@@ -760,7 +773,7 @@
 <li><a href="#animation-in-1995"><strong>NOTES</strong> Animation in 1995</a> Witness how little our industry has changed since then, let's fix that!</li>
 </ul>
 <p><br></p>
-<h3 id="active-passive-rigid-body">Active &amp; Passive Rigid Body</h3>
+<h2 id="active-passive-rigid-body">Active &amp; Passive Rigid Body</h2>
 <p>The terminology for "Rigid" and "Collider" wasn't clear. Surely, a "Rigid" collides too?</p>
 <p>With this release, I've updated the jargon to make a little more sense.</p>
 <ul>
@@ -770,7 +783,7 @@
 <p>This also goes for the <code>kinematic</code> attribute which has been renamed <code>passive</code>, highlighting that an active rigid can made passive by flicking this switch. Backwards compatibility is preserved by keeping the underlying attribute name, and only changing it in the Channel Box and Attribute Editor (i.e. the "nice name").</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/100196847-61ef4980-2ef1-11eb-8167-908169800dca.png" /></p>
 <p><br></p>
-<h3 id="character-20-auto-ragger">Character 2.0 - "Auto-Ragger"</h3>
+<h2 id="character-20-auto-ragger">Character 2.0 - "Auto-Ragger"</h2>
 <p>This release expands on the "Character" tool with some nifty new features. But since I haven't mentioned what 1.0 was capable of, here's an overall round down of what it is and when to use it.</p>
 <p><code>Character</code> is a one-click character creation tool - and <em>auto-rigger</em> (or auto-ragger, if you will). It's designed to give you the essential tools for turning any native Maya skeleton into an animatable rigid body hierarchy.</p>
 <p>Read more about it on this new dedicated page I've made for it.</p>
@@ -778,7 +791,7 @@
 <li><a href="/character">Character Page</a></li>
 </ul>
 <p><br></p>
-<h3 id="dynamic-control-capsules">Dynamic Control Capsules</h3>
+<h2 id="dynamic-control-capsules">Dynamic Control Capsules</h2>
 <p>Now Dynamic Control can be configured to generate capsules between selected controls, instead of assuming that the NURBS CVs neatly wrap around the model.</p>
 <p><strong>Current and Default behaviour</strong></p>
 <p>The tool uses the <code>Mesh</code> shape per default like before.</p>
@@ -794,7 +807,7 @@
 <li><a href="/dynamiccontrol">Dynamic Control Page</a></li>
 </ul>
 <p><br></p>
-<h3 id="normalise-shapes">Normalise Shapes</h3>
+<h2 id="normalise-shapes">Normalise Shapes</h2>
 <p>An early version of the "Normalise Sizes" tool, meant to more evenly distribute sizes of shapes across a hierarchy. Per default, shapes are sized based on the geometry of the Maya node. If it's a box, it'll get the dimensions of the box. If it's a joint, it'll get the length and radius of that joint.</p>
 <p>But because this mechanism can't see past the one node it's looking at, it's an uphill battle making shapes evenly distributed in a greater network.</p>
 <p>The "Normalise Sizes" tool is meant to address that.</p>
@@ -805,7 +818,7 @@
 <li><strong>Handle spine</strong> It tends to become too thin and desperately needs to be thickened up</li>
 </ol>
 <p><br></p>
-<h3 id="time-multiplier">Time Multiplier</h3>
+<h2 id="time-multiplier">Time Multiplier</h2>
 <p>Now you can speed up or slow down your simulation with a multiplier attribute found on the <code>rdScene</code> node!</p>
 <ul>
 <li>If you need something happening <em>really-really fast</em>, don't forget to also up your <code>Substeps</code>.</li>
@@ -819,24 +832,24 @@
 </ul>
 <p><img alt="ragdollslowmo" src="https://user-images.githubusercontent.com/2152766/100639365-fa8c2c00-332c-11eb-86e7-a10a74e6fe15.gif" /></p>
 <p><br></p>
-<h3 id="rotate-order">Rotate Order</h3>
+<h2 id="rotate-order">Rotate Order</h2>
 <p>Now rigids plya well with non-standard rotation orders, very common your everyday character animation rigs to ensure axes don't go gimbal.</p>
 <p><img alt="ragdollrotateorder" src="https://user-images.githubusercontent.com/2152766/100214905-522f2f80-2f08-11eb-9f13-33ac275e00d1.gif" /></p>
 <blockquote>
 <p>Thanks to Peter Jemstedt for help on this one!</p>
 </blockquote>
 <p><br></p>
-<h3 id="auto-orient">Auto Orient</h3>
+<h2 id="auto-orient">Auto Orient</h2>
 <p>Shapes and constraints can now be automatically oriented based on the parent and child of each joint (soon coming to controls). This should help sort out those pesky joint orientations any manner of skeletons.</p>
 <p><img alt="ragdollautoorient" src="https://user-images.githubusercontent.com/2152766/100625476-7f227e80-331c-11eb-80ad-caf744f7f0a0.gif" /></p>
 <p><br></p>
-<h3 id="undo-bug">Undo Bug</h3>
+<h2 id="undo-bug">Undo Bug</h2>
 <p>There was this nasty bug that caused <code>rdRigid</code> nodes to remain behind after creating and then undoing. But what got left behind wasn't your normal nodes. They only appeared in the Node Editor and could not be selected or even deleted. They would show themselves out when re-opening the Maya scene which is great.</p>
 <p><img alt="ragdollundobug" src="https://user-images.githubusercontent.com/2152766/100438154-b0d7e300-3099-11eb-924f-6427214f1ec0.gif" /></p>
 <p>This visibility isn't a problem in itself, if it wasn't for them also being visible from Python. If any command needed to know "hey, animation control, are you connected to a rigid?" then it would happily reply "yes! for sure!".</p>
 <p>And that's bad. But not anymore, because it's fixed!</p>
 <p><br></p>
-<h3 id="stick-figures">Stick Figures</h3>
+<h2 id="stick-figures">Stick Figures</h2>
 <p>In a <a href="/releases/2020.11.23">previous release</a> I touched on <a href="/releases/2020.11.23#angular-mass">"angular mass"</a> and what it meant for your simulations.</p>
 <p>Let's look at this in practice.</p>
 <p><img alt="ragdolldance2" src="https://user-images.githubusercontent.com/2152766/100082488-33656600-2e40-11eb-93a5-02429565672f.gif" />
@@ -878,7 +891,7 @@
 <li>What if you add an extra <code>Guide</code> to her head?</li>
 </ol>
 <p><br></p>
-<h3 id="animation-in-1995">Animation in 1995</h3>
+<h2 id="animation-in-1995">Animation in 1995</h2>
 <p>Stumbled upon this (thanks Jarl!) which I think is a great example of what I think we're ready to move away from as an industry. :)</p>
 <ul>
 <li><a href="https://twitter.com/jeandenishaas/status/1330671654477860864">https://twitter.com/jeandenishaas/status/1330671654477860864</a></li>
@@ -892,7 +905,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-01-29
     
   </small>
 </div>

@@ -340,6 +340,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint-multiplier" class="md-nav__link">
+    Constraint Multiplier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-multiplier" class="md-nav__link">
+    Rigid Multiplier
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -383,6 +404,19 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.02.07/" class="md-nav__link">
+      2021.02.07
+    </a>
+  </li>
+
         
           
           
@@ -623,6 +657,27 @@
         <li class="md-nav__item">
   <a href="#constraint" class="md-nav__link">
     Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint-multiplier" class="md-nav__link">
+    Constraint Multiplier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-multiplier" class="md-nav__link">
+    Rigid Multiplier
   </a>
   
 </li>
@@ -907,6 +962,123 @@
 <div class="hboxlayout justify-center">
     <a href="/nodes/rdConstraint" class="button blue">Full Reference</a>
 </div>
+
+<p><br></p>
+<h3 id="control">Control</h3>
+<p>A placeholder for drawing a rigid under a different transform.</p>
+<p>This node is cosmetic only. It helps you spot the rigid and rigid orientation in the viewport for a standalone controller, like a <code>Guide</code>. It also draws the node with a special icon in the outliner. But that's about it!</p>
+<p><br></p>
+<p><img class="small-node-header" src=https://user-images.githubusercontent.com/2152766/107141604-cd0dc100-6921-11eb-9aa2-f9d55c458ef4.png></p>
+<div class="hboxlayout justify-center">
+    <a href="/nodes/rdControl" class="button blue">Full Reference</a>
+</div>
+
+<p><br></p>
+<h3 id="constraint-multiplier">Constraint Multiplier</h3>
+<p>Multiply one or more attributes of one or more <em>constraints</em>.</p>
+<p>This node enables you to animate one attribute that affect many attributes, like <code>Translate Guide Stiffness</code> across an entire character or limb.</p>
+<p><br></p>
+<p><img class="small-node-header" src=https://user-images.githubusercontent.com/2152766/107141752-d9dee480-6922-11eb-9e8b-74ede169db12.png></p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.angularDriveDamping</code></td>
+<td align="left">Multiplier for <code>rdConstraint.angularDriveDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.angularDriveStiffness</code></td>
+<td align="left">Multiplier for <code>rdConstraint.angularDriveStiffness</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.angularLimitDamping</code></td>
+<td align="left">Multiplier for <code>rdConstraint.angularLimitDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.angularLimitStiffness</code></td>
+<td align="left">Multiplier for <code>rdConstraint.angularLimitStiffness</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.driveStrength</code></td>
+<td align="left">Multiplier for <code>rdConstraint.driveStrength</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.limitStrength</code></td>
+<td align="left">Multiplier for <code>rdConstraint.limitStrength</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.linearDriveDamping</code></td>
+<td align="left">Multiplier for <code>rdConstraint.linearDriveDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.linearDriveStiffness</code></td>
+<td align="left">Multiplier for <code>rdConstraint.linearDriveStiffness</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.linearLimitDamping</code></td>
+<td align="left">Multiplier for <code>rdConstraint.linearLimitDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.linearLimitStiffness</code></td>
+<td align="left">Multiplier for <code>rdConstraint.linearLimitStiffness</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<div class="hboxlayout justify-center">
+    <a href="/nodes/rdConstraintMultiplier" class="button blue">Full Reference</a>
+</div>
+
+<p><br></p>
+<h3 id="rigid-multiplier">Rigid Multiplier</h3>
+<p>Multiply one or more attributes of one or more <em>rigids</em>.</p>
+<p>This node enables you to animate one attribute that affect many attributes, like <code>Air Density</code> across an entire character or limb.</p>
+<p><br></p>
+<p><img class="small-node-header" src=https://user-images.githubusercontent.com/2152766/107142315-f7fa1400-6925-11eb-8250-45c95d651c97.png></p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>.airDensity</code></td>
+<td align="left">Multiplier for <code>rdRigid.airDensity</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.angularDamping</code></td>
+<td align="left">Multiplier for <code>rdRigid.angularDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+<tr>
+<td align="left"><code>.linearDamping</code></td>
+<td align="left">Multiplier for <code>rdRigid.linearDamping</code></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+</tr>
+</tbody>
+</table>
+<div class="hboxlayout justify-center">
+    <a href="/nodes/rdRigidMultiplier" class="button blue">Full Reference</a>
+</div>
                 
                   
                     
@@ -915,7 +1087,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-02-07
     
   </small>
 </div>

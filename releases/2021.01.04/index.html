@@ -345,6 +345,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../2021.02.07/" class="md-nav__link">
+      2021.02.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../2021.01.27/" class="md-nav__link">
       2021.01.27
     </a>
@@ -820,7 +833,7 @@
 <li><strong>FIXED</strong> Centered Option Window - On Linux, the option window would sometimes appear in the top-left corner of the screen. No more!</li>
 </ul>
 <p><br></p>
-<h3 id="website">Website</h3>
+<h2 id="website">Website</h2>
 <p>Happy New Year, the year of Ragdoll. :)</p>
 <p>I've launched the next generation of Ragdoll's website. Something a little more flashy and intended to wet people's appetite for what lies ahead. Feel free to tell people about it, I've added a note about when it'll become a reality.</p>
 <ul>
@@ -839,7 +852,7 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/47274066/103482986-065f8800-4ddc-11eb-857d-3b6cdacafe79.png" /></p>
 <p>If any link fails, just make sure it's prefixed with <code>ragdoll-web/</code> as the landing page, e.g. <code>https://alanjfs.github.io/ragdoll-web/howto</code></p>
 <p><br></p>
-<h3 id="licencing">Licencing</h3>
+<h2 id="licencing">Licencing</h2>
 <p>Ragdoll is growing up and now understands the "product key" which means users can now purchase a copy and register it to themselves.</p>
 <p>Here's the short version, with a longer version below.</p>
 <ul>
@@ -912,7 +925,7 @@
 <h4 id="can-i-manage-my-licence-via-python">Can I manage my licence via Python?</h4>
 <p>Sure can, see below.</p>
 <p><br></p>
-<h3 id="licence-api">Licence API</h3>
+<h2 id="licence-api">Licence API</h2>
 <p>As a user, you'll generally use the UI. But the UI is ultimately making calls to Python (which is making calls to C++) and you can bypass the UI using these same calls.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
 
@@ -956,7 +969,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><br></p>
-<h3 id="locked-rotate-pivot">Locked Rotate Pivot</h3>
+<h2 id="locked-rotate-pivot">Locked Rotate Pivot</h2>
 <p>Ragdoll doesn't support a custom <code>rotatePivot</code> attribute and would zero this out whenever a transform is turned dynamic. It'll provide a warning to the end user that this would happen.</p>
 <p>But, it wasn't taking into account the <code>rotatePivot</code> being connected or locked. If that happened, Ragdoll would flat out refuse and print something cryptic in the Script Editor.</p>
 <p>This has now been fixed.</p>
@@ -978,7 +991,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-01-29
     
   </small>
 </div>

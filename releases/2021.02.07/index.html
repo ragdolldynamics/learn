@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2020.12.07/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.02.07/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>2020.12.07 - Learn Ragdoll</title>
+        <title>2021.02.07 - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blend-rigid" class="md-skip">
+        <a href="#scale" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2020.12.07
+              2021.02.07
             
           </span>
         </div>
@@ -343,11 +343,100 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../2021.02.07/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2021.02.07
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       2021.02.07
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#negative-scale" class="md-nav__link">
+    Negative Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-scale" class="md-nav__link">
+    Zero Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaled-rotation" class="md-nav__link">
+    Scaled Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-object-space-scale" class="md-nav__link">
+    Non Object-Space Scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nurbs-surfaces" class="md-nav__link">
+    NURBS Surfaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-attributes" class="md-nav__link">
+    Output Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zombie-attributes" class="md-nav__link">
+    Zombie Attributes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -434,66 +523,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        2020.12.07
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../2020.12.07/" class="md-nav__link">
       2020.12.07
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#blend-rigid" class="md-nav__link">
-    Blend Rigid
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-control-capsules" class="md-nav__link">
-    Dynamic Control Capsules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-control-and-undo" class="md-nav__link">
-    Dynamic Control and Undo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-control-and-orient" class="md-nav__link">
-    Dynamic Control and Orient
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -629,29 +663,63 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#blend-rigid" class="md-nav__link">
-    Blend Rigid
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#negative-scale" class="md-nav__link">
+    Negative Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-scale" class="md-nav__link">
+    Zero Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaled-rotation" class="md-nav__link">
+    Scaled Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-object-space-scale" class="md-nav__link">
+    Non Object-Space Scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nurbs-surfaces" class="md-nav__link">
+    NURBS Surfaces
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-control-capsules" class="md-nav__link">
-    Dynamic Control Capsules
+  <a href="#output-attributes" class="md-nav__link">
+    Output Attributes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-control-and-undo" class="md-nav__link">
-    Dynamic Control and Undo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-control-and-orient" class="md-nav__link">
-    Dynamic Control and Orient
+  <a href="#zombie-attributes" class="md-nav__link">
+    Zombie Attributes
   </a>
   
 </li>
@@ -670,39 +738,141 @@
 
                 
                 
-                  <h1>2020.12.07</h1>
+                  <h1>2021.02.07</h1>
                 
-                <p>Small release with important changes if you use Dynamic Controls on complex rigs with pre-existing animation.</p>
+                <p><img alt="ragdollscale" src="https://user-images.githubusercontent.com/2152766/107122925-a785a680-6892-11eb-8329-78938ae839ad.gif" /></p>
+<p>Highlight of this release is <strong>Support for Scale</strong>!</p>
 <ul>
-<li><a href="#blend-rigid"><strong>ADDED</strong> Blend Rigid</a> Now rigids can do some of what Dynamic Controls can do. :)</li>
-<li><a href="#dynamic-control-capsules"><strong>FIXED</strong> Dynamic Control switch Shape</a> You can now switch to capsules after having created them as meshes.</li>
-<li><a href="#dynamic-control-and-undo"><strong>FIXED</strong> Dynamic Control and Undo</a> If your controls have pre-existing animation, undo will now work properly</li>
-<li><a href="#dynamic-control-and-orient"><strong>FIXED</strong> Dynamic Control and Auto Orient</a> If you controls have intermediate groups between themselves, auto axis will now work properly</li>
+<li><a href="#scale"><strong>ADDED</strong> Support for Scale</a> Ragdoll now works on scaled geometry and controls</li>
+<li><a href="#nurbs-surfaces"><strong>ADDED</strong> Support for NURBS Surfaces</a> This hip new thing popularised in the 90s is now yours to reap!</li>
+<li><a href="#output-attributes"><strong>ADDED</strong> Visualise Output Attributes</a> Gain insight into what comes out of the solver</li>
+<li><a href="#zombie-attributes"><strong>FIXED</strong> Zombie Attributes</a> Delete All Physics didn't quite catch'em all</li>
 </ul>
 <p><br></p>
-<h2 id="blend-rigid">Blend Rigid</h2>
-<p>Non-destructive guidance from your original animation when making active rigid bodies. This works much like <em>Dynamic Control</em>, except the guidance is in worldspace. :)</p>
-<p>Look at this example of driving an IK handle with physics.</p>
-<p><img alt="ragdollguiderigid" src="https://user-images.githubusercontent.com/2152766/101453898-f9a85b00-3927-11eb-83ed-dfd49331d850.gif" /></p>
-<p><img alt="ragdollblend2" src="https://user-images.githubusercontent.com/2152766/101289774-6cb1b480-37f6-11eb-8fc7-b9e7e373ce3d.gif" /></p>
-<p>You can blend between simulation and animation using the <code>blendSimulation</code> node in the Channel Box.</p>
+<h2 id="scale">Scale</h2>
+<p>This has been an <strong>epic challenge</strong>, but it finally happened!</p>
+<p>Up till now, any scale other than (1, 1, 1) at any level of a hierarchy would have either broken a simulation or refused to work outright. Not anymore! Now you can simulate <em>scaled transforms</em>, including scaled rigs and all of what it entails.</p>
+<p>Here's a brief on what works and what doesn't.</p>
+<p><img alt="ragdollscaletests" src="https://user-images.githubusercontent.com/2152766/107061015-9162e200-67cf-11eb-8a82-fac94e3c5438.gif" /></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">Feature</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">✔️</td>
+<td align="left">Uniform Scale</td>
+<td align="left"><code>1.5, 1.5, 1.5</code></td>
+</tr>
+<tr>
+<td align="center">✔️</td>
+<td align="left">Non-uniform Scale</td>
+<td align="left"><code>0.5, 0.6, 0.12</code></td>
+</tr>
+<tr>
+<td align="center">✔️</td>
+<td align="left">Mixed Positive/Negative Scale</td>
+<td align="left"><code>0.9, -1.5, -1.1</code></td>
+</tr>
+<tr>
+<td align="center">✔️</td>
+<td align="left">Scaled parent(s)</td>
+<td align="left">Scaled root control</td>
+</tr>
+<tr>
+<td align="center">✔️</td>
+<td align="left">Mixed Scale &amp; Constraints</td>
+<td align="left">Scaled box to differently-scaled capsule</td>
+</tr>
+<tr>
+<td align="center">➖</td>
+<td align="left">Zero Scale</td>
+<td align="left"><code>0.0, 0.0, 0.0</code></td>
+</tr>
+<tr>
+<td align="center">➖</td>
+<td align="left">Mixed Zero Scale</td>
+<td align="left"><code>1.0, 0.0, 1.0</code></td>
+</tr>
+<tr>
+<td align="center">➖</td>
+<td align="left">Negative Scale</td>
+<td align="left"><code>-1.5, -1.5, -1.5</code></td>
+</tr>
+<tr>
+<td align="center">➖</td>
+<td align="left">Non-uniform Negative Scale</td>
+<td align="left"><code>-1.0, 1.0, -2.0</code></td>
+</tr>
+<tr>
+<td align="center">❌</td>
+<td align="left">Non Object-Space Scale</td>
+<td align="left">Scale in <code>World</code> mode</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ragdolltiger" src="https://user-images.githubusercontent.com/2152766/107128133-24287d00-68b3-11eb-8aeb-44dbe4f2ce38.gif" /></p>
+<p>There are a few caveats.</p>
+<ul>
+<li>Avoid negative scale if possible, it works but can surprise you</li>
+<li><em>Non-uniform</em> scale is more common, e.g. to mirror something, and <em>may</em> work but may surprise you</li>
+<li>Non <em>object-space</em> scale flat-out doesn't work, not even Maya can do that; it's here for completeness.</li>
+<li>Scale cannot be animated</li>
+<li>Scale is set on the start frame, and is part of the Initial State. It is also updated alongside the translate/rotate initial state.</li>
+</ul>
+<h4 id="negative-scale">Negative Scale</h4>
+<p>Commonly found in parent hierarchies that attempt to <em>mirror</em> the behavior of a control or hierarchy of controls. I'd like to better support this, but it is currently limited by math. More specifically, in that a transformation matrix simply cannot distinguish between negative and positive scale.</p>
+<p>So this one is <em>semi-supported</em>. The problem is for Ragdoll to distinguish between scale and rotation. It's a bit mathy, but you know how you can achieve the same pose by either scaling something negatively or rotate it 180 degrees along one or more axes? Ragdoll currently cannot know which of the possible outcomes you wanted.</p>
+<p>Here's a visual to help illustrate this point. (<a href="https://forums.autodesk.com/t5/maya-programming/bug-in-mtransformationmatrix/td-p/10024546">Reference</a>)</p>
+<p><img alt="matrix_decomposition" src="https://user-images.githubusercontent.com/2152766/107123230-4f4fa400-6894-11eb-8c96-049724262718.GIF" /></p>
+<p>Here's what can happen in practice.</p>
+<p><img alt="ragdollscalecaveat1" src="https://user-images.githubusercontent.com/2152766/107123871-0d286180-6898-11eb-9a5b-99be5dd7e634.gif" /></p>
+<p>Notice how both the scale and rotation values changed, even though the object in the viewport remains in the same orientation. That's because these values are both correct scale and orientation for this particular transform.</p>
+<p>You might think..</p>
+<blockquote>
+<p>Well, whatever. So long as it's oriented right, why should I care?</p>
+</blockquote>
+<p>Well, what if you had animated a realistically looking horse locomotion, rotating around the <em>X-axis</em>?</p>
+<p><img alt="ragdollscalenegativebad" src="https://user-images.githubusercontent.com/2152766/107128470-e5e08d00-68b5-11eb-9889-49bcedb617e3.gif" /></p>
+<p>Did you spot it? Both X and Z got their scale neutralised and X got 180 degrees steeper, compensating for the neutralised scale values. Also Z got flipped too! You can work around it, by accepting the new Z and offsetting your animation by 180 degrees.</p>
+<p>There's also the issue with it flying off for the first few frames. It's unclear why this happens, this may be a bug in the solver itself, trying to reconcile an orientation that is 180 degrees wrong.</p>
+<p>So, negative scale works, but it's painful. Avoid if possible.</p>
+<h4 id="zero-scale">Zero Scale</h4>
+<p>This is "supported" in that it doesn't fatal crash your Maya session. Ragdoll is a 3D solver, it cannot operate on anything without volume and mass.</p>
+<p>Here's an example of what to expect should you find the need for zero scale.</p>
+<p><img alt="ragdollscale0" src="https://user-images.githubusercontent.com/2152766/107125195-48c72980-68a0-11eb-84a9-0136f4c91780.gif" /></p>
+<h4 id="scaled-rotation">Scaled Rotation</h4>
+<p>TLDR; if you animate something from 0-45 degrees, it will rotate 45 degrees, regardless of scale.</p>
+<p><img alt="ragdollscalerotate" src="https://user-images.githubusercontent.com/2152766/107124742-95f5cc00-689d-11eb-86fe-0b07d232e0aa.gif" /></p>
+<p>This should be what you expect and won't need remembering, but for completeness here's what happening under the hood.</p>
+<p>Ragdoll strips scale from most internal computations. It's kept mostly so that it can be outputted again, as well as for rendering. See, custom Maya nodes render in the space of the transform. So rendering a point at coordinate (0, 0, 0) ends up in the middle of the transform node. Even as you move that transform around with the translate tool. That's problematic if you need to draw something uniformly, like the limits and drive visualisations. Even more so when you attempt to draw a line from one transform to another.. at different scales!</p>
+<p>But stripping it early is beneficial for both readability of code, but also usability for you. Uniform scale normally doesn't affect rotation, but <em>non-uniform</em> scale could.</p>
+<p>Consider this.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/107017772-80967a00-6797-11eb-8037-6b1cb963b65b.png" /></p>
+<p>Here, we've got a single angle of 45 degrees. If you were to scale this horizontally, you can see how the angle now changes! At a scale of 0, the angle has gone from 45 degrees to 90 degrees.</p>
+<p>This complicates things a lot, and Ragdoll saves you from that by not taking non-uniform scale into consideration for its rotations. A 45 degree angle will remain 45 degree regardless of scale; with the exception of negative scales which still flip the angle as you'd expect.</p>
+<h4 id="non-object-space-scale">Non Object-Space Scale</h4>
+<p>You probably don't do this, but for completeness here's what <em>doesn't</em> work.</p>
+<p><img alt="ragdollbadscale" src="https://user-images.githubusercontent.com/2152766/107124395-9d1bda80-689b-11eb-9af1-7a484ada2c6d.gif" />
+<img alt="ragdollbadscale2" src="https://user-images.githubusercontent.com/2152766/107124398-9f7e3480-689b-11eb-999b-eac989725081.gif" /></p>
 <p><br></p>
-<h2 id="dynamic-control-capsules">Dynamic Control Capsules</h2>
-<p>Change shape type, after creation. No matter the starting type.</p>
-<p>In the previous release, I added an option for generating dynamic controls as capsules instead of using the actual NURBS geometry. The usecase is for controls that don't have enough geometry to sufficiently wrap around the underlying geometry.</p>
-<p>This release enables the user to switch between capsules and mesh after having made the dynamic control. Previously, it was only possible to switch from Capsule to Mesh, not the other way around.</p>
-<p><img alt="ragdolldynamicshapechange" src="https://user-images.githubusercontent.com/2152766/101290043-eac28b00-37f7-11eb-84a4-10ca044e8637.gif" /></p>
+<h2 id="nurbs-surfaces">NURBS Surfaces</h2>
+<p>Ragdoll could translate polygon meshes and NURBS <em>curves</em> into collision meshes, and today I'm happy to announce that it now also supports the latest trend in computer graphics, heavily used in the 90s at Dreamworks for critically acclaimed feature animatinon films Antz and Shark Tale.</p>
+<p>Join the future!</p>
+<p><img alt="ragdollnurbs" src="https://user-images.githubusercontent.com/2152766/106288839-6fea7f00-6240-11eb-8515-d9966555fc8e.gif" /></p>
 <p><br></p>
-<h2 id="dynamic-control-and-undo">Dynamic Control and Undo</h2>
-<p>You couldn't undo, now you can.</p>
-<p>I found and patched a nasty bug that affected any Dynamic Control - and in fact any <em>Rigid</em> - created with anyhting that had pre-existing animation or connections of any kind, breaking undo.</p>
-<p><img alt="ragdollundobug2" src="https://user-images.githubusercontent.com/2152766/101244387-2d07a180-36fe-11eb-9edd-ddbf0c808a44.gif" /></p>
+<h2 id="output-attributes">Output Attributes</h2>
+<p>The Attribute Editor now displays the output translate, rotate and scale attributes from each rigid body.</p>
+<p><img alt="ragdolloutputattrs" src="https://user-images.githubusercontent.com/2152766/107124186-32b66a80-689a-11eb-942d-2c99176e24d7.gif" /></p>
+<p>These are the values that feed into your animation control, or any transform you're simulating.</p>
 <p><br></p>
-<h2 id="dynamic-control-and-orient">Dynamic Control and Orient</h2>
-<p>Orientations were whack, now they're back.</p>
-<p>Previously, the orientation of dynamic controls were determined by the physical hierarchy of the control. If the immediate parent was the expected parent control, all was well. But in real-world rigs, there are typically several intermediate groups - some empty, some constrained, some offsets. In such cases, the immediate parent can't be assumed to be the visible parent control the animator sees on screen.</p>
-<p>This releases solves this by treating the user-selection as the hierarchy, regardless of what the actual hierarchy looks like. This means you the animator get to control how things are oriented, just like you control what is to be simulated.</p>
-<p><img alt="ragdollorientandundo" src="https://user-images.githubusercontent.com/2152766/101290015-c666ae80-37f7-11eb-810d-8bbf5f024812.gif" /></p>
+<h2 id="zombie-attributes">Zombie Attributes</h2>
+<p>Minor bug fix.</p>
+<p>The <code>Delete All Physics</code> menu item didn't catch the last remaining <code>Local Strength</code> attribute created by <code>Create Dynamic Control</code>. This is all patched up!</p>
                 
                   
                     
@@ -711,7 +881,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-29
+      Last update: 2021-02-07
     
   </small>
 </div>
@@ -735,7 +905,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2020.12.18/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -744,19 +914,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2020.12.18
+                API Reference
               </div>
             </div>
           </a>
         
         
-          <a href="../2020.12.01/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2021.01.27/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2020.12.01
+                2021.01.27
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
