@@ -859,7 +859,7 @@
 <p>Let's dive into specifics.</p>
 <p><br></p>
 <h4 id="how-does-it-work">How does it work?</h4>
-<p>On first launch, Ragdoll will try and connect to the Ragdoll Licence Server (internet connection required, offline activation coming soon) and register your trial version. This version is node-locked to the particular machine you are on. It'll stick with the machine even across re-installs of your operating system.</p>
+<p>On first launch, Ragdoll will try and connect to the Ragdoll Licence Server and register your trial version. This version is node-locked to the particular machine you are on.</p>
 <p>Once you've acquired a product key, you can either:</p>
 <ol>
 <li>Click the <code>Ragdoll</code> menu item (bottom)</li>
@@ -870,6 +870,7 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
 <span class="n">licence</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 </code></pre></div>
+<p>If internet is unavailable, Ragdoll enters "offline mode" and expires at a fixed date. Each new release is given an updated expiry date.</p>
 <p><br></p>
 <h4 id="what-happens-when-my-trial-expires">What happens when my trial expires?</h4>
 <p>Any <code>rdScene.enabled</code> attribute will be set to <code>False</code>.</p>
