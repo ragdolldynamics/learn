@@ -1,0 +1,1103 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/serialisation/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="search" type="application/opensearchdescription+xml" href="../search.xml" title="Learn Ragdoll Search">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>Serialisation - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.699f7955.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.47d7edde.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Learn Ragdoll
+          </span>
+        </div>
+        <div class="md-header-nav__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Serialisation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header-nav__options">
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Animators Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Animators Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Animators Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../quick-tail-setup/" class="md-nav__link">
+      Quick Tail Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../download/" class="md-nav__link">
+      Download
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../menu/" class="md-nav__link">
+      Menu Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../nodes/" class="md-nav__link">
+      Node Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    
+    <label class="md-nav__link" for="nav-9">
+      Release History
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Release History" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Release History
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.03.11/" class="md-nav__link">
+      2021.03.11
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.03.04/" class="md-nav__link">
+      2021.03.04
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.03.01/" class="md-nav__link">
+      2021.03.01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.02.07/" class="md-nav__link">
+      2021.02.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.01.27/" class="md-nav__link">
+      2021.01.27
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.01.17/" class="md-nav__link">
+      2021.01.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.01.15/" class="md-nav__link">
+      2021.01.15
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.01.14/" class="md-nav__link">
+      2021.01.14
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2021.01.04/" class="md-nav__link">
+      2021.01.04
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.12.18/" class="md-nav__link">
+      2020.12.18
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.12.07/" class="md-nav__link">
+      2020.12.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.12.01/" class="md-nav__link">
+      2020.12.01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.24/" class="md-nav__link">
+      2020.11.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.23/" class="md-nav__link">
+      2020.11.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.22/" class="md-nav__link">
+      2020.11.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.17/" class="md-nav__link">
+      2020.11.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.16/" class="md-nav__link">
+      2020.11.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2020.11.10/" class="md-nav__link">
+      2020.11.10
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../licencing/" class="md-nav__link">
+      Licencing
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-body" class="md-nav__link">
+    Rigid Body
+  </a>
+  
+    <nav class="md-nav" aria-label="Rigid Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                
+                  <h1>Serialisation</h1>
+                
+                <div class="hero-container">
+  <img class="hero-image" src=/yoga13.png>
+</div>
+
+<p>Serialise all rigid bodies to JSON, for import into external software such as Unreal, Unity, Godot or your own custom game engine.</p>
+<div class="admonition info">
+<p class="admonition-title">Units</p>
+<p>All linear units are in <code>centimeters</code> and all angular units are in <code>radians</code>.</p>
+</div>
+<p><br></p>
+<h2 id="overview">Overview</h2>
+<p>On playback, Ragdoll generates a physical representation of your Maya scene, suitable for simulation. You can gain access to that representation, independent of Maya, for use in your own software and for your own purposes.</p>
+<p>This enables you to use Maya as an authoring environment for general-purpose physics scenes, including full or partial ragdolls, for characters or props and even full environments.</p>
+<p><strong>Target Audience</strong></p>
+<ul>
+<li><strong>Game programmers</strong> working on a custom engine</li>
+<li><strong>Technical Directors</strong> working with e.g. Unreal Engine or Unity</li>
+<li><strong>Roboticists</strong> exploring algorithms on humanoids with rigid bodies</li>
+<li><strong>Scientists</strong> in Machine Learning in need of bespoke ragdolls for their work</li>
+</ul>
+<p><strong>Usecases</strong></p>
+<p>Once a ragdoll has been authored in Maya, it can be exported for later import into external software for a variety of purposes.</p>
+<ul>
+<li><strong>Game Development</strong> where main or secondary characters need a physics representation</li>
+<li><strong>Virtual Production</strong> where you need Motion Builder or Unreal Engine to reproduce physics happening in Maya for real-time feedback</li>
+<li><strong>Robotics</strong> where you want interactive control over parameters that are also applied to a physical real-world equivalent, like Boston Dynamics's Atlas</li>
+<li><strong>Reinforcement Learning</strong> where algorithm and articulation depend on each other and are iterated upon in parallel, like OpenAI's gym environments and algorithms</li>
+<li><strong>Debugging</strong> in cases where odd things happen and you just require deep insight into what the solver sees</li>
+</ul>
+<p><br></p>
+<h2 id="concepts">Concepts</h2>
+<p>Ragdoll internally stores data as "entities" and "components".</p>
+<ul>
+<li>Entity is a unique identifier for any "thing" in the solver, like a rigid body, a constraint or force.</li>
+<li>Component is a set of data, like the transformation or rigid body properties, associated to an entity</li>
+</ul>
+<p>The exported format reflects this relationship and looks something like this.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="rigid-body">Rigid Body</h2>
+<p>A single translation/rotation pair.</p>
+<p><strong>Components</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>NameComponent</code></td>
+<td align="left">Name and path in Maya</td>
+</tr>
+<tr>
+<td align="left"><code>ColorComponent</code></td>
+<td align="left">Color of wireframe and polygons used for viewport rendering in Maya</td>
+</tr>
+<tr>
+<td align="left"><code>SceneComponent</code></td>
+<td align="left">Reference to the scene entity this rigid belongs to</td>
+</tr>
+<tr>
+<td align="left"><code>RestComponent</code></td>
+<td align="left">Initial transformation</td>
+</tr>
+<tr>
+<td align="left"><code>RigidComponent</code></td>
+<td align="left">Physics attributes</td>
+</tr>
+<tr>
+<td align="left"><code>GeometryDescriptionComponent</code></td>
+<td align="left">Shape attributes</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;RigidComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RigidComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;mass&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;friction&quot;</span><span class="p">:</span> <span class="mf">0.80</span><span class="p">,</span>
+    <span class="s2">&quot;restitution&quot;</span><span class="p">:</span> <span class="mf">0.10</span><span class="p">,</span>
+    <span class="s2">&quot;thickness&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;disableGravity&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;collide&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;kinematic&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;sleeping&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;positionIterations&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;velocityIterations&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;maxContactImpulse&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;maxDepenetrationVelocity&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;sleepThreshold&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+    <span class="s2">&quot;enableCCD&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+
+    <span class="c1"># A value of -1 means &quot;automatically computed&quot;</span>
+    <span class="s2">&quot;angularMass&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># A value of 0 means &quot;automatically computed&quot;</span>
+    <span class="s2">&quot;centerOfMass&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="shape">Shape</h3>
+<p>Every rigid has exactly one collision shape. The transformation of this shape can be optionally offset, and that offset happens in the frame of the rigid.</p>
+<div class="highlight"><pre><span></span><code>    ________
+ ^ |\       \
+ | | \_______\
+ | |  |      |
+ o--\-|-&gt;    |
+  \  \|______|
+   \
+    v
+</code></pre></div>
+<p>In this example, the center of the box is offset from the center of the rigid along the X axis. Notice how the geometry is relative the axis of the rigid, so rotating the rigid along the Z axis would naturally take the geometry with it.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
+
+    <span class="c1"># Used by Capsule</span>
+    <span class="s2">&quot;length&quot;</span><span class="p">:</span> <span class="mf">0.123</span><span class="p">,</span>
+
+    <span class="c1"># Used by Sphere</span>
+    <span class="s2">&quot;radius&quot;</span><span class="p">:</span> <span class="mf">0.012</span><span class="p">,</span>
+
+    <span class="c1"># Used by Box</span>
+    <span class="s2">&quot;extents&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.123</span><span class="p">,</span> <span class="mf">0.024</span><span class="p">,</span> <span class="mf">0.0247</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Translation relative the associated rigid</span>
+    <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.033</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Rotation relative the associated rigid</span>
+    <span class="c1"># Ordered as XYZW</span>
+    <span class="s2">&quot;rotation&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.87</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.47</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="constraint">Constraint</h2>
+<p>A relationship between two rigid bodies is referred to as a "constraint". A constraint <em>constrains</em> the way two rigid bodies move relative each other.</p>
+<p>For example, the position of the lower arm is typically associated with the tip of the upper arm. Wherever the upper arm goes, the lower arm must follow. It may also be further limited in how it is oriented, to e.g. prevent a lower arm from bending past the natural elbow limit; i.e. to rotate between 20-180 degrees along the Z axis, and 0-10 degrees around the X and Y axis (as that rotation would normally come from twisting the upper arm).</p>
+<ul>
+<li>All constraints are bi-directional</li>
+<li>Rigid A attaches to B, as B attaches to A</li>
+<li>The point on A where B attaches is referred to as the <code>parentFrame</code></li>
+<li>The point on B where A attaches is referred to as the <code>childFrame</code></li>
+</ul>
+<p>Despite the name, there is no notion of hierarchy or "parent" in Ragdoll; the naming reflects the hierarchy as represented in Maya, where constraints are parented to the rigid representing the <code>childFrame</code>.</p>
+<p><strong>Components</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>JointComponent</code></td>
+<td align="left">References to associated rigids and frame matrices</td>
+</tr>
+<tr>
+<td align="left"><code>LimitComponent</code></td>
+<td align="left">Optional limits on translation and/or rotation</td>
+</tr>
+<tr>
+<td align="left"><code>DriveComponent</code></td>
+<td align="left">Optional target transformation, i.e. the animation</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;JointComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;JointComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+    <span class="c1"># Reference to the associated rigid body entities</span>
+    <span class="s2">&quot;parent&quot;</span><span class="p">:</span> <span class="mi">1048586</span><span class="p">,</span>
+    <span class="s2">&quot;child&quot;</span><span class="p">:</span> <span class="mi">1048584</span><span class="p">,</span>
+
+    <span class="c1"># The translate/rotate of the parent</span>
+    <span class="c1"># rigid in the frame of child rigid</span>
+    <span class="s2">&quot;parentFrame&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.760</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.594</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.259</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.648</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.680</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.340</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0262</span><span class="p">,</span> <span class="mf">0.4274</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.903</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">10.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.646</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># The translate/rotate of the child</span>
+    <span class="c1"># rigid in the frame of parent rigid</span>
+    <span class="s2">&quot;childFrame&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.606</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.751</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.259</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.785</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.515</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.340</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.122</span><span class="p">,</span> <span class="mf">0.4103</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.903</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Allow intersections between connected rigids</span>
+    <span class="s2">&quot;disableCollision&quot;</span><span class="p">:</span> <span class="n">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;LimitComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LimitComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;twist&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
+    <span class="s2">&quot;swing1&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
+    <span class="s2">&quot;swing2&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
+    <span class="s2">&quot;angularStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">10000.0</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;DriveComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DriveComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;linearStiffness&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularStiffness&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">1000.0</span><span class="p">,</span>
+    <span class="s2">&quot;acceleration&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.973</span><span class="p">,</span> <span class="mf">0.2267</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.226</span><span class="p">,</span> <span class="mf">0.973</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.1051</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.006</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="data-types">Data Types</h2>
+<p>In addition to the plain-old-data types <code>int</code>, <code>double</code> and <code>bool</code>, these are all possible data types found in the exported JSON.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Color3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">0.4429999887943268</span><span class="p">,</span>  <span class="c1"># red</span>
+    <span class="mf">0.7049999833106995</span><span class="p">,</span>  <span class="c1"># green</span>
+    <span class="mf">0.9520000219345093</span>   <span class="c1"># blue</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">100.00001788139201</span><span class="p">,</span>  <span class="c1"># x</span>
+    <span class="mf">100.00001788139201</span><span class="p">,</span>  <span class="c1"># y</span>
+    <span class="mf">100.00000000000003</span>   <span class="c1"># z</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">0.8791841887437938</span><span class="p">,</span>     <span class="c1"># x</span>
+    <span class="o">-</span><span class="mf">0.47648206919348187</span><span class="p">,</span>   <span class="c1"># y</span>
+    <span class="o">-</span><span class="mf">2.7953360940182678e-8</span><span class="p">,</span> <span class="c1"># z</span>
+    <span class="mf">1.191501461145112e-7</span>    <span class="c1"># w</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="c1"># Unscaled, unsheared matrix</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateX</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateY</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateZ</span>
+    <span class="mf">1.0</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="components">Components</h2>
+<p>These are all possible types of components found in the exported JSON.</p>
+<ul>
+<li>SolverComponent</li>
+<li>SceneComponent</li>
+<li>NameComponent</li>
+<li>ColorComponent</li>
+<li>RestComponent</li>
+<li>ScaleComponent</li>
+<li>RigidComponent</li>
+<li>GeometryDescriptionComponent</li>
+<li>JointComponent</li>
+<li>DriveComponent</li>
+<li>LimitComponent</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-03-15
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 mottosso
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d95a11d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.0f64ce30.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../extra.js"></script>
+      
+    
+  </body>
+</html>
