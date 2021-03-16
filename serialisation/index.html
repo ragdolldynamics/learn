@@ -615,6 +615,26 @@
     Overview
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecases" class="md-nav__link">
+    Usecases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -659,9 +679,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#components" class="md-nav__link">
     Components
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    Output Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example" class="md-nav__link">
+    Code Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -685,7 +732,7 @@
   <img class="hero-image" src=/yoga13.png>
 </div>
 
-<p>Serialise all rigid bodies to JSON, for import into external software such as Unreal, Unity, Godot or your own custom game engine.</p>
+<p>Serialise all rigid bodies to JSON, for import into external software such as Unreal, Unity, Godot, CryEngine or any other engine able to read and parse JSON, including your own custom game engine.</p>
 <div class="admonition info">
 <p class="admonition-title">Units</p>
 <p>All linear units are in <code>centimeters</code> and all angular units are in <code>radians</code>.</p>
@@ -694,14 +741,14 @@
 <h2 id="overview">Overview</h2>
 <p>On playback, Ragdoll generates a physical representation of your Maya scene, suitable for simulation. You can gain access to that representation, independent of Maya, for use in your own software and for your own purposes.</p>
 <p>This enables you to use Maya as an authoring environment for general-purpose physics scenes, including full or partial ragdolls, for characters or props and even full environments.</p>
-<p><strong>Target Audience</strong></p>
+<h4 id="target-audience">Target Audience</h4>
 <ul>
 <li><strong>Game programmers</strong> working on a custom engine</li>
-<li><strong>Technical Directors</strong> working with e.g. Unreal Engine or Unity</li>
+<li><strong>Technical Directors</strong> working with e.g. Unreal Engine, Unity or CryEngine</li>
 <li><strong>Roboticists</strong> exploring algorithms on humanoids with rigid bodies</li>
 <li><strong>Scientists</strong> in Machine Learning in need of bespoke ragdolls for their work</li>
 </ul>
-<p><strong>Usecases</strong></p>
+<h4 id="usecases">Usecases</h4>
 <p>Once a ragdoll has been authored in Maya, it can be exported for later import into external software for a variety of purposes.</p>
 <ul>
 <li><strong>Game Development</strong> where main or secondary characters need a physics representation</li>
@@ -723,12 +770,16 @@
     <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
         <span class="o">...</span>
       <span class="p">}</span>
     <span class="p">},</span>
     <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
         <span class="o">...</span>
       <span class="p">}</span>
   <span class="p">}</span>
@@ -752,7 +803,7 @@
 </tr>
 <tr>
 <td align="left"><code>ColorComponent</code></td>
-<td align="left">Color of wireframe and polygons used for viewport rendering in Maya</td>
+<td align="left">Used in Maya viewport</td>
 </tr>
 <tr>
 <td align="left"><code>SceneComponent</code></td>
@@ -965,11 +1016,12 @@
 <h2 id="data-types">Data Types</h2>
 <p>In addition to the plain-old-data types <code>int</code>, <code>double</code> and <code>bool</code>, these are all possible data types found in the exported JSON.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Color3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Color4&quot;</span><span class="p">,</span>
   <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="mf">0.4429999887943268</span><span class="p">,</span>  <span class="c1"># red</span>
     <span class="mf">0.7049999833106995</span><span class="p">,</span>  <span class="c1"># green</span>
     <span class="mf">0.9520000219345093</span>   <span class="c1"># blue</span>
+    <span class="mf">1.0</span>                  <span class="c1"># alpha</span>
   <span class="p">]</span>
 <span class="p">}</span>
 
@@ -1016,21 +1068,137 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><br></p>
-<h2 id="components">Components</h2>
+<h2 id="reference">Reference</h2>
+<h3 id="components">Components</h3>
 <p>These are all possible types of components found in the exported JSON.</p>
 <ul>
-<li>SolverComponent</li>
-<li>SceneComponent</li>
-<li>NameComponent</li>
-<li>ColorComponent</li>
-<li>RestComponent</li>
-<li>ScaleComponent</li>
-<li>RigidComponent</li>
-<li>GeometryDescriptionComponent</li>
-<li>JointComponent</li>
-<li>DriveComponent</li>
-<li>LimitComponent</li>
+<li><code>SolverComponent</code></li>
+<li><code>SceneComponent</code></li>
+<li><code>NameComponent</code></li>
+<li><code>ColorComponent</code></li>
+<li><code>RestComponent</code></li>
+<li><code>ScaleComponent</code></li>
+<li><code>RigidComponent</code></li>
+<li><code>GeometryDescriptionComponent</code></li>
+<li><code>JointComponent</code></li>
+<li><code>DriveComponent</code></li>
+<li><code>LimitComponent</code></li>
 </ul>
+<p><br></p>
+<h3 id="output-example">Output Example</h3>
+<p>Here's an example of what a complete dump looks like.</p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917">Ragdoll Dump Output Example</a></li>
+</ul>
+<p><img alt="" src="https://user-images.githubusercontent.com/47274066/111270004-38386a80-8627-11eb-929b-caa7b04a4f49.png" /></p>
+<p><br></p>
+<h3 id="code-example">Code Example</h3>
+<p>Test your dump, by re-building the scene in Maya.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111279930-22c93d80-8633-11eb-956d-c65730a2049f.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll.vendor</span> <span class="kn">import</span> <span class="n">cmdx</span>
+
+
+<span class="k">class</span> <span class="nc">Component</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Simplified access to component members&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span>
+
+        <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Color4&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Matrix4</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Quaternion</span><span class="p">(</span><span class="o">*</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unsupported type: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">dedump</span><span class="p">(</span><span class="n">dump</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagModifier</span><span class="p">()</span> <span class="k">as</span> <span class="n">mod</span><span class="p">:</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dump&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="p">[</span><span class="s2">&quot;entities&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">comps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="s2">&quot;RigidComponent&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">comps</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;NameComponent&quot;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="c1"># Bad export</span>
+            <span class="k">continue</span>
+
+        <span class="n">joint</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;ScaleComponent&quot;</span><span class="p">])</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;RestComponent&quot;</span><span class="p">])</span>
+        <span class="n">desc</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Establish rigid transformation</span>
+        <span class="n">tm</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">TransformationMatrix</span><span class="p">(</span><span class="n">rest</span><span class="o">.</span><span class="n">matrix</span><span class="p">)</span>
+
+        <span class="c1"># Establish shape</span>
+        <span class="k">if</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Cylinder&quot;</span><span class="p">,</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">):</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCylinder</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                                       <span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">,</span>
+                                       <span class="n">height</span><span class="o">=</span><span class="n">length</span><span class="p">,</span>
+                                       <span class="n">roundCap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                       <span class="n">subdivisionsCaps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;Box&quot;</span><span class="p">:</span>
+            <span class="n">extents</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">extents</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">z</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+                                   <span class="n">height</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+                                   <span class="n">depth</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;Sphere&quot;</span><span class="p">:</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polySphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unsupported shape type: </span><span class="si">%s</span><span class="s2">.type=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span><span class="p">))</span>
+            <span class="k">continue</span>
+
+        <span class="k">with</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagModifier</span><span class="p">()</span> <span class="k">as</span> <span class="n">mod</span><span class="p">:</span>
+            <span class="n">transform</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">joint</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
+            <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">translation</span><span class="p">()</span>
+            <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">rotation</span><span class="p">()</span>
+
+        <span class="c1"># Establish shape transformation</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">offset</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">z</span>
+
+        <span class="n">geo</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
+        <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">offset</span>
+        <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">rotation</span>
+
+        <span class="n">transform</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
+
+
+<span class="c1"># Usage Example    </span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
+<span class="n">dedump</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
+</code></pre></div>
                 
                   
                     
@@ -1039,7 +1207,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-15
+      Last update: 2021-03-16
     
   </small>
 </div>
