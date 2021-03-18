@@ -588,6 +588,181 @@
   </li>
 
     
+      
+      
+      
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Serialisation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Serialisation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecases" class="md-nav__link">
+    Usecases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-body" class="md-nav__link">
+    Rigid Body
+  </a>
+  
+    <nav class="md-nav" aria-label="Rigid Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive" class="md-nav__link">
+    Drive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    Output Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example" class="md-nav__link">
+    Code Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -668,6 +843,26 @@
   <a href="#constraint" class="md-nav__link">
     Constraint
   </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive" class="md-nav__link">
+    Drive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -974,16 +1169,23 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><br></p>
+<h3 id="limit">Limit</h3>
+<p>Constraints may optionally have a "limit", which means it can keep a rigid within a given angle ("angular limit") or position ("linear limit").</p>
+<div class="admonition note">
+<p class="admonition-title">Min &amp; Max</p>
+<p>Values represent a upper end of a <em>range</em>. With <code>x=5</code> the minimum value of the linear X axis is <code>-5</code>.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;LimitComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LimitComponent&quot;</span><span class="p">,</span>
   <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>           <span class="c1"># Linear limit along the X-axis</span>
     <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
     <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
-    <span class="s2">&quot;twist&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
-    <span class="s2">&quot;swing1&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
-    <span class="s2">&quot;swing2&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>
+    <span class="s2">&quot;twist&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>       <span class="c1"># Angular limit along the X-axis</span>
+    <span class="s2">&quot;swing1&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>      <span class="c1"># ..Y</span>
+    <span class="s2">&quot;swing2&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>      <span class="c1"># ..Z</span>
     <span class="s2">&quot;angularStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
     <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
     <span class="s2">&quot;linearStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
@@ -991,6 +1193,18 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Locked, Free or Limited</p>
+<p>A value of <code>-1</code> means the axis is "Locked", i.e. the value along this axis cannot change. A Point Constraint is typically locked on all linear axes, but free on the angular axes. A value of <code>0</code> means the axis if "Free", meaning it has no effect. It is "limitless". A value above <code>0</code> indicates the range of a given limit.</p>
+<ul>
+<li><code>&lt;0</code> means Locked</li>
+<li><code>=0</code> means Free</li>
+<li><code>&gt;0</code> means Limited</li>
+</ul>
+</div>
+<p><br></p>
+<h3 id="drive">Drive</h3>
+<p>A constraint may optionally have a "drive", which means having one rigid reach a <code>target</code> position and/or angle relative another rigid. The typical use case is having simulation match your input animation, where the animation provides the positions and angles.</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;DriveComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DriveComponent&quot;</span><span class="p">,</span>
   <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1227,6 +1441,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../licencing/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Licencing
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../about/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -588,6 +588,32 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../serialisation/" class="md-nav__link">
+      Serialisation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -618,6 +644,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dynamic-install" class="md-nav__link">
+    Dynamic Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greater-guide-strength" class="md-nav__link">
+    Greater Guide Strength
+  </a>
+  
+    <nav class="md-nav" aria-label="Greater Guide Strength">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#replay" class="md-nav__link">
     Replay
   </a>
@@ -643,88 +703,80 @@
                 <ul>
 <li><a href="#json-export"><strong>ADDED</strong> JSON Export</a> Run your ragdolls in Unreal, Unity or your own custom game engine</li>
 <li><a href="#replay"><strong>ADDED</strong> Replay</a> Animator-friendly automation of Ragdoll setuport going out of sync</li>
+<li><a href="#dynamic-install"><strong>ADDED</strong> Dynamic Install</a> Install/uninstall by just loading/unloading the Maya plug-in</li>
+<li><a href="#greater-guide-strength"><strong>IMPROVED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
 </ul>
 <p><br></p>
 <h2 id="json-export">JSON Export</h2>
-<p>In 2021.03.04 we introduced <code>cmds.ragdollDump</code> to get a copy of all rigids in the form of a JSON dictionary.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="kn">from</span> <span class="nn">ragdoll.vendor</span> <span class="kn">import</span> <span class="n">cmdx</span>
+<p><img width=200 src=https://user-images.githubusercontent.com/2152766/111428442-684b4080-86ef-11eb-8919-ea14e85555ec.png></p>
+<p>In <a href="/releases/2021.03.01/#cmdsragdolldump">2021.03.01</a> we introduced <code>cmds.ragdollDump</code> to get a copy of all rigids in the form of a JSON dictionary.</p>
+<p>This release includes <strong>all initial state</strong> for the simulation, such that you can reproduce the results you see in Maya in a game engine, like Unreal, Unity, CryEngine or your own custom game engine. Or why not Houdini, Blender or 3dsMax?</p>
+<p>This enables you to use Maya as an authoring platform for physics anywhere.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
 
-<span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Convert big string to structured dictionary</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
 
-<span class="n">rd</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\marcus\Downloads\ragdoll.json&quot;</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">rd</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">rd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">components</span><span class="p">[</span><span class="s2">&quot;NameComponents&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
-<span class="n">joints</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pelvis1&quot;</span><span class="p">,</span> <span class="s2">&quot;spine_01&quot;</span><span class="p">,</span> <span class="s2">&quot;spine_02&quot;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">uid</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">rd</span><span class="p">[</span><span class="s2">&quot;entities&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">comps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="s2">&quot;NameComponent&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">comps</span><span class="p">:</span>
-        <span class="k">continue</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="s2">&quot;RigidComponent&quot;</span> <span class="ow">in</span> <span class="n">comps</span><span class="p">:</span>
-        <span class="k">continue</span>
-
-    <span class="n">name</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="s2">&quot;NameComponent&quot;</span><span class="p">]</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
-        <span class="c1"># What&#39;s this? :O</span>
-        <span class="k">continue</span>
-
-    <span class="n">joint</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-
-    <span class="n">scale</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="s2">&quot;ScaleComponent&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;absolute&quot;</span><span class="p">][</span><span class="s2">&quot;values&quot;</span><span class="p">]</span>
-    <span class="n">scale</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
-    <span class="n">matrix</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="s2">&quot;RestComponent&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;matrix&quot;</span><span class="p">][</span><span class="s2">&quot;values&quot;</span><span class="p">]</span>
-    <span class="n">matrix</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Matrix4</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-    <span class="n">tm</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Tm</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-
-    <span class="n">transform</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">joint</span><span class="p">)</span>
-    <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">translation</span><span class="p">()</span>
-    <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">rotation</span><span class="p">()</span>
-
-    <span class="n">desc</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">:</span>
-        <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
-        <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCylinder</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-                                   <span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">,</span>
-                                   <span class="n">height</span><span class="o">=</span><span class="n">length</span><span class="p">,</span>
-                                   <span class="n">roundCap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                   <span class="n">subdivisionsCaps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Box&quot;</span><span class="p">:</span>
-        <span class="n">extents</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">desc</span><span class="p">[</span><span class="s2">&quot;extents&quot;</span><span class="p">][</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
-        <span class="n">extents</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
-        <span class="n">extents</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
-        <span class="n">extents</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
-        <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
-                            <span class="n">height</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
-                            <span class="n">depth</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sphere&quot;</span><span class="p">:</span>
-        <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
-        <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polySphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unsupported shape type: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">desc</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">])</span>
-        <span class="k">continue</span>
-
-    <span class="n">offset</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">desc</span><span class="p">[</span><span class="s2">&quot;offset&quot;</span><span class="p">][</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
-    <span class="n">offset</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
-    <span class="n">offset</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
-    <span class="n">offset</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
-
-    <span class="n">geo</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
-    <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">offset</span>
-    <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Quaternion</span><span class="p">(</span><span class="n">desc</span><span class="p">[</span><span class="s2">&quot;rotation&quot;</span><span class="p">][</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
-
-    <span class="n">transform</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
+<span class="c1"># |root|pelvis|rRigid1</span>
+<span class="c1"># |root|pelvis|spine|rRigid2</span>
+<span class="c1"># |root|pelvis|spine2|rRigid3</span>
+<span class="c1"># ...</span>
 </code></pre></div>
+<p>Here's an example of what to expect from the output.</p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917"><code>output_example.json</code></a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>See the new Serialisation documentation for an overview, examples and data reference.</p>
+<ul>
+<li><a href="https://learn.ragdolldynamics.com/serialisation">https://learn.ragdolldynamics.com/serialisation</a></li>
+</ul>
+<p><br></p>
+<h2 id="dynamic-install">Dynamic Install</h2>
+<p>Previous releases shipped with a <code>userSetup.py</code> that triggered on launch of Maya. This made it easy to get setup, but made it challenging to <em>uninstall</em> without physically removing files off of the file system (hint: <code>~/Documents/maya/modules/Ragdoll.mod</code>).</p>
+<p>This release associates install with plug-in load.</p>
+<p><strong>Install</strong></p>
+<p><img alt="ragdollinstall" src="https://user-images.githubusercontent.com/2152766/111457614-55953380-8710-11eb-99a4-f2fb7cc67771.gif" /></p>
+<p><strong>Uninstall</strong></p>
+<p><img alt="ragdolluninstall" src="https://user-images.githubusercontent.com/2152766/111457654-6776d680-8710-11eb-964c-a31712f7875d.gif" /></p>
+<p><br></p>
+<h2 id="greater-guide-strength">Greater Guide Strength</h2>
+<p>The solver <code>Iterations</code> determines how high your <code>Guide Strength</code> attribute can go. Per default, <code>Iterations</code> was set to <code>1</code> which enabled strengths between <code>0-5</code> or so until their effect dimished.</p>
+<p>This release increases this default value to <code>4</code> for ranges between <code>0-100</code>, which means "incredibly high!". The change comes at a minor performance impact - estimated between 1-5% - so if you find the need to optimise, lower this value back to 2 or 1.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Bear in mind that the number of iterations are spread across all rigid in your scene. Meaning twice the number of rigids would half the amount of iterations dedicated to each one.</p>
+</div>
+<h4 id="before">Before</h4>
+<p><img alt="ragdolliterations3" src="https://user-images.githubusercontent.com/2152766/111459062-21bb0d80-8712-11eb-9eb9-1449d8352cab.gif" /></p>
+<h4 id="after">After</h4>
+<p><img alt="ragdolliterations4" src="https://user-images.githubusercontent.com/2152766/111459108-2da6cf80-8712-11eb-89a0-a2c7a7dc1675.gif" /></p>
 <p><br></p>
 <h2 id="replay">Replay</h2>
 <p>Ever set-up a character with physics, only to have to do it all over again on some other shot or character? With <strong>Replay</strong> this can be a thing of the past! :)</p>
@@ -737,7 +789,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-10
+      Last update: 2021-03-17
     
   </small>
 </div>
