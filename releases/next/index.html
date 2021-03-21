@@ -625,6 +625,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#active-chain" class="md-nav__link">
+    Active Chain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#greater-guide-strength" class="md-nav__link">
     Greater Guide Strength
   </a>
@@ -652,6 +659,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#crash-on-cleanup" class="md-nav__link">
+    Crash on Cleanup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#replay" class="md-nav__link">
     Replay
   </a>
@@ -674,12 +688,20 @@
                 
                   <h1>Next</h1>
                 
-                <ul>
+                <p>Highlight for this  release is JSON Export, this one's for you <strong>game developers</strong> out there!</p>
+<ul>
 <li><a href="#json-export"><strong>ADDED</strong> JSON Export</a> Run your ragdolls in Unreal, Unity or your own custom game engine</li>
 <li><a href="#replay"><strong>ADDED</strong> Replay</a> Animator-friendly automation of Ragdoll setuport going out of sync</li>
-<li><a href="#dynamic-install"><strong>ADDED</strong> Dynamic Install</a> Install/uninstall by just loading/unloading the Maya plug-in</li>
-<li><a href="#greater-guide-strength"><strong>IMPROVED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
+<li><a href="#active-chain"><strong>ADDED</strong> Active Chain</a> Next generation "Dynamic Control" with "chain"</li>
+<li><a href="#dynamic-install"><strong>CHANGED</strong> Dynamic Install</a> Tighter integration into Maya's native Plug-in Manager</li>
+<li><a href="#greater-guide-strength"><strong>CHANGED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
+<li><a href="#less-crashes"><strong>FIXED</strong> Less Crashes</a> Kids, say <em>no</em> to crashes</li>
+<li><a href="#custom-rotate-order"><strong>FIXED</strong> Custom Rotate Order</a> Now works as expected</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Important!</p>
+<p>This version won't self-install like the past releases, see <a href="#dynamic-install">Dynamic Install</a> on how you need to load the plug-in via Maya's Plug-in Manager from now on.</p>
+</div>
 <p><br></p>
 <h2 id="json-export">JSON Export</h2>
 <p><img width=200 src=https://user-images.githubusercontent.com/2152766/111428442-684b4080-86ef-11eb-8919-ea14e85555ec.png></p>
@@ -740,6 +762,9 @@
 <p><strong>Uninstall</strong></p>
 <p><img alt="ragdolluninstall" src="https://user-images.githubusercontent.com/2152766/111457654-6776d680-8710-11eb-964c-a31712f7875d.gif" /></p>
 <p><br></p>
+<h2 id="active-chain">Active Chain</h2>
+<p>Dynamic Control has been renamed <code>Active Chain</code>!</p>
+<p><br></p>
 <h2 id="greater-guide-strength">Greater Guide Strength</h2>
 <p>The solver <code>Iterations</code> determines how high your <code>Guide Strength</code> attribute can go. Per default, <code>Iterations</code> was set to <code>1</code> which enabled strengths between <code>0-5</code> or so until their effect dimished.</p>
 <p>This release increases this default value to <code>4</code> for ranges between <code>0-100</code>, which means "incredibly high!". The change comes at a minor performance impact - estimated between 1-5% - so if you find the need to optimise, lower this value back to 2 or 1.</p>
@@ -752,6 +777,10 @@
 <h4 id="after">After</h4>
 <p><img alt="ragdolliterations4" src="https://user-images.githubusercontent.com/2152766/111459108-2da6cf80-8712-11eb-89a0-a2c7a7dc1675.gif" /></p>
 <p><br></p>
+<h2 id="crash-on-cleanup">Crash on Cleanup</h2>
+<p>In rare cases, Ragdoll could crash Maya due to accessing memory it had no business accessing. Those have now been patched up and refactored for a more stable, crash-free experience!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111773312-eea98300-88a5-11eb-9f52-289b59125678.png" /></p>
+<p><br></p>
 <h2 id="replay">Replay</h2>
 <p>Ever set-up a character with physics, only to have to do it all over again on some other shot or character? With <strong>Replay</strong> this can be a thing of the past! :)</p>
 <p>If you've ever worked with Photoshop and it's "Actions" panel, you'll know what to expect. It'll record the things you do, such that you can replay them later. For every recorded action, selection and preferences are stored. You can edit the names of selected nodes with <em>wildcards</em> to support alternative naming conventions, for example if a control has a different namespace than originally recorded at. Preferences can be manipulated post-recording as well, such as the initial shapes of things.</p>
@@ -763,7 +792,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-17
+      Last update: 2021-03-19
     
   </small>
 </div>
