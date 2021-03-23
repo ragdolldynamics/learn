@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#json-export" class="md-skip">
+        <a href="#replay" class="md-skip">
           Skip to content
         </a>
       
@@ -343,6 +343,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../2021.03.23/" class="md-nav__link">
+      2021.03.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../2021.03.11/" class="md-nav__link">
       2021.03.11
     </a>
@@ -588,6 +601,32 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../serialisation/" class="md-nav__link">
+      Serialisation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -609,61 +648,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#json-export" class="md-nav__link">
-    JSON Export
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-install" class="md-nav__link">
-    Dynamic Install
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#active-chain" class="md-nav__link">
-    Active Chain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#greater-guide-strength" class="md-nav__link">
-    Greater Guide Strength
-  </a>
-  
-    <nav class="md-nav" aria-label="Greater Guide Strength">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#before" class="md-nav__link">
-    Before
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after" class="md-nav__link">
-    After
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crash-on-cleanup" class="md-nav__link">
-    Crash on Cleanup
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#replay" class="md-nav__link">
@@ -688,98 +672,9 @@
                 
                   <h1>Next</h1>
                 
-                <p>Highlight for this  release is JSON Export, this one's for you <strong>game developers</strong> out there!</p>
-<ul>
-<li><a href="#json-export"><strong>ADDED</strong> JSON Export</a> Run your ragdolls in Unreal, Unity or your own custom game engine</li>
+                <ul>
 <li><a href="#replay"><strong>ADDED</strong> Replay</a> Animator-friendly automation of Ragdoll setuport going out of sync</li>
-<li><a href="#active-chain"><strong>ADDED</strong> Active Chain</a> Next generation "Dynamic Control" with "chain"</li>
-<li><a href="#dynamic-install"><strong>CHANGED</strong> Dynamic Install</a> Tighter integration into Maya's native Plug-in Manager</li>
-<li><a href="#greater-guide-strength"><strong>CHANGED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
-<li><a href="#less-crashes"><strong>FIXED</strong> Less Crashes</a> Kids, say <em>no</em> to crashes</li>
-<li><a href="#custom-rotate-order"><strong>FIXED</strong> Custom Rotate Order</a> Now works as expected</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Important!</p>
-<p>This version won't self-install like the past releases, see <a href="#dynamic-install">Dynamic Install</a> on how you need to load the plug-in via Maya's Plug-in Manager from now on.</p>
-</div>
-<p><br></p>
-<h2 id="json-export">JSON Export</h2>
-<p><img width=200 src=https://user-images.githubusercontent.com/2152766/111428442-684b4080-86ef-11eb-8919-ea14e85555ec.png></p>
-<p>In <a href="/releases/2021.03.01/#cmdsragdolldump">2021.03.01</a> we introduced <code>cmds.ragdollDump</code> to get a copy of all rigids in the form of a JSON dictionary.</p>
-<p>This release includes <strong>all initial state</strong> for the simulation, such that you can reproduce the results you see in Maya in a game engine, like Unreal, Unity, CryEngine or your own custom game engine. Or why not Houdini, Blender or 3dsMax?</p>
-<p>This enables you to use Maya as an authoring platform for physics anywhere.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
-
-<span class="c1"># Convert big string to structured dictionary</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">components</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="n">components</span><span class="p">[</span><span class="s2">&quot;NameComponents&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="c1"># |root|pelvis|rRigid1</span>
-<span class="c1"># |root|pelvis|spine|rRigid2</span>
-<span class="c1"># |root|pelvis|spine2|rRigid3</span>
-<span class="c1"># ...</span>
-</code></pre></div>
-<p>Here's an example of what to expect from the output.</p>
-<ul>
-<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917"><code>output_example.json</code></a></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
-        <span class="o">...</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
-        <span class="o">...</span>
-      <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>See the new Serialisation documentation for an overview, examples and data reference.</p>
-<ul>
-<li><a href="https://learn.ragdolldynamics.com/serialisation">https://learn.ragdolldynamics.com/serialisation</a></li>
-</ul>
-<p><br></p>
-<h2 id="dynamic-install">Dynamic Install</h2>
-<p>Previous releases shipped with a <code>userSetup.py</code> that triggered on launch of Maya. This made it easy to get setup, but made it challenging to <em>uninstall</em> without physically removing files off of the file system (hint: <code>~/Documents/maya/modules/Ragdoll.mod</code>).</p>
-<p>This release associates install with plug-in load.</p>
-<p><strong>Install</strong></p>
-<p><img alt="ragdollinstall" src="https://user-images.githubusercontent.com/2152766/111457614-55953380-8710-11eb-99a4-f2fb7cc67771.gif" /></p>
-<p><strong>Uninstall</strong></p>
-<p><img alt="ragdolluninstall" src="https://user-images.githubusercontent.com/2152766/111457654-6776d680-8710-11eb-964c-a31712f7875d.gif" /></p>
-<p><br></p>
-<h2 id="active-chain">Active Chain</h2>
-<p>Dynamic Control has been renamed <code>Active Chain</code>!</p>
-<p><br></p>
-<h2 id="greater-guide-strength">Greater Guide Strength</h2>
-<p>The solver <code>Iterations</code> determines how high your <code>Guide Strength</code> attribute can go. Per default, <code>Iterations</code> was set to <code>1</code> which enabled strengths between <code>0-5</code> or so until their effect dimished.</p>
-<p>This release increases this default value to <code>4</code> for ranges between <code>0-100</code>, which means "incredibly high!". The change comes at a minor performance impact - estimated between 1-5% - so if you find the need to optimise, lower this value back to 2 or 1.</p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Bear in mind that the number of iterations are spread across all rigid in your scene. Meaning twice the number of rigids would half the amount of iterations dedicated to each one.</p>
-</div>
-<h4 id="before">Before</h4>
-<p><img alt="ragdolliterations3" src="https://user-images.githubusercontent.com/2152766/111459062-21bb0d80-8712-11eb-9eb9-1449d8352cab.gif" /></p>
-<h4 id="after">After</h4>
-<p><img alt="ragdolliterations4" src="https://user-images.githubusercontent.com/2152766/111459108-2da6cf80-8712-11eb-89a0-a2c7a7dc1675.gif" /></p>
-<p><br></p>
-<h2 id="crash-on-cleanup">Crash on Cleanup</h2>
-<p>In rare cases, Ragdoll could crash Maya due to accessing memory it had no business accessing. Those have now been patched up and refactored for a more stable, crash-free experience!</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111773312-eea98300-88a5-11eb-9f52-289b59125678.png" /></p>
 <p><br></p>
 <h2 id="replay">Replay</h2>
 <p>Ever set-up a character with physics, only to have to do it all over again on some other shot or character? With <strong>Replay</strong> this can be a thing of the past! :)</p>
@@ -792,7 +687,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-19
+      Last update: 2021-03-21
     
   </small>
 </div>

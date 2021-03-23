@@ -345,6 +345,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../../releases/2021.03.23/" class="md-nav__link">
+      2021.03.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../../releases/2021.03.11/" class="md-nav__link">
       2021.03.11
     </a>
@@ -590,6 +603,32 @@
   </li>
 
     
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../serialisation/" class="md-nav__link">
+      Serialisation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -721,6 +760,13 @@
 <tr>
 <td align="left"><code>.enabled</code></td>
 <td align="left">Whether or not to include this node in the simulation. A value of False is the same as the node not existing in the first place.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">True</td>
+</tr>
+<tr>
+<td align="left"><code>.exclusiveNodes</code></td>
+<td align="left">Nodes created for this and only this rigid. Exclusive nodes are deleted alongside this rigid. If you want to keep a node initially created as an exclusive node, disconnect it from this array.</td>
 <td align="left"></td>
 <td align="left"><nobr><code>bool</code></nobr></td>
 <td align="left">True</td>
@@ -955,6 +1001,13 @@
 <td align="left"></td>
 <td align="left"><nobr><code>float</code></nobr></td>
 <td align="left">0.0</td>
+</tr>
+<tr>
+<td align="left"><code>.userAttributes</code></td>
+<td align="left">References to attributes created for this rigid but on another node. Such as proxy attributes created on an original animation control, used to drive the attribute on this rigid.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>bool</code></nobr></td>
+<td align="left">True</td>
 </tr>
 <tr>
 <td align="left"><code>.velocityIterations</code></td>

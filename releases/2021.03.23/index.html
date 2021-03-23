@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Ragdoll 2021.03.23 is released! This time, you can author any physics contraption in Maya, and export it to JSON for import into any other game engine of VFX software.">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2020.11.23/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.03.23/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>2020.11.23 - Learn Ragdoll</title>
+        <title>JSON Export - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-control-20" class="md-skip">
+        <a href="#json-export" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2020.11.23
+              JSON Export
             
           </span>
         </div>
@@ -343,11 +343,127 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../2021.03.23/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2021.03.23
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       2021.03.23
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#json-export" class="md-nav__link">
+    JSON Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-install" class="md-nav__link">
+    Dynamic Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-chain" class="md-nav__link">
+    Active Chain
+  </a>
+  
+    <nav class="md-nav" aria-label="Active Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-constraint-attributes" class="md-nav__link">
+    Dynamic Constraint Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-menu" class="md-nav__link">
+    Simplified Menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greater-guide-strength" class="md-nav__link">
+    Greater Guide Strength
+  </a>
+  
+    <nav class="md-nav" aria-label="Greater Guide Strength">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crash-on-cleanup" class="md-nav__link">
+    Crash on Cleanup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bad-initial-state-on-load" class="md-nav__link">
+    Bad Initial State on Load
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-order-improvement" class="md-nav__link">
+    Rotate Order Improvement
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -525,79 +641,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        2020.11.23
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../2020.11.23/" class="md-nav__link">
       2020.11.23
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-control-20" class="md-nav__link">
-    Dynamic Control 2.0
-  </a>
-  
-    <nav class="md-nav" aria-label="Dynamic Control 2.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#center-of-mass" class="md-nav__link">
-    Center of Mass
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#angular-mass" class="md-nav__link">
-    Angular Mass
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#auto-connect" class="md-nav__link">
-    Auto Connect
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -720,16 +768,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dynamic-control-20" class="md-nav__link">
-    Dynamic Control 2.0
+  <a href="#json-export" class="md-nav__link">
+    JSON Export
   </a>
   
-    <nav class="md-nav" aria-label="Dynamic Control 2.0">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-install" class="md-nav__link">
+    Dynamic Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-chain" class="md-nav__link">
+    Active Chain
+  </a>
+  
+    <nav class="md-nav" aria-label="Active Chain">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+  <a href="#dynamic-constraint-attributes" class="md-nav__link">
+    Dynamic Constraint Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-menu" class="md-nav__link">
+    Simplified Menu
   </a>
   
 </li>
@@ -740,22 +809,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#center-of-mass" class="md-nav__link">
-    Center of Mass
+  <a href="#greater-guide-strength" class="md-nav__link">
+    Greater Guide Strength
+  </a>
+  
+    <nav class="md-nav" aria-label="Greater Guide Strength">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crash-on-cleanup" class="md-nav__link">
+    Crash on Cleanup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#angular-mass" class="md-nav__link">
-    Angular Mass
+  <a href="#bad-initial-state-on-load" class="md-nav__link">
+    Bad Initial State on Load
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-connect" class="md-nav__link">
-    Auto Connect
+  <a href="#rotate-order-improvement" class="md-nav__link">
+    Rotate Order Improvement
   </a>
   
 </li>
@@ -774,91 +870,131 @@
 
                 
                 
-                  <h1>2020.11.23</h1>
+                  <h1>2021.03.23</h1>
                 
-                <p>The headline of this release is <strong>Dynamic Control 2.0</strong></p>
+                <p>Highlight for this  release is JSON Export, this one's for you <strong>game developers</strong> out there!</p>
 <ul>
-<li><a href="#dynamic-control-20"><strong>CHANGED</strong> Dynamic Control</a> Removed fuss and simplified the interface.</li>
-<li><strong>CHANGED</strong> "Delete All Physics" Now deletes all physics, regardless of the current selection</li>
-<li><a href="#rigid-versus-collider"><strong>CHANGED</strong> Rigid versus Collider</a> Learn about what these mean and how to convert between the two.</li>
-<li><a href="#center-of-mass"><strong>ADDED</strong> Center of mass</a> (Advanced) Now you can change the point at which a rigid body is balanced</li>
-<li><a href="#angular-mass"><strong>ADDED</strong> Angular mass</a> (Advanced) Typically computed automatically from the shape and size of your rigid, now you can manually define this.</li>
-<li><a href="#auto-connect"><strong>ADDED</strong> Auto Connect</a> More clarity, and also usable with things other than joints</li>
+<li><a href="#json-export"><strong>ADDED</strong> JSON Export</a> Run your ragdolls in Unreal, Unity or your own custom game engine</li>
+<li><a href="#active-chain"><strong>ADDED</strong> Active Chain</a> Next generation "Dynamic Control" with "chain"</li>
+<li><a href="#dynamic-constraint-attributes"><strong>ADDED</strong> Dynamic Constraint Attributes</a> Stay focused on attributes that matter</li>
+<li><a href="#simplified-manu"><strong>CHANGED</strong> Simplified Menu</a> Less noisy, more focused menu</li>
+<li><a href="#dynamic-install"><strong>CHANGED</strong> Dynamic Install</a> Tighter integration into Maya's native Plug-in Manager</li>
+<li><a href="#greater-guide-strength"><strong>CHANGED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
+<li><a href="#less-crashes"><strong>FIXED</strong> Less Crashes</a> Kids, say <em>no</em> to crashes</li>
+<li><a href="#custom-rotate-order"><strong>FIXED</strong> Custom Rotate Order</a> Now works as expected</li>
+<li><a href="#bad-initial-state-on-load"><strong>FIXED</strong> Bad Initial State on Load</a> Loading saved physics now works as expected</li>
 </ul>
-<p><br>
-<br>
-<br></p>
-<h2 id="dynamic-control-20">Dynamic Control 2.0</h2>
-<p>Ragdoll is currently very technical.</p>
-<p>It is exposing features of an underlying mathematical framework for solving "Rigid-Body Dynamics" (<a href="https://en.wikipedia.org/wiki/Rigid_body_dynamics">wiki</a>) and tries to be as friendly about it as possible, but there is always a tradeoff in usability and flexibility.</p>
-<p><em>Dynamic Control</em> was made to bridge that gap.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99970437-bc729380-2d93-11eb-9ed1-16522ce176a9.png" /></p>
-<p><a href="https://www.youtube.com/watch?v=Zhe9pAaAd7s&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=6"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99910313-22541200-2ce5-11eb-98f6-dd4128e5b943.png" /></a></p>
-<p>It combines a user-selection with a series of commands to automatically try and figure out your intentions when those intentions are "add some dynamics to my animation control".</p>
-<p>Dynamic Control has been with Ragdoll for a few weeks now, and have undergone a series of changes to try and increase its intuitiveness whilst reducing complexity. It's hard! But in this release I'd like to present what I'm dubbing the "2.0" of Dynamic Control.</p>
-<p>The main differences are:</p>
-<ol>
-<li><strong>Preserves existing animation</strong> rather than replacing it</li>
-<li><strong>Simulation follows animation</strong> with additional "stiffness" and "damping" attributes</li>
-</ol>
-<p><code>stiffness</code> is the "springiness" whereas <code>damping</code> is the "plasticity". A control can have 0 damping and be very springy and active. It can also have 0 stiffness, but that would basically disable it.</p>
+<p><br></p>
+<div class="admonition warning">
+<p class="admonition-title">Important!</p>
+<p>This version won't self-install like the past releases, see <a href="#dynamic-install">Dynamic Install</a> on how you need to load the plug-in via Maya's Plug-in Manager from now on.</p>
+</div>
+<p><br></p>
+<p><img alt="ragcar3" src="https://user-images.githubusercontent.com/2152766/112117969-d1c9c400-8bb3-11eb-9247-1e3c6d49fc74.gif" /></p>
+<p><img alt="ragcar2" src="https://user-images.githubusercontent.com/2152766/112117979-d42c1e00-8bb3-11eb-873a-53e87bc2b328.gif" /></p>
 <blockquote>
-<p>On a technical note, the attributes exposed on your animation control are "proxy" attributes. Which means they can be animated either from your control, or from the source node, such as the <code>rSocketConstraint</code> shape node under your control.</p>
+<p>Vehicle model from <a href="https://www.mecabricks.com/en/models/7X2RJxJY2ZY">Mecabricks</a>.</p>
 </blockquote>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99971397-0314bd80-2d95-11eb-92e6-6c6260b7797d.png" /></p>
-<p>Here are some more videos to get you familiar with the tool.</p>
-<p><a href="https://www.youtube.com/watch?v=xzC3N1zxM6U&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=10"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99910356-66dfad80-2ce5-11eb-9b2a-ce817aa66ce4.png" /></a></p>
-<p><a href="https://www.youtube.com/watch?v=-y_CftzmDPk&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=11"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99968562-2e95a900-2d91-11eb-914f-5a4f66fb457c.png" /></a></p>
-<p><a href="https://www.youtube.com/watch?v=NSShJ9sm4Eo&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=12"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99968598-39e8d480-2d91-11eb-9b1c-eb13ed21cdc9.png" /></a></p>
-<p><a href="https://www.youtube.com/watch?v=ZR1NKv7ZRCg&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=13"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99968617-42d9a600-2d91-11eb-9c83-1bb3db094efe.png" /></a></p>
-<p><a href="https://www.youtube.com/watch?v=oqNweG5LYaI&amp;list=PLL4XIS5Woc6nVsTdsvs0XLmiKmXVCdwXy&amp;index=14"><img alt="image" src="https://user-images.githubusercontent.com/2152766/99988204-3f521900-2da9-11eb-8561-30effff68045.png" /></a></p>
-<ul>
-<li><a href="/howto">More videos</a></li>
-</ul>
-<h3 id="limitations">Limitations</h3>
-<p>Some limitations in this current version, yell if these affect you.</p>
-<ol>
-<li><strong>Negative scale not allowed</strong>, the tool will refuse your request</li>
-<li><strong>Rotate and scale pivots</strong> are zeroed out</li>
-</ol>
-<p>The same goes for all things Ragdoll at the moment.</p>
 <p><br></p>
-<h2 id="center-of-mass">Center of Mass</h2>
-<p>If you try and balance something on your finger, but the "center of mass" is off center, it would fall over.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99946359-25471500-2d6e-11eb-8c29-5d39e69f05ee.png" /></p>
-<p>It is the point at which the weight of an object is equal in all directions.</p>
-<p>Ragdoll automatically computes this point based on what the shape looks like. For meshes, it will <em>voxelise</em> your geometry to figure out the physically accurate volumetric center of mass, assuming the density of the object is uniform throughout (rather than hollow or variadic, like swiss cheese).</p>
-<p>You can now override this point using <code>rdRigid.centerOfMass</code>.</p>
-<p><img alt="ragdollcom" src="https://user-images.githubusercontent.com/2152766/99946517-64756600-2d6e-11eb-8446-469ea68073b4.gif" />
-<img alt="ragdollcom2" src="https://user-images.githubusercontent.com/2152766/99946522-663f2980-2d6e-11eb-9a5e-9aa9bf7c301a.gif" /></p>
-<p><strong>Guidelines</strong></p>
+<h2 id="json-export">JSON Export</h2>
+<p><img width=200 src=https://user-images.githubusercontent.com/2152766/111428442-684b4080-86ef-11eb-8919-ea14e85555ec.png></p>
+<p>In <a href="/releases/2021.03.01/#cmdsragdolldump">2021.03.01</a> we introduced <code>cmds.ragdollDump</code> to get a copy of all rigids in the form of a JSON dictionary.</p>
+<p>This release includes <strong>all initial state</strong> for the simulation, such that you can reproduce the results you see in Maya in a game engine, like Unreal, Unity, CryEngine or your own custom game engine. Or why not Houdini, Blender or 3dsMax?</p>
+<p>This enables you to use Maya as an authoring platform for physics anywhere.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
+
+<span class="c1"># Convert big string to structured dictionary</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">components</span><span class="p">[</span><span class="s2">&quot;NameComponents&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># |root|pelvis|rRigid1</span>
+<span class="c1"># |root|pelvis|spine|rRigid2</span>
+<span class="c1"># |root|pelvis|spine2|rRigid3</span>
+<span class="c1"># ...</span>
+</code></pre></div>
+<p>Here's an example of what to expect from the output.</p>
 <ul>
-<li>For realistic results, leave it at <code>0</code> to compute the point automatically based on the shape</li>
-<li>For full control, override it</li>
+<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917"><code>output_example.json</code></a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>See the new Serialisation documentation for an overview, examples and data reference.</p>
+<ul>
+<li><a href="https://learn.ragdolldynamics.com/serialisation">https://learn.ragdolldynamics.com/serialisation</a></li>
 </ul>
 <p><br></p>
-<h2 id="angular-mass">Angular Mass</h2>
-<p>In real life, if you spin a broom 180 degrees along its length; that's easy. But if you spin it 180 degrees along any other axis, like a ninja, it's considerably heavier.</p>
-<p><img width=400 src=https://user-images.githubusercontent.com/2152766/99944546-f67b6f80-2d6a-11eb-93b1-47a49deba0d5.png></p>
-<p>The reason is something called "angular mass" or "moment of inertia". It's like mass, but in terms of rotation rather than position. The broom has a low angular mass around its length axis, and a high angular mass in the other two axes. That makes it "heavier" around some axes but not others.</p>
-<p>This effect happens in Ragdoll too and is typically automatically computed for you based on the shape you use. If it looks like the broom, then the angular mass will also be lighter around its length then its width.</p>
-<p>With this release, you can now customise this for greater control of your rotations.</p>
-<p><img alt="ragdollangularmass" src="https://user-images.githubusercontent.com/2152766/99944815-6db10380-2d6b-11eb-9def-dba375a7e743.gif" /></p>
-<p>When would you want to do that?</p>
-<ol>
-<li>Your shape looks like a broom, but you want it to act like a box</li>
-<li>Your shape doesn't look like a broom, but you would like it to</li>
-</ol>
-<p>Or any combination in between. :) Generally, a broom or any thin shape is more easily spun along its length, so you may find <strong>stability</strong> in setting your angular mass to <code>(1.0, 1.0, 1.0)</code>, at the expense of realism.</p>
-<p><strong>Guidelines</strong></p>
-<ul>
-<li>For realistic results, leave it at <code>-1</code> to automatically compute the angular mass</li>
-<li>For full control, override it</li>
-</ul>
+<h2 id="dynamic-install">Dynamic Install</h2>
+<p>Previous releases shipped with a <code>userSetup.py</code> that triggered on launch of Maya. This made it easy to get setup, but made it challenging to <em>uninstall</em> without physically removing files off of the file system (hint: <code>~/Documents/maya/modules/Ragdoll.mod</code>).</p>
+<p>This release associates install with plug-in load.</p>
+<p><strong>Install</strong></p>
+<p><img alt="ragdollinstall" src="https://user-images.githubusercontent.com/2152766/111457614-55953380-8710-11eb-99a4-f2fb7cc67771.gif" /></p>
+<p><strong>Uninstall</strong></p>
+<p><img alt="ragdolluninstall" src="https://user-images.githubusercontent.com/2152766/111457654-6776d680-8710-11eb-964c-a31712f7875d.gif" /></p>
 <p><br></p>
-<h2 id="auto-connect">Auto Connect</h2>
-<p>The "Auto Connect" option now enables you to specify whether to connect joints, or any selected object.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99982055-095d6680-2da2-11eb-95ea-8fb8b0ec4dea.png" /></p>
+<h2 id="active-chain">Active Chain</h2>
+<p>Dynamic Control has been renamed <code>Active Chain</code>.</p>
+<p>Turns out, what Dynamic Control was really all about was a generic chain that can also be turned into hierarchies of chains - or "branches" - to form a tree. Even a literal one!</p>
+<p><img alt="tree1" src="https://user-images.githubusercontent.com/2152766/112037571-c33ec680-8b39-11eb-80e4-c906db27789d.gif" />
+<img alt="tree3" src="https://user-images.githubusercontent.com/2152766/112037751-f5e8bf00-8b39-11eb-8db1-599f7032d4cc.gif" /></p>
+<p><br></p>
+<h3 id="dynamic-constraint-attributes">Dynamic Constraint Attributes</h3>
+<p>Now whatever attributes are relevant show up in the Channel Box, and stay relevant as you make changes. Similar to how the <code>rdRigid.shapeType</code> attribute updates the <code>shapeExtents</code> and <code>shapeOffset</code> attributes!</p>
+<p><img alt="ragdolldynamicconstraintattrs" src="https://user-images.githubusercontent.com/2152766/112036474-976f1100-8b38-11eb-90d6-0de3e613303d.gif" /></p>
+<p><br></p>
+<h3 id="simplified-menu">Simplified Menu</h3>
+<p>Items have re-arranged and grouped together to be easier to find and less</p>
+<p><img alt="newmenu" src="https://user-images.githubusercontent.com/2152766/112038133-67287200-8b3a-11eb-875b-885c552aae93.gif" /></p>
+<p><br></p>
+<h2 id="greater-guide-strength">Greater Guide Strength</h2>
+<p>The solver <code>Iterations</code> determines how high your <code>Guide Strength</code> attribute can go. Per default, <code>Iterations</code> was set to <code>1</code> which enabled strengths between <code>0-5</code> or so until their effect dimished.</p>
+<p>This release increases this default value to <code>4</code> for ranges between <code>0-100</code>, which means "incredibly high!". The change comes at a minor performance impact - estimated between 1-5% - so if you find the need to optimise, lower this value back to 2 or 1.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Bear in mind that the number of iterations are spread across all rigid in your scene. Meaning twice the number of rigids would half the amount of iterations dedicated to each one.</p>
+</div>
+<h4 id="before">Before</h4>
+<p><img alt="ragdolliterations3" src="https://user-images.githubusercontent.com/2152766/111459062-21bb0d80-8712-11eb-9eb9-1449d8352cab.gif" /></p>
+<h4 id="after">After</h4>
+<p><img alt="ragdolliterations4" src="https://user-images.githubusercontent.com/2152766/111459108-2da6cf80-8712-11eb-89a0-a2c7a7dc1675.gif" /></p>
+<p><br></p>
+<h2 id="crash-on-cleanup">Crash on Cleanup</h2>
+<p>In rare cases, Ragdoll could crash Maya due to accessing memory it had no business accessing. Those have now been patched up and refactored for a more stable, crash-free experience!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111773312-eea98300-88a5-11eb-9f52-289b59125678.png" /></p>
+<p><br></p>
+<h2 id="bad-initial-state-on-load">Bad Initial State on Load</h2>
+<p>In rare cases, opening a scene could lead to <em>some</em> controls being badly positioned. This could happen if the control you made dynamic was parented to a group with no values. That made the parent and local matrices cancel out, producing an identity matrix. Maya doesn't normally save attributes that are equal to their default values, and this includes matrices whose defaults are the identity matrix.</p>
+<p>This has now been fixed.</p>
+<p><br></p>
+<h2 id="rotate-order-improvement">Rotate Order Improvement</h2>
+<p>In previous releases, any rotation order other than XYZ (the default) would make your rotations all whack. Ragdoll didn't know how to translate physics into any order other than XYZ, so it would put them in the wrong place.</p>
+<p>In the last release, I added a warning for that and in this release I've lifted that warning somewhat. Most rotation orders works well, but I have spotted rare instances of one axis flipping.</p>
+<p>Here's the problem.</p>
+<p><img alt="rotateorder" src="https://user-images.githubusercontent.com/2152766/112039239-bd49e500-8b3b-11eb-99d1-ceb7b18a4b72.gif" /></p>
+<p>See how arms and torso flips? It tends to happen around the 90 and 180 degree values, values below that normally look fine. This will be fixed in a future release, one way or another!</p>
                 
                   
                     
@@ -867,7 +1003,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-03-23
     
   </small>
 </div>
@@ -891,7 +1027,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2020.11.24/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -900,19 +1036,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2020.11.24
+                API Reference
               </div>
             </div>
           </a>
         
         
-          <a href="../2020.11.22/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2021.03.11/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2020.11.22
+                2021.03.11
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
