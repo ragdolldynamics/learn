@@ -664,6 +664,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#accurate-gravity" class="md-nav__link">
+    Accurate Gravity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-explorer" class="md-nav__link">
+    Ragdoll Explorer
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -688,6 +702,7 @@
                 <ul>
 <li><a href="#replay"><strong>ADDED</strong> Replay</a> Animator-friendly automation of Ragdoll setuport going out of sync</li>
 <li><a href="#backwards-compatibility"><strong>FIXED</strong> Backwards Compatibility</a> Last release broke our precious example scenes!</li>
+<li><a href="#accurate-gravity"><strong>FIXED</strong> Accurate Gravity</a> The gravity indicator on the scene is now always truthful</li>
 </ul>
 <p><br></p>
 <h2 id="replay">Replay</h2>
@@ -696,8 +711,22 @@
 <p><br></p>
 <h3 id="backwards-compatibility">Backwards Compatibility</h3>
 <p>What does breaking backwards compatibility of a dynamics solver look like?</p>
+<p><strong>Original</strong></p>
+<p><img alt="ragdoll20201201_4" src="https://user-images.githubusercontent.com/2152766/112307337-be445900-8c98-11eb-82a7-30a477947051.gif" /></p>
+<p><strong>Last Release</strong></p>
 <p><img alt="bavckwardscomp" src="https://user-images.githubusercontent.com/2152766/112271306-afe34680-8c72-11eb-8058-94f887cf5581.gif" /></p>
-<p>He's the same person! Only the circumstances have changed. :D</p>
+<p>He's the same person! Only the circumstances have changed. :D This has now been fixed, and all previous examples now open and run as expected!</p>
+<p><br></p>
+<h3 id="accurate-gravity">Accurate Gravity</h3>
+<p>The indicator used to face in the Y-axis of wherever the node was facing. That wasn't true. It's now accurate no matter how you spin it around, including a potential Z-up axis!</p>
+<p><strong>Before</strong></p>
+<p><img alt="badgravity" src="https://user-images.githubusercontent.com/2152766/112306957-4d04a600-8c98-11eb-8185-17fc5e38d1a1.gif" /></p>
+<p><strong>After</strong></p>
+<p><img alt="accurategravity1" src="https://user-images.githubusercontent.com/2152766/112306961-4d9d3c80-8c98-11eb-9df8-b0d2c905360a.gif" /></p>
+<p><br></p>
+<h3 id="ragdoll-explorer">Ragdoll Explorer</h3>
+<p>Added an early version of a visual interface for the <code>cmds.ragdollDump()</code> command, something to inspect the internals of the solver. Mostly intended for game developers but also advanced users and techincal directors.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/112311552-bcc95f80-8c9d-11eb-87a0-1f5a5ee9b265.png" /></p>
                 
                   
                     
@@ -706,7 +735,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-23
+      Last update: 2021-03-24
     
   </small>
 </div>
