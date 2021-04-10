@@ -711,6 +711,11 @@
 </ul>
 <p>A constraint limits one or more of these axes.</p>
 <p>In Maya, the most typical form of constraint is locking a channel. This prevents this axis from changing.</p>
+<ul>
+<li>A value &lt; 0 means <code>LOCKED</code>, meaning it may <em>not</em> move along this axis</li>
+<li>A value = 0 means <code>FREE</code>, meaning it <em>may</em> freely move along this axis</li>
+<li>A value &gt; 0 means <code>LIMITED</code>, meaning it <em>may</em> move within the limited range of this axis</li>
+</ul>
 <p><br></p>
 <h2 id="soft-constraints">Soft Constraints</h2>
 <p>Limits above 0 are referred to as "soft", because their amount of influence can be tuned using the <code>Stiffness</code> and <code>Damping</code> attributes. These can safely flex and can approach that of a hard constraint given enough stiffness and damping, but would struggle to reach a given target 100%.</p>
@@ -725,7 +730,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-21
+      Last update: 2021-03-28
     
   </small>
 </div>

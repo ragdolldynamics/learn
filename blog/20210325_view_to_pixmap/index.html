@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/nodes/rdConstraintMultiplier/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/blog/20210325_view_to_pixmap/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>rdConstraintMultiplier - Learn Ragdoll</title>
+        <title>20210325 view to pixmap - Learn Ragdoll</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#attributes" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +100,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              rdConstraintMultiplier
+              20210325 view to pixmap
             
           </span>
         </div>
@@ -160,9 +155,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -295,7 +288,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" class="md-nav__link">
+    <a href="../../nodes/" class="md-nav__link">
       Node Reference
     </a>
   </li>
@@ -649,37 +642,6 @@
               </div>
             
             
-              
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" hidden>
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -687,105 +649,57 @@
 
                 
                 
-                  <h1>rdConstraintMultiplier</h1>
+                  <h1>20210325 view to pixmap</h1>
                 
-                <p><img class="node-header" src=https://user-images.githubusercontent.com/2152766/107141752-d9dee480-6922-11eb-9e8b-74ede169db12.png></p>
-<p>Reference sheet for the <code>rdConstraintMultiplier</code> node type.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;rdConstraintMultiplier&quot;</span><span class="p">)</span>
+                <p>Write about this.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">view_to_pixmap</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Render currently active 3D viewport as a QPixmap&quot;&quot;&quot;</span>
+
+    <span class="c1"># Python 2 backwards compatibility</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">long</span>
+    <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+        <span class="n">long</span> <span class="o">=</span> <span class="nb">int</span>
+
+    <span class="n">image</span> <span class="o">=</span> <span class="n">om</span><span class="o">.</span><span class="n">MImage</span><span class="p">()</span>
+    <span class="n">view</span> <span class="o">=</span> <span class="n">omui</span><span class="o">.</span><span class="n">M3dView</span><span class="o">.</span><span class="n">active3dView</span><span class="p">()</span>
+    <span class="n">view</span><span class="o">.</span><span class="n">readColorBuffer</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Translate from Maya -&gt; Qt jargon</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">verticalFlip</span><span class="p">()</span>
+
+    <span class="n">osize</span> <span class="o">=</span> <span class="n">size</span> <span class="ow">or</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QSize</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+    <span class="n">isize</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_ubyte</span> <span class="o">*</span> <span class="n">isize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">isize</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">from_address</span><span class="p">(</span><span class="n">long</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">pixels</span><span class="p">()))</span>
+
+    <span class="n">qimage</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QImage</span><span class="p">(</span>
+        <span class="n">buf</span><span class="p">,</span> <span class="n">isize</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">isize</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QImage</span><span class="o">.</span><span class="n">Format_RGB32</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">rgbSwapped</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QPixmap</span><span class="o">.</span><span class="n">fromImage</span><span class="p">(</span><span class="n">qimage</span><span class="p">)</span><span class="o">.</span><span class="n">scaled</span><span class="p">(</span>
+        <span class="n">osize</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">osize</span><span class="o">.</span><span class="n">height</span><span class="p">(),</span>
+        <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">KeepAspectRatio</span><span class="p">,</span>
+        <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">SmoothTransformation</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">pixmap_to_base64</span><span class="p">(</span><span class="n">pixmap</span><span class="p">):</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QByteArray</span><span class="p">()</span>
+    <span class="n">buffer</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QBuffer</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+
+    <span class="n">buffer</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QIODevice</span><span class="o">.</span><span class="n">WriteOnly</span><span class="p">)</span>
+    <span class="n">pixmap</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">toBase64</span><span class="p">())</span>
+
+
+<span class="k">def</span> <span class="nf">base64_to_pixmap</span><span class="p">(</span><span class="n">base64</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QByteArray</span><span class="o">.</span><span class="n">fromBase64</span><span class="p">(</span><span class="n">base64</span><span class="p">)</span>
+    <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QPixmap</span><span class="p">()</span>
+    <span class="n">pixmap</span><span class="o">.</span><span class="n">loadFromData</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pixmap</span>
 </code></pre></div>
-<p><br></p>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Attribute</th>
-<th align="left">Description</th>
-<th align="left">Keyable</th>
-<th align="left">Type</th>
-<th align="left">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>.angularDriveDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularDriveDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularDriveStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularDriveStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularLimitDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularLimitDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularLimitStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularLimitStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.driveStrength</code></td>
-<td align="left">Multiplier for <code>rdConstraint.driveStrength</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.limitStrength</code></td>
-<td align="left">Multiplier for <code>rdConstraint.limitStrength</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearDriveDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearDriveDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearDriveStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearDriveStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearLimitDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearLimitDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearLimitStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearLimitStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.version</code></td>
-<td align="left">Version of Ragdoll used to create this node. Saved with scene to keep track of what version of Ragdoll the node was created with.</td>
-<td align="left"></td>
-<td align="left"><nobr><code>int</code></nobr></td>
-<td align="left">0</td>
-</tr>
-</tbody>
-</table>
                 
                   
                     
@@ -794,7 +708,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-02-18
+      Last update: 2021-04-09
     
   </small>
 </div>
