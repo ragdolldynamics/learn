@@ -683,6 +683,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rotate-order" class="md-nav__link">
+    Rotate Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#looped-playback-bug" class="md-nav__link">
     Looped Playback Bug
   </a>
@@ -710,14 +717,15 @@
 <li><a href="#looped-playback-bug"><strong>FIXED</strong> Looped Playback Bug</a> This could under rare circumstances look off</li>
 </ul>
 <p><br></p>
-<h3 id="rotate-pivot">Rotate Pivot</h3>
+<h2 id="rotate-pivot">Rotate Pivot</h2>
 <p>Since the dawn of time, one of Ragdoll's limitations has been dealing with a custom Rotate Pivot.</p>
 <p>This release introduces support for both the <code>.rotatePivot</code> <em>and</em> <code>rotatePivotTranslate</code> attributes, letting you do things like..</p>
-<p><strong>Before</strong></p>
 <p><img alt="ragdollrotatepivot" src="https://user-images.githubusercontent.com/2152766/114373040-1d9bd780-9b7a-11eb-9a0e-98ad578e1f39.gif" /></p>
-<p><strong>After</strong></p>
 <p><br></p>
-<h3 id="looped-playback-bug">Looped Playback Bug</h3>
+<h2 id="rotate-order">Rotate Order</h2>
+<p>Another big limitation was that any control with a <code>Rotate Order</code> other than <code>XYZ</code> could result in..</p>
+<p><br></p>
+<h2 id="looped-playback-bug">Looped Playback Bug</h2>
 <p>If you've ever had both passive and active rigids and let playback run on a loop, you might have encountered something like this.</p>
 <p><img alt="rewindbug" src="https://user-images.githubusercontent.com/2152766/114372005-ff81a780-9b78-11eb-9775-cbfa30055249.gif" /></p>
 <p>Whereas if you rewound and playback without looping, everything would be allright. This bug got squashed in this release, letting you witness loop things to your hearts content!</p>

@@ -1161,7 +1161,7 @@
 <li>❌ The convex hulls</li>
 <li>❌ The original root of your chains</li>
 </ul>
-<details class="info"><summary>About those 'Convex Hulls'..</summary><p>Convex hulls, those triangulated versions of your Maya shapes - the <code>Mesh</code> shape type - are re-generated onto whatever character you import onto. This is probably what you want, and enables you to apply physics onto characters with <em>different</em> geometry from when you originally authored the physics. Although sometimes it's not, which is why till we be augmented in a future release.</p>
+<details class="info"><summary>About those 'Convex Hulls'..</summary><p>Convex hulls, those triangulated versions of your Maya shapes - the <code>Mesh</code> shape type - are re-generated onto whatever character you import onto. This is probably what you want, and enables you to apply physics onto characters with <em>different</em> geometry from when you originally authored the physics. Although sometimes it's not, which is why this we be augmented in a future release.</p>
 </details>
 <details class="info"><summary>About the 'Original Root'..</summary><p>The root in any chain is the first in your selection when creating the chain. If you build a network of chains - a "tree" - which is common for any character of more than 1 limb, the exported file will not remember which the <em>original</em> root was. It will figure out new roots procedurally based on their parent/child relationship which <em>may</em> or may not be the same as your original. For importing a full character, this makes no difference. Only for the advanced case of exporting a full character but then wanting to apply only the arm or leg of that character onto another character makes this problematic. This will be addressed in a future release.</p>
 </details>
@@ -1205,7 +1205,7 @@
 </ul>
 <p><br></p>
 <h3 id="thumbnail">Thumbnail</h3>
-<p>Each export captures the currently active 3d viewport for use a thumbnail. So, whenever you export, remember to smile and wave! :D</p>
+<p>Each export captures the currently active 3d viewport for use as a thumbnail. So, whenever you export, remember to smile and wave! :D</p>
 <p><img alt="thumbnail5" src="https://user-images.githubusercontent.com/2152766/114277347-b6b7da80-9a22-11eb-96d0-e85b557e1395.gif" /></p>
 <p><br></p>
 <h3 id="context-sensitive">Context Sensitive</h3>
@@ -1260,7 +1260,7 @@
 <p>(I may just add a menu item for this, called <code>Clean</code> to do this in one go :)</p>
 <p><br></p>
 <h3 id="roadmap">Roadmap</h3>
-<p>A few things became apparent as a rounded of this feature</p>
+<p>A few things became apparent as I rounded off this feature</p>
 <ol>
 <li><strong>Export UI</strong> -  You'll want control over what that thumbnail looks like, currently it'll take a snapshot but not show you what that snapshot looks like until you look at it from the importer</li>
 <li><strong>Remember "root" of each chain</strong> - The importer will recognise what is a Rigid and what is a Chain, but it's having trouble distinguishing the root of each chain. For example, if you made the spine into a chain, followed by the two arms, odds are it'll think the hip leading out to the hand is one chain, and torso to head being another chain, and so on. This isn't an issue when importing a full character, but it'll keep you from being able to import only one of those chains. E.g. just the arm.</li>
@@ -1530,7 +1530,7 @@ ri.multiply_rigids<span class="o">()</span>
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-10
+      Last update: 2021-04-12
     
   </small>
 </div>
