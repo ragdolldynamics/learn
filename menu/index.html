@@ -1245,12 +1245,16 @@
 <td align="left">Constrain the position and limit the orientation between two rigid bodies.</td>
 </tr>
 <tr>
-<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/kinematic.png> Passive</nobr></td>
-<td align="left">Animate a passive rigid body with an external transform.</td>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/animation.png> Animation Constraint</nobr></td>
+<td align="left">Convert translate/rotate channels into a target guide.</td>
 </tr>
 <tr>
-<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/control.png> Guide</nobr></td>
-<td align="left">Animate an active rigid body with an external transform.</td>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/hardpin.png> Hard Pin</nobr></td>
+<td align="left">Pin a rigid body in worldspace.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/softpin2.png> Soft Pin</nobr></td>
+<td align="left">Pin a rigid body in worldspace, with a spring-like softness.</td>
 </tr>
 <tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/magnet.png> Push</nobr></td>
@@ -1508,9 +1512,9 @@
 <td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
-<td align="left">Standalone</td>
-<td align="left">Give constraints their own transform at the root of the outliner.</td>
-<td align="left"><nobr></nobr></td>
+<td align="left">Use Rotate Pivot</td>
+<td align="left">Use rotate pivot of child as offset for the constraint frames.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
 <td align="left">Guide Strength</td>
@@ -1544,7 +1548,7 @@
 <p>High-level control, either direct (kinematic, passive) or indirect (driven, guided).</p>
 <p><br></p>
 <h3 id="kinematic-control">Kinematic Control</h3>
-<p>Create a new Maya transform and use the world matrix as input for 'kinematic' a.k.a. 'passive' animation. This is the same as creating or converting to a Passive Rigid, except it allows for the <code>rdRigid.kinematic</code> attribute to be <em>animated</em>. This can be used to transition from animation into simulation and vice versa.</p>
+<p>Pin the selected rigid body at its current worldspace position. The pin may be animated and disabled/enabled at run-time.</p>
 <table>
 <thead>
 <tr>
@@ -1563,7 +1567,7 @@
 </table>
 <p><br></p>
 <h3 id="guide-control">Guide Control</h3>
-<p>Create a new Maya transform and use the world matrix as input to 'drive' a.k.a. 'guide' a rigid dynamically. This is the same as what a Dynamic Control and a blended Active Rigid uses, except as a separate transform. There can be multiple guides to a single rigid, where each can fight for control over the final position, or where you the animator can blend between them.</p>
+<p>Guide the selected rigid body towards its current worldspace position. The guide may be animated and disabled/enabled at run-time.</p>
 <table>
 <thead>
 <tr>
@@ -1804,18 +1808,13 @@
 <td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
-<td align="left">Validate Rotate Pivot</td>
-<td align="left">Check whether the selected transform has a non-zero rotatePivot; they are unsupported and will be zeroed out.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
+<td align="left">Validate Scale Pivot</td>
+<td align="left">Check whether the selected transform has a non-zero scalePivot; they are unsupported and will be zeroed out.</td>
+<td align="left"><nobr></nobr></td>
 </tr>
 <tr>
 <td align="left">Validate Rotate Axis</td>
 <td align="left">Let the user know of a Ragdoll limitation, that a custom rotate axis are unsupported.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
-</tr>
-<tr>
-<td align="left">Validate Scale</td>
-<td align="left">Let the user know of a Ragdoll limitation, that scale is unsupported.</td>
 <td align="left"><nobr></nobr></td>
 </tr>
 <tr>

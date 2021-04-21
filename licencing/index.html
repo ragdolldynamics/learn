@@ -751,6 +751,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#offline-activation" class="md-nav__link">
+    Offline Activation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-deactivation" class="md-nav__link">
+    Offline Deactivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-licence-roadmap" class="md-nav__link">
+    Offline Licence Roadmap
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -910,6 +931,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#offline-activation" class="md-nav__link">
+    Offline Activation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-deactivation" class="md-nav__link">
+    Offline Deactivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-licence-roadmap" class="md-nav__link">
+    Offline Licence Roadmap
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -927,10 +969,10 @@
                   <h1>Licencing</h1>
                 
                 <p><img class="boxshadow no-max-height" src=https://user-images.githubusercontent.com/47274066/103476508-7d7e2780-4dae-11eb-86c9-c099a08f1314.png></p>
-<p>Ragdoll requires a licence per seat in order to run.</p>
+<p>Each instance of Ragdoll requires an individual licence.</p>
 <p>Activation requires a <code>Product Key</code> which you get by either <a href="https://ragdolldynamics.com/pricing">purchasing a licence</a> or by being really awesome.</p>
 <p><br></p>
-<h3 id="faq">FAQ</h3>
+<h2 id="faq">FAQ</h2>
 <p>Let's dive into specifics.</p>
 <p><br></p>
 <h4 id="how-does-it-work">How does it work?</h4>
@@ -979,16 +1021,8 @@
 <p>Later on, these will be as trivial as node-locked licences. All we need is you.</p>
 <p><br></p>
 <h4 id="can-i-activate-offline">Can I activate offline?</h4>
-<p>Not yet.</p>
-<p>As soon as someone needs it, I'll add it. Get in touch with <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a></p>
-<p>Offline will be a 4-step process.</p>
-<ol>
-<li>Running e.g. <code>activation_request_to_file()</code> from you local machine</li>
-<li>Emailing generated file </li>
-<li>Receiving a licence file back </li>
-<li>Running e.g. <code>activate_from_file(fname)</code> on the same local machine.</li>
-</ol>
-<p>Floating offline is also be possible, again get in touch.</p>
+<p>Yes.</p>
+<p>See <a href="#offline-activation">Offline Activation</a> below.</p>
 <p><br></p>
 <h4 id="when-exactly-is-internet-required">When exactly is internet required?</h4>
 <p>A connection is made in one of two separate occasions.</p>
@@ -1003,7 +1037,7 @@
 <h4 id="can-i-manage-my-licence-via-python">Can I manage my licence via Python?</h4>
 <p>Sure can, see below.</p>
 <p><br></p>
-<h3 id="licence-api">Licence API</h3>
+<h2 id="licence-api">Licence API</h2>
 <p>As a user, you'll generally use the UI. But the UI is ultimately making calls to Python (which is making calls to C++) and you can bypass the UI using these same calls.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
 
@@ -1019,8 +1053,15 @@
 <span class="c1"># Activate using your product ket</span>
 <span class="n">licence</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
+<span class="c1"># Activation for those without access to Internet</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activation_request_to_file</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activate_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
 <span class="c1"># Deactivate whatever key is currently activated</span>
 <span class="n">licence</span><span class="o">.</span><span class="n">deactivate</span><span class="p">()</span>
+
+<span class="c1"># Deactivate offline, to e.g. move a licence from one machine to another</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">deactivation_request_to_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
 
 <span class="c1"># Dictionary of useful information</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">licence</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
@@ -1046,6 +1087,45 @@
     <span class="s2">&quot;trialDays&quot;</span><span class="p">:</span> <span class="mi">23</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><br></p>
+<h2 id="offline-activation">Offline Activation</h2>
+<p>Haven't got no internet?</p>
+<p>No problem, here's what you need to do.</p>
+<ol>
+<li>Generate an "activation request", a file</li>
+<li>Send us this file, via <a href="licencing@ragdolldynamics.com">email</a></li>
+<li>Receive a "activation response", another file</li>
+<li>Activate using this file</li>
+</ol>
+<p>It requires pasting some <em>Python</em> commands into the <strong>Maya Script Editor</strong>.</p>
+<p><strong>Generate Request</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;YOUR-VERY-LONG-KEY-HERE&quot;</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_activation_request.xml&quot;</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activation_request_to_file</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Email Us</strong></p>
+<p>Send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>. We'll abrakadabra this file before you can say <a href="https://en.wikipedia.org/wiki/Taumatawhakatangi%C2%ADhangakoauauotamatea%C2%ADturipukakapikimaunga%C2%ADhoronukupokaiwhen%C2%ADuakitanatahu">Taumatawhakatangi­hangakoauauotamatea­turipukakapikimaunga­horonukupokaiwhen­uakitanatahu</a>.</p>
+<p><strong>Activate</strong></p>
+<p>Once you've got a response, activate your licence like this.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_activation_response.xml&quot;</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activate_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="offline-deactivation">Offline Deactivation</h2>
+<p>Licences are node-locked (floating licences coming soon), which means that if you need to move a licence from one machine to another you can do so by <em>deactivating</em> an activated licence, and then activating it elsewhere.</p>
+<p>The process is similar to activation.</p>
+<p><strong>Generate Request</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_deactivation_request.xml&quot;</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">deactivation_request_to_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Email Us</strong></p>
+<p>Send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>. Once we have confirmed receipt of this file, you will be able to re-activate Ragdoll on another machine.</p>
+<p><br></p>
+<h2 id="offline-licence-roadmap">Offline Licence Roadmap</h2>
+<p>Apologies for the tedious nature of offline licence management at the moment! Not long from now, you will be able to manage your licences <em>online</em> without sending any emails.</p>
                 
                   
                     
@@ -1054,7 +1134,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-08
+      Last update: 2021-04-13
     
   </small>
 </div>

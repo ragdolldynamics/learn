@@ -1061,20 +1061,6 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
-
-      <span class="c1"># Longest possible path, inclding all hierarchy, guaranteed unique</span>
-      <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;|_:pup_Tiger_|_:grp_Tail_|_:grpCtrlFk_Tail_|_:ctrlFK_Tail_1_&quot;</span><span class="p">,</span>
-
-      <span class="c1"># Shortest *unique* path, dynamically changes to remain unique</span>
-      <span class="s2">&quot;shortestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;_:ctrlFK_Tail_1_&quot;</span><span class="p">,</span>
-
-      <span class="c1"># Name of the Ragdoll (shape) node, e.g. rigid or constraint</span>
-      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;rSocketConstraint15&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;RigidComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RigidComponent&quot;</span><span class="p">,</span>
   <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1287,11 +1273,6 @@
 <h2 id="data-types">Data Types</h2>
 <p>In addition to the plain-old-data types <code>int</code>, <code>double</code> and <code>bool</code>, these are all possible data types found in the exported JSON.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Entity&quot;</span><span class="p">,</span> 
-  <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1048576</span>
-<span class="p">}</span>
-
-<span class="p">{</span>
   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Color4&quot;</span><span class="p">,</span>
   <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="mf">0.4429999887943268</span><span class="p">,</span>  <span class="c1"># red</span>
