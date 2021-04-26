@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="A minor upgrade to the underlying solver, with new default values.">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2020.11.10/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/next/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>2020.11.10 - Learn Ragdoll</title>
+        <title>Solver Upgrade - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multi-threading" class="md-skip">
+        <a href="#solver-upgrade" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2020.11.10
+              Solver Upgrade
             
           </span>
         </div>
@@ -343,14 +343,12 @@
       
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
     
     <label class="md-nav__link" for="nav-9">
       Release History
@@ -642,59 +640,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        2020.11.10
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../2020.11.10/" class="md-nav__link">
       2020.11.10
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#multi-threading" class="md-nav__link">
-    Multi-Threading
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#option-dialogs" class="md-nav__link">
-    Option Dialogs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#animation-influence" class="md-nav__link">
-    Animation Influence
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -765,22 +715,83 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#multi-threading" class="md-nav__link">
-    Multi-Threading
+  <a href="#solver-upgrade" class="md-nav__link">
+    Solver Upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Solver Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-has-changed" class="md-nav__link">
+    What has changed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-i-do" class="md-nav__link">
+    What can I do?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-did-this-change" class="md-nav__link">
+    Why did this change?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear-initial-state" class="md-nav__link">
+    Clear Initial State
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-dialogs" class="md-nav__link">
-    Option Dialogs
+  <a href="#start-frame-explosion" class="md-nav__link">
+    Start Frame Explosion
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#animation-influence" class="md-nav__link">
-    Animation Influence
+  <a href="#negative-scale" class="md-nav__link">
+    Negative Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="Negative Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-order" class="md-nav__link">
+    Rotate Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw-shaded" class="md-nav__link">
+    Draw Shaded
   </a>
   
 </li>
@@ -798,71 +809,161 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2020.11.10.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/next.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2020.11.10</h1>
+                  <h1>Solver Upgrade</h1>
                 
-                <p>Performance!</p>
+                <p>This release changes the default values for any <code>Stiffness</code> and <code>Damping</code> parameters in the pursuit of stability and robustness.</p>
 <ul>
-<li><strong>NEW</strong> <a href="#multi-threading">Multi-threading</a><ul>
-<li>Ragdoll now supports multiple solvers in the same Maya scene, each of which run in <em>parallel</em> offering a 2-3x increase in FPS</li>
-</ul>
-</li>
-<li><strong>NEW</strong> <a href="#option-dialogs">UI</a><ul>
-<li>Menu items now have additional customisation with a new UI interface.</li>
-</ul>
-</li>
-<li><strong>NEW</strong> <a href="#animation-influence">Animation Influence</a><ul>
-<li>Dynamic Controls can now respond to animation input, either kinematically or as a guided influence to your simulation. This means you can turn your controllers dynamic, and add additional animation to steer the simulation!</li>
-</ul>
-</li>
-<li><strong>NEW</strong> <a href="#option-dialogs">Exploratory Menu</a><ul>
-<li>The menu is now fully unlocked, with user-friendly messages letting you know how to use it if you are unfamiliar. The goal is facilitating exploration and curiosity in a safe environment with reliable undo.</li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Hinge Constraint<ul>
-<li>A constraint being converted to/from a hinge constraint no longer breaks the constraint.</li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Set Initial State<ul>
-<li>Modify the position and orientation of your rigid bodies <em>after</em> creation with this feature.</li>
-</ul>
-</li>
+<li><a href="#solver-upgrade"><strong>ADDED</strong> Solver Upgrade</a> More realistic guides, at the expense of new default values</li>
+<li><a href="#clear-initial-state"><strong>ADDED</strong> Clear Initial State</a> Return to a better time</li>
+<li><a href="#start-frame-explosion"><strong>FIXED</strong> Start Frame Explosion</a> Fixed a rare case overly eager passive rigids</li>
+<li><a href="#negative-scale"><strong>FIXED</strong> Negative Scale 2.0</a> Greater support for negative scale</li>
+<li><a href="#rotate-order-3-0"><strong>FIXED</strong> Rotate Order 3.0</a> Greater support for custom Rotate Order.</li>
+<li><a href="#draw-shaded"><strong>FIXED</strong> Draw Shaded</a> Rigids can now once again be wireframed, for less clutter whilst animating</li>
 </ul>
 <p><br></p>
-<h2 id="multi-threading">Multi-Threading</h2>
-<p>Ragdoll is now multi-threaded!</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99262231-9e49e800-2815-11eb-9b5b-803b1f310957.png" /></p>
-<p>There are two mechanisms for managing performance.</p>
-<ol>
-<li>Scene-level parallelism</li>
-<li>Solver-level parallelism</li>
-</ol>
-<p>With 2 or more Ragdoll solvers in the same Maya scene, Maya will run these in parallel. Which means they will both run independently, on separate hardware cores on your CPU. Currently, you can expect a 2-3x performance increase through use of multiple solvers, with more optimisation to come.</p>
-<p>A single Ragdoll solver can be automatically broken up into simulation "islands" that run in parallel. Islands are created when two or more groups of rigid bodies are unlikely or unable to interact. For example, two characters in the same solver far away from each other. To leverage solver-level parallelism, adjust the <code>rdScene.threadCount</code> attribute (under Advanced in the Attribute Editor). A value of <code>0</code> (default) means it will run on a single thread, on the same thread as the rest of Ragdoll and Maya.</p>
-<blockquote>
-<p>For small scenes, with less than 100 rigid bodies, you should expect improved performance from a single thread. Each thread comes with some amount of overhead.</p>
-</blockquote>
-<p><img alt="ragdollparallel3" src="https://user-images.githubusercontent.com/2152766/98684738-70b8f680-235e-11eb-959c-21eb8d268eb2.gif" />
-<img alt="ragdollparallel4" src="https://user-images.githubusercontent.com/2152766/98684731-6eef3300-235e-11eb-84ea-6485378f3a34.gif" /></p>
-<p><br>
-<br></p>
-<h2 id="option-dialogs">Option Dialogs</h2>
-<p>Some menu items now have option dialog boxes for further customisation. Settings are stored with Maya's preferences and persists across scenes and between application launches.</p>
-<p><img width=200 src=https://user-images.githubusercontent.com/2152766/98686655-b8d91880-2360-11eb-8a41-4c2dcc94abfb.png></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/98684670-5bdc6300-235e-11eb-9560-6a90086c8a10.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/2152766/98686510-91824b80-2360-11eb-848b-094654e8209f.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/2152766/98684715-67c82500-235e-11eb-9f7e-dbcae92bb6b6.png" /></p>
-<p><br>
-<br></p>
-<h2 id="animation-influence">Animation Influence</h2>
-<p>The "Dynamic Control" feature now enables control of the simulation using the animation used for blending.</p>
+<h2 id="solver-upgrade">Solver Upgrade</h2>
+<p>The solver has been upgraded for more accuracy and stability. Unfortunately, this changes the default values <code>Stiffness</code> and <code>Damping</code> attributes, which may require changes in your scene.</p>
+<div class="admonition warning">
+<p class="admonition-title">ATTENTION: Backwards Incompatibility</p>
+<p>Ragdoll takes backwards compatibility <em>very</em> seriously. At no point should a scene you have created <em>break</em> because of an update. This however is an exception to that rule, one that I expect never to happen again.</p>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/116086840-29b68780-a698-11eb-87a1-f0dfef282c5b.png" /></p>
+<h3 id="what-has-changed">What has changed?</h3>
+<p><code>Stiffness</code> and <code>Damping</code> need higher values.</p>
+<p>So far, we've used the <code>Iterations</code> value on the solver to control how strong our constraints could be. As it happens, this isn't right. Iterations shouldn't control strength, it should only control how close the solution is to the true analytical solution.</p>
 <ul>
-<li>See <a href="https://youtu.be/bx_dLkq_BlU">Tutorial</a> for details.</li>
+<li>In the previous release, increasing this value produced an entirely different result based on how many iterations you used. At no point would it "converge" onto a true solution.</li>
+<li>In this and future releases, only stiffness and damping will affect the behavior of physics, with <code>Iterations</code> optionally bringing it closer to the <em>true</em> solution.</li>
 </ul>
+<p>In practice, not much has changed. You should still increase stiffness/damping when relevant, and still increase <code>Iterations</code> if you find the values aren't being respected.</p>
+<h3 id="what-can-i-do">What can I do?</h3>
+<ul>
+<li>👉 Increase <code>Stiffness</code> by 3-10x</li>
+<li>👉 Increase <code>Damping</code> by 3-10x</li>
+</ul>
+<p>That is, if <code>Stiffness</code> was previously 1'000, make it 10'000.</p>
+<p><strong>Exceptions</strong></p>
+<ul>
+<li>For anything created with this version, no action is needed.</li>
+<li><code>Projected Gauss-Seidel</code> (Advanced) remains unchanged.</li>
+</ul>
+<p>It's not an exact science, in some cases you only need 3x, like in this case here.</p>
+<p><img alt="times3" src="https://user-images.githubusercontent.com/2152766/116083379-74360500-a694-11eb-94ff-efd94f8a5ca8.gif" /></p>
+<p>Where the <code>Yellow</code> line is from the previous version at 1'000 stiffness and 100 damping, the <code>Blue</code> line has 3'000 stiffnes and 300 damping.</p>
+<h3 id="why-did-this-change">Why did this change?</h3>
+<p>The previous version was subtly faulty, so this was inevitable. In practice however, under a very particular - but useful - circumstance the solver would struggle to obey.</p>
+<p><strong>Circumstance</strong></p>
+<ol>
+<li>An <code>Active Rigid</code></li>
+<li>Constrained to a <code>Passive Rigid</code></li>
+<li>Limits turned off</li>
+<li><em>Translate</em> Guide turned <code>On</code></li>
+</ol>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li>Dynamic muscles attached to an animated skeleton</li>
+<li>Dynamic props attached to an animated character</li>
+<li>Dynamic cloth attached to a passive collider</li>
+<li>Basically anything that isn't a fully-dynamic character</li>
+</ul>
+<p>Here was the result.</p>
+<p><img alt="tgsbefore" src="https://user-images.githubusercontent.com/47274066/115770569-c92bff80-a3a4-11eb-83cb-9908eecfc861.gif" /></p>
+<p>Notice how the active rigid does what the active rigid does, but is a little <em>too</em> excited? One workaround was to use "Projected Gauss-Seidel" in place of the default "Temporal Gauss-Seidel", however that solver isn't as accurate or fast.</p>
+<p>You might be thinking..</p>
+<blockquote>
+<p>Well that's an awefully specific case, when would I even hit that?</p>
+</blockquote>
+<p>Which is when you realise..</p>
+<p><img alt="fixed" src="https://user-images.githubusercontent.com/2152766/116090739-17d6e380-a69c-11eb-8e9b-5b0d7da48b1d.gif" /></p>
+<p>This was previously only possible with Projected Gauss-Seidel which is less performant and less able to handle large networks of constraints like a full ragdoll.</p>
+<p><strong>Result</strong></p>
+<p>This behavior was due to a subtle bug in how constraints were solved, a deeply rooted bug that once sorted out was what caused this change to the overall behavior of <code>Stiffness</code> and <code>Damping</code> values.</p>
+<p>In this release, the bug has been squashed and muscles and props now follow their passive counterpart much more accurately and without surprises.</p>
+<p><img alt="tgsafter" src="https://user-images.githubusercontent.com/47274066/115770566-c8936900-a3a4-11eb-8998-4a55d1fcf35b.gif" /></p>
+<p><br></p>
+<h2 id="clear-initial-state">Clear Initial State</h2>
+<p>Setting the initial state can be used to <em>relax</em> a physics character or scene.</p>
+<p><img alt="clearinitialstate1" src="https://user-images.githubusercontent.com/2152766/116095203-1c9d9680-a6a0-11eb-83c8-f86e1ee3367b.gif" /></p>
+<p>But once relaxed, you had no way to returning to its original creation state, until now!</p>
+<p><img alt="clearinitialstate2" src="https://user-images.githubusercontent.com/2152766/116095219-20c9b400-a6a0-11eb-93b6-25f14f0115f0.gif" /></p>
+<ul>
+<li>The set and cleared state are both saved with the scene</li>
+<li>This can rescue the initial state from breaking due to <a href="https://learn.ragdolldynamics.com/releases/2021.03.01/">Automatic Initial State</a></li>
+</ul>
+<p><img width=400 src=https://user-images.githubusercontent.com/2152766/116057775-0af3c900-a677-11eb-92fe-6d9b9f288009.png></p>
+<blockquote>
+<p>Thanks to Jason Snyman for this suggestion!</p>
+</blockquote>
+<p><br></p>
+<h2 id="start-frame-explosion">Start Frame Explosion</h2>
+<p>In a specific and rare circumstance, a passive rigid body could appear to have velocity on the start frame.</p>
+<p><img alt="startframebug1" src="https://user-images.githubusercontent.com/2152766/116077549-86607500-a68d-11eb-8320-d0edcaffe535.gif" /></p>
+<p>Notice here how animation starts immediately from the start frame, giving it an upwards velocity? The active rigids connected to the root on the other hand gets an even stronger velocity, for some reason.</p>
+<p>If we move the animation to just one frame <em>after</em> the start frame, all is well.</p>
+<p><img alt="startframebug2" src="https://user-images.githubusercontent.com/2152766/116077543-85c7de80-a68d-11eb-8625-d692f0221f5a.gif" /></p>
+<p>A subtle bug, having to do with the rigid body being created on the second frame of the simulation, which in this case had a position the was different from the start frame. However! The <em>animation</em> started at the start frame, so the velocity got inherited from there instead. Yes, it's complicated. :)</p>
+<p>And is now fixed!</p>
+<p><br></p>
+<h2 id="negative-scale">Negative Scale</h2>
+<p>Ragdoll has supported scale, but <em>negative</em> scale has been unreliable. This release extends this support to negative scale used to mirror controls and behavior across a rig.</p>
+<p><strong>Before</strong></p>
+<p>This whole arm has a negative scale in the X-axis, from when it was mirrored across from the other side. Notice here how it look like the arm is about to move forwards, and instead move backwards.</p>
+<p><img alt="negativescale_before" src="https://user-images.githubusercontent.com/2152766/115990764-e89d7500-a5bc-11eb-9b7b-33105ec88d9b.gif" /></p>
+<p><strong>After</strong></p>
+<p>This has now been fixed.</p>
+<p><img alt="negativescale_after" src="https://user-images.githubusercontent.com/2152766/115990763-e76c4800-a5bc-11eb-9ff0-442924412ec3.gif" /></p>
+<p>It also means you can flip entire performances with a little more ease. :)</p>
+<p><img alt="negativescale" src="https://user-images.githubusercontent.com/2152766/116044447-d4af4d00-a668-11eb-8e8c-54b0cf5570bd.gif" /></p>
+<h3 id="caveat">Caveat</h3>
+<p>Avoid negative scale on the control you are animating.</p>
+<ul>
+<li>✔️ Global negative scale</li>
+<li>❌ Local negative scale</li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/115992698-ee985380-a5c6-11eb-81d3-775e89f0e649.png" /></p>
+<p>You are still better off not having any negative scales in your rig, as there is still at least one special case I found that might jump up and bite you.</p>
+<p>And that is if the animated control <em>itself</em> has negative local scale.</p>
+<p>Typically, one or more of the parents have negative scale, so as to mirror a whole hierarchy of controls. And that is ✔️. But if the control you are animating <em>also</em> have negative scale, you might experience this.</p>
+<p><img alt="badnegativescale" src="https://user-images.githubusercontent.com/2152766/115992653-ac6f1200-a5c6-11eb-971a-ef8f6c97cbef.gif" /></p>
+<p>Notice how on rewind, it twitches at the start of playback every other time? That's because it cannot tell the whether the control has negative scale or whether it is rotated 180 degrees.</p>
+<p>This will be addressed in a future release.</p>
+<p><br></p>
+<h2 id="rotate-order">Rotate Order</h2>
+<p>The animation constraint is what translates your keyframes into physics and with the introduction of support for Rotate Order in the previous few releases it has been possible for Ragdoll to <em>output</em> rotations onto any control with a custom rotate order.</p>
+<p>This release now includes support for <em>input</em> of custom rotate order into the simulation.</p>
+<p><strong>Before</strong></p>
+<p>Notice how changing the rotate order should have changed the axis around which the Y-animation was happening, but didn't?</p>
+<p><img alt="rotateorderdrive1" src="https://user-images.githubusercontent.com/2152766/115991000-277ffa80-a5be-11eb-9b30-08c2a45f404c.gif" /></p>
+<p><strong>After</strong></p>
+<p>Now it does!</p>
+<p><img alt="rotateorderdrive2" src="https://user-images.githubusercontent.com/2152766/115991004-2e0e7200-a5be-11eb-9e4f-2cb432441163.gif" /></p>
+<p><br></p>
+<h2 id="draw-shaded">Draw Shaded</h2>
+<p>The previous release revamped the rendering system in Ragdoll, but left out a the convenience attribute to disable shading when rigid bodies were used alongside animation controls.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Before</th>
+<th align="left">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/115991123-f48a3680-a5be-11eb-9dde-336619236acf.png" /></td>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/115991119-f05e1900-a5be-11eb-9dab-42aebbdeab6c.png" /></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="admonition-title">Manual Override</p>
+<p>The behavior can be manually adjusted to taste via the Attribute Editor.</p>
+<p><img alt="shadedonoff" src="https://user-images.githubusercontent.com/2152766/115991152-23a0a800-a5bf-11eb-8eea-166ea03f09c3.gif" /></p>
+</div>
                 
                   
                     
@@ -871,7 +972,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-29
+      Last update: 2021-04-10
     
   </small>
 </div>
@@ -891,41 +992,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../2020.11.16/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                2020.11.16
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../licencing/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Licencing
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

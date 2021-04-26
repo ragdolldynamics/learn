@@ -17,7 +17,7 @@
         <meta name="author" content="mottosso">
       
       <link rel="search" type="application/opensearchdescription+xml" href="../../search.xml" title="Learn Ragdoll Search">
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../favicon-256x256.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
     
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
@@ -1471,36 +1471,6 @@
 <p>This and the above import fix were only related to importing of physics, both your existing Maya scenes and exported <code>.rag</code> files are unchanged and were already in good condition. Yay!</p>
 </div>
 <p><br></p>
-<!-- 
-## Physics Bugs
-
-Under a very particular, but useful circumstance, the solver would struggle to obey.
-
-1. An `Active Rigid`
-2. Constrained to a `Passive Rigid`
-3. Limits turned off
-4. *Translate* Guide turned `On`
-
-**Use Cases**
-
-- Dynamic muscles attached to an animated skeleton
-- Dynamic props attached to an animated character
-- Dynamic cloth attached to a passive collider
-- Basically anything that isn't a fully-dynamic character
-
-Here was the result.
-
-![tgsbefore](https://user-images.githubusercontent.com/47274066/115770569-c92bff80-a3a4-11eb-83cb-9908eecfc861.gif)
-
-Notice how the active rigid does what the active rigid does, but is a little *too* excited? One workaround was to use "Projected Gauss-Seidel" in place of the default "Temporal Gauss-Seidel", however that solver isn't as accurate or fast.
-
-In this release you no longer have to make that sacrifice, and constraints will behave as you'd expect!
-
-![tgsafter](https://user-images.githubusercontent.com/47274066/115770566-c8936900-a3a4-11eb-8998-4a55d1fcf35b.gif)
-
-<br>
- -->
-
 <h2 id="user-attributes">User Attributes</h2>
 <p>Whenever you make a rigid or chain, some attributes are forwarded onto your animation controls. These attributes are called "User Attributes" and the <a href="https://learn.ragdolldynamics.com/releases/2021.04.11/#proxy-attributes">previous release changed these</a> from Maya proxy-attributes to plain-attributes.</p>
 <p><img width=300 src=https://user-images.githubusercontent.com/2152766/115120238-5d145a80-9fa4-11eb-8b5f-75df8eff5b18.png></p>
