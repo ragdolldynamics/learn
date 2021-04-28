@@ -628,6 +628,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../releases/2021.04.28/" class="md-nav__link">
+      2021.04.28
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../releases/2021.04.23/" class="md-nav__link">
       2021.04.23
     </a>
@@ -1510,12 +1523,12 @@
 <tr>
 <td align="left">Aim Axis</td>
 <td align="left">Which axis to treat as aim for the resulting muscle.</td>
-<td align="left"><nobr><code>X</code></nobr></td>
+<td align="left"><nobr></nobr></td>
 </tr>
 <tr>
 <td align="left">Up Axis</td>
 <td align="left">Which axis to treat as the up-axis for the resulting muscle.</td>
-<td align="left"><nobr><code>Y</code></nobr></td>
+<td align="left"><nobr><code>1</code></nobr></td>
 </tr>
 <tr>
 <td align="left">Flex</td>
@@ -1546,7 +1559,7 @@
 <tr>
 <td align="left">Constraint Type</td>
 <td align="left">The type of constraint created.</td>
-<td align="left"><nobr><code>Point</code></nobr></td>
+<td align="left"><nobr></nobr></td>
 </tr>
 <tr>
 <td align="left">Maintain Offset</td>
@@ -1781,13 +1794,29 @@
 <tr>
 <td align="left">Stop Behaviour</td>
 <td align="left">Whether to include the joint with a 'Stop' label in the generated character or not.</td>
-<td align="left"><nobr><code>Inclusive</code></nobr></td>
+<td align="left"><nobr></nobr></td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
 <h3 id="dynamic-control">Dynamic Control</h3>
 <p>Turn your regular character animation control into a rigid body, where the input animation is used as a dynamic guide for the simulation. The animation remains editable and the final result can be switched or blended between.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <details class="example"><summary>Basics</summary><p><div class="overlaid-media">
     <img src=/dynamic_control_1.gif>
     <div class="overlaid-background"></div>
@@ -1826,8 +1855,13 @@
 </tr>
 <tr>
 <td align="left">Cache Media</td>
-<td align="left">Cache clips in the timeline, for immediate feedback when scroll.<br>- <b>Off</b> Fast, interactive but no scrubbing.<br>- <b>On</b> Slow scrubbing support.<br>- <b>All</b> Interactive scrubbing at the expense of RAM.&lt;</td>
-<td align="left"><nobr><code>Off</code></nobr></td>
+<td align="left">Cache clips in the timeline, for immediate feedback when scroll.<br>- <b>Off</b> Fast, interactive but no scrubbing.<br>- <b>On</b> Slow scrubbing support.<br>- <b>All</b> Interactive scrubbing at the expense of RAM.</td>
+<td align="left"><nobr></nobr></td>
+</tr>
+<tr>
+<td align="left">Frameskip Handling</td>
+<td align="left">What should Ragdoll do when one or more frames are skipped? Should Ragdoll pause simulation until you revisit the last-known frame? Or just pretend everything is OK, and produce garbage values?</td>
+<td align="left"><nobr><code>1</code></nobr></td>
 </tr>
 <tr>
 <td align="left">Auto Initial State</td>

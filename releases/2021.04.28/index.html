@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A minor upgrade to the underlying solver, with new default values.">
+        <meta name="description" content="An upgrade to the underlying solver, with new default values.">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/next/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.04.28/">
       
       
         <meta name="author" content="mottosso">
@@ -343,12 +343,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
     <label class="md-nav__link" for="nav-9">
       Release History
@@ -361,6 +363,155 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2021.04.28
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      2021.04.28
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#solver-upgrade" class="md-nav__link">
+    Solver Upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Solver Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-has-changed" class="md-nav__link">
+    What has changed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-i-do" class="md-nav__link">
+    What can I do?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-did-this-change" class="md-nav__link">
+    Why did this change?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frameskip-protection" class="md-nav__link">
+    Frameskip Protection
+  </a>
+  
+    <nav class="md-nav" aria-label="Frameskip Protection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-should-i-care" class="md-nav__link">
+    Why should I care?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear-initial-state" class="md-nav__link">
+    Clear Initial State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passive-visualisation" class="md-nav__link">
+    Passive Visualisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-frame-explosion" class="md-nav__link">
+    Start Frame Explosion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negative-scale" class="md-nav__link">
+    Negative Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="Negative Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-order" class="md-nav__link">
+    Rotate Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw-shaded" class="md-nav__link">
+    Draw Shaded
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -749,8 +900,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#frameskip-protection" class="md-nav__link">
+    Frameskip Protection
+  </a>
+  
+    <nav class="md-nav" aria-label="Frameskip Protection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-should-i-care" class="md-nav__link">
+    Why should I care?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clear-initial-state" class="md-nav__link">
     Clear Initial State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passive-visualisation" class="md-nav__link">
+    Passive Visualisation
   </a>
   
 </li>
@@ -809,17 +987,20 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/next.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.04.28.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Solver Upgrade</h1>
+                  <h1>2021.04.28</h1>
                 
-                <p>This release changes the default values for any <code>Stiffness</code> and <code>Damping</code> parameters in the pursuit of stability and robustness.</p>
+                <p><img alt="trajectories" src="https://user-images.githubusercontent.com/47274066/116377870-85ece900-a809-11eb-9520-652e54ff6f93.gif" /></p>
+<p>This release introduces more robustness, in exchange for changes to the default values for any <code>Stiffness</code> and <code>Damping</code> parameters.</p>
 <ul>
 <li><a href="#solver-upgrade"><strong>ADDED</strong> Solver Upgrade</a> More realistic guides, at the expense of new default values</li>
+<li><a href="#frameskip-protection"><strong>ADDED</strong> Frameskip Protection</a> Does what it says on the tin!</li>
 <li><a href="#clear-initial-state"><strong>ADDED</strong> Clear Initial State</a> Return to a better time</li>
+<li><a href="#passive-visualisation"><strong>ADDED</strong> Passive Visualisation</a> Understand which and when rigids are passive</li>
 <li><a href="#start-frame-explosion"><strong>FIXED</strong> Start Frame Explosion</a> Fixed a rare case overly eager passive rigids</li>
 <li><a href="#negative-scale"><strong>FIXED</strong> Negative Scale 2.0</a> Greater support for negative scale</li>
 <li><a href="#rotate-order-3-0"><strong>FIXED</strong> Rotate Order 3.0</a> Greater support for custom Rotate Order.</li>
@@ -886,6 +1067,23 @@
 <p>In this release, the bug has been squashed and muscles and props now follow their passive counterpart much more accurately and without surprises.</p>
 <p><img alt="tgsafter" src="https://user-images.githubusercontent.com/47274066/115770566-c8936900-a3a4-11eb-8998-4a55d1fcf35b.gif" /></p>
 <p><br></p>
+<h2 id="frameskip-protection">Frameskip Protection</h2>
+<p>The simulation is like a train running on a train track. It absolute must not miss a stop, else it can't realistically figure how how to get to the subsequent stop.</p>
+<p>Allow me to demonstrate.</p>
+<p><img alt="frameskip" src="https://user-images.githubusercontent.com/47274066/116363542-27207300-a7fb-11eb-8aae-ee3c95e9c0f4.gif" /></p>
+<p>Notice how everything falls apart when skipping just a handful of frames? It's trying to catch up, but the time difference is just too great to produce accurate values.</p>
+<p>This release adds support for <em>pausing</em> the solver whenever a frame is skipped, meaning you either get a (A) good solve or (B) a patient solver, awaiting your return.</p>
+<p><img alt="frameskip3" src="https://user-images.githubusercontent.com/47274066/116363645-43241480-a7fb-11eb-9337-d7980ed4e3df.gif" /></p>
+<p>The behavior can be disabled in the Preferences.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/116367419-402b2300-a7ff-11eb-857c-71339974a208.png" /></p>
+<h4 id="why-should-i-care">Why should I care?</h4>
+<p>Consider your everyday situation of adding dynamics to a tail.</p>
+<p><img alt="garbage" src="https://user-images.githubusercontent.com/47274066/116367452-47eac780-a7ff-11eb-8b0c-c6e8ae66cad4.gif" /></p>
+<p>Whenever a frame is skipped, the result is garbage. This can get even more extreme during more extreme movements. But, what's worse, this garbage is expensive! It's still simulating, and trying to solve these skipped frames is <em>more expensive</em> than non-skipped frames. That's a bad deal.</p>
+<p>Here what happens with frameskip protection.</p>
+<p><img alt="frameskip4" src="https://user-images.githubusercontent.com/47274066/116367462-4a4d2180-a7ff-11eb-885f-e7180de6bbdd.gif" /></p>
+<p>See how it just stays put? It'll remember the last simulated frame, awaiting your return.</p>
+<p><br></p>
 <h2 id="clear-initial-state">Clear Initial State</h2>
 <p>Setting the initial state can be used to <em>relax</em> a physics character or scene.</p>
 <p><img alt="clearinitialstate1" src="https://user-images.githubusercontent.com/2152766/116095203-1c9d9680-a6a0-11eb-83c8-f86e1ee3367b.gif" /></p>
@@ -899,6 +1097,11 @@
 <blockquote>
 <p>Thanks to Jason Snyman for this suggestion!</p>
 </blockquote>
+<p><br></p>
+<h2 id="passive-visualisation">Passive Visualisation</h2>
+<p>Rigids will now turn gray when made passive, making it easier to understand what's going on visually.</p>
+<p><img alt="kinematicvis" src="https://user-images.githubusercontent.com/47274066/116362220-bd539980-a7f9-11eb-9055-d809434ed857.gif" /></p>
+<p><img alt="passivevisualisation" src="https://user-images.githubusercontent.com/2152766/116357524-731be980-a7f4-11eb-9df4-8607a34f1ca0.gif" /></p>
 <p><br></p>
 <h2 id="start-frame-explosion">Start Frame Explosion</h2>
 <p>In a specific and rare circumstance, a passive rigid body could appear to have velocity on the start frame.</p>
@@ -972,7 +1175,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-10
+      Last update: 2021-04-28
     
   </small>
 </div>
@@ -992,6 +1195,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API Reference
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.04.23/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.04.23
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
