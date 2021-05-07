@@ -1313,6 +1313,10 @@
 <td align="left">Pin a rigid body in worldspace, with a spring-like softness.</td>
 </tr>
 <tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/mimic.png> Mimic</nobr></td>
+<td align="left">Generate a target control hierarchy for the simulation to follow.</td>
+</tr>
+<tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/magnet.png> Push</nobr></td>
 <td align="left">Push rigids away from a point in space.</td>
 </tr>
@@ -1345,12 +1349,20 @@
 <td align="left">Create a new <b>dynamic</b> control from the currently selected <i>regular</i> control(s).</td>
 </tr>
 <tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/multiply.png> Multiply Selected</nobr></td>
+<td align="left">Multiply keyable attributes on multiple physics objects at once.</td>
+</tr>
+<tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/rigid_multiplier.png> Multiply Selected Rigids</nobr></td>
 <td align="left">Multiply keyable attributes on multiple rigid at once.</td>
 </tr>
 <tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/constraint_multiplier.png> Multiply Selected Constraints</nobr></td>
 <td align="left">Multiply keyable attributes on multiple constraints at once.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/bake.png> Bake Simulation</nobr></td>
+<td align="left">Convert a live simulation into editable keyframes.</td>
 </tr>
 <tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/load.png> Export Physics</nobr></td>
@@ -1882,6 +1894,11 @@
 <td align="left">DG Viewport Fix</td>
 <td align="left">Improve viewport robustness when simulating in DG Evaluation mode, by calling <code>ogs -reset</code> on the start frame. Bear in mind this action is global to Maya and may negatively (or positively) affect other nodes in your scene.</td>
 <td align="left"><nobr></nobr></td>
+</tr>
+<tr>
+<td align="left">Maya 2018 Consolidate World Fix</td>
+<td align="left">Work around a limitation in Maya 2018 to better support rigid textures and sleep rendering.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
 <td align="left">Validate Evaluation Mode</td>

@@ -819,6 +819,13 @@
 <td align="left"></td>
 </tr>
 <tr>
+<td align="left"><code>.creationMatrix</code></td>
+<td align="left">Matrix at the time of creation. This attribute is copied into the .restMatrix upon calling Clear Initial State.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>matrix</code></nobr></td>
+<td align="left">identity</td>
+</tr>
+<tr>
 <td align="left"><code>.currentState</code></td>
 <td align="left">The scene pulls this attribute <em>on every frame</em> to update itself on attributes that can be animated, such as the linear and angular damping.</td>
 <td align="left"></td>
@@ -1071,6 +1078,13 @@
 <td align="left">1</td>
 </tr>
 <tr>
+<td align="left"><code>.sleepThreshold</code></td>
+<td align="left">How strong does a force have to be to keep the wakeCounter from incrementing? Ragdoll optimises performance by putting inactive rigids to 'sleep'. It is a temporary state to conserve computational resources. 100 sleeping rigids are quicker to solve than 100 active ones. A rigid 'wakes up' whenever a force is applied or contact occurres.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>float</code></nobr></td>
+<td align="left">5e-06</td>
+</tr>
+<tr>
 <td align="left"><code>.startState</code></td>
 <td align="left">The scene pulls on this attribute at the start frame to set-up the initial state of the rigid, including its rest position and shape properties.</td>
 <td align="left"></td>
@@ -1101,6 +1115,13 @@
 <tr>
 <td align="left"><code>.version</code></td>
 <td align="left">Version of Ragdoll used to create this node. Saved with scene to keep track of what version of Ragdoll the node was created with.</td>
+<td align="left"></td>
+<td align="left"><nobr><code>int</code></nobr></td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left"><code>.wakeCounter</code></td>
+<td align="left">How many frames of not moving does it take to put this rigid to sleep? A value of 0 = insomnia, meaning it never goes to sleep.</td>
 <td align="left"></td>
 <td align="left"><nobr><code>int</code></nobr></td>
 <td align="left">0</td>
