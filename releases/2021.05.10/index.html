@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/next/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.05.10/">
       
       
         <meta name="author" content="mottosso">
@@ -343,12 +343,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
     <label class="md-nav__link" for="nav-9">
       Release History
@@ -361,6 +363,274 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2021.05.10
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      2021.05.10
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mimic" class="md-nav__link">
+    Mimic
+  </a>
+  
+    <nav class="md-nav" aria-label="Mimic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-mimic" class="md-nav__link">
+    Multiple Mimic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-independent" class="md-nav__link">
+    Order Independent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-chain" class="md-nav__link">
+    Partial Chain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bake-simulation" class="md-nav__link">
+    Bake Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-additions" class="md-nav__link">
+    Import Additions
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Additions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preserve-attributes" class="md-nav__link">
+    Preserve Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve-roots" class="md-nav__link">
+    Preserve Roots
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    Sleep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textures" class="md-nav__link">
+    Textures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-limit" class="md-nav__link">
+    Vertex Limit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collide-off" class="md-nav__link">
+    Collide Off
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate-limit-rendering" class="md-nav__link">
+    Translate Limit Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-rendering" class="md-nav__link">
+    Constraint Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-interactivity" class="md-nav__link">
+    Constraint Interactivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-colors" class="md-nav__link">
+    Constraint Colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-on-selected" class="md-nav__link">
+    Trajectory on Selected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#less-explosive" class="md-nav__link">
+    Less Explosive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-on-file-open" class="md-nav__link">
+    Load on File Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-on-file-open" class="md-nav__link">
+    Upgrade on File Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-editor-icons" class="md-nav__link">
+    Node Editor Icons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-initial-state" class="md-nav__link">
+    Passive Initial State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-to-active-and-back-again" class="md-nav__link">
+    Passive to Active and Back Again
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-and-attribute-order" class="md-nav__link">
+    Undo and Attribute Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-rendering" class="md-nav__link">
+    Control Rendering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-startup-crash" class="md-nav__link">
+    Fixed Startup Crash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-initial-state" class="md-nav__link">
+    Fixed Initial State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-qt" class="md-nav__link">
+    Fixed Qt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-drawing-in-2019" class="md-nav__link">
+    Scene Drawing in 2019
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -732,6 +1002,33 @@
     Mimic
   </a>
   
+    <nav class="md-nav" aria-label="Mimic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-mimic" class="md-nav__link">
+    Multiple Mimic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-independent" class="md-nav__link">
+    Order Independent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-chain" class="md-nav__link">
+    Partial Chain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -742,16 +1039,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#import-additions" class="md-nav__link">
+    Import Additions
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Additions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preserve-attributes" class="md-nav__link">
     Preserve Attributes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#preserve-roots" class="md-nav__link">
     Preserve Roots
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -765,6 +1075,13 @@
         <li class="md-nav__item">
   <a href="#textures" class="md-nav__link">
     Textures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-limit" class="md-nav__link">
+    Vertex Limit
   </a>
   
 </li>
@@ -815,6 +1132,13 @@
           <li class="md-nav__item">
   <a href="#trajectory-on-selected" class="md-nav__link">
     Trajectory on Selected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#less-explosive" class="md-nav__link">
+    Less Explosive
   </a>
   
 </li>
@@ -914,21 +1238,25 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/next.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.05.10.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Mimic</h1>
+                  <h1>2021.05.10</h1>
                 
-                <p>Highlight for this release is <strong>Mimic</strong>!</p>
+                <video autoplay="autoplay" loop="loop" width="100%">
+   <source src="https://user-images.githubusercontent.com/2152766/117479428-3cfb0a00-af58-11eb-8ee7-d3a7a1aebd94.mp4" type="video/mp4">
+</video>
+
+<p>Highlight for this release is <strong>Mimic</strong>!</p>
 <ul>
 <li><a href="#mimic"><strong>ADDED</strong> Mimic</a> Clean separation between simulation and animation</li>
 <li><a href="#bake-simulation"><strong>ADDED</strong> Bake Simulation</a> Fresh out the oven!</li>
-<li><a href="#preserve-attributes"><strong>ADDED</strong> Preserve Attributes</a> More control over the import process</li>
-<li><a href="#preserve-roots"><strong>ADDED</strong> Preserve Roots</a> Original roots are now preserved on export</li>
+<li><a href="#import-additions"><strong>ADDED</strong> Import Additions</a> More control over the import process</li>
 <li><a href="#sleep"><strong>ADDED</strong> Sleep</a> Greater performance by putting rigids to sleep</li>
 <li><a href="#textures"><strong>ADDED</strong> Textures</a> Visualise mass, friction and restitution</li>
+<li><a href="#vertex-limit"><strong>ADDED</strong> Vertex Limit</a> Less vertices, more performance</li>
 <li><a href="#collide-off"><strong>IMPROVED</strong> Collide Off</a> Improved handling of disabled collisions</li>
 <li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> Can never have too much of these</li>
 <li><a href="#fixed-startup-crash"><strong>FIXED</strong> Startup Crash</a> Were you one of the 2% of users having Maya crash on startup?</li>
@@ -939,13 +1267,16 @@
 <p><br></p>
 <p>Some awesome simulations, courtesy of Jason Snyman, a.k.a. The Wizard. xD</p>
 <p><strong>Facial Rigging</strong></p>
+<p>Move lips, pull muscles. Collides with the teeth too!</p>
 <p><img alt="konggif3" src="https://user-images.githubusercontent.com/2152766/117342860-99e4ba80-ae9b-11eb-96c2-32979bcf15fc.gif" /></p>
 <p><strong>Ragdolls have feelings too</strong></p>
+<p>Zilla is nothing with Kong, Kong is nothing without Zilla.</p>
 <video autoplay="autoplay" loop="loop" width="100%">
    <source src="https://user-images.githubusercontent.com/2152766/117312494-fedce800-ae7c-11eb-8abe-84db82ca7412.mp4" type="video/mp4">
 </video>
 
 <p><strong>Wreck-it Zilla</strong></p>
+<p>Old recovered footage from the 60s!</p>
 <video autoplay="autoplay" loop="loop" width="100%">
    <source src="https://user-images.githubusercontent.com/2152766/117312506-00a6ab80-ae7d-11eb-85cc-1960ea2e80d6.mp4" type="video/mp4">
 </video>
@@ -960,12 +1291,31 @@
 <h2 id="mimic">Mimic</h2>
 <p>Transition in and out of physics, in both pose-space and world-space, with the newly added <em>Mimic</em>.</p>
 <video autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/117479428-3cfb0a00-af58-11eb-8ee7-d3a7a1aebd94.mp4" type="video/mp4">
-</video>
-<video autoplay="autoplay" loop="loop" width="100%">
    <source src="https://user-images.githubusercontent.com/2152766/117479426-3bc9dd00-af58-11eb-9b5b-d6315240c7b2.mp4" type="video/mp4">
 </video>
 
+<p><strong>Options In-Depth</strong></p>
+<p>A step-by-step guide on what each option mean, there's quite a few of them!</p>
+<p><a href="https://youtu.be/EJmWCQ3n5e4" target="_blank"><img class="boxshadow" style="max-width: 600px;" src=https://user-images.githubusercontent.com/2152766/117536354-8009bb80-aff2-11eb-9b57-1f3e886bc204.png></a></p>
+<p><strong>Production Rig Example</strong></p>
+<p>A closer look at the Fire Wolf.</p>
+<blockquote>
+<p>Courtesy of <a href="https://gumroad.com/truongcgartist?sort=page_layout#krsIT">Truong CG Artist</a></p>
+</blockquote>
+<p><a href="https://youtu.be/LezmVuIEDaw" target="_blank"><img class="boxshadow" style="max-width: 600px;" src=https://user-images.githubusercontent.com/2152766/117538190-f7444d00-affc-11eb-9174-f02324837c2f.png></a></p>
+<p><br></p>
+<h3 id="multiple-mimic">Multiple Mimic</h3>
+<p>Mimic is a replica of your control hierarchy, and there's no limit to the number of replicas you can make. The final force applied to your rigid bodies is the <em>sum</em> of constraints applied.</p>
+<p><img alt="multimimic" src="https://user-images.githubusercontent.com/2152766/117537939-d3ccd280-affb-11eb-8a16-0583f3e4e415.gif" /></p>
+<p><br></p>
+<h3 id="order-independent">Order Independent</h3>
+<p>The controls in character rigs typically don't form a linear hierarchy. They're in some offset group, or in a different part altogether hanging together with constraints. That are animated, for space switching and what not.</p>
+<p>Mimics don't mind.</p>
+<p><img alt="mimicorderindependent" src="https://user-images.githubusercontent.com/2152766/117538067-59508280-affc-11eb-8ba4-85149a189ca6.gif" /></p>
+<p><br></p>
+<h3 id="partial-chain">Partial Chain</h3>
+<p>Sometimes you only want a <em>little</em> bit of control.</p>
+<p><img alt="partialmimic" src="https://user-images.githubusercontent.com/2152766/117538155-c3692780-affc-11eb-956c-7087a5bb441d.gif" /></p>
 <p><br></p>
 <h2 id="bake-simulation">Bake Simulation</h2>
 <p>You can now convert physics into keyframes with <code>Bake Simulation</code>.</p>
@@ -984,10 +1334,14 @@
 <p>There are a few more options to choose from, with more to come.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/117143294-945a7800-ada8-11eb-8c73-3fe479650a16.png" /></p>
 <p><br></p>
-<h2 id="preserve-attributes">Preserve Attributes</h2>
-<p>You now have the option to preserve attributes when importing, for when you'd rather stick with the default values.</p>
+<h2 id="import-additions">Import Additions</h2>
+<p>The import mechanic got an upgrade, you're now able to choose whether or not to re-apply changes to attributes and more finely import onto part of a larger chain hierarchy.</p>
 <p><br></p>
-<h2 id="preserve-roots">Preserve Roots</h2>
+<h3 id="preserve-attributes">Preserve Attributes</h3>
+<p>You now have the option to preserve attributes when importing, for when you'd rather stick with the default values.</p>
+<p><img alt="preserveattr" src="https://user-images.githubusercontent.com/2152766/117621767-d77e6780-b169-11eb-8f65-dadd1bd54201.gif" /></p>
+<p><br></p>
+<h3 id="preserve-roots">Preserve Roots</h3>
 <p>Exported files now remember what their original roots were.</p>
 <p>The original root of chains aren't important to Ragdoll. Whether the spine was a chain followed by the left and right arm, or whether the spine and left arm were part of one chain followed by the neck and right arm makes no difference.</p>
 <p>Consider these two characters.</p>
@@ -1045,6 +1399,10 @@
 <p>In Maya 2018, consolidation is disabled to facilitate this shader. It shouldn't affect anything of value, you probably don't even know what it is. But if you'd rather it didn't do that, untick the "Maya 2018 Consolidate World Fix" in the Ragdoll Preferences and reload the plug-in or restart Maya.</p>
 </div>
 <p><br></p>
+<h2 id="vertex-limit">Vertex Limit</h2>
+<p>Meshes are the slowest to compute and have an upper-limit of 256 vertices. You can now <em>lower</em> this limit for meshes that would normally result in 256 for greater performance.</p>
+<p><img alt="maxvertexconvex" src="https://user-images.githubusercontent.com/2152766/117619391-1bbc3880-b167-11eb-9f10-1fbb0973e4ee.gif" /></p>
+<p><br></p>
 <h2 id="collide-off">Collide Off</h2>
 <p>Rigids have always been able to ignore contacts with <code>Collide: Off</code></p>
 <p><img alt="disablecollide3" src="https://user-images.githubusercontent.com/2152766/116609863-ca24da00-a92c-11eb-869e-daf642cdd229.gif" /></p>
@@ -1056,6 +1414,7 @@
 <p><br></p>
 <h2 id="quality-of-life">Quality of Life</h2>
 <p>A number of improvements were made to make working with Ragdoll more pleasant!</p>
+<p><img alt="qol" src="https://user-images.githubusercontent.com/2152766/117624853-4ad5a880-b16d-11eb-85c4-aca816946d41.gif" /></p>
 <p><br></p>
 <h3 id="translate-limit-rendering">Translate Limit Rendering</h3>
 <p>The translate limit is making an appearance!</p>
@@ -1095,6 +1454,19 @@
 <h3 id="trajectory-on-selected">Trajectory on Selected</h3>
 <p>There's now an option to isolate trajectories to selected rigids only.</p>
 <p><img alt="drawselected" src="https://user-images.githubusercontent.com/47274066/117424734-030b1300-af1a-11eb-9edd-50b1f500afdf.gif" /></p>
+<p><br></p>
+<h3 id="less-explosive">Less Explosive</h3>
+<p>Overlaps are resolved by moving one or both rigids away from each other. The force with which that resolution happens could be <em>infinite</em>, resulting in what looks like explosions.</p>
+<p>This release addresses this, by compromising between realism and aesthetics.</p>
+<p><strong>Before</strong></p>
+<p><img alt="overlapbefore" src="https://user-images.githubusercontent.com/2152766/117622830-fb8e7880-b16a-11eb-94d0-9d795edc50ef.gif" /></p>
+<p><strong>After</strong></p>
+<p><img alt="overlapafter" src="https://user-images.githubusercontent.com/2152766/117622848-00ebc300-b16b-11eb-98ef-9e8765c44f5a.gif" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Editable</p>
+<p>The behavior can be restored or tweaked further by adjusting the <code>Max Depenetration Velocity</code> attribute of the rigid.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/117622514-98044b00-b16a-11eb-8fc4-27e7c0ee97e0.png></p>
+</div>
 <p><br></p>
 <h3 id="load-on-file-open">Load on File Open</h3>
 <p>There are 3 ways to load Ragdoll.</p>
@@ -1223,7 +1595,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-28
+      Last update: 2021-05-10
     
   </small>
 </div>
@@ -1243,6 +1615,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API Reference
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.04.28/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.04.28
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
