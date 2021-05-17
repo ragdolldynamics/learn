@@ -628,6 +628,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../releases/2021.05.17/" class="md-nav__link">
+      2021.05.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../releases/2021.05.10/" class="md-nav__link">
       2021.05.10
     </a>
@@ -1587,6 +1600,11 @@
 <td align="left"><nobr></nobr></td>
 </tr>
 <tr>
+<td align="left">Outliner Style</td>
+<td align="left">Where to put the new constraint, either as (1) a new transform at the root of your Maya scene like nCloth/nHair, (2) a child of the rigid parent like Maya's native constraints or (3) as a shape next to the rdRigid node.</td>
+<td align="left"><nobr><code>2</code></nobr></td>
+</tr>
+<tr>
 <td align="left">Maintain Offset</td>
 <td align="left">Keep rigids where they are, or snap them together. Offsets can be manipulated with the Edit Constraint Frames menu item.</td>
 <td align="left"><nobr><code>True</code></nobr></td>
@@ -1891,6 +1909,11 @@
 <tr>
 <td align="left">Auto Initial State</td>
 <td align="left">(Requires scene reopen) Whether or not to use the pose of a rigid at the start time as the active initial state. This feature records the pose from frame 1 at frame 2, by inserting itself in between finished evaluation of frame 1 and yet-to-begin evaluation of frame 2.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Monitor Scale</td>
+<td align="left">(Requires scene reopen) Synchonise viewport rendering with scale of rigids. Without this, synchronisation happens after playback followed by a re-select.</td>
 <td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>

@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Ragdoll now has a floating licence server!">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2020.11.16/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.05.17/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>2020.11.16 - Learn Ragdoll</title>
+        <title>Floating Licence Support - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cached-playback" class="md-skip">
+        <a href="#floating-licence-server" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2020.11.16
+              Floating Licence Support
             
           </span>
         </div>
@@ -369,11 +369,148 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../2021.05.17/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2021.05.17
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       2021.05.17
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#floating-licence-server" class="md-nav__link">
+    Floating Licence Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mimic-ik" class="md-nav__link">
+    Mimic IK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraint-outliner-style" class="md-nav__link">
+    Constraint Outliner Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-scale-rendering" class="md-nav__link">
+    Constraint Scale Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-maintain-offset" class="md-nav__link">
+    Constraint Maintain Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-improvements" class="md-nav__link">
+    Installer Improvements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigid-scale-rendering" class="md-nav__link">
+    Rigid Scale Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-scale" class="md-nav__link">
+    Scene Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-select" class="md-nav__link">
+    Quick Select
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-edits" class="md-nav__link">
+    Bulk Edits
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Edits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-attribute-editor" class="md-nav__link">
+    1. Attribute Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-channel-editor" class="md-nav__link">
+    2. Channel Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-attribute-spreadsheet" class="md-nav__link">
+    3. Attribute Spreadsheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -668,72 +805,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        2020.11.16
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../2020.11.16/" class="md-nav__link">
       2020.11.16
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cached-playback" class="md-nav__link">
-    Cached Playback
-  </a>
-  
-    <nav class="md-nav" aria-label="Cached Playback">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#known-limitations-with-cached-playback" class="md-nav__link">
-    Known Limitations with Cached Playback
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-videos" class="md-nav__link">
-    Help Videos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shape-orientation" class="md-nav__link">
-    Shape Orientation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -817,16 +893,72 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cached-playback" class="md-nav__link">
-    Cached Playback
+  <a href="#floating-licence-server" class="md-nav__link">
+    Floating Licence Server
   </a>
   
-    <nav class="md-nav" aria-label="Cached Playback">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mimic-ik" class="md-nav__link">
+    Mimic IK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#known-limitations-with-cached-playback" class="md-nav__link">
-    Known Limitations with Cached Playback
+  <a href="#constraint-outliner-style" class="md-nav__link">
+    Constraint Outliner Style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-scale-rendering" class="md-nav__link">
+    Constraint Scale Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraint-maintain-offset" class="md-nav__link">
+    Constraint Maintain Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-improvements" class="md-nav__link">
+    Installer Improvements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigid-scale-rendering" class="md-nav__link">
+    Rigid Scale Rendering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-scale" class="md-nav__link">
+    Scene Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-select" class="md-nav__link">
+    Quick Select
   </a>
   
 </li>
@@ -837,16 +969,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#help-videos" class="md-nav__link">
-    Help Videos
+  <a href="#bulk-edits" class="md-nav__link">
+    Bulk Edits
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Edits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-attribute-editor" class="md-nav__link">
+    1. Attribute Editor
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#shape-orientation" class="md-nav__link">
-    Shape Orientation
+        
+          <li class="md-nav__item">
+  <a href="#2-channel-editor" class="md-nav__link">
+    2. Channel Editor
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-attribute-spreadsheet" class="md-nav__link">
+    3. Attribute Spreadsheet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -863,93 +1015,159 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2020.11.16.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.05.17.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2020.11.16</h1>
+                  <h1>2021.05.17</h1>
                 
-                <p>The highlight for this release is Cached Playback!</p>
+                <p>Highlight for this release is support for <strong>Floating Licences</strong>!</p>
 <ul>
-<li><strong>NEW</strong> <a href="#cached-playback">Cached Playback</a><ul>
-<li>You can now leverage Maya 2020's native cached playback for your simulations, speeding up playback performance and lowering iteration times.</li>
+<li><a href="#floating-licence-server"><strong>ADDED</strong> Floating Licence Server</a> Convenient big-studio licencing</li>
+<li><a href="#mimic-ik"><strong>ADDED</strong> Mimic IK</a> Turn mimic into a joint hierarchy, for IK and such</li>
+<li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> More joy for you</li>
+<li><a href="#bulk-edits"><strong>TIP</strong> Bulk Edits</a> Some tips for a happier life</li>
 </ul>
-</li>
-<li><strong>NEW</strong> <a href="#help-videos">Help Videos</a> Ragdoll commands now come with how-to videos built directly into the UI.</li>
-<li><strong>NEW</strong> <a href="#shape-orientation">Shape orientation and joints</a><ul>
-<li>Shapes relied on the <code>jointOrient</code> being proper for joints, gone are the days.</li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Wireframe Bug<ul>
-<li>The wireframe for the <code>Box</code> shape does now draw correctly with a custom <code>rdRigid.shapeRotation</code></li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Outliner Icon Support on Linux<ul>
-<li>Linux now benefits from the same pretty icons as Windows</li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Logging Warnings<ul>
-<li>These now emit a yellow color in your Command Line</li>
-</ul>
-</li>
-<li><strong>FIXED</strong> Boxes and Joints<ul>
-<li>Joints converted to Rigids can now be set to Box shape with proper orientation</li>
-</ul>
-</li>
-</ul>
-<p><br>
-<br>
-<br></p>
-<h2 id="cached-playback">Cached Playback</h2>
-<p>Maya 2019 introduced support for Cached Playback, and Maya 2020 added support for Cached <strong>Simulation</strong>, which is now supported by Ragdoll!</p>
-<p><img alt="ragdollcached6" src="https://user-images.githubusercontent.com/2152766/99081696-1cf71900-25bb-11eb-9714-6c2b6b16c679.gif" /></p>
-<p><img alt="ragdollcached7" src="https://user-images.githubusercontent.com/2152766/99081780-39935100-25bb-11eb-8da2-4c9ee6f83dcd.gif" /></p>
-<p><strong>Create new rigids</strong></p>
-<p><img alt="ragdollcached1" src="https://user-images.githubusercontent.com/2152766/98826001-0fac2400-242d-11eb-9261-9b6e19034076.gif" /></p>
-<p><strong>Edit existing rigids</strong></p>
-<p><img alt="ragdollcached2" src="https://user-images.githubusercontent.com/2152766/98825995-0e7af700-242d-11eb-835d-355756fcaf9d.gif" /></p>
-<blockquote>
-<p>Trajectories can be enabled with the <code>rdScene.drawTrajectories</code> attribute, under <code>Visualisation</code> of the Attribute Editor</p>
-</blockquote>
-<h4 id="known-limitations-with-cached-playback">Known Limitations with Cached Playback</h4>
-<p>There is still work to be done. Currently, animated visualisations aren't updating in cached mode. However the simulation still runs correctly and your driven character animation will behave identically to non-cached mode.</p>
-<blockquote>
-<p>The animation of the slice visualisation doesn't represent the current, animated state</p>
-</blockquote>
-<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831495-8b10d400-2433-11eb-81c2-1d9339c3a459.gif></p>
-<blockquote>
-<p>The connection visualisation is not up-to-date, you can disable the drawing with rdConstraint.drawConnection</p>
-</blockquote>
-<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831501-8cda9780-2433-11eb-98f6-735ddd148d91.gif></p>
-<blockquote>
-<p>The guide delta drawn to represent the difference between simulation and your animation only draws the latest result, rather than the result on the current frame.</p>
-</blockquote>
-<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/99082785-84fa2f00-25bc-11eb-867c-78d7c82b7519.png></p>
-<blockquote>
-<p>Note that these are <em>only visual</em> and does <em>not</em> affect the simulation. These will all be addressed in a future release!</p>
-</blockquote>
-<p><img height=200 width=400 src=https://user-images.githubusercontent.com/2152766/98831489-89dfa700-2433-11eb-8fa0-574108837bb7.gif></p>
-<p><code>rdRigid.ouputGeometry</code> Remove any geometries when working with cached playback, these cause instant death to Maya and it's still unclear why.</p>
-<p><br>
-<br>
-<br></p>
-<h2 id="help-videos">Help Videos</h2>
-<p>Find out more about a command, by seeing an example of how to use it. There's only one video at the moment, with more to come. Including videos for different ways of using the same command.</p>
-<p>The goal is to never have to leave Maya to learn about Ragdoll.</p>
-<p><img alt="ragdollhelp3" src="https://user-images.githubusercontent.com/2152766/99239870-94af8880-27f3-11eb-942c-46b8e56817f2.gif" /></p>
-<p><br>
-<br>
-<br></p>
-<h2 id="shape-orientation">Shape Orientation</h2>
-<p>Shapes typically align with the Maya node, but in the case of joints that isn't always what you want. Maya separates between joint orientation and drawing; it'll always draw joints facing its child. When the orientation and visual orientation of a joint differs, you would end up with correct but unexpected results.</p>
-<p>This release fixes that by properly updating..</p>
+<p><br></p>
+<h2 id="floating-licence-server">Floating Licence Server</h2>
+<p>So far, Ragdoll has been activated on a per-machine basis. It's been node-locked.</p>
+<p>But in many cases, you are a studio with a team of artists using Ragdoll. That's when it becomes impractical for each artist to manage their own licences, or for licences to become associated with a single machine.</p>
+<p>Floating licences solve this problem. With it, you register a fixed amount of licences with a <em>server</em> somewhere on your network, and then have Maya "lease" licences off of it. For example, with 10 floating licences, 10 artists can use Ragdoll in parallel. On Maya shutdown or plug-in unload, the lease is "dropped" meaning it can be picked up by another artist, on some other machine.</p>
+<div class="admonition info">
+<p class="admonition-title">Heads-up SysAdmins</p>
+<p>On Windows, the floating licence mechanism is currently a dynamic rather than static library.</p>
+<p><img width=190 src=https://user-images.githubusercontent.com/2152766/118402547-407e4780-b662-11eb-9cdb-4965f62c930a.png></p>
+<p>This will be addressed in a future release.</p>
+</div>
+<p><strong>See also</strong></p>
 <ul>
-<li><code>rdRigid.shapeOffset</code></li>
-<li><code>rdRigid.shapeRotation</code></li>
+<li><a href="/floating-licence">Floating Licence Documentation</a></li>
 </ul>
-<p>..to mimic how joints appear in the Maya viewport.</p>
-<p><img alt="ragdollorientauto" src="https://user-images.githubusercontent.com/2152766/98810185-bb964500-2416-11eb-928e-1b2b39c1ea66.gif" /></p>
+<p><br></p>
+<h2 id="mimic-ik">Mimic IK</h2>
+<p>The Mimic introduced in <a href="http://localhost:8001/releases/2021.05.10/#mimic">the last release</a> generated a clean hierarchy of transforms.</p>
+<p>This release introduced "mimik", which is a <em>joint hierarchy</em> suitable for skinning and IK. It's got a proper Joint Orient too, irregardless of what the original animation controls looked like.</p>
+<p><img alt="mimik" src="https://user-images.githubusercontent.com/2152766/118243758-b0d86d80-b496-11eb-82b0-f04ba458e507.gif" /></p>
+<p>They're great if IK is what you want, but they do make the overall hierarchy more complex and introduce an additional <code>jointOrient</code> offset onto the joints themselves. For that reason, <code>Transform</code> is the default node type and is currently the most simple mimic to work with.</p>
+<div class="admonition info">
+<p class="admonition-title">Room for Improvement</p>
+<p>There's still room for improvement, the user attributes remain on the blue control nodes rather than the joints themselves for now. This will be addressed in a future release.</p>
+</div>
+<video autoplay="autoplay" loop="loop" width="100%">
+   <source src="https://user-images.githubusercontent.com/2152766/118245987-55f44580-b499-11eb-94c6-77c53b973e44.mp4" type="video/mp4">
+</video>
+
+<p><br></p>
+<h2 id="quality-of-life">Quality of Life</h2>
+<p>More quality, less problems. Hacuna matata!</p>
+<p><br></p>
+<h3 id="constraint-outliner-style">Constraint Outliner Style</h3>
+<p>You can now choose how constraints appear in the outliner.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Style</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>nConstraint</code></td>
+<td align="left">At the root of the outliner, as its own transform</td>
+</tr>
+<tr>
+<td align="left"><code>Maya Constraint</code></td>
+<td align="left">As a child transform</td>
+</tr>
+<tr>
+<td align="left"><code>Ragdoll</code></td>
+<td align="left">As a shape</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>rRigid</code> node appears as a shape of any node you apply physics to, and normally constraints appear alongside them. But normal Maya constraints do not, and neither does the constraints you get with nCloth and nHair. So which do you prefer?</p>
+<p><strong>Ragdoll Style</strong></p>
+<p>As a shape, alongside the <code>rRigid</code> node.</p>
+<p><img alt="outlinerstyle1" src="https://user-images.githubusercontent.com/2152766/118120535-f5590000-b3e7-11eb-9335-137457c2f955.gif" /></p>
+<p><strong>Maya Constraint Style</strong></p>
+<p>As a child, similar to native Maya constraints.</p>
+<p><img alt="outlinerstyle2" src="https://user-images.githubusercontent.com/2152766/118120530-f427d300-b3e7-11eb-9d9b-224952c89054.gif" /></p>
+<p><strong>nConstraint Style</strong></p>
+<p>As a new transform at the root of the scene, similar to nCloth and nHair constraints. Group them, hide them; if you can imagine it, you can achieve it!</p>
+<p><img alt="outlinerstyle3" src="https://user-images.githubusercontent.com/2152766/118120525-f2f6a600-b3e7-11eb-8876-76b87b6b82fa.gif" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Subjective</p>
+<p>Whichever you prefer, it has no effect on the simulation and is strictly related to the Outliner only. They can also be re-parented after being created, it really doesn't matter where they are. So organise away!</p>
+</div>
+<p><br></p>
+<h3 id="constraint-scale-rendering">Constraint Scale Rendering</h3>
+<p>The last release made constraints render poorly if the node they were parented to was <em>scaled</em>. The simulation was still fine, but you couldn't see what you were doing.</p>
+<p><strong>Before</strong></p>
+<p><img alt="constraintrendering2" src="https://user-images.githubusercontent.com/2152766/118113285-000e9780-b3de-11eb-8355-c22640cacb68.gif" /></p>
+<p><strong>After</strong></p>
+<p><img alt="constraintrendering3" src="https://user-images.githubusercontent.com/2152766/118113287-00a72e00-b3de-11eb-89b2-e416fd3ffc1a.gif" /></p>
+<p><br></p>
+<h3 id="constraint-maintain-offset">Constraint Maintain Offset</h3>
+<p>Constraints typically maintain their offset on creation, such that rigids do not abruptly snap together on simulation start.</p>
+<p>But it's optional, and if you don't maintain offset then they <em>would</em> snap together. With this release, the default behavior is now <em>soft</em> as opposed to infinitely strong.</p>
+<p><img alt="softmaintain" src="https://user-images.githubusercontent.com/2152766/118122597-f9d2e800-b3ea-11eb-8bdc-2ede430174ad.gif" /></p>
+<p><br></p>
+<h3 id="installer-improvements">Installer Improvements</h3>
+<p>On Windows, the MSI installer can now be used to install <em>multiple</em> versions of Ragdoll simultaneously, with a dedicated uninstall option each.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118395063-51b65c80-b640-11eb-942e-4f1d0f0d9ca3.png" /></p>
+<p>This should also help clear out issues with <em>upgrading</em> using the MSI, which has been problematic in the past since the installer really didn't like overwriting files.</p>
+<p>On all platforms, multiple Maya module files now co-exist, which means that if you want to disable or switch versions you can do that by removing the offending version - rather than editing the text file itself like in previous versions of Ragdoll.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118395099-8aeecc80-b640-11eb-9e7b-add537d975a8.png" /></p>
+<p><br></p>
+<h3 id="rigid-scale-rendering">Rigid Scale Rendering</h3>
+<p>Rendering of non-uniformly scaled rigid bodies has been improved and now respond interactively to scale changes. Notice in particular how scale is translated into sphere radius only along the X-axis. For non-uniform scale of a sphere, switch to <code>Shape Type = Mesh</code>.</p>
+<p><strong>Before</strong></p>
+<p><img alt="scalebefore" src="https://user-images.githubusercontent.com/2152766/118402342-6b1bd080-b661-11eb-8580-9acc1807b7b1.gif" /></p>
+<p><strong>After</strong></p>
+<video autoplay="autoplay" loop="loop" width="100%">
+   <source src="https://user-images.githubusercontent.com/2152766/118402464-e087a100-b661-11eb-9f01-d1aabf073453.mp4" type="video/mp4">
+</video>
+
+<p><br></p>
+<h3 id="scene-scale">Scene Scale</h3>
+<p>The default distance unit in Maya is centimeters. Meaning <code>Translate X=5.0</code> means "5 centimeters along the X axis". And in some cases, characters get modeled by this unit too, to an average height of 160-190cm.</p>
+<p>But often this unit is ignored and now Ragdoll can too.</p>
+<div class="admonition info">
+<p class="admonition-title">Default Value</p>
+<p>Ragdoll has assumed a scene scale of 0.1 so far, meaning 10 centimeters meant 1 meter. That's the typical scale of most rigs, some having smaller - like the Fire Wolf at 0.01 - and some larger - like a real-world scale of 1.0.</p>
+<p>This value used to be reflected in <code>Gravity Y</code> as <code>98.2</code> meaning <code>98.2 cm/s2</code>. Which means that an object falling for 1 second would reach a velocity of 98.2 cm/s and keep increasing by the amount each second until reaching terminal velocity.</p>
+<p>It is now reflected in Scene Scale instead as 0.1. For a real-world scale, simply set this value to 1.0 and leave gravity unchanged.</p>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118354661-06c71700-b564-11eb-9bf5-929917dbcead.png" /></p>
+<p><img alt="scenescale2" src="https://user-images.githubusercontent.com/2152766/118354805-d7fd7080-b564-11eb-98f0-2c6325fd37d3.gif" /></p>
+<p><br></p>
+<h3 id="quick-select">Quick Select</h3>
+<p>The quick-select commands now feature an option to ignore whatever is currently selected.</p>
+<ul>
+<li>Either <em>select all</em> of a certain type, like <code>rdRigid</code></li>
+<li>Or <em>filter</em> current selection by type, like <code>rdRigid</code></li>
+</ul>
+<p>Filtering grows more useful as your scenes grow large. When you have e.g. 2 characters and want to edit all constraints in one of them, then filtering is what you're looking for.</p>
+<p><img alt="selectselecter" src="https://user-images.githubusercontent.com/2152766/118117771-f12ae380-b3e3-11eb-9e64-60d63bb390c6.gif" /></p>
+<p><br></p>
+<h2 id="bulk-edits">Bulk Edits</h2>
+<p>The Maya Channel Box is great for editing multiple nodes at once.</p>
+<p>Select two or more nodes, change an attribute in the Channel Box, and the change is applied to each of the selected nodes at once. Win!</p>
+<p>But what about attributes that <em>aren't</em> in the Channel Box?</p>
+<p>Here are 3 ways in which you can bulk-edit a class of Ragdoll nodes in one-go. In each case, I'm using the <code>Ragdoll -&gt; Select</code> menu item to bulk-select all rigid bodies in the scene.</p>
+<p><br></p>
+<h3 id="1-attribute-editor">1. Attribute Editor</h3>
+<p>Also known as "the slow way". Simply edit each attribute, one at a time. Like watching paint dry. It's slow.</p>
+<p><img alt="bulkedits1" src="https://user-images.githubusercontent.com/2152766/118096421-3ee62280-b3c9-11eb-931f-ef712e33870a.gif" /></p>
+<p><br></p>
+<h3 id="2-channel-editor">2. Channel Editor</h3>
+<p>All attributes found in the Attribute Editor are also available in the Channel Editor. The most-commonly used ones are already exposed, but you can expose more.</p>
+<p><img alt="bulkedits2" src="https://user-images.githubusercontent.com/2152766/118096423-3f7eb900-b3c9-11eb-814c-ea1818a04022.gif" /></p>
+<p><br></p>
+<h3 id="3-attribute-spreadsheet">3. Attribute Spreadsheet</h3>
+<p>For total control, irregardless of the Channel Box and with searchability amongst attributes, you can also try the lesser-known Attribute Spreadsheet.</p>
+<p><img alt="bulkedits3" src="https://user-images.githubusercontent.com/2152766/118096441-45749a00-b3c9-11eb-9fcc-d986d0a47fd3.gif" /></p>
                 
                   
                     
@@ -958,7 +1176,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-29
+      Last update: 2021-05-16
     
   </small>
 </div>
@@ -982,7 +1200,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2020.11.17/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -991,19 +1209,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2020.11.17
+                API Reference
               </div>
             </div>
           </a>
         
         
-          <a href="../2020.11.10/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2021.05.10/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2020.11.10
+                2021.05.10
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
