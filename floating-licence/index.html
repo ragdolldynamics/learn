@@ -845,6 +845,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#what-if-i-have-multiple-serial-numbers" class="md-nav__link">
+    What if I have multiple serial numbers?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#can-i-disable-the-splash-screen" class="md-nav__link">
     Can I disable the splash screen?
   </a>
@@ -1072,6 +1079,17 @@ maya
 <ul>
 <li><a href="https://wyday.com/limelm/help/turbofloat-server/#config">More Configuration Options</a></li>
 </ul>
+<p><br></p>
+<h3 id="what-if-i-have-multiple-serial-numbers">What if I have multiple serial numbers?</h3>
+<p>1 serial number, 1 server.</p>
+<p>Each server can all run on one machine, they just need their own unique port number. From there, provide each of your clients with the full server address to the pool it should lease licences from.</p>
+<p>For example.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Render farm</span>
+<span class="nv">RAGDOLL_LICENCE</span><span class="o">=</span><span class="m">10</span>.0.0.4:601
+
+<span class="c1"># Artist workstations</span>
+<span class="nv">RAGDOLL_LICENCE</span><span class="o">=</span><span class="m">10</span>.0.0.4:602
+</code></pre></div>
 <p><br></p>
 <h3 id="can-i-disable-the-splash-screen">Can I disable the splash screen?</h3>
 <p>Yes.</p>
