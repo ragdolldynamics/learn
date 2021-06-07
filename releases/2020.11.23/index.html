@@ -371,6 +371,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../2021.06.07/" class="md-nav__link">
+      2021.06.07
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../2021.05.17/" class="md-nav__link">
       2021.05.17
     </a>
@@ -948,14 +961,14 @@
 <h2 id="angular-mass">Angular Mass</h2>
 <p>In real life, if you spin a broom 180 degrees along its length; that's easy. But if you spin it 180 degrees along any other axis, like a ninja, it's considerably heavier.</p>
 <p><img width=400 src=https://user-images.githubusercontent.com/2152766/99944546-f67b6f80-2d6a-11eb-93b1-47a49deba0d5.png></p>
-<p>The reason is something called "angular mass" or "moment of inertia". It's like mass, but in terms of rotation rather than position. The broom has a low angular mass around its length axis, and a high angular mass in the other two axes. That makes it "heavier" around some axes but not others.</p>
-<p>This effect happens in Ragdoll too and is typically automatically computed for you based on the shape you use. If it looks like the broom, then the angular mass will also be lighter around its length then its width.</p>
+<p>The reason is something called "angular mass", also known as <a href="https://en.wikipedia.org/wiki/Moment_of_inertia">"moment of inertia"</a>. It's like mass, but in terms of rotation rather than position. The broom has a <em>low</em> angular mass along its length axis. It takes more <em>force</em> to affect a "heavier" axis than a lighter one which is why a broom spins more easily along its length.</p>
+<p>This effect happens in Ragdoll too and is typically automatically computed for you based on the shape you use. If it looks like the broom, it will act like a broom.</p>
 <p>With this release, you can now customise this for greater control of your rotations.</p>
 <p><img alt="ragdollangularmass" src="https://user-images.githubusercontent.com/2152766/99944815-6db10380-2d6b-11eb-9def-dba375a7e743.gif" /></p>
 <p>When would you want to do that?</p>
 <ol>
 <li>Your shape looks like a broom, but you want it to act like a box</li>
-<li>Your shape doesn't look like a broom, but you would like it to</li>
+<li>Your shape doesn't look like a broom, but you would like it to act like one</li>
 </ol>
 <p>Or any combination in between. :) Generally, a broom or any thin shape is more easily spun along its length, so you may find <strong>stability</strong> in setting your angular mass to <code>(1.0, 1.0, 1.0)</code>, at the expense of realism.</p>
 <p><strong>Guidelines</strong></p>
@@ -975,7 +988,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-17
+      Last update: 2021-06-07
     
   </small>
 </div>

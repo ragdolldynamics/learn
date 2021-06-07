@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/physics/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/features/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Physics - Learn Ragdoll</title>
+        <title>Features - Learn Ragdoll</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#constraint" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +100,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Physics
+              Features
             
           </span>
         </div>
@@ -751,85 +746,26 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#constraint" class="md-nav__link">
-    Constraint
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#soft-constraints" class="md-nav__link">
-    Soft Constraints
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hard-constraints" class="md-nav__link">
-    Hard Constraints
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/physics.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/features.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Physics</h1>
+                  <h1>Features</h1>
                 
-                <h2 id="constraint">Constraint</h2>
-<p>Every object in the real world can move along 6 different axes, or 6 "degrees of freedom".</p>
-<ul>
-<li>Translate X</li>
-<li>Translate Y</li>
-<li>Translate Z</li>
-<li>Rotate X</li>
-<li>Rotate Y</li>
-<li>Rotate Z</li>
+                <ul>
+<li>No pre-roll needed</li>
+<li>No rigging needed</li>
+<li>Rewind &amp; Resume</li>
+<li>Frameskip Protection</li>
+<li>Cycle Protection</li>
 </ul>
-<p>A constraint limits one or more of these axes.</p>
-<p>In Maya, the most typical form of constraint is locking a channel. This prevents this axis from changing.</p>
-<ul>
-<li>A value &lt; 0 means <code>LOCKED</code>, meaning it may <em>not</em> move along this axis</li>
-<li>A value = 0 means <code>FREE</code>, meaning it <em>may</em> freely move along this axis</li>
-<li>A value &gt; 0 means <code>LIMITED</code>, meaning it <em>may</em> move within the limited range of this axis</li>
-</ul>
-<p><br></p>
-<h2 id="soft-constraints">Soft Constraints</h2>
-<p>Limits above 0 are referred to as "soft", because their amount of influence can be tuned using the <code>Stiffness</code> and <code>Damping</code> attributes. These can safely flex and can approach that of a hard constraint given enough stiffness and damping, but would struggle to reach a given target 100%.</p>
-<p><br></p>
-<h2 id="hard-constraints">Hard Constraints</h2>
-<p>Limits <em>below</em> 0, typically -1, are referred to as "hard", because their influence is infinite. These should never flex, as even the slightest amount of flex means the constraint has <em>broken</em>. Leaving the solver in a poor state, struggling to keep up.</p>
                 
                   
                     
@@ -838,7 +774,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-28
+      Last update: 2021-06-07
     
   </small>
 </div>
