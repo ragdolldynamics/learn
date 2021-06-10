@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A number of bugs were harmed in the making of this release.">
+        <meta name="description" content="Usage statistics for development">
       
       
       
@@ -24,7 +24,7 @@
 
     
       
-        <title>More Bugfixes - Learn Ragdoll</title>
+        <title>Telemetry - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fractional-start-time" class="md-skip">
+        <a href="#telemetry" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              More Bugfixes
+              Telemetry
             
           </span>
         </div>
@@ -396,6 +396,40 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    Telemetry
+  </a>
+  
+    <nav class="md-nav" aria-label="Telemetry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opt-in" class="md-nav__link">
+    Opt-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#fractional-start-time" class="md-nav__link">
@@ -830,6 +864,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    Telemetry
+  </a>
+  
+    <nav class="md-nav" aria-label="Telemetry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opt-in" class="md-nav__link">
+    Opt-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fractional-start-time" class="md-nav__link">
     Fractional Start Time
   </a>
@@ -870,12 +938,97 @@
                 
                   <h1>2021.06.10</h1>
                 
-                <p>Highlight for this release is <strong>more bugfixes</strong>, in preparation for launch.</p>
+                <p><img alt="hearttelemetry" src="https://user-images.githubusercontent.com/2152766/121509216-528fa380-c9de-11eb-9cc9-0ec14a3ddfd7.gif" /></p>
+<p>Highlight for this release is <strong>telemetry</strong>.</p>
 <ul>
+<li><a href="#telemetry"><strong>ADDED</strong> Telemetry</a> Anonymous usage statistics for focused development</li>
 <li><a href="#fractional-start-time"><strong>FIXED</strong> Fractional Start Time</a> This could cause a nasty crash</li>
 <li><a href="#suspend-on-bake"><strong>FIXED</strong> Suspend on Bake</a> Faster baking now that this works!</li>
 <li><a href="#more-resilient-constraint-rendering"><strong>FIXED</strong> More Resilient Constraint Rendering</a> Optimised and less noisy</li>
 </ul>
+<p><br></p>
+<h3 id="telemetry">Telemetry</h3>
+<p>Ragdoll is now able to gather <em>usage statistics</em> so that I can strip menu items that aren't used, pay more attention to the ones that are and get an overall understanding of how Ragdoll performs out in the wild.</p>
+<div class="admonition question">
+<p class="admonition-title">What is telemetry?</p>
+<p>It's the term coined for gathering anonymous usage statistics and send it to a product vendor for a greater understanding of how their product is used.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Do I need it?</p>
+<p>No, this won't help you. Not directly. But it will help you and others indirectly, in that it allows me to spend more time on features you use, and less time on those you don't.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What does it collect?</p>
+<p>Mostly performance numbers, nothing personal. See <a href="#data">Data</a> below.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How is it collected?</p>
+<p>Mostly through C++, but some of it through Python. You can read about exactly what it does in <a href="https://github.com/mottosso/ragdoll/blob/main/ragdoll/telemetry.py"><code>telemetry.py</code></a></p>
+</div>
+<h4 id="opt-in">Opt-in</h4>
+<p>It is currently <em>opt-in</em> while I work out the kinks, so if you're interested in helping out put this in your <code>maya.env</code> or type it into your script editor before loading the plug-in.</p>
+<p><strong>Maya.env</strong></p>
+<div class="highlight"><pre><span></span><code>RAGDOLL_TELEMETRY = Yes
+</code></pre></div>
+<p><strong>Script Editor</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;RAGDOLL_TELEMETRY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Yes&quot;</span>
+</code></pre></div>
+<h4 id="data">Data</h4>
+<p>Data is gathered and stored in 2 places.</p>
+<ul>
+<li>Locally at <code>~/.ragdoll/telemetry_10-06-2021-100402.json</code></li>
+<li>Remotely at the Ragdoll database</li>
+</ul>
+<p>It is gathered and stored when Maya closes. Or more precisely, when the plug-in is unloaded.</p>
+<p>Here's what the complete data currently looks like.</p>
+<p><strong><code>~/.ragdoll/telemetry_10-06-2021-100402</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;maya&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;crashed&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">20200200</span><span class="p">,</span>
+        <span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;10-06-2021, 10:04:39&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;memory_cpu&quot;</span><span class="p">:</span> <span class="s2">&quot;31010.8 MB&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;machine&quot;</span><span class="p">:</span> <span class="s2">&quot;AMD64&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;memory_gpu&quot;</span><span class="p">:</span> <span class="s2">&quot;24576 MB&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gpu&quot;</span><span class="p">:</span> <span class="s2">&quot;GeForce RTX 3090/PCIe/SSE2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;os&quot;</span><span class="p">:</span> <span class="s2">&quot;win32&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;processor&quot;</span><span class="p">:</span> <span class="s2">&quot;AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;render_api&quot;</span><span class="p">:</span> <span class="s2">&quot;OpenGL V.4.6&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;ragdoll&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;simulationTimeMax&quot;</span><span class="p">:</span> <span class="mf">1.2327</span><span class="p">,</span>
+        <span class="s2">&quot;computeTimeMax&quot;</span><span class="p">:</span> <span class="mf">1.6763</span><span class="p">,</span>
+        <span class="s2">&quot;setupTimeMin&quot;</span><span class="p">:</span> <span class="mf">0.301</span><span class="p">,</span>
+        <span class="s2">&quot;computeTimeMin&quot;</span><span class="p">:</span> <span class="mf">0.7595</span><span class="p">,</span>
+        <span class="s2">&quot;setupTimeMax&quot;</span><span class="p">:</span> <span class="mf">0.4756</span><span class="p">,</span>
+        <span class="s2">&quot;simulationTimeMin&quot;</span><span class="p">:</span> <span class="mf">0.4697</span><span class="p">,</span>
+        <span class="s2">&quot;rigidCountMax&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;constraintCountMax&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">20210606</span><span class="p">,</span>
+        <span class="s2">&quot;computeTimeAvg&quot;</span><span class="p">:</span> <span class="mf">0.949111823737213</span><span class="p">,</span>
+        <span class="s2">&quot;simulationTimeAvg&quot;</span><span class="p">:</span> <span class="mf">0.597494786145304</span><span class="p">,</span>
+        <span class="s2">&quot;setupTimeAvg&quot;</span><span class="p">:</span> <span class="mf">0.25006875</span><span class="p">,</span>
+        <span class="s2">&quot;rigidCountMin&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;constraintCountMin&quot;</span><span class="p">:</span> <span class="mi">16</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>This was generated from that throbbing heart simulation above.</p>
+</blockquote>
+<p>There are currently 3 categories of data gathered.</p>
+<p><strong>"maya"</strong></p>
+<p>As you can see, it'll capture how many errors and warnings were emitted from the plug-in whilst the plug-in was loaded. It'll also include whether Maya crashed the last time Ragdoll was loaded. Ragdoll's goal is to keep crashes at 0.</p>
+<p><strong>"system"</strong></p>
+<p>It'll also include system information such that I know how restrained to keep Ragdoll, both in terms of memory and CPU power. If everyone's running on an integrated Intel chip, then Ragdoll simply wouldn't try to benefit from the GPU that much. These numbers also help put the next category into perspective.</p>
+<p><strong>"ragdoll"</strong></p>
+<p>The <code>ragdoll</code> category is perhaps the most interesting, as it sheds light on how much you are willing to suffer haha! Ragdoll is a <em>real-time</em> solver and is designed to be operated without waiting. So if I see these numbers climb too high, I'll crank up the number of optimisations to bring them back down again. Simple!</p>
+<h4 id="roadmap">Roadmap</h4>
+<p>There will be a publicly available website for this information - with graphs and charts - such that we can all witness just how fast Ragdoll is and get some perspective on the kind of workload it typically deals with. From this overview, development can then focus on exactly those.</p>
 <p><br></p>
 <h3 id="fractional-start-time">Fractional Start Time</h3>
 <p>You wouldn't normally set your start time to <code>0.8</code> or <code>16.351</code>, but it can happen whether you like it or not if e.g. physics was made in one scene and later referenced into another with differing frame rates. Such as 24 fps in one, and 30 fps in another.</p>
