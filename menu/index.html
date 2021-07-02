@@ -628,6 +628,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../releases/2021.07.02/" class="md-nav__link">
+      2021.07.02
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../releases/2021.06.10/" class="md-nav__link">
       2021.06.10
     </a>
@@ -1353,6 +1366,10 @@
 <td align="left">Constrain the position and limit the orientation between two rigid bodies.</td>
 </tr>
 <tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/ignore_contacts.png> Ignore Contacts</nobr></td>
+<td align="left">Ignore contacts between the two selected rigids.</td>
+</tr>
+<tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/animation.png> Animation Constraint</nobr></td>
 <td align="left">Convert translate/rotate channels into a target guide.</td>
 </tr>
@@ -1423,6 +1440,30 @@
 <tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/save.png> Import Physics</nobr></td>
 <td align="left">Load physics from disk.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/combine.png> Combine Scenes</nobr></td>
+<td align="left">Combine two or more scenes into one.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/extract.png> Extract Rigids</nobr></td>
+<td align="left">Extract rigids into new scene.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/move.png> Move Rigids</nobr></td>
+<td align="left">Move rigids into existing scene.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/replace.png> Replace Mesh</nobr></td>
+<td align="left">Replace input of the 'Mesh' shape type with another polygonal or NURBS mesh.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/freeze.png> Freeze</nobr></td>
+<td align="left">Exclude selected node from Maya's Parallel Evaluation.</td>
+</tr>
+<tr>
+<td align="left"><nobr><img class="invertme icon" width=20 src=/icons/unfreeze.png> Unfreeze</nobr></td>
+<td align="left">Undo the effect of freezing evaluation.</td>
 </tr>
 <tr>
 <td align="left"><nobr><img class="invertme icon" width=20 src=/icons/frame.png> Edit Constraint Pivots</nobr></td>
@@ -1955,6 +1996,11 @@
 <tr>
 <td align="left">Maya 2018 Consolidate World Fix</td>
 <td align="left">Work around a limitation in Maya 2018 to better support rigid textures and sleep rendering.</td>
+<td align="left"><nobr><code>True</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Fix right-click menu on joints with a rigid</td>
+<td align="left">When joints have a shape, such as a rigid body, the right-click menu breaks when wanting to 'Select Influence'. This fixes that, but <em>may</em> cause issues elsewhere since it modifies the Maya native context menu for joints. Disable this if it causes any other inconvenience.</td>
 <td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
