@@ -430,15 +430,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kinematic-control" class="md-nav__link">
-    Kinematic Control
+  <a href="#hard-pin" class="md-nav__link">
+    Hard Pin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#guide-control" class="md-nav__link">
-    Guide Control
+  <a href="#soft-pin" class="md-nav__link">
+    Soft Pin
   </a>
   
 </li>
@@ -1149,15 +1149,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kinematic-control" class="md-nav__link">
-    Kinematic Control
+  <a href="#hard-pin" class="md-nav__link">
+    Hard Pin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#guide-control" class="md-nav__link">
-    Guide Control
+  <a href="#soft-pin" class="md-nav__link">
+    Soft Pin
   </a>
   
 </li>
@@ -1682,11 +1682,6 @@
 <td align="left"><nobr><code>True</code></nobr></td>
 </tr>
 <tr>
-<td align="left">Use Rotate Pivot</td>
-<td align="left">Use rotate pivot of child as offset for the constraint frames.</td>
-<td align="left"><nobr><code>True</code></nobr></td>
-</tr>
-<tr>
 <td align="left">Guide Strength</td>
 <td align="left">Include some guide strength with this constraint.</td>
 <td align="left"><nobr><code>1.0</code></nobr></td>
@@ -1715,9 +1710,9 @@
 <p><img width=300 src=https://user-images.githubusercontent.com/2152766/101614979-8248f900-3a05-11eb-9a18-baa9c571a12d.png></p>
 <p><br></p>
 <h2 id="control">Control</h2>
-<p>High-level control, either direct (kinematic, passive) or indirect (driven, guided).</p>
+<p>High-level control, either direct (Hard Pin) or indirect (Soft Pin).</p>
 <p><br></p>
-<h3 id="kinematic-control">Kinematic Control</h3>
+<h3 id="hard-pin">Hard Pin</h3>
 <p>Pin the selected rigid body at its current worldspace position. The pin may be animated and disabled/enabled at run-time.</p>
 <table>
 <thead>
@@ -1736,7 +1731,7 @@
 </tbody>
 </table>
 <p><br></p>
-<h3 id="guide-control">Guide Control</h3>
+<h3 id="soft-pin">Soft Pin</h3>
 <p>Guide the selected rigid body towards its current worldspace position. The guide may be animated and disabled/enabled at run-time.</p>
 <table>
 <thead>
@@ -1959,9 +1954,14 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">Gizmo Scale</td>
+<td align="left">Draw Scale</td>
 <td align="left">Scale at which to draw viewport widgets, like constraints.</td>
 <td align="left"><nobr><code>1.0</code></nobr></td>
+</tr>
+<tr>
+<td align="left">Scene Scale</td>
+<td align="left">Internal tolerances to use when computing convex meshes and some forces, default is 0.1 meaning things are assumed 10x smaller than real-world scale e.g. a character is 17 cm tall.</td>
+<td align="left"><nobr><code>0.1</code></nobr></td>
 </tr>
 <tr>
 <td align="left">Cache Media</td>
@@ -2056,7 +2056,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-01-18
+      Last update: 2021-07-10
     
   </small>
 </div>
