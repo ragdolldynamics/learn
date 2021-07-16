@@ -905,11 +905,11 @@
 <br></p>
 <div class="vboxlayout align-center justify-center">
     <div class="hboxlayout align-center">
-        <a href="https://files.ragdolldynamics.com" class="button red"><b>Download</b></a>
+        <a href="https://learn.ragdolldynamics.com/blog/20210713_july28/" class="button red"><b>Download</b></a>
         <p>Ragdoll <b>2021.07.15</b> awaits.<br>
         <i>Click here to get started.</i></p>
     </div>
-    <a class="padding-top" href="https://files.ragdolldynamics.com/files/distribution">Previous versions</a>
+    <a class="padding-top" href="https://learn.ragdolldynamics.com/blog/20210713_july28/">Previous versions</a>
 </div>
 
 <p><br>
@@ -956,7 +956,7 @@
 <details class="bug"><summary>No module named 'ragdoll'</summary><p>Fair enough, let's go deeper.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="n">modules_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\Users\marcus\Documents\maya\modules&quot;</span>
-<span class="n">ragdoll_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modules_path</span><span class="p">,</span> <span class="s2">&quot;Ragdoll-Maya-2021_06_06\scripts&quot;</span><span class="p">)</span>
+<span class="n">ragdoll_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modules_path</span><span class="p">,</span> <span class="s2">&quot;Ragdoll-Maya-2021_11_06\scripts&quot;</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ragdoll_path</span><span class="p">)</span>
@@ -991,8 +991,7 @@
 </details>
 <details class="question"><summary>How do I disable the ground?</summary><p>A static collider is automatically added on the Maya grid per default, it can be disabled on the <code>rdScene</code> node via the <code>.useGround</code> attribute.</p>
 </details>
-<details class="question"><summary>Why not use nHair for overlapping animation?</summary><p>Yes, and while your at it, why not stick razor blades in your eyes?</p>
-<p>Seriously though, Ragdoll simulates your translate and rotate channels, whereas nHair simulates point geometry. You can convert those points into translation and rotation, but given the choice why would you? Besides, Ragdoll has far more robust collisions, control and constraints than nHair or nCloth could ever hope to achieve, at much greater performance.</p>
+<details class="question"><summary>Why not use nHair for overlapping animation?</summary><p>Ragdoll simulates your translate and rotate channels, whereas nHair simulates point geometry. You can convert those points into translation and rotation, but given the choice why would you? Besides, Ragdoll has far more robust collisions, control and constraints than nHair or nCloth could ever hope to achieve, at much greater performance.</p>
 </details>
 <p><br></p>
 <h2 id="limitations">Limitations</h2>
@@ -1009,7 +1008,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-07-15
+      Last update: 2021-07-16
     
   </small>
 </div>
