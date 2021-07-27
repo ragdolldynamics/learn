@@ -898,18 +898,17 @@
     <img class="hero-image" src=/car14.png>
 </div>
 
-<blockquote>
-<p>At the time of this writing, Ragdoll is still in early access. <a href="https://ragdolldynamics.com/contact">Reach out</a> for access.</p>
-</blockquote>
-<p><br>
-<br></p>
+<p><br></p>
 <div class="vboxlayout align-center justify-center">
+    <!-- <h3>Download</h3> -->
+    <b>Download</b>
+    <p>Select your chosen platform</p>
     <div class="hboxlayout align-center">
-        <a href="https://learn.ragdolldynamics.com/blog/20210713_july28/" class="button red"><b>Download</b></a>
-        <p>Ragdoll <b>2021.07.15</b> awaits.<br>
-        <i>Click here to get started.</i></p>
+        <a style="max-height: 40px;" href="https://ragdolldynamics.com/download?platform=windows" class="button red"><div class="image"><img src=https://user-images.githubusercontent.com/2152766/126961293-8ab863bf-65c8-4e89-a25d-9bcbe4a63627.png></div><b>Windows</b></a>
+        <a style="max-height: 40px;" href="https://ragdolldynamics.com/download?platform=linux" class="button blue"><div class="image"><img src=https://user-images.githubusercontent.com/2152766/126961293-8ab863bf-65c8-4e89-a25d-9bcbe4a63627.png></div><b>Linux</b></a>
     </div>
-    <a class="padding-top" href="https://learn.ragdolldynamics.com/blog/20210713_july28/">Previous versions</a>
+    <p class="text-align-center">Ragdoll <b>2021.07.15</b> awaits.<br>
+    <a href="https://files.ragdolldynamics.com">Previous versions</a></p>
 </div>
 
 <p><br>
@@ -953,10 +952,10 @@
 <span class="n">interactive</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
 </code></pre></div>
 </details>
-<details class="bug"><summary>No module named 'ragdoll'</summary><p>Fair enough, let's go deeper.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<details class="bug"><summary>No module named 'ragdoll'</summary><p>A clue! Let's go deeper.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">modules_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\Users\marcus\Documents\maya\modules&quot;</span>
-<span class="n">ragdoll_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modules_path</span><span class="p">,</span> <span class="s2">&quot;Ragdoll-Maya-2021_11_06\scripts&quot;</span><span class="p">)</span>
+<span class="n">ragdoll_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">modules_path</span><span class="p">,</span> <span class="s2">&quot;Ragdoll-Maya-2021_11_06\scripts&quot;</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ragdoll_path</span><span class="p">)</span>
@@ -966,7 +965,7 @@
 </code></pre></div>
 <p>Make sure you replace the version number (date) with the version you are using. At this point, I expect you've uncovered why your module wasn't working in the first place and should probably revisit that as this process would require you to manually update the version number in that path each time you upgrade. No fun.</p>
 </details>
-<details class="bug"><summary>Something else happened</summary><p>Oh no! I'd like to know about what happened, please let me know <a href="mailto:marcus@ragdolldynamics.com">here</a>.</p>
+<details class="bug"><summary>Something else happened</summary><p>Oh no! I'd like to know about what happened, please let me know <a href="mailto:support@ragdolldynamics.com">here</a>.</p>
 </details>
 <p><br></p>
 <h2 id="faq">FAQ</h2>
@@ -978,18 +977,18 @@
 <li>Maya 2018-2022</li>
 </ul>
 </details>
-<details class="question"><summary>What are my licensing options?</summary><ul>
-<li><code>Trial</code> - 30 days of non-commercial use, no strings attached</li>
-<li><code>NodeLocked</code> - Any number of users, one machine per licence</li>
-<li><code>Floating</code> - Any number of machines, one user per licence</li>
-<li><code>Headless</code> - A cost-effective alternative for distributed simulations</li>
-</ul>
+<details class="question"><summary>What are my licensing options?</summary><p>See <a href="https://ragdolldynamics.com/pricing">Pricing</a>.</p>
 </details>
 <details class="question"><summary>What happens when my licence runs out?</summary><p>Your scenes will still open, but the solver will be disabled. Contact <a href="mailto:licence@ragdolldynamics.com">licence@ragdolldynamics.com</a> for renewal of your licence.</p>
 </details>
 <details class="question"><summary>What happens when I skip frames?</summary><p>The simulation gracefully pauses until you revisit the last simulated frame.</p>
 </details>
 <details class="question"><summary>How do I disable the ground?</summary><p>A static collider is automatically added on the Maya grid per default, it can be disabled on the <code>rdScene</code> node via the <code>.useGround</code> attribute.</p>
+</details>
+<details class="question"><summary>Can I use Rez?</summary><p>Yes, the only environment variable needed for Rez is <code>MAYA_MODULE_PATH</code>, such as:</p>
+<div class="highlight"><pre><span></span><code><span class="n">env</span><span class="p">[</span><span class="s2">&quot;MAYA_MODULE_PATH&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{root}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Where the <code>Ragdoll-2021_07_28</code> folder and <code>Ragdoll-2021_07_28.mod</code> file resides at <code>{root}</code>.</p>
 </details>
 <details class="question"><summary>Why not use nHair for overlapping animation?</summary><p>Ragdoll simulates your translate and rotate channels, whereas nHair simulates point geometry. You can convert those points into translation and rotation, but given the choice why would you? Besides, Ragdoll has far more robust collisions, control and constraints than nHair or nCloth could ever hope to achieve, at much greater performance.</p>
 </details>
@@ -998,8 +997,11 @@
 <p>As of <code>Ragdoll 2021.07.15</code> these are the current known limitations of Ragdoll.</p>
 <ul>
 <li>Must visit start frame on scene open</li>
-<li>More since <a href="/releases/2021.04.23#known-issues">2021.04.23</a></li>
+<li>Maya 2022 crashes when calling <code>Delete Physics</code></li>
 </ul>
+<div class="hboxlayout align-center">
+    <a href="/releases/2021.04.23#known-issues" class="button blue"><b>More</b></a>
+</div>
                 
                   
                     
@@ -1008,7 +1010,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-07-16
+      Last update: 2021-07-27
     
   </small>
 </div>
