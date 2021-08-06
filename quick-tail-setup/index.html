@@ -24,7 +24,7 @@
 
     
       
-        <title>Quick Tail Setup - Learn Ragdoll</title>
+        <title>Dynamic Tail - Learn Ragdoll</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quick Tail Setup
+              Dynamic Tail
             
           </span>
         </div>
@@ -207,79 +207,596 @@
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
 
-
-  <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
+<!-- Render current and nested navigation items -->
 
 
-
-  <li class="md-nav__item">
-    <a href="../overview/" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
+  <!-- Determine class according to state -->
+  
   
 
-
+  <!-- Main navigation item with nested items -->
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Animators Guide
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Animators Guide" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        Animators Guide
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
-        
-          
-          
-          
 
-
+        Home
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Quick Tail Setup
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Quick Tail Setup
-    </a>
     
       
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-3"
+          type="checkbox"
+          id="nav-3"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-3">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Documentation"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/active_rigid/" class="md-nav__link">
+        
+        <img src="/icons/rigid_black.png">
+        
+
+        Active Rigid
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/active_chain/" class="md-nav__link">
+        
+        <img src="/icons/chain_black.png">
+        
+
+        Active Chain
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/character/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Active Character
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/constraints/" class="md-nav__link">
+        
+        <img src="/icons/constraint_black.png">
+        
+
+        Constraints
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/soft_pin/" class="md-nav__link">
+        
+        <img src="/icons/control_black.png">
+        
+
+        Soft Pin
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/hard_pin/" class="md-nav__link">
+        
+        <img src="/icons/hardpin_black.png">
+        
+
+        Hard Pin
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/mimic/" class="md-nav__link">
+        
+        <img src="/icons/mimic_black.png">
+        
+
+        Mimic
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/forces/" class="md-nav__link">
+        
+        <img src="/icons/force_black.png">
+        
+
+        Forces
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/bake_simulation/" class="md-nav__link">
+        
+        <img src="/icons/bake_black.png">
+        
+
+        Bake Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/export_physics/" class="md-nav__link">
+        
+        <img src="/icons/load_black.png">
+        
+
+        Export Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/scene_management/" class="md-nav__link">
+        
+        <img src="/icons/scene_black.png">
+        
+
+        Scene Management
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/cycle_protection/" class="md-nav__link">
+        
+        <img src="/icons/swirl_black.png">
+        
+
+        Cycle Protection
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/debugging_tips/" class="md-nav__link">
+        
+        <img src="/icons/convert_black.png">
+        
+
+        Debugging Tips
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../guides/performance_tips/" class="md-nav__link">
+        
+        <img src="/icons/motor_black.png">
+        
+
+        Performance Tips
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-4"
+          type="checkbox"
+          id="nav-4"
+          checked
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-4">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Tutorials"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dynamic Tail
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        Dynamic Tail
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -402,536 +919,1026 @@
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
-      
-      
+    </li>
 
-
-
-  <li class="md-nav__item">
-    <a href="../download/" class="md-nav__link">
-      Download
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../menu/" class="md-nav__link">
-      Menu Reference
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../nodes/" class="md-nav__link">
-      Node Reference
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../api/" class="md-nav__link">
-      API Reference
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
+  <!-- Main navigation item -->
   
-  <li class="md-nav__item md-nav__item--nested">
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
     
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+
+        Download
+      </a>
+    </li>
+  
+
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+
+        Examples
+      </a>
+    </li>
+  
+
     
-    <label class="md-nav__link" for="nav-9">
-      Release History
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Release History" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        <span class="md-nav__icon md-icon"></span>
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../menu/" class="md-nav__link">
+        
+
+        Menu Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../nodes/" class="md-nav__link">
+        
+
+        Node Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+
+        API Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-10"
+          type="checkbox"
+          id="nav-10"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-10">
         Release History
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+      <nav
+        class="md-nav"
+        aria-label="Release History"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-10">
+          <span class="md-nav__icon md-icon"></span>
+          Release History
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.08.06/" class="md-nav__link">
         
+
+        2021.08.06
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.27/" class="md-nav__link">
         
+
+        2021.07.27
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.07.27/" class="md-nav__link">
-      2021.07.27
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.15/" class="md-nav__link">
         
+
+        2021.07.15
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.07.15/" class="md-nav__link">
-      2021.07.15
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.02/" class="md-nav__link">
         
+
+        2021.07.02
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.07.02/" class="md-nav__link">
-      2021.07.02
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.10/" class="md-nav__link">
         
+
+        2021.06.10
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.06.10/" class="md-nav__link">
-      2021.06.10
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.07/" class="md-nav__link">
         
+
+        2021.06.07
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.06.07/" class="md-nav__link">
-      2021.06.07
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.17/" class="md-nav__link">
         
+
+        2021.05.17
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.05.17/" class="md-nav__link">
-      2021.05.17
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.10/" class="md-nav__link">
         
+
+        2021.05.10
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.05.10/" class="md-nav__link">
-      2021.05.10
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.28/" class="md-nav__link">
         
+
+        2021.04.28
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.04.28/" class="md-nav__link">
-      2021.04.28
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.23/" class="md-nav__link">
         
+
+        2021.04.23
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.04.23/" class="md-nav__link">
-      2021.04.23
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.11/" class="md-nav__link">
         
+
+        2021.04.11
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.04.11/" class="md-nav__link">
-      2021.04.11
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.25/" class="md-nav__link">
         
+
+        2021.03.25
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.03.25/" class="md-nav__link">
-      2021.03.25
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.23/" class="md-nav__link">
         
+
+        2021.03.23
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.03.23/" class="md-nav__link">
-      2021.03.23
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.11/" class="md-nav__link">
         
+
+        2021.03.11
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.03.11/" class="md-nav__link">
-      2021.03.11
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.04/" class="md-nav__link">
         
+
+        2021.03.04
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.03.04/" class="md-nav__link">
-      2021.03.04
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.01/" class="md-nav__link">
         
+
+        2021.03.01
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.03.01/" class="md-nav__link">
-      2021.03.01
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.02.07/" class="md-nav__link">
         
+
+        2021.02.07
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.02.07/" class="md-nav__link">
-      2021.02.07
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.27/" class="md-nav__link">
         
+
+        2021.01.27
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.01.27/" class="md-nav__link">
-      2021.01.27
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.17/" class="md-nav__link">
         
+
+        2021.01.17
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.01.17/" class="md-nav__link">
-      2021.01.17
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.15/" class="md-nav__link">
         
+
+        2021.01.15
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.01.15/" class="md-nav__link">
-      2021.01.15
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.14/" class="md-nav__link">
         
+
+        2021.01.14
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.01.14/" class="md-nav__link">
-      2021.01.14
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.04/" class="md-nav__link">
         
+
+        2021.01.04
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2021.01.04/" class="md-nav__link">
-      2021.01.04
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.18/" class="md-nav__link">
         
+
+        2020.12.18
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.12.18/" class="md-nav__link">
-      2020.12.18
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.07/" class="md-nav__link">
         
+
+        2020.12.07
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.12.07/" class="md-nav__link">
-      2020.12.07
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.01/" class="md-nav__link">
         
+
+        2020.12.01
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.12.01/" class="md-nav__link">
-      2020.12.01
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.24/" class="md-nav__link">
         
+
+        2020.11.24
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.24/" class="md-nav__link">
-      2020.11.24
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.23/" class="md-nav__link">
         
+
+        2020.11.23
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.23/" class="md-nav__link">
-      2020.11.23
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.22/" class="md-nav__link">
         
+
+        2020.11.22
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.22/" class="md-nav__link">
-      2020.11.22
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.17/" class="md-nav__link">
         
+
+        2020.11.17
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.17/" class="md-nav__link">
-      2020.11.17
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.16/" class="md-nav__link">
         
+
+        2020.11.16
+      </a>
+    </li>
+  
+
           
-          
-          
+            
 
+  <!-- Determine class according to state -->
+  
+  
 
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.16/" class="md-nav__link">
-      2020.11.16
-    </a>
-  </li>
-
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.10/" class="md-nav__link">
         
+
+        2020.11.10
+      </a>
+    </li>
+  
+
           
-          
-          
+        </ul>
+      </nav>
+    </li>
 
-
-
-  <li class="md-nav__item">
-    <a href="../releases/2020.11.10/" class="md-nav__link">
-      2020.11.10
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  <!-- Currently active page -->
+  
 
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
 
+<!-- Render current and nested navigation items -->
 
-  <li class="md-nav__item">
-    <a href="../licencing/" class="md-nav__link">
-      Licencing
-    </a>
-  </li>
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../licencing/" class="md-nav__link">
+        
+
+        Licencing
+      </a>
+    </li>
+  
 
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
 
+<!-- Render current and nested navigation items -->
 
-  <li class="md-nav__item">
-    <a href="../serialisation/" class="md-nav__link">
-      Serialisation
-    </a>
-  </li>
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../serialisation/" class="md-nav__link">
+        
+
+        Serialisation
+      </a>
+    </li>
+  
 
     
       
       
-      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
 
 
+<!-- Render current and nested navigation items -->
 
-  <li class="md-nav__item">
-    <a href="../about/" class="md-nav__link">
-      About
-    </a>
-  </li>
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+
+        About
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -1083,7 +2090,7 @@
                   </a>
                 
                 
-                  <h1>Quick Tail Setup</h1>
+                  <h1>Dynamic Tail</h1>
                 
                 <p><img width=49% src=https://user-images.githubusercontent.com/8775944/104851801-0c328e80-58ef-11eb-862f-8c57b9e409ed.gif> <img width=49% src=https://user-images.githubusercontent.com/8775944/105234661-7f443b00-5b63-11eb-93cf-692ccfb902aa.gif></p>
 <p>In this tutorial you'll learn how to <strong>setup a tail</strong> with physics and <strong>how to steer</strong> the look and feel of the simulation using normal keyframing techniques. We'll use one of the excellent rigs by <a href="https://gumroad.com/truongcgartist?sort=page_layout#krsIT">Truong CG Artist</a>.</p>
@@ -1168,7 +2175,7 @@ Using worldspace forces, you can apply an attraction force to the simulated tail
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../overview/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../guides/performance_tips/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1177,7 +2184,7 @@ Using worldspace forces, you can apply an attraction force to the simulated tail
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Overview
+                Performance Tips
               </div>
             </div>
           </a>
