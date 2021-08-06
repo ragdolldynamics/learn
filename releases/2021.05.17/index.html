@@ -2118,7 +2118,7 @@
 </ul>
 <p><br></p>
 <h2 id="mimic-ik">Mimic IK</h2>
-<p>The Mimic introduced in <a href="http://localhost:8001/releases/2021.05.10/#mimic">the last release</a> generated a clean hierarchy of transforms.</p>
+<p>The Mimic introduced in <a href="/releases/2021.05.10/#mimic">the last release</a> generated a clean hierarchy of transforms.</p>
 <p>This release introduced "mimik", which is a <em>joint hierarchy</em> suitable for skinning and IK. It's got a proper Joint Orient too, irregardless of what the original animation controls looked like.</p>
 <p><img alt="mimik" src="https://user-images.githubusercontent.com/2152766/118243758-b0d86d80-b496-11eb-82b0-f04ba458e507.gif" /></p>
 <p>They're great if IK is what you want, but they do make the overall hierarchy more complex and introduce an additional <code>jointOrient</code> offset onto the joints themselves. For that reason, <code>Transform</code> is the default node type and is currently the most simple mimic to work with.</p>

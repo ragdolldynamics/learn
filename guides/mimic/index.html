@@ -589,6 +589,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ik" class="md-nav__link">
+    IK
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1936,6 +1943,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ik" class="md-nav__link">
+    IK
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1998,6 +2012,22 @@
 <p class="admonition-title">Pro tip</p>
 <p>You can also <em>delete</em> and <em>reparent</em> the resulting hierarchy of mimics, if all you wanted was for example the first few rigids in a hierarchy.</p>
 </div>
+<p><br></p>
+<h2 id="ik">IK</h2>
+<blockquote>
+<p>Added <code>2021.05.17</code></p>
+</blockquote>
+<p>The Mimic introduced in <a href="/releases/2021.05.10/#mimic">2021.05.10</a> generated a clean hierarchy of transforms.</p>
+<p>In 2021.05.17 "mimik" was introduced, which is a <em>joint hierarchy</em> suitable for skinning and IK. It's got a proper Joint Orient too, irregardless of what the original animation controls looked like.</p>
+<p><img alt="mimik" src="https://user-images.githubusercontent.com/2152766/118243758-b0d86d80-b496-11eb-82b0-f04ba458e507.gif" /></p>
+<p>They're great if IK is what you want, but they do make the overall hierarchy more complex and introduce an additional <code>jointOrient</code> offset onto the joints themselves. For that reason, <code>Transform</code> is the default node type and is currently the most simple mimic to work with.</p>
+<div class="admonition info">
+<p class="admonition-title">Room for Improvement</p>
+<p>There's still room for improvement, the user attributes remain on the blue control nodes rather than the joints themselves for now. This will be addressed in a future release.</p>
+</div>
+<video autoplay="autoplay" loop="loop" width="100%">
+   <source src="https://user-images.githubusercontent.com/2152766/118245987-55f44580-b499-11eb-94c6-77c53b973e44.mp4" type="video/mp4">
+</video>
                 
                   
                     

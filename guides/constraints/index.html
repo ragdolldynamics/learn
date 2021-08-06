@@ -632,6 +632,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#constraint-outliner-style" class="md-nav__link">
+    Constraint Outliner Style
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2142,6 +2149,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#constraint-outliner-style" class="md-nav__link">
+    Constraint Outliner Style
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2369,6 +2383,45 @@
 <p>Give some extra flare to your constraints, by editing the <code>Twist</code> and <code>Swing</code> colors.</p>
 <p><img alt="constraintcolors3" src="https://user-images.githubusercontent.com/2152766/116964947-9dfab780-aca4-11eb-978f-b896756a5731.gif" />
 <img alt="customconstraintcolor2" src="https://user-images.githubusercontent.com/2152766/116921663-2bf68400-ac4c-11eb-874c-dcfcd3e84597.gif" /></p>
+<p><br></p>
+<h3 id="constraint-outliner-style">Constraint Outliner Style</h3>
+<p>Choose how constraints appear in the outliner.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Style</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>nConstraint</code></td>
+<td align="left">At the root of the outliner, as its own transform</td>
+</tr>
+<tr>
+<td align="left"><code>Maya Constraint</code></td>
+<td align="left">As a child transform</td>
+</tr>
+<tr>
+<td align="left"><code>Ragdoll</code></td>
+<td align="left">As a shape</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>rRigid</code> node appears as a shape of any node you apply physics to, and normally constraints appear alongside them. But normal Maya constraints do not, and neither does the constraints you get with nCloth and nHair. So which do you prefer?</p>
+<p><strong>Ragdoll Style</strong></p>
+<p>As a shape, alongside the <code>rRigid</code> node.</p>
+<p><img alt="outlinerstyle1" src="https://user-images.githubusercontent.com/2152766/118120535-f5590000-b3e7-11eb-9335-137457c2f955.gif" /></p>
+<p><strong>Maya Constraint Style</strong></p>
+<p>As a child, similar to native Maya constraints.</p>
+<p><img alt="outlinerstyle2" src="https://user-images.githubusercontent.com/2152766/118120530-f427d300-b3e7-11eb-9d9b-224952c89054.gif" /></p>
+<p><strong>nConstraint Style</strong></p>
+<p>As a new transform at the root of the scene, similar to nCloth and nHair constraints. Group them, hide them; if you can imagine it, you can achieve it!</p>
+<p><img alt="outlinerstyle3" src="https://user-images.githubusercontent.com/2152766/118120525-f2f6a600-b3e7-11eb-8876-76b87b6b82fa.gif" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Subjective</p>
+<p>Whichever you prefer, it has no effect on the simulation and is strictly related to the Outliner only. They can also be re-parented after being created, it really doesn't matter where they are. So organise away!</p>
+</div>
                 
                   
                     
