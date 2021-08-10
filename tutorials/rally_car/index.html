@@ -2415,7 +2415,7 @@
 </ol>
 <div class="admonition hint">
 <p class="admonition-title">My values</p>
-<p>For the wheels, I used a <code>Translate</code> values <code>X=2</code>, <code>Y=2</code> and <code>Z=1.5</code></p>
+<p>For the wheels, I used <code>Translate</code> values <code>X=2</code>, <code>Y=0</code> and <code>Z=1.5</code></p>
 </div>
 <p>You should now have this.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/128613548-df9b109a-4aeb-4489-ac43-c3428578af09.png" /></p>
@@ -2439,6 +2439,13 @@
 <li>Select all 4 wheels</li>
 <li>Enter a value of <code>0</code> for the <code>Translate Limit Y</code> attribute</li>
 </ol>
+<div class="admonition question">
+<p class="admonition-title">What does <code>0</code> mean?</p>
+<p>A value of <code>0</code> means disabled, the wheel will be free to move along this axis without disruption. Since the other axes are left at <code>-1</code> that means it will only be able to move in a straight line. Like how you might expect suspension to work.</p>
+<ul>
+<li>See <a href="/documentation/constraints/#limit-states">Limit States</a> for details</li>
+</ul>
+</div>
 <p><img alt="unlocky" src="https://user-images.githubusercontent.com/2152766/128631420-b97e9480-1dd5-4c19-9752-81f7ea93c60f.gif" /></p>
 <p><br></p>
 <h4 id="suspension-ii">Suspension II</h4>
@@ -2473,8 +2480,8 @@
 <li>Move the car along <code>Translate Y = 10.0</code></li>
 <li>Play</li>
 </ol>
-<p><img alt="initialstate" src="https://user-images.githubusercontent.com/2152766/128633156-f53a3f52-692e-436d-b476-d2a570d1b74f.gif" /></p>
 <p>By playing, the initial state is automatically updated to wherever the car was at the time of playing.</p>
+<p><img alt="initialstate" src="https://user-images.githubusercontent.com/2152766/128633156-f53a3f52-692e-436d-b476-d2a570d1b74f.gif" /></p>
 <div class="admonition hint">
 <p class="admonition-title">Alternatively</p>
 <p>Rather than playing, you can also use the <code>Set Initial State</code> command founder under <code>Ragdoll | Rigging | Set Initial State</code></p>
@@ -2511,7 +2518,7 @@
 <li>A limit of <code>0</code> means "free", it is <em>unlimited</em></li>
 <li>A limit greater than <code>0</code> means it can change within the specified range</li>
 </ul>
-<p>See <a href="/guides/constraints/#limit-states">Limit States</a> for details.</p>
+<p>See <a href="/documentation/constraints/#limit-states">Limit States</a> for details.</p>
 </div>
 <p><br></p>
 <h3 id="finalise">Finalise</h3>
