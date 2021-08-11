@@ -880,15 +880,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#suspension-i" class="md-nav__link">
-    Suspension I
+  <a href="#suspension-free" class="md-nav__link">
+    Suspension - Free
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#suspension-ii" class="md-nav__link">
-    Suspension II
+  <a href="#suspension-soft" class="md-nav__link">
+    Suspension - Soft
   </a>
   
 </li>
@@ -941,6 +941,40 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    Engine
+  </a>
+  
+    <nav class="md-nav" aria-label="Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation-constraint" class="md-nav__link">
+    Animation Constraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-only" class="md-nav__link">
+    Rotation Only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ready-set-animate" class="md-nav__link">
+    Ready, Set, Animate!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#accurate-roll" class="md-nav__link">
     Accurate Roll
   </a>
@@ -964,13 +998,6 @@
           <li class="md-nav__item">
   <a href="#bevelled-wheels" class="md-nav__link">
     Bevelled Wheels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#engine" class="md-nav__link">
-    Engine
   </a>
   
 </li>
@@ -2152,15 +2179,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#suspension-i" class="md-nav__link">
-    Suspension I
+  <a href="#suspension-free" class="md-nav__link">
+    Suspension - Free
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#suspension-ii" class="md-nav__link">
-    Suspension II
+  <a href="#suspension-soft" class="md-nav__link">
+    Suspension - Soft
   </a>
   
 </li>
@@ -2213,6 +2240,40 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    Engine
+  </a>
+  
+    <nav class="md-nav" aria-label="Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation-constraint" class="md-nav__link">
+    Animation Constraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-only" class="md-nav__link">
+    Rotation Only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ready-set-animate" class="md-nav__link">
+    Ready, Set, Animate!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#accurate-roll" class="md-nav__link">
     Accurate Roll
   </a>
@@ -2236,13 +2297,6 @@
           <li class="md-nav__item">
   <a href="#bevelled-wheels" class="md-nav__link">
     Bevelled Wheels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#engine" class="md-nav__link">
-    Engine
   </a>
   
 </li>
@@ -2312,6 +2366,10 @@
 
 <h3 id="rally-car">Rally Car</h3>
 <p>In this tutorial, we will create the wheels and chassi of a car in a semi-realistic fashion. It will have realistic suspension and limited to spinning along only one axis, but it won't be able to steer.</p>
+<div class="admonition success">
+<p class="admonition-title">Up to date</p>
+<p>Written for Ragdoll <code>2021.08.06</code> and above, but should still apply for <code>2021.06</code> and newer.</p>
+</div>
 <p><strong>You will learn</strong></p>
 <ul>
 <li>✔️ How to make geometry <em>dynamic</em></li>
@@ -2417,7 +2475,8 @@
 <p class="admonition-title">My values</p>
 <p>For the wheels, I used <code>Translate</code> values <code>X=2</code>, <code>Y=0</code> and <code>Z=1.5</code></p>
 </div>
-<p>You should now have this.</p>
+<p>You should now have this. (Naming is optional)</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/128978513-6c0d9ea0-6194-4eb5-a054-496b217a71b2.png" /></p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/128613548-df9b109a-4aeb-4489-ac43-c3428578af09.png" /></p>
 <p><br></p>
 <h3 id="dynamics">Dynamics</h3>
@@ -2426,14 +2485,22 @@
 <h4 id="active-rigid">Active Rigid</h4>
 <p>Select all 5 pieces, the chassi and wheels, and run the <code>Active Rigid</code> command from the <code>Ragdoll</code> menu.</p>
 <p><img alt="makerigids" src="https://user-images.githubusercontent.com/2152766/128631221-270afecd-de3a-4b4b-81b1-3181bd04f979.gif" /></p>
+<details class="info"><summary>Your Outliner should now look like this</summary><p>In your Outliner, you should now find a <code>rRigid</code> <em>shape</em> node for each wheel and chassi.</p>
+<p><img alt="outlinerrigid" src="https://user-images.githubusercontent.com/2152766/128980018-1312686c-48d1-47c5-a3f5-59593d195b1d.gif" /></p>
+<p>The <code>rRigid</code> node is where you will find attributes to control the physical material and behavior of the chassi and wheels, such as the <code>Friction</code> of the wheels against the ground and <code>Mass</code> of the chassi.</p>
+</details>
 <p><br></p>
 <h4 id="parent-constraint">Parent Constraint</h4>
 <p>Next, select the chassi and <code>Shift + Select</code> one of the wheels to make move together with the chassi.</p>
 <p><img alt="parentconstraint" src="https://user-images.githubusercontent.com/2152766/128631322-9c62b6f2-3176-4eae-9e27-5f1975f274ec.gif" /></p>
 <p>Repeat this process for the 3 remaining wheels.</p>
 <p><img alt="parentconstraint2" src="https://user-images.githubusercontent.com/2152766/128631349-97cc0db8-2a06-4e7e-a8e2-94eb6b9a3c94.gif" /></p>
+<p>This will glue the wheels onto the chassi, and we will shortly "unlock" the axes we are interested in for suspension and roll.</p>
+<details class="info"><summary>Your Outliner should now look like this.</summary><p><img alt="image" src="https://user-images.githubusercontent.com/2152766/128980117-77c6754a-9457-4e5e-b631-e7ca5462c961.png" /></p>
+<p>With the new constraints lying beside the <code>rRigid</code>.</p>
+</details>
 <p><br></p>
-<h4 id="suspension-i">Suspension I</h4>
+<h4 id="suspension-free">Suspension - Free</h4>
 <p>The wheels are currently <em>fixed</em> onto the chassi, but what we really want is for the chassi to be softly attached to the wheels. To accomplish this, we are going to <em>unlock</em> one of the <code>Translate Limits</code> of the wheels, namely <code>Translate Limit Y</code>.</p>
 <ol>
 <li>Select all 4 wheels</li>
@@ -2448,7 +2515,7 @@
 </div>
 <p><img alt="unlocky" src="https://user-images.githubusercontent.com/2152766/128631420-b97e9480-1dd5-4c19-9752-81f7ea93c60f.gif" /></p>
 <p><br></p>
-<h4 id="suspension-ii">Suspension II</h4>
+<h4 id="suspension-soft">Suspension - Soft</h4>
 <p>Now the wheels are free to move along the Y-axis of the chassi. But they are <em>too</em> free to move. What we want is for the chassi to bounce back, like a spring.</p>
 <ol>
 <li>Select all 4 wheels</li>
@@ -2535,6 +2602,60 @@
 <li>✔️ How to build a <em>static environment</em></li>
 </ul>
 <p><br></p>
+<h4 id="engine">Engine</h4>
+<p>Now let's put some <em>horsepower</em> into those wheels.</p>
+<video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/128640777-39848d86-3468-4cf7-8053-fc1a3e96f340.mp4" type="video/mp4">
+</video>
+
+<p><br></p>
+<h5 id="animation-constraint">Animation Constraint</h5>
+<p>To make the wheels spin, we'll apply an <code>Animation Constraint</code>.</p>
+<ol>
+<li>Select one of the rear wheels</li>
+<li>Run <code>Animation Constraint</code></li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Animation Constraint</p>
+<p>A special constraint used to <em>transfer keyframes</em> into the simulation. In this case, what we're looking for is to rotate each wheel along the <code>X</code> axis.</p>
+<p><img width=200 src=https://user-images.githubusercontent.com/2152766/128985917-b1962a33-3c58-4ccf-936f-9ea816e0bbae.png></p>
+</div>
+<p><img alt="animconstraint" src="https://user-images.githubusercontent.com/2152766/128984218-ec671541-c1bb-4ddc-9b68-34dbc90683ce.gif" /></p>
+<p><br></p>
+<h5 id="rotation-only">Rotation Only</h5>
+<p>Next, disable the <code>Translation</code> of the animation constraint, since the wheels are already held in place with the suspension we put in place earlier.</p>
+<ol>
+<li>Select both Animation Constraints via the Outliner</li>
+<li>Set <code>Translate Guide Stiffness</code> to <code>0</code></li>
+<li>Set <code>Translate Guide Damping</code> to <code>0</code></li>
+</ol>
+<p><img alt="animconstraint2" src="https://user-images.githubusercontent.com/2152766/128984226-355b0212-1a98-4750-898b-7c718dc1c762.gif" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Caution</p>
+<p>Take care not to disable the <code>Translation</code> of the first <code>Parent Constraint</code> we made earlier.</p>
+<p>The safest way to modify both Animation Constraints at the same time is by selecting them in the Outliner. If you instead select the wheels and modify them via the <code>Shapes</code> section, then Maya will kindly go ahead and modify both the <code>Animation Constraint</code> <em>and</em> the <code>Parent Constraint</code>.</p>
+</div>
+<p><br></p>
+<h5 id="ready-set-animate">Ready, Set, Animate!</h5>
+<p>Ok, great. We're all set to animate!</p>
+<ol>
+<li>Select both rear wheels</li>
+<li>Set some keys on <code>Rotate X</code></li>
+<li>Watch it go</li>
+</ol>
+<video controls autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/128984231-4b2d8839-afe9-41db-bfce-d458e3184d63.mp4" type="video/mp4">
+</video>
+
+<div class="admonition warning">
+<p class="admonition-title">Caution</p>
+<p>The faster you try and spin the wheels, at some point you may encounter this.</p>
+<p><img alt="carfaster" src="https://user-images.githubusercontent.com/2152766/128987436-8569936a-8e42-43a8-9214-65ff7153e04f.gif" /></p>
+<p>That's because at some point your <em>animation</em> will be greater than 180 degrees away from where the <strong>simulation</strong> is, and the simulation cannot distinguish between an angle of <code>180</code> and <code>-180</code>.</p>
+<p>By providing an exact angle in this way, we are able to reach specific positions with the car in a very reliable way, but do have to pay attention to special cases like these.</p>
+<p>To solve this, you can increase the <code>Stiffness</code> of the <code>Animation Constraint</code> to effectively give the needed horsepower required to meet your animation requirements. If you need it to go even faster, you may also need to increase the <code>Iterations</code> and <code>Substeps</code> on the <code>rScene</code>, for helicopter-speeds or greater.</p>
+</div>
+<p><br></p>
 <h4 id="accurate-roll">Accurate Roll</h4>
 <p>If you let the wheels spin slowly, you'll notice how the resolution isn't quite enough.</p>
 <ol>
@@ -2561,7 +2682,13 @@
 </div>
 <p><br></p>
 <h4 id="suspension-range">Suspension Range</h4>
-<p>Provide a <em>range</em> of allowed Y values, by entering a value above <code>0</code> for the <code>Translate Y Limit</code>.</p>
+<p>In a more realistic example, your vehicle model will have natural limits to how tall the suspension can be. For example in this truck example, there is a ceiling to the rear wheels.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/128977415-e4a89832-8946-479c-8051-dff41b1e671f.png" /></p>
+<p>We can let the suspension remain soft and springy until a certain point, by providing a range of allowed Y values. The range is given by a value of <code>Translate Y Limit</code> that is greater than <code>0</code>, the amount being how many Maya units the wheel is allowed to move (typically centimeters).</p>
+<div class="admonition warning">
+<p class="admonition-title">Start Time</p>
+<p>Keep in mind that any of the <code>Limit</code> attributes can only be changed on the start of your simulation. The start frame can be adjusted using the <code>Start Time</code> attribute on the <code>rScene</code> node.</p>
+</div>
 <video controls autoplay class="poster" muted="muted" loop="loop" width=100%>
     <source src="https://user-images.githubusercontent.com/2152766/128637863-83560d01-9c5a-45c7-8c83-64f8fc0abf6b.mp4" type="video/mp4">
 </video>
@@ -2570,11 +2697,18 @@
 <h4 id="race-track">Race Track</h4>
 <p>Let's use the <code>Duplicate</code> command to lay some more track.</p>
 <p>In my case, I found that the suspension was too loose, so I increased the <code>Guide Strength</code> to <code>0.4</code>.</p>
-<p>👉 You can also lower with the <code>Friction</code> on the ground, to allow for the chassi to slide on contact.<br>
-👉 You can also experiment with the chassi <code>Shape Extents</code> to make a more narrow vehicle<br>
-👉 You can also experiment with the <code>Shape Offset</code> to raise the chassie higher off the ground (like a monster truck!)</p>
+<ul>
+<li>👉 You can also lower with the <code>Friction</code> on the ground, to allow for the chassi to slide on contact.<br></li>
+<li>👉 You can also experiment with the chassi <code>Shape Extents</code> to make a more narrow vehicle<br></li>
+<li>👉 You can also experiment with the <code>Shape Offset</code> to raise the chassie higher off the ground (like a monster truck!)</li>
+</ul>
 <video controls autoplay class="poster" muted="muted" loop="loop" width=100%>
     <source src="https://user-images.githubusercontent.com/2152766/128634787-e11c84f9-a26b-4019-9c6e-70b8371c953f.mp4" type="video/mp4">
+</video>
+
+<p>Combined with the engine, you can now make a proper race track!</p>
+<video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/128640779-272f1953-f32e-488b-908e-5d4040605c33.mp4" type="video/mp4">
 </video>
 
 <p><br></p>
@@ -2585,28 +2719,6 @@
     <source src="https://user-images.githubusercontent.com/2152766/128634875-89ab407a-ad5e-42fb-be2c-c4b8e040d8f2.mp4" type="video/mp4">
 </video>
 
-<p><br></p>
-<h4 id="engine">Engine</h4>
-<p>Let's make those wheels spin.</p>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/128640777-39848d86-3468-4cf7-8053-fc1a3e96f340.mp4" type="video/mp4">
-</video>
-
-<p>To make the wheels spin, we'll apply an "Animation Constraint". This will transfer any keyframes you put on the wheel into the simulation. In this case, what we're looking for is to rotate each wheel along X.</p>
-<ol>
-<li>Select one of the rear wheels</li>
-<li>Run <code>Animation Constraint</code></li>
-</ol>
-<p>Repeat this process for the other rear wheel.</p>
-<ol>
-<li>Set some keyframes on <code>Rotate X</code></li>
-<li>Control the <em>horsepower</em> of the engine with the <code>Anim Strength</code> attribute</li>
-</ol>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/128640779-272f1953-f32e-488b-908e-5d4040605c33.mp4" type="video/mp4">
-</video>
-
-<p><img src=https://user-images.githubusercontent.com/2152766/128641261-741caf10-62da-4ef1-b9c9-67b9716d892b.png></p>
 <p><br></p>
 <h3 id="homework">Homework</h3>
 <p>Here are some suggestions for how to take the results of this tutorial further.</p>
