@@ -2369,7 +2369,7 @@
 <blockquote>
 <p>"Make your own motion reference"</p>
 </blockquote>
-<p>In this tutorial, we will setup a human-like character for use as reference or constraint target to your rig. You will be able to pose and position this manikin like you would a real manikin, and drop it from various heights and onto various obstacles to produce realistic poses as it falls.</p>
+<p>In this tutorial, we will setup a human-like character for use as reference or constraint target to your rig. You will be able to pose and position this Manikin like you would a real Manikin, and drop it from various heights and onto various obstacles to produce realistic poses as it falls.</p>
 <div class="admonition success">
 <p class="admonition-title">Version 1.0 - Up to date</p>
 <p>Written for Ragdoll <code>2021.08.06</code> and above, but should still apply for <code>2021.06</code> and newer.</p>
@@ -2391,9 +2391,9 @@
 <li>✔️ Ask on <a href="https://forums.ragdolldynamics.com/">the forums</a></li>
 </ul>
 <p>Something the animator can import and throw around for reference on how it would look like.</p>
-<details class="question"><summary>Spelling</summary><p>There's two ways to spell "manikin", this tutorial is based on this term here.</p>
+<details class="question"><summary>Spelling</summary><p>There's two ways to spell "Manikin", this tutorial is based on this term here.</p>
 <ul>
-<li><a href="https://www.healthysimulation.com/manikin/">https://www.healthysimulation.com/manikin/</a></li>
+<li><a href="https://www.healthysimulation.com/Manikin/">https://www.healthysimulation.com/Manikin/</a></li>
 </ul>
 </details>
 <p><br></p>
@@ -2463,9 +2463,9 @@
 <p>Your first selection is extra important, as it determines whether to start a <em>new</em> chain, like for the <code>hip_ctl</code>, or to <em>continue</em> from an existing chain, like the <code>torso_ctl</code>.</p>
 <p>In this case, we would very much like our arm to be connected to the torso.</p>
 </details>
-<details class="question"><summary>Can I skip the clavicles?</summary><p>Yes, if you have extra controls - such as <code>twist</code> or <code>bend</code> -  do <em>not</em> have to include these. So long as there is a natural parent/child relationship between your controls, Ragdoll should behave just fine.</p>
+<details class="question"><summary>Can I skip the clavicles?</summary><p>Yes, if you have extra controls - such as <code>twist</code> or <code>bend</code> -  you do <em>not</em> have to include these. So long as there is a natural parent/child relationship between your controls, Ragdoll should behave just fine.</p>
 <p>Simply skip over them as you select, from <code>torso_ctl</code> directly to <code>L_upperarm_ctl</code>.</p>
-<p>In this tutorial however, we will use the clavicles to demonstrate a physical aspect of the manikin which allows the arm to rotate in a very specific way.</p>
+<p>In this tutorial however, we will use the clavicles to demonstrate a physical aspect of the Manikin which allows the arm to rotate in a very specific way.</p>
 </details>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129546874-379a8fac-06bb-4c8b-90f0-10d195366e45.mp4" type="video/mp4"></video></p>
 
@@ -2536,7 +2536,7 @@
 
 <p><br></p>
 <h4 id="clavicles">Clavicles</h4>
-<p>We're not out of the woods yet. Half-way through the fall, we can spot a few of the worst offending rigid bodies.</p>
+<p>We're not out of the woods yet. Half-way through the fall, we can spot a few of the worst offending limbs.</p>
 <ol>
 <li><strong>Clavicles</strong> are dropping</li>
 <li><strong>Feet</strong> are bending too far</li>
@@ -2678,7 +2678,7 @@ td {
 <p>Now the knee will only ever bend back, but not forwards. To finish this off, let's <strong>lock</strong> the <code>Rotate Limit Y</code> and <code>Z</code> axes.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129685764-b72014d7-4a36-4a5c-8002-b37106aeafbd.mp4" type="video/mp4"></video></p>
 
-<p>Test it out, by dropping the manikin from a few different angles. With the legs complete, they should not be able to form an unnatural pose. If they do, you now know how to tune the limits!</p>
+<p>Test it out, by dropping the Manikin from a few different angles. With the legs complete, they should not be able to form an unnatural pose. If they do, you now know how to tune the limits!</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129686347-f5aed5c6-347c-4bdb-8cef-ba532465dc85.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2700,7 +2700,7 @@ td {
 
 <p><br></p>
 <h3 id="finalise">Finalise</h3>
-<p>You know know enough to construct <em>any</em> character of <em>any</em> anatomy!</p>
+<p>You now know enough to construct <em>any</em> character of <em>any</em> anatomy!</p>
 <p><strong>You have learnt</strong></p>
 <ul>
 <li>✔️ How to <em>limit</em> the motion between two rigids</li>
@@ -2710,7 +2710,7 @@ td {
 <p>With these lessons in mind, try your hand at the remaining parts of the character, namely the Head, Shoulders, Elbows and Hands.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129698559-623fd04b-9285-4478-b281-018ee1616138.mp4" type="video/mp4"></video></p>
 
-<p>As you tune, try dropping the manikin from different heights and angles. Put an obstacle underneat for more detail and to catch more edge cases. Once you are unable to produce an unnatural pose, you are done!</p>
+<p>As you tune, try dropping the Manikin from different heights and angles. Put an obstacle underneath for more detail and to catch more edge cases. Once you are unable to produce an unnatural pose, you are done!</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129698550-61c15074-a134-4339-a4da-e469da7d4aeb.mp4" type="video/mp4"></video></p>
 
 <p><strong>Download Completed Scene</strong></p>
@@ -2805,7 +2805,7 @@ td {
 </blockquote>
 <p><br></p>
 <h4 id="life">Life</h4>
-<p>There's no reason our manikin cannot be alive and well as it drops, using the Mimic along with Soft and Hard Pin controls we can shape the simulation to our will.</p>
+<p>There's no reason our Manikin cannot be alive and well as it drops, using the Mimic along with Soft and Hard Pin controls we can shape the simulation to our will.</p>
 <blockquote>
 <p>This chapter is in development</p>
 </blockquote>
@@ -2818,7 +2818,7 @@ td {
 </blockquote>
 <p><br></p>
 <h4 id="initial-velocity">Initial Velocity</h4>
-<p>So far our manikin has started out still and either fallen or gotten hit by a force. But what about if our manikin is in the middle of some motion? We can use a <code>Mimic</code> to give our manikin some starting velocity.</p>
+<p>So far our Manikin has started out still and either fallen or gotten hit by a force. But what about if our Manikin is in the middle of some motion? We can use a <code>Mimic</code> to give our Manikin some starting velocity.</p>
 <blockquote>
 <p>This chapter is also in development</p>
 </blockquote>
