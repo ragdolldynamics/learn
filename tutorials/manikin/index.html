@@ -1399,6 +1399,24 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
+      <a href="../../releases/next/" class="md-nav__link">
+        
+
+        next
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
       <a href="../../releases/2021.08.06/" class="md-nav__link">
         
 
@@ -2411,7 +2429,7 @@
 <blockquote>
 <p>Why should we even bother simulating a character?</p>
 </blockquote>
-<p>Finding <em>motion reference</em> is one of the most important activity for any animator. And yet I can safely challenge you to find reference for perhaps the most common motion in all blockbuster movies today, something that is either <em>impossible</em> or <strong>dangerous</strong> for actors or animators alike.</p>
+<p>Finding <em>motion reference</em> is one of the most important activities for any animator. And yet I can safely challenge you to find reference for perhaps the most common motion in all blockbuster movies today, something that is either <em>impossible</em> or <strong>dangerous</strong> for actors or animators alike.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129709932-643b186b-af06-41d0-ab67-38e9a4cc679c.mp4" type="video/mp4"></video></p>
 
 <p>Or how about reference of someone simply falling over, perhaps from heat stroke or staring into the sun.</p>
@@ -2641,31 +2659,19 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/129687847-dfaae124-15a8-4896-baae-f114c864ee82.mp4" type="video/mp4"></video></p>
 
 <p>So what we need to do is <em>rotate</em> this limit. For this I'd like to introduce the parent and child <strong>frames</strong>.</p>
-<style>
-/* Give parent and child frame videos the same size */
-td {
-    width: 50%;
-}
-</style>
+<div class="hboxlayout">
+<div class="vboxlayout align-left">
+<code><b>Parent Frame</b></code>
+<video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/129691248-110ba46b-fc99-49cb-a58a-6f67eb0949ef.mp4" type="video/mp4">
+</video>
+</div>
+<div class="vboxlayout align-left">
+<code><b>Child Frame</b></code>
+<video autoplay class="poster" muted="muted" loop="loop" width=100%><source src="https://user-images.githubusercontent.com/2152766/129691250-80d7c0b7-da6f-4ef5-a14d-430c29ad260a.mp4" type="video/mp4"></video>
+</div>
+</div>
 
-<table>
-<thead>
-<tr>
-<th align="left">Parent Frame</th>
-<th align="left">Child Frame</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Allowed range of motion</td>
-<td align="left">Starting angle within range</td>
-</tr>
-<tr>
-<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%><source src="https://user-images.githubusercontent.com/2152766/129691248-110ba46b-fc99-49cb-a58a-6f67eb0949ef.mp4" type="video/mp4"></video></td>
-<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%><source src="https://user-images.githubusercontent.com/2152766/129691250-80d7c0b7-da6f-4ef5-a14d-430c29ad260a.mp4" type="video/mp4"></video></td>
-</tr>
-</tbody>
-</table>
 <p>Here's how to do it.</p>
 <ol>
 <li>Select <code>L_knee_ctl</code> and <code>R_knee_ctl</code></li>
@@ -2830,7 +2836,7 @@ td {
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-08-08
+      Last update: 2021-08-18
     
   </small>
 </div>
