@@ -928,6 +928,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pong" class="md-nav__link">
+    Pong
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#incredible-machine" class="md-nav__link">
     Incredible Machine
   </a>
@@ -937,13 +944,6 @@
           <li class="md-nav__item">
   <a href="#for-science" class="md-nav__link">
     For Science
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pong" class="md-nav__link">
-    Pong
   </a>
   
 </li>
@@ -2224,6 +2224,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pong" class="md-nav__link">
+    Pong
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#incredible-machine" class="md-nav__link">
     Incredible Machine
   </a>
@@ -2233,13 +2240,6 @@
           <li class="md-nav__item">
   <a href="#for-science" class="md-nav__link">
     For Science
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pong" class="md-nav__link">
-    Pong
   </a>
   
 </li>
@@ -2331,14 +2331,15 @@
 
 <p><br></p>
 <h3 id="motivation">Motivation</h3>
-<p>Why should an animator <em>simulate</em> a ball bouncing, rather than just keyframe it? Frankly, the reasons are few and far apart and this tutorial is primarily intended to educate the reader about the fundamentals of working with Ragdoll.</p>
-<p>That said, although a single ball bouncing on a flat plane may seem easy, it can be enough to challenge even the most senior of animators - something (too) easily taken for granted - and the lessons learnt here can be applied to more complex characters and performances.</p>
+<p>Why should an animator <em>simulate</em> a ball bouncing, rather than just keyframe it? </p>
+<p>If you are new to animation or in a neighbouring field such as modeling or lighting, it might seem silly to consider such a trivial task for simulation. But as the more seasoned animator knows, getting the trajectory of any free-flying object right is <em>incredibly</em> hard. It can mean the difference between a believable character, and a character that looks like Earths gravity varies for the duration of a single jump, or one that appears to be on a different planet altogether.</p>
+<p>With that in mind, althoguh a single ball bouncing on a flat plane may <em>seem</em> trivial, it can be enough to challenge even the most senior of animators.</p>
 <p><br></p>
 <h3 id="setup">Setup</h3>
 <p>For this tutorial, all you need is an empty Maya scene. So go ahead and clear out all of those references and meshes with hours of history on it and let's get crackin'!</p>
 <p><br></p>
 <h4 id="poly-sphere">Poly Sphere</h4>
-<p>Let's make our ball our of a regular Maya <code>polySphere</code>.</p>
+<p>Let's make our ball out of a regular Maya <code>polySphere</code>.</p>
 <ol>
 <li>Run <code>Sphere</code> from the <code>Polygon Primitives</code> submenu of the <code>Create</code> main menu</li>
 <li>Translate the sphere to <code>Translate Y = 5.0</code></li>
@@ -2364,10 +2365,9 @@
 <li>Select <code>pSphere1</code></li>
 <li>Increase <code>Bounciness = 1.0</code></li>
 </ol>
-<details class="question"><summary>What does 1.0 mean?</summary><p>It means 100%! Technically, it means any force produced by the ball hitting the ground is reversed in its entirety with <em>no</em> energy loss what so ever.</p>
+<details class="question"><summary>What does 1.0 mean?</summary><p>It means 100%! Technically, it means any force produced by the ball hitting the ground is reversed in its entirety with <em>no</em> loss of energy what-so-ever.</p>
 </details>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130045097-a83c153a-3e44-4851-84c8-64342dc41b66.mp4" type="video/mp4"></video></p>
-
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130352353-3ac29137-0e11-4e8d-9e01-4808f9818809.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="more-bounciness">More Bounciness</h4>
 <p>The reason the ball stops bouncing is that even though our <em>ball</em> is 100% bouncy, the <strong>ground</strong> is not. Like dropping a bowling ball on grass or a wooden floor. For perfect bounce, they <em>both</em> need to be 100% bouncy.</p>
@@ -2435,6 +2435,12 @@
 <p><br></p>
 <h3 id="finalise">Finalise</h3>
 <p>Now that we have complete control over our ball, let's put it to good use.</p>
+<p><strong>You have learnt</strong></p>
+<ul>
+<li>✔️ How to convert a <code>polySphere</code> into a "rigid"</li>
+<li>✔️ How to tune physical properties such as bounciness and friction</li>
+<li>✔️ How to configure the solver for accurate high-frequency motion</li>
+</ul>
 <p><br></p>
 <h4 id="initial-velocity">Initial Velocity</h4>
 <p>Give the ball a little push.</p>
@@ -2505,7 +2511,7 @@
 
 <p>See how despite this most definitely <em>not</em> being a simulation (or is it?) we are <em>still</em> getting bounces that don't actually touch the ground! The reason is simply that a camera can only capture <em>moments</em> of reality. It can only <em>sample</em> it.</p>
 <p>In this case, the ball <em>did</em> touch the floor, but the camera caught at a slightly different time. Shortly before and after contact. This is how you can think of Ragdoll too; a camera for physics.</p>
-<details class="question"><summary>Can you overeducate me?</summary><p>With pleasure. :) Let's look at <em>audio</em>.</p>
+<details class="question"><summary>Can you overeducate me?</summary><p>With pleasure. 😁 Let's look at <em>audio</em>.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/130089957-7261ab3b-a0ab-4861-933a-f034d4debcee.png" /></p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)">Wikipedia Reference</a></li>
@@ -2643,23 +2649,72 @@
 </tbody>
 </table>
 <p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130282792-a358d07a-be70-4319-a137-57c2ab61e55a.mp4" type="video/mp4"></video></p>
+<p>From here, you can tune <code>Bend Resistance</code> for more or less stiffness in the overall surface, and <code>Steps</code> for more or less of an effect.</p>
+<p><br></p>
+<h4 id="pong">Pong</h4>
+<p>Let's recreate a classic game of pong, with two animatable paddles.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130352449-a57fc0b0-7d6e-48b5-bdd4-373c43542dbf.mp4" type="video/mp4"></video></p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Description</th>
+<th align="left">Video</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Create a new rigid.<br><br>We won't need any geometry, the default shape will be a <code>Sphere</code></td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351250-74cd9933-a0d1-468c-b39a-a5ae15cea473.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Let's look from a <code>side</code> view.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351249-817039ea-5846-4c26-a941-46a21c128c0f.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Create the floors.<br><br>Same thing, except this time as a <code>Passive Rigid</code> and we'll adjust the shape to a <code>Box</code>.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351246-e76310fc-2b93-40ae-b79a-aab4858e61ac.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Create the paddles.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351245-7403de5f-1999-42d9-9263-95ed8b51a602.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Create a <code>Soft Pin</code>, and animate its <code>Guide Strength</code> across the first two frames.<br><br>We'll use this to give the ball its initial velocity. You can tweak the position and strength to give it more or less speed in your chosen direction.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351244-2edbf976-8b87-4939-a278-7f8fcc774fd1.mp4" type="video/mp4"></video></td>
+</tr>
+</tbody>
+</table>
+<p>Now let's tune some settings.</p>
+<ol>
+<li>Select every rigid</li>
+<li>Set <code>Friction = 0.0</code></li>
+<li>Set <code>Bounciness = 0.0</code></li>
+<li>Select <code>rScene</code></li>
+<li>Set <code>Air Density = 0.0</code></li>
+<li>Set <code>Use Ground = Off</code></li>
+<li>Set <code>Bounce Threshold = 0.1</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130351241-279c3d81-cdd4-46c9-b98f-8ae5855d02e7.mp4" type="video/mp4"></video></p>
+<p>Finally, we can <strong>animate</strong> the paddles. Winning is a little easier than normal Pong, since we can not only freeze time, but rewind it too. 😅</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130351243-f1776748-f513-4b88-a884-77d09b6bf988.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h4 id="incredible-machine">Incredible Machine</h4>
 <p>In the 1990s, there was a game developed called The Incredible Machine. In it, you were tasked with creating an obstacle course for a set of mechanical contraptions and physical objects in order to get some object from one place to another.</p>
 <blockquote>
-<p>WIP</p>
+<p>Coming soon</p>
 </blockquote>
 <p><br></p>
 <h4 id="for-science">For Science</h4>
 <p>The shortest path isn't necessarily the fastest.</p>
 <!-- WIP of an Omniverse example -->
 
-<blockquote>
-<p>Coming soon</p>
-</blockquote>
-<p><br></p>
-<h4 id="pong">Pong</h4>
-<p>A classic game of pong, with two animatable paddles.</p>
 <blockquote>
 <p>Coming soon</p>
 </blockquote>
