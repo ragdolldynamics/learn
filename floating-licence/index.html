@@ -2213,7 +2213,7 @@ maya
 <h3 id="what-happens-when-my-server-goes-offline">What happens when my server <em>goes</em> offline?</h3>
 <p>Leasing is re-done once every 30 minutes.</p>
 <p>30 minutes is the default value (see below), which means that if the server goes down whilst an artist is using it, the solver will be disabled within 30 minutes.</p>
-<p>The duration can be adjusted, however it is a balance since the time is also how long it takes for the server to free a realise as a result of a Maya crash.</p>
+<p>The duration can be adjusted, however it is a balance since the time is also how long it takes for the server to <em>free</em> a lease as a result of a Maya crash.</p>
 <ul>
 <li>See <a href="#what-happens-to-a-lease-when-maya-crashes">What happens to a lease when Maya crashes?</a></li>
 </ul>
@@ -2233,8 +2233,12 @@ maya
 </ul>
 <p><br></p>
 <h3 id="what-if-i-have-multiple-serial-numbers">What if I have multiple serial numbers?</h3>
-<p>1 serial number, 1 server.</p>
-<p>Each server can all run on one machine, they just need their own unique port number. From there, provide each of your clients with the full server address to the pool it should lease licences from.</p>
+<p>Complete, Unlimited and Batch have their own serial numbers and each serial number needs its own server.</p>
+<ul>
+<li>Each server needs to be a physical machine, but can under certain circumstances be allowed to run within a virtual machine; <a href="mailto:licencing@ragdolldynamics.com">contact us</a> if this is you.</li>
+<li>Each server needs their own unique address. If they run on the same machine, you can assign a unique port number (see <a href="#can-i-change-the-port-used-by-the-server">above</a>).</li>
+</ul>
+<p>From there, provide each of your clients with the full server address to the pool it should lease licences from.</p>
 <p>For example.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Render farm</span>
 <span class="nv">RAGDOLL_FLOATING</span><span class="o">=</span><span class="m">10</span>.0.0.4:601
