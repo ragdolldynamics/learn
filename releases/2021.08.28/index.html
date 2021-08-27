@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Final tweaks ahead of launch on the 28th">
+        <meta name="description" content="All new and important information about the basic tools and workflows for Ragdoll">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.07.15/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.08.28/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Launch Tweaks - Learn Ragdoll</title>
+        <title>New Tutorials - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rotate-pivot" class="md-skip">
+        <a href="#new-tutorials" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Launch Tweaks
+              New Tutorials
             
           </span>
         </div>
@@ -1169,16 +1169,179 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../2021.08.28/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2021.08.28
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
         2021.08.28
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-tutorials" class="md-nav__link">
+    New Tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="New Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bouncing-ball" class="md-nav__link">
+    Bouncing Ball
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rally-car" class="md-nav__link">
+    Rally Car
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manikin" class="md-nav__link">
+    Manikin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-ui" class="md-nav__link">
+    Personal UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-media" class="md-nav__link">
+    Social Media
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-editor" class="md-nav__link">
+    Pivot Editor
+  </a>
+  
+    <nav class="md-nav" aria-label="Pivot Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spin-swap" class="md-nav__link">
+    Spin &amp; Swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror" class="md-nav__link">
+    Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-box-co-op" class="md-nav__link">
+    Channel Box Co-op
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap" class="md-nav__link">
+    Snap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldspace-trajectories" class="md-nav__link">
+    Worldspace Trajectories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphere-rendering" class="md-nav__link">
+    Sphere Rendering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-server-details" class="md-nav__link">
+    Floating Server Details
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -1223,118 +1386,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2021.07.15
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../2021.07.15/" class="md-nav__link">
         
 
         2021.07.15
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rotate-pivot" class="md-nav__link">
-    Rotate Pivot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#re-scale" class="md-nav__link">
-    Re-scale
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scene-tolerance" class="md-nav__link">
-    Scene Tolerance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limit-visualisation" class="md-nav__link">
-    Limit Visualisation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unique-names" class="md-nav__link">
-    Unique Names
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passive-constraints" class="md-nav__link">
-    Passive Constraints
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-joint-shapes" class="md-nav__link">
-    Single Joint Shapes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bake-static-rigids" class="md-nav__link">
-    Bake Static Rigids
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -2011,57 +2072,118 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rotate-pivot" class="md-nav__link">
-    Rotate Pivot
+  <a href="#new-tutorials" class="md-nav__link">
+    New Tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="New Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bouncing-ball" class="md-nav__link">
+    Bouncing Ball
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rally-car" class="md-nav__link">
+    Rally Car
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manikin" class="md-nav__link">
+    Manikin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-ui" class="md-nav__link">
+    Personal UI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#re-scale" class="md-nav__link">
-    Re-scale
+  <a href="#social-media" class="md-nav__link">
+    Social Media
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scene-tolerance" class="md-nav__link">
-    Scene Tolerance
+  <a href="#pivot-editor" class="md-nav__link">
+    Pivot Editor
+  </a>
+  
+    <nav class="md-nav" aria-label="Pivot Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spin-swap" class="md-nav__link">
+    Spin &amp; Swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror" class="md-nav__link">
+    Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-box-co-op" class="md-nav__link">
+    Channel Box Co-op
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap" class="md-nav__link">
+    Snap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldspace-trajectories" class="md-nav__link">
+    Worldspace Trajectories
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limit-visualisation" class="md-nav__link">
-    Limit Visualisation
+  <a href="#sphere-rendering" class="md-nav__link">
+    Sphere Rendering
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unique-names" class="md-nav__link">
-    Unique Names
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passive-constraints" class="md-nav__link">
-    Passive Constraints
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-joint-shapes" class="md-nav__link">
-    Single Joint Shapes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bake-static-rigids" class="md-nav__link">
-    Bake Static Rigids
+  <a href="#floating-server-details" class="md-nav__link">
+    Floating Server Details
   </a>
   
 </li>
@@ -2079,114 +2201,109 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.07.15.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.08.28.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2021.07.15</h1>
+                  <h1>2021.08.28</h1>
                 
-                <p>Highlight for this release is improved <strong>Rotate Pivot</strong> support.</p>
+                <p>Highlight for this release is <strong>new tutorials!</strong></p>
 <ul>
-<li><a href="#rotate-pivot"><strong>FIXED</strong> Rotate Pivot</a> Now smooth like butter!</li>
-<li><a href="#re-scale"><strong>FIXED</strong> Re-scale</a> Scaling after making something dynamic</li>
-<li><a href="#single-joint-shapes"><strong>FIXED</strong> Single Joint Shapes</a> Rare edgecase of dynamic solo joints</li>
-<li><a href="#passive-constraints"><strong>FIXED</strong> Passive Constraints</a> Another rare edgecase in complex animations now fixed</li>
-<li><a href="#bake-static-rigids"><strong>FIXED</strong> Bake Static Rigids</a> Annoying mistake by Mr. Baker now fixed</li>
-<li><a href="#unique-names"><strong>FIXED</strong> Unique Names</a> Regression from previous release, squashed!</li>
-<li><a href="#scene-tolerance"><strong>ADDED</strong> Scene Tolerance</a> Support for mega-tiny and super-massive simulations</li>
-<li><a href="#limit-visualisation"><strong>IMPROVED</strong> Limit Visualisation</a> Now with colors!</li>
+<li><a href="#tutorials"><strong>ADDED</strong> Tutorials</a> Three new tutorials covering basics up to anatomical correctness!</li>
+<li><a href="#pivot-editor"><strong>ADDED</strong> Pivot Editor</a> Faster wheels and knees with this new UI</li>
+<li><a href="#personal-ui"><strong>ADDED</strong> Personal UI</a> More accurate licence information in the Ragdoll UI</li>
+<li><a href="#social-media"><strong>ADDED</strong> Social Media</a> We're everywhere now!</li>
+<li><a href="#worldspace-trajectories"><strong>FIXED</strong> Worldspace Trajectories</a> Now drawn correctly, in worldspace</li>
+<li><a href="#sphere-rendering"><strong>FIXED</strong> Sphere Rendering</a> Minor tweak to the look of the <code>Sphere</code> shape type</li>
+<li><a href="#floating-server-details"><strong>FIXED</strong> Floating Server Details</a> Minor bug fix for floating licence users</li>
 </ul>
 <p><br></p>
-<h3 id="rotate-pivot">Rotate Pivot</h3>
-<p>In a <a href="https://learn.ragdolldynamics.com/releases/2021.04.23/#rotate-pivot">previous release</a> support for the <code>.rotatePivot</code> attribute was added. But it was only partial. It only applied to solo rigid bodies, like the one in that example.</p>
-<p>Once rigids form a hierarchy, things get more complex, but also more <em>realistic</em>. A lot of character rigs make use of it, some even going as far as to leave NURBS controls at the origin, moving the CVs to where the character is and compensating with the <code>.rotatePivot</code> to make it appear in the right place.</p>
-<p>This didn't gel with Ragdoll, who uses the center of a control to determine how to draw chains.</p>
-<p><strong>What is this "rotate pivot"?</strong></p>
-<p>Just so we're all on the same page, here's me creating a control by moving the rotate pivot and CVs rather than translating/rotating the node.</p>
-<p><img alt="rotatepivot1" src="https://user-images.githubusercontent.com/2152766/125164236-1ee49c80-e189-11eb-8626-cffaba1748e6.gif" /></p>
-<p>Notice how I'm not actually moving it to the hip, but rather hold the <code>D</code>-key and move the rotate pivot. Then I'm moving the CVs to where the rotate pivot is to make it both act and appear at the hip.</p>
-<div class="admonition question">
-<p class="admonition-title">Why would anyone do this?</p>
-<p>Hah! Yes that was my thought too!</p>
-<p>As you can see, to make this work you really have to work at it. My guess is this isn't something riggers do by hand but rather via scripting. Done that way, you don't really notice how odd it is.</p>
-<p>Either way, there are rigs out there that works like this and it shouldn't limit your use of Ragdoll.</p>
+<h3 id="new-tutorials">New Tutorials</h3>
+<p>Three new tutorials from basics to intermediate, with more to come!</p>
+<p><br></p>
+<h4 id="bouncing-ball">Bouncing Ball</h4>
+<p>Learn the fundamentals of Ragdoll in this classic animation tutorial. </p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130355602-32378019-c606-449d-9b56-02a8e57ae821.mp4" type="video/mp4"></video></p>
+<div class="hboxlayout">
+<a href="/tutorials/bouncing_ball" class="button blue"><b>View Tutorial</b></a>
 </div>
-<p>Next, I'll repeat this process for each of my controls.</p>
-<p><img alt="rotatePivot2" src="https://user-images.githubusercontent.com/2152766/125164233-1d1ad900-e189-11eb-8ea0-303130eb64d7.gif" /></p>
-<p>Pay special attention to how all of my controls are still technically at the origin. Their rotate/translate channels are all zero.</p>
-<p>Let's have a look at what the current version of Ragdoll does in this situation.</p>
-<p><strong>Before</strong></p>
-<p><img alt="rotatepivotBefore" src="https://user-images.githubusercontent.com/2152766/125164405-f315e680-e189-11eb-9644-7c359138f963.gif" /></p>
-<p>Notice how nothing appears! That's because Ragdoll tried figuring out where to generate capsules and how large to make them based on the <em>center</em> of each control. But! The controls are all at <em>the origin</em>. They lie there, right on top of each other, with zero distance from each other.</p>
-<p>So Ragdoll does what it thinks you want. It generates a series of rigid bodies at the origin with 0 size. When what you really meant was for it to use the center plus this "rotate pivot".</p>
-<p><strong>After</strong></p>
-<p>This release recognises this, here's what it looks like now.</p>
-<p><img alt="rotatePivot4" src="https://user-images.githubusercontent.com/2152766/125164404-f1e4b980-e189-11eb-9a7b-843cb6783cef.gif" /></p>
-<p>Win!</p>
+
 <p><br></p>
-<h3 id="re-scale">Re-scale</h3>
-<p>Sometimes you're experimenting and aren't quite sure that the scale of an object is what you'd like it to be until you see it in action.</p>
-<p>Currently, whenever you make something dynamic it'll use the current scale of the NURBS curve or mesh as part of the collision geometry. But! If you change the size <em>after</em> making it dynamic, Ragdoll won't know about that.</p>
-<p>This was especially damning for geometry that needed to be tesselated, namely the <code>Mesh</code> shape type. The most convenient way of refreshing that was to edit the <code>.shapeVertexLimit</code> attribute, forcing a re-tesselation.</p>
-<p>That's because Ragdoll cannot know when you resize something. You have to explicitly say you did. That is, until now.</p>
-<p><img alt="scale2" src="https://user-images.githubusercontent.com/2152766/125164611-155c3400-e18b-11eb-91f8-d3fe6fae0fe5.gif" /></p>
-<div class="admonition caveat">
-<p class="admonition-title">Caveat</p>
-<p>It still isn't perfect.</p>
-<p>Ragdoll still cannot know when you scale the object. Instead, it queries the current scale on the 1<sup>st</sup> frame of the simulation, which means it won't actually recognise a new scale until <strong>the 2<sup>nd</sup> playthrough</strong>.</p>
-<p>That's because once the simulation starts, the initial state is automatically set. Only then can it know that scale has changed, but by then it is too late! Simulation has already begun. So instead, the change is picked up on the next playthrough.</p>
-<p>Of course manually setting the initial state (via the Rigging sub-menu) or re-opening the scene will have the same effect so you really shouldn't have to struggle with this in practice.</p>
+<h4 id="rally-car">Rally Car</h4>
+<p>Build upon the skills learnt with a bouncing ball to combine several rigids into a car (with an engine!)</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130355317-1874d90b-c366-43bc-a803-18467b9dc3bf.mp4" type="video/mp4"></video></p>
+<div class="hboxlayout">
+<a href="/tutorials/rally_car" class="button blue"><b>View Tutorial</b></a>
 </div>
+
 <p><br></p>
-<h3 id="scene-tolerance">Scene Tolerance</h3>
-<p>Ragdoll assumes you're working with human characters in centimeters, meaning a value of 170 means 170 cm and 0.1 cm is a <em>small</em> distance. If that's true, then you typically won't have to worry about "tolerances".</p>
-<p>But if you're characters are 17,000 units tall or 0.017 units short odd things start to happen.</p>
-<p><img alt="smallscale" src="https://user-images.githubusercontent.com/2152766/125464764-f0e33fc7-bae5-497d-872f-a96767ddd9d0.gif" /></p>
-<p>Notice how it initially slides around for no apparent reason? In this case, the cube is much smaller than Ragdoll expects and we can address this by <em>decreasing</em> the global scene scale.</p>
-<p>Likewise, for very large cubes you will notice similar artifacts. For that, you'd <em>increase</em> the scale.</p>
-<p><img alt="scal2" src="https://user-images.githubusercontent.com/2152766/125464782-0623e2e9-d3e6-4c46-b538-26fb060d5f4e.gif" /></p>
-<p>Currently, there exists a <code>Scene Scale</code> on the solver node, which is saved in your scene, and a <code>Scene Scale</code> in the global preferences which is not. The intention is for global scene scale to rarely change, to change alongside a studio's or project's convention, whereas the solver scene scale is more flexible.</p>
-<p>The default value is <code>10.0</code> but it's possible smaller values such as <code>0.1</code> is better suited. It's also possible they both belong under global preferences. Give this a try and let me know what you think.</p>
+<h4 id="manikin">Manikin</h4>
+<p>Construct a full ragdoll from any rig, even your own custom one!</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130355301-d1e45c50-045c-4f9e-9394-6e665ac770b2.mp4" type="video/mp4"></video></p>
+<div class="hboxlayout">
+<a href="/tutorials/manikin" class="button blue"><b>View Tutorial</b></a>
+</div>
+
 <p><br></p>
-<h3 id="limit-visualisation">Limit Visualisation</h3>
-<p>There are two kinds of limits; twist and swing.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/125652541-8f557854-154c-448f-8133-29e346481c14.png" /></p>
-<p>Twist is great for hinge-like limits, like knees and elbows, whereas swing is great for more complex 2D limits like shoulders and hips. The current position of a rigid body in terms of swing and twist have always been drawn as a green/red line, but it could sometimes be hard to know which was which. If the red line starts out in the twist limit, then Ragdoll will promptly snap it back into the swing limit.</p>
-<p>This release colors the twist and swing shapes using the same colors as the current twist and swing axes, making it just a tad easier to see which belongs where.</p>
+<h3 id="personal-ui">Personal UI</h3>
+<p>The Licence Window at the bottom of the Ragdoll menu now accurately displays your current licence, including Personal, Complete, Unlimited and Batch, along with the licence type - <code>Floating</code> or <code>Node Locked</code>.</p>
+<p><img class="poster no-radius" src=https://user-images.githubusercontent.com/2152766/129899581-cec76be1-9761-40db-add5-bb1a7dfe688e.png></p>
+<p><br></p>
+<h3 id="social-media">Social Media</h3>
+<p>Can you believe it. A clear sign of success, not everyone is on Twitter! If you're one of the lucky few, you can now follow along with updates to the project, documentation and general company news from there!</p>
+<ul>
+<li><a href="https://twitter.com/ragdolldynamics">https://twitter.com/ragdolldynamics</a></li>
+<li><a href="https://facebook.com/ragdolldynamics">https://facebook.com/ragdolldynamics</a></li>
+<li><a href="https://reddit.com/user/ragdolldynamics">https://reddit.com/user/ragdolldynamics</a></li>
+<li><a href="https://youtube.com/c/RagdollDynamics">https://youtube.com/c/RagdollDynamics</a></li>
+</ul>
+<!-- - https://instagram.com/ragdolldynamics -->
+
+<p>The only question is, who's going to be the <em>first</em> to follow? 😱</p>
+<p><a href="https://twitter.com/ragdolldynamics"><img alt="image" src="https://user-images.githubusercontent.com/2152766/129900266-790ab8f1-8858-44ee-9e15-e49eb368de85.png" /></a></p>
+<p><br></p>
+<h3 id="pivot-editor">Pivot Editor</h3>
+<p>In making he tutorials, the main bottleneck in terms of time taken was editing constraints. They are both complex and difficult to manage.</p>
+<p>This release addresses this problem with the Pivot Editor GUI.</p>
+<p><br></p>
+<h4 id="basics">Basics</h4>
+<p>Here's how to use it to tune a broken knee.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130945904-77eb1ad2-faa3-40a4-8fb1-e3afe473c7f4.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="spin-swap">Spin &amp; Swap</h4>
+<p>One of the main reasons to want to edit constraint pivots is to align the Twist axis with the main rotation of a knee or elbow. </p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130945895-8236baea-7b4e-433c-8884-ce32b9668581.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="mirror">Mirror</h4>
+<p>If the pivots face in opposite directions, orientations can be un-mirrored with the <code>Mirror</code> option.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130945889-dbf282ec-04fb-4780-8b63-9d7fb67f37d4.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="channel-box-co-op">Channel Box Co-op</h4>
+<p>Tuning limits alongside pivots works well too, middle-click drag attributes from the Channel Box like you normally would, whilst dragging in the UI to compensate.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130945899-62abade5-b96f-4555-bae1-f94c0e351c1c.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="snap">Snap</h4>
+<p>Use the snap option to make precise adjustment to specific angles.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130946210-40fc287f-f773-4df1-86e9-764db9e2d05f.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="worldspace-trajectories">Worldspace Trajectories</h3>
+<p>Trajectories used to follow the scene wherever it went. Now they'll stay put, where they belong.</p>
 <p><strong>Before</strong></p>
-<p><img alt="twistaxis_before" src="https://user-images.githubusercontent.com/2152766/125649062-79d03dd2-8b3c-44d2-8fe0-406d1166f70a.gif" /></p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130568171-133ad45d-7844-4332-9d4b-1fa2091558c5.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
-<p><img alt="twistaxis" src="https://user-images.githubusercontent.com/2152766/125649076-07dc1b15-ba5e-488d-8ea8-62042d45a907.gif" /></p>
-<p>Also notice how the twist axis is now confined into the twist shape itself, making it just a bit more clear how close it is to colliding with that limit.</p>
-<p>Here's a more complete example of a full set of constraints.</p>
-<p><img alt="completetwist" src="https://user-images.githubusercontent.com/47274066/125680805-a63ec6d6-cf85-4daa-ab17-7454232f64e2.gif" /></p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130568174-c56d1553-237b-45b6-89e9-cc4d28b23dcd.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="unique-names">Unique Names</h3>
-<p>Prior to a recent release, all new nodes generated by Ragdoll was given a unique name. That really shouldn't matter to Maya, as nodes are distinguished by their parent. For the most part. But sometimes not!</p>
-<p>For example, cycle warnings produce a message only containing the name of the node itself, not its hierarchy. So you wouldn't be able to tell which of the many rigid nodes were at the root of any cycle by merely looking at this message. And don't get me started on the connection editor. It's perfectly capable of making and breaking connections, but refuses to auto-fill the currently selected nodes if they happen to have the same name as any other node in the scene!</p>
-<p>In any case, this has now been fixed and all nodes are once again unique. Automated tests have also been put in place to prevent this slip-up from happening again; but do let me know if you find any duplicates as Ragdoll generates a <em>lot</em> of nodes, and it's possible one may have yet slipped through!</p>
-<p><br></p>
-<h3 id="passive-constraints">Passive Constraints</h3>
-<p>Select two rigid to create a constraint.</p>
-<p>But if one of those rigids was passive, or even animated between passive and active, <em>and</em> had a different passive animation than the initial state, and your constraint could end up like this.</p>
+<h3 id="sphere-rendering">Sphere Rendering</h3>
+<p>This fixes a minor annoyance you may have noticed, of the outline of spheres visible in shaded mode.</p>
 <p><strong>Before</strong></p>
-<p><img alt="constriantbefore" src="https://user-images.githubusercontent.com/2152766/125922251-a8932114-2e63-486d-b998-9b5de267002e.gif" /></p>
-<p>Especially notice how the passive pose differs from the initial active pose. The active pose was used to compute how to draw the constraint, whereas the passive pose was used during the simulation.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/129890945-77f94738-5917-4513-8d08-0936f5b3584c.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
-<p>This has now been fixed!</p>
-<p><img alt="constraintafer" src="https://user-images.githubusercontent.com/2152766/125922332-a52d200a-be43-4170-89fc-f169f6db8965.gif" /></p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/129890952-19894406-99cf-4d42-88ff-4c1777a40295.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="single-joint-shapes">Single Joint Shapes</h3>
-<p>In the rare case of turning solo-joints dynamic, you could end up with results like this.</p>
-<p><strong>Before</strong></p>
-<p><img alt="badsinglejoint" src="https://user-images.githubusercontent.com/47274066/125923372-b863afcd-1859-4504-9c15-86b9e288eb62.gif" /></p>
-<p><strong>After</strong></p>
-<p>This has now been fixed!</p>
-<p><img alt="solojointfixed" src="https://user-images.githubusercontent.com/47274066/125923446-de089463-8e01-4b02-8ce2-2be8d7f4cd6c.gif" /></p>
-<p><br></p>
-<h3 id="bake-static-rigids">Bake Static Rigids</h3>
-<p>There was a bug when baking simulation for any rigid what started out passive, e.g. it was hard pinned, but animated active. The Bake Simulation command would mistake these later-simulated rigids as passive, and simply not bake them.</p>
+<h3 id="floating-server-details">Floating Server Details</h3>
+<p>When you first lease a licence from your licence server, the IP and port details are stored on the local machine for quicker access the next time.</p>
+<p>However, if you then later needed to change those details, then any local machine previously leasing a licence would not be able to update their details.</p>
 <p>This has now been fixed!</p>
                 
                   
@@ -2196,7 +2313,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-07-16
+      Last update: 2021-08-27
     
   </small>
 </div>
@@ -2220,7 +2337,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2021.07.27/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2229,19 +2346,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2021.07.27
+                API Reference
               </div>
             </div>
           </a>
         
         
-          <a href="../2021.07.02/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2021.08.06/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2021.07.02
+                2021.08.06
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
