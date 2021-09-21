@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Virtual motion capture, i.e. "Animation Capture" introduced, for a superior animator-friendly workflow for physics!">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/documentation/active_rigid/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/next/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Active Rigid - Learn Ragdoll</title>
+        <title>Animation Capture - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Active Rigid
+              Animation Capture
             
           </span>
         </div>
@@ -330,8 +330,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -340,7 +338,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -350,7 +348,7 @@
           data-md-toggle="nav-3"
           type="checkbox"
           id="nav-3"
-          checked
+          
         />
       
 
@@ -377,174 +375,18 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Active Rigid
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../../documentation/active_rigid/" class="md-nav__link">
         
         <img src="/icons/rigid_black.png">
         
 
         Active Rigid
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-    <nav class="md-nav" aria-label="Attributes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#collide" class="md-nav__link">
-    Collide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass" class="md-nav__link">
-    Mass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#friction" class="md-nav__link">
-    Friction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bounciness" class="md-nav__link">
-    Bounciness
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#center-of-mass" class="md-nav__link">
-    Center of Mass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#angular-mass" class="md-nav__link">
-    Angular Mass
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shapes" class="md-nav__link">
-    Shapes
-  </a>
-  
-    <nav class="md-nav" aria-label="Shapes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meshes" class="md-nav__link">
-    Meshes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replace-mesh" class="md-nav__link">
-    Replace Mesh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-shape" class="md-nav__link">
-    Edit Shape
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sleep" class="md-nav__link">
-    Sleep
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -557,7 +399,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../active_chain/" class="md-nav__link">
+      <a href="../../documentation/active_chain/" class="md-nav__link">
         
         <img src="/icons/chain_black.png">
         
@@ -577,7 +419,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../character/" class="md-nav__link">
+      <a href="../../documentation/character/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -597,7 +439,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../constraints/" class="md-nav__link">
+      <a href="../../documentation/constraints/" class="md-nav__link">
         
         <img src="/icons/constraint_black.png">
         
@@ -617,7 +459,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../soft_pin/" class="md-nav__link">
+      <a href="../../documentation/soft_pin/" class="md-nav__link">
         
         <img src="/icons/control_black.png">
         
@@ -637,7 +479,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../hard_pin/" class="md-nav__link">
+      <a href="../../documentation/hard_pin/" class="md-nav__link">
         
         <img src="/icons/hardpin_black.png">
         
@@ -657,7 +499,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../mimic/" class="md-nav__link">
+      <a href="../../documentation/mimic/" class="md-nav__link">
         
         <img src="/icons/mimic_black.png">
         
@@ -677,7 +519,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../forces/" class="md-nav__link">
+      <a href="../../documentation/forces/" class="md-nav__link">
         
         <img src="/icons/force_black.png">
         
@@ -697,7 +539,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../bake_simulation/" class="md-nav__link">
+      <a href="../../documentation/bake_simulation/" class="md-nav__link">
         
         <img src="/icons/bake_black.png">
         
@@ -717,7 +559,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../import_physics/" class="md-nav__link">
+      <a href="../../documentation/import_physics/" class="md-nav__link">
         
         <img src="/icons/save_black.png">
         
@@ -737,7 +579,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../export_physics/" class="md-nav__link">
+      <a href="../../documentation/export_physics/" class="md-nav__link">
         
         <img src="/icons/load_black.png">
         
@@ -757,7 +599,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../scene_management/" class="md-nav__link">
+      <a href="../../documentation/scene_management/" class="md-nav__link">
         
         <img src="/icons/scene_black.png">
         
@@ -777,7 +619,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../cycle_protection/" class="md-nav__link">
+      <a href="../../documentation/cycle_protection/" class="md-nav__link">
         
         <img src="/icons/swirl_black.png">
         
@@ -797,7 +639,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../pivot_editor/" class="md-nav__link">
+      <a href="../../documentation/pivot_editor/" class="md-nav__link">
         
         <img src="/icons/frame2_black.png">
         
@@ -817,7 +659,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../debugging_tips/" class="md-nav__link">
+      <a href="../../documentation/debugging_tips/" class="md-nav__link">
         
         <img src="/icons/convert_black.png">
         
@@ -837,7 +679,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../performance_tips/" class="md-nav__link">
+      <a href="../../documentation/performance_tips/" class="md-nav__link">
         
         <img src="/icons/motor_black.png">
         
@@ -1329,7 +1171,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.08.28/" class="md-nav__link">
+      <a href="../2021.08.28/" class="md-nav__link">
         
 
         2021.08.28
@@ -1347,7 +1189,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.08.06/" class="md-nav__link">
+      <a href="../2021.08.06/" class="md-nav__link">
         
 
         2021.08.06
@@ -1365,7 +1207,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.27/" class="md-nav__link">
+      <a href="../2021.07.27/" class="md-nav__link">
         
 
         2021.07.27
@@ -1383,7 +1225,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.15/" class="md-nav__link">
+      <a href="../2021.07.15/" class="md-nav__link">
         
 
         2021.07.15
@@ -1401,7 +1243,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.02/" class="md-nav__link">
+      <a href="../2021.07.02/" class="md-nav__link">
         
 
         2021.07.02
@@ -1419,7 +1261,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.06.10/" class="md-nav__link">
+      <a href="../2021.06.10/" class="md-nav__link">
         
 
         2021.06.10
@@ -1437,7 +1279,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.06.07/" class="md-nav__link">
+      <a href="../2021.06.07/" class="md-nav__link">
         
 
         2021.06.07
@@ -1455,7 +1297,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.05.17/" class="md-nav__link">
+      <a href="../2021.05.17/" class="md-nav__link">
         
 
         2021.05.17
@@ -1473,7 +1315,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.05.10/" class="md-nav__link">
+      <a href="../2021.05.10/" class="md-nav__link">
         
 
         2021.05.10
@@ -1491,7 +1333,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.28/" class="md-nav__link">
+      <a href="../2021.04.28/" class="md-nav__link">
         
 
         2021.04.28
@@ -1509,7 +1351,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.23/" class="md-nav__link">
+      <a href="../2021.04.23/" class="md-nav__link">
         
 
         2021.04.23
@@ -1527,7 +1369,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.11/" class="md-nav__link">
+      <a href="../2021.04.11/" class="md-nav__link">
         
 
         2021.04.11
@@ -1545,7 +1387,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.25/" class="md-nav__link">
+      <a href="../2021.03.25/" class="md-nav__link">
         
 
         2021.03.25
@@ -1563,7 +1405,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.23/" class="md-nav__link">
+      <a href="../2021.03.23/" class="md-nav__link">
         
 
         2021.03.23
@@ -1581,7 +1423,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.11/" class="md-nav__link">
+      <a href="../2021.03.11/" class="md-nav__link">
         
 
         2021.03.11
@@ -1599,7 +1441,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.04/" class="md-nav__link">
+      <a href="../2021.03.04/" class="md-nav__link">
         
 
         2021.03.04
@@ -1617,7 +1459,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.01/" class="md-nav__link">
+      <a href="../2021.03.01/" class="md-nav__link">
         
 
         2021.03.01
@@ -1635,7 +1477,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.02.07/" class="md-nav__link">
+      <a href="../2021.02.07/" class="md-nav__link">
         
 
         2021.02.07
@@ -1653,7 +1495,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.27/" class="md-nav__link">
+      <a href="../2021.01.27/" class="md-nav__link">
         
 
         2021.01.27
@@ -1671,7 +1513,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.17/" class="md-nav__link">
+      <a href="../2021.01.17/" class="md-nav__link">
         
 
         2021.01.17
@@ -1689,7 +1531,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.15/" class="md-nav__link">
+      <a href="../2021.01.15/" class="md-nav__link">
         
 
         2021.01.15
@@ -1707,7 +1549,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.14/" class="md-nav__link">
+      <a href="../2021.01.14/" class="md-nav__link">
         
 
         2021.01.14
@@ -1725,7 +1567,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.04/" class="md-nav__link">
+      <a href="../2021.01.04/" class="md-nav__link">
         
 
         2021.01.04
@@ -1743,7 +1585,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.18/" class="md-nav__link">
+      <a href="../2020.12.18/" class="md-nav__link">
         
 
         2020.12.18
@@ -1761,7 +1603,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.07/" class="md-nav__link">
+      <a href="../2020.12.07/" class="md-nav__link">
         
 
         2020.12.07
@@ -1779,7 +1621,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.01/" class="md-nav__link">
+      <a href="../2020.12.01/" class="md-nav__link">
         
 
         2020.12.01
@@ -1797,7 +1639,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.24/" class="md-nav__link">
+      <a href="../2020.11.24/" class="md-nav__link">
         
 
         2020.11.24
@@ -1815,7 +1657,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.23/" class="md-nav__link">
+      <a href="../2020.11.23/" class="md-nav__link">
         
 
         2020.11.23
@@ -1833,7 +1675,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.22/" class="md-nav__link">
+      <a href="../2020.11.22/" class="md-nav__link">
         
 
         2020.11.22
@@ -1851,7 +1693,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.17/" class="md-nav__link">
+      <a href="../2020.11.17/" class="md-nav__link">
         
 
         2020.11.17
@@ -1869,7 +1711,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.16/" class="md-nav__link">
+      <a href="../2020.11.16/" class="md-nav__link">
         
 
         2020.11.16
@@ -1887,7 +1729,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.10/" class="md-nav__link">
+      <a href="../2020.11.10/" class="md-nav__link">
         
 
         2020.11.10
@@ -2065,58 +1907,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
+  <a href="#animation-capture" class="md-nav__link">
+    Animation Capture
   </a>
   
-    <nav class="md-nav" aria-label="Attributes">
+    <nav class="md-nav" aria-label="Animation Capture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#collide" class="md-nav__link">
-    Collide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass" class="md-nav__link">
-    Mass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#friction" class="md-nav__link">
-    Friction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bounciness" class="md-nav__link">
-    Bounciness
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#center-of-mass" class="md-nav__link">
-    Center of Mass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#angular-mass" class="md-nav__link">
-    Angular Mass
+  <a href="#demonstration" class="md-nav__link">
+    Demonstration
   </a>
   
 </li>
@@ -2127,49 +1934,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shapes" class="md-nav__link">
-    Shapes
-  </a>
-  
-    <nav class="md-nav" aria-label="Shapes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meshes" class="md-nav__link">
-    Meshes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replace-mesh" class="md-nav__link">
-    Replace Mesh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-shape" class="md-nav__link">
-    Edit Shape
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sleep" class="md-nav__link">
-    Sleep
+  <a href="#performance-leap" class="md-nav__link">
+    Performance Leap
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
+  <a href="#enhanced-determinism" class="md-nav__link">
+    Enhanced Determinism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-constraints" class="md-nav__link">
+    Dynamic Constraints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-time" class="md-nav__link">
+    Dynamic Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damping-ratio" class="md-nav__link">
+    Damping Ratio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-floating-licences" class="md-nav__link">
+    Multiple Floating Licences
   </a>
   
 </li>
@@ -2187,239 +1988,209 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/documentation/active_rigid.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/next.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Active Rigid</h1>
+                  <h1>Animation Capture</h1>
                 
-                <div class="hero-container">
-    <img class="hero-image" src=/car14.png>
-</div>
-
-<p>The most fundamental building block of Ragdoll, the <code>Rigid Body</code>.</p>
+                <p>Highlight for this release is <strong>Animation Capture.</strong></p>
+<ul>
+<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> A.k.a. Virtual Motion Capture</li>
+<li><a href="#capture-suit"><strong>ADDED</strong> Groups</a> Centralised character controls</li>
+<li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
+<li><a href="#offset-simulation"><strong>ADDED</strong> Offset Simulation</a> Visually separate between input and output</li>
+<li><a href="#damping-ratio"><strong>ADDED</strong> Damping Ratio</a> One less attribute to worry about</li>
+<li><a href="#keyable-status"><strong>ADDED</strong> Keyable Status</a> Which one is keyable, which is not?</li>
+<li><a href="#enhanced-determinism"><strong>IMPROVED</strong> Enhanced Determinism</a> </li>
+<li><a href="#multiple-floating-licences"><strong>FIXED</strong> Multiple Floating Licences</a> Now behaves as one would expect</li>
+</ul>
 <p><br></p>
-<h3 id="usage">Usage</h3>
-<p>From the Ragdoll menu, select the <code>Active Rigid</code> option.</p>
-<p><img alt="active_rigid" src="https://user-images.githubusercontent.com/2152766/127508854-f8fcbb38-a2b7-4bc3-8c0e-796219620428.gif" /></p>
-<p><br></p>
-<h3 id="attributes">Attributes</h3>
-<p>Some of the most relevant attributes of the <code>rdRigid</code> node type.</p>
+<h3 id="introduction">Introduction</h3>
+<p>This release introduces a new way of thinking about physics, and is part <strong>1</strong> out of <strong>4</strong>.</p>
+<ul>
+<li><a href="#animation-capture">Skip Intro</a></li>
+</ul>
 <table>
 <thead>
 <tr>
-<th align="left">Attribute</th>
+<th align="left">Release</th>
+<th align="left">Date</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>Collide</code></td>
-<td align="left">Should this rigid collide with other rigid bodies?</td>
+<td align="left">Workflow</td>
+<td align="left">Today</td>
+<td align="left">At least 100% faster, but primarily much easier to work with</td>
 </tr>
 <tr>
-<td align="left"><code>Mass</code></td>
-<td align="left">How strongly is should affect other rigids, and resist other forces</td>
+<td align="left">Render Performance</td>
+<td align="left"><nobr>2 weeks later</nobr></td>
+<td align="left">The current bottleneck, expect a 50-100x boost</td>
 </tr>
 <tr>
-<td align="left"><code>Friction</code></td>
-<td align="left">How much resistance to give one rigid moving along the surface of another</td>
+<td align="left">Recording Performance</td>
+<td align="left"><nobr>1 week later</nobr></td>
+<td align="left">Currently written in Python, to be written in optimised C++</td>
 </tr>
 <tr>
-<td align="left"><code>Bounciness</code></td>
-<td align="left">A.k.a. "restitution", how strongly one rigid should repel another</td>
+<td align="left">Interactive Tools</td>
+<td align="left"><nobr>2 weeks later</nobr></td>
+<td align="left">No more fiddling with offsets in the channel box, viewport manipulators galore!</td>
 </tr>
 </tbody>
 </table>
-<div class="hboxlayout justify-center">
-    <a href="/nodes/rdRigid" class="button blue">Full Reference</a>
+<p>Something <strong>amazing</strong> has happened.</p>
+<p>Since release only a few weeks ago, Ragdoll is now used in production across the globe in over a dozen countries at the most major of studios, several dozens of mid-sized studios wanting to gain an advantage and hundreds of independent animators and riggers alike.</p>
+<p>And that is amazing, it is. But there something even more amazing has happened and will be what this next 4-part release is all about.</p>
+<p>See, since launch I've had conversations with animators using Ragdoll for the very first time. One of those animators made a request that at first glance doesn't look like much.</p>
+<div class="admonition quote">
+<p class="admonition-title">The request</p>
+<p>"I don't like working with green channels, can I get rid of them?"</p>
 </div>
-
-<p><br></p>
-<h4 id="collide">Collide</h4>
-<p>Control whether a rigid should collide with any other rigid.</p>
-<p><img alt="collide" src="https://user-images.githubusercontent.com/2152766/127737524-fc4f8aa4-3aa7-493b-8e6b-dd187e58b152.gif" /></p>
-<p><img alt="" src="https://user-images.githubusercontent.com/2152766/116609863-ca24da00-a92c-11eb-869e-daf642cdd229.gif" /></p>
-<div class="admonition hint">
-<p class="admonition-title">Pro tip - Disable contacts between two specific rigids</p>
-<p>The <code>Collide</code> attribute is great for disabling contacts with <em>all</em> other rigids, but what if you wanted finer control than that?</p>
+<p>Here's what he was referring to.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
+<p>Notice how the nodes with physics applied got green channels? The reason the are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
+<p>Can we get rid of that connection? Well.. No? This is Ragdoll's connection to your controls. Without those.. there <em>is</em> no physics.</p>
+<p>I quickly dismissed the idea and carried on with my day. But then something <em>clicked</em>.. What if..?</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
+<p>In the next section, I'll dive into how this works and why this change goes far beyond just getting rid of green channels.</p>
+<p><strong>Benefits at a glance</strong></p>
 <ul>
-<li>See <a href="/constraints#disable-contact-constraint">Disable Contact Constraint</a> for how to do that</li>
+<li>✔️ 10,000% greater performance (or more!)</li>
+<li>✔️ No more green channels</li>
+<li>✔️ No more graph editor mess</li>
+<li>✔️ No more initial state</li>
+<li>✔️ No more cycles</li>
+<li>✔️ No more clutter in the Outliner</li>
+<li>✔️ No more clutter in the Viewport</li>
+<li>✔️ Support for interactive scale</li>
+<li>✔️ Support for overlapping shapes</li>
+<li>✔️ Support for IK/FK</li>
+<li>✔️ Support for space switching</li>
+<li>✔️ Support for follicles</li>
+<li>✔️ Support for native Maya constraints</li>
+<li>✔️ Support for ...</li>
 </ul>
+<p>From here, this list has no end, because <em>anything</em> capable of affecting the worldspace position and orientation of your controls is natively supported with this workflow. <em>Anything</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Technically Speaking</p>
+<p>The reason this works is because Ragdoll will consider the <code>.worldMatrix</code> attribute of any control and this is the same attribute Maya itself uses for just about anything.</p>
 </div>
 <p><br></p>
-<h4 id="mass">Mass</h4>
-<p>How much influence one rigid should have over another during contact.</p>
-<video autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/127736547-195a18f6-6567-4cdc-995e-d6fa0f7ef963.mp4" type="video/mp4">
-</video>
-
-<div class="admonition hint">
-<p class="admonition-title">Pro tip 1 - Misconception about Mass</p>
-<p>A common misconception in physics is that <code>Mass</code> affects how <em>quickly</em> something falls to the ground. But in Ragdoll - like in real-life - mass is only relevant during interaction with another rigid and when forces are applied, like <code>Guide Strength</code>.</p>
-<p>Have a look at this video of a bowling ball falling in a vacuum alongside a feather.</p>
-<p><a href="https://www.youtube.com/watch?v=frZ9dN_ATew"><img class="poster" width=300 src=https://user-images.githubusercontent.com/2152766/127608727-07d0c3c2-d281-4290-93cf-392852f2d595.png></a></p>
-</div>
-<details class="hint"><summary>Pro tip 2 - Making something fall faster</summary><p>So how <em>do</em> you make something fall faster?</p>
+<h3 id="animation-capture">Animation Capture</h3>
+<p>Inspired by Motion Capture, <em>Animation Capture</em> is a new way to think about and work with physics in Maya.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134006344-53f2744f-cc7f-48b0-860d-d0313a353c1f.png" /></p>
+<p>Here is a typical data pipeline for motion capture, from real-life actor to final character animation.</p>
 <ol>
-<li>Decrease <code>Scene Scale</code> under the solver node</li>
-<li>Increase <code>Gravity</code>, also under the solver node</li>
+<li>Markers are attached to an actor</li>
+<li>Markers are "captured"</li>
+<li>A pointcloud is generated</li>
+<li>A hierarchy of joints is generated</li>
+<li>Joints drive a typical character rig</li>
+<li>Rig drives final geometry for render</li>
 </ol>
-<p>To make something "bend" faster, like an arm flexing, that would be controlled via the <code>Guide Strength</code> and typically what causes it to reach a given speed and then stay there is governed by the <code>Rotate Damping</code>. That's how much of any motion should be cancelled out, to stabilise the motion. A very <em>fast</em> motion would have very little damping, but then also run the risk of "overshooting". That is, of passing the point at which you wanted it to reach.</p>
-</details>
-<p><br></p>
-<h4 id="friction">Friction</h4>
-<p>Control how much resistance should be added between two rigids rubbing against each other.</p>
-<p><img alt="friction2" src="https://user-images.githubusercontent.com/2152766/127735361-da060dc4-45c8-4699-a672-0253d177d723.gif" /></p>
-<p><br></p>
-<h4 id="bounciness">Bounciness</h4>
-<p>Control how much rigids should <em>repel</em> each other when coming into contact.</p>
-<p><img alt="restitution" src="https://user-images.githubusercontent.com/2152766/127735506-36003376-4a70-41b2-bbb8-47c974d44278.gif" /></p>
-<div class="admonition hint">
-<p class="admonition-title">Values beyond 1.0</p>
-<p>Here's a tip!</p>
-<p>Bounciness can be greater than 1.0, which means they will <em>gain</em> energy during contact.</p>
-<p>In practice, energy will always dissipate in some way. The most-bouncy character in the gif above has a bounciness of <code>2.0</code>, which in theory means that for every contact it should fly <code>200%</code> faster away than it did coming in, and keep doing this forever.</p>
-</div>
-<p><br></p>
-<h4 id="center-of-mass">Center of Mass</h4>
-<p>If you try and balance something on your finger, but the "center of mass" is off center, it would fall over.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/99946359-25471500-2d6e-11eb-8c29-5d39e69f05ee.png" /></p>
-<p>It is the point at which the weight of an object is equal in all directions.</p>
-<p>Ragdoll automatically computes this point based on what the shape looks like. For meshes, it will <em>voxelise</em> your geometry to figure out the physically accurate volumetric center of mass, assuming the density of the object is uniform throughout (rather than hollow or variadic, like swiss cheese).</p>
-<p>You now override this point using the attribute <code>Center of Mass</code> found under the Advanced tab.</p>
-<p><img alt="ragdollcom" src="https://user-images.githubusercontent.com/2152766/99946517-64756600-2d6e-11eb-8446-469ea68073b4.gif" />
-<img alt="ragdollcom2" src="https://user-images.githubusercontent.com/2152766/99946522-663f2980-2d6e-11eb-9a5e-9aa9bf7c301a.gif" /></p>
-<p><strong>Guidelines</strong></p>
-<ul>
-<li>For realistic results, leave it at <code>0</code> to compute the point automatically based on the shape</li>
-<li>For full control, override it</li>
-</ul>
-<p><br></p>
-<h4 id="angular-mass">Angular Mass</h4>
-<p>In real life, if you spin a broom 180 degrees along its length; that's easy. But if you spin it 180 degrees along any other axis, like a ninja, it's considerably heavier.</p>
-<p><img width=400 src=https://user-images.githubusercontent.com/2152766/99944546-f67b6f80-2d6a-11eb-93b1-47a49deba0d5.png></p>
-<p>The reason is something called "angular mass", also known as <a href="https://en.wikipedia.org/wiki/Moment_of_inertia">"moment of inertia"</a>. It's like mass, but in terms of rotation rather than position. The broom has a <em>low</em> angular mass along its length axis. It takes more <em>force</em> to affect a "heavier" axis than a lighter one which is why a broom spins more easily along its length.</p>
-<p>This effect happens in Ragdoll too and is typically automatically computed for you based on the shape you use. If it looks like the broom, it will act like a broom.</p>
-<p>With this release, you can now customise this for greater control of your rotations.</p>
-<p><img alt="ragdollangularmass" src="https://user-images.githubusercontent.com/2152766/99944815-6db10380-2d6b-11eb-9def-dba375a7e743.gif" /></p>
-<p>When would you want to do that?</p>
+<p>Each "marker" is nothing more than a point. Something for the camera to recognise and track as it moves through space. Once tracked, it's able to translate this marker from a 2D image into a 3D position, and continues to do so for each marker.</p>
+<p>Once the capture is complete, the human actor can remove the markers and go enjoy the rest of his day. The rest is up to the computer.</p>
+<p>With 3D positions generated, software takes over to translate these points into a hierarchy; the FK joint hierarchy you may be familiar with if you've ever worked with mocap. The joint hierarchy can then be used to either drive the final geometry, or to drive a more complex character rig which in turn drives the final geometry.</p>
+<p><em>Animation</em> capture is just like that, but instead of capturing a real-life person, it captures your <em>character rig</em>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134128846-7c55bfe3-b2c6-418f-ab04-4e29f61a5ec2.png" /></p>
 <ol>
-<li>Your shape looks like a broom, but you want it to act like a box</li>
-<li>Your shape doesn't look like a broom, but you would like it to act like one</li>
+<li>Markers are attached to a character rig</li>
+<li>Markers are "captured"</li>
+<li>A rigid is generated for each marker</li>
+<li>A hierarchy of constraints is generated</li>
+<li>Simulation is <strong>recorded</strong> back onto the original character rig</li>
 </ol>
-<p>Or any combination in between. :) Generally, a broom or any thin shape is more easily spun along its length, so you may find <strong>stability</strong> in setting your angular mass to <code>(1.0, 1.0, 1.0)</code>, at the expense of realism.</p>
-<p><strong>Guidelines</strong></p>
+<p>Unlike motion capture, we'd like the result mapped back onto our character rig again, which is how animators iterate with physics.</p>
+<div class="admonition info">
+<p class="admonition-title">In other words</p>
+<p>Markers are to motion and animation capture what the "red pill" is to Neo. A way for their tracking software to identify which of the many humans in a busy farm of humans is Neo.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134011228-49c878c7-928b-48b1-9cbc-2fcf70f8ec01.png" /></p>
+</div>
+<p><br></p>
+<h4 id="demonstration">Demonstration</h4>
+<p>Conversely, the current workflow of Ragdoll is for you to give control over the limbs of your character to Ragdoll, for it to output its simulation onto them. You can then create a secondary control hierarchy - a Mimic - in order to regain control over it. But this was tedious and error prone.</p>
+<p><em>Animation Capture</em> on the other hand borrows from Motion Capture, in that you now attach "markers" onto your character rig such that Ragdoll can monitor and simulate them.</p>
+<p><strong>Workflow</strong></p>
 <ul>
-<li>For realistic results, leave it at <code>-1</code> to automatically compute the angular mass</li>
-<li>For full control, override it</li>
+<li>Marker Input    (e.g. joint1)</li>
+<li>Marker Output   (e.g. spine_ctl)</li>
+</ul>
+<p>You can change the <code>Input</code> to a marker by using <code>Reassign</code>, and change the <code>Output</code> with <code>Retarget</code>.</p>
+<p><strong>Missing in Action</strong></p>
+<ul>
+<li>Selecting rigids interacively</li>
+<li>Manipulating shapes interactively</li>
+<li>Manipulating constraints interactively</li>
+<li>Toggle between previous animation and recorded simulation</li>
+<li>No live-link</li>
 </ul>
 <p><br></p>
-<h3 id="shapes">Shapes</h3>
-<p>Every rigid body needs a shape, a <em>collision volume</em>.</p>
-<table>
-<thead>
-<tr>
-<th align="left">#</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src=/icons/box.png></td>
-<td align="left"><code>Box</code></td>
-<td align="left">A typical box with customisable <code>Shape Extents</code></td>
-</tr>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src=/icons/sphere.png></td>
-<td align="left"><code>Sphere</code></td>
-<td align="left">A perfect sphere with a customisable <code>Radius</code>, the <em>fastest</em> collision shape</td>
-</tr>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src=/icons/capsule.png></td>
-<td align="left"><code>Capsule</code></td>
-<td align="left">An extruded sphere, the <em>second-fastest</em> collision shape</td>
-</tr>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src=/icons/mesh.png></td>
-<td align="left"><code>Mesh</code></td>
-<td align="left">A convex hull generated from either a polygonal or NURBS input geometry</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h4 id="meshes">Meshes</h4>
-<p>Before meshes are used for simulation they are converted into a "convex hull", which is a mesh with no valleys.</p>
-<p><img alt="convexhull" src="https://user-images.githubusercontent.com/2152766/127818504-f831a7bd-b421-4250-9748-82578e0d8474.gif" /></p>
-<div class="admonition question">
-<p class="admonition-title">How do I make more complex collision shapes?</p>
-<p>You can break a mesh into several rigid bodies and use a Ragdoll Parent Constraint to hold them together. See <a href="/documentation/constraints/#parent-constraint">Parent Constraint</a> for details.</p>
-<p>This approach isn't very convenient however - and also doesn't perform well - so in a future release you will be able to turn individual polygon islands of a single mesh into a <em>combined</em> convex hull.</p>
-</div>
-<p>Here's an example of how Ragdoll converts a mesh into a convex hull. Notice how it can't make any holes or valleys this way.</p>
-<p><img alt="convexhull2" src="https://user-images.githubusercontent.com/2152766/127820852-87db9e97-ff8a-4dd1-980f-d1ce53e95477.gif" /></p>
-<p><br></p>
-<h4 id="replace-mesh">Replace Mesh</h4>
-<p>When you turn a mesh dynamic, the vertices are plugged into the rigid node.</p>
+<h3 id="performance-leap">Performance Leap</h3>
+<p>200% performance. Wait, did I say percent? I meant <strong>times</strong> - 200x performance, or 20,000% whichever one you fancy. :D</p>
 <ul>
-<li><code>mesh</code> nodes plug into <code>rdRigid.inputMesh</code></li>
-<li><code>nurbsCurve</code> nodes plug into <code>rdRigid.inputCurve</code></li>
-<li><code>nurbsSurface</code> nodes plug into <code>rdRigid.inputSurface</code></li>
+<li>200x greater performance</li>
+<li>5x simpler workflow</li>
+<li>2x more fun</li>
 </ul>
-<p>But what if you wanted a different mesh? What if there <em>was</em> no mesh, such as for a joint or empty transform?</p>
-<p>I give you, <code>Replace Mesh</code>. 👏</p>
-<p><img alt="replacemesh" src="https://user-images.githubusercontent.com/2152766/123130851-09f7d180-d445-11eb-8ec0-fe3a47a20505.gif" /></p>
-<p>Here's a more practical example, of a dynamic joint being replaced with the mesh of a car wheel.</p>
-<p><img alt="replacemeshpractical" src="https://user-images.githubusercontent.com/2152766/123131832-f9942680-d445-11eb-99b3-41f03a0e9eb4.gif" /></p>
+<p>Yes, you read that right. <strong>200x</strong> performance increase, and that's conservative. Actual numbers were <code>65.0 ms</code> turning into <code>0.31 ms</code>. Those are the numbers we want. Along with these nuggets.</p>
+<ul>
+<li>No more overlapping shapes</li>
+<li>No more green channels</li>
+<li>No more graph editor mess</li>
+<li>No more initial state</li>
+<li>No more cycles</li>
+<li>No more cluttering of the Outliner</li>
+<li>No more cluttering the viewport (offset render)</li>
+<li>No more out-of-sync scale</li>
+</ul>
+<p><strong>Caveats</strong></p>
+<ol>
+<li>Selecting any rigid selects all rigids, they are drawn as one</li>
+<li>A hidden solver will not simulate, drawing triggers simulation</li>
+</ol>
 <p><br></p>
-<h4 id="edit-shape">Edit Shape</h4>
-<p>Manipulate shapes with a native Maya transform, as an alternative to fiddling with numbers in the Channel Box.</p>
-<p><img alt="editshape" src="https://user-images.githubusercontent.com/2152766/113729903-5574cc00-96ef-11eb-9c14-37f177c4b219.gif" /></p>
-<p><br></p>
-<h3 id="sleep">Sleep</h3>
-<p>It is possible to reap additional performance benefits in situations where one or more rigids remain <em>immobile</em> for a given amount of time.</p>
-<p>The behavior can be tuned via two attributes on each <code>rdRigid</code> node.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Attribute</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>Wake Counter</code></td>
-<td align="left">How many frames of inactivity before I fall asleep?</td>
-</tr>
-<tr>
-<td align="left"><code>Sleep Threshold</code></td>
-<td align="left">How low of a force should be applied before I start counting?</td>
-</tr>
-</tbody>
-</table>
-<p>In practice, you'll likely only want to tweak the Wake Counter to some reasonable value like 5 or 20 frames of immobility. The default value of 0 means they'll never fall asleep. Like a proper insomniac or new parent.</p>
-<div class="admonition hint">
-<p class="admonition-title">Caveat</p>
-<p>Currently, the wake counter is not reset when you <em>rewind</em>, so it's possible to have them fall asleep on frame 20, rewind to frame 19 and have the counter reset and keep them awake past frame 20. It's unlikely to affect you, and will be addressed in a later release.</p>
+<h3 id="enhanced-determinism">Enhanced Determinism</h3>
+<div class="admonition info">
+<p class="admonition-title">TLDR</p>
+<p>Sometimes, re-opening the scene could lead to different results. This has now been fixed.</p>
 </div>
-<p><img alt="sleep" src="https://user-images.githubusercontent.com/2152766/117123291-c19a2c80-ad8e-11eb-89d8-d0c1e2418ed1.gif" /></p>
+<p>Each time you play a simulation starting from the beginning, the results are the same. This is an important characteristic of any simulation and is called "determinism". It used to be the case however that when you re-opened the scene, there was a small chance the results would differ from when you last saved it.</p>
+<p>This has now been fixed. The determinism is now dependent on the order in which rigid bodies connect to the <code>rdScene</code> node. It's an array attribute, whose order is saved with the Maya scene.</p>
 <p><br></p>
-<h3 id="api">API</h3>
-<p>Here's how to use the Active Rigid from the Ragdoll API.</p>
-<p><img alt="" src="https://user-images.githubusercontent.com/2152766/95583484-1a415b00-0a34-11eb-8f24-5a83b4ae2629.gif" /></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">rd</span>
+<h3 id="dynamic-constraints">Dynamic Constraints</h3>
+<p>Constraints now have <em>presets</em>, which dynamically update based on wherever your creation is.</p>
+<p><br></p>
+<h3 id="dynamic-time">Dynamic Time</h3>
+<p><br></p>
+<h3 id="damping-ratio">Damping Ratio</h3>
+<p>Constraints have 3 attributes to control their behavior.</p>
+<ul>
+<li><code>Stiffness</code></li>
+<li><code>Damping</code></li>
+<li><code>Strength</code></li>
+</ul>
+<p>Where <code>Stiffness</code> and <code>Damping</code> are both multiplied by <code>Strength * Strength</code>. For example, the final value of <code>Stiffness</code> is..</p>
+<div class="highlight"><pre><span></span><code><span class="n">final_stiffness</span> <span class="o">=</span> <span class="n">stiffness</span> <span class="o">*</span> <span class="n">strength</span> <span class="o">*</span> <span class="n">strength</span>
+</code></pre></div>
+<p>And that's great; it means you can animate just a single attribute in favour of two. Editing the relationship between the two attributes was done by changing either <code>Stiffness</code> or <code>Damping</code>.</p>
+<p>The new <code>rdMarker</code> node have a <code>dampingRatio</code>.. Well, no. FIX</p>
+<p><br></p>
+<h3 id="multiple-floating-licences">Multiple Floating Licences</h3>
+<p>Whenever a machine connected to your floating licence server, the host and IP were stored on the machine in an effort to speed up subsequent connections made. However, this also meant that you weren't able to <em>update</em> those details.</p>
+<p>Despite providing new details, Ragdoll would favour the already-stored details. Worse yet, the Ragdoll UI would <em>lie</em> to you, by repeating the connection details provided in the <code>RAGDOLL_FLOATING</code> environment variable, despite those not actually being used.</p>
+<p>This release addresses this by always using the details you provide, and not bother reusing any previously provided details. In addition, you now have the option to explicitly query and set server details directly.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Will query the *actual* server used by Ragdoll, rather</span>
+<span class="c1"># than return the environment variable you provided</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">ragdollLicence</span><span class="p">(</span><span class="n">getServer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">cube</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-
-<span class="n">scene</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createScene</span><span class="p">()</span>
-<span class="n">rigid</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createRigid</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-
-<span class="n">cmds</span><span class="o">.</span><span class="n">evalDeferred</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">play</span><span class="p">)</span>
+<span class="c1"># Will manipulate the currently-in-use key, meaning it will</span>
+<span class="c1"># try and drop a licence from this address as well</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">ragdollLicence</span><span class="p">(</span><span class="n">setServer</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">1313</span><span class="p">))</span>
 </code></pre></div>
                 
                   
@@ -2429,7 +2200,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-08-30
+      Last update: 2021-09-20
     
   </small>
 </div>
@@ -2449,41 +2220,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../../overview/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Overview
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../active_chain/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Active Chain
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
