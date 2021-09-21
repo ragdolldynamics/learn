@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Virtual motion capture, i.e. "Animation Capture" introduced, for a superior animator-friendly workflow for physics!">
+        <meta name="description" content="Reverse motion capture, i.e. "Animation Capture" is introduced, for a superior animator-friendly workflow for physics!">
       
       
       
@@ -24,7 +24,7 @@
 
     
       
-        <title>Animation Capture - Learn Ragdoll</title>
+        <title>Animation Capture pt. 1/4 - Learn Ragdoll</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Animation Capture
+              Animation Capture pt. 1/4
             
           </span>
         </div>
@@ -1922,8 +1922,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    Demonstration
+  <a href="#demo-1-basics" class="md-nav__link">
+    Demo 1 - Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-2-ragdoll" class="md-nav__link">
+    Demo 2 - Ragdoll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-3-inverse-kinematics" class="md-nav__link">
+    Demo 3 - Inverse Kinematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-type" class="md-nav__link">
+    Input Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording" class="md-nav__link">
+    Recording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    Transitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retargeting" class="md-nav__link">
+    Retargeting
   </a>
   
 </li>
@@ -1993,13 +2035,14 @@
                   </a>
                 
                 
-                  <h1>Animation Capture</h1>
+                  <h1>Animation Capture pt. 1/4</h1>
                 
                 <p>Highlight for this release is <strong>Animation Capture.</strong></p>
 <ul>
-<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> A.k.a. Virtual Motion Capture</li>
+<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> A.k.a. Reverse Motion Capture</li>
 <li><a href="#capture-suit"><strong>ADDED</strong> Groups</a> Centralised character controls</li>
 <li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
+<li><a href="#collision-groups"><strong>ADDED</strong> Collision Groups</a> Fine control over what collides with what</li>
 <li><a href="#offset-simulation"><strong>ADDED</strong> Offset Simulation</a> Visually separate between input and output</li>
 <li><a href="#damping-ratio"><strong>ADDED</strong> Damping Ratio</a> One less attribute to worry about</li>
 <li><a href="#keyable-status"><strong>ADDED</strong> Keyable Status</a> Which one is keyable, which is not?</li>
@@ -2045,7 +2088,7 @@
 </table>
 <p>Something <strong>amazing</strong> has happened.</p>
 <p>Since release only a few weeks ago, Ragdoll is now used in production across the globe in over a dozen countries at the most major of studios, several dozens of mid-sized studios wanting to gain an advantage and hundreds of independent animators and riggers alike.</p>
-<p>And that is amazing, it is. But there something even more amazing has happened and will be what this next 4-part release is all about.</p>
+<p>And that is amazing, it is. But something even more amazing has happened and will be what this next 4-part release is all about.</p>
 <p>See, since launch I've had conversations with animators using Ragdoll for the very first time. One of those animators made a request that at first glance doesn't look like much.</p>
 <div class="admonition quote">
 <p class="admonition-title">The request</p>
@@ -2053,7 +2096,7 @@
 </div>
 <p>Here's what he was referring to.</p>
 <p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
-<p>Notice how the nodes with physics applied got green channels? The reason the are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
+<p>Notice how the nodes with physics applied got green channels? The reason they are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
 <p>Can we get rid of that connection? Well.. No? This is Ragdoll's connection to your controls. Without those.. there <em>is</em> no physics.</p>
 <p>I quickly dismissed the idea and carried on with my day. But then something <em>clicked</em>.. What if..?</p>
 <p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
@@ -2076,58 +2119,188 @@
 <li>✔️ Support for ...</li>
 </ul>
 <p>From here, this list has no end, because <em>anything</em> capable of affecting the worldspace position and orientation of your controls is natively supported with this workflow. <em>Anything</em>.</p>
-<div class="admonition info">
-<p class="admonition-title">Technically Speaking</p>
-<p>The reason this works is because Ragdoll will consider the <code>.worldMatrix</code> attribute of any control and this is the same attribute Maya itself uses for just about anything.</p>
-</div>
+<details class="info"><summary>I'm a techy, give me the deets</summary><p>The reason this works is because Ragdoll will consider the <code>.worldMatrix</code> attribute of any control and this is the same attribute Maya itself uses for just about anything.</p>
+</details>
 <p><br></p>
 <h3 id="animation-capture">Animation Capture</h3>
 <p>Inspired by Motion Capture, <em>Animation Capture</em> is a new way to think about and work with physics in Maya.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134006344-53f2744f-cc7f-48b0-860d-d0313a353c1f.png" /></p>
 <p>Here is a typical data pipeline for motion capture, from real-life actor to final character animation.</p>
-<ol>
-<li>Markers are attached to an actor</li>
-<li>Markers are "captured"</li>
-<li>A pointcloud is generated</li>
-<li>A hierarchy of joints is generated</li>
-<li>Joints drive a typical character rig</li>
-<li>Rig drives final geometry for render</li>
-</ol>
-<p>Each "marker" is nothing more than a point. Something for the camera to recognise and track as it moves through space. Once tracked, it's able to translate this marker from a 2D image into a 3D position, and continues to do so for each marker.</p>
-<p>Once the capture is complete, the human actor can remove the markers and go enjoy the rest of his day. The rest is up to the computer.</p>
+<table>
+<thead>
+<tr>
+<th align="right">#</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><strong>1</strong></td>
+<td align="left">Markers are attached to an actor</td>
+</tr>
+<tr>
+<td align="right"><strong>2</strong></td>
+<td align="left">Markers are "captured"</td>
+</tr>
+<tr>
+<td align="right"><strong>3</strong></td>
+<td align="left">A pointcloud is generated</td>
+</tr>
+<tr>
+<td align="right"><strong>4</strong></td>
+<td align="left">A hierarchy of joints is generated</td>
+</tr>
+<tr>
+<td align="right"><strong>5</strong></td>
+<td align="left">Joints drive a typical character rig</td>
+</tr>
+<tr>
+<td align="right"><strong>6</strong></td>
+<td align="left">Rig drives final geometry for render</td>
+</tr>
+</tbody>
+</table>
+<p>Each "marker" is a dud. Nothing of any complexity. Something for the camera to recognise and track as it moves through space. Once tracked, it's able to translate this marker from a 2D image into a 3D position, and continues to do so for each marker, for the real processing to take place inside software.</p>
+<p>Once the capture is complete, the human actor can remove the markers and go enjoy the rest of their day. The rest is up to the computer.</p>
 <p>With 3D positions generated, software takes over to translate these points into a hierarchy; the FK joint hierarchy you may be familiar with if you've ever worked with mocap. The joint hierarchy can then be used to either drive the final geometry, or to drive a more complex character rig which in turn drives the final geometry.</p>
-<p><em>Animation</em> capture is just like that, but instead of capturing a real-life person, it captures your <em>character rig</em>.</p>
+<p>Animation Capture is just like that, but in <strong>reverse</strong>. Instead of capturing a person, it captures your <em>character rig</em>.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134128846-7c55bfe3-b2c6-418f-ab04-4e29f61a5ec2.png" /></p>
-<ol>
-<li>Markers are attached to a character rig</li>
-<li>Markers are "captured"</li>
-<li>A rigid is generated for each marker</li>
-<li>A hierarchy of constraints is generated</li>
-<li>Simulation is <strong>recorded</strong> back onto the original character rig</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th align="right">#</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><strong>1</strong></td>
+<td align="left">Markers are attached to a character rig</td>
+</tr>
+<tr>
+<td align="right"><strong>2</strong></td>
+<td align="left">Markers are "captured"</td>
+</tr>
+<tr>
+<td align="right"><strong>3</strong></td>
+<td align="left">A rigid is generated for each marker</td>
+</tr>
+<tr>
+<td align="right"><strong>4</strong></td>
+<td align="left">A hierarchy of constraints is generated</td>
+</tr>
+<tr>
+<td align="right"><strong>5</strong></td>
+<td align="left">Simulation is <strong>recorded</strong> back onto the original character rig</td>
+</tr>
+</tbody>
+</table>
 <p>Unlike motion capture, we'd like the result mapped back onto our character rig again, which is how animators iterate with physics.</p>
-<div class="admonition info">
-<p class="admonition-title">In other words</p>
-<p>Markers are to motion and animation capture what the "red pill" is to Neo. A way for their tracking software to identify which of the many humans in a busy farm of humans is Neo.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134011228-49c878c7-928b-48b1-9cbc-2fcf70f8ec01.png" /></p>
-</div>
 <p><br></p>
-<h4 id="demonstration">Demonstration</h4>
-<p>Conversely, the current workflow of Ragdoll is for you to give control over the limbs of your character to Ragdoll, for it to output its simulation onto them. You can then create a secondary control hierarchy - a Mimic - in order to regain control over it. But this was tedious and error prone.</p>
-<p><em>Animation Capture</em> on the other hand borrows from Motion Capture, in that you now attach "markers" onto your character rig such that Ragdoll can monitor and simulate them.</p>
+<h4 id="demo-1-basics">Demo 1 - Basics</h4>
+<p>Enough talk, let's dive in.</p>
+<p><strong>Before</strong></p>
+<p>Here's what life was like before, with <code>Active Rigid</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164228-cb35df45-ad68-4217-bb5f-8fa389a232da.mp4" type="video/mp4"></video></p>
+
+<p><strong>After</strong></p>
+<p>And here's life with <code>Markers</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164221-d80135db-96b9-48ed-9ec0-1b8af73c8f86.mp4" type="video/mp4"></video></p>
+
+<p>Notice how the channels are left alone?</p>
+<p>This is the key difference between <code>Marker</code> and <code>Rigid</code>. Although you still provide Ragdoll with controls, Ragdoll no longer <em>drives</em> your controls directly. Instead, it <em>shows</em> you what they would look like <em>if</em> they were driven with physics.</p>
+<p>Once you're happy with what you see, you <code>Record</code> it.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164217-883c0635-6103-42da-87a1-0e9cd145aa1f.mp4" type="video/mp4"></video></p>
+
+<p>Makes sense? Ok,let's look at a more interesting example.</p>
+<p><br></p>
+<h4 id="demo-2-ragdoll">Demo 2 - Ragdoll</h4>
+<p>Let's have a look at how <code>Markers</code> work with a full ragdoll.</p>
+<p><strong>1. Setup hierarchy</strong></p>
+<p>The first step is nothing new, you've seen it before.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213480-bcf2f185-f0f1-4ab5-9f5c-9a72f108e7d3.mp4" type="video/mp4"></video></p>
+
+<p><strong>2. Edit shapes</strong></p>
+<p>This too, it's second nature by now.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213470-fa51e083-cfb9-494d-8f1b-2fb795a7ed9d.mp4" type="video/mp4"></video></p>
+
+<div class="admonition info">
+<p class="admonition-title">Except!</p>
+<p>Notice how the shapes overlap? That's ok! No longer will you have to worry about self-intersecting shapes. Unless you want it to, with the new <code>Self Collide</code> attribute. :D I'll touch on this a bit more below, under #self-collide</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Double Except!</p>
+<p>Release 4/4 in this series will deal with the channel box, and make editing these values interactive in the viewport for a superior experience and a lot less clicks and fiddling with numbers.</p>
+</div>
+<p><strong>3. Animate</strong></p>
+<p>Now things are getting interesting. To keep our viewport clean, we can offset the simulation slightly.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213467-b0b9bae6-6778-409d-ad1a-4277e89961f9.mp4" type="video/mp4"></video></p>
+
+<p><strong>4. Record</strong></p>
+<p>Finally, and this is what separates <code>Markers</code> from <code>Rigids</code>, we record our simulation back onto our controls.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213465-5739f9b5-a391-474d-b6ee-608a6e7c0194.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="demo-3-inverse-kinematics">Demo 3 - Inverse Kinematics</h4>
+<p>That last example was contrived. No rig is without IK, so how does <code>Markers</code> work here?</p>
+<p><br></p>
+<h4 id="input-type">Input Type</h4>
+<p>How should Ragdoll interpret the original controls?</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Inherit</td>
+<td align="left">Do whatever the group is doing, or <code>Kinematic</code> if there is no group</td>
+</tr>
+<tr>
+<td align="left">Off</td>
+<td align="left">Do nothing, just fall under gravity</td>
+</tr>
+<tr>
+<td align="left">Kinematic</td>
+<td align="left">Follow the input <em>exactly</em>, physics need not apply</td>
+</tr>
+<tr>
+<td align="left">Guide</td>
+<td align="left">Follow the input approximately, with some <code>Stiffness</code> and <code>Damping</code></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="recording">Recording</h4>
+<p>Markers can be recorded all together, or independently. For example, say you wanted animation from frame 1-100, simulate 101-150 and return to animation from 151-200. You can do that.</p>
+<p>Furthermore, say you liked what the simulation was doing, but only on one half of the body. Or only on the hip, driving the main trajectory in a physically-plausible way. Keeping the rest of your animation intact.</p>
+<p><br></p>
+<h4 id="transitions">Transitions</h4>
+<p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
+<p><br></p>
+<h4 id="retargeting">Retargeting</h4>
+<p>Per default, markers are recorded onto the controls they read from.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169658-39590bbf-bbca-41dc-af3b-de20e69e9aed.png" /></p>
+<p>But sometimes, rigs are more complicated and</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169635-e0a751c8-f06b-4dac-a459-50118d04821f.png" /></p>
 <p><strong>Workflow</strong></p>
 <ul>
 <li>Marker Input    (e.g. joint1)</li>
 <li>Marker Output   (e.g. spine_ctl)</li>
 </ul>
 <p>You can change the <code>Input</code> to a marker by using <code>Reassign</code>, and change the <code>Output</code> with <code>Retarget</code>.</p>
-<p><strong>Missing in Action</strong></p>
+<p><strong>Limitations</strong></p>
+<p>These are some of the things we'll be working on for subsequent releases.</p>
 <ul>
 <li>Selecting rigids interacively</li>
 <li>Manipulating shapes interactively</li>
 <li>Manipulating constraints interactively</li>
 <li>Toggle between previous animation and recorded simulation</li>
 <li>No live-link</li>
+<li>Cannot be exported</li>
+<li>Cannot be add constraints</li>
 </ul>
 <p><br></p>
 <h3 id="performance-leap">Performance Leap</h3>
@@ -2200,7 +2373,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-20
+      Last update: 2021-09-21
     
   </small>
 </div>
