@@ -1950,15 +1950,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#retargeting" class="md-nav__link">
-    Retargeting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reassigning" class="md-nav__link">
-    Reassigning
+  <a href="#recording" class="md-nav__link">
+    Recording
   </a>
   
 </li>
@@ -1971,8 +1964,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recording" class="md-nav__link">
-    Recording
+  <a href="#retarget" class="md-nav__link">
+    Retarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reassign" class="md-nav__link">
+    Reassign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reparent" class="md-nav__link">
+    Reparent
   </a>
   
 </li>
@@ -1984,15 +1991,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    Transitions
+  </a>
   
 </li>
       
@@ -2025,37 +2032,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#damping-ratio" class="md-nav__link">
+    Damping Ratio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-ground" class="md-nav__link">
+    Real Ground
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joints-and-the-attribute-editor" class="md-nav__link">
+    Joints and the Attribute Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hidden-solver" class="md-nav__link">
     Hidden Solver
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#transitions" class="md-nav__link">
-    Transitions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#enhanced-determinism" class="md-nav__link">
     Enhanced Determinism
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-constraints" class="md-nav__link">
-    Dynamic Constraints
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#damping-ratio" class="md-nav__link">
-    Damping Ratio
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2069,6 +2089,13 @@
         <li class="md-nav__item">
   <a href="#next-release" class="md-nav__link">
     Next Release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
   </a>
   
 </li>
@@ -2153,15 +2180,17 @@
 <p>And that is amazing, it is. But something even more amazing has happened; Ragdoll has <strong>leaped forward</strong>. And that will be what the next 4-part release is about.</p>
 <p>See, since launch I've had conversations with animators using Ragdoll for the very first time. One of those animators made a request that at first glance didn't look like much.</p>
 <div class="admonition quote">
-<p class="admonition-title">The request</p>
-<p>"I don't like working with green channels, can I get rid of them?" - <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a></p>
+<p class="admonition-title">Quote</p>
+<p>"I don't like working with green channels, as it is not ideal for animating. Is there a way to I can overcome this?" - <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a></p>
 </div>
 <p>Here's what he was referring to.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
+
 <p>Notice how the nodes with physics applied got green channels? The reason they are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
 <p>Can we get rid of that connection? Well.. No? This is Ragdoll's connection to your controls. Without those.. there <em>is</em> no physics.</p>
-<p>I quickly dismissed that ludicrous idea and carried on with my day.. But then something <em>clicked</em>.. What if..?</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
+<p>I quickly dismissed the idea and carried on with my day.. But then something <em>clicked</em>.. What if..?</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
+
 <p>In the next section, I'll dive into how this works and why this change goes far beyond just getting rid of green channels.</p>
 <p><strong>Benefits at a glance</strong></p>
 <ul>
@@ -2184,7 +2213,7 @@
 </details>
 <p><br></p>
 <h3 id="animation-capture">Animation Capture</h3>
-<p>Inspired by Motion Capture, <em>Animation Capture</em> is a new way to think about and work with physics in Maya.</p>
+<p>Inspired by Motion Capture - Animation Capture is a new way to think about and work with physics in Maya. To learn about it, let's first understand how Motion Capture generally works.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134006344-53f2744f-cc7f-48b0-860d-d0313a353c1f.png" /></p>
 <p>Here is a typical data pipeline for motion capture, from real-life actor to final character animation.</p>
 <table>
@@ -2273,7 +2302,6 @@
 <p>Once you're happy with what you see, you <code>Record</code>.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164217-883c0635-6103-42da-87a1-0e9cd145aa1f.mp4" type="video/mp4"></video></p>
 
-<p>Makes sense? Ok, let's look at a more interesting example.</p>
 <p><br></p>
 <h4 id="demo-2-ragdoll">Demo 2 - Ragdoll</h4>
 <p>Let's have a look at how <code>Markers</code> work with a full ragdoll.</p>
@@ -2370,26 +2398,34 @@
 <p>Rig and Model courtesy of Ramon Arango - <a href="https://ramonarango.gumroad.com/l/ArtemisApolloRig">Apollo Rig</a></p>
 </blockquote>
 <p><br></p>
-<h4 id="retargeting">Retargeting</h4>
-<p>We've talked a lot about "retargeting". But what <em>is</em> that?</p>
-<p>Per default, markers are recorded onto the controls you assigned, this is called <code>Rig to Rig</code>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169658-39590bbf-bbca-41dc-af3b-de20e69e9aed.png" /></p>
-<p>But often times, rigs are more complicated and what you want is for the simulation to look at one set of nodes, but record onto another. This is called <code>Joint to Rig</code>, but can be from any source. Even other controls (like FK to IK).</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169635-e0a751c8-f06b-4dac-a459-50118d04821f.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">The Old Days</p>
-<p>Think about how you would accomplish this using the <code>Active Rigid</code> or <code>Active Chain</code> commands. That would be a <em>huge</em> pain, but not with markers!</p>
-</div>
-<p><br></p>
-<h4 id="reassigning">Reassigning</h4>
-<p>Over in <a href="#demo-2---ragdoll">Demo 2 - Ragdoll</a> we "reassigned" already marked controls. What does that mean?</p>
-<p>In that example, we've assigned our FK controls directly, which means Ragdoll would grab the translation and rotation from those controls during simulation. But what we really wanted was the IK controls.</p>
-<p>But! We couldn't just assign to the IK controls directly, since they are <em>indirectly</em> rotating a characters limbs. So instead, we <code>Reassign</code> the markers previously made onto the underlying joints that follow IK around.</p>
-<p>We then also <code>Retarget</code> them, since they would have otherwise been recorded onto the original FK controls.</p>
+<h4 id="recording">Recording</h4>
+<p>Markers can be recorded all together, or independently. For example, say you wanted animation from frame 1-100, simulate 101-150 and return to animation from 151-200. You can do that.</p>
+<p>Furthermore, say you liked what the simulation was doing, but only on one half of the body. Or only on the hip, driving the main trajectory in a physically-plausible way. Keeping the rest of your animation intact.</p>
+<p><strong>Record All</strong></p>
+<p>With nothing selected, Ragdoll will record all marked controls to the current Maya playback range.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327104-f3d54cda-4d88-480a-b263-faceb211e87a.mp4" type="video/mp4"></video></p>
+
+<p><strong>Record Selected Markers</strong></p>
+<p>Select a few controls to control what gets recorded.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327103-5ad36b6b-177d-40a9-8666-cbaaab281527.mp4" type="video/mp4"></video></p>
+
+<p><strong>Record Range</strong></p>
+<p>Limit the Maya playback range for control over <em>when</em> recording takes place.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327097-db0af345-bf15-45f5-9bc0-6ef50d3184f4.mp4" type="video/mp4"></video></p>
+
+<p><strong>Record Selected Range</strong></p>
+<p>Or, select an explicit range interactively.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327093-ba62588e-d14f-4ff9-9b75-05d4230dbdb6.mp4" type="video/mp4"></video></p>
+
+<p><strong>Intelligent Range</strong></p>
+<p>A <code>Kinematic</code> marker is entirely animated, so there's no need to actually record those. Ragdoll will ensure only non-kinematic frames are recorded, so you can do things like this.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134504192-3514f235-1f9c-4ce8-83e5-6704bf3036df.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h4 id="input-type">Input Type</h4>
 <p>In the above examples, I mentioned <code>Kinematic</code> and you probably spotted a few other options too, like <code>Inherit</code> and <code>Guide</code>. What are those?</p>
 <p>The <code>Input Type</code> is how Ragdoll should interpret the controls you assign. Did you mean for them remain animated, i.e. <code>Kinematic</code>? Or should they follow the control around, i.e. <code>Guide</code>? Or should they just fall with gravity, ignoring the original control altogether, i.e. <code>Off</code>?</p>
+<p>The <code>Input Type</code> can be set either for a whole group of markers, or each marker individually.</p>
 <table>
 <thead>
 <tr>
@@ -2416,27 +2452,52 @@
 </tr>
 </tbody>
 </table>
-<p>This attribute can be animated too, to <em>transition</em> from simulation to animation (or vice versa).</p>
+<p><strong>Off</strong></p>
+<p>Treat the input as a starting position, but nothing else.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478792-d7f4fc46-fea0-468a-9ec0-7737072263a1.mp4" type="video/mp4"></video></p>
+
+<p><strong>Kinematic</strong></p>
+<p>Follow the input exactly, no exceptions. Not even collisions.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
+
+<p><strong>Guide Balance -1</strong></p>
+<p>Follow the relative angles between controls in the input.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
+
+<p><strong>Guide Balance +1</strong></p>
+<p>Follow the absolute position and orientation of the input.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478803-889e6732-4e7b-433e-803d-d3edfed814a1.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
-<h4 id="recording">Recording</h4>
-<p>Markers can be recorded all together, or independently. For example, say you wanted animation from frame 1-100, simulate 101-150 and return to animation from 151-200. You can do that.</p>
-<p>Furthermore, say you liked what the simulation was doing, but only on one half of the body. Or only on the hip, driving the main trajectory in a physically-plausible way. Keeping the rest of your animation intact.</p>
-<p><strong>Record All</strong></p>
-<p>With nothing selected, Ragdoll will record all marked controls to the current Maya playback range.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134327104-f3d54cda-4d88-480a-b263-faceb211e87a.mp4" type="video/mp4"></video></p>
-<p><strong>Record Selected Markers</strong></p>
-<p>Select a few controls to control what gets recorded.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134327103-5ad36b6b-177d-40a9-8666-cbaaab281527.mp4" type="video/mp4"></video></p>
-<p><strong>Record Range</strong></p>
-<p>Limit the Maya playback range for control over <em>when</em> recording takes place.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134327097-db0af345-bf15-45f5-9bc0-6ef50d3184f4.mp4" type="video/mp4"></video></p>
-<p><strong>Record Selected Range</strong></p>
-<p>Or, select an explicit range interactively.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134327093-ba62588e-d14f-4ff9-9b75-05d4230dbdb6.mp4" type="video/mp4"></video></p>
+<h4 id="retarget">Retarget</h4>
+<p>We've talked a lot about "retargeting". But what <em>is</em> that?</p>
+<p>Per default, markers are recorded onto the controls you assigned, this is called <code>Rig to Rig</code>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169658-39590bbf-bbca-41dc-af3b-de20e69e9aed.png" /></p>
+<p>But often times, rigs are more complicated and what you want is for the simulation to look at one set of nodes, but record onto another. This is called <code>Joint to Rig</code>, but can be from any source. Even other controls (like FK to IK).</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169635-e0a751c8-f06b-4dac-a459-50118d04821f.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">The Old Days</p>
+<p>Think about how you would accomplish this using the <code>Active Rigid</code> or <code>Active Chain</code> commands. That would be a <em>huge</em> pain, but not with markers!</p>
+</div>
+<p><br></p>
+<h4 id="reassign">Reassign</h4>
+<p>Over in <a href="#demo-2---ragdoll">Demo 2 - Ragdoll</a> we "reassigned" already marked controls. What does that mean?</p>
+<p>In that example, we've assigned our FK controls directly, which means Ragdoll would grab the translation and rotation from those controls during simulation. But what we really wanted was the IK controls.</p>
+<p>But! We couldn't just assign to the IK controls directly, since they are <em>indirectly</em> rotating a characters limbs. So instead, we <code>Reassign</code> the markers previously made onto the underlying joints that follow IK around.</p>
+<p>We then also <code>Retarget</code> them, since they would have otherwise been recorded onto the original FK controls.</p>
+<p><br></p>
+<h4 id="reparent">Reparent</h4>
+<p>Sometimes, you change your mind.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465284-f9a3bd04-9392-4f33-a161-390cbe9049d2.mp4" type="video/mp4"></video></p>
+
+<p>Success!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h4 id="guide-balance">Guide Balance</h4>
 <p>Now let's talk about a few things you <em>haven't</em> seen yet.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
+
 <blockquote>
 <p>Look, it's Ragdoll Blaine!</p>
 </blockquote>
@@ -2445,7 +2506,8 @@
 
 <p>Notice how with a <code>Guide Balance = -1</code> the controls arms remain relative the torso. And with <code>Guide Balance = 1</code> they instead follow the <em>worldspace</em> orientation of the controls. Just like a Soft Pin.</p>
 <p>This attribute is also <strong>animatable</strong>, and is how you can transition from animation into simulation and back again.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
+
 <p>Here's a more complete example:</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134332515-e7879b82-4a84-4881-90cf-25f66a6d3ac8.mp4" type="video/mp4"></video></p>
 
@@ -2484,23 +2546,20 @@
 </tbody>
 </table>
 <p><br></p>
-<h4 id="limitations">Limitations</h4>
-<p>These are some of the things lacking from <code>Markers</code> in this release that we'll be working on for subsequent releases.</p>
-<ul>
-<li>Selecting rigids interacively</li>
-<li>Manipulating shapes interactively</li>
-<li>Manipulating constraints interactively</li>
-<li>Toggle between previous animation and recorded simulation</li>
-<li>No live-link</li>
-<li>Cannot be exported</li>
-<li>Cannot be add constraints</li>
-</ul>
+<h3 id="transitions">Transitions</h3>
+<p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
+
+<p>Notice how we're animated up until the jump, and then Ragdoll takes over. Once he approaches that box, we turn our <code>Guide Balance</code> from <code>-1</code> to <code>1</code> and have him reach the target pose in worldspace. Once he's close, we switch <code>Input Type</code> to <code>Kinematic</code> and kinematically move him until we once again transition to <code>Guide</code>, this time with a <code>Guide Balance</code> or <code>-1</code> for pose space.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507546-49e84d32-b50a-48c6-a1b9-82410281a884.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h3 id="self-collision">Self Collision</h3>
 <p>Previously, it was very important that your shapes did not overlap any shape other than it's immediate neighbour. If they did, chaos ensued.</p>
 <p><strong>Before</strong></p>
 <p>Clavicles intersect their parent spine, but also each other!</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134362062-4197b3d6-2694-4011-9a8e-69adec92927f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362062-4197b3d6-2694-4011-9a8e-69adec92927f.mp4" type="video/mp4"></video></p>
+
 <p><strong>After</strong></p>
 <p>With the new <code>Self Collision = Off</code>, this is no longer a problem.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362067-a2d33df3-c9d1-4aa8-b8af-956d80aeba7e.mp4" type="video/mp4"></video></p>
@@ -2508,7 +2567,7 @@
 <p>This can be taken into the extreme!</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362070-325aa8dc-3367-4765-a4a9-56670cc77b83.mp4" type="video/mp4"></video></p>
 
-<p>And here's a more practical example.</p>
+<p>And here's a another example to fill out a large volume in the center of a character.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134368633-ed4f69f4-1eba-4702-a3f6-bdddd2f0a98d.mp4" type="video/mp4"></video></p>
 
 <div class="admonition info">
@@ -2525,10 +2584,12 @@
 <p>Because <code>Rigids</code> were children of your controls, Maya had a funny way of including them in the Graph Editor that rightly drove animators, myself included, <em>absolutely mad</em>.</p>
 <p><strong>Before</strong></p>
 <p>Just look at this; why-oh-why would I want channels from a completely unrelated node when working with the hip?</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134341270-72843d85-70c9-43af-86cc-c981e87fe297.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341270-72843d85-70c9-43af-86cc-c981e87fe297.mp4" type="video/mp4"></video></p>
+
 <p><strong>After</strong></p>
 <p>Contrast that to this, whereby only the nodes you actually select are made visible. You can even select <code>Markers</code> via the Channel Box and <em>deselect</em> your controls to get up real close.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134341497-cb64e666-75e6-4bfd-a3bd-aee27a61791b.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341497-cb64e666-75e6-4bfd-a3bd-aee27a61791b.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h3 id="no-initial-state">No Initial State</h3>
 <p>A significant effort was made to make the simulation start where you expected it to.</p>
@@ -2538,30 +2599,21 @@
 <p>You can read all about the month-long journey in the <a href="/releases/2021.03.01/">release notes from March</a></p>
 </div>
 <p>Nowadays, you barely have to think about it, but it does occasionally rear its ugly head. It is a hack.</p>
-<p>With <code>Markers</code>, because there was no cycle to begin with - Ragdoll read your controls and showed you a simulation of them - this was never a problem to begin with! As a result, you should find simulations much more stable and animations easier to control.</p>
+<p>With <code>Markers</code> there isn't any cycle to begin with. Ragdoll only reads from your controls, it doesn't write to anything. Under the hood, recording is a 2-step process; first it simulates, and then it writes animation back onto the controls. That's how this cycle is broken, without having any effect on the overall workflow.</p>
 <p><br></p>
 <h3 id="no-more-cycles">No More Cycles</h3>
-<p><br></p>
-<h3 id="hidden-solver">Hidden Solver</h3>
-<p>Hiding the solver completely removes all overhead of having Ragdoll in your scene. Previously, with <code>rdScene</code> and <code>rdRigid</code>, because they were directly connected to your controls, hiding things made little difference. But now, because we no longer have this direct connection, all computations come from explicitly seeing the <code>rdSolver</code> node.</p>
-<p>No visible <code>rdSolver</code> node, no computations. Period.</p>
-<p><br></p>
-<h3 id="transitions">Transitions</h3>
-<p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
-<p><br></p>
-<h3 id="enhanced-determinism">Enhanced Determinism</h3>
-<div class="admonition info">
-<p class="admonition-title">TLDR</p>
-<p>Sometimes, re-opening the scene could lead to different results. This has now been fixed.</p>
-</div>
-<p>Each time you play a simulation starting from the beginning, the results are the same. This is an important characteristic of any simulation and is called "determinism". It used to be the case however that when you re-opened the scene, there was a small chance the results would differ from when you last saved it.</p>
-<p>This has now been fixed. The determinism is now dependent on the order in which rigid bodies connect to the <code>rdScene</code> node. It's an array attribute, whose order is saved with the Maya scene.</p>
-<p><br></p>
-<h3 id="dynamic-constraints">Dynamic Constraints</h3>
-<p>Constraints now have <em>presets</em>, which dynamically update based on wherever your creation is.</p>
+<p>With the previous version, because <code>Rigids</code> both read and wrote to each control, you could sometimes run into a situation where the parent depends on a child.</p>
+<p><strong>Before</strong></p>
+<p>Here, I'll try and make a second chain in the opposite direction of how the controls are laid out hierarchically. This cannot work; because in order for Ragdoll to figure out where the Passive hand should be, it would first need to consult the upper arm, which is both dynamic and a child of the spine, which is also dynamic. It's a lovely cycle. ❤️</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480453-279620c2-0a68-48fc-aad4-5c24c146265d.mp4" type="video/mp4"></video></p>
+
+<p><strong>After</strong></p>
+<p>With <code>Markers</code>, this isn't a problem because to Ragdoll every limb can now be independently evaluated, in parallel.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480451-f9be80ba-2579-485e-a4e4-ad92d0da4491.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h3 id="damping-ratio">Damping Ratio</h3>
-<p>Constraints have 3 attributes to control their behavior.</p>
+<p>The current <code>rdConstraint</code> nodes have 3 attributes to control their behavior.</p>
 <ul>
 <li><code>Stiffness</code></li>
 <li><code>Damping</code></li>
@@ -2570,8 +2622,37 @@
 <p>Where <code>Stiffness</code> and <code>Damping</code> are both multiplied by <code>Strength * Strength</code>. For example, the final value of <code>Stiffness</code> is..</p>
 <div class="highlight"><pre><span></span><code><span class="n">final_stiffness</span> <span class="o">=</span> <span class="n">stiffness</span> <span class="o">*</span> <span class="n">strength</span> <span class="o">*</span> <span class="n">strength</span>
 </code></pre></div>
-<p>And that's great; it means you can animate just a single attribute in favour of two. Editing the relationship between the two attributes was done by changing either <code>Stiffness</code> or <code>Damping</code>.</p>
-<p>The new <code>rdMarker</code> node have a <code>dampingRatio</code>.. Well, no. FIX</p>
+<p>And that's great; it means you can animate just a single attribute in favour of two. Editing the ratio between the two attributes was done by changing either <code>Stiffness</code> or <code>Damping</code>.</p>
+<p>The <code>Marker</code> nodes gets rid of <code>Strength</code> and instead adds an explicit <code>Damping Ratio</code> attribute to control this ratio.</p>
+<p>Stiffness and damping is also multiplied by their associated Group and Solver.</p>
+<div class="highlight"><pre><span></span><code><span class="n">final_stiffness</span> <span class="o">=</span> <span class="n">maker</span><span class="o">.</span><span class="n">stiffness</span> <span class="o">*</span> <span class="n">group</span><span class="o">.</span><span class="n">stiffness</span> <span class="o">*</span> <span class="n">solver</span><span class="o">.</span><span class="n">stiffness</span>
+</code></pre></div>
+<p>Meaning you can control either all or one marker at a time with ease.</p>
+<p><br></p>
+<h3 id="quality-of-life">Quality of Life</h3>
+<p>Some minor things to brighten your day.</p>
+<p><br></p>
+<h4 id="real-ground">Real Ground</h4>
+<p>With <code>Rigids</code>, the ground was embedded into the scene. With <code>Markers</code>, an actual ground is created to for more stability and more control over its physical parameters. Something that can also be animated, and that dynamically appears right underneath your markers.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134493174-f57cc5ce-5056-4cfa-b98e-fae9114342fc.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="joints-and-the-attribute-editor">Joints and the Attribute Editor</h4>
+<p>The Attribute Editor doesn't show you <code>Rigids</code> related to Maya joints because of a Maya UI quirk.</p>
+<p>With <code>Markers</code>, this is no longer a problem!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134464806-041e6abb-4be0-442f-b51d-d4a9776fd88b.png" /></p>
+<p><br></p>
+<h4 id="hidden-solver">Hidden Solver</h4>
+<p>Hiding the solver completely removes all overhead of having Ragdoll in your scene. Previously, with <code>rdScene</code> and <code>rdRigid</code>, because they were directly connected to your controls, hiding things made little difference. But now, because we no longer have this direct connection, all computations come from explicitly seeing the <code>rdSolver</code> node.</p>
+<p>No visible <code>rdSolver</code> node, no computations. Period.</p>
+<p><br></p>
+<h4 id="enhanced-determinism">Enhanced Determinism</h4>
+<div class="admonition info">
+<p class="admonition-title">TLDR</p>
+<p>Sometimes, re-opening the scene could lead to different results. This has now been fixed.</p>
+</div>
+<p>Each time you play a simulation starting from the beginning, the results are the same. This is an important characteristic of any simulation and is called "determinism". It used to be the case however that when you re-opened the scene, there was a small chance the results would differ from when you last saved it.</p>
+<p>This has now been fixed. The determinism is now dependent on the order in which rigid bodies connect to the <code>rdSolver</code> node. It's an array attribute, whose order is saved with the Maya scene.</p>
 <p><br></p>
 <h3 id="multiple-floating-licences">Multiple Floating Licences</h3>
 <p>Whenever a machine connected to your floating licence server, the host and IP were stored on the machine in an effort to speed up subsequent connections made. However, this also meant that you weren't able to <em>update</em> those details.</p>
@@ -2596,9 +2677,23 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134399139-cbe27611-3445-4453-b901-fbe1687dd299.png" /></p>
 <p>Notice the huge pile of lines to the left? Those are all running parallel and almost entirely default Maya evaluations; things your rig would do without Ragdoll. Rendering on the other hand is almost entirely Ragdoll, it is <em>very</em> slow.</p>
 <p>To properly compare performance between <code>Rigids</code> and <code>Markers</code>, here's what you should be looking at.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/134398643-bf2e3086-a8f6-4ea7-8e58-011c866acaaa.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134398643-bf2e3086-a8f6-4ea7-8e58-011c866acaaa.mp4" type="video/mp4"></video></p>
+
 <p>This is the only thing Ragdoll does to your rig. This is the entire overhead, the added load onto your rig. 16 <em>microseconds</em>. That's <code>0.016 ms</code>. For a rig to run at 30 fps, it'll need <code>1,000/30 = 33 ms</code> per frame. This overhead, <code>0.016 ms/frame</code> is all Ragdoll needs to solve an entire character, contacts and constraints and forces, all of it. In this particular profiling, that's 430x faster than <code>Rigids</code>, which not only took longer to solve but made everything else slower by just being connected to your controls.</p>
 <p>So how about we get this rendering performance sorted, shall we?</p>
+<p><br></p>
+<h3 id="limitations">Limitations</h3>
+<p>These are some of the things lacking from <code>Markers</code> in this release that we'll be working on for subsequent releases.</p>
+<ul>
+<li>Selecting rigids interacively</li>
+<li>Manipulating shapes interactively</li>
+<li>Manipulating constraints interactively</li>
+<li>Toggle between previous animation and recorded simulation</li>
+<li>Support for recording onto an animation layer</li>
+<li>No "live-mode", where physics drives a control interactively</li>
+<li>Markers cannot be exported</li>
+<li>Markers cannot have additional constraints</li>
+</ul>
                 
                   
                     
@@ -2607,7 +2702,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-22
+      Last update: 2021-09-23
     
   </small>
 </div>
