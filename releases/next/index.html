@@ -2123,12 +2123,9 @@
                 <p>Highlight for this release is <strong>Animation Capture</strong>.</p>
 <ul>
 <li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> A.k.a. Reverse Motion Capture</li>
-<li><a href="#capture-suit"><strong>ADDED</strong> Groups</a> Centralised character controls</li>
 <li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
 <li><a href="#collision-groups"><strong>ADDED</strong> Collision Groups</a> Fine control over what collides with what</li>
-<li><a href="#offset-simulation"><strong>ADDED</strong> Offset Simulation</a> Visually separate between input and output</li>
 <li><a href="#damping-ratio"><strong>ADDED</strong> Damping Ratio</a> One less attribute to worry about</li>
-<li><a href="#keyable-status"><strong>ADDED</strong> Keyable Status</a> Which one is keyable, which is not?</li>
 <li><a href="#enhanced-determinism"><strong>IMPROVED</strong> Enhanced Determinism</a> </li>
 <li><a href="#multiple-floating-licences"><strong>FIXED</strong> Multiple Floating Licences</a> Now behaves as one would expect</li>
 </ul>
@@ -2351,7 +2348,7 @@
 <p>And there you have it! This works with IK, SpineIK, Follicles, Geometry Constraints; <em>anything</em> you can throw at it.</p>
 <p><br></p>
 <h4 id="demo-4-real-world-example">Demo 4 - Real World Example</h4>
-<p>Here's an animation whereby the elbow should be resting on the table, but intersects it slightly as the torso moves about. Let's see how Ragdoll can sort this out.</p>
+<p>Here's a work-in-progress animation whereby the elbow should be resting on the table, but intersects it slightly as the torso moves about. Let's see how Ragdoll can sort this out.</p>
 <p><strong>1. The Problem</strong></p>
 <p>This animation looks great (thanks <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a> for lending it to me!) but has a problem with the elbow. Notice how it intersects the table as he moves his torso around? A difficult problem and moving target as you need to keep tweaking both the torso and hand IK handle to tune your animation.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319921-6e96ef8c-1226-47b4-b3db-7f076047c62a.mp4" type="video/mp4"></video></p>
@@ -2393,6 +2390,9 @@
 <p><strong>10. Before And After</strong></p>
 <p>And there we go! 2 minutes or less, and you've got a reusable setup for correcting the elbow whenever the animation changes. IK is intact and you can keep working with keyframes. Keeping Ragdoll attached to your rig has <em>zero</em> impact on performance (as you can see by looking at the fps counter near the bottom of the two comparisons), and once hidden it has no impact on your Outliner either. All clean!</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319855-66c960d7-9d74-4bbf-bde4-5e813c7123cd.mp4" type="video/mp4"></video></p>
+
+<p>Here's one more I couldn't find room for, an earlier version of the animation with <em>stepped keys</em> and finger simulation. Look at all that juicy finger interaction with the table. 😊</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134513003-7b25c2d1-87e8-4853-a89d-a73b3a5ba2e2.mp4" type="video/mp4"></video></p>
 
 <blockquote>
 <p>Rig and Model courtesy of Ramon Arango - <a href="https://ramonarango.gumroad.com/l/ArtemisApolloRig">Apollo Rig</a></p>
