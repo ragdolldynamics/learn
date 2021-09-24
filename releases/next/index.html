@@ -1985,8 +1985,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#guide-balance" class="md-nav__link">
-    Guide Balance
+  <a href="#guide-space" class="md-nav__link">
+    Guide Space
   </a>
   
 </li>
@@ -2034,6 +2034,13 @@
         <li class="md-nav__item">
   <a href="#damping-ratio" class="md-nav__link">
     Damping Ratio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lollipop-controls" class="md-nav__link">
+    Lollipop Controls
   </a>
   
 </li>
@@ -2122,9 +2129,10 @@
                 
                 <p>Highlight for this release is <strong>Animation Capture</strong>.</p>
 <ul>
-<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> A.k.a. Reverse Motion Capture</li>
+<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> AnimCap, a.k.a. Reverse Motion Capture</li>
 <li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
 <li><a href="#damping-ratio"><strong>ADDED</strong> Damping Ratio</a> One less attribute to worry about</li>
+<li><a href="#lollipop-controls"><strong>ADDED</strong> Lollipop Controls</a> Clarity where there was none</li>
 <li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> Less clutter, more joy</li>
 <li><a href="#no-graph-editor-mess"><strong>IMPROVED</strong> No Graph Editor Mess</a> Clean Graph Editor, clean mind</li>
 <li><a href="#no-more-cycles"><strong>IMPROVED</strong> No More Cycles</a> Clean Graph Editor, clean mind</li>
@@ -2465,12 +2473,12 @@
 <p>Follow the input exactly, no exceptions. Not even collisions.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
 
-<p><strong>Guide Balance -1</strong></p>
-<p>Follow the relative angles between controls in the input.</p>
+<p><strong>Guide Space -1</strong></p>
+<p>Follow the local angles of the input.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
 
-<p><strong>Guide Balance +1</strong></p>
-<p>Follow the absolute position and orientation of the input.</p>
+<p><strong>Guide Space +1</strong></p>
+<p>Follow the world position and orientation of the input.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478803-889e6732-4e7b-433e-803d-d3edfed814a1.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2499,7 +2507,7 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="guide-balance">Guide Balance</h4>
+<h4 id="guide-space">Guide Space</h4>
 <p>Now let's talk about a few things you <em>haven't</em> seen yet.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
 
@@ -2509,7 +2517,7 @@
 <p>So what's happening here? Well, it <em>looks</em> like a <a href="/documentation/soft_pin/">Soft Pin</a> to his head, along with a slight <code>Guide Strength</code> on the rest of his body. But unlike the <code>Rigid</code>, another significant advantage to <code>Markers</code> is their ability to capture both local <em>and worldspace</em> position and orientation of your controls. And because of this, you are able to interactively choose whether a marker should look at the <em>Worldspace</em> or <em>Localspace</em> position of your controls.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134331199-c381ab43-4055-4e7a-a190-68d2acd0668f.mp4" type="video/mp4"></video></p>
 
-<p>Notice how with a <code>Guide Balance = -1</code> the controls arms remain relative the torso. And with <code>Guide Balance = 1</code> they instead follow the <em>worldspace</em> orientation of the controls. Just like a Soft Pin.</p>
+<p>Notice how with a <code>Guide Space = -1</code> the controls arms remain relative the torso. And with <code>Guide Space = 1</code> they instead follow the <em>worldspace</em> orientation of the controls. Just like a Soft Pin.</p>
 <p>This attribute is also <strong>animatable</strong>, and is how you can transition from animation into simulation and back again.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
 
@@ -2555,7 +2563,7 @@
 <p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
 
-<p>Notice how we're animated up until the jump, and then Ragdoll takes over. Once he approaches that box, we turn our <code>Guide Balance</code> from <code>-1</code> to <code>1</code> and have him reach the target pose in worldspace. Once he's close, we switch <code>Input Type</code> to <code>Kinematic</code> and kinematically move him until we once again transition to <code>Guide</code>, this time with a <code>Guide Balance</code> or <code>-1</code> for pose space.</p>
+<p>Notice how we're animated up until the jump, and then Ragdoll takes over. Once he approaches that box, we turn our <code>Guide Space</code> from <code>-1</code> to <code>1</code> and have him reach the target pose in worldspace. Once he's close, we switch <code>Input Type</code> to <code>Kinematic</code> and kinematically move him until we once again transition to <code>Guide</code>, this time with a <code>Guide Space</code> or <code>-1</code> for pose space.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507546-49e84d32-b50a-48c6-a1b9-82410281a884.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2634,6 +2642,9 @@
 </code></pre></div>
 <p>Meaning you can control either all or one marker at a time with ease.</p>
 <p><br></p>
+<h3 id="lollipop-controls">Lollipop Controls</h3>
+<p>Sometimes, markers are added to an already busy control with tons of Channel Box entries. Lollipop controls can help organise things a little better.</p>
+<p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
 <p>Some minor things to brighten your day.</p>
 <p><br></p>
@@ -2707,7 +2718,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-23
+      Last update: 2021-09-24
     
   </small>
 </div>
