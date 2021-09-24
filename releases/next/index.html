@@ -2032,13 +2032,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#damping-ratio" class="md-nav__link">
-    Damping Ratio
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lollipop-controls" class="md-nav__link">
     Lollipop Controls
   </a>
@@ -2131,7 +2124,6 @@
 <ul>
 <li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> AnimCap, a.k.a. Reverse Motion Capture</li>
 <li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
-<li><a href="#damping-ratio"><strong>ADDED</strong> Damping Ratio</a> One less attribute to worry about</li>
 <li><a href="#lollipop-controls"><strong>ADDED</strong> Lollipop Controls</a> Clarity where there was none</li>
 <li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> Less clutter, more joy</li>
 <li><a href="#no-graph-editor-mess"><strong>IMPROVED</strong> No Graph Editor Mess</a> Clean Graph Editor, clean mind</li>
@@ -2626,23 +2618,6 @@
 <p>With <code>Markers</code>, this isn't a problem because to Ragdoll every limb can now be independently evaluated, in parallel.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480451-f9be80ba-2579-485e-a4e4-ad92d0da4491.mp4" type="video/mp4"></video></p>
 
-<p><br></p>
-<h3 id="damping-ratio">Damping Ratio</h3>
-<p>The current <code>rdConstraint</code> nodes have 3 attributes to control their behavior.</p>
-<ul>
-<li><code>Stiffness</code></li>
-<li><code>Damping</code></li>
-<li><code>Strength</code></li>
-</ul>
-<p>Where <code>Stiffness</code> and <code>Damping</code> are both multiplied by <code>Strength * Strength</code>. For example, the final value of <code>Stiffness</code> is..</p>
-<div class="highlight"><pre><span></span><code><span class="n">final_stiffness</span> <span class="o">=</span> <span class="n">stiffness</span> <span class="o">*</span> <span class="n">strength</span> <span class="o">*</span> <span class="n">strength</span>
-</code></pre></div>
-<p>And that's great; it means you can animate just a single attribute in favour of two. Editing the ratio between the two attributes was done by changing either <code>Stiffness</code> or <code>Damping</code>.</p>
-<p>The <code>Marker</code> nodes gets rid of <code>Strength</code> and instead adds an explicit <code>Damping Ratio</code> attribute to control this ratio.</p>
-<p>Stiffness and damping is also multiplied by their associated Group and Solver.</p>
-<div class="highlight"><pre><span></span><code><span class="n">final_stiffness</span> <span class="o">=</span> <span class="n">maker</span><span class="o">.</span><span class="n">stiffness</span> <span class="o">*</span> <span class="n">group</span><span class="o">.</span><span class="n">stiffness</span> <span class="o">*</span> <span class="n">solver</span><span class="o">.</span><span class="n">stiffness</span>
-</code></pre></div>
-<p>Meaning you can control either all or one marker at a time with ease.</p>
 <p><br></p>
 <h3 id="lollipop-controls">Lollipop Controls</h3>
 <p>Sometimes, markers are added to an already busy control with tons of Channel Box entries. Lollipop controls can help organise things a little better.</p>
