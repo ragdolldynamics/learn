@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/next/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.09.27/">
       
       
         <meta name="author" content="mottosso">
@@ -1122,6 +1122,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1130,7 +1132,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1140,7 +1142,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1161,6 +1163,278 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2021.09.27
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2021.09.27
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-capture" class="md-nav__link">
+    Animation Capture
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation Capture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-1-basics" class="md-nav__link">
+    Demo 1 - Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-2-ragdoll" class="md-nav__link">
+    Demo 2 - Ragdoll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-3-inverse-kinematics" class="md-nav__link">
+    Demo 3 - Inverse Kinematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-4-real-world-example" class="md-nav__link">
+    Demo 4 - Real World Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording" class="md-nav__link">
+    Recording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-type" class="md-nav__link">
+    Input Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retarget" class="md-nav__link">
+    Retarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reassign" class="md-nav__link">
+    Reassign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reparent" class="md-nav__link">
+    Reparent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guide-space" class="md-nav__link">
+    Guide Space
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    Transitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-collision" class="md-nav__link">
+    Self Collision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-graph-editor-mess" class="md-nav__link">
+    No Graph Editor Mess
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-initial-state" class="md-nav__link">
+    No Initial State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-more-cycles" class="md-nav__link">
+    No More Cycles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lollipop-controls" class="md-nav__link">
+    Lollipop Controls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-pivot" class="md-nav__link">
+    Rotate Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-ground" class="md-nav__link">
+    Real Ground
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joints-and-the-attribute-editor" class="md-nav__link">
+    Joints and the Attribute Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-solver" class="md-nav__link">
+    Hidden Solver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-determinism" class="md-nav__link">
+    Enhanced Determinism
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-floating-licences" class="md-nav__link">
+    Multiple Floating Licences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-release" class="md-nav__link">
+    Next Release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2127,12 +2401,12 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/next.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.09.27.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Animation Capture pt. 1/4</h1>
+                  <h1>2021.09.27</h1>
                 
                 <p>Highlight for this release is <strong>Animation Capture</strong>.</p>
 <ul>
@@ -2151,6 +2425,8 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134707587-0275af62-29e3-46dc-b15f-ef68b6c6c58b.mp4" type="video/mp4"></video></p>
 
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134804422-7b2f11c7-786c-434d-9ecc-b1ac84d19c76.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="introduction">Introduction</h3>
@@ -2728,7 +3004,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-24
+      Last update: 2021-09-26
     
   </small>
 </div>
@@ -2748,6 +3024,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API Reference
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.08.28/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.08.28
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
