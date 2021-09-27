@@ -1269,6 +1269,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#new-menu" class="md-nav__link">
+    New Menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recording" class="md-nav__link">
     Recording
   </a>
@@ -2231,6 +2238,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#new-menu" class="md-nav__link">
+    New Menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recording" class="md-nav__link">
     Recording
   </a>
@@ -2696,6 +2710,71 @@
 <blockquote>
 <p>Rig and Model courtesy of Ramon Arango - <a href="https://ramonarango.gumroad.com/l/ArtemisApolloRig">Apollo Rig</a></p>
 </blockquote>
+<p><br></p>
+<h4 id="new-menu">New Menu</h4>
+<p>Let's take a moment to reflect on what we've just seen. There are 3 new nodes in Ragdoll.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th align="left">Node</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="invertme icon" width=20 src="/icons/marker.png"></td>
+<td align="left"><code>rdSolver</code></td>
+<td align="left">The "camera" that monitors "Markers" and performs all heavy-lifting.</td>
+</tr>
+<tr>
+<td><img class="invertme icon" width=20 src="/icons/suit.png"></td>
+<td align="left"><code>rdMarker</code></td>
+<td align="left">A tracking marker, something to monitor an individual control.</td>
+</tr>
+<tr>
+<td><img class="invertme icon" width=20 src="/icons/solver.png"></td>
+<td align="left"><code>rdGroup</code></td>
+<td align="left">A collection of markers, with high-level control over many markers.</td>
+</tr>
+</tbody>
+</table>
+<p>Here's the new menu. If all goes well, it will completely replace the <code>Active Rigid</code> and <code>Active Chain</code> menu items, along with <code>Controls</code> including <code>Mimic</code>. All of those things are made possible in a much easier and performant way using Markers.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134854442-bb85c407-2ecc-4a5b-bf4b-cc45f117cd23.png" /></p>
+<p>The most important elements are at the top.</p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img class="invertme icon" width=20 src="/icons/suit.png"></td>
+<td align="left"><code>Assign Single</code></td>
+<td align="left">Monitor a single object in the Maya scene. Use this for props, environment and other free-falling things.</td>
+</tr>
+<tr>
+<td align="left"><img class="invertme icon" width=20 src="/icons/marker_group.png"></td>
+<td align="left"><code>Assign Group</code></td>
+<td align="left">Monitor a series of <em>connected</em> objects, like a limb.</td>
+</tr>
+<tr>
+<td align="left"><img class="icon" width=20 src="/icons/record.png"></td>
+<td align="left"><code>Record</code></td>
+<td align="left">Transfer simulation to marked objects</td>
+</tr>
+</tbody>
+</table>
+<p>Like <code>Active Chain</code>, the order of selection determines the order in which markers assume your objects are connected. And adding more markers to a group is done by starting your selection from any point in an existing group and working your way outwards. Just like <code>Active Chain</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Limitations</p>
+<p>You currently cannot create <em>multiple</em> <code>rdSolver</code> nodes, but can work around it by importing one from another Maya scene file.</p>
+<p>The <code>Guide Space</code> is somewhat complicated. The group has one too that affects <em>all</em> markers, and per default it's set to <code>-1</code> for <code>Localspace</code>. The benefit is that you can quickly change the space for all markers by changing this one attribute. The downside is that if you want to change it for just one marker, you first need to reset this attribute to <code>0</code>.</p>
+<p>These will be addressed in the upcoming few releases.</p>
+</div>
 <p><br></p>
 <h4 id="recording">Recording</h4>
 <p>Markers can be recorded all together, or independently. For example, say you wanted animation from frame 1-100, simulate 101-150 and return to animation from 151-200. You can do that.</p>
