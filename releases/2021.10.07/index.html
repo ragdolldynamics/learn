@@ -2507,7 +2507,7 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135710838-f8fe9c13-ba0d-4f11-a41c-bce1155829b9.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Changes in Part &frac14;</p>
-<p>Let's recap what happens in the previous release.</p>
+<p>Let's recap what happened in the previous release.</p>
 <p>We tackled Evaluation which boosted performance by 2-10x by unlocking parallelism. Before, the better your character rig benefited from multithreading the <em>worse</em> it would perform with Ragdoll. Ragdoll would force any control you simulated into serial evaluation - to compute one after another - because the solver was fundamentally single-threaded.</p>
 <p>With Markers, Ragdoll separated from the overall rig evaluation, which meant (1) your rig can continue running in parallel and (2) Ragdoll could also run in parallel.</p>
 <p>Consider this example.</p>
@@ -2753,7 +2753,7 @@
 <ul>
 <li>Deleting a <code>rMarker</code> node also deletes any associated lollipop controls</li>
 <li>Deleting a <code>rGroup</code> also deletes the associated <code>rMarker</code> nodes</li>
-<li>Deleting the <code>rSolver</code> deleles all <code>rGroup</code> and <code>rMarker</code> nodes</li>
+<li>Deleting the <code>rSolver</code> deletes all <code>rGroup</code> and <code>rMarker</code> nodes</li>
 </ul>
 <p>Therefore, deleting a solver is now equivalent to <code>Delete All Physics</code>, making it much more intuitive to delete things on a whim.</p>
 <p><br></p>
@@ -2776,7 +2776,7 @@
 <p>Here are the currently known issues that we'll be fixing once a solution presents itself.</p>
 <p><br></p>
 <h4 id="motion-blur">Motion Blur</h4>
-<p>As an unintended conseqence of the optimisation and shader work, we're currently compliant with Maya's requirement for motion blur. Since all of our simulation is transform-based, it means all of what you simulate can be motion blurred, as opposed to deformer and particle-based motion.</p>
+<p>As an unintended consequence of the optimisation and shader work, we're currently compliant with Maya's requirement for motion blur. Since all of our simulation is transform-based, it means all of what you simulate can be motion blurred, as opposed to deformer and particle-based motion.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135816508-81aae73d-7f4a-4165-9af8-abbc0c074409.mp4" type="video/mp4"></video></p>
 
 <p>It won't work with any animated attributes, which makes it rather limited in what you can use it for. 🤔</p>
