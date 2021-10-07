@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ragdoll 2021.03.23 is released! This time, you can author any physics contraption in Maya, and export it to JSON for import into any other game engine or VFX software.">
+        <meta name="description" content="Performance, performance, performance">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.03.23/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.10.07/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>JSON Export - Learn Ragdoll</title>
+        <title>Animation Capture pt. 2/4 - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#json-export" class="md-skip">
+        <a href="#showcase" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JSON Export
+              Animation Capture pt. 2/4
             
           </span>
         </div>
@@ -1169,16 +1169,268 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../2021.10.07/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2021.10.07
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
         2021.10.07
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anniversary" class="md-nav__link">
+    Anniversary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manikin-rig" class="md-nav__link">
+    Manikin Rig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-to-gpu-communication" class="md-nav__link">
+    CPU to GPU Communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-change-monitoring" class="md-nav__link">
+    Connection &amp; Change Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    Future Work
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlap-group" class="md-nav__link">
+    Overlap Group
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlap Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collide-with-everything" class="md-nav__link">
+    Collide with Everything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respect-self-collision" class="md-nav__link">
+    Respect Self Collision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surgical-control" class="md-nav__link">
+    Surgical Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asleep" class="md-nav__link">
+    Asleep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignore-gravity" class="md-nav__link">
+    Ignore Gravity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide-space-20" class="md-nav__link">
+    Guide Space 2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-delete" class="md-nav__link">
+    Auto Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-button" class="md-nav__link">
+    Reset Button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-up" class="md-nav__link">
+    Z-up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-time" class="md-nav__link">
+    Auto Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-blur" class="md-nav__link">
+    Motion Blur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-offset-ikfk" class="md-nav__link">
+    Maintain Offset IK/FK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-kinematic-markers" class="md-nav__link">
+    Recording Kinematic Markers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-to-custom-attributes" class="md-nav__link">
+    Record to Custom Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slow-constraints" class="md-nav__link">
+    Slow Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -1439,152 +1691,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2021.03.23
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../2021.03.23/" class="md-nav__link">
         
 
         2021.03.23
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#json-export" class="md-nav__link">
-    JSON Export
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-install" class="md-nav__link">
-    Dynamic Install
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#active-chain" class="md-nav__link">
-    Active Chain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-constraint-attributes" class="md-nav__link">
-    Dynamic Constraint Attributes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whatz-up" class="md-nav__link">
-    What'Z-up?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simplified-menu" class="md-nav__link">
-    Simplified Menu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#greater-guide-strength" class="md-nav__link">
-    Greater Guide Strength
-  </a>
-  
-    <nav class="md-nav" aria-label="Greater Guide Strength">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#before" class="md-nav__link">
-    Before
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after" class="md-nav__link">
-    After
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crash-on-cleanup" class="md-nav__link">
-    Crash on Cleanup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bad-initial-state-on-load" class="md-nav__link">
-    Bad Initial State on Load
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rotate-order-improvement" class="md-nav__link">
-    Rotate Order Improvement
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -2081,65 +2197,51 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#json-export" class="md-nav__link">
-    JSON Export
+  <a href="#showcase" class="md-nav__link">
+    Showcase
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-install" class="md-nav__link">
-    Dynamic Install
+  <a href="#anniversary" class="md-nav__link">
+    Anniversary
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#active-chain" class="md-nav__link">
-    Active Chain
+  <a href="#manikin-rig" class="md-nav__link">
+    Manikin Rig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-constraint-attributes" class="md-nav__link">
-    Dynamic Constraint Attributes
+  <a href="#performance" class="md-nav__link">
+    Performance
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whatz-up" class="md-nav__link">
-    What'Z-up?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simplified-menu" class="md-nav__link">
-    Simplified Menu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#greater-guide-strength" class="md-nav__link">
-    Greater Guide Strength
-  </a>
-  
-    <nav class="md-nav" aria-label="Greater Guide Strength">
+    <nav class="md-nav" aria-label="Performance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#before" class="md-nav__link">
-    Before
+  <a href="#cpu-to-gpu-communication" class="md-nav__link">
+    CPU to GPU Communication
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#after" class="md-nav__link">
-    After
+  <a href="#connection-change-monitoring" class="md-nav__link">
+    Connection &amp; Change Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    Future Work
   </a>
   
 </li>
@@ -2150,22 +2252,152 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#crash-on-cleanup" class="md-nav__link">
-    Crash on Cleanup
+  <a href="#overlap-group" class="md-nav__link">
+    Overlap Group
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlap Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collide-with-everything" class="md-nav__link">
+    Collide with Everything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respect-self-collision" class="md-nav__link">
+    Respect Self Collision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surgical-control" class="md-nav__link">
+    Surgical Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asleep" class="md-nav__link">
+    Asleep
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bad-initial-state-on-load" class="md-nav__link">
-    Bad Initial State on Load
+  <a href="#ignore-gravity" class="md-nav__link">
+    Ignore Gravity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rotate-order-improvement" class="md-nav__link">
-    Rotate Order Improvement
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide-space-20" class="md-nav__link">
+    Guide Space 2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-delete" class="md-nav__link">
+    Auto Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-button" class="md-nav__link">
+    Reset Button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-up" class="md-nav__link">
+    Z-up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-time" class="md-nav__link">
+    Auto Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-blur" class="md-nav__link">
+    Motion Blur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-offset-ikfk" class="md-nav__link">
+    Maintain Offset IK/FK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-kinematic-markers" class="md-nav__link">
+    Recording Kinematic Markers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-to-custom-attributes" class="md-nav__link">
+    Record to Custom Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slow-constraints" class="md-nav__link">
+    Slow Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
   </a>
   
 </li>
@@ -2183,148 +2415,421 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.03.23.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.10.07.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2021.03.23</h1>
+                  <h1>2021.10.07</h1>
                 
-                <p>Highlight for this  release is JSON Export, this one's for you <strong>game developers</strong> out there!</p>
+                <p><img alt="performance" src="https://user-images.githubusercontent.com/2152766/136225293-9d00d280-6e8b-427e-84e1-4f0566c0fae2.png" /></p>
+<p>Highlight for this release is <strong>Performance</strong>, and is part 2/4 of the new <a href="http://localhost:8001/releases/2021.09.27/">Markers</a>.</p>
 <ul>
-<li><a href="#json-export"><strong>ADDED</strong> JSON Export</a> Run your ragdolls in Unreal, Unity or your own custom game engine</li>
-<li><a href="#active-chain"><strong>ADDED</strong> Active Chain</a> Next generation "Dynamic Control" with "chain"</li>
-<li><a href="#dynamic-constraint-attributes"><strong>ADDED</strong> Dynamic Constraint Attributes</a> Stay focused on attributes that matter</li>
-<li><a href="#whatz-up"><strong>ADDED</strong> What'Z-Up?</a> Is your up axis-Z? Ragdoll is now down with that.</li>
-<li><a href="#simplified-manu"><strong>CHANGED</strong> Simplified Menu</a> Less noisy, more focused menu</li>
-<li><a href="#dynamic-install"><strong>CHANGED</strong> Dynamic Install</a> Tighter integration into Maya's native Plug-in Manager</li>
-<li><a href="#greater-guide-strength"><strong>CHANGED</strong> Greater Guide Strength</a> Have simulation follow animation even closelier</li>
-<li><a href="#less-crashes"><strong>FIXED</strong> Less Crashes</a> Kids, say <em>no</em> to crashes</li>
-<li><a href="#custom-rotate-order"><strong>FIXED</strong> Custom Rotate Order</a> Now works as expected</li>
-<li><a href="#bad-initial-state-on-load"><strong>FIXED</strong> Bad Initial State on Load</a> Loading saved physics now works as expected</li>
+<li><a href="#performance"><strong>ADDED</strong> Performance</a> Less work, greater parallelism and more GPU</li>
+<li><a href="#overlap-groups"><strong>ADDED</strong> Overlap Groups</a> Fine control over what overlaps with what</li>
+<li><a href="#asleep"><strong>ADDED</strong> Asleep</a> Start simulating on first contact</li>
+<li><a href="#ignore-gravity"><strong>ADDED</strong> Ignore Gravity</a> Because sometimes, you don't want to play by the rules</li>
+<li><a href="#quality-of-life"><strong>ENHANCED</strong> Quality of Life</a> Automated clean-up, support for Z-up and more!</li>
 </ul>
+<h3 id="showcase">Showcase</h3>
+<p>You know the drill, we'll start with some eye candy. 🍬</p>
+<p><strong>New Shading</strong></p>
+<p>Now more like <em>actual</em> candy. Nom nom nom!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135989994-53f9f751-1cce-48f7-97a8-b907079eb645.png" /></p>
+<p><strong>Raining Ragdolls</strong></p>
+<p>Quick! Get inside!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136224776-05f997f6-c08d-4c49-b26e-59e45b5ff289.mp4" type="video/mp4"></video></p>
+
+<p><strong>Do the Robot</strong></p>
+<p>Model and Rig courtesy of <a href="https://www.linkedin.com/in/amedeoberetta/">Amedeo Beratta</a></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136040898-8b754d97-3dc1-4bc6-896c-e63186252552.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136380176-7611c527-61e9-4017-be0c-aa280b4687c3.mp4" type="video/mp4"></video></p>
+
+<p><strong>Vehicular Render</strong></p>
+<p>Made by @tris</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136041166-52db6a64-b1a7-4f13-bff3-ff503fd310bf.mp4" type="video/mp4"></video></p>
+
+<p><strong>Guide Space Mania</strong></p>
+<p>Oh the trickery you can get up to. 🥳</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<div class="admonition warning">
-<p class="admonition-title">Important!</p>
-<p>This version won't self-install like the past releases, see <a href="#dynamic-install">Dynamic Install</a> on how you need to load the plug-in via Maya's Plug-in Manager from now on.</p>
-</div>
-<p><br></p>
-<p><strong>Ragcar</strong></p>
-<p>It's a ragcar allright. You can tell by how bouncy it is!</p>
-<p><img alt="ragcar3" src="https://user-images.githubusercontent.com/2152766/112117969-d1c9c400-8bb3-11eb-9247-1e3c6d49fc74.gif" /></p>
-<p><strong>Knocking things around</strong></p>
-<p>No obstacle is too tall for ragcar.</p>
-<p><img alt="ragcar2" src="https://user-images.githubusercontent.com/2152766/112117979-d42c1e00-8bb3-11eb-873a-53e87bc2b328.gif" /></p>
-<p><strong>A look underneath</strong></p>
-<p>The parts are all there, it's how it would work in real life if you put an engine in it. :D</p>
-<p><img alt="madmax9" src="https://user-images.githubusercontent.com/2152766/112167914-c0e77580-8be8-11eb-8654-e4c11eb2fbec.gif" /></p>
+<h3 id="anniversary">Anniversary</h3>
+<p>That's right! Ragdoll turned 1 this week! 🥳</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136373629-38e5310b-67a9-424c-b43b-a1c7a31ea9ca.mp4" type="video/mp4"></video></p>
+
+<p>In my original business plan, I had written..</p>
 <blockquote>
-<p>Vehicle model from <a href="https://www.mecabricks.com/en/models/7X2RJxJY2ZY">Mecabricks</a>.</p>
+<p>"Revenue, year 1: £20,000"</p>
 </blockquote>
+<p>..which was blissfully optimistic. However! I'm happy to say that Ragdoll blew past this in the first 6 days into launch, on the 28<sup>th</sup> of July this year. Very few startups achieve this amount of revenue in year 1; the vast majority achieve <em>£0</em> for the first number of years (I watch a lot of Dragon's Den 😅), the expectation being that they will regain their investment once enough value has been created. But given we're past this point already, this to me is validation that <em>you want this</em>.</p>
+<p>So, let's keep it going, shall we? :)</p>
 <p><br></p>
-<h2 id="json-export">JSON Export</h2>
-<p><img width=200 src=https://user-images.githubusercontent.com/2152766/111428442-684b4080-86ef-11eb-8919-ea14e85555ec.png></p>
-<p>In <a href="/releases/2021.03.01/#cmdsragdolldump">2021.03.01</a> we introduced <code>cmds.ragdollDump</code> to get a copy of all rigids in the form of a JSON dictionary.</p>
-<p>This release includes <strong>all initial state</strong> for the simulation, such that you can reproduce the results you see in Maya in a game engine, like Unreal, Unity, CryEngine or your own custom game engine. Or why not Houdini, Blender or 3dsMax?</p>
-<p>This enables you to use Maya as an authoring platform for physics anywhere.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
-
-<span class="c1"># Convert big string to structured dictionary</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">components</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="n">components</span><span class="p">[</span><span class="s2">&quot;NameComponents&quot;</span><span class="p">][</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="c1"># |root|pelvis|rRigid1</span>
-<span class="c1"># |root|pelvis|spine|rRigid2</span>
-<span class="c1"># |root|pelvis|spine2|rRigid3</span>
-<span class="c1"># ...</span>
-</code></pre></div>
-<p>Here's an example of what to expect from the output.</p>
-<ul>
-<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917"><code>output_example.json</code></a></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
-        <span class="o">...</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
-        <span class="o">...</span>
-      <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>See the new Serialisation documentation for an overview, examples and data reference.</p>
-<ul>
-<li><a href="https://learn.ragdolldynamics.com/serialisation">https://learn.ragdolldynamics.com/serialisation</a></li>
-</ul>
-<p><br></p>
-<h2 id="dynamic-install">Dynamic Install</h2>
-<p>Previous releases shipped with a <code>userSetup.py</code> that triggered on launch of Maya. This made it easy to get setup, but made it challenging to <em>uninstall</em> without physically removing files off of the file system (hint: <code>~/Documents/maya/modules/Ragdoll.mod</code>).</p>
-<p>This release associates install with plug-in load.</p>
-<p><strong>Install</strong></p>
-<p><img alt="ragdollinstall" src="https://user-images.githubusercontent.com/2152766/111457614-55953380-8710-11eb-99a4-f2fb7cc67771.gif" /></p>
-<p><strong>Uninstall</strong></p>
-<p><img alt="ragdolluninstall" src="https://user-images.githubusercontent.com/2152766/111457654-6776d680-8710-11eb-964c-a31712f7875d.gif" /></p>
-<p><br></p>
-<h2 id="active-chain">Active Chain</h2>
-<p>Dynamic Control has been renamed <code>Active Chain</code>.</p>
-<p>Turns out, what Dynamic Control was really all about was a generic chain that can also be turned into hierarchies of chains - or "branches" - to form a tree. Even a literal one!</p>
-<p><img alt="tree1" src="https://user-images.githubusercontent.com/2152766/112037571-c33ec680-8b39-11eb-80e4-c906db27789d.gif" />
-<img alt="tree3" src="https://user-images.githubusercontent.com/2152766/112037751-f5e8bf00-8b39-11eb-8db1-599f7032d4cc.gif" /></p>
-<p><br></p>
-<h2 id="dynamic-constraint-attributes">Dynamic Constraint Attributes</h2>
-<p>Now whatever attributes are relevant show up in the Channel Box, and stay relevant as you make changes. Similar to how the <code>rdRigid.shapeType</code> attribute updates the <code>shapeExtents</code> and <code>shapeOffset</code> attributes!</p>
-<p><img alt="ragdolldynamicconstraintattrs" src="https://user-images.githubusercontent.com/2152766/112036474-976f1100-8b38-11eb-90d6-0de3e613303d.gif" /></p>
-<p><br></p>
-<h2 id="whatz-up">What'Z-up?</h2>
-<p>Ragdoll now understands when the up-axis is Z rather than the default Y.</p>
-<p><img alt="ragdollzup" src="https://user-images.githubusercontent.com/2152766/112266506-013c0780-8c6c-11eb-926f-8fde1cb0e4e2.gif" /></p>
-<p><br></p>
-<h2 id="simplified-menu">Simplified Menu</h2>
-<p>Items have been re-arranged and grouped together to be easier to find and less cluttered.</p>
-<p><img alt="newmenu" src="https://user-images.githubusercontent.com/2152766/112038133-67287200-8b3a-11eb-875b-885c552aae93.gif" /></p>
-<p><br></p>
-<h2 id="greater-guide-strength">Greater Guide Strength</h2>
-<p>The solver <code>Iterations</code> determines how high your <code>Guide Strength</code> attribute can go. Per default, <code>Iterations</code> was set to <code>1</code> which enabled strengths between <code>0-5</code> or so until their effect dimished.</p>
-<p>This release increases this default value to <code>4</code> for ranges between <code>0-100</code>, which means "incredibly high!". The change comes at a minor performance impact - estimated between 1-5% - so if you find the need to optimise, lower this value back to 2 or 1.</p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Bear in mind that the number of iterations are spread across all rigid in your scene. Meaning twice the number of rigids would half the amount of iterations dedicated to each one.</p>
+<h3 id="manikin-rig">Manikin Rig</h3>
+<p>Throughout this tutorial, I'll be using this guy here. Feel free to download and play around with it.</p>
+<div class="hboxlayout">
+<a href="https://files.ragdolldynamics.com/api/public/dl/4Lok2bRj/manikin_v001.zip" class="button red"><b>Download Manikin</b></a>
 </div>
-<h4 id="before">Before</h4>
-<p><img alt="ragdolliterations3" src="https://user-images.githubusercontent.com/2152766/111459062-21bb0d80-8712-11eb-9eb9-1449d8352cab.gif" /></p>
-<h4 id="after">After</h4>
-<p><img alt="ragdolliterations4" src="https://user-images.githubusercontent.com/2152766/111459108-2da6cf80-8712-11eb-89a0-a2c7a7dc1675.gif" /></p>
+
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/136388181-d69f8e20-2530-4b5e-8317-1473043523dd.png" /></p>
 <p><br></p>
-<h2 id="crash-on-cleanup">Crash on Cleanup</h2>
-<p>In rare cases, Ragdoll could crash Maya due to accessing memory it had no business accessing. Those have now been patched up and refactored for a more stable, crash-free experience!</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111773312-eea98300-88a5-11eb-9f52-289b59125678.png" /></p>
+<h3 id="performance">Performance</h3>
+<p>This release was all about performance, so how did we do?</p>
+<p>In short, very well! We're now a lot closer to the capabilities of your hardware with a lot less waste. Because you see, software development is a lot like Jenga. You start off with a tower full of bricks, but every brick adds to the overall weight of the tower. And not every brick is necessary to keep it standing. The Eiffel Tower is an example of what a structure can look like with the absolute minimal amount of material. It is an <em>optimal</em> shape; anything added is wasted weight, anything removed would sacrifice stability. That is the structure we've been working towards with this release.</p>
+<p>In terms of time spent, Ragdoll has three stages.</p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Stage</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>Evaluation</code></td>
+<td align="left">This is primarily your character rig - the transform hierarchy, constraints, any deformers, and so forth. It is how data is passed from Maya into Ragdoll.</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>Simulation</code></td>
+<td align="left">Once data has been aquired, Ragdoll considers all of it and applies forces, solves constraints, contacts, that kind of thing.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><code>Rendering</code></td>
+<td align="left">Finally, we need pixels. In the case of Ragdoll, this means generating and uploading geometry to the GPU; including capsules but also your meshes which are converted into "convex hulls".</td>
+</tr>
+</tbody>
+</table>
+<p>Simulation has always been fast and in the previous release, we focused entirely on workflow which had an indirect impact on <code>Evaluation</code> and <code>Rendering</code>. One got faster, but the other got slower.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135710838-f8fe9c13-ba0d-4f11-a41c-bce1155829b9.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Changes in Part &frac14;</p>
+<p>Let's recap what happens in the previous release.</p>
+<p>We tackled Evaluation which boosted performance by 2-10x by unlocking parallelism. Before, the better your character rig benefited from multithreading the <em>worse</em> it would perform with Ragdoll. Ragdoll would force any control you simulated into serial evaluation - to compute one after another - because the solver was fundamentally single-threaded.</p>
+<p>With Markers, Ragdoll separated from the overall rig evaluation, which meant (1) your rig can continue running in parallel and (2) Ragdoll could also run in parallel.</p>
+<p>Consider this example.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Rigids</th>
+<th align="left">Markers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="before" src="https://user-images.githubusercontent.com/2152766/135705272-0ea9e006-ed66-4f48-a442-42255844104d.png" /></td>
+<td align="left"><img alt="after" src="https://user-images.githubusercontent.com/2152766/135705269-363db122-7fe9-485d-b5a7-50af36335258.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>This is how Maya scheduled evaluation for this scene with <code>Rigid</code> versus <code>Marker</code>. To the left, everything runs one after the other. It's terrible. To the right, every box is evaluated in parallel. Which means the more boxes and cores you have, the better utilisation you get.</p>
+<p>The scene itself is very simple, it's this one here.</p>
+<p><img width=300 src=https://user-images.githubusercontent.com/2152766/135705381-df6b9791-b1b5-4aea-818f-660ff6bafe43.png></p>
+<p>So evaluation got faster, but rendering got slower. All-in-all we gained about 100% performance.</p>
+</div>
+<p>With this release, we'll tackle that rendering block. Let's have a look at what's changed, in order of most-to-least significance.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Topic</th>
+<th align="left">Savings</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Less CPU to GPU communication</td>
+<td align="left">1550x</td>
+<td align="left">More buffers, less uniforms</td>
+</tr>
+<tr>
+<td align="left">Connection Monitoring</td>
+<td align="left">40x</td>
+<td align="left">Less dependence on time, more on physical connections being made and unmade</td>
+</tr>
+<tr>
+<td align="left">Change Monitoring</td>
+<td align="left">40x</td>
+<td align="left">Ignore anything that hasn't actually changed</td>
+</tr>
+<tr>
+<td align="left">Less Dirty Propagation</td>
+<td align="left">3x</td>
+<td align="left">Less of a shotgun blast, more like a sniper</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h2 id="bad-initial-state-on-load">Bad Initial State on Load</h2>
-<p>In rare cases, opening a scene could lead to <em>some</em> controls being badly positioned. This could happen if the control you made dynamic was parented to a group with no values. That made the parent and local matrices cancel out, producing an identity matrix. Maya doesn't normally save attributes that are equal to their default values, and this includes matrices whose defaults are the identity matrix.</p>
-<p>This has now been fixed.</p>
+<h4 id="cpu-to-gpu-communication">CPU to GPU Communication</h4>
+<p>The previous release, and each one before it, had 1 shader per rigid. In the case of 600 rigid bodies, that meant 600 shaders. 600 shaders means 600 parameter updates of primarily color and 600 unique draw calls.</p>
+<p>On top of this, all geometry was regenerated and re-uploaded to the GPU on every frame. Robust, but not very fast.</p>
+<p>This release consolidates all shaders into <em>one</em>, colors are uploaded only once alongside their geometry and rendered using a custom GLSL shader (i.e. OpenGL 3.3).</p>
+<details class="info"><summary>What about DirectX?</summary><p>If you are on Windows and can't use OpenGL for whichever reason, there is backwards compatibility built-in.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">options</span>
+<span class="n">options</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;useShaders&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>Or via the Ragdoll Preferences.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135706370-250f4ebb-93e7-4752-9062-ffad65de47ad.png" /></p>
+<p>Bearing in mind this will cost you 50% of the rendering performance and won't benefit from future shading related features and improvements. The option will remain until it's clear whether and how much it is actually used. (Let us know in <a href="https://ragdolldynamics.com/chat">the chat!</a>)</p>
+</details>
+<p>Let's have a look at how this change affects your overall experience.</p>
+<p><strong>Before (7fps)</strong></p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135825072-fb1b52b0-34bc-493c-a960-be8537a38e27.mp4" type="video/mp4"></video></p>
+<p><strong>After (130 fps)</strong></p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135825078-d3c876a2-6de7-42b4-8485-6d8947e94cec.mp4" type="video/mp4"></video></p>
+<p>A closer look reveals exactly where this improvement comes from.</p>
+<p><strong>Before</strong></p>
+<p>This block is what we control, it's the Ragdoll rendering pipeline taking a whopping <strong>93 ms</strong> per refresh.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135825217-017f37fa-dae0-457f-8a33-cc0c8b6419c1.png" /></p>
+<p><strong>After</strong></p>
+<p>With this release, this number dropped to <strong>0.06ms</strong> (58 microseconds) that's an improvement of 1550x (!).</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135819476-4d2c90d9-7f16-4f6b-a809-b18f60aec826.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">What about the other blocks?</p>
+<p>The bottleneck has now moved to that green one and all of those blue, and those are Maya's internal rendering pipeline.</p>
+<p>There isn't much we can do to <em>directly</em> impact it; it's mostly out of our hands. However, by massaging our data more and making life easier for Maya it should be possible to reduce these as well.</p>
+<p>See <a href="#future-work">Future Work</a> for details on next steps, and if this is something you, fellow reader, is familiar with do <a href="https://ragdolldynamics/contact">get in touch!</a></p>
+</div>
+<p>Finally, as a result of having complete control over the shader running on the GPU, we're now able to more intimately design it to look the way we want. Expect more refinements here over time.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Before</th>
+<th align="left">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/136246481-e1ed679c-28ea-4e36-a15c-b1055f3db6f3.png" /></td>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/136246710-2cba7c5e-42da-4491-ab10-81ba88904232.png" /></td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h2 id="rotate-order-improvement">Rotate Order Improvement</h2>
-<p>In previous releases, any rotation order other than XYZ (the default) would make your rotations all whack. Ragdoll didn't know how to translate physics into any order other than XYZ, so it would put them in the wrong place.</p>
-<p>In the last release, I added a warning for that and in this release I've lifted that warning somewhat. Most rotation orders works well, but I have spotted rare instances of one axis flipping.</p>
-<p>Here's the problem.</p>
-<p><img alt="rotateorder" src="https://user-images.githubusercontent.com/2152766/112039239-bd49e500-8b3b-11eb-99d1-ceb7b18a4b72.gif" /></p>
-<p>See how arms and torso flips? It tends to happen around the 90 and 180 degree values, values below that normally look fine. This will be fixed in a future release, one way or another!</p>
+<h4 id="connection-change-monitoring">Connection &amp; Change Monitoring</h4>
+<p>In the previous release, and all versions of Ragdoll so far, we've tasked Maya with evaluating every plug on every frame, including the heavy-duty plugs between <code>Rigid Body</code> -&gt; <code>Solver</code>.</p>
+<p>Here's what this felt like in a scenario of 600 unique objects.</p>
+<p><strong>Before (5 fps)</strong></p>
+<p>Painful! The reason is because even though we're only moving a single box, Ragdoll checks-in with all other boxes too.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135825726-53b76429-0d05-4fa3-847c-19c825d0c34d.mp4" type="video/mp4"></video></p>
+
+<p><strong>After (90 fps)</strong></p>
+<p>Blissful. In this case, only one of the boxes is actually updated, as one would expect.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135825732-ca3631a2-2920-428a-9f8d-2cb165a4531a.mp4" type="video/mp4"></video></p>
+
+<p>Let's have a closer look at where performance is going here.</p>
+<p><strong>Before</strong></p>
+<p>Oh that's ghastly. Not only does it spend time evaluating all of those boxes, but it's making the solver take much longer consolidating the results taking a whopping <strong>56 ms</strong>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135825628-e671a785-38ef-4c2f-8d52-2a33a1c4b099.png" /></p>
+<p><strong>After</strong></p>
+<p>Whereas now, as one would expect, we're only evaluating this one box in a total of <strong>0.7ms</strong>, resulting in a performance improvement 80x.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135825659-a2f96650-1d84-4994-885f-e9d10fdaa3e7.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">That looks like 3?</p>
+<p>And that's true, it still makes three separate calls to this one box. Which means there's more room to optimise here, and we'll get there.</p>
+<p>Needless to say, this happened before as well but was obscured by how many calls there actually are. Luckily, at least two of these calls happen in parallel.</p>
+</div>
+<p><strong>600 capsules</strong></p>
+<p>The current framerate on 600 unique objects, something for future Ragdoll to try and compete with. For reference, an average ragdoll consists of about 20-30 objects.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135828652-cc0ef941-a6ad-4ecd-9c9d-f69469a29a17.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="future-work">Future Work</h4>
+<p>There is at least 4-16x performance left on the table for specialised cases.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Work</th>
+<th align="left">Savings</th>
+<th align="left">Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Optimised Render Items</td>
+<td align="left">4x</td>
+<td align="left">Native Maya still renders 4x faster than us, which means there's more things we can do.</td>
+</tr>
+<tr>
+<td align="left">Instancing for Rendering</td>
+<td align="left">2-4x</td>
+<td align="left">Every render item is currently unique which means neither Maya nor your GPU is able to reuse geometry. Instancing is how games is able to render millions of objects on-screen at 60 fps, and best we can hope for is thousands.</td>
+</tr>
+<tr>
+<td align="left">Instancing for Simulation</td>
+<td align="left">2-4x</td>
+<td align="left">Likewise, every physics object is unique and, again, instancing in simulation is how games is able to run destruction and have thousands of objects interact in real-time.</td>
+</tr>
+</tbody>
+</table>
+<p>The challenge in both of these is deduplication; of identifying which of the many shapes you use can reuse their geometry.</p>
+<p><br></p>
+<h3 id="overlap-group">Overlap Group</h3>
+<p>Specify which markers may overlap rather than collide. This can be useful to enable dense areas of a character, like the clavicles, where there is natural overlap amongst large shapes like with the neck and spine.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Value</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-1</code></td>
+<td align="left">No overlap allowed</td>
+</tr>
+<tr>
+<td align="left"><code>0</code></td>
+<td align="left">Default, respects self-collision on the group (if any)</td>
+</tr>
+<tr>
+<td align="left"><code>1-255</code></td>
+<td align="left">Overlap everything with the same number</td>
+</tr>
+</tbody>
+</table>
+<p>An <code>rdMarker</code> part of a <code>rdGroup</code> can get an overlap group assigned procedurally, based on other members of that group. For example, in a complete ragdoll, all markers are part of the same group. So a <code>Self Collide = On</code> means these will all be given the same overlap group.</p>
+<p>If it isn't in a group, then <code>0</code> is the same as <code>-1</code>, in that it will collide with everything.</p>
+<p>Let's have a look at a few scenarios.</p>
+<p><br></p>
+<h4 id="collide-with-everything">Collide with Everything</h4>
+<p>In this example, every marker is part of the same group. The group has <code>Self Collide = Off</code>, which is fine for just about every marker <em>except the fingers</em>. In that case, we <em>do</em> want self-collision, so they are given the group <code>-1</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136033654-9e84313f-d2f8-4e97-a14f-600154dfd709.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="respect-self-collision">Respect Self Collision</h4>
+<p>In this case, we're happy with a default group of <code>0</code> since we don't need anything to self collide. Especially these clavicles that overlap significantly!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136034921-e9fd364b-9889-430c-8ab2-215ab5b998f1.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="surgical-control">Surgical Control</h4>
+<p>Finally, for the very specific cases of wanting two or more markers to overlap. Notice how we give both the ground and 3 of the boxes an <code>Overlap Group = 5</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136040503-66728dee-d4f9-4411-bd08-9bf18043c334.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="asleep">Asleep</h3>
+<p>Sometimes, you want things to stay put until something comes into contact with it. That's when you can tell a marker to start asleep, and "wake up" when necessary.</p>
+<video class="poster" autoplay="autoplay" loop="loop" width="300px">
+    <source src="https://user-images.githubusercontent.com/2152766/136384036-32168830-8663-4457-8913-e350e0e51d4f.mp4" type="video/mp4">
+</video>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136384199-17880dc5-7485-48c0-b5d1-3c096486a8a4.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="ignore-gravity">Ignore Gravity</h3>
+<p>It surrounds us. It penetrates us. It binds the galaxy together. But sometimes, you just don't care.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136386633-7e43b92a-f6f9-4e02-9c8c-a7154935829b.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="quality-of-life">Quality of Life</h3>
+<p>A few things to make your day that much more bright. 🌞</p>
+<p><br></p>
+<h4 id="guide-space-20">Guide Space 2.0</h4>
+<p>In the previous release, we introduced <code>Guide Space</code>. Which was a quick way of controlling whether a simulation should follow your animation in..</p>
+<ol>
+<li>Local Space</li>
+<li>World Space</li>
+<li>Both</li>
+</ol>
+<p>But it was challenging to control, not very obvious. Especially with how it was also taking into account its "group" guide space. This release addresses this by enabling you to specify a guide space for <em>all</em> markers and selectively override only the ones you're interested in. Just like how the <code>Input Space</code> works.</p>
+<p><strong>Group Guide Space</strong></p>
+<p>Override all guide spaces, by editing the group.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136387369-6acdd516-e42c-4913-9e41-78d0c4adb6d0.mp4" type="video/mp4"></video></p>
+
+<p><strong>Marker Guide Space</strong></p>
+<p>Or gain surgical control over guide space per-marker.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136387375-64a0101f-501a-469f-b4c0-733cbc3a194f.mp4" type="video/mp4"></video></p>
+
+<p><strong>Have Fun</strong></p>
+<p>🤭</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="auto-delete">Auto Delete</h4>
+<p>The <code>Delete All Physics</code> menu command does what it says on the tin; it deletes all Ragdoll nodes from your Maya scene. But deleting a node, such as the new <code>rSolver</code> left behind anything associated with it, like <code>rGroup</code> and any <code>rMarker</code> nodes.</p>
+<p>This releases addresses this by automatically removing anything that depends on the node you delete. For example..</p>
+<ul>
+<li>Deleting a <code>rMarker</code> node also deletes any associated lollipop controls</li>
+<li>Deleting a <code>rGroup</code> also deletes the associated <code>rMarker</code> nodes</li>
+<li>Deleting the <code>rSolver</code> deleles all <code>rGroup</code> and <code>rMarker</code> nodes</li>
+</ul>
+<p>Therefore, deleting a solver is now equivalent to <code>Delete All Physics</code>, making it much more intuitive to delete things on a whim.</p>
+<p><br></p>
+<h4 id="reset-button">Reset Button</h4>
+<p>Minor cosmetic improvement, the <code>Reset to Default</code> button now has an icon so you can actually <em>tell</em> it's a reset button (and not a bug, as many have pointed out 😅).</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134865922-07b55df5-1a88-4d5c-850c-bcc6976ee1d9.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="z-up">Z-up</h4>
+<p>The default plane and solver offset was a off in the previous release, this fixes that. You can also manually re-adjust the plane and remove and orientation from the solver node to fix it locally, the solver itself is A-OK.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135707451-00b49389-47b6-4d4e-8798-2dbe34532c2f.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="auto-time">Auto Time</h4>
+<p>Rather than having to specify which frame to start simulating at, Ragdoll can now keep track of your animation start frame. Either the start of the <em>range</em>, or the full timeline. Or, you can still set a <code>Custom</code> start time for when you do care about specifics.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/136388759-8cf91122-c779-4425-9c5b-492597595262.png" /></p>
+<p><br></p>
+<h3 id="limitations">Limitations</h3>
+<p>Monitoring for and responding to changes is a hard problem.</p>
+<p>Odds are some things aren't updating the way you expect, which could affect viewport rendering, or worse, the actual simulation. If you encounter any such issues, please let us know in <a href="https://ragdolldynamics.com/chat">the chat</a> or ping me directly at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#99;&#117;&#115;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#109;&#97;&#114;&#99;&#117;&#115;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a></p>
+<p>Here are the currently known issues that we'll be fixing once a solution presents itself.</p>
+<p><br></p>
+<h4 id="motion-blur">Motion Blur</h4>
+<p>As an unintended conseqence of the optimisation and shader work, we're currently compliant with Maya's requirement for motion blur. Since all of our simulation is transform-based, it means all of what you simulate can be motion blurred, as opposed to deformer and particle-based motion.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135816508-81aae73d-7f4a-4165-9af8-abbc0c074409.mp4" type="video/mp4"></video></p>
+
+<p>It won't work with any animated attributes, which makes it rather limited in what you can use it for. 🤔</p>
+<p><br></p>
+<h4 id="maintain-offset-ikfk">Maintain Offset IK/FK</h4>
+<p>If you retarget a marker, the difference between the original and target is stored.</p>
+<p>When you record, you have the option to <code>Maintain Offset</code>. That's important if the assigned control has a different position and/or orientation than the destination control. For example, you can assign to a joint, but record onto a NURBS control.</p>
+<p>For example, IK joints are assigned markers but are retargeted onto FK controls, it's important that you retarget when they are both in a similar pose. Otherwise, the difference between them will remain after recording.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136211952-61910881-e9d0-4069-898a-afb870c39860.mp4" type="video/mp4"></video></p>
+<p>To combat this, you have two options.</p>
+<ol>
+<li>Do not maintain offset</li>
+<li>Make sure IK and FK match when you <code>Retarget</code></li>
+</ol>
+<p>(1) may not always be an option. If the position and/or orientation of an assigned control is simply different, then there isn't much you can do. :(</p>
+<p>(2) is your best option. If you make a mistake, you can always re-retarget to the same control again, and the offset will be updated.</p>
+<p><br></p>
+<h4 id="recording-kinematic-markers">Recording Kinematic Markers</h4>
+<p>When a marker treats the input as <code>Kinematic</code>, it means it won't simulate it. It'll be 100% locked to animation. If that's the case, then there's really no point in recording those keys, right? Because they'd be 100% identical to the animation?</p>
+<p>Except! If there's a parent, then we'll still need those keys to compensate for the <em>parent</em> not being kinematic.</p>
+<p><strong>Problem</strong></p>
+<p>Let's record <em>without</em> kinematic keys. Notice how the hand isn't given any keys, even though it needed them?</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136213022-be377129-b34f-4877-8aa9-ab0bd27b8ded.mp4" type="video/mp4"></video></p>
+
+<p><strong>Solution</strong></p>
+<p>Record <em>all</em> keys, and the hand - even though kinematic - will still get recorded.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136213048-d79142e9-b545-4e40-9ec3-17054d524460.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="record-to-custom-attributes">Record to Custom Attributes</h4>
+<p>Sometimes, rotation isn't coming from <code>Rotate X</code> but rather a custom <code>Ball Roll</code> attribute on a different IK control.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136360430-d59f0e7c-f268-4053-ad8f-9b915c1f42f5.mp4" type="video/mp4"></video></p>
+
+<p>As Ragdoll only understands <code>Translate</code> and <code>Rotate</code>, how would you go about recording onto this attribute!? Here's what you can do.</p>
+<ol>
+<li>Create a new Locator</li>
+<li>Retarget the foot to this Locator</li>
+<li>Connect <code>Locator.rotateX -&gt; R_foot_CTL.ballRoll</code></li>
+</ol>
+<p>Now Ragdoll will record onto a familiar channel, and <em>Maya</em> will handle the conversion back onto the rig.</p>
+<p><br></p>
+<h4 id="slow-constraints">Slow Constraints</h4>
+<p>Like in earlier versions, drawing constraints are the slowest part. If you don't need them, disable them. You can do that either on the <code>rSolver</code> node, or individually per <code>rMarker</code> node.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136005274-cebbe043-d356-4350-af77-51cefe4aa2b3.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="resources">Resources</h3>
+<p>Some well-hidden but essential resources for any of the above. If you are into anything related to Maya plug-in development and performance, you'll treasure these as I have.</p>
+<ul>
+<li><a href="https://download.autodesk.com/us/company/files/UsingParallelMaya/2020/UsingParallelMaya.html">Parallel Evaluation</a></li>
+<li><a href="images.autodesk.com/adsk/files/VP2_API_Porting_Guide_for_Locators.pdf">VP2 API Porting Guide for Locators</a></li>
+<li><a href="images.autodesk.com/adsk/files/VP2_API_Porting_Guide0.pdf">VP2 API Porting Guide Part 1</a></li>
+<li><a href="images.autodesk.com/adsk/files/VP2_API_Porting_Guide_Details0.pdf">VP2 API Porting Guide Part 2</a></li>
+</ul>
                 
                   
                     
@@ -2333,7 +2838,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-03-26
+      Last update: 2021-10-07
     
   </small>
 </div>
@@ -2357,7 +2862,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2021.03.25/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2366,19 +2871,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2021.03.25
+                API Reference
               </div>
             </div>
           </a>
         
         
-          <a href="../2021.03.11/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2021.09.27/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2021.03.11
+                2021.09.27
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
