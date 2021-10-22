@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Recording Performance">
+        <meta name="description" content="Linking and Caching">
       
       
       
@@ -1950,22 +1950,137 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    Performance
+  <a href="#manikin-rig" class="md-nav__link">
+    Manikin Rig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limits" class="md-nav__link">
-    Limits
+  <a href="#solver-linking" class="md-nav__link">
+    Solver Linking
   </a>
+  
+    <nav class="md-nav" aria-label="Solver Linking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#constraints" class="md-nav__link">
-    Constraints
+  <a href="#solver-caching" class="md-nav__link">
+    Solver Caching
+  </a>
+  
+    <nav class="md-nav" aria-label="Solver Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-limits" class="md-nav__link">
+    Marker Limits
+  </a>
+  
+    <nav class="md-nav" aria-label="Marker Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hinge-limit" class="md-nav__link">
+    Hinge Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-limit" class="md-nav__link">
+    Ragdoll Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-limit" class="md-nav__link">
+    Custom Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis" class="md-nav__link">
+    Axis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-vs-offset" class="md-nav__link">
+    Rotation vs Offset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-constraints" class="md-nav__link">
+    Marker Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Marker Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weld" class="md-nav__link">
+    Weld
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin" class="md-nav__link">
+    Pin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recording-performance" class="md-nav__link">
+    Recording Performance
   </a>
   
 </li>
@@ -1990,22 +2105,241 @@
                 
                   <h1>Animation Capture pt. 3/4</h1>
                 
-                <p>Highlight for this release is <strong>Recording Performance</strong>, and is part 3 out of 4 of the new <a href="/releases/2021.09.27/">Markers</a>.</p>
+                <video autoplay="" class="poster" muted="" loop="" controls="" height="30%" width="100%"><source src="https://user-images.githubusercontent.com/2152766/138500034-d44bc5e4-1c21-46ef-be61-8adb9ed50bdc.mp4" type="video/mp4"></video>
+
+<p>Highlight for this release is <strong>Linking and Caching</strong>, and is part 3 out of 4 of the new <a href="/releases/2021.09.27/">Markers</a>.</p>
 <ul>
-<li><a href="#performance"><strong>ADDED</strong> Performance</a> Faster recording is what we all want</li>
-<li><a href="#limits"><strong>ADDED</strong> Markers &amp; Limits</a> On par with the previous constraints, but much easier to work with</li>
-<li><a href="#constraints"><strong>ADDED</strong> Markers &amp; Constraints</a> That's right!</li>
+<li><a href="#solver-linking"><strong>ADDED</strong> Solver Linking</a> Run two or more solvers together as one</li>
+<li><a href="#solver-caching"><strong>ADDED</strong> Solver Caching</a> Run once and update on-demand</li>
+<li><a href="#marker-limits"><strong>ADDED</strong> Marker Limits</a> On par with the previous constraints, but much easier to work with</li>
+<li><a href="#marker-constraints"><strong>ADDED</strong> Marker Constraints</a> Including Soft Pin!</li>
+<li><a href="#recording-performance"><strong>ADDED</strong> Recording Performance</a> A bit faster recording</li>
 </ul>
 <h3 id="showcase">Showcase</h3>
+<p>Let's start these notes with some examples of what you can do with all of the new features added. 🥰</p>
+<p><strong>Best Friends, No Matter What</strong></p>
+<p>Two referenced characters, their solvers linked.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137677733-af55a032-aabe-49e4-af6f-253086b68be3.mp4" type="video/mp4"></video></p>
+
+<p><strong>Hang On!</strong></p>
+<p>The new <code>Distance Constraint</code> at work.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138250857-27c10b93-4fc4-4b96-bb55-ba31407cf57b.mp4" type="video/mp4"></video></p>
+
+<p><strong>Dance Baby!</strong></p>
+<p>An example of the new Pin Constraint for Markers, working alongside a the Distance Constraint and regular old pose matching.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138433045-cd14d52c-a54e-4703-a858-42f702c5f5b4.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
-<h3 id="performance">Performance</h3>
+<h3 id="manikin-rig">Manikin Rig</h3>
+<p>Updated with <em>limits</em> from this release.</p>
+<p>As before, this guy can either be opened or referenced into your scene. See <a href="#solver-linking">Solver Linking</a> for how you can reference <em>multiple</em> characters into the same simulation.</p>
+<div class="hboxlayout">
+<a href="https://files.ragdolldynamics.com/api/public/dl/4Lok2bRj/manikin_v002.zip" class="button red"><b>Download Manikin</b></a>
+</div>
+
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/138433444-101076cf-566a-4b2a-ac8f-a319f8ddc1d2.png" /></p>
 <p><br></p>
-<h3 id="limits">Limits</h3>
+<h3 id="solver-linking">Solver Linking</h3>
+<p>Reference two characters, link their solvers.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/138452628-3cf97eb1-876f-43f5-8d1c-1a3dbd0eaecb.png" /></p>
+<p>Until now, you've been able to author physics using <code>Active Chain</code> and combine scenes using the <code>Combine Scene</code> menu item. That would transfer all connected rigids from one scene to another.</p>
+<p>But, that feature is <em>destructive</em>. There's no way to "uncombine" and even if you could, there's no record of what was originally combined.</p>
+<p>Let me introduce <code>Solver Linking</code>, a lightweight and non-destructive alternative.</p>
+<p><strong>Linking</strong></p>
+<p>This fellow is referenced twice, and get their solvers linked together.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137937277-daef1729-64e0-4abb-a6a3-add67b72b848.mp4" type="video/mp4"></video></p>
+
+<p><strong>Unlinking</strong></p>
+<p>Unlinking restores their previous behavior exactly.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137937281-7f71cacf-f591-494b-bbdc-14365b631000.mp4" type="video/mp4"></video></p>
+
+<div class="admonition question">
+<p class="admonition-title">That's neat, but can you..</p>
+<p>I know exactly what you're thinking, I was thinking the same thing.</p>
+<p>Can you link a solver to another solver that is also linked? So that I can build a <em>network</em> of simple solvers that all work together to form one <em>complex</em> solver?</p>
+<p>Yes. Yes, you can. 🤭 See below.</p>
+</div>
+<p><br></p>
+<h4 id="example">Example</h4>
+<p>Here are 2 assets, a manikin and a backpack.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Manikin</th>
+<th align="left">Backback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/138450294-4582e087-0472-436c-97cc-cf99dffb9fa2.png" /></td>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/138450174-10295b96-3527-4b1f-9904-d58994fbb064.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>The backback and manikin has been combined into one, which is then referenced twice into the final scene for a total of 4 unique solvers.</p>
+<p><strong>Non-destructively link solvers</strong></p>
+<p>Notice the <em>hierarchy</em> of solvers formed here, enabling you to build complex solvers out of many small solvers.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137920028-d0be982a-b6a1-45c3-a2fe-19ebd0e46632.mp4" type="video/mp4"></video></p>
+
+<p><strong>Non-destructively unlinking too</strong></p>
+<p>Likewise, safely deconstruct a network of solvers by just removing the connection.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137920132-0c78d52e-40f7-4c9e-9207-9c5cb2c2c698.mp4" type="video/mp4"></video></p>
+
+<p>Technically, a solver is added to another solver in the same manner a marker, group and constraint is added. One big happy family.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/137920872-903e370a-617e-4109-9f0a-0408a30c5c19.png" /></p>
+<p><br></p>
+<h3 id="solver-caching">Solver Caching</h3>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/138453070-02e69094-6c37-469c-8bb1-7348ba9f42ac.png" /></p>
+<p>Ragdoll runs alongside your character animation, but sometimes it can be useful to keep the results from a previous run and stop being so interactive.</p>
+<p>Meet <code>Cache</code> and <code>Uncache</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137889320-1f20ecd3-a6e7-4529-8e82-d04230f8646c.mp4" type="video/mp4"></video></p>
+
+<p>Caching is entirely non-destructive, and in fact leverages the very same cache you've been enjoying all this time whenever rewinding.</p>
+<p>The menu commands toggle an attribute on your solver node, called <code>.cache</code> and automatically plays the entire timeline for you. But the same result can be achieved by setting the attribute and playing it yourself.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137889717-dac3ed54-6105-4742-a312-a79aa1bba945.mp4" type="video/mp4"></video></p>
+
+<p>The minimal HUD will show you what's been cached, and like before once you resume playback from a cached to an uncached frame, Ragdoll will continue filling up the cache as one would expect.</p>
+<p>Look forward to a future release where caching happens in the background, as you work. Something that can also be handy from time to time (pun!).</p>
+<p><br></p>
+<h4 id="limitations">Limitations</h4>
+<p>The viewport HUD currently draws relative the solver node in your Outliner. Moving this node also moves the HUD, which isn't right. Moving it along the Z-axis can actually cause the HUD to vanish due to being outside of the camera frustrum.</p>
+<p>Other than that, if you encounter odd behavior let me know. This should work just fine in all cases where Ragdoll works, since the underlying mechanics are the same.</p>
+<p><br></p>
+<h3 id="marker-limits">Marker Limits</h3>
 <p>Markers now support the limits you've grown accustomed to from chains and constraints. They are much easier to work with, now that they are built-in to each marker and have an understanding for what a "parent" is.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/137694082-0815757a-119f-47c6-b21f-fe0c5693a6c3.mp4" type="video/mp4"></video></p>
+
 <p>You should find a lot less need to use <code>Edit Pivots</code> from here on, and in the next release you'll also get some interactive manipulators to avoid the Channel Box even more.</p>
+<p><strong>Limit Type</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/137695508-4be75646-a683-48be-8365-37fcdb32591e.png" /></p>
 <p><br></p>
-<h3 id="constraints">Constraints</h3>
-<p>You can now constrain two markers!</p>
+<h4 id="hinge-limit">Hinge Limit</h4>
+<p>The simplest of limits, allow a limb to rotate along a single axis. Like hinges on a door.</p>
+<p>Use this for knees and elbows.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138458863-6f7c0b0e-1dd0-4251-a764-6814bdba6169.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="ragdoll-limit">Ragdoll Limit</h4>
+<p>For more complex anatomical limits, such as shoulders and hips, use the "ragdoll" limit for control over each of the 3 rotate axes.</p>
+<p><strong>Defaults</strong></p>
+<p>A good place to start is to just play with default settings and get an idea of what it looks like.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138458750-a07eff3b-e2a0-409a-95eb-3b0278f59583.mp4" type="video/mp4"></video></p>
+
+<p><strong>Customise</strong></p>
+<p>In this case, we'll keep the leg from crossing over too far, and from bending too far backwards. Like a real human leg.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138458753-76246fc5-aa71-489c-a9a8-bc8939f5f28d.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="custom-limit">Custom Limit</h4>
+<p>The Hinge and Ragdoll limits should cover the vast majority of limit needs, but sometimes you need more control. The <code>Custom</code> limit lets you control the parent and child frames independently, similar to the "traditional" Rigid constraints let you do.</p>
+<p>Here's an example of replicating the <code>Ragdoll</code> constraint with a custom limit.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138463267-bedc1a6f-ce97-4f29-aee8-f1bdf3855146.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="axis">Axis</h4>
+<p>Specify the "main" axis for your limit.</p>
+<p>Different rigs follow different conventions, and this attribute enables you to keep Ragdoll in the loop. It should typically align with whatever axis your joint or control points in the direction of the child joint or control.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138464613-17e23daf-5c91-437a-a94a-e2b6faef3190.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="rotation-vs-offset">Rotation vs Offset</h4>
+<p>You can either rotate or <em>offset</em> the limit.</p>
+<ul>
+<li><code>Rotation</code> rotates both parent and child frames</li>
+<li><code>Offset</code> rotates only the parent frame</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Remember</p>
+<p>The <code>Parent Frame</code> is the space in which a <code>Child Frame</code> is allowed to move.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138464618-8ffaab80-a649-4bd9-bb30-6f936a571cbe.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="marker-constraints">Marker Constraints</h3>
+<p>You can now constrain one marker to anothe!</p>
+<table>
+<thead>
+<tr>
+<th align="left">Constraint Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Weld Constraint</td>
+<td align="left">Simplest of constraints, welds two markers together; no change to their distance or relative orientation is allowed. This is akin to the Maya <code>Parent Constraint</code></td>
+</tr>
+<tr>
+<td align="left">Distance Constraint</td>
+<td align="left">Maintain a minimum, maximum or total distance between two markers.</td>
+</tr>
+<tr>
+<td align="left">Pin Constraint</td>
+<td align="left">Match a position and orientation in worldspace, similar to <code>Drive Space = World</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138263114-b9a9e3a8-230c-4676-a757-073cfc42af70.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="weld">Weld</h4>
+<p>Maintain the position and orientation of one marker relative another from the first frame onwards.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138453515-936e7297-b40e-46bf-a63e-bb1153f8f166.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138267073-dfd2e913-9a92-437b-8ba3-b99fe24223b4.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="distance">Distance</h4>
+<p>A simple but versatile constraint with animatable distance.</p>
+<p><strong>Maintain Start Distance</strong></p>
+<p>Whatever the distance between two markers, it will be maintained throughout a simulation.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138162535-8bc269cf-e0f0-47d6-8bf2-ec124b1a62f0.mp4" type="video/mp4"></video></p>
+
+<p><strong>Minimum Distance</strong></p>
+<p>Alternatively, only respond to when two controls get too close.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138162536-a208a381-d7c1-4f0d-821e-a1e93b95a24d.mp4" type="video/mp4"></video></p>
+
+<p><strong>Maximum Distance</strong></p>
+<p>Conversely, keep markers from getting too far <em>away</em> from each other.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138162537-ce2ed22b-5f1c-4565-80e9-f24f51776950.mp4" type="video/mp4"></video></p>
+
+<p><strong>Custom Distance</strong></p>
+<p>Or go all-in, with both a minimum <em>and</em> maximum distance, for the most complex behavior.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138162542-572f72e1-6420-46be-852c-092352a267e6.mp4" type="video/mp4"></video></p>
+
+<p><strong>Offsets</strong></p>
+<p>Control at which point on a control to measure the distance.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138123321-31dadba0-175b-46f9-8116-e3b6416c4fca.mp4" type="video/mp4"></video></p>
+
+<p><strong>Animated Distance</strong></p>
+<p>Both min and max distance, along with stiffness and damping, can be animated for some pretty rad effects.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138125038-390d999d-dad3-474d-92b9-83be7f5fbea1.mp4" type="video/mp4"></video></p>
+
+<p><strong>Hard Distance</strong></p>
+<p>A <code>Stiffness = -1</code> means the constraint is "hard". It will not accept any slack or "springiness".</p>
+<p>In this example, the distance is animated whilst soft, and transitioned into a hard constraint. Notice how it snaps into place once hard.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138226874-2fafa5c1-f8c3-4143-b6f4-e18a3b77fe87.mp4" type="video/mp4"></video></p>
+
+<div class="admonition hint">
+<p class="admonition-title">Limitation</p>
+<p>A limitation of a hard constraint is that the distance cannot be animated whilst hard. You can however animate it between values of -1 and above, to transition to and from hard to soft.</p>
+</div>
+<p><br></p>
+<h4 id="pin">Pin</h4>
+<p>Similar to the <code>Soft Pin</code> used with Rigids, this creates a new position and orientation a marker will try and reach. It's exactly what you get using <code>Guide Space = World</code> on the markers themselves, but with the convenience of a new transform you can animate. They will both try and pull on the marker, greatest stiffness wins!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138454713-ceaedf52-3777-4af8-81de-e543318316f5.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="recording-performance">Recording Performance</h3>
+<p>A mere 15% boost to Recording performance.</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138439243-4ed9022e-9e34-4b31-81c5-080adcbdf8d6.mp4" type="video/mp4"></video></p>
+
+<p><strong>After</strong></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138439246-68acc8c2-10a0-4a59-ad2f-c9dc2f3adb04.mp4" type="video/mp4"></video></p>
+
+<p>More was expected, and odds are there's room to optimise this further. But, the bottleneck is writing keyframes which cannot happen across multiple threads. It also needs to happen alongside evaluating your rig, which is dirtied with setting of each key, else it cannot take into account the various constraints, offset groups and IK solvers happening in there.</p>
+<p>On the upside, the more complex your rig, the more benefit you should see from this optimisation. What happens in the above examples are extremely lightweight rigs with no animation, hence the difference is minor.</p>
                 
                   
                     
@@ -2014,7 +2348,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-07
+      Last update: 2021-10-22
     
   </small>
 </div>
