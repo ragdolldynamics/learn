@@ -1957,6 +1957,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#new-tutorials" class="md-nav__link">
+    New Tutorials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solver-linking" class="md-nav__link">
     Solver Linking
   </a>
@@ -2079,8 +2086,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cascading-attributes" class="md-nav__link">
+    Cascading Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recording-performance" class="md-nav__link">
     Recording Performance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remainder" class="md-nav__link">
+    Remainder
   </a>
   
 </li>
@@ -2105,7 +2126,7 @@
                 
                   <h1>Animation Capture pt. 3/4</h1>
                 
-                <video autoplay="" class="poster" muted="" loop="" controls="" height="30%" width="100%"><source src="https://user-images.githubusercontent.com/2152766/138500034-d44bc5e4-1c21-46ef-be61-8adb9ed50bdc.mp4" type="video/mp4"></video>
+                <video autoplay="" class="poster" muted="" loop="" controls="" height="30%" width="100%"><source src="https://user-images.githubusercontent.com/2152766/138547703-7b6ba449-1b8b-43c9-9728-7d309e0d8db8.mp4" type="video/mp4"></video>
 
 <p>Highlight for this release is <strong>Linking and Caching</strong>, and is part 3 out of 4 of the new <a href="/releases/2021.09.27/">Markers</a>.</p>
 <ul>
@@ -2113,6 +2134,7 @@
 <li><a href="#solver-caching"><strong>ADDED</strong> Solver Caching</a> Run once and update on-demand</li>
 <li><a href="#marker-limits"><strong>ADDED</strong> Marker Limits</a> On par with the previous constraints, but much easier to work with</li>
 <li><a href="#marker-constraints"><strong>ADDED</strong> Marker Constraints</a> Including Soft Pin!</li>
+<li><a href="#cascading-attributes"><strong>ADDED</strong> Cascading Attributes</a> Control an entire simulation from one spot</li>
 <li><a href="#recording-performance"><strong>ADDED</strong> Recording Performance</a> A bit faster recording</li>
 </ul>
 <h3 id="showcase">Showcase</h3>
@@ -2126,7 +2148,7 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138250857-27c10b93-4fc4-4b96-bb55-ba31407cf57b.mp4" type="video/mp4"></video></p>
 
 <p><strong>Dance Baby!</strong></p>
-<p>An example of the new Pin Constraint for Markers, working alongside a the Distance Constraint and regular old pose matching.</p>
+<p>The new <code>Pin Constraint</code> working alongside a <code>Distance Constraint</code> and regular old pose matching.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138433045-cd14d52c-a54e-4703-a858-42f702c5f5b4.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2138,6 +2160,117 @@
 </div>
 
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/138433444-101076cf-566a-4b2a-ac8f-a319f8ddc1d2.png" /></p>
+<p><br></p>
+<h3 id="new-tutorials">New Tutorials</h3>
+<p>Markers have one part left before being considered complete, at which point they can completely succeed <code>Active Rigid</code> and <code>Active Chain</code>.</p>
+<p>Until then, here's how you can get started with Markers today.</p>
+<table>
+<style>
+    td { vertical-align: middle !important; }
+</style>
+<tr>
+    <th></th>
+    <th>Tutorial</th>
+    <th>Duration</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138606376-1ead015d-0ac1-4c58-bac4-7ec9b521d86e.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=jlo0hJT9VAs&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=1>Markers 101</a></nobr>
+    <td>01:23</td>
+    <td>What are markers?</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138606403-d5e3c10b-adc3-4359-97bf-1d12eab7d147.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=LcvtxzgPCF0&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=2>Markers 101 - Key Concepts</a></nobr>
+    <td>03:23</td>
+    <td>Overview of Input Type and Pose Space</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138606412-4ad2de5d-6ec5-4ea2-b684-ad5246cd2285.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=KSc9mh07YN8&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=3>Markers 101 - Local and World</a></nobr>
+    <td>03:00</td>
+    <td>Overview of the two Pose Spaces, local and world</td>
+</tr>
+<tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138587450-5473c870-666b-4d09-95b2-6cfaedf422d9.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=KU8mvjVG5Jg&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=4>Overlapping Motion I</a></nobr>
+    <td>02:27</td>
+    <td>The very basics or Capture and Record</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138587450-5473c870-666b-4d09-95b2-6cfaedf422d9.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=MNzi6DkAp2M&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=5>Overlapping Motion II</a></nobr>
+    <td>02:21</td>
+    <td>Animation layers</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138587469-c920df07-d3d1-43c1-8837-ccca339299cb.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=QKCz8HPz1YQ&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=6>Full Ragdoll I</a></nobr>
+    <td>04:08</td>
+    <td>Hierarchy and volume</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138587475-1d6db79c-0424-44e7-b8b0-c98efcbad91b.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=J7x7TEhOUKA&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=7>Full Ragdoll II</a></nobr>
+    <td>04:05</td>
+    <td>Kinematic and animation</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138587486-76ca86fb-856f-41e7-9386-0bfa7b79ce66.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=judGjSp5nw4&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=8>Full Ragdoll III</a></nobr>
+    <td>04:30</td>
+    <td>Self collisions and recording</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138593662-c60bf20f-f3c5-4e0b-9eec-924037cd0e01.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=7HwZNo37dBs&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=9>IK I</a></nobr>
+    <td>03:00</td>
+    <td>Capturing the skeleton</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138606340-4327287e-8616-40e0-80e9-f050160cf4d8.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=j8T9Kwdz6Jk&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=10>IK II</a></nobr>
+    <td>01:59</td>
+    <td>Retargeting to IK controls</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138593713-a4fcfbd6-9f25-4b37-94cd-7bdd709c971d.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=r1o7v8yG1Io&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=11>IK III</a></nobr>
+    <td>01:59</td>
+    <td>Record both Translation and Rotation</td>
+</tr>
+<tr>
+    <td><img src=https://user-images.githubusercontent.com/2152766/138600345-87001141-7a42-412e-b83e-260448d1880b.png></td>
+    <td><nobr><a href=https://www.youtube.com/watch?v=IHpMd4Oh88E&list=PLL4XIS5Woc6nG48mb7MD4vVvTWuK9k8jl&index=12>Practical Example I</a></nobr>
+    <td>06:53</td>
+    <td>Fix table and elbow intersection in this dialog performance.</td>
+</tr>
+
+
+<!--
+<tr>
+    <td><img src=></td>
+    <td><nobr><a href=>Workflow Example I</a></nobr>
+    <td>04:30</td>
+    <td>Retarget physics from one rig to another.</td>
+</tr>
+<tr>
+    <td><img src=></td>
+    <td><nobr><a href=>Workflow Example II</a></nobr>
+    <td>04:30</td>
+    <td>Setup and replace a referenced character with physics.</td>
+</tr>
+<tr>
+    <td><img src=></td>
+    <td><nobr><a href=>Workflow Example III</a></nobr>
+    <td>04:30</td>
+    <td>Take Physics into consideration during the rigging process</td>
+</tr>
+ -->
+</table>
+
 <p><br></p>
 <h3 id="solver-linking">Solver Linking</h3>
 <p>Reference two characters, link their solvers.</p>
@@ -2330,6 +2463,23 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/138454713-ceaedf52-3777-4af8-81de-e543318316f5.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
+<h3 id="cascading-attributes">Cascading Attributes</h3>
+<p>Sometimes, you want to tweak the overall look of an entire simulation at once, rather than tweaking or modifying individual nodes. Now you can.</p>
+<p>All guides, limits and constraints now have their values combined with equivalent values on the solver node.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/138586598-7d354fb0-0e01-49c0-9a11-228e0c61ac91.png" /></p>
+<p><strong>Edit One</strong></p>
+<p>Here's how you edit just a single marker or constraint.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/138586813-2e30fb6d-b500-4862-aba2-39df4ab0dd98.mp4" type="video/mp4"></video></p>
+<p><strong>Edit Many</strong></p>
+<p>And here's how you can edit them all.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/138586814-a56bee45-0713-45f1-a93a-b27bb2cffb80.mp4" type="video/mp4"></video></p>
+<div class="admonition hint">
+<p class="admonition-title">Animation</p>
+<p>Guides and Constraints can be animated, however Limits cannot.</p>
+</div>
+<p>This behavior is consistent with the <code>rdGroup</code> node too, here's the complete attribute hierarchy.</p>
+<p><img alt="hierarchy2" src="https://user-images.githubusercontent.com/2152766/138588682-d739104d-db23-4646-b9b5-e4bd05ec23c5.gif" /></p>
+<p><br></p>
 <h3 id="recording-performance">Recording Performance</h3>
 <p>A mere 15% boost to Recording performance.</p>
 <p><strong>Before</strong></p>
@@ -2340,6 +2490,15 @@
 
 <p>More was expected, and odds are there's room to optimise this further. But, the bottleneck is writing keyframes which cannot happen across multiple threads. It also needs to happen alongside evaluating your rig, which is dirtied with setting of each key, else it cannot take into account the various constraints, offset groups and IK solvers happening in there.</p>
 <p>On the upside, the more complex your rig, the more benefit you should see from this optimisation. What happens in the above examples are extremely lightweight rigs with no animation, hence the difference is minor.</p>
+<p><br></p>
+<h3 id="remainder">Remainder</h3>
+<p>Markers are almost feature complete. Most if not all things you could do with Rigids are now possible with markers.</p>
+<p>Except for:</p>
+<ul>
+<li>Forces</li>
+<li>Export &amp; Import</li>
+</ul>
+<p>These will be addressed in an upcoming release. The <em>next</em> release will focus on getting those darn shape and limit attributes out of the Channel Box and into the viewport for interactive control.</p>
                 
                   
                     
@@ -2348,7 +2507,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-22
+      Last update: 2021-10-24
     
   </small>
 </div>
