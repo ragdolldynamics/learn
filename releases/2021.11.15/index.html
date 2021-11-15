@@ -1294,13 +1294,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#recording-locked-channels" class="md-nav__link">
-    Recording Locked Channels
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2293,13 +2286,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#recording-locked-channels" class="md-nav__link">
-    Recording Locked Channels
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2654,6 +2640,7 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <li class="task-list-item"><input type="checkbox" disabled checked/> Scale Pivot</li>
 <li class="task-list-item"><input type="checkbox" disabled checked/> Rotate Axis</li>
 <li class="task-list-item"><input type="checkbox" disabled checked/> Joint Orient</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Locked Channels</li>
 </ul>
 <p>And that should cover it!</p>
 <div class="admonition info">
@@ -2690,11 +2677,6 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <p>Interestingly, this is what made Active Rigid and Active Chain so slow. It was doing recording every frame, whether you wanted to or not. It was how the simulation was made visible to you; by continuously recording it.</p>
 <p>With Markers, we delay the recording until you hit <code>Record Simulation</code>, which is the primary way in which they enable us to reap this crazy amount of performance out of Maya.</p>
 </div>
-<h4 id="recording-locked-channels">Recording Locked Channels</h4>
-<p>Locked channels are a work-in-progress and may cause the resulting animation to flip hapazardly. This will be fixed in a future release, and do shout out in the <a href="https://ragdolldynamics.com/chat">chat</a> if this bothers you so we know what to prioritise.</p>
-<details class="info"><summary>Why is this hard?</summary><p>For the techies out there, taking a worldmatrix with possible rotation around all axes and getting a rotation only along one axis is hard. I expect it will involve projecting the orientation along a plane relative the locked axes. The result would be approximate, but likely accurate enough to reflect what the artist is looking for.</p>
-<p>If you know about this, <a href="https://ragdolldynamics.com/chat">find me in the chat!</a></p>
-</details>
 <p><br></p>
 <h3 id="robust-caching">Robust Caching</h3>
 <p>Several improvements were made to Caching, introduced in the last version.</p>
@@ -2730,10 +2712,6 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <div class="admonition note">
 <p class="admonition-title">Coming Up</p>
 <p>An upcoming release will enable you to advance time in the simulation, without affecting time in Maya. Such that you can "relax" a pose, for example. 😁</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Caveat</p>
-<p>Careful about locked rotate channels, Ragdoll currently cannot record onto only the unlocked channels.</p>
 </div>
 <p><br></p>
 <h3 id="frameskip-method">Frameskip Method</h3>
