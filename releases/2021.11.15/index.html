@@ -1122,6 +1122,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1130,7 +1132,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1140,7 +1142,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1161,6 +1163,261 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2021.11.15
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2021.11.15
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap" class="md-nav__link">
+    Recap
+  </a>
+  
+    <nav class="md-nav" aria-label="Recap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-terminology" class="md-nav__link">
+    New Terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-of-rigids" class="md-nav__link">
+    Future of Rigids
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-for-macos" class="md-nav__link">
+    Ragdoll for MacOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robust-rendering" class="md-nav__link">
+    Robust Rendering
+  </a>
+  
+    <nav class="md-nav" aria-label="Robust Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digging-deeper" class="md-nav__link">
+    Digging Deeper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robust-recording" class="md-nav__link">
+    Robust Recording
+  </a>
+  
+    <nav class="md-nav" aria-label="Robust Recording">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-locked-channels" class="md-nav__link">
+    Recording Locked Channels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robust-caching" class="md-nav__link">
+    Robust Caching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snap-to-simulation" class="md-nav__link">
+    Snap to Simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frameskip-method" class="md-nav__link">
+    Frameskip Method
+  </a>
+  
+    <nav class="md-nav" aria-label="Frameskip Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    Pause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore" class="md-nav__link">
+    Ignore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-simulation" class="md-nav__link">
+    Extract Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-debugging-companion" class="md-nav__link">
+    A Debugging Companion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trial-renewal" class="md-nav__link">
+    Trial Renewal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-mesh" class="md-nav__link">
+    Replace Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-limits" class="md-nav__link">
+    Auto Limits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-mastery" class="md-nav__link">
+    Scale Mastery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unloading-on-linux" class="md-nav__link">
+    Unloading on Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-and-windows" class="md-nav__link">
+    PATH and Windows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2110,6 +2367,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#trial-renewal" class="md-nav__link">
+    Trial Renewal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#replace-mesh" class="md-nav__link">
     Replace Mesh
   </a>
@@ -2162,18 +2426,19 @@
                   </a>
                 
                 
-                  <h1>Animation Capture pt. 4/4</h1>
+                  <h1>2021.11.15</h1>
                 
                 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/141471283-3a771240-f80d-4745-844d-6f0c0ed87bc5.png" /></p>
 <p>Highlight for this release is <strong>Markers part 4 of 4</strong>!</p>
 <ul>
 <li><a href="#ragdoll-for-macos"><strong>ADDED</strong> Ragdoll for MacOS</a> You heard it right, it's here!</li>
-<li><a href="#robust-rendering"><strong>ADDED</strong> Robust Rendering</a> Rendering on some hardware, especially in Maya 2019, was whack sometimes. No longer!</li>
+<li><a href="#robust-rendering"><strong>ADDED</strong> Robust Rendering</a> Consistent across all platforms and GPUs</li>
 <li><a href="#robust-recording"><strong>ADDED</strong> Robust Recording</a> More resilient to locked controls and custom rotation axes</li>
-<li><a href="#caching-start-frame"><strong>ADDED</strong> Robust Caching</a> Works as expected</li>
-<li><a href="#snap-to-simulation"><strong>ADDED</strong> Snap to Simulation</a> Snap your character to wherever the simulation is, for quick and natural posing</li>
+<li><a href="#robust-caching"><strong>ADDED</strong> Robust Caching</a> I dare you to try and break it 😙</li>
+<li><a href="#snap-to-simulation"><strong>ADDED</strong> Snap to Simulation</a> Single-frame recording, for quick posing</li>
 <li><a href="#extract-simulation"><strong>ADDED</strong> Extract Simulation</a> Get the raw data as a baked joint hierarchy, super fast!</li>
 <li><a href="#frameskip-method"><strong>ADDED</strong> Frameskip Method</a> Now accessible per-solver, as an attribute</li>
+<li><a href="#trial-renewal"><strong>ADDED</strong> Trial Renewal</a> Ready to give it another go? Now you can</li>
 <li><a href="#replace-mesh"><strong>ADDED</strong> Replace Mesh</a> An old friend has returned, for Markers</li>
 <li><a href="#auto-limit"><strong>ADDED</strong> Auto Limit</a> Transfer locked Maya channels into physics</li>
 <li><a href="#scale-mastery"><strong>FIXED</strong> Scale Mastery</a> Negative, non-uniform, you name it</li>
@@ -2241,7 +2506,9 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <p><br></p>
 <h3 id="recap">Recap</h3>
 <p>We did it! We're at part 4 out of 4 of the new Markers. Just about. 🥰</p>
-<p>These are the things scheduled for the next release.</p>
+<p>This release here was intended to round off the interactive manipulators - so that you didn't have to fiddle around the channel box to edit shapes, constraints and limits - but we ran into a wall with our drawing API (see <a href="#robust-rendering">Robust Rendering</a> below) which led us to throw <em>everything</em> out and start from scratch. 😔</p>
+<p>On the upside, we've now got a <em>significantly</em> stronger foundation upon which to build manipulators, you will see these in action in the <em>next</em> release. Part 5 out of 4! 🥰</p>
+<p>These are the things scheduled for the next releases.</p>
 <table>
 <thead>
 <tr>
@@ -2268,8 +2535,6 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 </tr>
 </tbody>
 </table>
-<p>This release here was intended to round off the interactive manipulators - so that you didn't have to fiddle around the channel box to edit shapes, constraints and limits - but we ran into a wall with our drawing API (see <a href="#robust-rendering">Robust Rendering</a> below) which led us to throw <em>everything</em> out and start from scratch. 😔</p>
-<p>On the upside, we've now got a <em>significantly</em> stronger foundation upon which to build manipulators, you will see these in action in the <em>next</em> release. Part 5 out of 4! 🥰</p>
 <h4 id="new-terminology">New Terminology</h4>
 <p>A few things found a more representative name in this release.</p>
 <table>
@@ -2284,12 +2549,12 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <tr>
 <td align="left">Guide</td>
 <td align="left"><code>--&gt;</code></td>
-<td align="left">Pose</td>
+<td align="left">Pose, e.g. <code>Pose Space</code></td>
 </tr>
 <tr>
 <td align="left">Input Type</td>
 <td align="left"><code>--&gt;</code></td>
-<td align="left">Behaviour</td>
+<td align="left">Behaviour, e.g. <code>Kinematic</code> and <code>Pose Match</code></td>
 </tr>
 <tr>
 <td align="left">Assign Single</td>
@@ -2503,6 +2768,12 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
 <h4 id="a-debugging-companion">A Debugging Companion</h4>
 <p>It can also be used for situations where <code>Record Simulation</code> doesn't do what you need it to. The extracted skeleton will be a plain joint hierarchy, with no scale, and guaranteed to match the simulation exactly. So you can extract it, and constrain your rig to it.</p>
 <p><br></p>
+<h3 id="trial-renewal">Trial Renewal</h3>
+<p>You've already given Ragdoll a go many moons ago, but really like where things have gone since? Well you're in luck. You can now request a re-trial!</p>
+<ul>
+<li><a href="https://ragdolldynamics.com/contact">Submit your request</a></li>
+</ul>
+<p><br></p>
 <h3 id="replace-mesh">Replace Mesh</h3>
 <p>You can now replace the original geometry assigned to your marker, just like you could with Rigids.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/141688044-c2de9054-e2c1-4758-80c2-95c337de47e6.mp4" type="video/mp4"></video></p>
@@ -2585,6 +2856,41 @@ Courtesy of [Electric Theatre Collective](https://electrictheatre.tv/), where [A
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API Reference
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.10.25/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.10.25
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
