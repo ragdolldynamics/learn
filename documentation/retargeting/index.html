@@ -583,8 +583,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reparent" class="md-nav__link">
-    Reparent
+  <a href="#reconnect" class="md-nav__link">
+    Reconnect
   </a>
   
 </li>
@@ -2364,7 +2364,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_bouncing_ball/" class="md-nav__link">
+      <a href="../../legacy/bouncing_ball/" class="md-nav__link">
         
         <img src="/icons/physics_black.png">
         
@@ -2384,7 +2384,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_rally_car/" class="md-nav__link">
+      <a href="../../legacy/rally_car/" class="md-nav__link">
         
         <img src="/icons/car_black.png">
         
@@ -2404,7 +2404,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_manikin/" class="md-nav__link">
+      <a href="../../legacy/manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -2468,8 +2468,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reparent" class="md-nav__link">
-    Reparent
+  <a href="#reconnect" class="md-nav__link">
+    Reconnect
   </a>
   
 </li>
@@ -2498,32 +2498,39 @@
     <source src="https://user-images.githubusercontent.com/2152766/145724350-8e63a86b-5219-4cc9-b8d7-ecbd1ba474d2.mp4" type="video/mp4">
 </video>
 
-<p>The fundamental building block to Ragdoll, for "reverse motion capture" or Animation Capture.</p>
+<p>Assign to joints, record to controls.</p>
 <p><br></p>
 <h4 id="retarget">Retarget</h4>
-<p>We've talked a lot about "retargeting". But what <em>is</em> that?</p>
-<p>Per default, markers are recorded onto the controls you assigned, this is called <code>Rig to Rig</code>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169658-39590bbf-bbca-41dc-af3b-de20e69e9aed.png" /></p>
-<p>But often times, rigs are more complicated and what you want is for the simulation to look at one set of nodes, but record onto another. This is called <code>Joint to Rig</code>, but can be from any source. Even other controls (like FK to IK).</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169635-e0a751c8-f06b-4dac-a459-50118d04821f.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">The Old Days</p>
-<p>Think about how you would accomplish this using the <code>Active Rigid</code> or <code>Active Chain</code> commands. That would be a <em>huge</em> pain, but not with markers!</p>
-</div>
+<p>Any moderately complex character will have parts better suited for capturing and others for recording onto.</p>
+<p>For example, in order to control a simulation with IK controls, we must first assign Markers onto the underlying joints driven by those IK controls. Then, we <em>retarget</em> those joints back onto the IK controls.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145726981-69480bda-62df-475a-87d5-0c243c79be8d.mp4" type="video/mp4"></video></p>
+
+<p>In this example, markers are assigned to the upper body controls, but then to the joints of the lower body. We don't want keyframes on these joints, so we <em>retarget</em> these keyframes onto the IK controls.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145726993-3bfb60a2-cc13-4b95-b6f2-8fa62f0a1a7e.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h4 id="reassign">Reassign</h4>
-<p>Over in <a href="#demo-2---ragdoll">Demo 2 - Ragdoll</a> we "reassigned" already marked controls. What does that mean?</p>
-<p>In that example, we've assigned our FK controls directly, which means Ragdoll would grab the translation and rotation from those controls during simulation. But what we really wanted was the IK controls.</p>
-<p>But! We couldn't just assign to the IK controls directly, since they are <em>indirectly</em> rotating a characters limbs. So instead, we <code>Reassign</code> the markers previously made onto the underlying joints that follow IK around.</p>
-<p>We then also <code>Retarget</code> them, since they would have otherwise been recorded onto the original FK controls.</p>
+<p>The opposite of Retarget.</p>
+<p>Rather than assigning to joints and retargeting to IK controls, we assign to IK controls and <em>reassign</em> to joints. Same side of a different coin, which one is better?</p>
 <p><br></p>
-<h4 id="reparent">Reparent</h4>
-<p>Sometimes, you change your mind.</p>
+<h4 id="reconnect">Reconnect</h4>
+<p>Use <code>Reconnect</code> when you selected things in the wrong order and want a do-over.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465284-f9a3bd04-9392-4f33-a161-390cbe9049d2.mp4" type="video/mp4"></video></p>
 
 <p>Success!</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
                 
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-12-09
+    
+  </small>
+</div>
                   
                 
               

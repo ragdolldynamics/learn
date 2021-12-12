@@ -1212,13 +1212,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#disappearing-limits" class="md-nav__link">
-    Disappearing Limits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ground-fits-grid" class="md-nav__link">
     Ground Fits Grid
   </a>
@@ -1240,6 +1233,13 @@
         <li class="md-nav__item">
   <a href="#lollipop-hierarchy" class="md-nav__link">
     Lollipop Hierarchy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disappearing-limits" class="md-nav__link">
+    Disappearing Limits
   </a>
   
 </li>
@@ -2537,7 +2537,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_bouncing_ball/" class="md-nav__link">
+      <a href="../../legacy/bouncing_ball/" class="md-nav__link">
         
         <img src="/icons/physics_black.png">
         
@@ -2557,7 +2557,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_rally_car/" class="md-nav__link">
+      <a href="../../legacy/rally_car/" class="md-nav__link">
         
         <img src="/icons/car_black.png">
         
@@ -2577,7 +2577,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/legacy_manikin/" class="md-nav__link">
+      <a href="../../legacy/manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -2746,13 +2746,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#disappearing-limits" class="md-nav__link">
-    Disappearing Limits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#ground-fits-grid" class="md-nav__link">
     Ground Fits Grid
   </a>
@@ -2774,6 +2767,13 @@
         <li class="md-nav__item">
   <a href="#lollipop-hierarchy" class="md-nav__link">
     Lollipop Hierarchy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disappearing-limits" class="md-nav__link">
+    Disappearing Limits
   </a>
   
 </li>
@@ -2840,8 +2840,11 @@
                 
                   <h1>2021.12.12</h1>
                 
-                <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/141471283-3a771240-f80d-4745-844d-6f0c0ed87bc5.png" /></p>
-<p>Highlight for this release is the <strong>Manipulator</strong>!</p>
+                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/145726083-8364472b-43f6-422b-8db5-992466163e8e.png">
+    <source src="https://user-images.githubusercontent.com/2152766/145726048-720a150b-cab6-4ffc-b504-78c994be4cdb.mp4" type="video/mp4">
+</video>
+
+<p>Highlight for this release is <strong>The Manipulator</strong>!</p>
 <ul>
 <li><a href="#manipulators"><strong>ADDED</strong> Manipulator</a> Edit things faster and visually with these new tricks</li>
 <li><a href="#separate-translate-xyz-amount"><strong>ADDED</strong> Independent Pose Axes</a> Control X, Y and Z axes independently</li>
@@ -2866,16 +2869,23 @@
 <li><strong>Scenes</strong> made with Rigids remain functional, and will continue to run until end of February 2022.</li>
 <li><strong>Documentation</strong> for Rigids can be found at the bottom of the left-hand side, under Legacy</li>
 </ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145725905-da4db431-67bf-452d-bb7e-72dc98c4ce9c.png" /></p>
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
+<p>Let's kick things off with some eye candy!</p>
+<p><strong>Flying Lizard</strong></p>
+<p>A work-in-progress clip from Jason Snyman.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145728022-42388d01-4a96-450c-a564-61df60e6d9fb.mp4" type="video/mp4"></video></p>
+
 <p><strong>Ragdoll in 30 Seconds</strong></p>
 <p>A brief overview of what Ragdoll is.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145581522-2f229741-45c4-43f2-9c3b-5ffb5bb29fc5.mp4" type="video/mp4"></video></p>
 
 <p><strong>Mocap Chap</strong></p>
-<p>Footage from the <a href="/tutorials/mocap_chap">new tutorial</a></p>
+<p>Footage from one of the the <a href="/tutorials/mocap_chap">new tutorials</a>.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145550133-4d9daedc-478c-44db-8a65-5a248b26e67b.mp4" type="video/mp4"></video></p>
 
+<p>Now watch what happens when we increase the mass of the box by 50x. 😁</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145550147-56714786-3ac9-44b8-b73f-b85d34e53bf4.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2893,14 +2903,6 @@
 <li>Select a Ragdoll node and click the <code>Show Manipulator Tool</code> in the Toolbar</li>
 </ol>
 <p>Any of the Ragdoll nodes can be selected in order to enable the manipulator via the <code>T</code> keyboard shortcut.</p>
-<ul>
-<li><code>rdSolver</code></li>
-<li><code>rdGroup</code></li>
-<li><code>rdMarker</code></li>
-<li><code>rdDistanceConstraint</code></li>
-<li><code>rdPinConstraint</code></li>
-<li><code>rdFixedConstraint</code></li>
-</ul>
 <div class="admonition info">
 <p class="admonition-title">Solver Shape</p>
 <p>At the time of this writing, the solver needs its <em>shape</em> selected, not the parent transform. This will be addressed in a future release.</p>
@@ -2922,6 +2924,7 @@
 <p><br></p>
 <h4 id="shape-modes">Shape Modes</h4>
 <p>This release introduces a manipulator with two "modes".</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145709365-8c2384b8-1811-4df3-a863-564a88fe9fbf.png" /></p>
 <table>
 <thead>
 <tr>
@@ -3034,7 +3037,7 @@
 <div class="admonition info">
 <p class="admonition-title">Why are they moving?</p>
 <p>Under the hood, each axis must be still be symmetrical; edits only appear to be asymmetrical for your convenience. What's really happening is the entire limit is both changing shape and also rotating and the rotation is causing all axes to move.</p>
-<p>This is an inherent limitation (pun!) of limits in Ragdoll and is unlikely to be addressed in the future, so we'll have to work with it.</p>
+<p>This is an inherent limitation of limits (pun!) in Ragdoll and is unlikely to be addressed in the future, so we'll have to work with it.</p>
 </div>
 <p>If you mess up and want to start from scratch, hit the <code>Reset</code> button, also found under <code>Ragdoll -&gt; Utilities -&gt; Reset Constraint Frames</code></p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145671817-37e1b121-1860-4c4a-b097-803ba27ac6e4.mp4" type="video/mp4"></video></p>
@@ -3085,6 +3088,10 @@
 </blockquote>
 <p>Hold <code>Shift</code> to select and manipulate <em>multiple</em> markers at once.</p>
 <p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/145672423-e88cbbe0-a47f-40ab-a102-e7f6114bbc55.mp4" type="video/mp4"></video></p>
+<div class="admonition into">
+<p class="admonition-title">Drag-select</p>
+<p>Will be added in a future release.</p>
+</div>
 <p><br></p>
 <h4 id="undo-redo">Undo &amp; Redo</h4>
 <p>No surprises here.</p>
@@ -3128,13 +3135,15 @@
 <p><br></p>
 <h4 id="1d-2d-and-3d-limits">1D, 2D and 3D Limits</h4>
 <p>Ragdoll used to have a preference as to which axes you use for limits.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145728265-adb9840e-faf9-4da4-9ef3-53525c765553.mp4" type="video/mp4"></video></p>
+
 <ol>
 <li><code>X</code> is great for 1D limits, like a hinge, elbow or knee</li>
 <li><code>YZ</code> is great for 2D limits, like a shoulder or hip</li>
 </ol>
 <p>But <code>XY</code> is no good. <code>XZ</code> is also bad. And god forbid you should attempt use <code>Y</code> or <code>Z</code> as a hinge limit. Ragdoll would try, but try in vain.</p>
 <p>Knowing which combination to use is not easy, and now you no longer have to. Pick an axis, any axis or combination of axes and Ragdoll will figure things out on its end. You don't have to worry about it.</p>
-<p>As an added bonus, the limit axis now (more easily) aligns with your Maya axis!</p>
+<p>As an added bonus, the limit axis now aligns with your Maya axis! (with one caveat, see below)</p>
 <p>Here's a table to make this absolutely clear. 🥰</p>
 <table>
 <thead>
@@ -3186,17 +3195,22 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145673131-a1d47cf2-6d24-415a-a7e3-ae12503cbc3a.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="disappearing-limits">Disappearing Limits</h4>
-<p>The limit indicator is drawn using a 2D drawing API which is initialised whenever a Solver is created. It was however <em>uninitialized</em> whenever <em>any</em> Solver was deleted, so if you had 2 solvers you were out of luck. A re-open of the scene would fix it, but it was annoying and incorrect.</p>
-<p>This has now been fixed.</p>
-<p><br></p>
 <h4 id="ground-fits-grid">Ground Fits Grid</h4>
 <p>Previous releases would put a ground underneath the first assigned controls, with a size relative the size of your selection.</p>
 <p>Turns out, this wasn't great in practice and usually ended up being too small. In this release, the ground inherits whatever size your viewport grid is.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145726397-cc9793c6-6db7-4e46-ad0c-ece72b90a2ef.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h3 id="auto-limits-ii">Auto Limits II</h3>
 <p>The previous release introduced <a href="/releases/2021.11.15/#auto-limits">Auto Limits</a> whereby Ragdoll would look at the locked-state of your <code>Rotate</code> channels and try to figure out how to replicate this effect physically.</p>
 <p>This sometimes worked, sometimes not. This release fixes that, covering all combinations of locked channels, with any manner of joint or rotate axis.</p>
+<p>Here's what locking the Rotate channels will result in.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145727640-6fa95faf-0013-45ec-88e8-381b2bdee831.mp4" type="video/mp4"></video></p>
+
+<p>Unlocking them, we can see how much of an effect it has.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/145727641-80391c78-8843-4b11-a407-e89bbf30f0f0.mp4" type="video/mp4"></video></p>
+
+<p>Thanks to the more robust and predictable limits in this release, the Maya axis will now always align with the Ragdoll limit axes!</p>
 <p><br></p>
 <h3 id="lollipop-hierarchy">Lollipop Hierarchy</h3>
 <p>The <code>Create Lollipop</code> option of Markers generates an extra control shape in the viewport that you can use to manipulate a Marker. The goal being to make it easier to spot a Marker in a potentially busy channel box.</p>
@@ -3207,6 +3221,10 @@
 <p><strong>After</strong></p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/142628180-2ea5d1aa-5560-4599-abf9-0604b50eb7bc.mp4" type="video/mp4"></video></p>
 
+<p><br></p>
+<h3 id="disappearing-limits">Disappearing Limits</h3>
+<p>The limit indicator is drawn using a 2D drawing API which is initialised whenever a Solver is created. It was however <em>uninitialized</em> whenever <em>any</em> Solver was deleted, so if you had 2 solvers you were out of luck. A re-open of the scene would fix it, but it was annoying and incorrect.</p>
+<p>This has now been fixed.</p>
 <p><br></p>
 <h3 id="replace-intermediate-mesh">Replace Intermediate Mesh</h3>
 <p>In the previous release, if a mesh had a second "intermediate" mesh it would be more difficult to use it with the <code>Replace Mesh</code> command.</p>
@@ -3254,6 +3272,17 @@
 <li><a href="/custom-attach">Custom Attach</a></li>
 </ul>
                 
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-12-12
+    
+  </small>
+</div>
                   
                 
               

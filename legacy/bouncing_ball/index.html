@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Expore the fundamentals of Ragdoll">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/tutorials/legacy_dynamic_tail/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/legacy/bouncing_ball/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Dynamic Tail - Learn Ragdoll</title>
+        <title>Bouncing Ball - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-tail" class="md-skip">
+        <a href="#bouncing-ball" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Tail
+              Bouncing Ball
             
           </span>
         </div>
@@ -680,7 +680,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../videos/" class="md-nav__link">
+      <a href="../../tutorials/videos/" class="md-nav__link">
         
         <img src="/icons/camera_black.png">
         
@@ -700,7 +700,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../manikin/" class="md-nav__link">
+      <a href="../../tutorials/manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -720,7 +720,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../manikin_ragdoll/" class="md-nav__link">
+      <a href="../../tutorials/manikin_ragdoll/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -740,7 +740,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../manikin_ik/" class="md-nav__link">
+      <a href="../../tutorials/manikin_ik/" class="md-nav__link">
         
         <img src="/icons/chain_black.png">
         
@@ -760,7 +760,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../mocap_chap/" class="md-nav__link">
+      <a href="../../tutorials/mocap_chap/" class="md-nav__link">
         
         <img src="/icons/mocap_black.png">
         
@@ -1881,6 +1881,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1889,7 +1891,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1899,7 +1901,7 @@
           data-md-toggle="nav-13"
           type="checkbox"
           id="nav-13"
-          
+          checked
         />
       
 
@@ -2246,6 +2248,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -2254,7 +2258,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -2264,7 +2268,7 @@
           data-md-toggle="nav-13_17"
           type="checkbox"
           id="nav-13_17"
-          
+          checked
         />
       
 
@@ -2291,18 +2295,242 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../legacy_bouncing_ball/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bouncing Ball
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
         <img src="/icons/physics_black.png">
         
 
         Bouncing Ball
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bouncing-ball" class="md-nav__link">
+    Bouncing Ball
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#poly-sphere" class="md-nav__link">
+    Poly Sphere
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamics" class="md-nav__link">
+    Dynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bounciness" class="md-nav__link">
+    Bounciness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-bounciness" class="md-nav__link">
+    More Bounciness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#even-more-bounciness" class="md-nav__link">
+    Even More Bounciness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-bounciness" class="md-nav__link">
+    Infinite Bounciness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finalise" class="md-nav__link">
+    Finalise
+  </a>
+  
+    <nav class="md-nav" aria-label="Finalise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-velocity" class="md-nav__link">
+    Initial Velocity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory" class="md-nav__link">
+    Trajectory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tennis-ball" class="md-nav__link">
+    Tennis Ball
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    Practical Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#squash" class="md-nav__link">
+    Squash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pong" class="md-nav__link">
+    Pong
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incredible-machine" class="md-nav__link">
+    Incredible Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cached-playback" class="md-nav__link">
+    Cached Playback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-science" class="md-nav__link">
+    For Science
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vibrating-at-rest" class="md-nav__link">
+    Vibrating at Rest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -2315,7 +2543,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../legacy_rally_car/" class="md-nav__link">
+      <a href="../rally_car/" class="md-nav__link">
         
         <img src="/icons/car_black.png">
         
@@ -2335,7 +2563,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../legacy_manikin/" class="md-nav__link">
+      <a href="../manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -2385,58 +2613,65 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dynamic-tail" class="md-nav__link">
-    Dynamic Tail
+  <a href="#bouncing-ball" class="md-nav__link">
+    Bouncing Ball
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#walkcycle" class="md-nav__link">
-    Walkcycle
+  <a href="#motivation" class="md-nav__link">
+    Motivation
   </a>
   
-    <nav class="md-nav" aria-label="Walkcycle">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apply-simulation" class="md-nav__link">
-    Apply Simulation
+  <a href="#poly-sphere" class="md-nav__link">
+    Poly Sphere
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reduce-gravity" class="md-nav__link">
-    Reduce Gravity
+  <a href="#dynamics" class="md-nav__link">
+    Dynamics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#global-strength" class="md-nav__link">
-    Global Strength
+  <a href="#bounciness" class="md-nav__link">
+    Bounciness
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#local-strength" class="md-nav__link">
-    Local Strength
+  <a href="#more-bounciness" class="md-nav__link">
+    More Bounciness
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#strength-falloff" class="md-nav__link">
-    Strength Falloff
+  <a href="#even-more-bounciness" class="md-nav__link">
+    Even More Bounciness
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
+  <a href="#infinite-bounciness" class="md-nav__link">
+    Infinite Bounciness
   </a>
   
 </li>
@@ -2447,23 +2682,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sitting-down" class="md-nav__link">
-    Sitting Down
+  <a href="#finalise" class="md-nav__link">
+    Finalise
   </a>
   
-    <nav class="md-nav" aria-label="Sitting Down">
+    <nav class="md-nav" aria-label="Finalise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#switch-to-animation" class="md-nav__link">
-    Switch to Animation
+  <a href="#initial-velocity" class="md-nav__link">
+    Initial Velocity
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#animation-vs-simulation" class="md-nav__link">
-    Animation vs Simulation
+  <a href="#trajectory" class="md-nav__link">
+    Trajectory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tennis-ball" class="md-nav__link">
+    Tennis Ball
   </a>
   
 </li>
@@ -2474,23 +2716,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-control" class="md-nav__link">
-    Advanced Control
+  <a href="#practical-examples" class="md-nav__link">
+    Practical Examples
   </a>
   
-    <nav class="md-nav" aria-label="Advanced Control">
+    <nav class="md-nav" aria-label="Practical Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#flex-and-relax-muscles" class="md-nav__link">
-    Flex and Relax Muscles
+  <a href="#squash" class="md-nav__link">
+    Squash
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#damping" class="md-nav__link">
-    Damping
+  <a href="#pong" class="md-nav__link">
+    Pong
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incredible-machine" class="md-nav__link">
+    Incredible Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cached-playback" class="md-nav__link">
+    Cached Playback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-science" class="md-nav__link">
+    For Science
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vibrating-at-rest" class="md-nav__link">
+    Vibrating at Rest
   </a>
   
 </li>
@@ -2513,75 +2803,470 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/tutorials/legacy_dynamic_tail.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/legacy/bouncing_ball.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Dynamic Tail</h1>
+                  <h1>Bouncing Ball</h1>
                 
-                <p><img width=49% src=https://user-images.githubusercontent.com/8775944/104851801-0c328e80-58ef-11eb-862f-8c57b9e409ed.gif> <img width=49% src=https://user-images.githubusercontent.com/8775944/105234661-7f443b00-5b63-11eb-93cf-692ccfb902aa.gif></p>
-<h3 id="dynamic-tail">Dynamic Tail</h3>
-<p>In this tutorial you'll learn how to <strong>setup a tail</strong> with physics and <strong>how to steer</strong> the look and feel of the simulation using normal keyframing techniques. We'll use one of the excellent rigs by <a href="https://gumroad.com/truongcgartist?sort=page_layout#krsIT">Truong CG Artist</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Out of date</p>
-<p>This tutorial was written for 2021.03.01 and a few things have changed since then.</p>
-<ul>
-<li><code>Dynamic Control</code> menu item was renamed <code>Active Chain</code></li>
-<li><code>rGuideMultiplier</code> shape node was renamed <code>rGlobalStrength</code></li>
-<li><code>Blend Simulation = 1.0</code> attribute was renamed <code>Simulated = On/Off</code></li>
-</ul>
-</div>
-<p><strong>Optional example files</strong></p>
-<ul>
-<li><a href="https://github.com/mottosso/upload/files/5848441/falloff_example.zip">falloff_example.zip</a></li>
-</ul>
-<p><br></p>
-<h2 id="walkcycle">Walkcycle</h2>
-<p>Let's start with a walkcycle, and move towards interacting with the environment.</p>
-<h3 id="apply-simulation">Apply Simulation</h3>
-<p>Select the hip followed by each tail control along the tail in order, and click <strong>Create Dynamic Control</strong>.</p>
-<p><img alt="01_Setup" src="https://user-images.githubusercontent.com/8775944/104849638-c4a60580-58e2-11eb-926a-36fa00099dff.gif" /></p>
-<h3 id="reduce-gravity">Reduce Gravity</h3>
-<p>This particular rig is very small, about 1.6 cm tall, so we need to reduce the default <strong>Gravity</strong> to reflect this.</p>
-<p><img alt="01_B_Gravity" src="https://user-images.githubusercontent.com/8775944/104851250-dcce5280-58eb-11eb-9fc8-a782e7d9cd91.gif" /></p>
-<h3 id="global-strength">Global Strength</h3>
-<p>The first selected Dynamic Control contains a <strong>Guide Multiplier</strong> to influence the strength on all of the tail controls at the same time.</p>
-<p><img alt="02_Multiplier" src="https://user-images.githubusercontent.com/8775944/104851332-4c444200-58ec-11eb-9631-2c844eb75647.gif" /></p>
-<h3 id="local-strength">Local Strength</h3>
-<p>You can also adjust the strength values individually for each joints, to taper their <strong>stiffness</strong> along the length of the tail.</p>
-<p><img alt="03_Falloff" src="https://user-images.githubusercontent.com/8775944/104849556-3467c080-58e2-11eb-899e-e640a8e3b284.gif" /></p>
-<h3 id="strength-falloff">Strength Falloff</h3>
-<p>Let's taper the strength along the length of the tail.</p>
-<p><img alt="tweaking_values" src="https://user-images.githubusercontent.com/8775944/104852123-c8d91f80-58f0-11eb-97e8-afc2fa83ca1f.gif" /></p>
-<h3 id="result">Result</h3>
-<p>Let's see how it looks.</p>
-<p><img alt="wolf_animated" src="https://user-images.githubusercontent.com/8775944/104851801-0c328e80-58ef-11eb-862f-8c57b9e409ed.gif" /></p>
-<p><br></p>
-<h2 id="sitting-down">Sitting Down</h2>
-<p>Now let's see how to steer our simulation with regular keyframes.</p>
-<h3 id="switch-to-animation">Switch to Animation</h3>
-<p>The simulation will try to follow your keyframe animation. Just switch off the <code>Simulated</code> attribute on the root control while you're animating, then switch it back on to see how it looks.</p>
-<p><img alt="animate" src="https://user-images.githubusercontent.com/8775944/104857605-9986da80-5911-11eb-9f2b-26a559f7e777.gif" /></p>
-<h3 id="animation-vs-simulation">Animation vs Simulation</h3>
-<p>You can see the animation input on the left and the resulting simulation on the right. With just 3 keyframed poses we end up with this result. Note that I had to overcompensate my animation poses to fight gravity when the tail swings around.</p>
-<p><img alt="anim_input" src="https://user-images.githubusercontent.com/8775944/105234661-7f443b00-5b63-11eb-93cf-692ccfb902aa.gif" /></p>
-<p><br></p>
-<h2 id="advanced-control">Advanced Control</h2>
-<p>Gain even more fine-grained control with these advanced topics.</p>
-<h3 id="flex-and-relax-muscles">Flex and Relax Muscles</h3>
-<p>By keyframing the root strength multiplier you can flex or relax the muscles in the tail. The higher the value the stiffer it gets and the lower the value the more relaxed it becomes, allowing gravity to drop it to the ground.</p>
-<p><img alt="key_str_mult_3" src="https://user-images.githubusercontent.com/8775944/105247183-452b6700-5b6c-11eb-8a1e-9f19fce9eb6f.gif" /></p>
-<h3 id="damping">Damping</h3>
-<p>Damping controls how fleshy and sluggish your simulation behaves.</p>
-<p><img alt="04_Damping" src="https://user-images.githubusercontent.com/8775944/104849540-20bc5a00-58e2-11eb-899e-3dfa148b9b60.gif" /></p>
-<p>Low or zero damping preserves more energy in the system, making a simulation more elastic or rubbery. Creatures and humans tend to look best with moderate to high damping values.</p>
-<!-- 
-### World Space Forces
+                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/130401392-0d4549ab-3545-46ec-98d2-6b084b2a8465.jpg">
+    <source src="https://user-images.githubusercontent.com/2152766/130034996-98912ff5-7a3c-4ca4-8486-3906b50cc780.mp4" type="video/mp4">
+</video>
 
-Using worldspace forces, you can apply an attraction force to the simulated tail forcing it to match your animated poses better in world space. With lower values you can just slightly guide the tail to achieve the pose you are looking for while with higher values you can completely overwrite the sim to follow your animation 100%.
- -->
+<h3 id="bouncing-ball">Bouncing Ball</h3>
+<blockquote>
+<p>The fundamentals of animation</p>
+</blockquote>
+<p>In this tutorial, we will reproduce a classic animation tutorial, the Bouncing Ball. With it, we will explore various material properties of a ball whilst learning about the inner workings of Ragdoll.</p>
+<div class="admonition success">
+<p class="admonition-title">Version 1.0 - Up to date</p>
+<p>Written for Ragdoll <code>2021.08.06</code> and above, but should still apply for <code>2021.06</code> and newer.</p>
+</div>
+<p><strong>Estimated Time</strong></p>
+<ul>
+<li>🕐 10 minutes</li>
+</ul>
+<p><strong>You will learn</strong></p>
+<ul>
+<li>✔️ How to convert a <code>polySphere</code> into a "rigid"</li>
+<li>✔️ How to tune physical properties such as bounciness and friction</li>
+<li>✔️ How to configure the solver for accurate high-frequency motion</li>
+</ul>
+<p><strong>Where to find help</strong></p>
+<p>If you find or run into any issues with this tutorials, here's what you can do.</p>
+<ul>
+<li>✔️ Ask in <a href="https://ragdolldynamics.com/chat">the chat</a></li>
+<li>✔️ Ask on <a href="https://forums.ragdolldynamics.com/">the forums</a></li>
+</ul>
+<div class="hboxlayout justify-left">
+<a href="https://files.ragdolldynamics.com/api/public/dl/J0nMny95/bouncing_ball_v003.zip" class="button red"><b>Download Final Scene</b></a>
+</div>
+
+<p><br></p>
+<h3 id="motivation">Motivation</h3>
+<p>Why should an animator <em>simulate</em> a ball bouncing, rather than just keyframe it? </p>
+<p>If you are new to animation or in a neighbouring field such as modeling or lighting, it might seem silly to consider such a trivial task for simulation. But as the more seasoned animator knows, getting the trajectory of any free-flying object right is <em>incredibly</em> hard. It can mean the difference between a believable character, and a character that looks like Earths gravity varies for the duration of a single jump, or one that appears to be on a different planet altogether.</p>
+<p>With that in mind, although a single ball bouncing on a flat plane may <em>seem</em> trivial, it can be enough to challenge even the most senior of animators.</p>
+<p><br></p>
+<h3 id="setup">Setup</h3>
+<p>For this tutorial, all you need is an empty Maya scene. So go ahead and clear out all of those references and meshes with hours of history on it and let's get crackin'!</p>
+<p><br></p>
+<h4 id="poly-sphere">Poly Sphere</h4>
+<p>Let's make our ball out of a regular Maya <code>polySphere</code>.</p>
+<ol>
+<li>Run <code>Sphere</code> from the <code>Polygon Primitives</code> submenu of the <code>Create</code> main menu</li>
+<li>Translate the sphere to <code>Translate Y = 5.0</code></li>
+</ol>
+<details class="question"><summary>What about NURBS?</summary><p>Yes, if you prefer, you can also use a NURBS sphere.</p>
+</details>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130042846-17b46ae2-e8b1-432f-9382-945a7727f494.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="dynamics">Dynamics</h4>
+<p>With our sphere in place, let's give it some physical properties by turning it into a <code>Active Rigid</code>.</p>
+<ol>
+<li>Select <code>pSphere1</code></li>
+<li>Run <code>Active Rigid</code> from the <code>Ragdoll</code> Menu</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130044033-f5d695ad-08cd-4703-9061-c950e15555aa.mp4" type="video/mp4"></video></p>
+
+<p>That's great! Except hm.. It's not really a <em>bouncing</em> ball just yet.</p>
+<p><br></p>
+<h4 id="bounciness">Bounciness</h4>
+<p>Default settings make the ball rather dull, so let's try introducing some bounciness via its material properties.</p>
+<ol>
+<li>Select <code>pSphere1</code></li>
+<li>Increase <code>Bounciness = 1.0</code></li>
+</ol>
+<details class="question"><summary>What does 1.0 mean?</summary><p>It means 100%! Technically, it means any force produced by the ball hitting the ground is reversed in its entirety with <em>no</em> loss of energy what-so-ever.</p>
+</details>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130352353-3ac29137-0e11-4e8d-9e01-4808f9818809.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="more-bounciness">More Bounciness</h4>
+<p>The reason the ball stops bouncing is that even though our <em>ball</em> is 100% bouncy, the <strong>ground</strong> is not. Like dropping a bowling ball on grass or a wooden floor. For perfect bounce, they <em>both</em> need to be 100% bouncy.</p>
+<ol>
+<li>Select <code>rScene</code></li>
+<li>Set <code>Ground Bounciness = 1.0</code></li>
+</ol>
+<details class="question"><summary>Where did the ground come from?</summary><p>Ragdoll creates this ground automatically for you whenever the first rigid is made. It can be disabled by setting <code>Use Ground = Off</code> on the <code>rScene</code> node.</p>
+</details>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130045101-f98d2ace-7766-4871-8f0c-46e1d1cec022.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="even-more-bounciness">Even More Bounciness</h4>
+<p>Around the 11-second mark of the video above, you'll notice the ball suddenly comes to a halt. As if it suddenly remembered it isn't actually a bouncing ball anymore. Why is this? 😯</p>
+<p>The default values are tuned for the simulation of ragdolls (surprise surprise!) so in order to accurately simulate just a ball we need to make some tweaks.</p>
+<ol>
+<li>Select <code>rScene</code></li>
+<li>Go to the <code>Advanced</code> tab in the <code>Attribute Editor</code></li>
+<li>Set <code>Bounce Threshold = 0.1</code></li>
+</ol>
+<details class="question"><summary>What does Bounce Threshold mean?</summary><p>It is how small of a bounce Ragdoll should consider to be a bounce, until it eventually stops it from bouncing.</p>
+<p>A value of <code>0.0</code> theoretically means the objects would <em>never</em> stop bouncing. No matter their <code>Bounciness</code>. Each bounce would simply get smaller and smaller into infinity!</p>
+<p>In the real world, objects would naturally come to a halt at some point due to friction in the air and along the surfaces of the two objects. With Ragdoll, we only have approximations of such things so as to make a simulation run in real-time, and as a result we need to manually tune this parameter until we find a value that suits our taste.</p>
+</details>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130048001-8e3b6e0f-b407-45a8-922f-f9da58648bbd.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="infinite-bounciness">Infinite Bounciness</h4>
+<p>Let's keep pursuing that sweet sweet <em>perfect</em> bounce.</p>
+<ol>
+<li>Select <code>rScene</code></li>
+<li>Reduce <code>Air Density = 0.0</code></li>
+</ol>
+<details class="question"><summary>What is Air Density?</summary><p>This attribute can be used to emulate the effect air has on your simulation. It can be used to achieve effects <em>other</em> than air too.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Air Density</th>
+<th align="left">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>0.0</code></td>
+<td align="left">Vacuum</td>
+</tr>
+<tr>
+<td align="left"><code>5.0</code></td>
+<td align="left">Water</td>
+</tr>
+<tr>
+<td align="left"><code>10.0</code></td>
+<td align="left">Mud</td>
+</tr>
+<tr>
+<td align="left"><code>100.0+</code></td>
+<td align="left">Sand</td>
+</tr>
+</tbody>
+</table>
+<p>Technically, the attribute is a multiplier of <code>Translate Damping</code> and <code>Rotate Damping</code> of each <code>rdRigid</code> node, which can be used to affect individual rigids.</p>
+</details>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130062842-2519b73b-c76c-4250-abbe-52c618b7f989.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="finalise">Finalise</h3>
+<p>Now that we have complete control over our ball, let's put it to good use.</p>
+<p><strong>You have learnt</strong></p>
+<ul>
+<li>✔️ How to convert a <code>polySphere</code> into a "rigid"</li>
+<li>✔️ How to tune physical properties such as bounciness and friction</li>
+<li>✔️ How to configure the solver for accurate high-frequency motion</li>
+</ul>
+<p><br></p>
+<h4 id="initial-velocity">Initial Velocity</h4>
+<p>Give the ball a little push.</p>
+<ol>
+<li>Select <code>pSphere1</code></li>
+<li>Run <code>Hard Pin</code> from the <code>Controls</code> submenu of the <code>Ragdoll</code> menu</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130067077-9957d017-6f60-4a07-9442-d4ec1ece3b99.mp4" type="video/mp4"></video></p>
+
+<p>A new node was created called a "Hard Pin", which tells Ragdoll exactly where this ball should be at any given moment. We can now animate this pin which in turn animates the ball, until we "unpin" it.</p>
+<ol>
+<li>Select <code>rHardPin</code></li>
+<li>Set the following keyframes.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">Frames</th>
+<th align="left">1</th>
+<th align="left">2</th>
+<th align="left">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Translate Z</code></td>
+<td align="left"><code>0.0</code></td>
+<td align="left"><code>0.5</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>Passive</code></td>
+<td align="left"></td>
+<td align="left"><code>On</code></td>
+<td align="left"><code>Off</code></td>
+</tr>
+</tbody>
+</table>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130067337-7f19d854-45a5-44a0-9581-20e648a5d2ad.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="trajectory">Trajectory</h4>
+<p>With our bouncing ball underway, let's gain a deeper understanding of what it looks like over time.</p>
+<ol>
+<li>Select <code>rScene</code></li>
+<li>Go to the <code>Visualisation</code> tab</li>
+<li>Toggle <code>Trajectories</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130074593-668bca60-6b48-4502-8521-7c8393558bbe.mp4" type="video/mp4"></video></p>
+
+<p>Now, as every animator knows, this is <strong>not</strong> the trajectory of a bouncing ball. It looks as if the ball isn't actually touching the floor half the time, what's up with that? 🤔</p>
+<table>
+<thead>
+<tr>
+<th align="left">Expected Result<br>✔️</th>
+<th align="left"><img alt="Expected result" src="https://user-images.githubusercontent.com/2152766/130076967-0d84f40b-2d02-4da5-94af-826ee4baac29.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Actual Result</strong><br>❌</td>
+<td align="left"><img alt="Actual result" src="https://user-images.githubusercontent.com/2152766/130076971-56b3460a-1399-4fd1-bd80-e4d850b30769.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>This is a problem of <em>resolution</em>. Cameras have this problem too.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130089534-22b88ab5-f5c7-41f0-8987-6961e9133f0c.mp4" type="video/mp4"></video></p>
+
+<p>See how despite this most definitely <em>not</em> being a simulation (or is it?) we are <em>still</em> getting bounces that don't actually touch the ground! The reason is simply that a camera can only capture <em>moments</em> of reality. It can only <em>sample</em> it.</p>
+<p>In this case, the ball <em>did</em> touch the floor, but the camera caught at a slightly different time. Shortly before and after contact. This is how you can think of Ragdoll too; a camera for physics.</p>
+<details class="question"><summary>Can you overeducate me?</summary><p>With pleasure. 😁 Let's look at <em>audio</em>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/130089957-7261ab3b-a0ab-4861-933a-f034d4debcee.png" /></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)">Wikipedia Reference</a></li>
+</ul>
+<p>Notice how sound itself, represented by the curved line, is continuous - of infinite resolution - and that what we capture in our computers are samples of it, at some fixed resolution - typically at 44,000 fps or as it is more commonly known <code>44khz</code>.</p>
+<p>Ragdoll works like this too. Physics is continous, but Ragdoll can only provide you with snapshots of physics at a fixed resolution; the resolution of your framerate.</p>
+</details>
+<details class="question"><summary>Is every bouncing ball tutorial on YouTube wrong?</summary><p>A typical bouncing ball tutorial has the ball come into contact on whole frames. But because the time between each bounce is decreasing, it is <em>impossible</em> for every bounce to land on a whole frame.</p>
+<p>So in a way, yes, they are wrong! Science says so!</p>
+</details>
+<details class="question"><summary>Should I change the way I animate?</summary><p>Well, it depends. Take motion blur for example.</p>
+<p>Because you see, the final position from a video recorded tennis ball is only half the story. Motion blur isn't the result of only these samples, but of the <em>actual</em> continous motion. As light hits the lens inbetween the shutter opening and closing, the ball is still moving.</p>
+<p>To accurately reproduce this effect in your animation or with Ragdoll, you still need those inbetween positions of the ball. Just so that your renderer can throw those away once it's done computing motion blur.</p>
+<p>Even without motion blur, your eyes and brain still interprets the ball not hitting the ground as though it floats or hits an invisible obstacle. So for the greatest sense of realism when everything has been said and done and the images actually reach your eyes (brain), you may <em>still</em> want to defy physics and realism.</p>
+<p>Because at the end of the day, the animation curves isn't what you are making. They are mere tools for you to achieve realism in the final output picture.</p>
+</details>
+<p><br></p>
+<h4 id="tennis-ball">Tennis Ball</h4>
+<p>Now that we've got some reference for a tennis ball, let's tune our settings to match.</p>
+<ol>
+<li>Select <code>pSphere1</code></li>
+<li>Set <code>Bounciness = 0.4</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130199902-b5b54f6e-f1e9-46ef-83a9-a3b0784e2418.mp4" type="video/mp4"></video></p>
+
+<p>Let's also take it out of orbit and into Earths atmosphere by restoring the <code>Air Density</code></p>
+<ol>
+<li>Select <code>rScene</code></li>
+<li>Set <code>Air Density = 1.0</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130199900-f165d6d1-c9da-493a-930e-ad271c5a40ed.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="practical-examples">Practical Examples</h3>
+<p>Now that we've got a ball, what could we possible do with it?</p>
+<p><br></p>
+<h4 id="squash">Squash</h4>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130283151-4c6225b9-0ba0-40c9-af34-f826ae4e20a1.mp4" type="video/mp4"></video></p>
+<p>Now we can use what we've learnt and combine it with some traditional rigging to <em>deform</em> our ball!</p>
+<p>We'll achieve this by reducing the size of our simulated ball, whilst keeping our Maya geometry the same. That will result in the Maya geometry actually <em>intersecting</em> the ground. We will then "fix" the intersection whilst preserving the overall volume of the mesh.</p>
+<p>Let's go.</p>
+<table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="left">Description</th>
+<th align="left">Screenshot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Create a new <code>Icosahedron</code> with 4 subdivisions of triangles.<br><br>We will use this as the deformed version of our rigid.</td>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/130214110-d49eb9df-016f-4af8-9da6-c88d1192049e.png" /></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Create a floor out of a box, we need something with volume.</td>
+<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/130218959-56d37941-c9e3-4e72-8919-6eded7037336.png" /></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Parent Constrain <code>pPlatonic1</code> to <code>pSphere1</code>.<br><br>Do not maintain the offset such that the new sphere follows the original sphere.</td>
+<td align="left"><img alt="parentconstraint" src="https://user-images.githubusercontent.com/2152766/130283490-f5e60402-3ea3-46d4-9361-6fa1f13094f7.gif" /></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Reduce the <code>Radius</code> of <code>pSphere1 = 0.5</code></td>
+<td align="left"><img alt="radius" src="https://user-images.githubusercontent.com/2152766/130219540-2c394185-0823-4fd8-b97f-55228f2ba7a6.gif" /></td>
+</tr>
+</tbody>
+</table>
+<p>With a radius less than our geometry, the geometry will naturally <em>intersect</em> with our ground. Let's compensate for this using a <code>membrane</code> deformer.</p>
+<ol>
+<li>Select <code>pPlatonic1</code></li>
+<li>Run the following MEL comment</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">createMembrane</span>
+</code></pre></div>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130234021-61c568e4-c086-4375-959d-48870c44a237.mp4" type="video/mp4"></video></p>
+<p>Not much will happen yet, apart from a small offset along Y. We'll get to that. But first.</p>
+<ol>
+<li>Select <code>pPlatonic1</code></li>
+<li>Shift select <code>pCube1</code></li>
+<li>Run the following MEL command</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">collideMembrane</span>
+</code></pre></div>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130234697-9aec0728-6f20-40f2-8887-aa82312a1b39.mp4" type="video/mp4"></video></p>
+<p>Great, so the ground pushes against the ball, solving the intersection we created earlier by reducing the <code>Radius</code>.</p>
+<p>Let's tune the <code>membrane</code></p>
+<ol>
+<li>Select <code>pPlatonic1</code></li>
+<li>Set these attributes</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Gravity</code></td>
+<td align="left"><code>0.0</code></td>
+<td align="left">Remove that offset along Y</td>
+</tr>
+<tr>
+<td align="left"><code>Thickness</code></td>
+<td align="left"><code>0.01</code></td>
+<td align="left">Get the ball and ground closer</td>
+</tr>
+<tr>
+<td align="left"><code>Steps</code></td>
+<td align="left"><code>5</code></td>
+<td align="left">Fix the intersection with the ground</td>
+</tr>
+<tr>
+<td align="left"><code>Compression Resistance</code></td>
+<td align="left"><code>5</code></td>
+<td align="left">Maintain the volume of the ball</td>
+</tr>
+<tr>
+<td align="left"><code>Bend Resistance</code></td>
+<td align="left"><code>2</code></td>
+<td align="left">Spread the deformation</td>
+</tr>
+<tr>
+<td align="left"><code>Stretch Resistance</code></td>
+<td align="left"><code>1</code></td>
+<td align="left">Smoother overall surface</td>
+</tr>
+</tbody>
+</table>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130282792-a358d07a-be70-4319-a137-57c2ab61e55a.mp4" type="video/mp4"></video></p>
+<p>From here, you can tune <code>Bend Resistance</code> for more or less stiffness in the overall surface, and <code>Steps</code> for more or less of an effect.</p>
+<p><br></p>
+<h4 id="pong">Pong</h4>
+<p>Let's recreate a classic game of pong, with two animatable paddles.</p>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130352449-a57fc0b0-7d6e-48b5-bdd4-373c43542dbf.mp4" type="video/mp4"></video></p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Description</th>
+<th align="left">Video</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Create a new rigid.<br><br>We won't need any geometry, the default shape will be a <code>Sphere</code></td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351250-74cd9933-a0d1-468c-b39a-a5ae15cea473.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Let's look from a <code>side</code> view.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351249-817039ea-5846-4c26-a941-46a21c128c0f.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Create the floors.<br><br>Same thing, except this time as a <code>Passive Rigid</code> and we'll adjust the shape to a <code>Box</code>.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351246-e76310fc-2b93-40ae-b79a-aab4858e61ac.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Create the paddles.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351245-7403de5f-1999-42d9-9263-95ed8b51a602.mp4" type="video/mp4"></video></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Create a <code>Soft Pin</code>, and animate its <code>Guide Strength</code> across the first two frames.<br><br>We'll use this to give the ball its initial velocity. You can tweak the position and strength to give it more or less speed in your chosen direction.</td>
+<td align="left"><video autoplay class="poster" muted="muted" loop="loop" width=100%>    <source src="https://user-images.githubusercontent.com/2152766/130351244-2edbf976-8b87-4939-a278-7f8fcc774fd1.mp4" type="video/mp4"></video></td>
+</tr>
+</tbody>
+</table>
+<p>Now let's tune some settings.</p>
+<ol>
+<li>Select every rigid</li>
+<li>Set <code>Friction = 0.0</code></li>
+<li>Set <code>Bounciness = 0.0</code></li>
+<li>Select <code>rScene</code></li>
+<li>Set <code>Air Density = 0.0</code></li>
+<li>Set <code>Use Ground = Off</code></li>
+<li>Set <code>Bounce Threshold = 0.1</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/130351241-279c3d81-cdd4-46c9-b98f-8ae5855d02e7.mp4" type="video/mp4"></video></p>
+<p>Finally, we can <strong>animate</strong> the paddles. Winning is a little easier than normal Pong, since we can not only freeze time, but rewind it too. 😅</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130351243-f1776748-f513-4b88-a884-77d09b6bf988.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="incredible-machine">Incredible Machine</h4>
+<p>In the 1990s, there was a game developed called The Incredible Machine. In it, you were tasked with creating an obstacle course for a set of mechanical contraptions and physical objects in order to get some object from one place to another.</p>
+<blockquote>
+<p>Coming soon</p>
+</blockquote>
+<p><br></p>
+<h4 id="cached-playback">Cached Playback</h4>
+<p>Tweak an entire trajectory on-the-fly with Maya Cached Playback. Play with gravity and witness how it affects the slopes.</p>
+<blockquote>
+<p>Coming soon</p>
+</blockquote>
+<p><br></p>
+<h4 id="for-science">For Science</h4>
+<p>The shortest path isn't necessarily the fastest.</p>
+<!-- WIP of an Omniverse example -->
+
+<blockquote>
+<p>Coming soon</p>
+</blockquote>
+<p><br></p>
+<h4 id="pool">Pool</h4>
+<p>A classic game of pool with balls constrained onto a 2D plane.</p>
+<blockquote>
+<p>Coming soon</p>
+</blockquote>
+<p><br></p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Let's have a look at some common issues.</p>
+<p><br></p>
+<h4 id="vibrating-at-rest">Vibrating at Rest</h4>
+<p>There is no right value for <code>Bounce Threshold</code>, it's an art. And it depends on the size of your scene and rigids, their shape, how fast they move and the look you are after.</p>
+<p>When the threshold is too low, Ragdoll can get into an infinite bounce like this.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130202752-539c1836-d8c7-4745-98ad-98b783d8e7ea.mp4" type="video/mp4"></video></p>
+
+<p>To address this, increase the threshold until it stops.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/130202749-db01636e-402a-4a4d-ac4b-932eb1795828.mp4" type="video/mp4"></video></p>
                 
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-12-12
+    
+  </small>
+</div>
                   
                 
               
@@ -2598,6 +3283,41 @@ Using worldspace forces, you can apply an attraction force to the simulated tail
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../documentation/performance_tips/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Performance Tips
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../rally_car/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Rally Car
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
