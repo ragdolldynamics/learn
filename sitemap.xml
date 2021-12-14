@@ -1,327 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://learn.ragdolldynamics.com/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/overview/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/marker/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/group/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/solver/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/manipulator/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/constraints/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/record_simulation/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/snap_to_simulation/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/retargeting/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/cache/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/link/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/utilities/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/tutorials/videos/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/tutorials/manikin/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/tutorials/manikin_ragdoll/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/tutorials/manikin_ik/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/tutorials/mocap_chap/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/download/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/menu/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/nodes/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/api/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://learn.ragdolldynamics.com/releases/next/</loc>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.12.12/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.11.15/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.10.25/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.10.07/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.09.27/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.08.28/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.08.06/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.07.27/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.07.15/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.07.02/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.06.10/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.06.07/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.05.17/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.05.10/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.04.28/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.04.23/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.04.11/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.03.25/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.03.23/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.03.11/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.03.04/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.03.01/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.02.07/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.01.27/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.01.17/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.01.15/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.01.14/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2021.01.04/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.12.18/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.12.07/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.12.01/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.24/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.23/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.22/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.17/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.16/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/releases/2020.11.10/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/licencing/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/serialisation/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/about/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/active_rigid/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/active_chain/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/character/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/legacy_constraints/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/soft_pin/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/hard_pin/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/mimic/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/forces/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/bake_simulation/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/import_physics/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/export_physics/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/scene_management/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/cycle_protection/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/pivot_editor/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/debugging_tips/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/documentation/performance_tips/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/legacy/bouncing_ball/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/legacy/rally_car/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://learn.ragdolldynamics.com/legacy/manikin/</loc>
-     <lastmod>2021-12-13</lastmod>
+     <lastmod>2021-12-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
