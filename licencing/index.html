@@ -1065,6 +1065,24 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
+      <a href="../releases/next/" class="md-nav__link">
+        
+
+        next
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
       <a href="../releases/2021.12.15/" class="md-nav__link">
         
 
@@ -2907,35 +2925,40 @@
 <p><br></p>
 <h2 id="offline-activation">Offline Activation</h2>
 <p>Haven't got no internet?</p>
-<p>No problem, here's what you need to do.</p>
+<p>No problem, here's what you do.</p>
 <ol>
-<li>Generate an "activation request", a file</li>
-<li>Send us this file, via <a href="mailto:licencing@ragdolldynamics.com">email</a></li>
-<li>Receive a "activation response", another file</li>
+<li>Generate an <strong>"activation request"</strong> file</li>
+<li>Send the contents of this file, or the file itself to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a></li>
+<li>Receive a <strong>"activation response"</strong> file</li>
 <li>Activate using this file</li>
 </ol>
 <p>It requires pasting some <em>Python</em> commands into the <strong>Maya Script Editor</strong>.</p>
-<p><strong>Generate Request</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<p><strong>1. Generate Request</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
 <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;YOUR-VERY-LONG-KEY-HERE&quot;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_activation_request.xml&quot;</span>
-<span class="n">licence</span><span class="o">.</span><span class="n">activation_request_to_file</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activation_request_to_file</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">fname</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">fname</span> <span class="k">else</span> <span class="n">cmds</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Cancelled&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Email Us</strong></p>
-<p>Send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>. We'll abrakadabra this file before you can say <a href="https://en.wikipedia.org/wiki/Taumatawhakatangi%C2%ADhangakoauauotamatea%C2%ADturipukakapikimaunga%C2%ADhoronukupokaiwhen%C2%ADuakitanatahu">Taumatawhakatangi­hangakoauauotamatea­turipukakapikimaunga­horonukupokaiwhen­uakitanatahu</a>.</p>
-<p><strong>Activate</strong></p>
+<p><strong>2. Email Us</strong></p>
+<p>Either send the file, or the contents of the file, to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>.</p>
+<p><strong>3. Receive a response</strong></p>
+<p>We'll abrakadabra this file before you can say <a href="https://en.wikipedia.org/wiki/Taumatawhakatangi%C2%ADhangakoauauotamatea%C2%ADturipukakapikimaunga%C2%ADhoronukupokaiwhen%C2%ADuakitanatahu">Taumatawhakatangi­hangakoauauotamatea­turipukakapikimaunga­horonukupokaiwhen­uakitanatahu</a>.</p>
+<p><strong>4. Activate</strong></p>
 <p>Once you've got a response, activate your licence like this.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_activation_response.xml&quot;</span>
-<span class="n">licence</span><span class="o">.</span><span class="n">activate_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">activate_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">fname</span> <span class="k">else</span> <span class="n">cmds</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Cancelled&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p><br></p>
 <h2 id="offline-deactivation">Offline Deactivation</h2>
 <p>Licences are node-locked (floating licences coming soon), which means that if you need to move a licence from one machine to another you can do so by <em>deactivating</em> an activated licence, and then activating it elsewhere.</p>
 <p>The process is similar to activation.</p>
 <p><strong>Generate Request</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\ragdoll_deactivation_request.xml&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">licence</span><span class="o">.</span><span class="n">deactivation_request_to_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Email Us</strong></p>
@@ -2951,7 +2974,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-08-27
+      Last update: 2021-12-20
     
   </small>
 </div>
