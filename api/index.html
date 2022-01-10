@@ -2614,8 +2614,10 @@
 <span class="n">cmds</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">cmds</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 
-<span class="n">scene</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createScene</span><span class="p">()</span>
-<span class="n">rigid</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createRigid</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createSolver</span><span class="p">()</span>
+<span class="n">marker</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">assignMarker</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
+
+<span class="n">rd</span><span class="o">.</span><span class="n">record</span><span class="p">()</span>
 
 <span class="n">cmds</span><span class="o">.</span><span class="n">evalDeferred</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">play</span><span class="p">)</span>
 </code></pre></div>
@@ -2643,15 +2645,15 @@
 <span class="n">cube</span><span class="p">[</span><span class="s2">&quot;translateY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">cube</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">,</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Degrees</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 
-<span class="c1"># Every simulation needs a scene</span>
-<span class="n">scene</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">create_scene</span><span class="p">()</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagNode</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">scene</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;rdScene&quot;</span>
+<span class="c1"># Every simulation needs a solver</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">create_solver</span><span class="p">(</span><span class="s2">&quot;mySolver&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagNode</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">solver</span><span class="o">.</span><span class="n">isA</span><span class="p">(</span><span class="s2">&quot;rdSolver&quot;</span><span class="p">)</span>
 
-<span class="c1"># Every scene needs one or more rigid bodies</span>
-<span class="n">rigid</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">create_rigid</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rigid</span><span class="p">,</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagNode</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">rigid</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;rdRigid&quot;</span>
+<span class="c1"># Every solver needs one or more marker bodies</span>
+<span class="n">marker</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">assign_marker</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagNode</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">marker</span><span class="o">.</span><span class="n">isA</span><span class="p">(</span><span class="s2">&quot;rdMarker&quot;</span><span class="p">)</span>
 
 <span class="c1"># Allow start frame to evaluate before progressing</span>
 <span class="n">cmds</span><span class="o">.</span><span class="n">evalDeferred</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">play</span><span class="p">)</span>
@@ -2675,14 +2677,14 @@
 <span class="n">cmds</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 
 <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-<span class="n">ri</span><span class="o">.</span><span class="n">create_rigid</span><span class="p">()</span>
+<span class="n">ri</span><span class="o">.</span><span class="n">assign_marker</span><span class="p">()</span>
 
 <span class="n">cmds</span><span class="o">.</span><span class="n">evalDeferred</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">play</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition hint">
-<p class="admonition-title">Quick Tip</p>
+<p class="admonition-title">Pro Tip</p>
 </div>
-<p>Whenever you click a menu item, its Python command is printed in the Script Editor!</p>
+<p>Whenever you click a menu item, this Python command is printed in the Script Editor!</p>
 <p><br></p>
 <h2 id="members">Members</h2>
 <p>Currently available members of <code>ragdoll.api</code>.</p>
@@ -2690,49 +2692,28 @@
 <li>Call <code>help()</code> for usage instructions</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># Fundamentals</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createScene</span><span class="p">()</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createRigid</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">scene</span><span class="p">,</span> <span class="n">passive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">compute_mass</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">createSolver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mySolver&quot;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">assignMarker</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">assignMarkers</span><span class="p">([</span><span class="n">transform1</span><span class="p">,</span> <span class="n">transform2</span><span class="p">],</span> <span class="n">solver</span><span class="p">)</span>
 
 <span class="c1"># Constraints</span>
-<span class="n">api</span><span class="o">.</span><span class="n">pointConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">orientConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">hingeConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">socketConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">parentConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">createFixedConstraint</span><span class="p">(</span><span class="n">marker1</span><span class="p">,</span> <span class="n">marker2</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">createDistanceConstraint</span><span class="p">(</span><span class="n">marker2</span><span class="p">,</span> <span class="n">marker2</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">createPinConstraint</span><span class="p">(</span><span class="n">marker1</span><span class="p">)</span>
 
-<span class="n">api</span><span class="o">.</span><span class="n">convertToPoint</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">convertToOrient</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">convertToHinge</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">secondary_axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">convertToSocket</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">convertToParent</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+<span class="c1"># Edit</span>
+<span class="n">api</span><span class="o">.</span><span class="n">reconnect</span><span class="p">(</span><span class="n">child_marker</span><span class="p">,</span> <span class="n">parent_marker</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">retarget</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">new_transform</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">replaceMesh</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">new_mesh</span><span class="p">)</span>
 
-<span class="c1"># Controls</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createAbsoluteControl</span><span class="p">(</span><span class="n">rigid</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createRelativeControl</span><span class="p">(</span><span class="n">rigid</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createActiveControl</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">rigid</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createKinematicControl</span><span class="p">(</span><span class="n">rigid</span><span class="p">)</span>
-
-<span class="c1"># Forces</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createForce</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">rigid</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">createSlice</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">assignForce</span><span class="p">(</span><span class="n">rigid</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
-
-<span class="c1"># Utilities</span>
-<span class="n">api</span><span class="o">.</span><span class="n">transferAttributes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">transferRigid</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">rb</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">transferConstraint</span><span class="p">(</span><span class="n">ca</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">editConstraintFrames</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(</span><span class="n">rigid</span><span class="p">)</span>
+<span class="c1"># IO</span>
+<span class="n">api</span><span class="o">.</span><span class="n">record</span><span class="p">()</span>
+<span class="n">api</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+<span class="n">api</span><span class="o">.</span><span class="n">reinterpret</span><span class="p">()</span>
 </code></pre></div>
 <p><br></p>
 <h2 id="environment-variables">Environment Variables</h2>
-<p>Gain more control over the integration of Ragdoll into your pipeline with these optional environment variables. For example, to avoid the startup dialog on first launch, set <code>RAGDOLL_NO_STARTUP_DIALOG=1</code> and then call:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ragdoll.interactive</span>
-<span class="n">ragdoll</span><span class="o">.</span><span class="n">interactive</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
-</code></pre></div>
-<blockquote>
-<p>Added <code>Ragdoll 2021.01.14</code></p>
-</blockquote>
+<p>Gain more control over the integration of Ragdoll into your pipeline with these optional environment variables. For example, to avoid the startup dialog on first launch, set <code>RAGDOLL_NO_STARTUP_DIALOG=1</code> before loading the plug-in.</p>
 <table>
 <thead>
 <tr>
@@ -2758,9 +2739,9 @@
 <td align="left">Unset</td>
 </tr>
 <tr>
-<td align="left">RAGDOLL_INSTALL_ON_IDLE</td>
-<td align="left">Restore plug-in load behavior pre-2021.04.30</td>
-<td align="left">Unset</td>
+<td align="left">RAGDOLL_TELEMETRY</td>
+<td align="left">Help development by uploading usage data.</td>
+<td align="left">Enabled for non-commercial licences, optional for commercial licences.</td>
 </tr>
 </tbody>
 </table>
@@ -2772,7 +2753,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-27
+      Last update: 2022-01-08
     
   </small>
 </div>
