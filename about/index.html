@@ -928,10 +928,10 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../nodes/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
 
-        Node Reference
+        API Reference
       </a>
     </li>
   
@@ -974,10 +974,56 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../licencing/" class="md-nav__link">
         
 
-        API Reference
+        Licencing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../serialisation/" class="md-nav__link">
+        
+
+        Serialisation
       </a>
     </li>
   
@@ -1031,26 +1077,26 @@
       
         <input
           class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-9"
+          data-md-toggle="nav-10"
           type="checkbox"
-          id="nav-9"
+          id="nav-10"
           
         />
       
 
       <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-9">
-        Release History
+      <label class="md-nav__link" for="nav-10">
+        News
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav
         class="md-nav"
-        aria-label="Release History"
+        aria-label="News"
         data-md-level="1"
       >
-        <label class="md-nav__title" for="nav-9">
+        <label class="md-nav__title" for="nav-10">
           <span class="md-nav__icon md-icon"></span>
-          Release History
+          News
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
 
@@ -1784,232 +1830,6 @@
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../licencing/" class="md-nav__link">
-        
-
-        Licencing
-      </a>
-    </li>
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../serialisation/" class="md-nav__link">
-        
-
-        Serialisation
-      </a>
-    </li>
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          About
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
-        
-
-        About
-      </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#london-on-craigslist" class="md-nav__link">
-    London on Craigslist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#early-prototypes" class="md-nav__link">
-    Early Prototypes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lets-start-small" class="md-nav__link">
-    "Let's start small"
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#team-avalon" class="md-nav__link">
-    Team Avalon
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#team-weightshift" class="md-nav__link">
-    Team Weightshift
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#team-ragdoll" class="md-nav__link">
-    Team Ragdoll
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-
-  <!-- Main navigation item -->
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
 
     <!-- Determine whether to render item as a section -->
     
@@ -2022,15 +1842,15 @@
       
         <input
           class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-13"
+          data-md-toggle="nav-11"
           type="checkbox"
-          id="nav-13"
+          id="nav-11"
           
         />
       
 
       <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-13">
+      <label class="md-nav__link" for="nav-11">
         Legacy
         <span class="md-nav__icon md-icon"></span>
       </label>
@@ -2039,7 +1859,7 @@
         aria-label="Legacy"
         data-md-level="1"
       >
-        <label class="md-nav__title" for="nav-13">
+        <label class="md-nav__title" for="nav-11">
           <span class="md-nav__icon md-icon"></span>
           Legacy
         </label>
@@ -2387,15 +2207,15 @@
       
         <input
           class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-13_17"
+          data-md-toggle="nav-11_17"
           type="checkbox"
-          id="nav-13_17"
+          id="nav-11_17"
           
         />
       
 
       <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-13_17">
+      <label class="md-nav__link" for="nav-11_17">
         Tutorials
         <span class="md-nav__icon md-icon"></span>
       </label>
@@ -2404,7 +2224,7 @@
         aria-label="Tutorials"
         data-md-level="2"
       >
-        <label class="md-nav__title" for="nav-13_17">
+        <label class="md-nav__title" for="nav-11_17">
           <span class="md-nav__icon md-icon"></span>
           Tutorials
         </label>
@@ -2485,6 +2305,140 @@
     </li>
 
   <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        About
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#london-on-craigslist" class="md-nav__link">
+    London on Craigslist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#early-prototypes" class="md-nav__link">
+    Early Prototypes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-start-small" class="md-nav__link">
+    "Let's start small"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-avalon" class="md-nav__link">
+    Team Avalon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-weightshift" class="md-nav__link">
+    Team Weightshift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-ragdoll" class="md-nav__link">
+    Team Ragdoll
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
   
 
     
@@ -2646,19 +2600,6 @@
 <p>After a brief stint developing <a href="https://allzpark.com">Allzpark</a> for the Japanese <a href="https://studioanima.co.jp/">Studio Anima</a> and then animating for Redfall and Horizon Zero Dawn II at <a href="https://goodbyekansasstudios.com">Goodbye Kansas</a> it was now 2020. With funding and experience spanning animation, programming, business and now physics all the pieces were in place. What he could not do in 2012 was now made possible.</p>
 <p><img class="poster" src=https://user-images.githubusercontent.com/2152766/127115947-18054044-e8f3-44b5-b23a-46650d02e64d.png></p>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2021-08-03
-    
-  </small>
-</div>
-                  
-                
               
 
               
@@ -2677,7 +2618,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../legacy/manikin/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2686,25 +2627,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Serialisation
+                Manikin
               </div>
             </div>
           </a>
         
-        
-          <a href="../legacy/active_rigid/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Active Rigid
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

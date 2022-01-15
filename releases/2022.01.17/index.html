@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Reverse motion capture, i.e. "Animation Capture" is introduced, for a superior animator-friendly workflow for physics!">
+        <meta name="description" content="Regenerate a physics character from disk">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.09.27/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.01.17/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Animation Capture pt. 1/4 - Learn Ragdoll</title>
+        <title>Import and Export for Markers - Learn Ragdoll</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Animation Capture pt. 1/4
+              Import and Export for Markers
             
           </span>
         </div>
@@ -1062,8 +1062,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -1072,7 +1070,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1082,7 +1080,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          checked
+          
         />
       
 
@@ -1199,277 +1197,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2021.09.27
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../2021.09.27/" class="md-nav__link">
         
 
         2021.09.27
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#showcase" class="md-nav__link">
-    Showcase
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#animation-capture" class="md-nav__link">
-    Animation Capture
-  </a>
-  
-    <nav class="md-nav" aria-label="Animation Capture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#demo-1-basics" class="md-nav__link">
-    Demo 1 - Basics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#demo-2-ragdoll" class="md-nav__link">
-    Demo 2 - Ragdoll
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#demo-3-inverse-kinematics" class="md-nav__link">
-    Demo 3 - Inverse Kinematics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#demo-4-real-world-example" class="md-nav__link">
-    Demo 4 - Real World Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#new-menu" class="md-nav__link">
-    New Menu
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recording" class="md-nav__link">
-    Recording
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#input-type" class="md-nav__link">
-    Input Type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retarget" class="md-nav__link">
-    Retarget
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reassign" class="md-nav__link">
-    Reassign
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reparent" class="md-nav__link">
-    Reparent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guide-space" class="md-nav__link">
-    Guide Space
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transitions" class="md-nav__link">
-    Transitions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#self-collision" class="md-nav__link">
-    Self Collision
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#no-graph-editor-mess" class="md-nav__link">
-    No Graph Editor Mess
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#no-initial-state" class="md-nav__link">
-    No Initial State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#no-more-cycles" class="md-nav__link">
-    No More Cycles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lollipop-controls" class="md-nav__link">
-    Lollipop Controls
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rotate-pivot" class="md-nav__link">
-    Rotate Pivot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#real-ground" class="md-nav__link">
-    Real Ground
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#joints-and-the-attribute-editor" class="md-nav__link">
-    Joints and the Attribute Editor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hidden-solver" class="md-nav__link">
-    Hidden Solver
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-determinism" class="md-nav__link">
-    Enhanced Determinism
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multiple-floating-licences" class="md-nav__link">
-    Multiple Floating Licences
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-release" class="md-nav__link">
-    Next Release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -2647,93 +2384,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#ragdoll-20" class="md-nav__link">
+    Ragdoll 2.0
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#animation-capture" class="md-nav__link">
-    Animation Capture
-  </a>
-  
-    <nav class="md-nav" aria-label="Animation Capture">
+    <nav class="md-nav" aria-label="Ragdoll 2.0">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#demo-1-basics" class="md-nav__link">
-    Demo 1 - Basics
+  <a href="#january-voucher" class="md-nav__link">
+    January Voucher
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#demo-2-ragdoll" class="md-nav__link">
-    Demo 2 - Ragdoll
+  <a href="#looking-back" class="md-nav__link">
+    Looking Back
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#demo-3-inverse-kinematics" class="md-nav__link">
-    Demo 3 - Inverse Kinematics
+  <a href="#ragdoll-flavours" class="md-nav__link">
+    Ragdoll Flavours
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#demo-4-real-world-example" class="md-nav__link">
-    Demo 4 - Real World Example
+  <a href="#ragdoll-unlimited" class="md-nav__link">
+    Ragdoll Unlimited
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#new-menu" class="md-nav__link">
-    New Menu
+  <a href="#ragdoll-complete" class="md-nav__link">
+    Ragdoll Complete
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recording" class="md-nav__link">
-    Recording
+  <a href="#ragdoll-batch" class="md-nav__link">
+    Ragdoll Batch
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#input-type" class="md-nav__link">
-    Input Type
+  <a href="#ragdoll-feature-grid" class="md-nav__link">
+    Ragdoll Feature Grid
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#retarget" class="md-nav__link">
-    Retarget
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reassign" class="md-nav__link">
-    Reassign
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reparent" class="md-nav__link">
-    Reparent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guide-space" class="md-nav__link">
-    Guide Space
+  <a href="#non-commercial-limitations" class="md-nav__link">
+    Non-commercial Limitations
   </a>
   
 </li>
@@ -2744,51 +2453,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transitions" class="md-nav__link">
-    Transitions
+  <a href="#import" class="md-nav__link">
+    Import
   </a>
+  
+    <nav class="md-nav" aria-label="Import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-from-file" class="md-nav__link">
+    Namespace from File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver-from-file" class="md-nav__link">
+    Solver from File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    Known Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#self-collision" class="md-nav__link">
-    Self Collision
+  <a href="#density" class="md-nav__link">
+    Density
   </a>
+  
+    <nav class="md-nav" aria-label="Density">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    Presets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualise" class="md-nav__link">
+    Visualise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#no-graph-editor-mess" class="md-nav__link">
-    No Graph Editor Mess
+  <a href="#level-of-detail" class="md-nav__link">
+    Level of Detail
   </a>
+  
+    <nav class="md-nav" aria-label="Level of Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow_1" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#no-initial-state" class="md-nav__link">
-    No Initial State
+  <a href="#markers-api" class="md-nav__link">
+    Markers API
+  </a>
+  
+    <nav class="md-nav" aria-label="Markers API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-api" class="md-nav__link">
+    Legacy API
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#no-more-cycles" class="md-nav__link">
-    No More Cycles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lollipop-controls" class="md-nav__link">
-    Lollipop Controls
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rotate-pivot" class="md-nav__link">
-    Rotate Pivot
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2801,29 +2597,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#real-ground" class="md-nav__link">
-    Real Ground
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#joints-and-the-attribute-editor" class="md-nav__link">
-    Joints and the Attribute Editor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hidden-solver" class="md-nav__link">
-    Hidden Solver
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-determinism" class="md-nav__link">
-    Enhanced Determinism
+  <a href="#max-mass-ratio" class="md-nav__link">
+    Max Mass Ratio
   </a>
   
 </li>
@@ -2834,23 +2609,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiple-floating-licences" class="md-nav__link">
-    Multiple Floating Licences
+  <a href="#directx" class="md-nav__link">
+    DirectX
+  </a>
+  
+    <nav class="md-nav" aria-label="DirectX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truly-non-keyable" class="md-nav__link">
+    Truly Non-keyable
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#next-release" class="md-nav__link">
-    Next Release
+        
+          <li class="md-nav__item">
+  <a href="#delta-drawing-bug" class="md-nav__link">
+    Delta Drawing Bug
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+        
+          <li class="md-nav__item">
+  <a href="#shape-sync" class="md-nav__link">
+    Shape Sync
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiler-view" class="md-nav__link">
+    Profiler View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-attributes" class="md-nav__link">
+    Removed Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mandarin-serial-number" class="md-nav__link">
+    Mandarin Serial Number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2867,667 +2676,729 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.09.27.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.01.17.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2021.09.27</h1>
+                  <h1>Import and Export for Markers</h1>
                 
-                <p>Highlight for this release is <strong>Animation Capture</strong>.</p>
+                <p><img alt="temptmeptmeetpm" src="https://user-images.githubusercontent.com/2152766/149407680-57a35c2e-21dd-49b6-b313-4cf40f812d85.png" /></p>
+<p>Highlight for this release is <strong>Ragdoll 2.0</strong>!</p>
 <ul>
-<li><a href="#animation-capture"><strong>ADDED</strong> Animation Capture</a> AnimCap, a.k.a. Reverse Motion Capture</li>
-<li><a href="#self-collision"><strong>ADDED</strong> Self-Collision</a> Overlapping shapes, begone</li>
-<li><a href="#lollipop-controls"><strong>ADDED</strong> Lollipop Controls</a> Clarity where there was none</li>
-<li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> Less clutter, more joy</li>
-<li><a href="#no-graph-editor-mess"><strong>IMPROVED</strong> No Graph Editor Mess</a> Clean Graph Editor, clean mind</li>
-<li><a href="#no-more-cycles"><strong>IMPROVED</strong> No More Cycles</a> Clean Graph Editor, clean mind</li>
-<li><a href="#no-initial-state"><strong>IMPROVED</strong> No Initial State</a> Less is more</li>
-<li><a href="#multiple-floating-licences"><strong>FIXED</strong> Multiple Floating Licences</a> Now behaves as one would expect</li>
+<li><a href="#ragdoll-20"><strong>ADDED</strong> Ragdoll 2.0</a> Talk about next-gen!</li>
+<li><a href="#export-import"><strong>ADDED</strong> Export &amp; Import</a> Export physics from one scene and import into another</li>
+<li><a href="#density"><strong>ADDED</strong> Density</a> Automatically compute the mass based on shape volumes</li>
+<li><a href="#level-of-detail"><strong>ADDED</strong> Level of Detail</a> Manage complexity with two or more levels of detail</li>
+<li><a href="#truly-non-keyable"><strong>ADDED</strong> Truly Non-keyable</a> Feedback on whether or not an attribute is keyable or not</li>
+<li><a href="#markers-api"><strong>ADDED</strong> Markers API</a> The API has been reinvigorated with Markers</li>
+<li><a href="#mandarin-serial-number"><strong>FIXED</strong> Mandarin Serial Number</a> Unicode mishap led to a non-sensical message in Mandarin</li>
+<li><a href="#delta-drawing-bug"><strong>FIXED</strong> Delta Drawing Bug</a> Funny drawing in the viewport has been fixed</li>
+<li><a href="#shape-sync"><strong>FIXED</strong> Shape Sync</a> Changes to shape properties outside of the start frame could leave Ragdoll and Maya out of sync</li>
+<li><a href="#max-mass-ratio"><strong>ADDED</strong> Max Mass Ratio</a> Keeping you safe</li>
+<li><a href="#profiler-view"><strong>ADDED</strong> Profiler View</a> An in-depth look at where Ragdoll spends its time</li>
+<li><a href="#directx"><strong>ADDED</strong> DirectX</a> Windows users rejoice, DirectX is here</li>
+<li><a href="#crash-on-deleted-mesh"><strong>FIXED</strong> Crash on Deleted Mesh</a> Replace a mesh, delete it and crash no more.</li>
+<li><a href="#legacy-api"><strong>DEPRECATED</strong> Legacy API</a> All legacy Python functionaliy now resides in its own package</li>
+<li><a href="#removed-attributes"><strong>DEPRECATED</strong> Removed attributes</a> These attributes were harmed in the making of this release.</li>
 </ul>
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
-<p>Let's start with some eye-candy, thanks to <a href="https://www.linkedin.com/in/jason-snyman-84711b1/">Jason Snyman</a> for the gorilla rig! :)</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134707587-0275af62-29e3-46dc-b15f-ef68b6c6c58b.mp4" type="video/mp4"></video></p>
+<p>Let's start with the good stuff.</p>
+<p><strong>Scalable Rig, Scalable Ragdoll</strong></p>
+<p>No special setup required, if your rig is scalable then so is Ragdoll.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149284930-38562230-7fc4-4fe9-838d-b120227ab69e.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
+<p><strong>DMV Lady</strong></p>
+<p>Courtesy of Dragana Mandic.</p>
+<ul>
+<li><a href="https://www.linkedin.com/posts/dragana-mandi%C4%87-a6a6a2111_dynamics-animation-simulation-activity-6878674478977568768-SlbE">On LinkedIn</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146805387-bffea211-5dd7-4cd8-ad30-d5b1fb75c3f2.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134804422-7b2f11c7-786c-434d-9ecc-b1ac84d19c76.mp4" type="video/mp4"></video></p>
+<p><strong>Circus Import</strong></p>
+<p>Toying with the ability to import characters into the same solver.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148216815-aa56a5ea-5c48-409e-b7ac-5031c2a228ef.mp4" type="video/mp4"></video></p>
+
+<p><strong>The Ocean</strong></p>
+<p>Give a man a fish, and you'll feed him for 2 ragdolls.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148443786-1d839f41-5044-474d-9dde-be4c3be12daa.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148443787-5304a12a-a569-42e6-8d96-cbd95666e356.mp4" type="video/mp4"></video></p>
+
+<p><strong>Noodles</strong></p>
+<p>Something from the Linux world.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148945817-837533e3-77c0-4323-a6d0-c08d8dbd909a.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h3 id="introduction">Introduction</h3>
-<p>Lighter, <em>faster</em>, <strong>stronger</strong>. This release introduces a new way of thinking about physics, and is part <strong>&frac14;</strong>.</p>
+<h3 id="ragdoll-20">Ragdoll 2.0</h3>
+<p>Since 28<sup>th</sup> July 2021, Ragdoll has been publicly available under the "early bird" umbrella. It started out with a reduced price point for those brave enough to venture into new territory and expect a few left turns every now and then as kinks are worked out in the software.</p>
+<p>Now the time has come to step into the world as an adult piece of software with the guarantees of any commercially available software and a pricing to reflect that.</p>
+<p>And since Ragdoll has changed grown significantly since those days - given the new <em>Markers</em> - it's only reasaonble to consider this <strong>Ragdoll 2.0</strong>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149616829-f6e4a4f4-a2ad-4210-8175-e686b38ae50e.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="january-voucher">January Voucher</h4>
+<p>On Febuary 1<sup>st</sup>, prices will reach their intended full price, leaving Early Bird behind. Until then, you can use the <strong>voucher code above</strong> to make one last purchase before the deadline.</p>
 <ul>
-<li><a href="#animation-capture">Skip Intro</a></li>
+<li>Voucher Code: <strong><code>uX1bFhjZ</code></strong></li>
+<li>Purchase Page: <strong><a href="https://ragdolldynamics.com/pricing-commercial">https://ragdolldynamics.com/pricing-commercial</a></strong></li>
 </ul>
+<p><img width=400 src=https://user-images.githubusercontent.com/2152766/149617103-0844eae7-1a41-4cbb-b033-46bff093d5b5.png></p>
+<p><br></p>
+<h4 id="looking-back">Looking Back</h4>
+<p>The Ragdoll of today is very different from the Ragdoll of July 2021.</p>
+<p>Back then, I had no idea that this amount of performance and usability was possible and was prepared to cram tutorials and documentation until everyone was accustomed to the complexity of physics simulation. 😄</p>
+<p>But then something happened - <a href="/releases/2021.09.27/">Markers</a>. Like lightning from a clear sky, it unexpectedly changed everything. Performance is now far beyond what Maya is expected to handle, with physics much much faster than simply <em>skinning</em> of a character, and close to the performance of native IK handles. This opens up a lot of possibilities.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/134006344-53f2744f-cc7f-48b0-860d-d0313a353c1f.png" /></p>
+<p>The problems faced back then..</p>
+<ul>
+<li>Like the massive endevour starting a simulation <a href="/releases/2021.03.01/">wherever your character was</a>.</li>
+<li>Or the need controls other than your rig to <a href="/releases/2021.05.10/">actually <em>animate the thing</em></a></li>
+<li>Not to mention the constant chasing of supporting Maya's numerous ways of affecting the position and orientation of your controls, from <a href="/releases/2021.04.23/">rotate axes, to rotate pivots, to scale , to...</a>.</li>
+</ul>
+<p>None of those problems are a problem with Markers. Because Markers look at the world from a different perspective, they <em>just work</em>. It made Ragdoll not only more user friendly and significantly faster but also <em>simpler to develop</em> and <em>smaller in size</em>. The code for Markers is about &#8531; of the equivalent for Rigids. Just think about that!</p>
+<p>And most of all, it opened up for all the things you are about to see happen for Ragdoll in the coming months. 🙃</p>
+<p><br></p>
+<h4 id="ragdoll-flavours">Ragdoll Flavours</h4>
+<p>Let's take a quick look at the different versions of Ragdoll and how they differ.</p>
 <table>
 <thead>
 <tr>
-<th align="center">#</th>
-<th align="left">Release</th>
-<th align="left">Date</th>
+<th align="left"></th>
+<th align="left">Flavour</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="left">Workflow</td>
-<td align="left">Today</td>
-<td align="left">At least 100% faster, but primarily much easier to work with</td>
+<td align="left"><img width=150 src=https://user-images.githubusercontent.com/2152766/119614618-66d87b80-bdf6-11eb-8b3b-405d5184365e.png></td>
+<td align="left"><strong>Ragdoll Unlimited</strong></td>
+<td align="left">The fully-featured, unrestricted version of Ragdoll. When people talk about Ragdoll, this is the version they mean.</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="left">Render Performance</td>
-<td align="left"><nobr>2 weeks later</nobr></td>
-<td align="left">The current bottleneck, expect a 50-100x boost</td>
+<td align="left"><img width=150 src=https://user-images.githubusercontent.com/2152766/119614617-663fe500-bdf6-11eb-9e3f-bfdbf278bcdf.png></td>
+<td align="left"><strong>Ragdoll Complete</strong></td>
+<td align="left">The cost-effective flavour of Ragdoll, suitable for freelancers and indie studios. It lacks studio-conveniences such as a Python API for pipeline integration, export to JSON for sharing of physics configurations and is less performant than "Ragdoll Unlimited", being unable to operate in parallel across multiple cores.</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="left">Recording Performance</td>
-<td align="left"><nobr>2 weeks later</nobr></td>
-<td align="left">Currently written in Python, to be written in optimised C++</td>
+<td align="left"><img width=150 src=https://user-images.githubusercontent.com/2152766/119614615-663fe500-bdf6-11eb-93dc-d71137e64f0b.png></td>
+<td align="left"><strong>Ragdoll Batch</strong></td>
+<td align="left">A non-interactive version without ability to render into the viewport. Suitable for automation and pipeline integration.</td>
 </tr>
 <tr>
-<td align="center">4</td>
+<td align="left"><img width=150 src=https://user-images.githubusercontent.com/2152766/124616737-3dd3ed80-de6e-11eb-88a9-89c886681cc3.png></td>
+<td align="left"><strong>Ragdoll Personal</strong></td>
+<td align="left">A non-commercial version, suitable for students and anyone wanting to fool around with Ragdoll at home. It is identical to Unlimited, except that it has limits on how much can be recorded and exported.</td>
+</tr>
+<tr>
+<td align="left"><img width=150 src=https://user-images.githubusercontent.com/2152766/124720861-7cb28380-df00-11eb-8efd-c6dcc556ee6b.png></td>
+<td align="left"><strong>Ragdoll Educational</strong></td>
+<td align="left">A non-commercial version of Ragdoll Unlimited whose saved scenes cannot be opened with a commercial licence.</td>
+</tr>
+<tr>
+<td align="left"><img width=30 src=https://user-images.githubusercontent.com/2152766/120110294-c91ddd00-c164-11eb-8830-2f447e7564b8.png></td>
+<td align="left"><strong>Ragdoll Trial</strong></td>
+<td align="left">A non-commercial first experience with Ragdoll; this is what you get when downloading Ragdoll onto a new machine and use it without activating it first. Similar limitations to Personal, except it also expires about a month after first use.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="ragdoll-unlimited">Ragdoll Unlimited</h4>
+<p>This is the version you <em>want</em>.</p>
+<p><img width=100 src=https://user-images.githubusercontent.com/2152766/119614618-66d87b80-bdf6-11eb-8b3b-405d5184365e.png></p>
+<p>It contains everything mentioned on any website, is capable of doing everything you've seen Ragdoll do and is the unrestricted, unlimited and gold standard of Ragdoll.</p>
+<p><br></p>
+<h4 id="ragdoll-complete">Ragdoll Complete</h4>
+<p>This is the version freelancers <em>can afford</em>.</p>
+<p><img width=100 src=https://user-images.githubusercontent.com/2152766/119614617-663fe500-bdf6-11eb-9e3f-bfdbf278bcdf.png></p>
+<p>It is Ragdoll Unlimited, with a few limitations.</p>
+<ol>
+<li>Performance</li>
+<li>Export</li>
+<li>Python API</li>
+</ol>
+<p>Performance is limited in how quickly Ragdoll is able to read from your character. Ragdoll is natively parallel, but Complete turns any character you assign markers to into a Serial affair. Limiting performance by the number of cores you have in your machine.</p>
+<p>The advantage of export is that your rigs don't need physics built-in. They can remain simple and without physics, until the animator actually needs it. This feature is limited to <strong>10 markers</strong>; for the time being. Generally, export is reserved for Unlimited and users in need of pipeline integration. But Complete let's you get at least a taste of the comfort and flexibility of exporting your physics contraptions from one scene and importing onto an unsuspecting character in another.</p>
+<p>Like Export, the ability to interact with Ragdoll through Python is an important part of any production pipeline; not so much for the individual animator of small indie studio.</p>
+<div class="admonition info python api">
+<p class="admonition-title">Info</p>
+<p>At the time of this writing, this limitation is not yet in place, and users of Complete is <em>currently</em> able to utilise the Python API just like users of Unlimited. This will be addressed in an upcoming release.</p>
+</div>
+<p><br></p>
+<h4 id="ragdoll-batch">Ragdoll Batch</h4>
+<p>This is the version for your <em>render farm</em>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/148369519-9a8c2e3f-cc7b-4068-9eef-a5043bffd268.png" /></p>
+<p>It's a low-cost alternative to Ragdoll Unlimited, without the ability to render into the viewport. Making it effectively useful <em>only</em> via Python. It is also unable to export and lacks the parallelism of Unlimited.</p>
+<p>Unlike all other flavours, a Batch licence is reserved per-process; meaning that if you spin up 2 <code>mayapy</code> instances on the same machine, it will occupy 2 licences. This obviously only works if your licences are floating, as otherwise a machine can only carry a single node-locked licence, limiting it to a single process running Ragdoll Batch.</p>
+<p><br></p>
+<h4 id="ragdoll-feature-grid">Ragdoll Feature Grid</h4>
+<p>Leaving Early Access, Ragdoll is stepping into the world as a 1.0. Here's an overview of what you can expect from now on.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Feature</th>
+<th align="left">Trial</th>
+<th align="left">Personal</th>
+<th align="left">Complete</th>
+<th align="left">Unlimited</th>
+<th align="left">Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Commercial Use</td>
+<td align="left">❌</td>
+<td align="left">❌</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+</tr>
+<tr>
 <td align="left">Interactive Tools</td>
-<td align="left"><nobr>2 weeks later</nobr></td>
-<td align="left">No more fiddling with offsets in the channel box, viewport manipulators galore!</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+</tr>
+<tr>
+<td align="left">Python API</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+</tr>
+<tr>
+<td align="left">Multi-Threading</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+</tr>
+<tr>
+<td align="left">JSON Import/Export</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
+</tr>
+<tr>
+<td align="left">Per-machine Licence</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">✔️</td>
+<td align="left">❌</td>
 </tr>
 </tbody>
 </table>
-<p>Something <strong>amazing</strong> has happened.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134300628-565e7da1-c669-47ef-9fe2-f3b2023de875.png" /></p>
-<p>Since release only a few weeks ago, Ragdoll is now used in production across the globe in over a dozen countries at the most major of studios, several dozens of mid-sized studios wanting to gain an advantage and hundreds of independent animators and riggers alike.</p>
-<p>And that is amazing, it is. But something even more amazing has happened; Ragdoll has <strong>leaped forward</strong>. And that will be what the next 4-part release is about.</p>
-<p>See, since launch I've had conversations with animators using Ragdoll for the very first time. One of those animators made a request that at first glance didn't look like much.</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>"I don't like working with green channels, as it is not ideal for animating. Is there a way to I can overcome this?" - <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a></p>
-</div>
-<p>Here's what he was referring to.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
-
-<p>Notice how the nodes with physics applied got green channels? The reason they are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
-<p>Can we get rid of that connection? Well.. No? This is Ragdoll's connection to your controls. Without those.. there <em>is</em> no physics.</p>
-<p>I quickly dismissed the idea and carried on with my day.. But then something <em>clicked</em>.. What if..?</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
-
-<p>In the next section, I'll dive into how this works and why this change goes far beyond just getting rid of green channels.</p>
-<p><strong>Benefits at a glance</strong></p>
+<blockquote>
+<p><code>Batch</code> has a <em>per-process</em> licence, meaning it will occupy one seat per individually running process.</p>
+</blockquote>
+<p><br></p>
+<h4 id="non-commercial-limitations">Non-commercial Limitations</h4>
+<p><img width=224 src=https://user-images.githubusercontent.com/2152766/148946118-d259a12b-01e7-4c4b-b174-11c7c2223f68.png></p>
+<p>Trial and Personal licences are <em>non-commercial</em>, meaning they can't be used for commercial purposes. Such as in a studio, or for anything where money is involved.</p>
+<p>When a file saved with a non-commercial licence of Ragdoll is opened in a commercial licence, it'll temporarily turn your licence into a non-commercial licence.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Feature</th>
+<th align="left">Commercial</th>
+<th align="left">Non-commercial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Export</td>
+<td align="left">Unlimited markers</td>
+<td align="left">Up to 10 markers</td>
+</tr>
+<tr>
+<td align="left">Record</td>
+<td align="left">Unlimited frames</td>
+<td align="left">Up to 100 frames</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="import">Import</h3>
+<p>You can now <em>import</em> a Ragdoll setup exported from Maya, back into Maya. It'll re-create everything just the way it was.</p>
+<details class="question"><summary>Can I export scenes I made with an earlier version?</summary><p>Yes, anything made with Markers can be exported regardless of when it was made.</p>
+</details>
+<details class="question"><summary>What is included in the export?</summary><p>Just about everything.</p>
 <ul>
-<li>✔️ 10,000% greater performance (or more!)</li>
-<li>✔️ No more graph editor mess</li>
-<li>✔️ No more initial state</li>
-<li>✔️ No more cycles</li>
-<li>✔️ No more clutter in the Outliner</li>
-<li>✔️ No more clutter in the Viewport</li>
-<li>✔️ Support for interactive scale</li>
-<li>✔️ Support for overlapping shapes</li>
-<li>✔️ Support for IK/FK</li>
-<li>✔️ Support for space switching</li>
-<li>✔️ Support for follicles</li>
-<li>✔️ Support for native Maya constraints</li>
-<li>✔️ Support for ...</li>
+<li>Solvers</li>
+<li>Groups</li>
+<li>Markers</li>
+<li>Constraints</li>
+<li>Colors</li>
+<li>Attribute changes</li>
+<li>Retargeting</li>
+<li>Reparenting</li>
+<li>Replaced meshes</li>
+<li>Thumbnail of your viewport</li>
 </ul>
-<p>From here, this list has no end, because <em>anything</em> capable of affecting the worldspace position and orientation of your controls is natively supported with this workflow. <em>Anything</em>.</p>
-<details class="info"><summary>I'm a techy, gimme the deets</summary><p>The reason this works is because Ragdoll will consider the <code>.worldMatrix</code> attribute of any control and this is the same attribute Maya itself uses for just about anything.</p>
+</details>
+<details class="question"><summary>What isn't included in the export?</summary><p>Very little.</p>
+<ul>
+<li>The mesh itself is <em>not</em> stored, the mesh is expected to come from your rig. Including any mesh you replace. This may be added in a future release.</li>
+<li>The cached simulation, although it will be soon.</li>
+</ul>
+</details>
+<details class="question"><summary>Will I get identical results when simulating an imported scene?</summary><p>Yes, anything else is a bug.</p>
+<p>More precisely, determinism depends on (1) the type and number of items in the solver along with (2) the order in which these are created. Both of these are part of the exported file format and is taken into account during import. Meaning you should get identical results so long as the content is the same.</p>
 </details>
 <p><br></p>
-<h3 id="animation-capture">Animation Capture</h3>
-<p>Inspired by Motion Capture - Animation Capture is a new way to think about and work with physics in Maya. To learn about it, let's first understand how Motion Capture generally works.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134006344-53f2744f-cc7f-48b0-860d-d0313a353c1f.png" /></p>
-<p>Here is a typical data pipeline for motion capture, from real-life actor to final character animation.</p>
+<h4 id="example">Example</h4>
+<p>Here's an exported Ragdoll setup for the free CG Spectrum Tiger rig.</p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/7cfbf29681f6807ab4493a41d37155fa/raw/a093794fdaafa05fcb28c1b82f60f8ae3a41cf0b/cgspectrum_tiger.rag">Download Ragdoll file (<code>2.8 mb</code>)</a></li>
+<li><a href="https://www.cgspectrum.com/resources/tiger-animation-rig">Download Rig</a></li>
+</ul>
+<p>To use it, download the rig and import the Ragdoll file.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/149620136-7178ce52-6235-40cc-bf45-289a25b52649.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/2152766/149323893-f80dba31-83fe-4fe2-9e00-a062dee5ed09.png" /></p>
+<p>It contains 2 levels of details.</p>
 <table>
 <thead>
 <tr>
-<th align="right">#</th>
-<th align="left">Description</th>
+<th align="left">Level</th>
+<th align="left">Content</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right"><strong>1</strong></td>
-<td align="left">Markers are attached to an actor</td>
+<td align="left">Level 0</td>
+<td align="left">Body and feet</td>
 </tr>
 <tr>
-<td align="right"><strong>2</strong></td>
-<td align="left">Markers are "captured"</td>
-</tr>
-<tr>
-<td align="right"><strong>3</strong></td>
-<td align="left">A pointcloud is generated</td>
-</tr>
-<tr>
-<td align="right"><strong>4</strong></td>
-<td align="left">A hierarchy of joints is generated</td>
-</tr>
-<tr>
-<td align="right"><strong>5</strong></td>
-<td align="left">Joints drive a typical character rig</td>
-</tr>
-<tr>
-<td align="right"><strong>6</strong></td>
-<td align="left">Rig drives final geometry for render</td>
+<td align="left">Level 1</td>
+<td align="left">Everything on Level 0, plus toes</td>
 </tr>
 </tbody>
 </table>
-<p>Each "marker" is a dud. Nothing of any complexity. Something for the camera(s) to recognise and track as it moves through space. Once tracked, it's able to translate this marker from a 2D image into a 3D position, and continues to do so for each marker, for the real processing to take place inside software.</p>
-<p>Once the capture is complete, the human actor can remove the markers and go enjoy the rest of their day. The rest is up to the computer.</p>
-<p>With 3D positions generated, software takes over to translate these points into a hierarchy; the FK joint hierarchy you may be familiar with if you've ever worked with mocap. The joint hierarchy can then be used to either drive the final geometry, or to drive a more complex character rig which in turn drives the final geometry.</p>
-<p>Animation Capture is just like that, but in <strong>reverse</strong>. Instead of capturing a person, it captures your <em>character rig</em>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134128846-7c55bfe3-b2c6-418f-ab04-4e29f61a5ec2.png" /></p>
-<table>
-<thead>
-<tr>
-<th align="right">#</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right"><strong>1</strong></td>
-<td align="left">Markers are attached to a character rig</td>
-</tr>
-<tr>
-<td align="right"><strong>2</strong></td>
-<td align="left">Markers are "captured"</td>
-</tr>
-<tr>
-<td align="right"><strong>3</strong></td>
-<td align="left">A rigid is generated for each marker</td>
-</tr>
-<tr>
-<td align="right"><strong>4</strong></td>
-<td align="left">A hierarchy of constraints is generated</td>
-</tr>
-<tr>
-<td align="right"><strong>5</strong></td>
-<td align="left">Simulation is <strong>recorded</strong> back onto the original character rig</td>
-</tr>
-</tbody>
-</table>
-<p>Unlike motion capture, we'd like the result mapped back onto our character rig again, which is how animators iterate with physics.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149409408-c76f19c2-de4c-4baa-8a1c-8f7d45a5bb40.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
-<h4 id="demo-1-basics">Demo 1 - Basics</h4>
-<p>Ok, enough prelude, let's dive in.</p>
+<h4 id="workflow">Workflow</h4>
+<p>Here's the rundown.</p>
+<ol>
+<li>Assign markers</li>
+<li>Tweak values</li>
+<li>Export</li>
+<li>Open a new scene, with the same character</li>
+<li>Import</li>
+</ol>
+<p>On import, Ragdoll will try and find the names of what you exported in your currently opened scene.</p>
+<ul>
+<li>If all names match, import should go smoothly. Preserving all of your hard work!</li>
+<li>If names do not match, if for example the namespace differs, there is an option to override the namespace from the file via the <code>Namespace</code> dropdown menu.</li>
+<li>If names don't match <em>at all</em>, if for example it was grouped differently on export or it is a different character altogether, then you can try using the <code>Search and Replace</code> fields to modify the names searched for by Ragdoll.</li>
+</ul>
+<p><strong>Export</strong></p>
+<p>Once you're happy with your character, it's time to export. Towards the bottom of the UI, you'll get a preview of what is about to be exported. This can help clarify that what ends up on disk is what you expect.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149382978-6063bdc2-80de-4d9c-9a3c-eec5682afa3f.mp4" type="video/mp4"></video></p>
+
+<p><strong>Import</strong></p>
+<p>In a new scene, with the same character, same names and everything, import as you'd expect. At the bottom of this UI, you'll get a preview of what's in the file on disk, along with how it will associate the node names found in the file with what you have on disk.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149382981-a48f105c-a0f8-421e-ad3d-e8fcaaef4bbc.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="namespace-from-file">Namespace from File</h4>
+<p>Odds are, the character you're importing either has no namespace, or has a different namespace to what you've currently got in your scene. As in this example here, with 3 copies of the same character, each with its own namespace.</p>
+<p>Use the <code>Namespace</code> dropdown to select one of the current namespaces in your scene, or <code>Custom</code> to type one in yourself.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149382984-3c2527e2-9c62-4354-8b9f-6656a66643a8.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="solver-from-file">Solver from File</h4>
+<p>Per default, Ragdoll will import the file into the current solver in your scene, if any. Or, you can import the original solver from the source file.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/149382990-85ac7402-7588-46a2-9c23-7c3f14f7d6af.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="known-limitations">Known Limitations</h4>
+<p>Here are a few things that will be addressed over time. Let us know if you encounter anything else!</p>
+<ul>
+<li><a href="https://ragdolldynamics.com/chat">https://ragdolldynamics.com/chat</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Limitation</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Missing Replaced Mesh</td>
+<td align="left">If you replace the mesh of a marker, but this mesh isn't present in the scene during import, you'll get a Capsule instead. The vertices of the geometry isn't stored in the exported file, only the name of the mesh you replaced with.</td>
+</tr>
+<tr>
+<td align="left">Linked Solvers</td>
+<td align="left">These turn into a single, unified solver on import.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="density">Density</h3>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/148947446-5e6773c0-0f50-4702-876c-f76b4439a2c5.png" /></p>
+<p>Ragdoll can now automatically compute a suitable mass for each Marker, based on the volume of your shape and a density of your choosing.</p>
+<p>In other words, big objects become heavy, small objects become light.</p>
 <p><strong>Before</strong></p>
-<p>Here's what life was like before, with <code>Active Rigid</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164228-cb35df45-ad68-4217-bb5f-8fa389a232da.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146757327-507ea062-d4e7-45dd-b9a1-59406340fc89.mp4" type="video/mp4"></video></p>
 
 <p><strong>After</strong></p>
-<p>And here's life with <code>Markers</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164221-d80135db-96b9-48ed-9ec0-1b8af73c8f86.mp4" type="video/mp4"></video></p>
-
-<p>Notice how the channels are left alone?</p>
-<p>This is the key difference between <code>Marker</code> and <code>Rigid</code>. Although you still provide Ragdoll with controls, Ragdoll no longer <em>drives</em> your controls directly. Instead, it <em>shows</em> you what they would look like <em>if</em> they were driven with physics.</p>
-<p>Once you're happy with what you see, you <code>Record</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164217-883c0635-6103-42da-87a1-0e9cd145aa1f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146757333-b56046c7-467f-4edf-91b8-45d260ffc101.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="demo-2-ragdoll">Demo 2 - Ragdoll</h4>
-<p>Let's have a look at how <code>Markers</code> work with a full ragdoll.</p>
-<p><strong>1. Setup hierarchy</strong></p>
-<p>The first step is nothing new, you've seen it before.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213480-bcf2f185-f0f1-4ab5-9f5c-9a72f108e7d3.mp4" type="video/mp4"></video></p>
-
-<p><strong>2. Edit shapes</strong></p>
-<p>This too, it's second nature by now.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213470-fa51e083-cfb9-494d-8f1b-2fb795a7ed9d.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">Except!</p>
-<p>Notice how the shapes overlap? That's ok! No longer will you have to worry about self-intersecting shapes. Unless you want it to, with the new <code>Self Collide</code> attribute. :D I'll touch on this a bit more below, under #self-collide</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Double Except!</p>
-<p>Release 4/4 in this series will deal with the channel box, and make editing these values interactive in the viewport for a superior experience and a lot less clicks and fiddling with numbers.</p>
-</div>
-<p><strong>3. Animate</strong></p>
-<p>Now things are getting interesting. To keep our viewport clean, we can offset the simulation slightly. The offset is purely visual and won't affect the simulation or subsequent recording.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213467-b0b9bae6-6778-409d-ad1a-4277e89961f9.mp4" type="video/mp4"></video></p>
-
-<p><strong>4. Record</strong></p>
-<p>Finally, and this is what separates <code>Markers</code> from <code>Rigids</code>, we record our simulation back onto our controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213465-5739f9b5-a391-474d-b6ee-608a6e7c0194.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="demo-3-inverse-kinematics">Demo 3 - Inverse Kinematics</h4>
-<p>That last example was contrived. No rig is without IK, so how does <code>Markers</code> work here?</p>
-<p><strong>1. No IK</strong></p>
-<p>Since we put markers on the FK controls, Ragdoll doesn't know about what the IK controls are doing.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312071-0eeb5ced-6bab-4793-9edd-6f5747ceb3ed.mp4" type="video/mp4"></video></p>
-
-<p><strong>2. Reassign</strong></p>
-<p>So let's put markers on the <em>joints</em> driven by both IK and FK, such that when you switch between the two, Ragdoll knows how to follow along. So let's <code>Reassign</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312058-20f64011-954c-4d7b-b201-3950655449c0.mp4" type="video/mp4"></video></p>
-
-<p><strong>3. Retarget</strong></p>
-<p>But recording still targets our original FK controls, and what we want is to record our IK controls. So we can <code>Retarget</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312048-5e9100d8-ce55-4fa1-b704-2201182733db.mp4" type="video/mp4"></video></p>
-
-<p><strong>4. Record Translation</strong></p>
-<p>Unlike FK, IK isn't just rotation, but translation too. So let's tell Ragdoll to record the translation from these markers too.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312041-fdaaad31-5273-44f4-891c-d1a80739de20.mp4" type="video/mp4"></video></p>
-
-<p>And there you have it! This works with IK, SpineIK, Follicles, Geometry Constraints; <em>anything</em> you can throw at it.</p>
-<p><br></p>
-<h4 id="demo-4-real-world-example">Demo 4 - Real World Example</h4>
-<p>Here's a work-in-progress animation from <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a> (thanks for lending it to me!) Let's see how we can use Ragdoll to help improve upon it.</p>
-<p><strong>1. The Problem</strong></p>
-<p>Notice how the elbow intersects the table as he moves his torso around? A difficult problem and moving target as you need to keep tweaking both the torso and hand IK handle to tune your animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319921-6e96ef8c-1226-47b4-b3db-7f076047c62a.mp4" type="video/mp4"></video></p>
-
-<p><strong>2. Isolate Timeline</strong></p>
-<p>Since this animation is over 600 frames, we'll isolate our work to a small portion of it. For both performance and cleanliness; Ragdoll will only record onto the current timeline (or selected portion of it).</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319912-57c3a8c6-3488-4129-9b1e-9567f77a0752.mp4" type="video/mp4"></video></p>
-
-<p><strong>3. Assign Markers</strong></p>
-<p>Like before, we'll assign markers to the underlying skeleton to respect what the IK solver does. We'll also make the hand <code>Kinematic</code> to respect the original animation exactly. The clavicle is also <code>Kinematic</code> per default, as it was the first assigned control - and is thus the "root" of our dynamic hierarchy.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319902-dc446cae-37c4-4c86-a746-2fd19364160c.mp4" type="video/mp4"></video></p>
-
-<p><strong>4. Include Table</strong></p>
-<p>Since we're interacting with the table, we'll include this too. Also <code>Kinematic</code>, no dynamics will be affecting it, and also as a <code>Box</code> shape to speed up and improve the stability of the simulation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319896-0ddd0f5b-8e64-4f59-a93a-2fafc58b9994.mp4" type="video/mp4"></video></p>
-
-<p><strong>5. Tune Shapes</strong></p>
-<p>Next we'll isolate contacts with just the elbow area, to respect the hand and lower arm animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319889-6f7403cd-fec2-4fae-8b78-0efabf5afb04.mp4" type="video/mp4"></video></p>
-
-<p><strong>6. Tune Material</strong></p>
-<p>In this case, we'd like for the elbow to slide across the table, no friction.</p>
-<details class="info"><summary>More Realism?</summary><p>In the real world, there would be friction and it could come in handy here too. But what should we expect from the elbow rubbing against the table? We should include the torso for this as well, which you absolutely can (and maybe should!). But to keep things simple, we'll let the clavicle preserve it's original animation exactly.</p>
-</details>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319878-d57ce899-bd03-4eb3-b97f-2e4dd5761f74.mp4" type="video/mp4"></video></p>
-
-<p><strong>7. Retargeting</strong></p>
-<p>Ragdoll will record onto the nodes you originally assign, but like before we want recording to go elsewhere; from joints to IK controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319871-2c804a4d-26b1-4a8f-932c-722aeb98189f.mp4" type="video/mp4"></video></p>
-
-<p><strong>8. Record Translation</strong></p>
-<p>Likewise, we'd also like translation included. And we don't care for the shoulder and clavicle animation; all we want is the IK handle and Pole Vector.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319865-dc88b9a9-bb8d-48df-9ec0-f3f5fe760903.mp4" type="video/mp4"></video></p>
-
-<p><strong>9. Record Simulation</strong></p>
-<p>We're all set! Let's hit <code>Record</code>!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319858-e82de1cc-4ed7-4dea-be07-8e59acc078af.mp4" type="video/mp4"></video></p>
-
-<p><strong>10. Before And After</strong></p>
-<p>And there we go! 2 minutes or less, and you've got a reusable setup for correcting the elbow whenever the animation changes. IK is intact and you can keep working with keyframes. Keeping Ragdoll attached to your rig has <em>zero</em> impact on performance (as you can see by looking at the fps counter near the bottom of the two comparisons), and once hidden it has no impact on your Outliner either. All clean!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319855-66c960d7-9d74-4bbf-bde4-5e813c7123cd.mp4" type="video/mp4"></video></p>
-
-<p>Here's one more I couldn't find room for, an earlier version of the animation with <em>stepped keys</em> and finger simulation. Look at all that juicy finger interaction with the table. 😊</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134513003-7b25c2d1-87e8-4853-a89d-a73b3a5ba2e2.mp4" type="video/mp4"></video></p>
-
-<blockquote>
-<p>Rig and Model courtesy of Ramon Arango - <a href="https://ramonarango.gumroad.com/l/ArtemisApolloRig">Apollo Rig</a></p>
-</blockquote>
-<p><br></p>
-<h4 id="new-menu">New Menu</h4>
-<p>Let's take a moment to reflect on what we've just seen. There are 3 new nodes in Ragdoll.</p>
+<h4 id="presets">Presets</h4>
+<p>Provide a custom density, or choose from one of the provided ones.</p>
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th align="left">Node</th>
+<th align="left">Density</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Off</code></td>
+<td align="left">Do not compute, use the <code>Mass</code> attribute</td>
+</tr>
+<tr>
+<td align="left"><code>Cotton</code></td>
+<td align="left">Very sparse, 0.05 grams per cubic centimeter</td>
+</tr>
+<tr>
+<td align="left"><code>Wood</code></td>
+<td align="left">Sparse, 0.2 grams per cubic centimeter</td>
+</tr>
+<tr>
+<td align="left"><code>Flesh</code></td>
+<td align="left">Default, 1.0g/cm3</td>
+</tr>
+<tr>
+<td align="left"><code>Uranium</code></td>
+<td align="left">Dense, 19.0g/cm3</td>
+</tr>
+<tr>
+<td align="left"><code>Black Hole</code></td>
+<td align="left">Very, very dense</td>
+</tr>
+<tr>
+<td align="left"><code>Custom</code></td>
+<td align="left">You pick</td>
+</tr>
+</tbody>
+</table>
+<p>Mass is computed based on the <em>volume</em> of your shape, along with a density of your choosing.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146945079-396470bc-7af0-43fe-96ee-2009e64ac328.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="options">Options</h4>
+<p>Choose between various densities either at creation-time or after creation.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146948273-726f27dc-eecb-45d4-8a5a-567d05447afe.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="visualise">Visualise</h4>
+<p>The computed mass updates interactively as you change the size and type of your shape, including convex hulls!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146948277-f5511ded-8dc4-4136-9b40-e788c20c686a.mp4" type="video/mp4"></video></p>
+
+<p>In the Manipulator, you'll be able to not only only edit the density, but preview the <em>computed</em> mass given the current shape volume and density you provide.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148936727-1b69776a-c95d-4759-8e34-38a9f958e69a.mp4" type="video/mp4"></video></p>
+
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/147099761-2cb88dcf-e23f-491f-8801-21cf6ccfde87.png" /></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/149519861-53d118b3-e4be-48b4-bf88-b1ae77ae8147.png" /></p>
+<p><br></p>
+<h3 id="level-of-detail">Level of Detail</h3>
+<p>Setup your character once with all bells-and-whistles, and interactively pick which level of detail to use for your simulation in a given situation.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/148948560-aee1dae3-4844-4dcd-bc36-274d0b263f48.png" /></p>
+<p><strong>Usecases</strong></p>
+<ol>
+<li>Body at <code>Level 0</code>, fingers at <code>Level 1</code></li>
+<li>Props at <code>Level 1</code>, muscles at <code>Level 2</code></li>
+<li>Major masses at <code>Level 0</code>, extremities at <code>Level 1</code> and <code>Level 2</code></li>
+</ol>
+<p>For example, here's a Wasp character with 3 levels of increasing detail.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148215131-87811017-307a-4363-9ba8-a9a7d816f29b.mp4" type="video/mp4"></video></p>
+
+<p>As you'd expect, it'll record only the currently active markers.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148215124-5a937bec-0c34-4fbb-83b0-54b09646ae1e.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="workflow_1">Workflow</h4>
+<p>Here's how it works.</p>
+<ol>
+<li>Give each marker a "level", such as <code>1</code></li>
+<li>Tell solver which "level" to solve at, such as <code>1</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148227206-42a1e54b-6185-46c2-9d90-0d720c657add.mp4" type="video/mp4"></video></p>
+
+<p>And that's it! Any marker with a matching level is simulated and recorded.</p>
+<p><br></p>
+<h4 id="operators">Operators</h4>
+<p>What does each level mean? The answer lies in the "operator".</p>
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img class="invertme icon" width=20 src="/icons/marker.png"></td>
-<td align="left"><code>rdSolver</code></td>
-<td align="left">The "camera" that monitors "Markers" and performs all heavy-lifting.</td>
+<td align="left"><code>Less Than</code></td>
+<td align="left">If the <code>Marker Level</code> is less than (or equal) to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 <tr>
-<td><img class="invertme icon" width=20 src="/icons/suit.png"></td>
-<td align="left"><code>rdMarker</code></td>
-<td align="left">A tracking marker, something to monitor an individual control.</td>
+<td align="left"><code>Greater Than</code></td>
+<td align="left">If the <code>Marker Level</code> is greater than (or equal) to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 <tr>
-<td><img class="invertme icon" width=20 src="/icons/solver.png"></td>
-<td align="left"><code>rdGroup</code></td>
-<td align="left">A collection of markers, with high-level control over many markers.</td>
+<td align="left"><code>Equal</code></td>
+<td align="left">If the <code>Marker Level</code> is <em>equal</em> to the <code>Solver Level</code>, simulate it.</td>
+</tr>
+<tr>
+<td align="left"><code>NotEqual</code></td>
+<td align="left">If the <code>Marker Level</code> is <em>not equal</em> to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 </tbody>
 </table>
-<p>Here's the new menu. If all goes well, it will completely replace the <code>Active Rigid</code> and <code>Active Chain</code> menu items, along with <code>Controls</code> including <code>Mimic</code>. All of those things are made possible in a much easier and performant way using Markers.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134854442-bb85c407-2ecc-4a5b-bf4b-cc45f117cd23.png" /></p>
-<p>The most important elements are at the top.</p>
-<table>
-<thead>
-<tr>
-<th align="left">#</th>
-<th align="left">Item</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src="/icons/suit.png"></td>
-<td align="left"><code>Assign Single</code></td>
-<td align="left">Monitor a single object in the Maya scene. Use this for props, environment and other free-falling things.</td>
-</tr>
-<tr>
-<td align="left"><img class="invertme icon" width=20 src="/icons/marker_group.png"></td>
-<td align="left"><code>Assign Group</code></td>
-<td align="left">Monitor a series of <em>connected</em> objects, like a limb.</td>
-</tr>
-<tr>
-<td align="left"><img class="icon" width=20 src="/icons/record.png"></td>
-<td align="left"><code>Record</code></td>
-<td align="left">Transfer simulation to marked objects</td>
-</tr>
-</tbody>
-</table>
-<p>Like <code>Active Chain</code>, the order of selection determines the order in which markers assume your objects are connected. And adding more markers to a group is done by starting your selection from any point in an existing group and working your way outwards. Just like <code>Active Chain</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Limitations</p>
-<p>You currently cannot create <em>multiple</em> <code>rdSolver</code> nodes, but can work around it by importing one from another Maya scene file.</p>
-<p>The <code>Guide Space</code> is somewhat complicated. The group has one too that affects <em>all</em> markers, and per default it's set to <code>-1</code> for <code>Localspace</code>. The benefit is that you can quickly change the space for all markers by changing this one attribute. The downside is that if you want to change it for just one marker, you first need to reset this attribute to <code>0</code>.</p>
-<p>These will be addressed in the upcoming few releases.</p>
-</div>
+<p>With these, you can use each level for..</p>
+<ol>
+<li>An increasing amount of detail</li>
+<li>An increasing amount of <em>reduction</em></li>
+<li>Something completely custom</li>
+</ol>
+<p>With <code>Equal</code> and <code>NotEqual</code> operators, you can have some markers appear or disappear on particular levels, enabling endless combinations.</p>
+<p><strong>Roadmap</strong></p>
+<p>This should cover a majority of cases, but there are things you cannot yet do, but will be able to in the future.</p>
+<ol>
+<li><code>Capsule</code> on one level, <code>Mesh</code> on another. For higher-resolution contacts.</li>
+<li>Dense hierarchy of controls at one level, sparse at another. For e.g. twist joints versus a simple 2-joint chain, or a densely packed spine versus just hip and torso controls.</li>
+</ol>
 <p><br></p>
-<h4 id="recording">Recording</h4>
-<p>Markers can be recorded all together, or independently. For example, say you wanted animation from frame 1-100, simulate 101-150 and return to animation from 151-200. You can do that.</p>
-<p>Furthermore, say you liked what the simulation was doing, but only on one half of the body. Or only on the hip, driving the main trajectory in a physically-plausible way. Keeping the rest of your animation intact.</p>
-<p><strong>Record All</strong></p>
-<p>With nothing selected, Ragdoll will record all marked controls to the current Maya playback range.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327104-f3d54cda-4d88-480a-b263-faceb211e87a.mp4" type="video/mp4"></video></p>
+<h4 id="algorithm">Algorithm</h4>
+<p>For the geeks out there, here's what the underlying algorithm looks like in Python.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membership types</span>
+<span class="n">Minimum</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Present at this level and higher</span>
+<span class="n">Maximum</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Present at this level and lower</span>
+<span class="n">Only</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1"># Only present at this level</span>
+<span class="n">Not</span> <span class="o">=</span> <span class="mi">5</span>      <span class="c1"># Present at all levels *except* this one</span>
 
-<p><strong>Record Selected Markers</strong></p>
-<p>Select a few controls to control what gets recorded.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327103-5ad36b6b-177d-40a9-8666-cbaaab281527.mp4" type="video/mp4"></video></p>
+<span class="n">markers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hip&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;spine&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;neck&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;head&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_upper_leg&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_lower_leg&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_hand&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_foot_box&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Maximum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_foot_convex&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_toe_capsule&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Not</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_toe_convex&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Only</span><span class="p">},</span>
+<span class="p">]</span>
 
-<p><strong>Record Range</strong></p>
-<p>Limit the Maya playback range for control over <em>when</em> recording takes place.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327097-db0af345-bf15-45f5-9bc0-6ef50d3184f4.mp4" type="video/mp4"></video></p>
+<span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Level </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">level</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">marker</span> <span class="ow">in</span> <span class="n">markers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Minimum</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
 
-<p><strong>Record Selected Range</strong></p>
-<p>Or, select an explicit range interactively.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327093-ba62588e-d14f-4ff9-9b75-05d4230dbdb6.mp4" type="video/mp4"></video></p>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Maximum</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
 
-<p><strong>Intelligent Range</strong></p>
-<p>A <code>Kinematic</code> marker is entirely animated, so there's no need to actually record those. Ragdoll will ensure only non-kinematic frames are recorded, so you can do things like this.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134504192-3514f235-1f9c-4ce8-83e5-6704bf3036df.mp4" type="video/mp4"></video></p>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Only</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
 
-<p><strong>Record to Animation Layer</strong></p>
-<p>Ragdoll will record to whichever layer is currently active.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134775996-ea2ce5d1-8638-4d43-94f7-f7635585f532.mp4" type="video/mp4"></video></p>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Not</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
 
-<p><br></p>
-<h4 id="input-type">Input Type</h4>
-<p>In the above examples, I mentioned <code>Kinematic</code> and you probably spotted a few other options too, like <code>Inherit</code> and <code>Guide</code>. What are those?</p>
-<p>The <code>Input Type</code> is how Ragdoll should interpret the controls you assign. Did you mean for them remain animated, i.e. <code>Kinematic</code>? Or should they follow the control around, i.e. <code>Guide</code>? Or should they just fall with gravity, ignoring the original control altogether, i.e. <code>Off</code>?</p>
-<p>The <code>Input Type</code> can be set either for a whole group of markers, or each marker individually.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Inherit</td>
-<td align="left">Do whatever the group is doing, or <code>Kinematic</code> if there is no group</td>
-</tr>
-<tr>
-<td align="left">Off</td>
-<td align="left">Do nothing, just fall under gravity</td>
-</tr>
-<tr>
-<td align="left">Kinematic</td>
-<td align="left">Follow the input <em>exactly</em>, physics need not apply</td>
-</tr>
-<tr>
-<td align="left">Guide</td>
-<td align="left">Follow the input approximately, with some <code>Stiffness</code> and <code>Damping</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Off</strong></p>
-<p>Treat the input as a starting position, but nothing else.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478792-d7f4fc46-fea0-468a-9ec0-7737072263a1.mp4" type="video/mp4"></video></p>
-
-<p><strong>Kinematic</strong></p>
-<p>Follow the input exactly, no exceptions. Not even collisions.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
-
-<p><strong>Guide Space -1</strong></p>
-<p>Follow the local angles of the input.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
-
-<p><strong>Guide Space +1</strong></p>
-<p>Follow the world position and orientation of the input.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478803-889e6732-4e7b-433e-803d-d3edfed814a1.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="retarget">Retarget</h4>
-<p>We've talked a lot about "retargeting". But what <em>is</em> that?</p>
-<p>Per default, markers are recorded onto the controls you assigned, this is called <code>Rig to Rig</code>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169658-39590bbf-bbca-41dc-af3b-de20e69e9aed.png" /></p>
-<p>But often times, rigs are more complicated and what you want is for the simulation to look at one set of nodes, but record onto another. This is called <code>Joint to Rig</code>, but can be from any source. Even other controls (like FK to IK).</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134169635-e0a751c8-f06b-4dac-a459-50118d04821f.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">The Old Days</p>
-<p>Think about how you would accomplish this using the <code>Active Rigid</code> or <code>Active Chain</code> commands. That would be a <em>huge</em> pain, but not with markers!</p>
-</div>
-<p><br></p>
-<h4 id="reassign">Reassign</h4>
-<p>Over in <a href="#demo-2---ragdoll">Demo 2 - Ragdoll</a> we "reassigned" already marked controls. What does that mean?</p>
-<p>In that example, we've assigned our FK controls directly, which means Ragdoll would grab the translation and rotation from those controls during simulation. But what we really wanted was the IK controls.</p>
-<p>But! We couldn't just assign to the IK controls directly, since they are <em>indirectly</em> rotating a characters limbs. So instead, we <code>Reassign</code> the markers previously made onto the underlying joints that follow IK around.</p>
-<p>We then also <code>Retarget</code> them, since they would have otherwise been recorded onto the original FK controls.</p>
-<p><br></p>
-<h4 id="reparent">Reparent</h4>
-<p>Sometimes, you change your mind.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465284-f9a3bd04-9392-4f33-a161-390cbe9049d2.mp4" type="video/mp4"></video></p>
-
-<p>Success!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="guide-space">Guide Space</h4>
-<p>Now let's talk about a few things you <em>haven't</em> seen yet.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
-
-<blockquote>
-<p>Look, it's Ragdoll Blaine!</p>
-</blockquote>
-<p>So what's happening here? Well, it <em>looks</em> like a <a href="/documentation/soft_pin/">Soft Pin</a> to his head, along with a slight <code>Guide Strength</code> on the rest of his body. But unlike the <code>Rigid</code>, another significant advantage to <code>Markers</code> is their ability to capture both local <em>and worldspace</em> position and orientation of your controls. And because of this, you are able to interactively choose whether a marker should look at the <em>Worldspace</em> or <em>Localspace</em> position of your controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134331199-c381ab43-4055-4e7a-a190-68d2acd0668f.mp4" type="video/mp4"></video></p>
-
-<p>Notice how with a <code>Guide Space = -1</code> the controls arms remain relative the torso. And with <code>Guide Space = 1</code> they instead follow the <em>worldspace</em> orientation of the controls. Just like a Soft Pin.</p>
-<p>This attribute is also <strong>animatable</strong>, and is how you can transition from animation into simulation and back again.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
-
-<p>Here's a more complete example:</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134332515-e7879b82-4a84-4881-90cf-25f66a6d3ac8.mp4" type="video/mp4"></video></p>
-
-<table>
-<thead>
-<tr>
-<th align="left">Frame</th>
-<th align="left">Transition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">100</td>
-<td align="left">Starts as a regular animated character</td>
-</tr>
-<tr>
-<td align="left">125</td>
-<td align="left">Transitions into physics as he jumps, for a physically-correct trajectory</td>
-</tr>
-<tr>
-<td align="left">155</td>
-<td align="left">Transitions back to animation once he rolls over on that cabinet</td>
-</tr>
-<tr>
-<td align="left">160</td>
-<td align="left">Transitions back to physics until he stands up</td>
-</tr>
-<tr>
-<td align="left">170</td>
-<td align="left">Transitions back into animation to match an exact pose</td>
-</tr>
-<tr>
-<td align="left">200</td>
-<td align="left">Partially transitions into physics, for secondary motion in the upper body as his arm is raised.</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="transitions">Transitions</h3>
-<p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
-
-<p>Notice how we're animated up until the jump, and then Ragdoll takes over. Once he approaches that box, we turn our <code>Guide Space</code> from <code>-1</code> to <code>1</code> and have him reach the target pose in worldspace. Once he's close, we switch <code>Input Type</code> to <code>Kinematic</code> and kinematically move him until we once again transition to <code>Guide</code>, this time with a <code>Guide Space</code> or <code>-1</code> for pose space.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507546-49e84d32-b50a-48c6-a1b9-82410281a884.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="self-collision">Self Collision</h3>
-<p>Previously, it was very important that your shapes did not overlap any shape other than it's immediate neighbour. If they did, chaos ensued.</p>
-<p><strong>Before</strong></p>
-<p>Clavicles intersect their parent spine, but also each other!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362062-4197b3d6-2694-4011-9a8e-69adec92927f.mp4" type="video/mp4"></video></p>
-
-<p><strong>After</strong></p>
-<p>With the new <code>Self Collision = Off</code>, this is no longer a problem.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362067-a2d33df3-c9d1-4aa8-b8af-956d80aeba7e.mp4" type="video/mp4"></video></p>
-
-<p>This can be taken into the extreme!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362070-325aa8dc-3367-4765-a4a9-56670cc77b83.mp4" type="video/mp4"></video></p>
-
-<p>And here's a another example to fill out a large volume in the center of a character.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134368633-ed4f69f4-1eba-4702-a3f6-bdddd2f0a98d.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">Attention</p>
-<p>Notice how the spine is made up of many shapes, some of which cover the width of the body, others the depth. An overlapping mess that would never have simply not have been possible without self-collision support!</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134368636-37cfd588-184e-46e9-b03a-6d8cacb80b76.mp4" type="video/mp4"></video></p>
-
-<blockquote>
-<p>Original asset created by Mehmet Tayfur Türkmenoğluwe and Dr. Reel, licensed by The Rookies.</p>
-</blockquote>
-<p><br></p>
-<h3 id="no-graph-editor-mess">No Graph Editor Mess</h3>
-<p>Because <code>Rigids</code> were children of your controls, Maya had a funny way of including them in the Graph Editor that rightly drove animators, myself included, <em>absolutely mad</em>.</p>
-<p><strong>Before</strong></p>
-<p>Just look at this; why-oh-why would I want channels from a completely unrelated node when working with the hip?</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341270-72843d85-70c9-43af-86cc-c981e87fe297.mp4" type="video/mp4"></video></p>
-
-<p><strong>After</strong></p>
-<p>Contrast that to this, whereby only the nodes you actually select are made visible. You can even select <code>Markers</code> via the Channel Box and <em>deselect</em> your controls to get up real close.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341497-cb64e666-75e6-4bfd-a3bd-aee27a61791b.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="no-initial-state">No Initial State</h3>
-<p>A significant effort was made to make the simulation start where you expected it to.</p>
-<p>Under the hood, simulation and animation were at odds with one another. Ragdoll needed to know where to start, but it was also telling your controls where to start. It's an inherent cycle, which was finally broken.</p>
-<div class="admonition info">
-<p class="admonition-title">Read More</p>
-<p>You can read all about the month-long journey in the <a href="/releases/2021.03.01/">release notes from March</a></p>
-</div>
-<p>Nowadays, you barely have to think about it, but it does occasionally rear its ugly head. It is a hack.</p>
-<p>With <code>Markers</code> there isn't any cycle to begin with. Ragdoll only reads from your controls, it doesn't write to anything. Under the hood, recording is a 2-step process; first it simulates, and then it writes animation back onto the controls. That's how this cycle is broken, without having any effect on the overall workflow.</p>
-<p><br></p>
-<h3 id="no-more-cycles">No More Cycles</h3>
-<p>With the previous version, because <code>Rigids</code> both read and wrote to each control, you could sometimes run into a situation where the parent depends on a child.</p>
-<p><strong>Before</strong></p>
-<p>Here, I'll try and make a second chain in the opposite direction of how the controls are laid out hierarchically. This cannot work; because in order for Ragdoll to figure out where the Passive hand should be, it would first need to consult the upper arm, which is both dynamic and a child of the spine, which is also dynamic. It's a lovely cycle. ❤️</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480453-279620c2-0a68-48fc-aad4-5c24c146265d.mp4" type="video/mp4"></video></p>
-
-<p><strong>After</strong></p>
-<p>With <code>Markers</code>, this isn't a problem because to Ragdoll every limb can now be independently evaluated, in parallel.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480451-f9be80ba-2579-485e-a4e4-ad92d0da4491.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="lollipop-controls">Lollipop Controls</h3>
-<p>Sometimes, markers are added to an already busy control with tons of Channel Box entries. Lollipop controls can help organise things a little better.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134764389-3e15d829-24fa-4c3d-9f65-6c736cab99bd.mp4" type="video/mp4"></video></p>
-
-<p>These can be moved around and scaled to suit your needs, and will provide access to the same marker node in the channel box, so you can select and edit the marker from either the originally marked control or this lollipop control.</p>
-<p><br></p>
-<h3 id="rotate-pivot">Rotate Pivot</h3>
-<p>Use the default Maya rotate pivot to control where to pin a simulation, both in worldspace and localspace.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134765087-837de9dc-87e1-4b41-9286-26e0f82344e1.mp4" type="video/mp4"></video></p>
-
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134765085-473674bf-284f-4a75-bf30-7185bb90eb4e.mp4" type="video/mp4"></video></p>
-
-<div class="admonition warning">
-<p class="admonition-title">Attention</p>
-<p>Take care about <em>scale</em>, especially the scale pivot. Ragdoll can sometimes struggle when the scale pivot differs from the rotate pivot. This will be addressed in a future release.</p>
-</div>
-<p><br></p>
-<h3 id="quality-of-life">Quality of Life</h3>
-<p>Some minor things to brighten your day.</p>
-<p><br></p>
-<h4 id="real-ground">Real Ground</h4>
-<p>With <code>Rigids</code>, the ground was embedded into the scene. With <code>Markers</code>, an actual ground is created to for more stability and more control over its physical parameters. Something that can also be animated, and that dynamically appears right underneath your markers.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134493174-f57cc5ce-5056-4cfa-b98e-fae9114342fc.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="joints-and-the-attribute-editor">Joints and the Attribute Editor</h4>
-<p>The Attribute Editor doesn't show you <code>Rigids</code> related to Maya joints because of a Maya UI quirk.</p>
-<p>With <code>Markers</code>, this is no longer a problem!</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134464806-041e6abb-4be0-442f-b51d-d4a9776fd88b.png" /></p>
-<p><br></p>
-<h4 id="hidden-solver">Hidden Solver</h4>
-<p>Hiding the solver completely removes all overhead of having Ragdoll in your scene. Previously, with <code>rdScene</code> and <code>rdRigid</code>, because they were directly connected to your controls, hiding things made little difference. But now, because we no longer have this direct connection, all computations come from explicitly seeing the <code>rdSolver</code> node.</p>
-<p>No visible <code>rdSolver</code> node, no computations. Period.</p>
-<p><br></p>
-<h4 id="enhanced-determinism">Enhanced Determinism</h4>
-<div class="admonition info">
-<p class="admonition-title">TLDR</p>
-<p>Sometimes, re-opening the scene could lead to different results. This has now been fixed.</p>
-</div>
-<p>Each time you play a simulation starting from the beginning, the results are the same. This is an important characteristic of any simulation and is called "determinism". It used to be the case however that when you re-opened the scene, there was a small chance the results would differ from when you last saved it.</p>
-<p>This has now been fixed. The determinism is now dependent on the order in which rigid bodies connect to the <code>rdSolver</code> node. It's an array attribute, whose order is saved with the Maya scene.</p>
-<p><br></p>
-<h3 id="multiple-floating-licences">Multiple Floating Licences</h3>
-<p>Whenever a machine connected to your floating licence server, the host and IP were stored on the machine in an effort to speed up subsequent connections made. However, this also meant that you weren't able to <em>update</em> those details.</p>
-<p>Despite providing new details, Ragdoll would favour the already-stored details. Worse yet, the Ragdoll UI would <em>lie</em> to you, by repeating the connection details provided in the <code>RAGDOLL_FLOATING</code> environment variable, despite those not actually being used.</p>
-<p>This release addresses this by always using the details you provide, and not bother reusing any previously provided details. In addition, you now have the option to explicitly query and set server details directly.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Will query the *actual* server used by Ragdoll, rather</span>
-<span class="c1"># than return the environment variable you provided</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">ragdollLicence</span><span class="p">(</span><span class="n">getServer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Will manipulate the currently-in-use key, meaning it will</span>
-<span class="c1"># try and drop a licence from this address as well</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">ragdollLicence</span><span class="p">(</span><span class="n">setServer</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">1313</span><span class="p">))</span>
+<span class="n">resolve</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">resolve</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>Run this, and this is what you'll find.</p>
+<div class="highlight"><pre><span></span><code>Level <span class="m">0</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_foot_box <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - R_toe_capsule <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+Level <span class="m">1</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - R_hand <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - L_foot_box <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - R_toe_capsule <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+Level <span class="m">2</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - R_hand <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - L_foot_convex <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+ - R_toe_convex <span class="o">(</span><span class="m">2</span><span class="o">)</span>
 </code></pre></div>
 <p><br></p>
-<h3 id="next-release">Next Release</h3>
-<p>This release is part &frac14;, for next 2/4 release you can expect <em>Performance Improvements</em>.</p>
-<p>In this release, simulation and overall Maya scenegraph performance has seen a 200x performance boost, the performance is already there. You'll notice it as you try them on your rigs.</p>
-<p>However, <em>rendering</em> performance has dropped significantly, cancelling out <em>most</em> of that performance gain. Here's what performance looks like now.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134397400-44ed30ce-b5c2-4cf7-9a24-2783a685b082.png" /></p>
-<p>Rendering mostly Maya default shading, rendeing its own things. Unrelated to Ragdoll. The Rig Evaluation on the other hand is almost entirely Ragdoll. It's connected to every control in this rig, forcing each control to be evaluated in serial; one after the other.</p>
-<p>Here's what it looks like with <code>Markers</code>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134399139-cbe27611-3445-4453-b901-fbe1687dd299.png" /></p>
-<p>Notice the huge pile of lines to the left? Those are all running parallel and almost entirely default Maya evaluations; things your rig would do without Ragdoll. Rendering on the other hand is almost entirely Ragdoll, it is <em>very</em> slow.</p>
-<p>To properly compare performance between <code>Rigids</code> and <code>Markers</code>, here's what you should be looking at.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134398643-bf2e3086-a8f6-4ea7-8e58-011c866acaaa.mp4" type="video/mp4"></video></p>
-
-<p>This is the only thing Ragdoll does to your rig. This is the entire overhead, the added load onto your rig. 16 <em>microseconds</em>. That's <code>0.016 ms</code>. For a rig to run at 30 fps, it'll need <code>1,000/30 = 33 ms</code> per frame. This overhead, <code>0.016 ms/frame</code> is all Ragdoll needs to solve an entire character, contacts and constraints and forces, all of it. In this particular profiling, that's 430x faster than <code>Rigids</code>, which not only took longer to solve but made everything else slower by just being connected to your controls.</p>
-<p>So how about we get this rendering performance sorted, shall we?</p>
-<p><br></p>
-<h3 id="limitations">Limitations</h3>
-<p>These are some of the things lacking from <code>Markers</code> in this release that we'll be working on for subsequent releases.</p>
+<h3 id="markers-api">Markers API</h3>
+<p>With the retirement of the legacy Python API, a new Markers API is now available.</p>
 <ul>
-<li>Selecting rigids interacively</li>
-<li>Manipulating shapes interactively</li>
-<li>Manipulating constraints interactively</li>
-<li>Toggle between previous animation and recorded simulation</li>
-<li>Support for recording onto an animation layer</li>
-<li>No "live-mode", where physics drives a control interactively</li>
-<li>Markers cannot be exported</li>
-<li>Markers cannot have additional constraints</li>
+<li><a href="/api">API Documentation</a></li>
+<li><a href="/api_reference">API Reference</a></li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">import</span> <span class="nn">ragdoll.api</span> <span class="k">as</span> <span class="nn">rd</span>
+
+<span class="n">box</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">createSolver</span><span class="p">()</span>
+<span class="n">marker</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">assignMarker</span><span class="p">(</span><span class="n">box</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">solver</span><span class="p">)</span>
+
+<span class="n">rd</span><span class="o">.</span><span class="n">recordPhysics</span><span class="p">()</span>
+</code></pre></div>
+<p>The new export and import mechanic can be accessed from here too.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ragdoll.api</span> <span class="k">as</span> <span class="nn">rd</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\path\to\my_ragdoll.rag&quot;</span>
+
+<span class="c1"># Get everything out</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">exportPhysics</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+<span class="c1"># Remove everything</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">deleteAllPhysics</span><span class="p">()</span>
+
+<span class="c1"># Bring everything back</span>
+<span class="n">rd</span><span class="o">.</span><span class="n">reinterpretPhysics</span><span class="p">()</span>
+</code></pre></div>
+<p><br></p>
+<h4 id="legacy-api">Legacy API</h4>
+<p>The old Rigid API is still accessible under a new home.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll.legacy</span> <span class="kn">import</span> <span class="n">commands</span>
+<span class="n">commands</span><span class="o">.</span><span class="n">create_active_rigid</span><span class="p">()</span>
+<span class="n">commands</span><span class="o">.</span><span class="n">create_point_constraint</span><span class="p">()</span>
+<span class="c1"># ...</span>
+</code></pre></div>
+<p>But will be removed entirely soon, so do transition away from it ASAP.</p>
+<p><br></p>
+<h3 id="quality-of-life">Quality of Life</h3>
+<p>Make it more difficult to make mistakes with these new additions. 😊</p>
+<p><br></p>
+<h4 id="max-mass-ratio">Max Mass Ratio</h4>
+<p>With <code>Density</code>, there's a chance Markers get Ragdoll into a situation it does not like; namely that the difference between masses are too great.</p>
+<details class="info"><summary>Give me the technical details</summary><p>As you wish. 🤓</p>
+<p>Ragdoll doesn't like differences any greater than 10x, sometimes 100x, else it can fail or become unstable. For example, if the torso of your character has a mass of 100kg, and the foot Marker has a mass of 0.5kg, that's a ratio of 100/0.5 = 200x which is far greater than Ragdoll would like. As a result, the body would <em>crush</em> the foot which would be unable to properly hold the entire body up.</p>
+<p>Up until now, the masses on all Markers have had a default value of 1kg. Meaning that regardless of the <em>size</em> of a Marker - be it the torso, the head or tip of a finger - it would always have a mass of 1.0. As a result, <em>hands</em> would typically end up far heavier than the rest of the body.</p>
+</details>
+<p><strong>Before</strong></p>
+<p>Here's an example of the solver failing. There are three identical chains, the tip of the last one having a mass of 10,000. That's 10,000x greater then each link in the chain. As a result, Markers separate; that is incorrect.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146761954-6218f6bf-9fbe-4100-b831-589fd7d94914.mp4" type="video/mp4"></video></p>
+
+<p><strong>After</strong></p>
+<p>If we limit the maximum ratio to just 1000x, we get the correct behavior. You can also see how it affected the other two chains. They now behave more similarly, because in order to ensure a mass ratio across the whole system, the mass of their tips need to be reduced as well.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146761956-211ce2b6-42b6-4f70-a9de-42326b4fb17c.mp4" type="video/mp4"></video></p>
+
+<p>The new <code>Max Mass Ratio</code> attribute protects against these situations, letting you give objects a suitable mass and only have to worry about which should weigh more, and which should weigh less. Ragdoll will balance everything out before passing it along to be simulated.</p>
+<div class="admonition info">
+<p class="admonition-title">What are the consequences?</p>
+<p>Sometimes, large mass ratios are what you want. For example, a heavy weight on a string tends to do quite well with ratios up to 1000x. But markers being crushed by another marker 1000x its weight tends to not do as well.</p>
+<p>So the result is less of an effect at the extreme ratios.</p>
+</div>
+<p>In the Manipulator, you can preview the final mass used given the density and the ratio you specified.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148936731-547675ac-8d3f-4526-ae83-62b7150be581.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="directx">DirectX</h3>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/149352042-24b1fe78-3c33-4a46-bf2a-cf9cc3d4dc37.png" /></p>
+<p>Look. Closely. Look. Closlier.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148967508-c56c0135-819d-4eac-b5ff-2d8be259b80d.mp4" type="video/mp4"></video></p>
+
+<p>That's right! You've now got the option to use Ragdoll with Maya in DirectX viewport mode.</p>
+<p><br></p>
+<h4 id="truly-non-keyable">Truly Non-keyable</h4>
+<p>Some Ragdoll attributes are keyable, others are not. Which is which? Impossible to say. Until now!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/147100689-228d7408-0f1c-4a57-a4d5-442d8284a5cc.mp4" type="video/mp4"></video></p>
+
+<p>On attempting to keyframe a non-keyable attribute, you'll now see an error message along with a visual cue things might not work out the way you expect. As opposed to happily setting that keyframe but then ignoring it once the simulation starts, like it used to.</p>
+<p>A little quality of life for ya'!</p>
+<div class="admonition tip">
+<p class="admonition-title">Pro-tip for Riggers</p>
+<p>There are at least 2 ways to prevent non-keyable attributes from being keyframed.</p>
+<ol>
+<li><code>MFnAttribute::setConnectable(false);</code></li>
+<li><code>MPxNode::legalConnection()</code></li>
+</ol>
+<p>The former means you are also unable to make a control and connect it to multiple non-keyable attributes. Like if you wanted to control <code>Mass</code> of a series of markers from a single source, or the <code>Overlap Group</code>.</p>
+<p>The latter on the other hand is more flexible. It allows Ragdoll to prevent connections to <em>specific</em> attributes or types of nodes, like <code>animCurve</code> nodes, which means animators won't be able to keyframe it but you'll still be able to build controls for it.</p>
+<p>And that's exactly how it works.</p>
+</div>
+<p><br></p>
+<h4 id="delta-drawing-bug">Delta Drawing Bug</h4>
+<p>The worldspace deltas were drawn separate from the marker they affected, which could produce a jarring effect especially when the solver position had been offset.</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146639337-8df8d52e-8e6f-4d87-94f8-5973b03a7f1e.mp4" type="video/mp4"></video></p>
+
+<p><strong>After</strong></p>
+<p>This has now been fixed.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146639364-34dcba69-b174-4950-8431-19303fb343f4.mp4" type="video/mp4"></video></p>
+
+<div class="admonition info">
+<p class="admonition-title">More Performance</p>
+<p>As an added bonus, we're now also doing 2 matrix multiplications less <em>per frame</em>, <em>per marker</em>. That kind of thing adds up quickly.</p>
+</div>
+<p><br></p>
+<h4 id="shape-sync">Shape Sync</h4>
+<p>If you play, pause and then change the <code>Shape</code> from <code>Box</code> to <code>Capsule</code> nothing happens. Because the shape, like many other attributes, can only be changed on the start frame.</p>
+<p>But, when you later returned to the start frame, the shape would <em>still</em> not update. This has now been fixed.</p>
+<p><br></p>
+<h4 id="profiler-view">Profiler View</h4>
+<p>Mostly meant to keep the development of Ragdoll fast and interactive, you can now spot where most time is spent via the built-in Maya Profiler.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/146942224-d88c9ec1-d58f-4213-ad63-2d3f11a91ccf.mp4" type="video/mp4"></video></p>
+
+<p>Here's what one frame of this looks like; 5 ms to both simulate and render Ragdoll in the viewport.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/146941905-b56fd84a-5cbf-4bfc-84fd-63ecfaabb2a6.png" /></p>
+<p><br></p>
+<h4 id="removed-attributes">Removed Attributes</h4>
+<p>These attributes were no longer relevant in the last release, but were still present in the Channel Editor. These have now been <em>hidden</em> and will no longer be saved with your file. A few weeks from now, they will be removed.</p>
+<ul>
+<li><code>limitAutoOrient</code></li>
+<li><code>limitType</code></li>
+<li><code>limitAxis</code></li>
+<li><code>limitOffsetX</code></li>
+<li><code>limitOffsetY</code></li>
+<li><code>limitOffsetZ</code></li>
+<li><code>limitOffset</code></li>
+<li><code>limitRotationX</code></li>
+<li><code>limitRotationY</code></li>
+<li><code>limitRotationZ</code></li>
+<li><code>limitRotation</code></li>
+</ul>
+<p><br></p>
+<h4 id="mandarin-serial-number">Mandarin Serial Number</h4>
+<p>It has come to my attention that the first thing every new user of Ragdoll sees is this dialog, with this message for a serial number.</p>
+<div class="admonition question">
+<p class="admonition-title">And yet..</p>
+<p>Nobody has said a thing! 🤣</p>
+<p><strong>Correction</strong> shout-out to @Rosaline for pointing this out just a few days ago!</p>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/146526900-6815e9ad-4da3-4531-bb2c-bb0e239affff.png" /></p>
+<p>According to my Mandarin-speaking friends, this is jibberish (or at least should be!) and is a result of badly translated Unicode to ASCII characters.</p>
+<p>This has now been fixed!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/146527505-c79a897c-74cc-4e4c-b3c3-becae0ebd99d.png" /></p>
+<p><br></p>
                 
                   
                 
@@ -3545,41 +3416,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../2021.10.07/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                2021.10.07
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../2021.08.28/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                2021.08.28
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
