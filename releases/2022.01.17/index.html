@@ -2603,18 +2603,12 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#directx" class="md-nav__link">
     DirectX
   </a>
   
-    <nav class="md-nav" aria-label="DirectX">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#truly-non-keyable" class="md-nav__link">
@@ -2739,7 +2733,7 @@
 
 <p><br></p>
 <h4 id="january-voucher">January Voucher</h4>
-<p>On Febuary 1<sup>st</sup>, prices will reach their intended full price, leaving Early Bird behind. Until then, you can use the <strong>voucher code above</strong> to make one last purchase before the deadline.</p>
+<p>On Febuary 1<sup>st</sup>, prices will reach their intended full price, leaving Early Bird behind. Until then, you can use this <strong>voucher code</strong> to make one last purchase before the deadline.</p>
 <ul>
 <li>Voucher Code: <strong><code>uX1bFhjZ</code></strong></li>
 <li>Purchase Page: <strong><a href="https://ragdolldynamics.com/pricing-commercial">https://ragdolldynamics.com/pricing-commercial</a></strong></li>
@@ -2754,7 +2748,7 @@
 <p>The problems faced back then..</p>
 <ul>
 <li>Like the massive endevour starting a simulation <a href="/releases/2021.03.01/">wherever your character was</a>.</li>
-<li>Or the need controls other than your rig to <a href="/releases/2021.05.10/">actually <em>animate the thing</em></a></li>
+<li>Or the need for controls other than your rig to <a href="/releases/2021.05.10/">actually <em>animate the thing</em></a></li>
 <li>Not to mention the constant chasing of supporting Maya's numerous ways of affecting the position and orientation of your controls, from <a href="/releases/2021.04.23/">rotate axes, to rotate pivots, to scale , to...</a>.</li>
 </ul>
 <p>None of those problems are a problem with Markers. Because Markers look at the world from a different perspective, they <em>just work</em>. It made Ragdoll not only more user friendly and significantly faster but also <em>simpler to develop</em> and <em>smaller in size</em>. The code for Markers is about &#8531; of the equivalent for Rigids. Just think about that!</p>
@@ -2810,13 +2804,13 @@
 <p>It contains everything mentioned on any website, is capable of doing everything you've seen Ragdoll do and is the unrestricted, unlimited and gold standard of Ragdoll.</p>
 <p><br></p>
 <h4 id="ragdoll-complete">Ragdoll Complete</h4>
-<p>This is the version freelancers <em>can afford</em>.</p>
+<p>This is the version for freelancers.</p>
 <p><img width=100 src=https://user-images.githubusercontent.com/2152766/119614617-663fe500-bdf6-11eb-9e3f-bfdbf278bcdf.png></p>
 <p>It is Ragdoll Unlimited, with a few limitations.</p>
 <ol>
-<li>Performance</li>
-<li>Export</li>
-<li>Python API</li>
+<li>Limited Performance</li>
+<li>Limited Export</li>
+<li>Limited Python API</li>
 </ol>
 <p>Performance is limited in how quickly Ragdoll is able to read from your character. Ragdoll is natively parallel, but Complete turns any character you assign markers to into a Serial affair. Limiting performance by the number of cores you have in your machine.</p>
 <p>The advantage of export is that your rigs don't need physics built-in. They can remain simple and without physics, until the animator actually needs it. This feature is limited to <strong>10 markers</strong>; for the time being. Generally, export is reserved for Unlimited and users in need of pipeline integration. But Complete let's you get at least a taste of the comfort and flexibility of exporting your physics contraptions from one scene and importing onto an unsuspecting character in another.</p>
@@ -2828,9 +2822,10 @@
 <p><br></p>
 <h4 id="ragdoll-batch">Ragdoll Batch</h4>
 <p>This is the version for your <em>render farm</em>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/148369519-9a8c2e3f-cc7b-4068-9eef-a5043bffd268.png" /></p>
+<p><img width=100 src=https://user-images.githubusercontent.com/2152766/119614615-663fe500-bdf6-11eb-93dc-d71137e64f0b.png></p>
 <p>It's a low-cost alternative to Ragdoll Unlimited, without the ability to render into the viewport. Making it effectively useful <em>only</em> via Python. It is also unable to export and lacks the parallelism of Unlimited.</p>
 <p>Unlike all other flavours, a Batch licence is reserved per-process; meaning that if you spin up 2 <code>mayapy</code> instances on the same machine, it will occupy 2 licences. This obviously only works if your licences are floating, as otherwise a machine can only carry a single node-locked licence, limiting it to a single process running Ragdoll Batch.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/148369519-9a8c2e3f-cc7b-4068-9eef-a5043bffd268.png" /></p>
 <p><br></p>
 <h4 id="ragdoll-feature-grid">Ragdoll Feature Grid</h4>
 <p>Leaving Early Access, Ragdoll is stepping into the world as a 1.0. Here's an overview of what you can expect from now on.</p>
@@ -2908,7 +2903,8 @@
 <thead>
 <tr>
 <th align="left">Feature</th>
-<th align="left">Commercial</th>
+<th align="left">Unlimited</th>
+<th align="left">Complete</th>
 <th align="left">Non-commercial</th>
 </tr>
 </thead>
@@ -2917,14 +2913,22 @@
 <td align="left">Export</td>
 <td align="left">Unlimited markers</td>
 <td align="left">Up to 10 markers</td>
+<td align="left">Up to 10 markers</td>
 </tr>
 <tr>
 <td align="left">Record</td>
+<td align="left">Unlimited frames</td>
 <td align="left">Unlimited frames</td>
 <td align="left">Up to 100 frames</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition hint">
+<p class="admonition-title">Early Birds</p>
+<p>Did you purchase a Ragdoll Personal licence before this release?</p>
+<p>Then as <strong>thanks for believing in us</strong> and joining early, these limits do not apply to you. Your version is still unrestricted for non-commercial use.</p>
+<p>Enjoy! 🥰</p>
+</div>
 <p><br></p>
 <h3 id="import">Import</h3>
 <p>You can now <em>import</em> a Ragdoll setup exported from Maya, back into Maya. It'll re-create everything just the way it was.</p>
@@ -2963,7 +2967,7 @@
 <p>To use it, download the rig and import the Ragdoll file.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/149620136-7178ce52-6235-40cc-bf45-289a25b52649.png" />
 <img alt="image" src="https://user-images.githubusercontent.com/2152766/149323893-f80dba31-83fe-4fe2-9e00-a062dee5ed09.png" /></p>
-<p>It contains 2 levels of details.</p>
+<p>It contains 2 <a href="#level-of-detail">levels of detail</a>.</p>
 <table>
 <thead>
 <tr>
@@ -3321,7 +3325,7 @@ Level <span class="m">2</span>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148936731-547675ac-8d3f-4526-ae83-62b7150be581.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h3 id="directx">DirectX</h3>
+<h4 id="directx">DirectX</h4>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/149352042-24b1fe78-3c33-4a46-bf2a-cf9cc3d4dc37.png" /></p>
 <p>Look. Closely. Look. Closlier.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148967508-c56c0135-819d-4eac-b5ff-2d8be259b80d.mp4" type="video/mp4"></video></p>

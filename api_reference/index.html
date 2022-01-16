@@ -2388,6 +2388,138 @@
     Argument Signatures
   </a>
   
+    <nav class="md-nav" aria-label="Argument Signatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createsolver" class="md-nav__link">
+    createSolver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignmarkers" class="md-nav__link">
+    assignMarkers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignmarker" class="md-nav__link">
+    assignMarker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createdistanceconstraint" class="md-nav__link">
+    createDistanceConstraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createpinconstraint" class="md-nav__link">
+    createPinConstraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createfixedconstraint" class="md-nav__link">
+    createFixedConstraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linksolver" class="md-nav__link">
+    linkSolver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlinksolver" class="md-nav__link">
+    unlinkSolver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retargetmarker" class="md-nav__link">
+    retargetMarker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untargetmarker" class="md-nav__link">
+    untargetMarker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reparentmarker" class="md-nav__link">
+    reparentMarker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unparentmarker" class="md-nav__link">
+    unparentMarker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacemesh" class="md-nav__link">
+    replaceMesh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportphysics" class="md-nav__link">
+    exportPhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recordphysics" class="md-nav__link">
+    recordPhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinterpretphysics" class="md-nav__link">
+    reinterpretPhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletephysics" class="md-nav__link">
+    deletePhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteallphysics" class="md-nav__link">
+    deleteAllPhysics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2421,7 +2553,7 @@
   <img class="hero-image" src=/yoga13.png>
 </div>
 
-<h3 id="api-member-reference">API Member Reference</h3>
+<h2 id="api-member-reference">API Member Reference</h2>
 <p>The complete Ragdoll API. <img alt="🙋‍♂️" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
 <span class="kn">import</span> <span class="nn">ragdoll.api</span> <span class="k">as</span> <span class="nn">rd</span>
@@ -2433,18 +2565,480 @@
 
 <span class="n">rd</span><span class="o">.</span><span class="n">recordPhysics</span><span class="p">()</span>
 </code></pre></div>
-<p>{{ api:overview }}</p>
+<table>
+<thead>
+<tr>
+<th align="left">Function</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>createSolver</strong></td>
+<td align="left">Create a new rdSolver node</td>
+</tr>
+<tr>
+<td align="left"><strong>assignMarkers</strong></td>
+<td align="left">Assign markers to <code>transforms</code> belonging to <code>solver</code></td>
+</tr>
+<tr>
+<td align="left"><strong>assignMarker</strong></td>
+<td align="left">Convenience function for passing and recieving a single <code>transform</code></td>
+</tr>
+<tr>
+<td align="left"><strong>createDistanceConstraint</strong></td>
+<td align="left">Create a new distance constraint between <code>parent</code> and <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>createPinConstraint</strong></td>
+<td align="left">Create a new pin constraint for <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>createFixedConstraint</strong></td>
+<td align="left">Create a new fixed constraint between <code>parent</code> and <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>linkSolver</strong></td>
+<td align="left">Link solver <code>a</code> with <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><strong>unlinkSolver</strong></td>
+<td align="left">Unlink <code>solver</code></td>
+</tr>
+<tr>
+<td align="left"><strong>retargetMarker</strong></td>
+<td align="left">Retarget <code>marker</code> to <code>transform</code></td>
+</tr>
+<tr>
+<td align="left"><strong>untargetMarker</strong></td>
+<td align="left">Remove parent from <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>reparentMarker</strong></td>
+<td align="left">Make <code>new_parent</code> the new parent of <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>unparentMarker</strong></td>
+<td align="left">Remove parent from <code>child</code></td>
+</tr>
+<tr>
+<td align="left"><strong>replaceMesh</strong></td>
+<td align="left">Replace the 'Mesh' shape type in <code>marker</code> with <code>mesh</code>.</td>
+</tr>
+<tr>
+<td align="left"><strong>exportPhysics</strong></td>
+<td align="left">Export everything Ragdoll-related into <code>fname</code></td>
+</tr>
+<tr>
+<td align="left"><strong>recordPhysics</strong></td>
+<td align="left">Transfer simulation from <code>solver</code> to animation land</td>
+</tr>
+<tr>
+<td align="left"><strong>reinterpretPhysics</strong></td>
+<td align="left">Recreate Maya scene from exported Ragdoll file</td>
+</tr>
+<tr>
+<td align="left"><strong>deletePhysics</strong></td>
+<td align="left">Delete Ragdoll from anything related to <code>nodes</code></td>
+</tr>
+<tr>
+<td align="left"><strong>deleteAllPhysics</strong></td>
+<td align="left">Nuke it from orbit</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h3 id="argument-signatures">Argument Signatures</h3>
+<h2 id="argument-signatures">Argument Signatures</h2>
 <p>A more in-depth view on each function.</p>
-<p>{{ api:details }}</p>
+<h3 id="createsolver">createSolver</h3>
+<p>Create a new rdSolver node
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createSolver</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new rdSolver node</span>
+<span class="sd">               ____</span>
+<span class="sd">              /    \</span>
+<span class="sd">          /  |      |</span>
+<span class="sd">      ---/----\____/</span>
+<span class="sd">        /       /</span>
+<span class="sd">    ---/-------/---</span>
+<span class="sd">      /       /</span>
+
+<span class="sd">    The solver is where the magic happens. Markers are connected to it</span>
+<span class="sd">    and solved within; populating its .outputMatrix attribute with the</span>
+<span class="sd">    final result.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        name (str, optional): Override the default name of this solver</span>
+<span class="sd">        opts (dict, optional): Configure the solver with these options</span>
+
+<span class="sd">    Options:</span>
+<span class="sd">        frameskipMethod (int): Method to use whenever a frame is skipped,</span>
+<span class="sd">            can be either api.FrameskipPause or api.FrameskipIgnore</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="assignmarkers">assignMarkers</h3>
+<p>Assign markers to <code>transforms</code> belonging to <code>solver</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">assignMarkers</span><span class="p">(</span><span class="n">transforms</span><span class="p">,</span> <span class="n">solver</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Assign markers to `transforms` belonging to `solver`</span>
+
+<span class="sd">    Each marker transfers the translation and rotation of each transform</span>
+<span class="sd">    and generates its physical equivalent, ready for recording.</span>
+
+<span class="sd">    Options:</span>
+<span class="sd">        autoLimit (bool): Transfer locked channels into physics limits</span>
+<span class="sd">        density (enum): Auto-compute mass based on volume and a density,</span>
+<span class="sd">            such as Flesh or Wood</span>
+<span class="sd">        materialInChannelBox (bool): Show material attributes in Channel Box</span>
+<span class="sd">        shapeInChannelBox (bool): Show shape attributes in Channel Box</span>
+<span class="sd">        limitInChannelBox (bool): Show limit attributes in Channel Box</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="assignmarker">assignMarker</h3>
+<p>Convenience function for passing and recieving a single <code>transform</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">assignMarker</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">solver</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convenience function for passing and recieving a single `transform`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="createdistanceconstraint">createDistanceConstraint</h3>
+<p>Create a new distance constraint between <code>parent</code> and <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createDistanceConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new distance constraint between `parent` and `child`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="createpinconstraint">createPinConstraint</h3>
+<p>Create a new pin constraint for <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createPinConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new pin constraint for `child`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="createfixedconstraint">createFixedConstraint</h3>
+<p>Create a new fixed constraint between <code>parent</code> and <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createFixedConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new fixed constraint between `parent` and `child`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="linksolver">linkSolver</h3>
+<p>Link solver <code>a</code> with <code>b</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">linkSolver</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Link solver `a` with `b`</span>
+
+<span class="sd">    This will make `a` part of `b`, allowing markers to interact.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        a (rdSolver): The &quot;child&quot; solver</span>
+<span class="sd">        b (rdSolver): The &quot;parent&quot; solver</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Nothing</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="unlinksolver">unlinkSolver</h3>
+<p>Unlink <code>solver</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">unlinkSolver</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Unlink `solver`</span>
+
+<span class="sd">    From any other solver it may be connected to.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        a (rdSolver): The solver to unlink from any other solver</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Nothing</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="retargetmarker">retargetMarker</h3>
+<p>Retarget <code>marker</code> to <code>transform</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">retargetMarker</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Retarget `marker` to `transform`</span>
+
+<span class="sd">    When recording, write simulation from `marker` onto `transform`,</span>
+<span class="sd">    regardless of where it is assigned.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="untargetmarker">untargetMarker</h3>
+<p>Remove parent from <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">untargetMarker</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove parent from `child`</span>
+
+<span class="sd">    Meaning `child` will be a free marker, without a parent.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="reparentmarker">reparentMarker</h3>
+<p>Make <code>new_parent</code> the new parent of <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reparentMarker</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make `new_parent` the new parent of `child`</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        child (rdMarker): The marker whose about to have its parent changed</span>
+<span class="sd">        new_parent (rdMarker): The new parent of `child`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="unparentmarker">unparentMarker</h3>
+<p>Remove parent from <code>child</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">unparentMarker</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove parent from `child`</span>
+
+<span class="sd">    Meaning `child` will be a free marker, without a parent.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="replacemesh">replaceMesh</h3>
+<p>Replace the 'Mesh' shape type in <code>marker</code> with <code>mesh</code>.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replaceMesh</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Replace the &#39;Mesh&#39; shape type in `marker` with `mesh`.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        marker (cmdx.Node): Rigid whose mesh to replace</span>
+<span class="sd">        mesh (cmdx.Node): Mesh to replace with</span>
+<span class="sd">        clean (bool, optional): Remove other inputs, such as curve</span>
+<span class="sd">            or surface node. Multiple inputs are supported, so this</span>
+<span class="sd">            is optional. Defaults to True.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Nothing</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="exportphysics">exportPhysics</h3>
+<p>Export everything Ragdoll-related into <code>fname</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exportPhysics</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Export everything Ragdoll-related into `fname`</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        fname (str, optional): Write to this file</span>
+<span class="sd">        data (dict, optional): Export this dictionary instead</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): Exported data as a dictionary</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="recordphysics">recordPhysics</h3>
+<p>Transfer simulation from <code>solver</code> to animation land
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recordPhysics</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transfer simulation from `solver` to animation land</span>
+
+<span class="sd">    Options:</span>
+<span class="sd">        start_time (int, optional): Record from this time</span>
+<span class="sd">        end_time (int, optional): Record to this time</span>
+<span class="sd">        include (list, optional): Record these transforms only</span>
+<span class="sd">        exclude (list, optional): Do not record these transforms</span>
+<span class="sd">        kinematic (bool, optional): Record kinematic frames too</span>
+<span class="sd">        maintain_offset (bool, optional): Maintain whatever offset is</span>
+<span class="sd">            between the source and destination transforms, default</span>
+<span class="sd">            value is True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="reinterpretphysics">reinterpretPhysics</h3>
+<p>Recreate Maya scene from exported Ragdoll file
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reinterpretPhysics</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Recreate Maya scene from exported Ragdoll file</span>
+
+<span class="sd">    User-interface attributes like `density` and display settings</span>
+<span class="sd">    are restored from a file otherwise mostly contains the raw</span>
+<span class="sd">    simulation data.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="deletephysics">deletePhysics</h3>
+<p>Delete Ragdoll from anything related to <code>nodes</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deletePhysics</span><span class="p">(</span><span class="n">nodes</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Delete Ragdoll from anything related to `nodes`</span>
+
+<span class="sd">    This will delete anything related to Ragdoll from your scenes, including</span>
+<span class="sd">    any attributes added (polluted) onto your animation controls.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        nodes (list): Delete physics from these nodes</span>
+<span class="sd">        dry_run (bool, optional): Do not actually delete anything,</span>
+<span class="sd">            but still run through the process and throw exceptions</span>
+<span class="sd">            if any, and still return the results of what *would*</span>
+<span class="sd">            have been deleted if it wasn&#39;t dry.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="deleteallphysics">deleteAllPhysics</h3>
+<p>Nuke it from orbit
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deleteAllPhysics</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Nuke it from orbit</span>
+
+<span class="sd">    Return to simpler days, days before physics, with this one command.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
 <p><br></p>
-<h3 id="constants">Constants</h3>
+<h2 id="constants">Constants</h2>
 <p>Some functions take constants for arguments.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
 <span class="n">api</span><span class="o">.</span><span class="n">assign_marker</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="n">api</span><span class="o">.</span><span class="n">DensityFlesh</span><span class="p">})</span>
 </code></pre></div>
-<p>{{ api:constants }}</p>
+<table>
+<thead>
+<tr>
+<th align="left">Constant</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">FrameskipPause</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">FrameskipIgnore</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">DisplayDefault</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">DisplayWire</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">DisplayConstant</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">DisplayShaded</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">DisplayMass</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">DisplayFriction</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">DisplayRestitution</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left">DisplayVelocity</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="left">DisplayContacts</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="left">InputInherit</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">InputOff</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">InputKinematic</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">InputGuide</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">PGSSolverType</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">TGSSolverType</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">BoxShape</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">SphereShape</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">CapsuleShape</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">MeshShape</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">ConvexHullShape</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">DensityOff</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">DensityCotton</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">DensityWood</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">DensityFlesh</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">DensityUranium</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">DensityBlackHole</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">DensityCustom</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left">StartTimeRangeStart</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">StartTimeAnimationStart</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">StartTimeCustom</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
                 
               
 
