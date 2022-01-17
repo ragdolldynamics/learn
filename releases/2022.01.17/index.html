@@ -1062,6 +1062,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1070,7 +1072,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1080,7 +1082,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1101,6 +1103,351 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2022.01.17
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2022.01.17
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-20" class="md-nav__link">
+    Ragdoll 2.0
+  </a>
+  
+    <nav class="md-nav" aria-label="Ragdoll 2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#january-voucher" class="md-nav__link">
+    January Voucher
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looking-back" class="md-nav__link">
+    Looking Back
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-flavours" class="md-nav__link">
+    Ragdoll Flavours
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-unlimited" class="md-nav__link">
+    Ragdoll Unlimited
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-complete" class="md-nav__link">
+    Ragdoll Complete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-batch" class="md-nav__link">
+    Ragdoll Batch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-feature-grid" class="md-nav__link">
+    Ragdoll Feature Grid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-commercial-limitations" class="md-nav__link">
+    Non-commercial Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+    <nav class="md-nav" aria-label="Import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-from-file" class="md-nav__link">
+    Namespace from File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver-from-file" class="md-nav__link">
+    Solver from File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    Known Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#density" class="md-nav__link">
+    Density
+  </a>
+  
+    <nav class="md-nav" aria-label="Density">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    Presets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualise" class="md-nav__link">
+    Visualise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-of-detail" class="md-nav__link">
+    Level of Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Level of Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow_1" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markers-api" class="md-nav__link">
+    Markers API
+  </a>
+  
+    <nav class="md-nav" aria-label="Markers API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-api" class="md-nav__link">
+    Legacy API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-mass-ratio" class="md-nav__link">
+    Max Mass Ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directx" class="md-nav__link">
+    DirectX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truly-non-keyable" class="md-nav__link">
+    Truly Non-keyable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delta-drawing-bug" class="md-nav__link">
+    Delta Drawing Bug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shape-sync" class="md-nav__link">
+    Shape Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiler-view" class="md-nav__link">
+    Profiler View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-attributes" class="md-nav__link">
+    Removed Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mandarin-serial-number" class="md-nav__link">
+    Mandarin Serial Number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2675,7 +3022,7 @@
                   </a>
                 
                 
-                  <h1>Import and Export for Markers</h1>
+                  <h1>2022.01.17</h1>
                 
                 <p><img alt="temptmeptmeetpm" src="https://user-images.githubusercontent.com/2152766/149407680-57a35c2e-21dd-49b6-b313-4cf40f812d85.png" /></p>
 <p>Highlight for this release is <strong>Ragdoll 2.0</strong>!</p>
@@ -3423,7 +3770,7 @@ Level <span class="m">2</span>
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-01-16
+      Last update: 2022-01-17
     
   </small>
 </div>
@@ -3443,6 +3790,41 @@ Level <span class="m">2</span>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serialisation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.12.15/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.12.15
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
