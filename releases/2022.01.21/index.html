@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Lots of fixes and improvements">
+        <meta name="description" content="Minor fixes and tweaks">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.01.31/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.01.21/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Quality of Life - Learn Ragdoll</title>
+        <title>Maintenance Release - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#group" class="md-skip">
+        <a href="#snap-to-simulation" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quality of Life
+              Maintenance Release
             
           </span>
         </div>
@@ -1132,7 +1132,7 @@
       <!-- Render table of contents, if not empty -->
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          2022.01.31
+          2022.01.21
           <span class="md-nav__icon md-icon"></span>
         </label>
       
@@ -1142,7 +1142,7 @@
       >
         
 
-        2022.01.31
+        2022.01.21
       </a>
 
       <!-- Show table of contents -->
@@ -1159,188 +1159,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#group" class="md-nav__link">
-    Group
-  </a>
-  
-    <nav class="md-nav" aria-label="Group">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-group" class="md-nav__link">
-    New Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#move-to-group" class="md-nav__link">
-    Move To Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-on-assign" class="md-nav__link">
-    Group on Assign
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lollipop-20" class="md-nav__link">
-    Lollipop 2.0
-  </a>
-  
-    <nav class="md-nav" aria-label="Lollipop 2.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#customisable" class="md-nav__link">
-    Customisable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retroactive-lollipops" class="md-nav__link">
-    Retroactive Lollipops
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robust-recording" class="md-nav__link">
-    Robust Recording
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#snap-to-simulation" class="md-nav__link">
     Snap to Simulation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#match-by-name" class="md-nav__link">
-    Match By Name
+      
+        <li class="md-nav__item">
+  <a href="#commercial-floating-licence" class="md-nav__link">
+    Commercial Floating Licence
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#limits-and-export" class="md-nav__link">
+    Limits and Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-up-is-inconsistent" class="md-nav__link">
+    Z-up is Inconsistent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scaled-limits" class="md-nav__link">
     Scaled Limits
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#scale-replace" class="md-nav__link">
-    Scale Replace
+      
+        <li class="md-nav__item">
+  <a href="#manipulator-and-viewport-shadows" class="md-nav__link">
+    Manipulator and Viewport Shadows
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#offline-activation-wizard" class="md-nav__link">
-    Offline Activation Wizard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#offline-trial-notification" class="md-nav__link">
-    Offline Trial Notification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#world-translate-visualisation" class="md-nav__link">
-    World Translate Visualisation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#record-leaving-joints-behind" class="md-nav__link">
-    Record Leaving Joints Behind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existing-constraints-deleted-on-record" class="md-nav__link">
-    Existing Constraints Deleted on Record
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#record-range-options" class="md-nav__link">
-    Record Range Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existing-constraints" class="md-nav__link">
-    Existing Constraints
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-multiple-viewports" class="md-nav__link">
-    Manipulator &amp; Multiple Viewports
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plug-in-unload-and-new-scene" class="md-nav__link">
-    Plug-in Unload and New Scene
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-from-selection" class="md-nav__link">
-    Delete from Selection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minor-tweaks" class="md-nav__link">
-    Minor Tweaks
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2665,188 +2521,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#group" class="md-nav__link">
-    Group
-  </a>
-  
-    <nav class="md-nav" aria-label="Group">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-group" class="md-nav__link">
-    New Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#move-to-group" class="md-nav__link">
-    Move To Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-on-assign" class="md-nav__link">
-    Group on Assign
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lollipop-20" class="md-nav__link">
-    Lollipop 2.0
-  </a>
-  
-    <nav class="md-nav" aria-label="Lollipop 2.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#customisable" class="md-nav__link">
-    Customisable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retroactive-lollipops" class="md-nav__link">
-    Retroactive Lollipops
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robust-recording" class="md-nav__link">
-    Robust Recording
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#snap-to-simulation" class="md-nav__link">
     Snap to Simulation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#match-by-name" class="md-nav__link">
-    Match By Name
+      
+        <li class="md-nav__item">
+  <a href="#commercial-floating-licence" class="md-nav__link">
+    Commercial Floating Licence
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#limits-and-export" class="md-nav__link">
+    Limits and Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-up-is-inconsistent" class="md-nav__link">
+    Z-up is Inconsistent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scaled-limits" class="md-nav__link">
     Scaled Limits
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#scale-replace" class="md-nav__link">
-    Scale Replace
+      
+        <li class="md-nav__item">
+  <a href="#manipulator-and-viewport-shadows" class="md-nav__link">
+    Manipulator and Viewport Shadows
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#offline-activation-wizard" class="md-nav__link">
-    Offline Activation Wizard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#offline-trial-notification" class="md-nav__link">
-    Offline Trial Notification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#world-translate-visualisation" class="md-nav__link">
-    World Translate Visualisation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#record-leaving-joints-behind" class="md-nav__link">
-    Record Leaving Joints Behind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existing-constraints-deleted-on-record" class="md-nav__link">
-    Existing Constraints Deleted on Record
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#record-range-options" class="md-nav__link">
-    Record Range Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existing-constraints" class="md-nav__link">
-    Existing Constraints
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-multiple-viewports" class="md-nav__link">
-    Manipulator &amp; Multiple Viewports
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plug-in-unload-and-new-scene" class="md-nav__link">
-    Plug-in Unload and New Scene
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-from-selection" class="md-nav__link">
-    Delete from Selection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minor-tweaks" class="md-nav__link">
-    Minor Tweaks
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2863,94 +2575,24 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.01.31.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.01.21.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2022.01.31</h1>
+                  <h1>2022.01.21</h1>
                 
-                <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/151810947-9fd48771-bfaf-4f7b-9082-d4fb6789101b.png" /></p>
-<p>Highlight for this release is <strong>Quality of Life!</strong></p>
+                <p>Minor release with some fixed for you, especially <strong>Floating Licence users</strong>.</p>
 <ul>
-<li><a href="#group-and-ungroup"><strong>ADDED</strong> Group and Ungroup</a> Markers can now be arbitrarily grouped</li>
-<li><a href="#lollipop-20"><strong>ADDED</strong> Lollipop 2.0</a> More powerful, more flexible lollipops</li>
 <li><a href="#snap-to-simulation"><strong>ADDED</strong> Keyframe on Snap to Simulation</a> More use for this nifty little feature</li>
-<li><a href="#match-by-name"><strong>ADDED</strong> Match by Name</a> Importing can now match by name, rather than the full hierarchy</li>
-<li><a href="#record-range-options"><strong>ADDED</strong> Record Range Options</a> Undimmed and ready to go!</li>
-<li><a href="#offline-activation-wizard"><strong>ADDED</strong> Offline Activation Wizard</a> Simpler than ever</li>
+<li><a href="#commercial-floating-licences"><strong>FIXED</strong> Commarcial Floating Licences</a> There was a glitch in the Matrix</li>
+<li><a href="#limits-and-import"><strong>FIXED</strong> Limits excluded from import</a> Limits were exported, but not imported</li>
+<li><a href="#z-up-inconsistent"><strong>FIXED</strong> Z-up is inconsistent</a> Foolproof implementation</li>
 <li><a href="#scaled-limits"><strong>FIXED</strong> Scaled Limits</a> The manipulator stuggled to display limits when scaled</li>
-<li><a href="#scaled-replaced-meshes"><strong>FIXED</strong> Scaled Replaced Meshes</a> Replaced meshes didn't used to like being scaled</li>
-<li><a href="#robust-recording"><strong>FIXED</strong> More Robust Recording</a> Also interactive and faster!</li>
-<li><a href="#manipulator-and-multiple-viewports"><strong>FIXED</strong> Manipulator and Multiple Viewports</a> Now easier on both the eyes and mind.</li>
+<li><a href="#manipulator-and-viewport-shadows"><strong>FIXED</strong> Manipulator and Viewport Shadows</a> Now visible even in the darkest of times</li>
 </ul>
 <p><br></p>
-<h3 id="group">Group</h3>
-<p>In the previous version, a group was automatically created whenever you assign to a connected series of controls.</p>
-<p><video autoplay class="poster" muted loop width=100% control><source src="https://user-images.githubusercontent.com/2152766/151788893-345a812e-8a33-4f66-9747-5e7348203f7a.mp4" type="video/mp4"></video></p>
-
-<p>This release enables you to group standalone markers too, and to retroactively group markers in any way you please.</p>
-<h4 id="new-group">New Group</h4>
-<p>Select some markers, put them in a group.</p>
-<p><video autoplay class="poster" muted loop width=100% control><source src="https://user-images.githubusercontent.com/2152766/151788793-ab9be9fa-1982-495e-ba59-7aec73c4f1fc.mp4" type="video/mp4"></video></p>
-
-<h4 id="move-to-group">Move To Group</h4>
-<p>Select one or more markers, along with a destination group, and move them.</p>
-<p><video autoplay class="poster" muted loop width=100% control><source src="https://user-images.githubusercontent.com/2152766/151786597-144ac006-d9a9-43e5-83a5-a2a5a1265795.mp4" type="video/mp4"></video></p>
-
-<h4 id="group-on-assign">Group on Assign</h4>
-<p>When assigning markers, you are now also able to pick which group to put it into, or whether to make a new group. Or no group!</p>
-<p><video autoplay class="poster" muted loop width=100% control><source src="https://user-images.githubusercontent.com/2152766/151789122-5daa59a4-1a94-4169-bae2-2ab513ee1d1e.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="lollipop-20">Lollipop 2.0</h3>
-<p>Lollipops now feature Marker and Group attributes in the Channel Box; less clicks!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151803985-290d94d5-2c8c-4cab-900f-8ce6df8d8e75.mp4" type="video/mp4"></video></p>
-
-<h4 id="customisable">Customisable</h4>
-<p>Rotate and scale the resulting lollipops to fit your rig and workflow.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151803987-fbf3fa8f-9f28-4f7b-a216-91c1bef5c2a1.mp4" type="video/mp4"></video></p>
-
-<h4 id="retroactive-lollipops">Retroactive Lollipops</h4>
-<p>Should you have markers without a lollipop, assign them afterwards using the Lollipop menu item. This is also where you can customise which attributes should appear on them.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151803990-8f13f7e4-e9a8-4048-b57d-3882926054e5.mp4" type="video/mp4"></video></p>
-
-<div class="admonition tip">
-<p class="admonition-title">Pro tip</p>
-<p>The <code>Use Proxy Attributes</code> option makes attributes editable both on the Lollipop <em>and</em> on the original Marker. The downside however is that they make life in the Graph Editor less pleasant. 🤔</p>
-<table>
-<thead>
-<tr>
-<th align="left">With Proxy Attributes</th>
-<th align="left">Without Proxy Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/151805099-90feaa34-d5ea-4954-adc3-7116f2b353e3.png" /></td>
-<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/151805173-f8fa35b9-2644-4743-bf84-bf14ff701a70.png" /></td>
-</tr>
-<tr>
-<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/151805394-c3736edd-d72a-4879-9f5f-1c0f850349ee.png" /></td>
-<td align="left"><img alt="image" src="https://user-images.githubusercontent.com/2152766/151805222-8fd87c86-aa11-4564-82d0-b3e79e99c0b0.png" /></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><br></p>
-<h3 id="quality-of-life">Quality of Life</h3>
-<p>Some improvements and reshufflings to make your life more complete. 🥰</p>
-<p><br></p>
-<h4 id="robust-recording">Robust Recording</h4>
-<p>There hasn't yet been any rig not supported by Ragdoll, until last week when @mandala got in touch with a new challenge. A rig made with an auto-rigging plug-in called <a href="https://www.notionalpipe.com/software">Contour</a>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151809381-d31f166a-e2bd-4417-b876-2df9a7d00d54.mp4" type="video/mp4"></video></p>
-
-<p>Recording this rig results in cycle warnings, presumably because part of how it operates depends on viewport updates.</p>
-<p>In this update, there is a (default) <code>Nice and Steady</code> option for recording which ensures the viewport stays up-to-date with the dependency graph, and that did the trick!</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/151555009-e40e9e7e-2892-402e-b77e-1a4f5bb879aa.mp4" type="video/mp4"></video></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/151555701-72941449-44cb-4fbc-a7ed-8f9bc6614cce.png" /></p>
-<p><br></p>
-<h4 id="snap-to-simulation">Snap to Simulation</h4>
+<h3 id="snap-to-simulation">Snap to Simulation</h3>
 <p>In addition to recording your simulation, you can also snap your rig to wherever the simulation is <em>currently</em> at.</p>
 <ul>
 <li><a href="https://learn.ragdolldynamics.com/releases/2021.11.15/#snap-to-simulation">See original announcement</a></li>
@@ -2960,151 +2602,23 @@
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150513262-0c136967-1538-4c5a-bc10-3e84fb6ca82f.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="match-by-name">Match By Name</h4>
-<p>Importing markers onto a character in a different group, or a different character altogether, could be tricky since their hierarchies would differ.</p>
-<p>There is now an option to find a matching control by <em>name</em> rather than its full path.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151807504-091a1e91-40a1-4785-bf49-c8ed0a300800.mp4" type="video/mp4"></video></p>
-
-<p>In this example, the character has a different parent group than when it was exported, changing all of the full paths to each control.</p>
+<h3 id="commercial-floating-licence">Commercial Floating Licence</h3>
+<p>A glitch was found that turned Floating Licences into non-commercial licences, imposing the recording and exporting limits of 100 frames and 10 markers.</p>
+<p>This has now been fixed.</p>
 <p><br></p>
-<h4 id="scaled-limits">Scaled Limits</h4>
+<h3 id="limits-and-export">Limits and Export</h3>
+<p>The new Import functionality introduced in the last version neglected to include <em>limits</em>, this has now been fixed!</p>
+<p><br></p>
+<h3 id="z-up-is-inconsistent">Z-up is Inconsistent</h3>
+<p>One user experienced having their gravity turned sideways, thinking Maya was configured with Z-up when really it was Y-up. It still unclear exactly <em>why</em> this happened, but the one potential edgecase has now been strengthened. If you experience gravity facing the wrong way, or the ground plane being orthogonal to your viewport grid, let us know!</p>
+<p><br></p>
+<h3 id="scaled-limits">Scaled Limits</h3>
 <p>When your rig or controls are scaled, the Manipulator wasn't able to accurately provide you with the limit handles. This has now been fixed.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150515264-06d170a3-6576-41bd-9dca-b55bc0a5701e.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="scale-replace">Scale Replace</h4>
-<p>In the case of scaled markers with a replaced mesh, this happened.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150535955-78d95102-c250-4af7-b3a8-ab2454ef1a98.mp4" type="video/mp4"></video></p>
-
-<p>But no longer!</p>
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150536000-76f4013f-2246-400b-b672-bb2fba959a06.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="offline-activation-wizard">Offline Activation Wizard</h4>
-<p>The offline activation process has now been streamlined; no longer requiring an email conversation back and forth. It should take some of our load off, whilst at the same time enabling you to offline activate when we are sleeping. 😅</p>
-<ul>
-<li><a href="https://learn.ragdolldynamics.com/licencing/#offline-activation">https://learn.ragdolldynamics.com/licencing/#offline-activation</a></li>
-</ul>
-<p><strong>Activation</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151695125-ded8c7f2-077d-4db6-8ea9-499a30f7c5c3.mp4" type="video/mp4"></video></p>
-
-<p><strong>Deactivation</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151695127-ad177ba8-f7e7-425a-99df-6aa541c81b8e.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="offline-trial-notification">Offline Trial Notification</h4>
-<p>Whenever someone attempts to trial Ragdoll, but their machine is not connected to the internet, they would receive a message about how their Trial has expired.. Even though it was never activated in the first place!</p>
-<p>This has now been fixed.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/150632340-905dcc3c-600e-40ec-85cf-72651022b059.png" /></p>
-<p><br></p>
-<h4 id="world-translate-visualisation">World Translate Visualisation</h4>
-<p>The translation component of the World Pose Space wasn't very visible before, now it is! It's also drawn using the color of the Marker it's associated with, to aid in figuring out what it's actually affecting. And also make things a little nicer to look at.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150762597-22b499ad-04ef-4adf-aca2-61dd8755ec14.mp4" type="video/mp4"></video></p>
-
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/150761794-ecbd9f53-c9dd-4227-8b6d-d04d0de15dab.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="record-leaving-joints-behind">Record Leaving Joints Behind</h4>
-<p>Sometimes, Ragdoll could leave some remains after recording your simulation. This has now been fixed.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/150783883-b62fbec0-5ef7-4090-a08c-2231984cf7e0.png" /></p>
-<p><br></p>
-<h4 id="existing-constraints-deleted-on-record">Existing Constraints Deleted on Record</h4>
-<p>Under rare circumstances, it's possible to assign a marker onto a control that's been constrained. It wouldn't make sense to record onto this control; because what should you expect to have happen? The control is either animated or it is constrained.</p>
-<p>At the moment, this constraint is also recorded and once complete your original constraint is deleted. If possible! If the constraint is from a referenced file, then you'll instead see an error. 🤔</p>
-<p><br></p>
-<h4 id="record-range-options">Record Range Options</h4>
-<p>The Record UI has seen some updates. It used to always record your current playback range, but can now be customised.</p>
-<p><strong>Record To Selected Range</strong></p>
-<p>You can now drag-select on the timeline to record only that specific region.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151520002-713e8507-1e61-4d10-84ce-d6e8cd3d2c56.mp4" type="video/mp4"></video></p>
-
-<p><strong>Record Full Range</strong></p>
-<p>The minimum and maximum range on your timeline, beyond what is played back.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151520008-cf7d1d53-6af6-4071-9295-0a72f40b1277.mp4" type="video/mp4"></video></p>
-
-<p><strong>Record Playback Range</strong></p>
-<p>Record only the range currently played back, this is the default and current behavior.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151520012-9cf6645c-527d-481a-89f7-8f2b75aee58f.mp4" type="video/mp4"></video></p>
-
-<p><strong>Customise Range</strong></p>
-<p>And finally, provide your own values. These values, along with the option of which range to pick from, is remembered alongside your Maya preferences just like all other Ragdoll options.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151520015-e236544b-b5c4-4c75-80d9-9352fc607566.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="existing-constraints">Existing Constraints</h4>
-<p>In the rare circumstance of:</p>
-<ol>
-<li>Assigning to a constrained control</li>
-<li>That is also kinematic</li>
-<li>And running <code>Record</code></li>
-</ol>
-<p>You would find yourself with a missing constraint. As it happens, when Maya encounters an existing constraint it won't actually create a new constraint when you try and constrain again. Instead, it will <em>append</em> to this constraint.</p>
-<p>As a result, since Recording constrains your character to the simulation and then bakes the keyframes, once it was complete and went on to clean up any new constraints it had made, it also deleted yours.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151523476-aa053bc6-1b9c-4fe9-bd18-7e41fc1d5f76.mp4" type="video/mp4"></video></p>
-
-<p>This has now been fixed.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151523477-a4978ad3-850e-44b8-8082-cf9ec0b1ce83.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="manipulator-multiple-viewports">Manipulator &amp; Multiple Viewports</h4>
-<p>The Ragdoll Manipulator didn't like multiple viewports being present at the same time, resulting in a similar situation as <a href="https://learn.ragdolldynamics.com/releases/2021.12.15/#robust-viewport-icons">2021.12.15</a>.</p>
-<p>Ragdoll now draws and responds to the manipulator in the currently active viewport.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151557284-7e0efb51-81de-40ff-a3f5-c1226a92db71.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="plug-in-unload-and-new-scene">Plug-in Unload and New Scene</h4>
-<p>Sometimes, especially on a floating licence, you'd like to release your licence such that another artist can pick it up.</p>
-<p>To do that, you can either go to the Ragdoll UI and <code>Drop Lease</code> for a floating licence of <code>Deactivate</code> for a node-locked licence. Or, you can simply unload the plug-in.</p>
-<p>As it happens, if you did then Ragdoll would clear your scene. Without confirmation. 😵</p>
-<p>This has now been fixed. You'll still need to ensure no Ragdoll nodes are present in your scene though, like any normal plug-in.</p>
-<p><br></p>
-<h4 id="delete-from-selection">Delete from Selection</h4>
-<p>A new menu item has been added to delete physics only from the current selection.</p>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip I</p>
-<p>This was possible using the <code>Use Selection</code> option within the <code>Delete Physics</code> option dialog.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip II</p>
-<p>Markers can also be manually deleted in the Outliner, they are DG nodes.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip III</p>
-<p>Another way of deleting an individual marker is:</p>
-<ol>
-<li>Select your assigned control</li>
-<li>Select Marker in Channel Box</li>
-<li>Deselect control</li>
-<li>Hit <code>Delete</code> or <code>Backspace</code> on your keyboard</li>
-</ol>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip IV</p>
-<p>Yet <em>another</em> way of deleting an individual marker is:</p>
-<ol>
-<li>Select your assigned control</li>
-<li>Select Marker in Channel Box</li>
-<li>Ctrl + Right-click on marker</li>
-<li>Select <code>Delete Node</code></li>
-</ol>
-</div>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/151699246-201486ba-2c56-45b2-bcc1-ca0b3fc01621.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="minor-tweaks">Minor Tweaks</h4>
-<ul>
-<li>Limits are now included when importing physics</li>
-<li><code>Drive Space Custom</code> appears under in the channel box when <code>Drive Space = Custom</code></li>
-<li>Pin Constraint now visible in Wireframe mode</li>
-<li>Pin Constraint visible both with solver offset and at the origin</li>
-<li>Distance and Pin Constraints can now be hidden via the Outliner</li>
-<li>The <code>Include Kinematic</code> option for record has been fixed</li>
-<li>Manipulator now visible with Viewport Shadows</li>
-<li>Python API: The <code>opts</code> argument of <code>api.reinterpret</code> is repaired</li>
-</ul>
+<h3 id="manipulator-and-viewport-shadows">Manipulator and Viewport Shadows</h3>
+<p>It used to be the case that the manipulator became invisible whenever viewport shadows was enabled. This has now been fixed!</p>
                 
                   
                     
