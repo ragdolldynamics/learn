@@ -1144,13 +1144,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#offline-licence-roadmap" class="md-nav__link">
-    Offline Licence Roadmap
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1289,10 +1282,10 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../releases/2022.01.21/" class="md-nav__link">
+      <a href="../releases/2022.01.31/" class="md-nav__link">
         
 
-        2022.01.21
+        2022.01.31
       </a>
     </li>
   
@@ -1995,6 +1988,24 @@
         
 
         2020.11.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/0.next/" class="md-nav__link">
+        
+
+        0.next
       </a>
     </li>
   
@@ -2715,13 +2726,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#offline-licence-roadmap" class="md-nav__link">
-    Offline Licence Roadmap
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2771,7 +2775,7 @@
 <li>Ragdoll Apprentice cannot be used in the same pipeline as commercial versions of Ragdoll</li>
 <li>Ragdoll Apprentice uses its own file format for Maya scenes</li>
 </ul>
-<p>See the <a href="https://files.ragdolldynamics.com/api/public/dl/ZmfQearE/EULA%20-%20Ragdoll%20Dynamics.pdf">Ragdoll EULA</a> for details.</p>
+<p>See the <a href="https://ragdolldynamics.com/eula">Ragdoll EULA</a> for details.</p>
 <p><br></p>
 <h2 id="faq">FAQ</h2>
 <p>Let's dive into specifics.</p>
@@ -2896,48 +2900,36 @@
 </code></pre></div>
 <p><br></p>
 <h2 id="offline-activation">Offline Activation</h2>
-<p>Haven't got no internet?</p>
-<p>No problem, here's what you do.</p>
+<p>Lifetime licences may be activated offline.</p>
+<div class="admonition info">
+<p class="admonition-title">What about monthly licences?</p>
+<p>These require an internet connection. Floating licences require internet only for the licence server itself, meaning your workstations can remain disconnected and protected. Node-locked licences require internet on the machine being activated.</p>
+</div>
 <ol>
-<li>Generate an <strong>"activation request"</strong> file</li>
-<li>Send the contents of this file, or the file itself to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a></li>
-<li>Receive a <strong>"activation response"</strong> file</li>
-<li>Activate using this file</li>
+<li>Launch the Offline Activation Wizard</li>
+<li>Copy/paste the activation request into <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+<li>Click Activate</li>
+<li>Copy/paste the activation <em>response</em> into the Wizard</li>
+<li>Profit</li>
 </ol>
-<p>It requires pasting some <em>Python</em> commands into the <strong>Maya Script Editor</strong>.</p>
-<p><strong>1. Generate Request</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
-<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;YOUR-VERY-LONG-KEY-HERE&quot;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">licence</span><span class="o">.</span><span class="n">activation_request_to_file</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">fname</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">fname</span> <span class="k">else</span> <span class="n">cmds</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Cancelled&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>2. Email Us</strong></p>
-<p>Either send the file, or the contents of the file, to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>.</p>
-<p><strong>3. Receive a response</strong></p>
-<p>We'll abrakadabra this file before you can say <a href="https://en.wikipedia.org/wiki/Taumatawhakatangi%C2%ADhangakoauauotamatea%C2%ADturipukakapikimaunga%C2%ADhoronukupokaiwhen%C2%ADuakitanatahu">Taumatawhakatangi­hangakoauauotamatea­turipukakapikimaunga­horonukupokaiwhen­uakitanatahu</a>.</p>
-<p><strong>4. Activate</strong></p>
-<p>Once you've got a response, activate your licence like this.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">licence</span><span class="o">.</span><span class="n">activate_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">fname</span> <span class="k">else</span> <span class="n">cmds</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Cancelled&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151695125-ded8c7f2-077d-4db6-8ea9-499a30f7c5c3.mp4" type="video/mp4"></video></p>
+
 <p><br></p>
 <h2 id="offline-deactivation">Offline Deactivation</h2>
-<p>Licences are node-locked (floating licences coming soon), which means that if you need to move a licence from one machine to another you can do so by <em>deactivating</em> an activated licence, and then activating it elsewhere.</p>
-<p>The process is similar to activation.</p>
-<p><strong>Generate Request</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">fileDialog2</span><span class="p">(</span><span class="n">fileFilter</span><span class="o">=</span><span class="s2">&quot;*.xml&quot;</span><span class="p">,</span> <span class="n">dialogStyle</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fileMode</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">licence</span><span class="o">.</span><span class="n">deactivation_request_to_file</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Email Us</strong></p>
-<p>Send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#101;&#110;&#99;&#105;&#110;&#103;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a>. Once we have confirmed receipt of this file, you will be able to re-activate Ragdoll on another machine.</p>
-<p><br></p>
-<h2 id="offline-licence-roadmap">Offline Licence Roadmap</h2>
-<p>Apologies for the tedious nature of offline licence management at the moment! Not long from now, you will be able to manage your licences <em>online</em> without sending any emails.</p>
+<p>Similar to Activation, Deactivation happens via the Offline Deactivation Wizard.</p>
+<ol>
+<li>Launch the Offline Deactivation Wizard</li>
+<li>Copy/paste the deactivation request into <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+<li>Click Deactivate</li>
+<li>Profit</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Caution</p>
+<p>Once you press <code>Deactivate</code>, then from Maya's perspective your licence will be deactivated. However, the licence server will not know of your deactivation until you paste the request into online deactivation page.</p>
+<p>This means that it is possible to deactivate a licence but forget to tell the licence server about it, which means you will not be able to reactivate it elsewhere.</p>
+<p>If this happens, reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#114;&#97;&#103;&#100;&#111;&#108;&#108;&#100;&#121;&#110;&#97;&#109;&#105;&#99;&#115;&#46;&#99;&#111;&#109;</a> and we may manually deactivate it for you.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/151695127-ad177ba8-f7e7-425a-99df-6aa541c81b8e.mp4" type="video/mp4"></video></p>
                 
                   
                     
@@ -2946,7 +2938,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-12-20
+      Last update: 2022-01-30
     
   </small>
 </div>

@@ -1111,10 +1111,10 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../releases/2022.01.21/" class="md-nav__link">
+      <a href="../releases/2022.01.31/" class="md-nav__link">
         
 
-        2022.01.21
+        2022.01.31
       </a>
     </li>
   
@@ -1817,6 +1817,24 @@
         
 
         2020.11.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/0.next/" class="md-nav__link">
+        
+
+        0.next
       </a>
     </li>
   
@@ -2721,6 +2739,13 @@
 <span class="sd">    Each marker transfers the translation and rotation of each transform</span>
 <span class="sd">    and generates its physical equivalent, ready for recording.</span>
 
+<span class="sd">    Arguments:</span>
+<span class="sd">        transforms (list): One or more transforms to assign markers onto</span>
+<span class="sd">        solver (rdSolver): Add newly created markers to this solver</span>
+<span class="sd">        group (rdGroup, optional): Add markers to this group, or to a</span>
+<span class="sd">            new group with `group=True` (default)</span>
+<span class="sd">        opts (dict, optional): Options, see below</span>
+
 <span class="sd">    Options:</span>
 <span class="sd">        autoLimit (bool): Transfer locked channels into physics limits</span>
 <span class="sd">        density (enum): Auto-compute mass based on volume and a density,</span>
@@ -2994,15 +3019,11 @@
 <td align="center">0</td>
 </tr>
 <tr>
-<td align="left">InputOff</td>
-<td align="center">1</td>
-</tr>
-<tr>
 <td align="left">InputKinematic</td>
 <td align="center">2</td>
 </tr>
 <tr>
-<td align="left">InputGuide</td>
+<td align="left">InputDynamic</td>
 <td align="center">3</td>
 </tr>
 <tr>
@@ -3087,6 +3108,22 @@
 </tr>
 <tr>
 <td align="left">LodCustom</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">MatchByName</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">MatchByHierarchy</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">InputOff</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">InputGuide</td>
 <td align="center">3</td>
 </tr>
 </tbody>
