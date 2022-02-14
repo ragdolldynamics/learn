@@ -1320,8 +1320,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mesh-islands" class="md-nav__link">
-    Mesh Islands
+  <a href="#mesh-decomposition" class="md-nav__link">
+    Mesh Decomposition
   </a>
   
 </li>
@@ -2893,8 +2893,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mesh-islands" class="md-nav__link">
-    Mesh Islands
+  <a href="#mesh-decomposition" class="md-nav__link">
+    Mesh Decomposition
   </a>
   
 </li>
@@ -3253,9 +3253,9 @@
 <p>If you're wondering what effect this many meshes has on your simulation, the answer is we haven't noticed any. Go crazy, and if you do, let us know!</p>
 </div>
 <p><br></p>
-<h4 id="mesh-islands">Mesh Islands</h4>
+<h4 id="mesh-decomposition">Mesh Decomposition</h4>
 <p>Collision shapes are generated from each individual "island"; that is, groups of vertices that are connected by at least one edge. When you combine two or more meshes together, they will naturally form individal islands.</p>
-<p>Sometimes, you'd rather treat the entire mesh as one big shape and for that you can use the <code>Use Mesh Islands</code> checkbox.</p>
+<p>Sometimes, you'd rather treat the entire mesh as one big shape and for that you can use the <code>Mesh Decomposition = Mesh Islands</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Shape Vertex Limit</p>
 <p>Also notice how the vertex limit is applied to <em>each island</em>. Meaning that you can achieve much higher resolution for your collision shapes by cutting things up into pieces!</p>
