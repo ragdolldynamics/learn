@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Learn how import the Dragon rag file">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/tutorials/looping_animation/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/tutorials/dragon_rig/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Looping animation - Learn Ragdoll</title>
+        <title>Dragon Rig - Learn Ragdoll</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#dragon-rig" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Looping animation
+              Dragon Rig
             
           </span>
         </div>
@@ -2446,20 +2451,170 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dragon-rig" class="md-nav__link">
+    Dragon Rig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencing-the-rig" class="md-nav__link">
+    Referencing the Rig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-meshes" class="md-nav__link">
+    Import Meshes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-physics" class="md-nav__link">
+    Import Physics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play" class="md-nav__link">
+    Play
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/tutorials/looping_animation.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/tutorials/dragon_rig.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Looping animation</h1>
+                  <h1>Dragon Rig</h1>
                 
-                
+                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/154664704-fbb76fdb-8693-4ad3-bc21-7d6de1ecf836.png">
+    <source src="https://user-images.githubusercontent.com/2152766/154664650-24fcc3b8-b23e-4e5e-a87b-77fdfa932605.mp4" type="video/mp4">
+</video>
+
+<h3 id="dragon-rig">Dragon Rig</h3>
+<p>In this tutorial, we'll learn about importing a Ragdoll setup for this dragon here, made with <a href="https://truongcgartist.gumroad.com/l/kkAJ">Truong's Dragon Rig</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Version 1.1 - Up to date</p>
+<p>Written for Ragdoll <code>2022.02.14</code> and above.</p>
+</div>
+<p><strong>Estimated Time</strong></p>
+<ul>
+<li>🕐 5 minutes</li>
+</ul>
+<p><strong>You will learn</strong></p>
+<ul>
+<li>✔️ How to import a <code>.rag</code> file</li>
+<li>✔️ How to import an optional file for polygonal collision meshes</li>
+<li>✔️ How to play around with the result</li>
+</ul>
+<p><strong>Where to find help</strong></p>
+<p>If you find or run into any issues with this tutorials, here's what you can do.</p>
+<ul>
+<li>✔️ Ask in <a href="https://ragdolldynamics.com/chat">the chat</a></li>
+<li>✔️ Ask on <a href="https://forums.ragdolldynamics.com/">the forums</a></li>
+</ul>
+<p><br></p>
+<h3 id="download">Download</h3>
+<p>Let's start off by downloading the <code>.rag</code> file, along with the optional file for collision meshes. These meshes were generated in Maya 2020, but should work well in just about any version of Maya.</p>
+<ul>
+<li><a href="https://files.ragdolldynamics.com/share/lbPyC5aj"><code>dragon.zip</code></a></li>
+</ul>
+<p>Inside, you'll find..</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/154670449-050ee359-7650-4016-95ac-f5bc5a81c9a4.png" /></p>
+<p>Next, we'll need the rig itself.</p>
+<ul>
+<li><a href="https://truongcgartist.gumroad.com/l/kkAJ">https://truongcgartist.gumroad.com/l/kkAJ</a></li>
+</ul>
+<p><br></p>
+<h3 id="referencing-the-rig">Referencing the Rig</h3>
+<p>Next, let's get the rig into Maya.</p>
+<div class="admonition note">
+<p class="admonition-title">Make note of the Namespace</p>
+<p>We'll reference it, such that it gets a namespace we can match with our <code>.rag</code> file.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/154669160-d79f33c6-f872-47a5-8409-575f90b0e5b2.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="import-meshes">Import Meshes</h3>
+<p>Next, we'll import the collision meshes.</p>
+<p>What's important here is that the meshes retain their original name, and that we also give them the same namespace as the rig.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/154669163-24c1d55b-0f26-4e36-8ccc-1e1ebc8cb875.mp4" type="video/mp4"></video></p>
+
+<p><strong>Namespace</strong></p>
+<ol>
+<li>Select all meshes</li>
+<li>Open the Namespace Editor</li>
+<li>Add all meshes to the rig namespace, in this case <code>_:</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/154669166-48e81323-7d1d-4be3-b1ca-b4a6547c00c5.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="import-physics">Import Physics</h3>
+<p>The stage is set! Let's import our <code>.rag</code> file now.</p>
+<ol>
+<li>Ragdoll -&gt; Import Physics</li>
+<li>Load the downloaded <code>dragon.rag</code></li>
+<li>Set <code>Match By</code> to <code>Name</code></li>
+<li>Choose the namespace of your referenced rig</li>
+<li>Ensure all entries light up, and that a match is found for every rig control</li>
+<li>Press <code>Import Physics</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/154669170-0ca9d4af-a719-4eac-ab46-f20a6f15cd55.mp4" type="video/mp4"></video></p>
+
+<div class="admonition help">
+<p class="admonition-title">Troubleshoot</p>
+<p>If the meshes could not be found, Ragdoll will use the geometry found on the controllers themselves. The NURBS curves.</p>
+<p>In Ragdoll 2022.02.17 and below, it will receive the incorrect scale and will appear to have been blown up! To fix this, set all Markers to <code>Shape Type = Capsule</code></p>
+<ol>
+<li>Ragdoll -&gt; Select -&gt; Markers</li>
+<li><code>Shape Type = Capsule</code></li>
+</ol>
+</div>
+<p><br></p>
+<h3 id="play">Play</h3>
+<p>And that's it! From here you can animate this dragon, and record the results back onto the rig once you're happy. 🥳</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/154669176-b83dbbbd-5dee-4b98-ac65-18b94df807c6.mp4" type="video/mp4"></video></p>
                 
                   
                     
@@ -2468,7 +2623,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-12-15
+      Last update: 2022-02-18
     
   </small>
 </div>
