@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Model complex environments with Maya's native fields!">
       
       
       
@@ -24,7 +24,7 @@
 
     
       
-        <title>0.next - Learn Ragdoll</title>
+        <title>Fields - Learn Ragdoll</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#licence-conservation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0.next
+              Fields
             
           </span>
         </div>
@@ -1057,8 +1062,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -1067,7 +1070,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1077,7 +1080,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          checked
+          
         />
       
 
@@ -1855,50 +1858,6 @@
   
 
           
-            
-
-  <!-- Determine class according to state -->
-  
-  
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
-        
-
-        0.next
-      </a>
-
-      <!-- Show table of contents -->
-      
-    </li>
-
-  <!-- Main navigation item -->
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -2474,6 +2433,42 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#licence-conservation" class="md-nav__link">
+    Licence Conservation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minor-releases" class="md-nav__link">
+    Minor Releases
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2485,9 +2480,29 @@
                   </a>
                 
                 
-                  <h1>0.next</h1>
+                  <h1>Fields</h1>
                 
-                <ul>
+                <p>Highlight for this release is <strong>Fields!</strong></p>
+<ul>
+<li><a href="#environment"><strong>ADDED</strong> Environment</a> Complex collision geometry, without the need for geometry simplification.</li>
+<li><a href="#automatic-mesh-islands"><strong>ADDED</strong> Automatic Mesh Islands</a> Ragdoll can now cut meshes for you, with a customisable amount of accuracy.</li>
+<li><a href="#licence-conservation"><strong>ADDED</strong> Licence Conservation</a> Lease only the licences you actively use</li>
+</ul>
+<p><br></p>
+<h3 id="licence-conservation">Licence Conservation</h3>
+<div class="admonition note">
+<p class="admonition-title">Applies to</p>
+<p>This feature only applies to Floating Licence customers.</p>
+</div>
+<p>In the previous release, a licence was leased on plug-in load.</p>
+<p>The problem was that, sometimes, an artist merely opens a scene with Ragdoll in it. Maya will determine that this file requires the Ragdoll plug-in to be loaded, and loads it. Upon load, Ragdoll would go ahead and check out a licence. But this artist doesn't necessarily want to interact with Ragdoll, it could have been a texture artist opening up an animator's scene, or someone rendering it.</p>
+<p>This release introduces "licence conservation" which only tries to lease a licence upon a simulation taking place. That means a lease is not made on plug-in load, nor on scene open. If a solver is hidden from view, nor does it take place on playback start.</p>
+<p>Only once simulation visibly begins is a lease requested, helping you save those precious seats for the artists that need it most.</p>
+<p>Markers are still rendered in the viewport on the start frame for everyone, without a lease. The Solver is automatically hidden upon failure to lease a licence, pausing any further requests until it is made visible again.</p>
+<p><br></p>
+<h3 id="minor-releases">Minor Releases</h3>
+<p>Inbetween this release and the previous release there were a few minor releases made.</p>
+<ul>
 <li>Fix crash on fit-to-view</li>
 <li>Fix crash on replaced mesh with 0 vertices</li>
 <li>Hide prototype world and local attributes on rdgroup</li>
@@ -2520,41 +2535,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../2020.11.10/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                2020.11.10
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../legacy/active_rigid/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Active Rigid
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
