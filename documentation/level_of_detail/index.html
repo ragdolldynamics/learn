@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/legacy/forces/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/documentation/level_of_detail/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Forces - Learn Ragdoll</title>
+        <title>Level of Detail - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage" class="md-skip">
+        <a href="#level-of-detail" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Forces
+              Level of Detail
             
           </span>
         </div>
@@ -330,6 +330,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -338,7 +340,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -348,7 +350,7 @@
           data-md-toggle="nav-3"
           type="checkbox"
           id="nav-3"
-          
+          checked
         />
       
 
@@ -379,7 +381,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/marker/" class="md-nav__link">
+      <a href="../marker/" class="md-nav__link">
         
         <img src="/icons/marker_black.png">
         
@@ -399,7 +401,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/group/" class="md-nav__link">
+      <a href="../group/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -419,7 +421,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/solver/" class="md-nav__link">
+      <a href="../solver/" class="md-nav__link">
         
         <img src="/icons/solver_black.png">
         
@@ -439,7 +441,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/manipulator/" class="md-nav__link">
+      <a href="../manipulator/" class="md-nav__link">
         
         <img src="/icons/manipulator_black.png">
         
@@ -459,7 +461,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/constraints/" class="md-nav__link">
+      <a href="../constraints/" class="md-nav__link">
         
         <img src="/icons/constraint_black.png">
         
@@ -479,7 +481,47 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/record_simulation/" class="md-nav__link">
+      <a href="../fields/" class="md-nav__link">
+        
+        <img src="/icons/force_black.png">
+        
+
+        Fields
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../record_simulation/" class="md-nav__link">
         
         <img src="/icons/record_black.png">
         
@@ -499,7 +541,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/snap_to_simulation/" class="md-nav__link">
+      <a href="../snap_to_simulation/" class="md-nav__link">
         
         <img src="/icons/snap_black.png">
         
@@ -519,7 +561,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/retargeting/" class="md-nav__link">
+      <a href="../retargeting/" class="md-nav__link">
         
         <img src="/icons/retarget_black.png">
         
@@ -535,11 +577,111 @@
   <!-- Determine class according to state -->
   
   
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Level Of Detail
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+        <img src="/icons/hair2_black.png">
+        
+
+        Level Of Detail
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-of-detail" class="md-nav__link">
+    Level of Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Level of Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
 
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/cache/" class="md-nav__link">
+      <a href="../cache/" class="md-nav__link">
         
         <img src="/icons/bake_black.png">
         
@@ -559,7 +701,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/link/" class="md-nav__link">
+      <a href="../link/" class="md-nav__link">
         
         <img src="/icons/link_black.png">
         
@@ -579,7 +721,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/utilities/" class="md-nav__link">
+      <a href="../utilities/" class="md-nav__link">
         
         <img src="/icons/replace_black.png">
         
@@ -1899,589 +2041,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-
-    <!-- Determine whether to render item as a section -->
-    
-
-    <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
-      <!-- Active checkbox expands items contained within nested section -->
-      
-      
-        <input
-          class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-11"
-          type="checkbox"
-          id="nav-11"
-          checked
-        />
-      
-
-      <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-11">
-        Legacy
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav
-        class="md-nav"
-        aria-label="Legacy"
-        data-md-level="1"
-      >
-        <label class="md-nav__title" for="nav-11">
-          <span class="md-nav__icon md-icon"></span>
-          Legacy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../active_rigid/" class="md-nav__link">
-        
-        <img src="/icons/rigid_black.png">
-        
-
-        Active Rigid
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../active_chain/" class="md-nav__link">
-        
-        <img src="/icons/chain_black.png">
-        
-
-        Active Chain
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../character/" class="md-nav__link">
-        
-        <img src="/icons/ragdoll_black.png">
-        
-
-        Active Character
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../legacy_constraints/" class="md-nav__link">
-        
-        <img src="/icons/constraint_black.png">
-        
-
-        Constraints
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../soft_pin/" class="md-nav__link">
-        
-        <img src="/icons/control_black.png">
-        
-
-        Soft Pin
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../hard_pin/" class="md-nav__link">
-        
-        <img src="/icons/hardpin_black.png">
-        
-
-        Hard Pin
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../mimic/" class="md-nav__link">
-        
-        <img src="/icons/mimic_black.png">
-        
-
-        Mimic
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Forces
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
-        
-        <img src="/icons/force_black.png">
-        
-
-        Forces
-      </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forces" class="md-nav__link">
-    Forces
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#slice" class="md-nav__link">
-    Slice
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-
-  <!-- Main navigation item -->
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../bake_simulation/" class="md-nav__link">
-        
-        <img src="/icons/bake_black.png">
-        
-
-        Bake Simulation
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../import_physics/" class="md-nav__link">
-        
-        <img src="/icons/save_black.png">
-        
-
-        Import Physics
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../export_physics/" class="md-nav__link">
-        
-        <img src="/icons/load_black.png">
-        
-
-        Export Physics
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../scene_management/" class="md-nav__link">
-        
-        <img src="/icons/scene_black.png">
-        
-
-        Scene Management
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../cycle_protection/" class="md-nav__link">
-        
-        <img src="/icons/swirl_black.png">
-        
-
-        Cycle Protection
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../pivot_editor/" class="md-nav__link">
-        
-        <img src="/icons/frame2_black.png">
-        
-
-        Pivot Editor
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../debugging_tips/" class="md-nav__link">
-        
-        <img src="/icons/convert_black.png">
-        
-
-        Debugging Tips
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../performance_tips/" class="md-nav__link">
-        
-        <img src="/icons/motor_black.png">
-        
-
-        Performance Tips
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-
-    <!-- Determine whether to render item as a section -->
-    
-
-    <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
-
-      <!-- Active checkbox expands items contained within nested section -->
-      
-      
-        <input
-          class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-11_17"
-          type="checkbox"
-          id="nav-11_17"
-          
-        />
-      
-
-      <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-11_17">
-        Tutorials
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav
-        class="md-nav"
-        aria-label="Tutorials"
-        data-md-level="2"
-      >
-        <label class="md-nav__title" for="nav-11_17">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../bouncing_ball/" class="md-nav__link">
-        
-        <img src="/icons/physics_black.png">
-        
-
-        Bouncing Ball
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../rally_car/" class="md-nav__link">
-        
-        <img src="/icons/car_black.png">
-        
-
-        Rally Car
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../manikin/" class="md-nav__link">
-        
-        <img src="/icons/ragdoll_black.png">
-        
-
-        Manikin
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-
-  <!-- Currently active page -->
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-
-  <!-- Currently active page -->
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -2518,23 +2077,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#level-of-detail" class="md-nav__link">
+    Level of Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Level of Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#forces" class="md-nav__link">
-    Forces
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#slice" class="md-nav__link">
-    Slice
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2551,78 +2123,159 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/legacy/forces.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/documentation/level_of_detail.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Forces</h1>
+                  <h1>Level Of Detail</h1>
                 
                 <div class="hero-container">
-    <img class="hero-image" src=/car12.png>
+    <img class="hero-image" src=https://user-images.githubusercontent.com/2152766/148948560-aee1dae3-4844-4dcd-bc36-274d0b263f48.png>
 </div>
 
-<p>Gently affect one or more rigids with external <em>forces</em>.</p>
+<p>Light-weight or heavy-duty? How about both!</p>
 <p><br></p>
-<h3 id="usage">Usage</h3>
-<p>From the Ragdoll menu, select the a <code>Force</code> from the <code>Forces</code> sub-menu.</p>
-<video controls autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/128205311-ee1873a8-a357-42d5-89b3-52fe18e7a059.mp4" type="video/mp4">
-</video>
+<h3 id="level-of-detail">Level of Detail</h3>
+<p>Setup your character once with all bells-and-whistles, and interactively pick which level of detail to use for your simulation in a given situation.</p>
+<p><strong>Usecases</strong></p>
+<ol>
+<li>Body at <code>Level 0</code>, fingers at <code>Level 1</code></li>
+<li>Props at <code>Level 1</code>, muscles at <code>Level 2</code></li>
+<li>Major masses at <code>Level 0</code>, extremities at <code>Level 1</code> and <code>Level 2</code></li>
+</ol>
+<p>For example, here's a Wasp character with 3 levels of increasing detail.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148215131-87811017-307a-4363-9ba8-a9a7d816f29b.mp4" type="video/mp4"></video></p>
+
+<p>As you'd expect, it'll record only the currently active markers.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148215124-5a937bec-0c34-4fbb-83b0-54b09646ae1e.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h3 id="forces">Forces</h3>
-<p>A "force" is some external influence to a rigid body. The currently available forces are:</p>
+<h4 id="workflow">Workflow</h4>
+<p>Here's how it works.</p>
+<ol>
+<li>Give each marker a "level", such as <code>1</code></li>
+<li>Tell solver which "level" to solve at, such as <code>1</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/148227206-42a1e54b-6185-46c2-9d90-0d720c657add.mp4" type="video/mp4"></video></p>
+
+<p>And that's it! Any marker with a matching level is simulated and recorded.</p>
+<p><br></p>
+<h4 id="operators">Operators</h4>
+<p>What does each level mean? The answer lies in the "operator".</p>
 <table>
 <thead>
 <tr>
-<th align="left">Force</th>
+<th align="left">Operator</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>Push</code></td>
-<td align="left">Repel one or more rigids from a point in worldspace</td>
+<td align="left"><code>Less Than</code></td>
+<td align="left">If the <code>Marker Level</code> is less than (or equal) to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 <tr>
-<td align="left"><code>Pull</code></td>
-<td align="left">Like Push, but <em>towards</em> a point in worldspace</td>
+<td align="left"><code>Greater Than</code></td>
+<td align="left">If the <code>Marker Level</code> is greater than (or equal) to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 <tr>
-<td align="left"><code>Directional</code></td>
-<td align="left">Push one or more rigids in a single direction, similar to <em>gravity</em></td>
+<td align="left"><code>Equal</code></td>
+<td align="left">If the <code>Marker Level</code> is <em>equal</em> to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 <tr>
-<td align="left"><code>Wind</code></td>
-<td align="left">Turbulence, push rigids in random directions to emulate the look of wind</td>
+<td align="left"><code>NotEqual</code></td>
+<td align="left">If the <code>Marker Level</code> is <em>not equal</em> to the <code>Solver Level</code>, simulate it.</td>
 </tr>
 </tbody>
 </table>
+<p>With these, you can use each level for..</p>
+<ol>
+<li>An increasing amount of detail</li>
+<li>An increasing amount of <em>reduction</em></li>
+<li>Something completely custom</li>
+</ol>
+<p>With <code>Equal</code> and <code>NotEqual</code> operators, you can have some markers appear or disappear on particular levels, enabling endless combinations.</p>
+<p><strong>Roadmap</strong></p>
+<p>This should cover a majority of cases, but there are things you cannot yet do, but will be able to in the future.</p>
+<ol>
+<li><code>Capsule</code> on one level, <code>Mesh</code> on another. For higher-resolution contacts.</li>
+<li>Dense hierarchy of controls at one level, sparse at another. For e.g. twist joints versus a simple 2-joint chain, or a densely packed spine versus just hip and torso controls.</li>
+</ol>
 <p><br></p>
-<h3 id="slice">Slice</h3>
-<p>Use the "slice" to visualise forces along an editable plane.</p>
-<video controls autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/128213756-a51f9911-53c4-414c-af1e-26cdcb20288b.mp4" type="video/mp4">
-</video>
+<h4 id="algorithm">Algorithm</h4>
+<p>For the geeks out there, here's what the underlying algorithm looks like in Python.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membership types</span>
+<span class="n">Minimum</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Present at this level and higher</span>
+<span class="n">Maximum</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Present at this level and lower</span>
+<span class="n">Only</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1"># Only present at this level</span>
+<span class="n">Not</span> <span class="o">=</span> <span class="mi">5</span>      <span class="c1"># Present at all levels *except* this one</span>
 
-<p>The plane represents a 2D "slice" of the forces, showing you the combined influence of all (connected) forces at that slice in worldspace.</p>
-<p>Tweak the attributes to gain a better understanding of the forces.</p>
-<video controls autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/128213771-ffc7f93c-84e1-4596-ae99-de4bd80ba71c.mp4" type="video/mp4">
-</video>
+<span class="n">markers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hip&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;spine&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;neck&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;head&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_upper_leg&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_lower_leg&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_hand&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_foot_box&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Maximum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;L_foot_convex&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Minimum</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_toe_capsule&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Not</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;R_toe_convex&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;membership&quot;</span><span class="p">:</span> <span class="n">Only</span><span class="p">},</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Level </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">level</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">marker</span> <span class="ow">in</span> <span class="n">markers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Minimum</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Maximum</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Only</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;membership&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Not</span> <span class="ow">and</span> <span class="n">marker</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">level</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">{name}</span><span class="s2"> (</span><span class="si">{level}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">marker</span><span class="p">))</span>
+
+<span class="n">resolve</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">resolve</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>Run this, and this is what you'll find.</p>
+<div class="highlight"><pre><span></span><code>Level <span class="m">0</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_foot_box <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - R_toe_capsule <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+Level <span class="m">1</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - R_hand <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - L_foot_box <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - R_toe_capsule <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+Level <span class="m">2</span>
+ - hip <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - spine <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - neck <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - head <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_upper_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - L_lower_leg <span class="o">(</span><span class="m">0</span><span class="o">)</span>
+ - R_hand <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+ - L_foot_convex <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+ - R_toe_convex <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+</code></pre></div>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2021-12-15
-    
-  </small>
-</div>
                   
                 
               
@@ -2643,7 +2296,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../mimic/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../retargeting/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2652,19 +2305,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Mimic
+                Retargeting
               </div>
             </div>
           </a>
         
         
-          <a href="../bake_simulation/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cache/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Bake Simulation
+                Cache
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

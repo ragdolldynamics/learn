@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/legacy/cycle_protection/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/documentation/fields/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Cycle Protection - Learn Ragdoll</title>
+        <title>Fields - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage" class="md-skip">
+        <a href="#fields" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cycle Protection
+              Fields
             
           </span>
         </div>
@@ -330,6 +330,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -338,7 +340,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -348,7 +350,7 @@
           data-md-toggle="nav-3"
           type="checkbox"
           id="nav-3"
-          
+          checked
         />
       
 
@@ -379,7 +381,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/marker/" class="md-nav__link">
+      <a href="../marker/" class="md-nav__link">
         
         <img src="/icons/marker_black.png">
         
@@ -399,7 +401,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/group/" class="md-nav__link">
+      <a href="../group/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -419,7 +421,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/solver/" class="md-nav__link">
+      <a href="../solver/" class="md-nav__link">
         
         <img src="/icons/solver_black.png">
         
@@ -439,7 +441,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/manipulator/" class="md-nav__link">
+      <a href="../manipulator/" class="md-nav__link">
         
         <img src="/icons/manipulator_black.png">
         
@@ -459,7 +461,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/constraints/" class="md-nav__link">
+      <a href="../constraints/" class="md-nav__link">
         
         <img src="/icons/constraint_black.png">
         
@@ -475,11 +477,236 @@
   <!-- Determine class according to state -->
   
   
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fields
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+        <img src="/icons/force_black.png">
+        
+
+        Fields
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turbulence" class="md-nav__link">
+    Turbulence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag" class="md-nav__link">
+    Drag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wind" class="md-nav__link">
+    Wind
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gravity" class="md-nav__link">
+    Gravity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton" class="md-nav__link">
+    Newton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radial" class="md-nav__link">
+    Radial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform" class="md-nav__link">
+    Uniform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vortex" class="md-nav__link">
+    Vortex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-axis-field" class="md-nav__link">
+    Volume Axis Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-curve" class="md-nav__link">
+    Volume Curve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-fields" class="md-nav__link">
+    Combined Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centroids" class="md-nav__link">
+    Centroids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centroid-seed" class="md-nav__link">
+    Centroid Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-selected-as-source" class="md-nav__link">
+    Use Selected as Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-scale" class="md-nav__link">
+    Field Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore-field" class="md-nav__link">
+    Ignore Field
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more" class="md-nav__link">
+    More
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
 
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/record_simulation/" class="md-nav__link">
+      <a href="../import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../record_simulation/" class="md-nav__link">
         
         <img src="/icons/record_black.png">
         
@@ -499,7 +726,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/snap_to_simulation/" class="md-nav__link">
+      <a href="../snap_to_simulation/" class="md-nav__link">
         
         <img src="/icons/snap_black.png">
         
@@ -519,7 +746,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/retargeting/" class="md-nav__link">
+      <a href="../retargeting/" class="md-nav__link">
         
         <img src="/icons/retarget_black.png">
         
@@ -539,7 +766,27 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/cache/" class="md-nav__link">
+      <a href="../level_of_detail/" class="md-nav__link">
+        
+        <img src="/icons/hair2_black.png">
+        
+
+        Level Of Detail
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../cache/" class="md-nav__link">
         
         <img src="/icons/bake_black.png">
         
@@ -559,7 +806,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/link/" class="md-nav__link">
+      <a href="../link/" class="md-nav__link">
         
         <img src="/icons/link_black.png">
         
@@ -579,7 +826,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/utilities/" class="md-nav__link">
+      <a href="../utilities/" class="md-nav__link">
         
         <img src="/icons/replace_black.png">
         
@@ -1899,602 +2146,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-
-    <!-- Determine whether to render item as a section -->
-    
-
-    <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-
-      <!-- Active checkbox expands items contained within nested section -->
-      
-      
-        <input
-          class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-11"
-          type="checkbox"
-          id="nav-11"
-          checked
-        />
-      
-
-      <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-11">
-        Legacy
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav
-        class="md-nav"
-        aria-label="Legacy"
-        data-md-level="1"
-      >
-        <label class="md-nav__title" for="nav-11">
-          <span class="md-nav__icon md-icon"></span>
-          Legacy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../active_rigid/" class="md-nav__link">
-        
-        <img src="/icons/rigid_black.png">
-        
-
-        Active Rigid
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../active_chain/" class="md-nav__link">
-        
-        <img src="/icons/chain_black.png">
-        
-
-        Active Chain
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../character/" class="md-nav__link">
-        
-        <img src="/icons/ragdoll_black.png">
-        
-
-        Active Character
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../legacy_constraints/" class="md-nav__link">
-        
-        <img src="/icons/constraint_black.png">
-        
-
-        Constraints
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../soft_pin/" class="md-nav__link">
-        
-        <img src="/icons/control_black.png">
-        
-
-        Soft Pin
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../hard_pin/" class="md-nav__link">
-        
-        <img src="/icons/hardpin_black.png">
-        
-
-        Hard Pin
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../mimic/" class="md-nav__link">
-        
-        <img src="/icons/mimic_black.png">
-        
-
-        Mimic
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../forces/" class="md-nav__link">
-        
-        <img src="/icons/force_black.png">
-        
-
-        Forces
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../bake_simulation/" class="md-nav__link">
-        
-        <img src="/icons/bake_black.png">
-        
-
-        Bake Simulation
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../import_physics/" class="md-nav__link">
-        
-        <img src="/icons/save_black.png">
-        
-
-        Import Physics
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../export_physics/" class="md-nav__link">
-        
-        <img src="/icons/load_black.png">
-        
-
-        Export Physics
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../scene_management/" class="md-nav__link">
-        
-        <img src="/icons/scene_black.png">
-        
-
-        Scene Management
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-    
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Cycle Protection
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
-        
-        <img src="/icons/swirl_black.png">
-        
-
-        Cycle Protection
-      </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cycle-protection" class="md-nav__link">
-    Cycle Protection
-  </a>
-  
-    <nav class="md-nav" aria-label="Cycle Protection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protected-commands" class="md-nav__link">
-    Protected Commands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-
-  <!-- Main navigation item -->
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../pivot_editor/" class="md-nav__link">
-        
-        <img src="/icons/frame2_black.png">
-        
-
-        Pivot Editor
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../debugging_tips/" class="md-nav__link">
-        
-        <img src="/icons/convert_black.png">
-        
-
-        Debugging Tips
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../performance_tips/" class="md-nav__link">
-        
-        <img src="/icons/motor_black.png">
-        
-
-        Performance Tips
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-
-    <!-- Determine whether to render item as a section -->
-    
-
-    <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
-
-      <!-- Active checkbox expands items contained within nested section -->
-      
-      
-        <input
-          class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-11_17"
-          type="checkbox"
-          id="nav-11_17"
-          
-        />
-      
-
-      <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-11_17">
-        Tutorials
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav
-        class="md-nav"
-        aria-label="Tutorials"
-        data-md-level="2"
-      >
-        <label class="md-nav__title" for="nav-11_17">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../bouncing_ball/" class="md-nav__link">
-        
-        <img src="/icons/physics_black.png">
-        
-
-        Bouncing Ball
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../rally_car/" class="md-nav__link">
-        
-        <img src="/icons/car_black.png">
-        
-
-        Rally Car
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../manikin/" class="md-nav__link">
-        
-        <img src="/icons/ragdoll_black.png">
-        
-
-        Manikin
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-
-  <!-- Currently active page -->
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-
-  <!-- Currently active page -->
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -2531,36 +2182,141 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#fields" class="md-nav__link">
+    Fields
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cycle-protection" class="md-nav__link">
-    Cycle Protection
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Cycle Protection">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#protected-commands" class="md-nav__link">
-    Protected Commands
+  <a href="#turbulence" class="md-nav__link">
+    Turbulence
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
+  <a href="#drag" class="md-nav__link">
+    Drag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wind" class="md-nav__link">
+    Wind
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gravity" class="md-nav__link">
+    Gravity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton" class="md-nav__link">
+    Newton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radial" class="md-nav__link">
+    Radial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform" class="md-nav__link">
+    Uniform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vortex" class="md-nav__link">
+    Vortex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-axis-field" class="md-nav__link">
+    Volume Axis Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-curve" class="md-nav__link">
+    Volume Curve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-fields" class="md-nav__link">
+    Combined Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centroids" class="md-nav__link">
+    Centroids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centroid-seed" class="md-nav__link">
+    Centroid Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-selected-as-source" class="md-nav__link">
+    Use Selected as Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-scale" class="md-nav__link">
+    Field Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore-field" class="md-nav__link">
+    Ignore Field
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more" class="md-nav__link">
+    More
+  </a>
   
 </li>
       
@@ -2577,77 +2333,162 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/legacy/cycle_protection.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/documentation/fields.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Cycle Protection</h1>
+                  <h1>Fields</h1>
                 
                 <div class="hero-container">
-    <img class="hero-image" src=/yoga14.png>
+    <img class="hero-image" src=/yoga12.png>
 </div>
 
-<p>Guard against cycles during authoring of physics.</p>
+<p>Environmental effects like Wind and Turbulence for your Markers.</p>
 <p><br></p>
-<h3 id="usage">Usage</h3>
-<p>From the Ragdoll menu, select <code>Preferences</code> under the <code>System</code> sub-menu to enable or disable cycle protection.</p>
+<h3 id="fields">Fields</h3>
+<p>Ragdoll supports all of Maya's native "fields"</p>
+<div class="admonition question">
+<p class="admonition-title">What are fields?</p>
+<p>A field represents a set of forces applied to each Marker. Ranging from <code>Gravity</code> to <code>Turbulence</code>, each field carries unique properties you can use to emulate some environment or environmental effect, like wind and gravity fields along a curve.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What is the difference from regular Maya fields?</p>
+<p>They are the very same!</p>
+<p>If you're already familiar with them, from e.g. nParticles of nCloth, then you can leverage your experience with Ragdoll, and vice versa if you ever venture into nCloth and friends.</p>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153752085-8e748110-75f4-40c7-b05a-bd15d56963e5.png" /></p>
 <p><br></p>
-<h3 id="cycle-protection">Cycle Protection</h3>
-<p>Cycle warnings are generally bad but <em>especially</em> bad for Ragdoll. Understanding when they happen and where they come from can be difficult, especially in complex setups.</p>
-<p>Ragdoll includes <strong>Cycle Protection</strong> to help you spot potential cycles <em>before they happen</em>!</p>
-<p><img alt="cycleprotection" src="https://user-images.githubusercontent.com/2152766/115708838-6452b400-a368-11eb-8a4d-8765650e82fe.gif" /></p>
-<p>Notice how making a passive rigid here would have resulted in it becoming a child of an otherwise active hierarchy. That would have been bad!</p>
-<h4 id="protected-commands">Protected Commands</h4>
-<p>These commands will try and protect your from cycles.</p>
-<ul>
-<li>✔️ Active Rigid</li>
-<li>✔️ Active Chain</li>
-<li>✔️ Convert Rigid</li>
+<h3 id="overview">Overview</h3>
+<p>Let's walk through these fields one-by-one.</p>
+<p><br></p>
+<h4 id="turbulence">Turbulence</h4>
+<p>The perhaps most interesting field. Apply forces in "random" directions, based on the worldspace positions of your Markers.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750169-07891084-b935-4dd1-b69a-7a2863873c5e.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153713200-63ffe691-9718-4e39-a1c3-17669db5821d.mp4" type="video/mp4"></video></p>
+
+<p>The way to think of turbulence is as Perlin Noise you may have seen in images such as this.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153750302-465f1747-0527-49e6-b946-dd96156eefad.png" /></p>
+<p>Where the amount of white determines the amount of force being applied. As a Marker travels across this field, both the magnitude and direction changes in interesting ways.</p>
+<p><br></p>
+<h4 id="drag">Drag</h4>
+<p>Apply an <em>opposite</em> force to any motion.</p>
+<p>The faster things move, the greater the force.</p>
+<div class="admonition tip">
+<p class="admonition-title">Pro tip</p>
+<p>This field is similar to Ragdoll's <code>Air Density</code>. Not <em>technically</em>, but practically.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750407-dbc9d7eb-4135-488d-8755-48bc532cf029.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="wind">Wind</h4>
+<p>Apply a uniform force, at a given speed, in a given direction. Like wind, including a kitchen fan with some <code>Spread</code>.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750615-bd2eba9e-7a29-407d-94ad-657ef59d4444.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="gravity">Gravity</h4>
+<p>A familiar force, except this one can be also be animated!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750684-25ee1e0b-2120-423d-8189-9bbfd254600e.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="newton">Newton</h4>
+<p>Force Markers towards or away from a point in space.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153719442-8c1b0d88-b4fa-4310-901e-ea79472c3aaa.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="radial">Radial</h4>
+<p>A more curious field; with a force which <em>increases</em> as it gets farther from the source.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750760-da2803c4-1a57-455d-9908-b7cf3a3394f7.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="uniform">Uniform</h4>
+<p>Apply a constant force. That's all.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750848-f8326f5e-863a-4c2b-a052-a39a603e0d1f.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="vortex">Vortex</h4>
+<p>Apply forces in a circular pattern.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153750929-9c1a8e2f-c339-4b51-b451-88fe61550433.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="volume-axis-field">Volume Axis Field</h4>
+<p>A field for when you don't know what field you want.</p>
+<p>A true Swiss Army Knife of fields, can do everything from Vortex, to Newton to Turbulence in one convenient node.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153751617-5b291e01-48e7-4974-bc7c-72cc7f701be6.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="volume-curve">Volume Curve</h4>
+<p>Have some fun with this curve-based field. Perhaps to emulate an underwater current?</p>
+<p>In this example, I'm also using a <code>Drag</code> field to keep things from flying off into space.</p>
+<div class="admonition tip">
+<p class="admonition-title">Pro tip</p>
+<p>The curve is a normal Maya NURBS curve. If you need more points, right click and add points as you normally would.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153767442-45e86095-a0c3-4e08-a766-93249648687a.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="combined-fields">Combined Fields</h4>
+<p>Make two or more fields to combine their effect and create complex forces or series of forces!</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153752341-8f4956e9-5366-4901-95f6-c228bad85138.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="centroids">Centroids</h4>
+<p>Where within each Marker should a field apply forces?</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Center of Mass</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Volumetric</li>
 </ul>
-<p>All other commands is already safe to use and shouldn't cause any cycles.</p>
-<h4 id="faq">FAQ</h4>
-<p>These are some of the things you might want to learn more about.</p>
-<div class="admonition question">
-<p class="admonition-title">How does it work?</p>
-<p>Whenever a new Passive Rigid or Active Chain (with passive root) is being created, Ragdoll is asked to evaluate the world transformation of the node you are attempting to make dynamic. The solver should <em>not</em> be bothered to simulate anything during this encounter, because if it did then that would mean a cycle is about to happen.</p>
-<p>Why?</p>
-<p>Because passive rigids pass data <em>into</em> the solver. Namely, the position and orientation of the node you are attempting to turn into a passive rigid. It cannot both pass and receive data. If it is to <em>receive</em> translate/rotate from the solver, then that's an active rigid.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Is it accurate?</p>
-<p>Very.</p>
-<p>Character rigs can get very complex; how can Ragdoll distinguish between an actual <em>parent</em> being active, and a node acting like a parent via something like Maya's Parent Constraints (i.e. a "broken rig")?</p>
-<p>The answer is that the feature builds on Maya's own evaluation mechanism to figure out whether a node is dependent on the solver or not. The mechanism is surprisingly simple.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_dynamic</span><span class="p">(</span><span class="n">transform</span><span class="p">,</span> <span class="n">scene</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Does `transform` in any way affect `scene`?&quot;&quot;&quot;</span>
-    <span class="n">scene</span><span class="p">[</span><span class="s2">&quot;clean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<p>At the center, forces will be nice and predictable; except they won't be able to introduce <em>rotations</em> to your Marker, which may or may not be what you want. For the most realistic fields, use volumetric centroids.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153761018-6395874a-65f9-4a86-8e60-ec98f1b3186a.png" /></p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153760596-0ae4831a-799b-4fb2-a84c-fac4c3cd3843.mp4" type="video/mp4"></video></p>
 
-    <span class="c1"># Pull, but do not bother actually serialising it</span>
-    <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;worldMatrix&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pull</span><span class="p">()</span>
+<p>Here's another example using the Turbulence Field.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153760597-53ed266c-d8a9-4cb7-aa55-d30e11fc4080.mp4" type="video/mp4"></video></p>
 
-    <span class="k">return</span> <span class="ow">not</span> <span class="n">scene</span><span class="p">[</span><span class="s2">&quot;clean&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</code></pre></div>
-<p>By pulling on <code>worldMatrix</code> we ensure all hierarchy and constraints is taken into account, and by not actually retrieving value we limit the computational cost to dirty propagation only - as opposed to actually reading and serialising the 16 values that make up the matrix.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153768590-07e9b49e-59fc-4fbc-bc38-420044f436d7.png" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Which is better?</p>
+<p>Up to you! There is a <em>tiny</em> performance penalty for volumetric origins, as the number of forces increase. But you shouldn't notice much if any impact on performance.</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Can it be disabled?</p>
-<p>Yes.</p>
-<p>The protection is only happening when interacting with Ragdoll via the UI menu items. The API remains unaffected and there is an option in the Preferences to disable it in the UI as well.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/115709313-007cbb00-a369-11eb-99f2-77dbde3b4d5c.png" /></p>
+<p><br></p>
+<h4 id="centroid-seed">Centroid Seed</h4>
+<p>For complex meshes, centroids can end up in unwanted locations or gather in an area with dense vertices. That's when you can give the algorithm a little jolt to try and see whether there is a better alternative out there.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153838710-891d6604-003f-4eac-8c95-a690adc4aa8f.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="use-selected-as-source">Use Selected as Source</h4>
+<p>Some forces act according to their position in the world. Attach a field to a Marker to create an interesting relationship between the two.</p>
+<div class="admonition warning">
+<p class="admonition-title">Non-commercial Ragdoll</p>
+<p>This feature is limited to 100 frames in non-commercial versions of Ragdoll.</p>
 </div>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/152635411-0f810a24-6e6e-46dc-9f56-4fcdf5494d45.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153752546-67d71938-afd6-4187-aebd-89165fc77817.mp4" type="video/mp4"></video></p>
+
+<p>Distance constrain two markers, and attach a field to the outer-most Marker for a doubly-interesting effect. That also wrecks your brain. 🙃</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153765980-641d3ce2-6c40-4956-8a2e-d75703e94c52.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="field-scale">Field Scale</h4>
+<p>If forces start becoming large, you may find yourself in a situation where the visualisation needs to tone down just a bit.</p>
+<p>In the solver settings, you will find options to scale those lines (i.e. <code>Field Scale</code>), as well as control how many steps into the future (i.e. <code>Field Iterations</code>) it should draw for you.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153766135-6804cda2-3b85-4560-bf01-f2480fb0dc49.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="ignore-field">Ignore Field</h4>
+<p>Fine-tune the effect of fields by having one or more Markers <em>ignore</em> the effect of fields.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/153839253-65fa756c-373f-40e3-9c67-e1a4e52884e1.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h3 id="more">More</h3>
+<p>Being native to Maya, Autodesk has some documentation of its own here.</p>
+<ul>
+<li><a href="https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-SimulationEffects/files/GUID-85AEE528-4477-46DF-8B9E-2E8AEC3C8784-htm.html">Maya's Fields Documentation</a>.</li>
+</ul>
+<p>You may also search for fields on YouTube or ask your colleagues about them; any trick they've learnt may very well apply to Ragdoll as well!</p>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2021-12-15
-    
-  </small>
-</div>
                   
                 
               
@@ -2668,7 +2509,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../scene_management/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../constraints/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2677,19 +2518,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Scene Management
+                Constraints
               </div>
             </div>
           </a>
         
         
-          <a href="../pivot_editor/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../import_physics/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Pivot Editor
+                Import Physics
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
