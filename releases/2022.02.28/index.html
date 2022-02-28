@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/0.next/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.02.28/">
       
       
         <meta name="author" content="mottosso">
@@ -1122,6 +1122,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1130,7 +1132,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1140,7 +1142,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1161,6 +1163,241 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2022.02.28
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2022.02.28
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-mesh-islands" class="md-nav__link">
+    Automatic Mesh Islands
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic Mesh Islands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance_1" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-joints" class="md-nav__link">
+    Soft Joints
+  </a>
+  
+    <nav class="md-nav" aria-label="Soft Joints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-purpose" class="md-nav__link">
+    General Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forum" class="md-nav__link">
+    Forum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    Subscriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-api" class="md-nav__link">
+    Group API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-selection" class="md-nav__link">
+    Manipulator Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-fit-to-view" class="md-nav__link">
+    Manipulator Fit-to-view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-during-playback" class="md-nav__link">
+    Select During Playback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-shape" class="md-nav__link">
+    Reset Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refit-assignment" class="md-nav__link">
+    Refit Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licence-conservation" class="md-nav__link">
+    Licence Conservation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minor-releases" class="md-nav__link">
+    Minor Releases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy" class="md-nav__link">
+    Legacy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2049,6 +2286,54 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#soft-joints" class="md-nav__link">
+    Soft Joints
+  </a>
+  
+    <nav class="md-nav" aria-label="Soft Joints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-purpose" class="md-nav__link">
+    General Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forum" class="md-nav__link">
+    Forum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    Subscriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-api" class="md-nav__link">
+    Group API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quality-of-life" class="md-nav__link">
     Quality of Life
   </a>
@@ -2130,12 +2415,12 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/0.next.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.02.28.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Environment</h1>
+                  <h1>2022.02.28</h1>
                 
                 <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/155683216-d321aeab-b2a1-4e19-8840-606c6d5d45e0.png">
     <source src="https://user-images.githubusercontent.com/2152766/155683213-d0544055-d68e-4621-8330-36ff83f3903a.mp4" type="video/mp4">
@@ -2143,12 +2428,15 @@
 
 <p>Highlight for this release is <strong>Complex Geometry!</strong></p>
 <ul>
-<li><a href="#environment"><strong>ADDED</strong> Environment</a> Complex collision geometry, without the need for geometry simplification.</li>
+<li><a href="#environment"><strong>ADDED</strong> Environment</a> Static polygonal geometry for collisions</li>
 <li><a href="#automatic-mesh-islands"><strong>ADDED</strong> Automatic Mesh Islands</a> Ain't got no time to slice?</li>
 <li><a href="#soft-joints"><strong>ADDED</strong> Soft Joints</a> More natural ragdolls with some softness inbetween limbs</li>
+<li><a href="#forum"><strong>ADDED</strong> Forum 2.0</a> Same old forum. New and improved!</li>
+<li><a href="#subscriptions"><strong>ADDED</strong> Subscriptions</a> Monthly licencing, now available</li>
 <li><a href="#licence-conservation"><strong>ADDED</strong> Licence Conservation</a> Lease only the licences you actively use</li>
 <li><a href="#select-with-the-manipulator"><strong>ADDED</strong> Select with the Manipulator</a> Selecting Markers got a bit easier</li>
 <li><a href="#reset-shape"><strong>ADDED</strong> Reset Shape</a> Return to simpler days</li>
+<li><a href="#group-api"><strong>ADDED</strong> Group API</a> The group mechanic was added to the public API</li>
 <li><a href="#multiple-manipulators"><strong>FIXED</strong> Multiple Manipulators</a> Two or more solvers no longer breaks the Manipulator</li>
 <li><a href="#lease-licence-in-ui"><strong>FIXED</strong> Lease Licence in UI</a> Now you can actually use that Lease button</li>
 <li><a href="#legacy-removed"><strong>REMOVED</strong> Legacy</a> Legacy files still open and run, but can no longer be authored.</li>
@@ -2174,9 +2462,19 @@
 <p>A little experiment with worldspace rotation stiffness.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155703548-9abbd436-f6ac-4eb2-991f-06549f6d810a.mp4" type="video/mp4"></video></p>
 
+<p><strong>Rhino Workout</strong></p>
+<p>Soft joints for some belly-jiggle.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155951011-6ee9323a-0e80-47fb-9a4b-c91c72286b55.mp4" type="video/mp4"></video></p>
+
 <p><strong>Rhino Walk</strong></p>
 <p>Nice self-walking rhino.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155685698-15163dc5-048e-4a11-9408-c931c1b69910.mp4" type="video/mp4"></video></p>
+
+<p><strong>Self Walking Manikin</strong></p>
+<p>Same trick, different character. :)</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155858044-add89ff5-87a8-4d23-8953-c69b6709b27d.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155858045-9c2bbd63-d5d1-42f2-81c5-7d5053abdb7b.mp4" type="video/mp4"></video></p>
 
 <p><strong>Soft Joints</strong></p>
 <p>Jason experimenting with the new Soft Joints feature.</p>
@@ -2247,13 +2545,22 @@
 
 <p><br></p>
 <h3 id="automatic-mesh-islands">Automatic Mesh Islands</h3>
-<p>In the previous release, you were given the ability to slice a single mesh up into pieces, and have all pieces glued together as one complex shape. This grants you a great deal of control over the final collision shape</p>
+<p>Ragdoll needs "convex" meshes for anything that moves.</p>
+<details class="question"><summary>What is a convex mesh?</summary><p>Think of it like a shrink-wrapped version of your mesh.</p>
+<p>In 2D, it might look something like this.</p>
+<p><img alt="330px-ConvexHull svg" src="https://user-images.githubusercontent.com/47274066/155874382-1f2c5acc-e7e1-4c6b-9eb3-281f6e1f7a80.png" /></p>
+<p>Notice how the points in the middle are excluded? This is an optimal shape for collision detection, as you can draw a straight line from anywhere in the world and know that if it ever hits this shape, it hits it in only 1 spot.</p>
+</details>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/155873958-1076d808-4a66-43cb-8eb9-b070885766de.png" /></p>
+<p>In the previous release, "Mesh Islands" were introduced to turn each separate polygonal island into <em>its own</em> convex hull and glued together as one complex shape.</p>
+<p>With that, you have a great deal of control over the final collision shape</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155695778-1f05ecd3-9168-4419-92e6-6a8f2ef2498d.mp4" type="video/mp4"></video></p>
 
 <details class="hint"><summary>Multi-cut settings</summary><p>Tick the <code>Extract Faces</code> box, and zero out those values to get Maya to perform an actual split in the geometry as you cut. Otherwise, it will only insert new edge-loops and not actually create two separate meshes.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/155693555-27659b1f-16f5-45d7-b1c4-9d196b457cb8.png" /></p>
 </details>
-<p>It did however mean that you had to take the time to manually slice up the mesh, which may not always be feasible. This release introduces an <em>automatic</em> method of slicing up a given mesh, into a close approximation of the original mesh.</p>
+<p>It did, however, mean that you had to take the time to manually slice up the mesh, which may not always be feasible. This release introduces an <em>automatic</em> method of slicing up a given mesh, into a close approximation of the original mesh.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/155874217-031a7b66-b10d-409e-b7c4-3ce11b78fb1b.png" /></p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155679467-d240000c-3bad-4421-9d7a-ff71303a4fa1.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
@@ -2321,7 +2628,9 @@
 
 <p><br></p>
 <h4 id="performance_1">Performance</h4>
-<p>The process of automatically slicing your geometry is not real-time, it can take up to a few seconds or more. Here's the timings for the meshes in the above animation.</p>
+<p>It's slow.</p>
+<p>The process of automatically slicing your geometry is not real-time, it can take up to a few seconds or more. On the upside, it only ever happens when the mesh changes and does not affect playback performance.</p>
+<p>Here are some timings for the meshes in the below simulation.</p>
 <p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155744509-eda8ec85-2b41-40d3-af6d-79b793beebd4.mp4" type="video/mp4"></video></p>
 
 <table>
@@ -2400,6 +2709,68 @@
 <p>This method is new to us, and we expect to find faster - ideally real-time - alternatives to this in the future.</p>
 </div>
 <p><br></p>
+<h3 id="soft-joints">Soft Joints</h3>
+<p>To balance out the talk of complex but hard geometry, let's talk about "soft joints".</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155835309-06736087-6b44-4cb7-ac0c-58646d007dca.mp4" type="video/mp4"></video></p>
+
+<p>Once I set <code>Translate Motion = Soft</code> and the feet hits the ground, notice how:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> The spine is compressed</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> The legs are compressed</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> The arms are extended</li>
+</ul>
+<p>Here's a more extreme example.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155835296-8d4d08a0-32f4-4234-a65a-cf5b56982790.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155835304-8ddf0b5d-4208-4940-8443-5ec3d68a2d35.mp4" type="video/mp4"></video></p>
+
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/155835312-478f50a7-061d-46a9-8613-44915497b210.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="general-purpose">General Purpose</h4>
+<p>We're calling it "soft joints" when in reality this is <code>Pose Stiffness</code> but for <em>translation</em> rather than rotation. Which means you could use it for tentacles and other appendages that depend on not just rotating limbs but squishy and compressed limbs. Potentially stretchy limbs and spines too?</p>
+<p>We haven't yet explored this fully, so take it for a spin and let us know what you come up with. 😊</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155881064-5ad514da-c31f-4ee4-9358-0c2f113c7eec.mp4" type="video/mp4"></video></p>
+
+<p><br></p>
+<h4 id="caveat">Caveat</h4>
+<p>When stiffness goes too low, limbs detach.</p>
+<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/47274066/155874657-710d5f76-9c68-4f77-81a8-2927bdec1a7b.mp4" type="video/mp4"></video></p>
+
+<p>This is unintended behaviour and will be addressed in a future release. Proper breakable constraints are on the map, but this isn't it. So use with caution, and limit it to create softness between your limbs.</p>
+<p><br></p>
+<h3 id="forum">Forum</h3>
+<p>The forum has gotten a face-lift! This will henceforth be where tutorials and showcases appear, along with notifications for new releases!</p>
+<p>So sign up, subscribe to the <a href="https://forums.ragdolldynamics.com/c/news/8"><code>News</code> category</a> to receive notifications when things happen in Ragdoll-land!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/">https://forums.ragdolldynamics.com/</a></li>
+</ul>
+<p><a href="https://forums.ragdolldynamics.com/"><img alt="image" src="https://user-images.githubusercontent.com/47274066/155857378-08b2026b-ea55-4bbe-9abc-0da2341b03fe.png" /></a></p>
+<p><br></p>
+<h3 id="subscriptions">Subscriptions</h3>
+<p>Out of beta and available to all.</p>
+<p>If you need a more low-cost but commercial introduction to Ragdoll in your studio, then this is for you.</p>
+<ul>
+<li><a href="https://ragdolldynamics.com/pricing-commercial#billing=subscription&amp;licence=node">https://ragdolldynamics.com/pricing-commercial</a></li>
+</ul>
+<p><a href="https://ragdolldynamics.com/pricing-commercial#billing=subscription&amp;licence=node"><img alt="image" src="https://user-images.githubusercontent.com/47274066/155858011-e308c5d7-301d-494a-bd8d-1e7df67d08ed.png" /></a></p>
+<p><br></p>
+<h3 id="group-api">Group API</h3>
+<p>You can now make groups via the API.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">createSolver</span><span class="p">()</span>
+<span class="n">ground</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">createGround</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">createGroup</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">sphere</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polySphere</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">marker</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">assignMarker</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+<span class="n">cmds</span><span class="o">.</span><span class="n">evalDeferred</span><span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">play</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>assignMarker</code> command has also been simplified and does not longer implicitly create a group.</p>
+<p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
 <p>A few more things to make your day that much more bright.</p>
 <p><br></p>
@@ -2456,10 +2827,12 @@
 <li>Fix crash on fit-to-view</li>
 <li>Fix crash on replaced mesh with 0 vertices</li>
 <li>Hide prototype world and local attributes on the <code>rdGroup</code> node</li>
+<li>The <code>Request Lease</code> button in the Ragdoll UI now actually works</li>
 </ul>
 <p><br></p>
 <h3 id="legacy">Legacy</h3>
 <p>The menu items for the old Legacy interface to Ragdoll Dynamics has now been removed. Scenes created with this interface will still open, so this is your last chance to save your work and transition to the current Marker-based workflow.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/155875026-9993f0d0-d671-4013-8e9f-91f1f07979fd.png" /></p>
                 
                   
                     
@@ -2468,7 +2841,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-02-25
+      Last update: 2022-02-28
     
   </small>
 </div>
@@ -2488,6 +2861,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serialisation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2022.02.14/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2022.02.14
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
