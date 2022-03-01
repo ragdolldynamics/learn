@@ -2524,11 +2524,11 @@
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
 <p>Let's start with some eye-candy, thanks to <a href="https://www.linkedin.com/in/jason-snyman-84711b1/">Jason Snyman</a> for the gorilla rig! :)</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134707587-0275af62-29e3-46dc-b15f-ef68b6c6c58b.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134707587-0275af62-29e3-46dc-b15f-ef68b6c6c58b.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134804422-7b2f11c7-786c-434d-9ecc-b1ac84d19c76.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134804422-7b2f11c7-786c-434d-9ecc-b1ac84d19c76.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="introduction">Introduction</h3>
@@ -2582,12 +2582,12 @@
 <p>"I don't like working with green channels, as it is not ideal for animating. Is there a way to I can overcome this?" - <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a></p>
 </div>
 <p>Here's what he was referring to.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134045504-28e64cbb-cf4a-4d7c-8761-e8b05275d3ee.mp4" type="video/mp4"></video></p>
 
 <p>Notice how the nodes with physics applied got green channels? The reason they are green is because Ragdoll is driving them. They are green rather than yellow because you can still edit them, at the same time as Ragdoll is editing them. Your changes will be reflected in the simulation, this is how you <em>control</em> the simulation as it is running.</p>
 <p>Can we get rid of that connection? Well.. No? This is Ragdoll's connection to your controls. Without those.. there <em>is</em> no physics.</p>
 <p>I quickly dismissed the idea and carried on with my day.. But then something <em>clicked</em>.. What if..?</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134046287-5b84322b-3da7-49d6-987e-67a463b33c56.mp4" type="video/mp4"></video></p>
 
 <p>In the next section, I'll dive into how this works and why this change goes far beyond just getting rid of green channels.</p>
 <p><strong>Benefits at a glance</strong></p>
@@ -2689,27 +2689,27 @@
 <p>Ok, enough prelude, let's dive in.</p>
 <p><strong>Before</strong></p>
 <p>Here's what life was like before, with <code>Active Rigid</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164228-cb35df45-ad68-4217-bb5f-8fa389a232da.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134164228-cb35df45-ad68-4217-bb5f-8fa389a232da.mp4" type="video/mp4"></video></p>
 
 <p><strong>After</strong></p>
 <p>And here's life with <code>Markers</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164221-d80135db-96b9-48ed-9ec0-1b8af73c8f86.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134164221-d80135db-96b9-48ed-9ec0-1b8af73c8f86.mp4" type="video/mp4"></video></p>
 
 <p>Notice how the channels are left alone?</p>
 <p>This is the key difference between <code>Marker</code> and <code>Rigid</code>. Although you still provide Ragdoll with controls, Ragdoll no longer <em>drives</em> your controls directly. Instead, it <em>shows</em> you what they would look like <em>if</em> they were driven with physics.</p>
 <p>Once you're happy with what you see, you <code>Record</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134164217-883c0635-6103-42da-87a1-0e9cd145aa1f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134164217-883c0635-6103-42da-87a1-0e9cd145aa1f.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="demo-2-ragdoll">Demo 2 - Ragdoll</h4>
 <p>Let's have a look at how <code>Markers</code> work with a full ragdoll.</p>
 <p><strong>1. Setup hierarchy</strong></p>
 <p>The first step is nothing new, you've seen it before.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213480-bcf2f185-f0f1-4ab5-9f5c-9a72f108e7d3.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134213480-bcf2f185-f0f1-4ab5-9f5c-9a72f108e7d3.mp4" type="video/mp4"></video></p>
 
 <p><strong>2. Edit shapes</strong></p>
 <p>This too, it's second nature by now.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213470-fa51e083-cfb9-494d-8f1b-2fb795a7ed9d.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134213470-fa51e083-cfb9-494d-8f1b-2fb795a7ed9d.mp4" type="video/mp4"></video></p>
 
 <div class="admonition info">
 <p class="admonition-title">Except!</p>
@@ -2721,30 +2721,30 @@
 </div>
 <p><strong>3. Animate</strong></p>
 <p>Now things are getting interesting. To keep our viewport clean, we can offset the simulation slightly. The offset is purely visual and won't affect the simulation or subsequent recording.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213467-b0b9bae6-6778-409d-ad1a-4277e89961f9.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134213467-b0b9bae6-6778-409d-ad1a-4277e89961f9.mp4" type="video/mp4"></video></p>
 
 <p><strong>4. Record</strong></p>
 <p>Finally, and this is what separates <code>Markers</code> from <code>Rigids</code>, we record our simulation back onto our controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134213465-5739f9b5-a391-474d-b6ee-608a6e7c0194.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134213465-5739f9b5-a391-474d-b6ee-608a6e7c0194.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="demo-3-inverse-kinematics">Demo 3 - Inverse Kinematics</h4>
 <p>That last example was contrived. No rig is without IK, so how does <code>Markers</code> work here?</p>
 <p><strong>1. No IK</strong></p>
 <p>Since we put markers on the FK controls, Ragdoll doesn't know about what the IK controls are doing.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312071-0eeb5ced-6bab-4793-9edd-6f5747ceb3ed.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134312071-0eeb5ced-6bab-4793-9edd-6f5747ceb3ed.mp4" type="video/mp4"></video></p>
 
 <p><strong>2. Reassign</strong></p>
 <p>So let's put markers on the <em>joints</em> driven by both IK and FK, such that when you switch between the two, Ragdoll knows how to follow along. So let's <code>Reassign</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312058-20f64011-954c-4d7b-b201-3950655449c0.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134312058-20f64011-954c-4d7b-b201-3950655449c0.mp4" type="video/mp4"></video></p>
 
 <p><strong>3. Retarget</strong></p>
 <p>But recording still targets our original FK controls, and what we want is to record our IK controls. So we can <code>Retarget</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312048-5e9100d8-ce55-4fa1-b704-2201182733db.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134312048-5e9100d8-ce55-4fa1-b704-2201182733db.mp4" type="video/mp4"></video></p>
 
 <p><strong>4. Record Translation</strong></p>
 <p>Unlike FK, IK isn't just rotation, but translation too. So let's tell Ragdoll to record the translation from these markers too.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134312041-fdaaad31-5273-44f4-891c-d1a80739de20.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134312041-fdaaad31-5273-44f4-891c-d1a80739de20.mp4" type="video/mp4"></video></p>
 
 <p>And there you have it! This works with IK, SpineIK, Follicles, Geometry Constraints; <em>anything</em> you can throw at it.</p>
 <p><br></p>
@@ -2752,48 +2752,48 @@
 <p>Here's a work-in-progress animation from <a href="https://www.linkedin.com/in/3dsketchbook/">Christopher Page</a> (thanks for lending it to me!) Let's see how we can use Ragdoll to help improve upon it.</p>
 <p><strong>1. The Problem</strong></p>
 <p>Notice how the elbow intersects the table as he moves his torso around? A difficult problem and moving target as you need to keep tweaking both the torso and hand IK handle to tune your animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319921-6e96ef8c-1226-47b4-b3db-7f076047c62a.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319921-6e96ef8c-1226-47b4-b3db-7f076047c62a.mp4" type="video/mp4"></video></p>
 
 <p><strong>2. Isolate Timeline</strong></p>
 <p>Since this animation is over 600 frames, we'll isolate our work to a small portion of it. For both performance and cleanliness; Ragdoll will only record onto the current timeline (or selected portion of it).</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319912-57c3a8c6-3488-4129-9b1e-9567f77a0752.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319912-57c3a8c6-3488-4129-9b1e-9567f77a0752.mp4" type="video/mp4"></video></p>
 
 <p><strong>3. Assign Markers</strong></p>
 <p>Like before, we'll assign markers to the underlying skeleton to respect what the IK solver does. We'll also make the hand <code>Kinematic</code> to respect the original animation exactly. The clavicle is also <code>Kinematic</code> per default, as it was the first assigned control - and is thus the "root" of our dynamic hierarchy.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319902-dc446cae-37c4-4c86-a746-2fd19364160c.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319902-dc446cae-37c4-4c86-a746-2fd19364160c.mp4" type="video/mp4"></video></p>
 
 <p><strong>4. Include Table</strong></p>
 <p>Since we're interacting with the table, we'll include this too. Also <code>Kinematic</code>, no dynamics will be affecting it, and also as a <code>Box</code> shape to speed up and improve the stability of the simulation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319896-0ddd0f5b-8e64-4f59-a93a-2fafc58b9994.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319896-0ddd0f5b-8e64-4f59-a93a-2fafc58b9994.mp4" type="video/mp4"></video></p>
 
 <p><strong>5. Tune Shapes</strong></p>
 <p>Next we'll isolate contacts with just the elbow area, to respect the hand and lower arm animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319889-6f7403cd-fec2-4fae-8b78-0efabf5afb04.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319889-6f7403cd-fec2-4fae-8b78-0efabf5afb04.mp4" type="video/mp4"></video></p>
 
 <p><strong>6. Tune Material</strong></p>
 <p>In this case, we'd like for the elbow to slide across the table, no friction.</p>
 <details class="info"><summary>More Realism?</summary><p>In the real world, there would be friction and it could come in handy here too. But what should we expect from the elbow rubbing against the table? We should include the torso for this as well, which you absolutely can (and maybe should!). But to keep things simple, we'll let the clavicle preserve it's original animation exactly.</p>
 </details>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319878-d57ce899-bd03-4eb3-b97f-2e4dd5761f74.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319878-d57ce899-bd03-4eb3-b97f-2e4dd5761f74.mp4" type="video/mp4"></video></p>
 
 <p><strong>7. Retargeting</strong></p>
 <p>Ragdoll will record onto the nodes you originally assign, but like before we want recording to go elsewhere; from joints to IK controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319871-2c804a4d-26b1-4a8f-932c-722aeb98189f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319871-2c804a4d-26b1-4a8f-932c-722aeb98189f.mp4" type="video/mp4"></video></p>
 
 <p><strong>8. Record Translation</strong></p>
 <p>Likewise, we'd also like translation included. And we don't care for the shoulder and clavicle animation; all we want is the IK handle and Pole Vector.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319865-dc88b9a9-bb8d-48df-9ec0-f3f5fe760903.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319865-dc88b9a9-bb8d-48df-9ec0-f3f5fe760903.mp4" type="video/mp4"></video></p>
 
 <p><strong>9. Record Simulation</strong></p>
 <p>We're all set! Let's hit <code>Record</code>!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319858-e82de1cc-4ed7-4dea-be07-8e59acc078af.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319858-e82de1cc-4ed7-4dea-be07-8e59acc078af.mp4" type="video/mp4"></video></p>
 
 <p><strong>10. Before And After</strong></p>
 <p>And there we go! 2 minutes or less, and you've got a reusable setup for correcting the elbow whenever the animation changes. IK is intact and you can keep working with keyframes. Keeping Ragdoll attached to your rig has <em>zero</em> impact on performance (as you can see by looking at the fps counter near the bottom of the two comparisons), and once hidden it has no impact on your Outliner either. All clean!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134319855-66c960d7-9d74-4bbf-bde4-5e813c7123cd.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134319855-66c960d7-9d74-4bbf-bde4-5e813c7123cd.mp4" type="video/mp4"></video></p>
 
 <p>Here's one more I couldn't find room for, an earlier version of the animation with <em>stepped keys</em> and finger simulation. Look at all that juicy finger interaction with the table. 😊</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134513003-7b25c2d1-87e8-4853-a89d-a73b3a5ba2e2.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134513003-7b25c2d1-87e8-4853-a89d-a73b3a5ba2e2.mp4" type="video/mp4"></video></p>
 
 <blockquote>
 <p>Rig and Model courtesy of Ramon Arango - <a href="https://ramonarango.gumroad.com/l/ArtemisApolloRig">Apollo Rig</a></p>
@@ -2869,27 +2869,27 @@
 <p>Furthermore, say you liked what the simulation was doing, but only on one half of the body. Or only on the hip, driving the main trajectory in a physically-plausible way. Keeping the rest of your animation intact.</p>
 <p><strong>Record All</strong></p>
 <p>With nothing selected, Ragdoll will record all marked controls to the current Maya playback range.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327104-f3d54cda-4d88-480a-b263-faceb211e87a.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134327104-f3d54cda-4d88-480a-b263-faceb211e87a.mp4" type="video/mp4"></video></p>
 
 <p><strong>Record Selected Markers</strong></p>
 <p>Select a few controls to control what gets recorded.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327103-5ad36b6b-177d-40a9-8666-cbaaab281527.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134327103-5ad36b6b-177d-40a9-8666-cbaaab281527.mp4" type="video/mp4"></video></p>
 
 <p><strong>Record Range</strong></p>
 <p>Limit the Maya playback range for control over <em>when</em> recording takes place.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327097-db0af345-bf15-45f5-9bc0-6ef50d3184f4.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134327097-db0af345-bf15-45f5-9bc0-6ef50d3184f4.mp4" type="video/mp4"></video></p>
 
 <p><strong>Record Selected Range</strong></p>
 <p>Or, select an explicit range interactively.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134327093-ba62588e-d14f-4ff9-9b75-05d4230dbdb6.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134327093-ba62588e-d14f-4ff9-9b75-05d4230dbdb6.mp4" type="video/mp4"></video></p>
 
 <p><strong>Intelligent Range</strong></p>
 <p>A <code>Kinematic</code> marker is entirely animated, so there's no need to actually record those. Ragdoll will ensure only non-kinematic frames are recorded, so you can do things like this.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134504192-3514f235-1f9c-4ce8-83e5-6704bf3036df.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134504192-3514f235-1f9c-4ce8-83e5-6704bf3036df.mp4" type="video/mp4"></video></p>
 
 <p><strong>Record to Animation Layer</strong></p>
 <p>Ragdoll will record to whichever layer is currently active.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134775996-ea2ce5d1-8638-4d43-94f7-f7635585f532.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134775996-ea2ce5d1-8638-4d43-94f7-f7635585f532.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="input-type">Input Type</h4>
@@ -2924,19 +2924,19 @@
 </table>
 <p><strong>Off</strong></p>
 <p>Treat the input as a starting position, but nothing else.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478792-d7f4fc46-fea0-468a-9ec0-7737072263a1.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134478792-d7f4fc46-fea0-468a-9ec0-7737072263a1.mp4" type="video/mp4"></video></p>
 
 <p><strong>Kinematic</strong></p>
 <p>Follow the input exactly, no exceptions. Not even collisions.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
 
 <p><strong>Guide Space -1</strong></p>
 <p>Follow the local angles of the input.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
 
 <p><strong>Guide Space +1</strong></p>
 <p>Follow the world position and orientation of the input.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134478803-889e6732-4e7b-433e-803d-d3edfed814a1.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134478803-889e6732-4e7b-433e-803d-d3edfed814a1.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="retarget">Retarget</h4>
@@ -2958,28 +2958,28 @@
 <p><br></p>
 <h4 id="reparent">Reparent</h4>
 <p>Sometimes, you change your mind.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465284-f9a3bd04-9392-4f33-a161-390cbe9049d2.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134465284-f9a3bd04-9392-4f33-a161-390cbe9049d2.mp4" type="video/mp4"></video></p>
 
 <p>Success!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134465285-87eacea9-4b93-4526-980e-585bbc92151b.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="guide-space">Guide Space</h4>
 <p>Now let's talk about a few things you <em>haven't</em> seen yet.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134329974-7beb86d9-5660-44ba-b3f8-036ccc3aec28.mp4" type="video/mp4"></video></p>
 
 <blockquote>
 <p>Look, it's Ragdoll Blaine!</p>
 </blockquote>
 <p>So what's happening here? Well, it <em>looks</em> like a <a href="/documentation/soft_pin/">Soft Pin</a> to his head, along with a slight <code>Guide Strength</code> on the rest of his body. But unlike the <code>Rigid</code>, another significant advantage to <code>Markers</code> is their ability to capture both local <em>and worldspace</em> position and orientation of your controls. And because of this, you are able to interactively choose whether a marker should look at the <em>Worldspace</em> or <em>Localspace</em> position of your controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134331199-c381ab43-4055-4e7a-a190-68d2acd0668f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134331199-c381ab43-4055-4e7a-a190-68d2acd0668f.mp4" type="video/mp4"></video></p>
 
 <p>Notice how with a <code>Guide Space = -1</code> the controls arms remain relative the torso. And with <code>Guide Space = 1</code> they instead follow the <em>worldspace</em> orientation of the controls. Just like a Soft Pin.</p>
 <p>This attribute is also <strong>animatable</strong>, and is how you can transition from animation into simulation and back again.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134342444-2c2807ff-0be7-43f9-b106-73f231d55adb.mp4" type="video/mp4"></video></p>
 
 <p>Here's a more complete example:</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134332515-e7879b82-4a84-4881-90cf-25f66a6d3ac8.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134332515-e7879b82-4a84-4881-90cf-25f66a6d3ac8.mp4" type="video/mp4"></video></p>
 
 <table>
 <thead>
@@ -3018,33 +3018,33 @@
 <p><br></p>
 <h3 id="transitions">Transitions</h3>
 <p>Let's have a look at how you would use markers to transition between simulation and animation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134507548-382a0ccd-85b6-4990-b325-16dbd3b7d568.mp4" type="video/mp4"></video></p>
 
 <p>Notice how we're animated up until the jump, and then Ragdoll takes over. Once he approaches that box, we turn our <code>Guide Space</code> from <code>-1</code> to <code>1</code> and have him reach the target pose in worldspace. Once he's close, we switch <code>Input Type</code> to <code>Kinematic</code> and kinematically move him until we once again transition to <code>Guide</code>, this time with a <code>Guide Space</code> or <code>-1</code> for pose space.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134507546-49e84d32-b50a-48c6-a1b9-82410281a884.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134507546-49e84d32-b50a-48c6-a1b9-82410281a884.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="self-collision">Self Collision</h3>
 <p>Previously, it was very important that your shapes did not overlap any shape other than it's immediate neighbour. If they did, chaos ensued.</p>
 <p><strong>Before</strong></p>
 <p>Clavicles intersect their parent spine, but also each other!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362062-4197b3d6-2694-4011-9a8e-69adec92927f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134362062-4197b3d6-2694-4011-9a8e-69adec92927f.mp4" type="video/mp4"></video></p>
 
 <p><strong>After</strong></p>
 <p>With the new <code>Self Collision = Off</code>, this is no longer a problem.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362067-a2d33df3-c9d1-4aa8-b8af-956d80aeba7e.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134362067-a2d33df3-c9d1-4aa8-b8af-956d80aeba7e.mp4" type="video/mp4"></video></p>
 
 <p>This can be taken into the extreme!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134362070-325aa8dc-3367-4765-a4a9-56670cc77b83.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134362070-325aa8dc-3367-4765-a4a9-56670cc77b83.mp4" type="video/mp4"></video></p>
 
 <p>And here's a another example to fill out a large volume in the center of a character.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134368633-ed4f69f4-1eba-4702-a3f6-bdddd2f0a98d.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134368633-ed4f69f4-1eba-4702-a3f6-bdddd2f0a98d.mp4" type="video/mp4"></video></p>
 
 <div class="admonition info">
 <p class="admonition-title">Attention</p>
 <p>Notice how the spine is made up of many shapes, some of which cover the width of the body, others the depth. An overlapping mess that would never have simply not have been possible without self-collision support!</p>
 </div>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134368636-37cfd588-184e-46e9-b03a-6d8cacb80b76.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134368636-37cfd588-184e-46e9-b03a-6d8cacb80b76.mp4" type="video/mp4"></video></p>
 
 <blockquote>
 <p>Original asset created by Mehmet Tayfur Türkmenoğluwe and Dr. Reel, licensed by The Rookies.</p>
@@ -3054,11 +3054,11 @@
 <p>Because <code>Rigids</code> were children of your controls, Maya had a funny way of including them in the Graph Editor that rightly drove animators, myself included, <em>absolutely mad</em>.</p>
 <p><strong>Before</strong></p>
 <p>Just look at this; why-oh-why would I want channels from a completely unrelated node when working with the hip?</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341270-72843d85-70c9-43af-86cc-c981e87fe297.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134341270-72843d85-70c9-43af-86cc-c981e87fe297.mp4" type="video/mp4"></video></p>
 
 <p><strong>After</strong></p>
 <p>Contrast that to this, whereby only the nodes you actually select are made visible. You can even select <code>Markers</code> via the Channel Box and <em>deselect</em> your controls to get up real close.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134341497-cb64e666-75e6-4bfd-a3bd-aee27a61791b.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134341497-cb64e666-75e6-4bfd-a3bd-aee27a61791b.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="no-initial-state">No Initial State</h3>
@@ -3075,24 +3075,24 @@
 <p>With the previous version, because <code>Rigids</code> both read and wrote to each control, you could sometimes run into a situation where the parent depends on a child.</p>
 <p><strong>Before</strong></p>
 <p>Here, I'll try and make a second chain in the opposite direction of how the controls are laid out hierarchically. This cannot work; because in order for Ragdoll to figure out where the Passive hand should be, it would first need to consult the upper arm, which is both dynamic and a child of the spine, which is also dynamic. It's a lovely cycle. ❤️</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480453-279620c2-0a68-48fc-aad4-5c24c146265d.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134480453-279620c2-0a68-48fc-aad4-5c24c146265d.mp4" type="video/mp4"></video></p>
 
 <p><strong>After</strong></p>
 <p>With <code>Markers</code>, this isn't a problem because to Ragdoll every limb can now be independently evaluated, in parallel.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134480451-f9be80ba-2579-485e-a4e4-ad92d0da4491.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134480451-f9be80ba-2579-485e-a4e4-ad92d0da4491.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="lollipop-controls">Lollipop Controls</h3>
 <p>Sometimes, markers are added to an already busy control with tons of Channel Box entries. Lollipop controls can help organise things a little better.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134764389-3e15d829-24fa-4c3d-9f65-6c736cab99bd.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134764389-3e15d829-24fa-4c3d-9f65-6c736cab99bd.mp4" type="video/mp4"></video></p>
 
 <p>These can be moved around and scaled to suit your needs, and will provide access to the same marker node in the channel box, so you can select and edit the marker from either the originally marked control or this lollipop control.</p>
 <p><br></p>
 <h3 id="rotate-pivot">Rotate Pivot</h3>
 <p>Use the default Maya rotate pivot to control where to pin a simulation, both in worldspace and localspace.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134765087-837de9dc-87e1-4b41-9286-26e0f82344e1.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134765087-837de9dc-87e1-4b41-9286-26e0f82344e1.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134765085-473674bf-284f-4a75-bf30-7185bb90eb4e.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134765085-473674bf-284f-4a75-bf30-7185bb90eb4e.mp4" type="video/mp4"></video></p>
 
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
@@ -3104,7 +3104,7 @@
 <p><br></p>
 <h4 id="real-ground">Real Ground</h4>
 <p>With <code>Rigids</code>, the ground was embedded into the scene. With <code>Markers</code>, an actual ground is created to for more stability and more control over its physical parameters. Something that can also be animated, and that dynamically appears right underneath your markers.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134493174-f57cc5ce-5056-4cfa-b98e-fae9114342fc.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134493174-f57cc5ce-5056-4cfa-b98e-fae9114342fc.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="joints-and-the-attribute-editor">Joints and the Attribute Editor</h4>
@@ -3147,7 +3147,7 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/134399139-cbe27611-3445-4453-b901-fbe1687dd299.png" /></p>
 <p>Notice the huge pile of lines to the left? Those are all running parallel and almost entirely default Maya evaluations; things your rig would do without Ragdoll. Rendering on the other hand is almost entirely Ragdoll, it is <em>very</em> slow.</p>
 <p>To properly compare performance between <code>Rigids</code> and <code>Markers</code>, here's what you should be looking at.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134398643-bf2e3086-a8f6-4ea7-8e58-011c866acaaa.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134398643-bf2e3086-a8f6-4ea7-8e58-011c866acaaa.mp4" type="video/mp4"></video></p>
 
 <p>This is the only thing Ragdoll does to your rig. This is the entire overhead, the added load onto your rig. 16 <em>microseconds</em>. That's <code>0.016 ms</code>. For a rig to run at 30 fps, it'll need <code>1,000/30 = 33 ms</code> per frame. This overhead, <code>0.016 ms/frame</code> is all Ragdoll needs to solve an entire character, contacts and constraints and forces, all of it. In this particular profiling, that's 430x faster than <code>Rigids</code>, which not only took longer to solve but made everything else slower by just being connected to your controls.</p>
 <p>So how about we get this rendering performance sorted, shall we?</p>

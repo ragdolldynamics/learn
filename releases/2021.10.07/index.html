@@ -2508,25 +2508,25 @@
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/135989994-53f9f751-1cce-48f7-97a8-b907079eb645.png" /></p>
 <p><strong>Raining Ragdolls</strong></p>
 <p>Quick! Get inside!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136224776-05f997f6-c08d-4c49-b26e-59e45b5ff289.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136224776-05f997f6-c08d-4c49-b26e-59e45b5ff289.mp4" type="video/mp4"></video></p>
 
 <p><strong>Do the Robot</strong></p>
 <p>Model and Rig courtesy of <a href="https://www.linkedin.com/in/amedeoberetta/">Amedeo Beratta</a></p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136040898-8b754d97-3dc1-4bc6-896c-e63186252552.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136040898-8b754d97-3dc1-4bc6-896c-e63186252552.mp4" type="video/mp4"></video></p>
 
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136380176-7611c527-61e9-4017-be0c-aa280b4687c3.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136380176-7611c527-61e9-4017-be0c-aa280b4687c3.mp4" type="video/mp4"></video></p>
 
 <p><strong>Vehicular Render</strong></p>
 <p>Made by @tris</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136041166-52db6a64-b1a7-4f13-bff3-ff503fd310bf.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136041166-52db6a64-b1a7-4f13-bff3-ff503fd310bf.mp4" type="video/mp4"></video></p>
 
 <p><strong>Guide Space Mania</strong></p>
 <p>Oh the trickery you can get up to. 🥳</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="anniversary">Anniversary</h3>
 <p>That's right! Ragdoll turned 1 this week! 🥳</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136373629-38e5310b-67a9-424c-b43b-a1c7a31ea9ca.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136373629-38e5310b-67a9-424c-b43b-a1c7a31ea9ca.mp4" type="video/mp4"></video></p>
 
 <p>In my original business plan, I had written..</p>
 <blockquote>
@@ -2647,9 +2647,9 @@
 </details>
 <p>Let's have a look at how this change affects your overall experience.</p>
 <p><strong>Before (7fps)</strong></p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135825072-fb1b52b0-34bc-493c-a960-be8537a38e27.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/135825072-fb1b52b0-34bc-493c-a960-be8537a38e27.mp4" type="video/mp4"></video></p>
 <p><strong>After (130 fps)</strong></p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135825078-d3c876a2-6de7-42b4-8485-6d8947e94cec.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/135825078-d3c876a2-6de7-42b4-8485-6d8947e94cec.mp4" type="video/mp4"></video></p>
 <p>A closer look reveals exactly where this improvement comes from.</p>
 <p><strong>Before</strong></p>
 <p>This block is what we control, it's the Ragdoll rendering pipeline taking a whopping <strong>93 ms</strong> per refresh.</p>
@@ -2684,11 +2684,11 @@
 <p>Here's what this felt like in a scenario of 600 unique objects.</p>
 <p><strong>Before (5 fps)</strong></p>
 <p>Painful! The reason is because even though we're only moving a single box, Ragdoll checks-in with all other boxes too.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135825726-53b76429-0d05-4fa3-847c-19c825d0c34d.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/135825726-53b76429-0d05-4fa3-847c-19c825d0c34d.mp4" type="video/mp4"></video></p>
 
 <p><strong>After (90 fps)</strong></p>
 <p>Blissful. In this case, only one of the boxes is actually updated, as one would expect.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135825732-ca3631a2-2920-428a-9f8d-2cb165a4531a.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/135825732-ca3631a2-2920-428a-9f8d-2cb165a4531a.mp4" type="video/mp4"></video></p>
 
 <p>Let's have a closer look at where performance is going here.</p>
 <p><strong>Before</strong></p>
@@ -2704,7 +2704,7 @@
 </div>
 <p><strong>600 capsules</strong></p>
 <p>The current framerate on 600 unique objects, something for future Ragdoll to try and compete with. For reference, an average ragdoll consists of about 20-30 objects.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135828652-cc0ef941-a6ad-4ecd-9c9d-f69469a29a17.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/135828652-cc0ef941-a6ad-4ecd-9c9d-f69469a29a17.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="future-work">Future Work</h4>
@@ -2767,17 +2767,17 @@
 <p><br></p>
 <h4 id="collide-with-everything">Collide with Everything</h4>
 <p>In this example, every marker is part of the same group. The group has <code>Self Collide = Off</code>, which is fine for just about every marker <em>except the fingers</em>. In that case, we <em>do</em> want self-collision, so they are given the group <code>-1</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136033654-9e84313f-d2f8-4e97-a14f-600154dfd709.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136033654-9e84313f-d2f8-4e97-a14f-600154dfd709.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="respect-self-collision">Respect Self Collision</h4>
 <p>In this case, we're happy with a default group of <code>0</code> since we don't need anything to self collide. Especially these clavicles that overlap significantly!</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136034921-e9fd364b-9889-430c-8ab2-215ab5b998f1.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136034921-e9fd364b-9889-430c-8ab2-215ab5b998f1.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="surgical-control">Surgical Control</h4>
 <p>Finally, for the very specific cases of wanting two or more markers to overlap. Notice how we give both the ground and 3 of the boxes an <code>Overlap Group = 5</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136040503-66728dee-d4f9-4411-bd08-9bf18043c334.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136040503-66728dee-d4f9-4411-bd08-9bf18043c334.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="asleep">Asleep</h3>
@@ -2785,12 +2785,12 @@
 <video class="poster" autoplay="autoplay" loop="loop" width="300px">
     <source src="https://user-images.githubusercontent.com/2152766/136384036-32168830-8663-4457-8913-e350e0e51d4f.mp4" type="video/mp4">
 </video>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136384199-17880dc5-7485-48c0-b5d1-3c096486a8a4.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136384199-17880dc5-7485-48c0-b5d1-3c096486a8a4.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="ignore-gravity">Ignore Gravity</h3>
 <p>It surrounds us. It penetrates us. It binds the galaxy together. But sometimes, you just don't care.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136386633-7e43b92a-f6f9-4e02-9c8c-a7154935829b.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136386633-7e43b92a-f6f9-4e02-9c8c-a7154935829b.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
@@ -2806,15 +2806,15 @@
 <p>But it was challenging to control, not very obvious. Especially with how it was also taking into account its "group" guide space. This release addresses this by enabling you to specify a guide space for <em>all</em> markers and selectively override only the ones you're interested in. Just like how the <code>Input Space</code> works.</p>
 <p><strong>Group Guide Space</strong></p>
 <p>Override all guide spaces, by editing the group.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136387369-6acdd516-e42c-4913-9e41-78d0c4adb6d0.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136387369-6acdd516-e42c-4913-9e41-78d0c4adb6d0.mp4" type="video/mp4"></video></p>
 
 <p><strong>Marker Guide Space</strong></p>
 <p>Or gain surgical control over guide space per-marker.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136387375-64a0101f-501a-469f-b4c0-733cbc3a194f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136387375-64a0101f-501a-469f-b4c0-733cbc3a194f.mp4" type="video/mp4"></video></p>
 
 <p><strong>Have Fun</strong></p>
 <p>🤭</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136201645-94418df8-ed05-44fd-be71-e89019a45469.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="auto-delete">Auto Delete</h4>
@@ -2829,12 +2829,12 @@
 <p><br></p>
 <h4 id="reset-button">Reset Button</h4>
 <p>Minor cosmetic improvement, the <code>Reset to Default</code> button now has an icon so you can actually <em>tell</em> it's a reset button (and not a bug, as many have pointed out 😅).</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/134865922-07b55df5-1a88-4d5c-850c-bcc6976ee1d9.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134865922-07b55df5-1a88-4d5c-850c-bcc6976ee1d9.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="z-up">Z-up</h4>
 <p>The default plane and solver offset was a off in the previous release, this fixes that. You can also manually re-adjust the plane and remove and orientation from the solver node to fix it locally, the solver itself is A-OK.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/135707451-00b49389-47b6-4d4e-8798-2dbe34532c2f.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/135707451-00b49389-47b6-4d4e-8798-2dbe34532c2f.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="auto-time">Auto Time</h4>
 <p>Rather than having to specify which frame to start simulating at, Ragdoll can now keep track of your animation start frame. Either the start of the <em>range</em>, or the full timeline. Or, you can still set a <code>Custom</code> start time for when you do care about specifics.</p>
@@ -2847,7 +2847,7 @@
 <p><br></p>
 <h4 id="motion-blur">Motion Blur</h4>
 <p>As an unintended consequence of the optimisation and shader work, we're currently compliant with Maya's requirement for motion blur. Since all of our simulation is transform-based, it means all of what you simulate can be motion blurred, as opposed to deformer and particle-based motion.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/135816508-81aae73d-7f4a-4165-9af8-abbc0c074409.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/135816508-81aae73d-7f4a-4165-9af8-abbc0c074409.mp4" type="video/mp4"></video></p>
 
 <p>It won't work with any animated attributes, which makes it rather limited in what you can use it for. 🤔</p>
 <p><br></p>
@@ -2855,7 +2855,7 @@
 <p>If you retarget a marker, the difference between the original and target is stored.</p>
 <p>When you record, you have the option to <code>Maintain Offset</code>. That's important if the assigned control has a different position and/or orientation than the destination control. For example, you can assign to a joint, but record onto a NURBS control.</p>
 <p>For example, IK joints are assigned markers but are retargeted onto FK controls, it's important that you retarget when they are both in a similar pose. Otherwise, the difference between them will remain after recording.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136211952-61910881-e9d0-4069-898a-afb870c39860.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/136211952-61910881-e9d0-4069-898a-afb870c39860.mp4" type="video/mp4"></video></p>
 <p>To combat this, you have two options.</p>
 <ol>
 <li>Do not maintain offset</li>
@@ -2869,16 +2869,16 @@
 <p>Except! If there's a parent, then we'll still need those keys to compensate for the <em>parent</em> not being kinematic.</p>
 <p><strong>Problem</strong></p>
 <p>Let's record <em>without</em> kinematic keys. Notice how the hand isn't given any keys, even though it needed them?</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136213022-be377129-b34f-4877-8aa9-ab0bd27b8ded.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136213022-be377129-b34f-4877-8aa9-ab0bd27b8ded.mp4" type="video/mp4"></video></p>
 
 <p><strong>Solution</strong></p>
 <p>Record <em>all</em> keys, and the hand - even though kinematic - will still get recorded.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136213048-d79142e9-b545-4e40-9ec3-17054d524460.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136213048-d79142e9-b545-4e40-9ec3-17054d524460.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
 <h4 id="record-to-custom-attributes">Record to Custom Attributes</h4>
 <p>Sometimes, rotation isn't coming from <code>Rotate X</code> but rather a custom <code>Ball Roll</code> attribute on a different IK control.</p>
-<p><video autoplay class="poster" muted loop width=100% controls><source src="https://user-images.githubusercontent.com/2152766/136360430-d59f0e7c-f268-4053-ad8f-9b915c1f42f5.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/136360430-d59f0e7c-f268-4053-ad8f-9b915c1f42f5.mp4" type="video/mp4"></video></p>
 
 <p>As Ragdoll only understands <code>Translate</code> and <code>Rotate</code>, how would you go about recording onto this attribute!? Here's what you can do.</p>
 <ol>
@@ -2890,7 +2890,7 @@
 <p><br></p>
 <h4 id="slow-constraints">Slow Constraints</h4>
 <p>Like in earlier versions, drawing constraints are the slowest part. If you don't need them, disable them. You can do that either on the <code>rSolver</code> node, or individually per <code>rMarker</code> node.</p>
-<p><video autoplay class="poster" muted loop width=100% ><source src="https://user-images.githubusercontent.com/2152766/136005274-cebbe043-d356-4350-af77-51cefe4aa2b3.mp4" type="video/mp4"></video></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/136005274-cebbe043-d356-4350-af77-51cefe4aa2b3.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="resources">Resources</h3>
 <p>Some well-hidden but essential resources for any of the above. If you are into anything related to Maya plug-in development and performance, you'll treasure these as I have.</p>
