@@ -2350,12 +2350,13 @@
 
 <p><br></p>
 <h4 id="limits">Limits</h4>
-<p>Next see how our character behaves when there isn't any animation around to steer it.</p>
+<p>Next let's see how our character behaves when there isn't any animation around to steer it.</p>
 <ol>
 <li>Select <code>hip_ctl_rGroup</code></li>
-<li>Set <code>Behavior = Initial State</code></li>
+<li>Set <code>Behaviour = Dynamic</code></li>
+<li>Set <code>Pose Stiffness = 0.0</code></li>
 </ol>
-<p>As in our last tutorial when we changed the <code>hip_ctl</code> from <code>Kinematic</code> to <code>Initial State</code>, now we do the same but for the whole character!</p>
+<p>As in our last tutorial when we changed the <code>hip_ctl</code> from <code>Kinematic</code> to <code>Dynamic</code>, now we do the same but for the whole character!</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388195-22886314-833f-4785-9b80-1d90b35d54e7.mp4" type="video/mp4"></video></p>
 
 <p><em>Yikes!</em> That's a mess. No longer is the animation holding a pose together, it's all up to gravity and the anatomy of our character now.</p>
@@ -2448,7 +2449,7 @@
 
 <p><br></p>
 <h4 id="damped-limits">Damped Limits</h4>
-<p>You can tune the behavior of each limit to capture the look you're after, such as making things a little more <strong>damped</strong>.</p>
+<p>You can tune the behaviour of each limit to capture the look you're after, such as making things a little more <strong>damped</strong>.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145394548-4c74d571-d6fc-4266-93b6-4d5058a3247e.mp4" type="video/mp4"></video></p>
 
 <div class="admonition hint">
@@ -2484,7 +2485,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-12-20
+      Last update: 2022-03-02
     
   </small>
 </div>
