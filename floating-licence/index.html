@@ -2245,6 +2245,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-do-i-run-my-server-in-the-background-using-systemd" class="md-nav__link">
+    How do I run my server in the background using systemd?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2582,6 +2589,45 @@ maya
 <p>With <code>level="notification"</code> it'll say this.</p>
 <div class="highlight"><pre><span></span><code><span class="m">2021</span>-05-16, <span class="m">14</span>:52:50 &lt;notification&gt;: License lease request rejected because no more free slots, <span class="nv">numTotalLics</span><span class="o">=</span><span class="m">9</span>, <span class="nv">pkey</span><span class="o">=</span>YOUR-SERIAL-NUMBER
 </code></pre></div>
+<p><br></p>
+<h3 id="how-do-i-run-my-server-in-the-background-using-systemd">How do I run my server in the background using systemd?</h3>
+<p><a href="https://systemd.io/">systemd</a> is a common option for running background processes on Linux. Here's a quick run-down how to get <code>turbofloatserver</code> running with it.</p>
+<p><strong>Prerequisities</strong></p>
+<ol>
+<li>Make sure you can run <code>turbofloatserver -x</code> already</li>
+<li>Make note of the full path to your <code>turbofloatserver</code>, here we will assume <code>/turbofloat</code></li>
+</ol>
+<p>Ok, with that out of the way, create a new file called <code>/etc/systemd/system/turbofloat.service</code> with the content below.</p>
+<p><strong>turbofloat.service</strong></p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=TurboFloat server for CI
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/turbofloat/turbofloatserver -x -s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Replace with your Path</p>
+<p>Here we use <code>/turbofloat/turbofloatserver -x -s</code> but your path will likely be different!</p>
+</div>
+<p>Now let's start it.</p>
+<div class="highlight"><pre><span></span><code>systemctl start turbofloat
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">You may need sudo</p>
+<p>Unless you are logged in as a root/administrator user, you may need to use <code>sudo</code> with this command. E.g. <code>sudo systemctl</code></p>
+</div>
+<p>If there are no complaints, we're set to have this automatically run in the background whenever the computer restarts.</p>
+<div class="highlight"><pre><span></span><code>systemctl <span class="nb">enable</span> turbofloat
+</code></pre></div>
+<p>And that's it. You should now have access to this server in the exact same way as you did when calling <code>turbofloatserver -x</code> manually.</p>
                 
                   
                     
@@ -2590,7 +2636,7 @@ maya
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-03-10
+      Last update: 2022-04-04
     
   </small>
 </div>
