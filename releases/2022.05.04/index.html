@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Out of the Channel Box and into the Viewport!">
+        <meta name="description" content="An improved retargeting workflow, with a new UI">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.12.12/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.05.04/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Interactive Manipulators - Learn Ragdoll</title>
+        <title>Retargeting 2.0 and Maya 2023 - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#legacy-rigids" class="md-skip">
+        <a href="#showcase" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interactive Manipulators
+              Retargeting 2.0 and Maya 2023
             
           </span>
         </div>
@@ -1189,16 +1189,228 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../2022.05.04/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2022.05.04
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
         2022.05.04
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retargeting-ui" class="md-nav__link">
+    Retargeting UI
+  </a>
+  
+    <nav class="md-nav" aria-label="Retargeting UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    Warnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-demo" class="md-nav__link">
+    Complete Demo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya-2023" class="md-nav__link">
+    Maya 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moar-performance" class="md-nav__link">
+    Moar Performance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#following-pin-constraint" class="md-nav__link">
+    Following Pin Constraint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-group-members" class="md-nav__link">
+    Select Group Members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualise-environment" class="md-nav__link">
+    Visualise Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-ordered-selection" class="md-nav__link">
+    Manipulator &amp; Ordered Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-symmetry-on-enter" class="md-nav__link">
+    Manipulator &amp; Symmetry on Enter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-symmetry-toggle" class="md-nav__link">
+    Manipulator &amp; Symmetry Toggle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-delete" class="md-nav__link">
+    Manipulator &amp; Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-node-crash" class="md-nav__link">
+    Environment Node &amp; Crash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-protection" class="md-nav__link">
+    Mesh Protection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recording-start-frame" class="md-nav__link">
+    Recording &amp; Start Frame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recording-initial-pose" class="md-nav__link">
+    Recording &amp; Initial Pose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-solver-stability" class="md-nav__link">
+    Linked Solver Stability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inches" class="md-nav__link">
+    Inches
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -1333,263 +1545,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2021.12.12
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../2021.12.12/" class="md-nav__link">
         
 
         2021.12.12
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#legacy-rigids" class="md-nav__link">
-    Legacy Rigids
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#showcase" class="md-nav__link">
-    Showcase
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-tutorials" class="md-nav__link">
-    New Tutorials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulators" class="md-nav__link">
-    Manipulators
-  </a>
-  
-    <nav class="md-nav" aria-label="Manipulators">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activate" class="md-nav__link">
-    Activate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shape-modes" class="md-nav__link">
-    Shape Modes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limit-mode" class="md-nav__link">
-    Limit Mode
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symmetry" class="md-nav__link">
-    Symmetry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-select" class="md-nav__link">
-    Multi-select
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#undo-redo" class="md-nav__link">
-    Undo &amp; Redo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fit-to-view" class="md-nav__link">
-    Fit-to-view
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#select-node" class="md-nav__link">
-    Select Node
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-help" class="md-nav__link">
-    Manipulator Help
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1d-2d-and-3d-limits" class="md-nav__link">
-    1D, 2D and 3D Limits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cache-on-record" class="md-nav__link">
-    Cache On Record
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#faster-deltas" class="md-nav__link">
-    Faster Deltas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ground-fits-grid" class="md-nav__link">
-    Ground Fits Grid
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#auto-limits-ii" class="md-nav__link">
-    Auto Limits II
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lollipop-hierarchy" class="md-nav__link">
-    Lollipop Hierarchy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disappearing-limits" class="md-nav__link">
-    Disappearing Limits
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#replace-intermediate-mesh" class="md-nav__link">
-    Replace Intermediate Mesh
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transform-limits" class="md-nav__link">
-    Transform Limits
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#separate-translate-xyz-amount" class="md-nav__link">
-    Separate Translate XYZ Amount
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#separate-twist-and-swing-amount" class="md-nav__link">
-    Separate Twist and Swing Amount
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maya-exit" class="md-nav__link">
-    Maya Exit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customised-recording" class="md-nav__link">
-    Customised Recording
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -2318,13 +2283,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#legacy-rigids" class="md-nav__link">
-    Legacy Rigids
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#showcase" class="md-nav__link">
     Showcase
   </a>
@@ -2332,85 +2290,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new-tutorials" class="md-nav__link">
-    New Tutorials
+  <a href="#retargeting-ui" class="md-nav__link">
+    Retargeting UI
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulators" class="md-nav__link">
-    Manipulators
-  </a>
-  
-    <nav class="md-nav" aria-label="Manipulators">
+    <nav class="md-nav" aria-label="Retargeting UI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#activate" class="md-nav__link">
-    Activate
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#shape-modes" class="md-nav__link">
-    Shape Modes
+  <a href="#warnings" class="md-nav__link">
+    Warnings
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limit-mode" class="md-nav__link">
-    Limit Mode
+  <a href="#workflow" class="md-nav__link">
+    Workflow
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#symmetry" class="md-nav__link">
-    Symmetry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-select" class="md-nav__link">
-    Multi-select
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#undo-redo" class="md-nav__link">
-    Undo &amp; Redo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fit-to-view" class="md-nav__link">
-    Fit-to-view
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#select-node" class="md-nav__link">
-    Select Node
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-help" class="md-nav__link">
-    Manipulator Help
+  <a href="#complete-demo" class="md-nav__link">
+    Complete Demo
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya-2023" class="md-nav__link">
+    Maya 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moar-performance" class="md-nav__link">
+    Moar Performance
+  </a>
   
 </li>
       
@@ -2423,29 +2353,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1d-2d-and-3d-limits" class="md-nav__link">
-    1D, 2D and 3D Limits
+  <a href="#following-pin-constraint" class="md-nav__link">
+    Following Pin Constraint
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache-on-record" class="md-nav__link">
-    Cache On Record
+  <a href="#select-group-members" class="md-nav__link">
+    Select Group Members
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#faster-deltas" class="md-nav__link">
-    Faster Deltas
+  <a href="#visualise-environment" class="md-nav__link">
+    Visualise Environment
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ground-fits-grid" class="md-nav__link">
-    Ground Fits Grid
+  <a href="#manipulator-ordered-selection" class="md-nav__link">
+    Manipulator &amp; Ordered Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-symmetry-on-enter" class="md-nav__link">
+    Manipulator &amp; Symmetry on Enter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-symmetry-toggle" class="md-nav__link">
+    Manipulator &amp; Symmetry Toggle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-delete" class="md-nav__link">
+    Manipulator &amp; Delete
   </a>
   
 </li>
@@ -2456,64 +2407,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#auto-limits-ii" class="md-nav__link">
-    Auto Limits II
+  <a href="#environment-node-crash" class="md-nav__link">
+    Environment Node &amp; Crash
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lollipop-hierarchy" class="md-nav__link">
-    Lollipop Hierarchy
+  <a href="#mesh-protection" class="md-nav__link">
+    Mesh Protection
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disappearing-limits" class="md-nav__link">
-    Disappearing Limits
+  <a href="#recording-start-frame" class="md-nav__link">
+    Recording &amp; Start Frame
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#replace-intermediate-mesh" class="md-nav__link">
-    Replace Intermediate Mesh
+  <a href="#recording-initial-pose" class="md-nav__link">
+    Recording &amp; Initial Pose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transform-limits" class="md-nav__link">
-    Transform Limits
+  <a href="#linked-solver-stability" class="md-nav__link">
+    Linked Solver Stability
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#separate-translate-xyz-amount" class="md-nav__link">
-    Separate Translate XYZ Amount
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#separate-twist-and-swing-amount" class="md-nav__link">
-    Separate Twist and Swing Amount
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maya-exit" class="md-nav__link">
-    Maya Exit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customised-recording" class="md-nav__link">
-    Customised Recording
+  <a href="#inches" class="md-nav__link">
+    Inches
   </a>
   
 </li>
@@ -2531,478 +2461,265 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.12.12.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.05.04.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2021.12.12</h1>
+                  <h1>2022.05.04</h1>
                 
-                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/145726083-8364472b-43f6-422b-8db5-992466163e8e.png">
-    <source src="https://user-images.githubusercontent.com/2152766/145726048-720a150b-cab6-4ffc-b504-78c994be4cdb.mp4" type="video/mp4">
-</video>
-
-<p>Highlight for this release is <strong>The Manipulator</strong>!</p>
+                <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165741628-e11b8999-87b9-44b8-811c-3d0d817b3245.png" /></p>
+<p>Highlight for this release is a new <strong>Retargeting UI</strong> and support for <strong>Maya 2023</strong> <img alt="🥳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f973.svg" title=":partying_face:" /></p>
 <ul>
-<li><a href="#manipulators"><strong>ADDED</strong> Manipulator</a> Edit things faster and visually with these new tricks</li>
-<li><a href="#separate-translate-xyz-amount"><strong>ADDED</strong> Independent Pose Axes</a> Control X, Y and Z axes independently</li>
-<li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Can never have too much of this.</li>
-<li><a href="#auto-limits-ii"><strong>FIXED</strong> Auto Limits II</a> More predictable, more usable</li>
-<li><a href="#disappearing-limaits"><strong>FIXED</strong> Disappearing Limits</a> Two solvers, one removed, caused limit indicators to vanish</li>
-<li><a href="#lollipop-hierarchy"><strong>FIXED</strong> Lollipop Hierarchy</a> Lollipops could break a hierarchy of markers, but no more</li>
-<li><a href="#replace-intermediate-mesh"><strong>FIXED</strong> Replace Intermediate Mesh</a> Intermediate meshes could make Replace Mesh more complicated</li>
-<li><a href="#maya-exit"><strong>FIXED</strong> White Window on Maya Exit</a> Ragdoll could sometime prevent Maya from exiting properly</li>
-<li><a href="#customise-recording"><strong>ADDED</strong> Customise Recording</a> An advanced topic for big pipelines</li>
+<li><a href="#retargeting-ui"><strong>ADDED</strong> Retargeting UI</a> Finally, visualise and modify where your animation is recorded</li>
+<li><a href="#moar-performance"><strong>ADDED</strong> Moar Performance</a> You didn't know you needed it!</li>
+<li><a href="#maya-2023"><strong>ADDED</strong> Maya 2023 Support</a> Ready to go!</li>
+<li><a href="#inches"><strong>FIXED</strong> Inches and other Units</a> Manipulator now understands units other than centimeters</li>
+<li><a href="#mesh-stability"><strong>FIXED</strong> Mesh Stability</a> On rare occurrences, Replace Mesh and Environment could crash your Maya. No longer!</li>
+<li><a href="#recording-start-frame"><strong>FIXED</strong> Recording &amp; Start Frame</a> In some situations, recording would be sensitive to your current frame</li>
+<li><a href="#recording-initial-pose"><strong>FIXED</strong> Recording &amp; Initial Pose</a> Remember the original pose when deleting a layer</li>
+<li><a href="#linked-solver-stability"><strong>FIXED</strong> Linked Solver Stability</a> More predictable and stable links</li>
+<li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Let's have some more. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></li>
+<li><a href="#following-pin-constraint"><strong>ADDED</strong> Folowing Pin Constraint</a> Attach the Pin Constraint to yolur animation</li>
+<li><a href="#manipulator-ordered-selection"><strong>ADDED</strong> Manipulator &amp; Ordered Selection</a></li>
+<li><a href="#manipulator-delete"><strong>ADDED</strong> Manipulator &amp; Delete</a> You can now delete markers with the manipulator, without exiting</li>
 </ul>
-<p><br></p>
-<h3 id="legacy-rigids">Legacy Rigids</h3>
-<p>This release marks the end of <code>Active Rigid</code> and <code>Active Chain</code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>If you read only one paragraph in this document, read this.</p>
-</div>
-<p>Tutorials have been updated, documentation as well and you are encouraged to use <code>Markers</code> which are far superior in both performance and usability.</p>
-<ul>
-<li><strong>Rigids</strong> remain accessible via the new <code>Legacy</code> submenu in the Ragdoll menu</li>
-<li><strong>Scenes</strong> made with Rigids remain functional, and will continue to run until end of February 2022.</li>
-<li><strong>Documentation</strong> for Rigids can be found at the bottom of the left-hand side, under Legacy</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145725905-da4db431-67bf-452d-bb7e-72dc98c4ce9c.png" /></p>
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
-<p>Let's kick things off with some eye candy!</p>
-<p><strong>Flying Lizard</strong></p>
-<p>A work-in-progress clip from Jason Snyman.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145728022-42388d01-4a96-450c-a564-61df60e6d9fb.mp4" type="video/mp4"></video></p>
-
-<p><strong>Ragdoll in 30 Seconds</strong></p>
-<p>A brief overview of what Ragdoll is.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145581522-2f229741-45c4-43f2-9c3b-5ffb5bb29fc5.mp4" type="video/mp4"></video></p>
-
-<p><strong>Mocap Chap</strong></p>
-<p>Footage from one of the the <a href="/tutorials/mocap_chap">new tutorials</a>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145550133-4d9daedc-478c-44db-8a65-5a248b26e67b.mp4" type="video/mp4"></video></p>
-
-<p>Now watch what happens when we increase the mass of the box by 50x. 😁</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145550147-56714786-3ac9-44b8-b73f-b85d34e53bf4.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="new-tutorials">New Tutorials</h3>
-<p>Have a look!</p>
+<p>We've got a lot of new content since last release, so let's break it down. <img alt="🥳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f973.svg" title=":partying_face:" /></p>
+<p><strong>Pirate</strong></p>
+<p>New livestream from last Friday!</p>
 <ul>
-<li><a href="/tutorials/manikin">Manikin</a> (with Markers!)</li>
-<li><a href="/tutorials/manikin_ragdoll">Full Manikin</a> (with the Manipulator!)</li>
-<li><a href="/tutorials/manikin_ik">IK</a> (with Retargeting!)</li>
-<li><a href="/tutorials/mocap_chap">Mocap Chap</a> (with Fun!)</li>
+<li><a href="https://www.youtube.com/watch?v=AFB13RgWuQQ&amp;lc=Ugz4bq_Fm7aI124SpKx4AaABAg">https://www.youtube.com/watch?v=AFB13RgWuQQ&amp;lc=Ugz4bq_Fm7aI124SpKx4AaABAg</a></li>
 </ul>
-<p><a href="/tutorials/manikin"></p>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/145709200-b65f5328-832d-4f15-a2d2-166bc766b452.mp4" type="video/mp4">
-</video>
-<p></a>
-<a href="/tutorials/manikin_ragdoll"></p>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/145709104-c8859a6b-dff3-4478-ba19-308568f60158.mp4" type="video/mp4">
-</video>
-<p></a>
-<a href="/tutorials/manikin_ik"></p>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/145708943-123c151d-a76f-4594-9b69-167e7258d587.mp4" type="video/mp4">
-</video>
-<p></a>
-<a href="/tutorials/mocap_chap"></p>
-<video autoplay class="poster" muted="muted" loop="loop" width=100%>
-    <source src="https://user-images.githubusercontent.com/2152766/145552217-0663b6a5-206f-46d2-b0e4-31b0e1877c64.mp4" type="video/mp4">
-</video>
-<p></a></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/166197496-c217d619-6b5c-4e87-a41d-989c9d91a7a1.png" /></p>
+<p>And a new start-to-finish asset and breakdown on the forums for this guy!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/pirate-yaarrr">https://forums.ragdolldynamics.com/t/pirate-yaarrr</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740378-5c7f921f-ef40-4564-bf84-e4de8bbfbfa1.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740385-67fec9f6-29e3-4077-a1ed-b7f16c031ebe.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740390-14867bf2-e263-41c2-91f3-56fb08dca0c7.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740397-5159fe47-c1ec-4990-a510-b391e68e0f3b.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740415-a44631cb-fc0c-486c-af5b-323bae784b53.mp4" type="video/mp4"></video></p>
+<p><strong>Woody</strong></p>
+<p>Another gem from @Andrei on the forums!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/woody-puppet-creating-puppets">https://forums.ragdolldynamics.com/t/woody-puppet-creating-puppets</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740673-0461286b-2def-433c-bcd3-983a7187b0f1.mp4" type="video/mp4"></video></p>
+<p><strong>Ice Dragon</strong></p>
+<p>This one from Jack Preston on the forums!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/work-in-progress-dragon">https://forums.ragdolldynamics.com/t/work-in-progress-dragon</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165741392-436c04e6-0d30-4b31-9320-f8ba4c9d8749.mp4" type="video/mp4"></video></p>
+<p><strong>Gundam</strong></p>
+<p>And one more, also from Jack The Magnificent!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/gundam/185/4">https://forums.ragdolldynamics.com/t/gundam/185/4</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165735062-bc9745d0-598e-4147-af84-a3ded73628b3.mp4" type="video/mp4"></video></p>
+<p><strong>VR Rabbit</strong></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/bunny">https://forums.ragdolldynamics.com/t/bunny</a></li>
+</ul>
+<p>Jason took a spin in virtual reality to come up with this nightmare of a rabbit. <img alt="😅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f605.svg" title=":sweat_smile:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165735252-26f3a2db-2d01-41d8-aac7-592d98fcb881.mp4" type="video/mp4"></video></p>
+<p><strong>Rhino Companion</strong></p>
+<p>The Manikin got a friend. <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165740266-c78646b3-7fa6-4233-8a30-64427edd8491.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="manipulators">Manipulators</h3>
-<p>One of the most challenging aspect of Ragdoll to date is editing shapes and limits. These have now been <em>greatly</em> simplified via the use of "manipulators", similar to your standard Translate/Rotate/Scale manipulators. Except on steroids.</p>
-<p>Here's a 21 second overview.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145669018-15c6847a-b031-4770-afe3-5a0b0bf50082.mp4" type="video/mp4"></video></p>
-
+<h3 id="retargeting-ui">Retargeting UI</h3>
+<p>You can now visually see where keyframes go upon running <code>Record Simulation</code>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165936832-f7801f75-2b11-40c0-868f-fdbf9f06e98e.png" /></p>
+<p><br></p>
+<h4 id="usage">Usage</h4>
+<p>Let's take a look at what this UI is, what it can do for you and when to use it.</p>
+<ul>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=0">00:00</a> Why a UI?</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=30">00:30</a> How to previously spot a retarget</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=90">01:30</a> Spotting suspicious targets</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?t=131">02:11</a> Warning indicator</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?t=155">02:30</a> Untarget</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?t=162">02:42</a> Retarget</li>
+</ul>
+<p><a href="https://youtu.be/uQ-gCUidcJE"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201292-ca02a9ad-d358-48f8-a227-f2dbaad8c6e0.png" /></a></p>
+<p><br></p>
+<h4 id="warnings">Warnings</h4>
+<p>The UI can help you spot problems with recording, before recording happens.</p>
+<ul>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=0">00:00</a> Constrained Channels</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=8">00:08</a> Locked Channels</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=60">00:60</a> Keyframed Channels</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=71">00:71</a> Hidden Channels</li>
+</ul>
+<p><a href="https://youtu.be/vM0LMnSookQ"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201189-e8eea447-fb37-4724-af4c-dc4c7b0b2f6b.png" /></a></p>
+<p>In this case, some of our markers are retargeted onto joints that are driven by some other object. If we were to attempt to record these, it's unclear what the result should be.</p>
+<ol>
+<li>Should they retain their connection to the thing already driving them?</li>
+<li>Or should they abandon that, and become keyframed by the simulation?</li>
+</ol>
+<p>Neither of these are a great pick, since we don't want to break the rig, but we also want our simulation to go <em>somewhere</em>.</p>
+<p><br></p>
+<h4 id="workflow">Workflow</h4>
+<p>Once you've assigned your markers, grab a clean slate and gain complete control over where animation is to be recorded.</p>
+<ul>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=0">00:00</a> Intro</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=18">00:18</a> Untarget everything</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?t=25">00:25</a> Retarget one at a time</li>
+</ul>
+<p><a href="https://youtu.be/QKY3w3pyWTI"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201125-9c4327b3-d912-4fd6-b851-48a4028b1c8e.png" /></a></p>
+<p><br></p>
+<h4 id="complete-demo">Complete Demo</h4>
+<p>And finally, here's a longer-form example of a full setup of the Truong Dragon that we did a livestream on a while back.</p>
+<ul>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=0">00:00</a> Assigning Markers</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=18">00:38</a> Spine Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=61">01:01</a> Wing Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=87">01:27</a> IK Legs</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=140">02:20</a> IK Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=167">02:37</a> Tail</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=188">03:08</a> Retargeting</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=220">03:40</a> IK Retargeting</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=276">04:36</a> Test Animation</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=300">05:00</a> Mass Distribution</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?t=336">05:36</a> Record</li>
+</ul>
+<p><a href="https://youtu.be/Zf-aNFNpnT8"><img alt="" src="https://user-images.githubusercontent.com/2152766/166235869-1be2824f-60fc-463c-8aa7-b2c132ac122c.png" /></a></p>
+<p><br></p>
+<h3 id="maya-2023">Maya 2023</h3>
+<p>Ragdoll now ships with plug-ins for Maya 2023, enjoy!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165741628-e11b8999-87b9-44b8-811c-3d0d817b3245.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Heads up</p>
+<p>Maya 2018 is still included in this release, but should be considered deprecated and will be removed entirely by July 2022.</p>
+</div>
+<p><br></p>
+<h3 id="moar-performance">Moar Performance</h3>
+<p>Ragdoll now renders up to <strong>20% faster</strong>.</p>
 <p><strong>Before</strong></p>
-<p>Here's the equivalent process in the last version. Sped up by 4x.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145799870-f7e77753-384a-473a-a718-c9e1ea92e445.mp4" type="video/mp4"></video></p>
-
-<p>It's is about as boring to watch as it was to make. 😄 Notice how shapes and limits need manual adjustment on both sides, because there was no <em>symmetry</em>. And notice how many clicks it takes to make one change, keep expanding that item in the Channel Box over and over and over.</p>
-<p><br></p>
-<h4 id="activate">Activate</h4>
-<p>You have a few options for activating the manipulator.</p>
-<ol>
-<li>Run <code>Ragdoll -&gt; Manipulator</code></li>
-<li>Select a Ragdoll node and press <code>T</code> on your keyboard</li>
-<li>Select a Ragdoll node and click the <code>Show Manipulator Tool</code> in the Toolbar</li>
-</ol>
-<p>Any of the Ragdoll nodes can be selected in order to enable the manipulator via the <code>T</code> keyboard shortcut.</p>
-<div class="admonition info">
-<p class="admonition-title">Solver Shape</p>
-<p>At the time of this writing, the solver needs its <em>shape</em> selected, not the parent transform. This will be addressed in a future release.</p>
-</div>
-<p>A comfortable workflow is..</p>
-<ol>
-<li>Select any assigned control</li>
-<li>Select the marker DG node in the Channel Box</li>
-<li>Press <code>T</code></li>
-</ol>
-<blockquote>
-<p>The selected Marker will be pre-selected in the manipulator.</p>
-</blockquote>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145669291-61d4462f-cbd2-45ab-b344-56eddb93bf8d.mp4" type="video/mp4"></video></p>
-
-<p>Alternatively, press the <code>Show Manipulator Tool</code> button in the Toolbar.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145669287-08aca80b-9241-41cf-aa4e-cbbcbc5c78c6.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="shape-modes">Shape Modes</h4>
-<p>This release introduces a manipulator with two "modes".</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145709365-8c2384b8-1811-4df3-a863-564a88fe9fbf.png" /></p>
-<table>
-<thead>
-<tr>
-<th align="left">Mode</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shape Mode</td>
-<td align="left">Edit shape properties, like <code>Length</code>, <code>Radius</code>, <code>Position</code> and <code>Orientation</code></td>
-</tr>
-<tr>
-<td align="left">Limit Mode</td>
-<td align="left">Edit limit properties, like <code>Twist</code> and <code>Swing</code> along with their pivots.</td>
-</tr>
-</tbody>
-</table>
-<p>In Shape Mode, you currently have 5 manipulators.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Manipulator</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>Translate</code></td>
-<td align="left">Affects the <code>Shape Offset</code> attribute</td>
-</tr>
-<tr>
-<td align="left"><code>Rotate</code></td>
-<td align="left">Affects the <code>Shape Rotation</code> attribute</td>
-</tr>
-<tr>
-<td align="left"><code>Scale</code></td>
-<td align="left">Affects the <code>Shape Radius</code> and <code>Shape Extents</code> attributes</td>
-</tr>
-<tr>
-<td align="left"><code>Length</code></td>
-<td align="left">Affects the <code>Shape Length</code> attribute, for the <code>Capsule</code> shape</td>
-</tr>
-<tr>
-<td align="left"><code>HUD</code></td>
-<td align="left">Individual control over primary attributes, like <code>Shape Extents</code> axes</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Translate</strong></p>
-<p>Hold the middle-mouse button to translate.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145670525-75826331-d1ae-47d6-a046-028ed3e858da.mp4" type="video/mp4"></video></p>
-
-<p><strong>Rotate</strong></p>
-<p>Hold Ctrl + middle-mouse button to rotate.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145670526-0a45e65a-f749-4b09-b394-ee65104766c1.mp4" type="video/mp4"></video></p>
-
-<p><strong>Scale</strong></p>
-<p>Hold Ctrl + left-mouse button to scale.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145670528-41fc9f3e-b1e0-41ac-adcd-dcf62fa99aca.mp4" type="video/mp4"></video></p>
-
-<p><strong>Length</strong></p>
-<p>The <code>Capsule</code> shape have additional in-view manipulators you can drag to affect each side independently.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145670530-bcf791d1-fa19-4059-9c14-7c283061ba8e.mp4" type="video/mp4"></video></p>
-
-<p><strong>HUD</strong></p>
-<p>Finally, attributes without a visual handle can be edited via the viewport HUD.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145670533-9b176326-a6da-4a67-a014-8902a0bc913e.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="limit-mode">Limit Mode</h4>
-<p>In Limit Mode, you currently have 2 manipulators.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Manipulator</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>Limit</code></td>
-<td align="left">Affects the <code>Limit Range XYZ</code> attributes</td>
-</tr>
-<tr>
-<td align="left"><code>HUD</code></td>
-<td align="left">For locking and enabling of limits</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Enable and Disable</strong></p>
-<p>Click the <code>Axis</code> button to limit the rotation about a particular axis.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671609-9a5b6c88-4a52-4a41-89aa-8d8e29deb642.mp4" type="video/mp4"></video></p>
-
-<p><strong>Lock and Unlock</strong></p>
-<p>Click the <code>Lock</code> button to prevent all rotation about the axis.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671610-a23beb01-93e3-4f2b-a0d1-ba9232a3ad9e.mp4" type="video/mp4"></video></p>
-
-<p><strong>Asymmetrical Edits</strong></p>
-<blockquote>
-<p>Hold <code>Ctrl</code> to make asymmetrical edits</p>
-</blockquote>
-<p>Some limbs start out at the center of their limit. Like your hip and neck. They are typically modeled to enable equal movement in each axis.</p>
-<p>Other limbs, like the elbow and knee, are typically modeled in the extreme of their limit. Able to only rotate in one direction. For these cases, they need an <em>asymmetrical</em> limit.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671611-3de2bf76-46b8-4511-a74d-40f01d6e3550.mp4" type="video/mp4"></video></p>
-
-<p>With limits in multiple axes, keep an eye out for how asymmetrical edits to one axis affect the others.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671818-b0974163-4c40-4de2-822d-eb0aeb399551.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">Why are they moving?</p>
-<p>Under the hood, each axis must be still be symmetrical; edits only appear to be asymmetrical for your convenience. What's really happening is the entire limit is both changing shape and also rotating and the rotation is causing all axes to move.</p>
-<p>This is an inherent limitation of limits (pun!) in Ragdoll and is unlikely to be addressed in the future, so we'll have to work with it.</p>
-</div>
-<p>If you mess up and want to start from scratch, hit the <code>Reset</code> button, also found under <code>Ragdoll -&gt; Utilities -&gt; Reset Constraint Frames</code></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671817-37e1b121-1860-4c4a-b097-803ba27ac6e4.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="symmetry">Symmetry</h4>
-<p>Enabled per default, symmetry will mirror your edits across an axis.</p>
-<p>There are 2 types of symmetry at the time of this writing.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>World</code></td>
-<td align="left">Look for a marker across the current axis in worldspace</td>
-</tr>
-<tr>
-<td align="left"><code>Pose</code></td>
-<td align="left">Based on the pose at the time of assigning markers, which is typically symmetrical.</td>
-</tr>
-</tbody>
-</table>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/143677487-6ba46a4c-0099-4ab9-b64e-e92c22bde0d5.mp4" type="video/mp4"></video></p>
-
-<p>Each of which can be made symmetrical in either the X, Y or Z axes. The <code>Pose</code> axis means you can make changes even if a character has been posed after having been assigned. A feature particularly useful when assigning to the A- or T-pose of a character rig.</p>
-<p><strong>Pose Based Symmetry</strong></p>
-<p>Because these controls were assigned in the T-pose of the rig, you can use Pose-based symmetry to make changes even when the character is currently asymmetrical.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671293-4755044e-55b6-41b7-9120-99b03cbc2889.mp4" type="video/mp4"></video></p>
-
-<p><strong>Multiple Rigs</strong></p>
-<p>If two or more characters are present in the scene, and they were all rigged in the same pose, at the center of the world, then Ragdoll will only look at markers in the same <code>rdGroup</code> as the selected Marker.</p>
-<p><strong>Search Distance</strong></p>
-<p>On the right-hand side of the <code>Enable Symmetry</code> button, there is a <code>Search Distance</code> gizmo.</p>
-<blockquote>
-<p>Drag to edit this value</p>
-</blockquote>
-<p>When you select a marker on one side, it will search for a marker at the opposite side of the axis you've chosen. Because positions are all approximate, it uses a maximum search distance to look for it.</p>
-<p><strong>Matches</strong></p>
-<p>Ideally, there should only be one match. But in a crowded hierarchy there may be several. Tune the <code>Search Distance</code> to control the number of matches, to ensure it doesn't pick the wrong one.</p>
-<p><br></p>
-<h4 id="multi-select">Multi-select</h4>
-<blockquote>
-<p>Disable <code>Symmetry</code> to enable multi-select</p>
-</blockquote>
-<p>Hold <code>Shift</code> to select and manipulate <em>multiple</em> markers at once.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/145672423-e88cbbe0-a47f-40ab-a102-e7f6114bbc55.mp4" type="video/mp4"></video></p>
-<div class="admonition into">
-<p class="admonition-title">Drag-select</p>
-<p>Will be added in a future release.</p>
-</div>
-<p><br></p>
-<h4 id="undo-redo">Undo &amp; Redo</h4>
-<p>No surprises here.</p>
-<p>Changes made using the manipulator is undoable as you would expect, with the exception that it currently does not let you undo <em>the selection itself</em> like normal Maya selection does; this will be addressed in a future release.</p>
-<p><br></p>
-<h4 id="fit-to-view">Fit-to-view</h4>
-<p>Tap the <code>F</code> key to fit any selected Marker(s) to the view, like you would expect from selected Maya nodes.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145672626-5d547178-35b4-4ae7-b984-e4908033e68c.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">Caveat</p>
-<p>This currently only applies if you've activated the manipulator using the <code>Ragdoll -&gt; Manipulator</code> menu item, or have the <code>rdSolver</code> shape node selected.</p>
-</div>
-<p><br></p>
-<h4 id="select-node">Select Node</h4>
-<blockquote>
-<p>Click the <code>Select Node</code> button to select this node in Maya</p>
-</blockquote>
-<p>Per default, Ragdoll and Maya selection are separate. You can have Maya select the node(s) currently seleted in Ragdoll by pressing the <code>Select Node</code> button.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145672548-d72c6ed2-b573-4f16-adde-c7f8ab615406.mp4" type="video/mp4"></video></p>
-
-<p>You can automate this using the <code>Synchronise</code> button at the far-left of the HUD.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145672549-bf13396a-6991-49b9-913a-70fc3669ae16.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">Why is this not on per default?</p>
-<p>The solver is what is actually being fitted. If the selection is changed to a marker (which is not a DAG node, and therefore lacks a visual representation) then fit-to-view no longer works.</p>
-<p>This will be addressed in a future release and made into the default.</p>
-</div>
-<p>With Multi-select or symmetry enabled, all selected markers will be selected in Maya, to make bulk edits via the Channel Box easier.</p>
-<p><br></p>
-<h4 id="manipulator-help">Manipulator Help</h4>
-<p>On the right-hand side is an overview of the hotkeys and mouse button combinations you can use, and what they do.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145671095-2b9e3813-59f8-4a0e-a33b-022bead19b79.png" /></p>
-<p>It can be hidden via the HUD button on the upper right-hand side.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145671135-31d11b87-a678-47eb-a7dc-a01b5ae570aa.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
+<p>It used to be the case that each frame uploaded vertices and colors to the GPU.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165745340-479c99f4-3473-4dea-9ac8-5e1cc5e319a1.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p>But now, there is zero memory allocations. The programmers amongst you will appreciate the benefit and difficulty of such an improvement. <img alt="😅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f605.svg" title=":sweat_smile:" /> This lays the foundation for future performance advances, in particular related to instancing and crowd simulation. 🤫</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165745331-cde44e6e-5deb-4885-ac25-9b448fe05775.mp4" type="video/mp4"></video></p>
+<p>For the techies amongst you, here's what the improvement looks like in the Profiler.</p>
+<p><strong>Before</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165746719-1fe32ca5-fc37-4aa3-b025-847c524ac2d8.png" /></p>
+<p><strong>After</strong></p>
+<p>The top two layers is Ragdoll, notice the slight reduction in length. Win!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165746490-89443126-1eab-4b38-92ef-38347de8c3ea.png" /></p>
 <h3 id="quality-of-life">Quality of Life</h3>
-<p>More of this!</p>
+<p>Here's a summary of changes designed to make your day just a little more bright.</p>
 <p><br></p>
-<h4 id="1d-2d-and-3d-limits">1D, 2D and 3D Limits</h4>
-<p>Ragdoll used to have a preference as to which axes you use for limits.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145728265-adb9840e-faf9-4da4-9ef3-53525c765553.mp4" type="video/mp4"></video></p>
-
-<ol>
-<li><code>X</code> is great for 1D limits, like a hinge, elbow or knee</li>
-<li><code>YZ</code> is great for 2D limits, like a shoulder or hip</li>
-</ol>
-<p>But <code>XY</code> is no good. <code>XZ</code> is also bad. And god forbid you should attempt use <code>Y</code> or <code>Z</code> as a hinge limit. Ragdoll would try, but try in vain.</p>
-<p>Knowing which combination to use is not easy, and now you no longer have to. Pick an axis, any axis or combination of axes and Ragdoll will figure things out on its end. You don't have to worry about it.</p>
-<p>As an added bonus, the limit axis now aligns with your Maya axis! (with one caveat, see below)</p>
-<p>Here's a table to make this absolutely clear. 🥰</p>
-<table>
-<thead>
-<tr>
-<th align="left">Maya Rotate Axis</th>
-<th align="left"></th>
-<th align="left">Ragdoll Limit Axis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>X</code></td>
-<td align="left">=</td>
-<td align="left"><code>X</code></td>
-</tr>
-<tr>
-<td align="left"><code>Y</code></td>
-<td align="left">=</td>
-<td align="left"><code>Y</code></td>
-</tr>
-<tr>
-<td align="left"><code>Z</code></td>
-<td align="left">=</td>
-<td align="left"><code>Z</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Caveat</p>
-<p>With one exception, see <strong>Asymmetrical Limits</strong> under <a href="#limit-mode">Limit Mode</a> above. As soon as they rotate, they will no longer align with Maya; which isn't a problem most of the time, but can be.</p>
+<h4 id="following-pin-constraint">Following Pin Constraint</h4>
+<p>You now have the option of automatically constraining the Pin Constraint to your animation, giving you a similar look to <code>Pose Space = World</code> except with a new dedicated transform node.</p>
+<div class="admonition hint">
+<p class="admonition-title">Multiple Pins</p>
+<p>There can be many of these for the same marker!</p>
 </div>
+<p><strong>Pin to Current Animation Pose</strong></p>
+<p>The default, put a pin wherever the animation currently is.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166206176-e85e3cfe-51f3-49cf-9fa7-a12a3e07e4b8.mp4" type="video/mp4"></video></p>
+<p><strong>Pin to Current Simulation Pose</strong></p>
+<p>Alternatively, put it wherever the simulation is.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ragdoll Non-Commercial</p>
+<p>This option can only find the simulated pose for the first 100 frames unless you've got a commercial licence, like Ragdoll Complete or Ragdoll Unlimited.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166206210-7b288e8c-2703-48be-8ea2-80edac4af5c5.mp4" type="video/mp4"></video></p>
+<p><strong>Constrain Pin to Animation</strong></p>
+<p>Follow your animation interactively, by putting a Parent Constraint between pin and control.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166206218-745c21bc-963c-4a4b-ad43-cc3375e0b552.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h4 id="cache-on-record">Cache On Record</h4>
-<p>Previously, when you recorded your simulation back onto your character rig, a new simulation would kick in the next time you played. And because your character rig has now changed - to follow the original simulation - the new simulation will be different.</p>
-<p>This makes logical sense but can be unexpected. So now, the <code>Cache</code> attribute on the solver is automatically enabled to let you compare and contrast your character rig with the simulation; and avoid needless re-simulating when what you really wanted was to record-and-forget.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/144044232-3e72bbfa-d4e5-46c5-bb0b-057ca8c17938.mp4" type="video/mp4"></video></p>
-
-<p>Once you're ready to re-simulate, run the <code>Uncache</code> command or set the <code>Cache</code> attribute back to <code>Off</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/144044234-c72809fa-e5b4-4dba-bada-94e4798011fe.mp4" type="video/mp4"></video></p>
-
+<h4 id="select-group-members">Select Group Members</h4>
+<p>You can now select the members of a group, to aid in organising your scene.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/162622802-ae51b84b-aa64-44fe-9681-9adbe028ffe4.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h4 id="faster-deltas">Faster Deltas</h4>
-<p>Pose Deltas are now cleaner and more performant (up to 10x).</p>
-<p>Deltas are the triangular-looking shapes drawn to visualise the difference between your animation and the current simulation. They are now only drawn when there is at least <em>some</em> difference, which means the vast majority of them in a complex scene are now not drawn, speeding up your viewport significantly.</p>
+<h4 id="visualise-environment">Visualise Environment</h4>
+<p>You can now see where the environment is when the solver is offset.</p>
 <p><strong>Before</strong></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145673087-4161ea32-cf58-4be1-bdc8-4752fa15859d.png" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/162694460-57c5e588-ab00-492d-8659-eced320e1266.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
-<p>Notice how they only appear if there is actually a difference between the animation and simulation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145673131-a1d47cf2-6d24-415a-a7e3-ae12503cbc3a.mp4" type="video/mp4"></video></p>
-
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/162694464-7d2d1d73-ac8b-4d35-a9ce-6ebdded654ae.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h4 id="ground-fits-grid">Ground Fits Grid</h4>
-<p>Previous releases would put a ground underneath the first assigned controls, with a size relative the size of your selection.</p>
-<p>Turns out, this wasn't great in practice and usually ended up being too small. In this release, the ground inherits whatever size your viewport grid is.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145726397-cc9793c6-6db7-4e46-ad0c-ece72b90a2ef.mp4" type="video/mp4"></video></p>
-
+<h4 id="manipulator-ordered-selection">Manipulator &amp; Ordered Selection</h4>
+<p>The Manipulator now remembers the order in which you select, meaning you can use it for ordinary tasks like reparenting and constraining markers!</p>
+<p>For example, consider this character here. He's symmetrical, and yet seem heavier on one side.. <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165748681-06a53950-5cab-419d-8131-d1dd6eb17e0c.mp4" type="video/mp4"></video></p>
+<p>Let's take a closer look at the updated Hierarchy visualisation to see whether there is something wrong with the hierarchy we have created.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165748686-63f4ddb7-d170-446f-a721-00fcd7fa0d97.mp4" type="video/mp4"></video></p>
+<p>Aha! Let's fix this, by..</p>
+<ol>
+<li>Selecting the child</li>
+<li>Shift-selecting the parent</li>
+<li>Running <code>Reparent</code></li>
+</ol>
+<p>All from the comfort of the Manipulator. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165748691-a5310619-9e59-4f3a-bfc8-197eec8afebd.mp4" type="video/mp4"></video></p>
+<p>Here are some more funky hierarchies to solidify the point.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165749427-4e3e734f-1a08-4701-93e8-9c1ed7ad38a1.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="auto-limits-ii">Auto Limits II</h3>
-<p>The previous release introduced <a href="/releases/2021.11.15/#auto-limits">Auto Limits</a> whereby Ragdoll would look at the locked-state of your <code>Rotate</code> channels and try to figure out how to replicate this effect physically.</p>
-<p>This sometimes worked, sometimes not. This release fixes that, covering all combinations of locked channels, with any manner of joint or rotate axis.</p>
-<p>Here's what locking the Rotate channels will result in.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145727640-6fa95faf-0013-45ec-88e8-381b2bdee831.mp4" type="video/mp4"></video></p>
-
-<p>Unlocking them, we can see how much of an effect it has.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145727641-80391c78-8843-4b11-a407-e89bbf30f0f0.mp4" type="video/mp4"></video></p>
-
-<p>Thanks to the more robust and predictable limits in this release, the Maya axis will now always align with the Ragdoll limit axes!</p>
+<h4 id="manipulator-symmetry-on-enter">Manipulator &amp; Symmetry on Enter</h4>
+<p>Ragdoll will now look for symmetry right after entering the Manipulator. Especially helpful if you enter with some marker already selected, and especially if you use the T-hotkey to enter into the Manipulator!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165551246-0beb2590-e1da-4d9d-aa8c-b13b7bb7bc09.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="lollipop-hierarchy">Lollipop Hierarchy</h3>
-<p>The <code>Create Lollipop</code> option of Markers generates an extra control shape in the viewport that you can use to manipulate a Marker. The goal being to make it easier to spot a Marker in a potentially busy channel box.</p>
-<p>But the last release didn't let you use <code>Assign Hierarchy</code> with <code>Create Lollipop</code> without ending up with a broken hierarchy.</p>
+<h4 id="manipulator-symmetry-toggle">Manipulator &amp; Symmetry Toggle</h4>
+<p>Ragdoll will now look for a symmetrical partner when toggling the Enabled checkbox. Win!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165551222-bd2672e5-aff1-4325-9fda-cd3ac7119f6d.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="manipulator-delete">Manipulator &amp; Delete</h4>
+<p>You can now delete markers from within the Manipulator!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165549879-a86fb25f-c85c-48ab-a82e-19bd727a43fb.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="environment-node-crash">Environment Node &amp; Crash</h3>
+<p>In the case of having more than 1 environment, you may have experienced a crash!</p>
 <p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/142628177-f078f326-6e3e-4c68-b7c0-0dfb842527fe.mp4" type="video/mp4"></video></p>
-
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166116291-ab5dc1af-5795-4824-9f4a-c4682094b9ff.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/142628180-2ea5d1aa-5560-4599-abf9-0604b50eb7bc.mp4" type="video/mp4"></video></p>
-
+<p>This has now been patched up!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166116293-a3357bb3-71f6-4312-8386-a44aa109e2b8.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="disappearing-limits">Disappearing Limits</h3>
-<p>The limit indicator is drawn using a 2D drawing API which is initialised whenever a Solver is created. It was however <em>uninitialized</em> whenever <em>any</em> Solver was deleted, so if you had 2 solvers you were out of luck. A re-open of the scene would fix it, but it was annoying and incorrect.</p>
-<p>This has now been fixed.</p>
+<h3 id="mesh-protection">Mesh Protection</h3>
+<p>Ragdoll can take meshes of any complexity.</p>
+<p>Sometimes meshes have no volume. And that's fine; Ragdoll will generate a flat surface with <em>some</em> volume to it, to try and interpret what you want. However, under rare circumstances, those volume-less meshes could cause trouble for Ragdoll.</p>
+<p>New attributes have been added to try and protect you from these. These will jiggle the vertices to try and discard anything suspicious. You normally won't have to interact with these, the defaults should keep you safe. But if you find vertices missing from your colliders, try editing these.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166116515-0c890430-fb40-44d6-8fad-0235af5139e8.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="replace-intermediate-mesh">Replace Intermediate Mesh</h3>
-<p>In the previous release, if a mesh had a second "intermediate" mesh it would be more difficult to use it with the <code>Replace Mesh</code> command.</p>
+<h3 id="recording-start-frame">Recording &amp; Start Frame</h3>
+<p>In some situations, you could find yourself with recorded keyframes all over the place.</p>
 <p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/143280183-d076b432-28fe-41f2-b9ca-f303bd3a44cf.mp4" type="video/mp4"></video></p>
+<p>Notice how all of the destination controls - the joints, in this case - are all mangled! This would happen when the current time and the start frame of the simulation did not align. Not always, but in this particular case, and likely others too!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/164425812-557d8427-9c3e-4400-80a7-06084f9b342d.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
-<p>Here's it working with intermediate shapes, and the new <code>Maintain History</code> option which was always true in the previous release.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/143287859-778c4252-0ef1-43fb-a13d-190500cbf185.mp4" type="video/mp4"></video></p>
-<p>Without it, modifications to the original mesh are ignored; such as a skinned mesh.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/143287863-4adffedd-74e7-49ad-b1f5-4b7b16bae9f4.mp4" type="video/mp4"></video></p>
+<p>Now working as you'd expect. Phew!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/164425817-b7d27b56-8750-494d-94de-6a4221fe184f.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="transform-limits">Transform Limits</h3>
-<p>Recording onto transforms with Maya's native limits on them could result in this.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145573500-5ef2fe21-c9dd-4be6-9334-7b8569bb3e47.png" /></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145573213-02aa2922-20d6-4d22-ae26-d6a9f7986dfb.mp4" type="video/mp4"></video></p>
-
-<p>This has now been fixed.</p>
-<details class="question"><summary>How?</summary><p>Since you asked, they are simply disabled. I've never seen or heard of anyone actually using these and was surprised to find they were in active use by the native motion capture library that ships with Maya.</p>
-<p>If you or anyone you know <em>do</em> use them, let me know and they will be given support.</p>
-</details>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145573224-60f74627-fc6d-4ffc-8558-4be6560279b1.mp4" type="video/mp4"></video></p>
-
+<h3 id="recording-initial-pose">Recording &amp; Initial Pose</h3>
+<p>When deleting a recorded layer, Maya would sometimes forget where your character was prior to recording.</p>
+<p><strong>Before</strong></p>
+<p>Notice how our character remains on the ground when deleting the layer, even though that's clearly one of the simulated poses.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165051419-4f9191aa-ba0a-4abe-accb-99ce3719cf80.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p>This is instead what we expect, for it to return to where it was prior to recording.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/165051427-eda6ca64-eb9e-4cae-a54d-b4fadacba642.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="separate-translate-xyz-amount">Separate Translate XYZ Amount</h3>
-<p>The <code>Pose Stiffness</code> in <code>World</code> space affected each axis equally.</p>
-<p>You can now control each axis independently, to for example follow an input animation closely along the ground plane, the X and Z-axes, but allow for it to deviate along the Y-axis,</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/143435579-ec64ddad-d567-4ab2-ab85-89eb7da150e3.mp4" type="video/mp4"></video></p>
-
+<h3 id="linked-solver-stability">Linked Solver Stability</h3>
+<p>Solver linking is when the contents of two or more solvers participate in the same physical world; for example, reference two characters and link their solvers. Viola, you've got a single simulation with the two characters interacting with each other. Great!</p>
+<p>However, under some circumstances this didn't always work. Especially with referenced files. It had to do with the order in which the solvers were created, and which solver was created when. It could happen that the link was ignored. Sometimes it behaved differently on scene re-open.</p>
+<p>No longer! Now solver linking is robust, as you would expect.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166218103-5106a2d1-84e9-47ea-a94a-02c7773b3a30.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="separate-twist-and-swing-amount">Separate Twist and Swing Amount</h3>
-<p>The <code>Pose Stiffness</code> and <code>Pose Damping</code> parameters of Markers apply to both Swing and Twist - that is, rotations around the X and YZ axes.</p>
-<p>You can now control these independently, for an even finer control over the resulting simulation.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/143433769-325b7cbb-ae24-49f5-a32d-a5896e55e4c5.mp4" type="video/mp4"></video></p>
-
+<h3 id="inches">Inches</h3>
+<p>Using the manipulator in a Maya configured for inches, or any other unit than millimeters..</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/160272859-a2a80e46-52c5-4e4b-96a8-3c3e6980977f.png" /></p>
+<p>..could result in funky behaviour. This has now been fixed!</p>
 <p><br></p>
-<h3 id="maya-exit">Maya Exit</h3>
-<p>There was a memory leak, whereby Maya would sometimes freeze on exit, with an anomymous-looking dialog box appearing on Windows.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/143432430-1249fac5-bbbe-4681-a021-a37146f534b5.png" /></p>
-<p>This has been fixed.</p>
-<p><br></p>
-<h3 id="customised-recording">Customised Recording</h3>
-<p>Some rigs don't work with Maya's default Parent and Orient constraint. As a result, neither does <code>Record Simulation</code> or <code>Snap to Simulation</code> because those commands use these default constraints.</p>
-<p>If this is you, then I have good news. You can now override the command responsible for creating these constraints with one that uses your custom in-house constraints instead.</p>
-<ul>
-<li><a href="/custom-attach">Custom Attach</a></li>
-</ul>
                 
                   
                     
@@ -3011,7 +2728,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2022-05-03
     
   </small>
 </div>
@@ -3035,7 +2752,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2021.12.15/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -3044,19 +2761,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2021.12.15
+                Serialisation
               </div>
             </div>
           </a>
         
         
-          <a href="../2021.11.15/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2022.03.14/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2021.11.15
+                2022.03.14
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
