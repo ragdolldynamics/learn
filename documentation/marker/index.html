@@ -2625,8 +2625,7 @@
 
 <p><br></p>
 <h3 id="behaviour">Behaviour</h3>
-<p>In the above examples, I mentioned <code>Kinematic</code> and you probably spotted a few other options too, like <code>Inherit</code> and <code>Pose Match</code>. What are those?</p>
-<p>The <code>Behaviour</code> is how Ragdoll should interpret the controls you assign. Did you mean for them remain animated, i.e. <code>Kinematic</code>? Or should they follow the control around, i.e. <code>Pose</code>? Or should they just fall with gravity, ignoring the original control altogether, i.e. <code>Initial State</code>?</p>
+<p>The <code>Behaviour</code> is how Ragdoll should interpret the controls you assign. Did you mean for them remain animated, i.e. <code>Kinematic</code>? Or should they follow the control around, i.e. <code>Dynamic</code>?</p>
 <p>The <code>Behaviour</code> can be set either for a whole group of markers, or each Marker individually.</p>
 <table>
 <thead>
@@ -2638,18 +2637,14 @@
 <tbody>
 <tr>
 <td align="left">Inherit</td>
-<td align="left">Do whatever the group is doing, or <code>Kinematic</code> if there is no group</td>
-</tr>
-<tr>
-<td align="left">Initial State</td>
-<td align="left">Do nothing, just fall under gravity</td>
+<td align="left">Do whatever the group is doing, or <code>Dynamic</code> if there is no group</td>
 </tr>
 <tr>
 <td align="left">Kinematic</td>
 <td align="left">Follow the input <em>exactly</em>, physics need not apply</td>
 </tr>
 <tr>
-<td align="left">Pose Match</td>
+<td align="left">Dynamic</td>
 <td align="left">Follow the input approximately, with some <code>Stiffness</code> and <code>Damping</code></td>
 </tr>
 </tbody>
@@ -2672,7 +2667,7 @@
 <blockquote>
 <p>Look, it's Ragdoll Blaine!</p>
 </blockquote>
-<p>This is an example of <strong>Worldspace Pose Matching</strong>. Ragdoll will try and reach the worldspace position and orientation of your rig, rather than only looking at the relative angles between each limb.</p>
+<p>This is an example of <strong>Worldspace Pose Stiffness</strong>. Ragdoll will try and reach the worldspace position and orientation of your rig, rather than only looking at the relative angles between each limb.</p>
 <p>Here's another example of the difference between <code>Local</code> and <code>World</code>space.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/134331199-c381ab43-4055-4e7a-a190-68d2acd0668f.mp4" type="video/mp4"></video></p>
 
