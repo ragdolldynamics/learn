@@ -2197,6 +2197,10 @@
 </tbody>
 </table>
 <p>The final result is keyframes on the rig controls, in a new Animation Layer.</p>
+<div class="admonition success">
+<p class="admonition-title">Version 2.0 - Up to date</p>
+<p>Written for Ragdoll <code>2022.05.04</code> and above.</p>
+</div>
 <p><br></p>
 <h3 id="manual-record">Manual Record</h3>
 <p>Here's what it looks like to do manually, for 1 control.</p>
@@ -2208,18 +2212,18 @@
 <p>The <code>Attach</code> step can be overridden to accommodate for custom constraints, for when your studio rigs cannot use the native <code>cmds.parentConstraint</code> and <code>cmds.orientConstraint</code> nodes that ship with Maya.</p>
 <p>Here's how it works.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 1 - Import the Record Simulation command</span>
-<span class="kn">from</span> <span class="nn">ragdoll.tools</span> <span class="kn">import</span> <span class="n">markers_tool</span> <span class="k">as</span> <span class="n">markers</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">recording</span>
 
 <span class="c1"># 2 - Write your own command to attach</span>
 <span class="k">def</span> <span class="nf">custom_attach</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
     <span class="o">...</span>
 
 <span class="c1"># 3 - Replace the default attach</span>
-<span class="n">markers</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span> <span class="o">=</span> <span class="n">custom_attach</span>
+<span class="n">recording</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span> <span class="o">=</span> <span class="n">custom_attach</span>
 </code></pre></div>
 <p>Here's an example of the default implementation, pay special attention to the calls to <code>cmds.parentConstraint</code> and <code>cmds.orientConstraint</code>; these are the ones you want to replace with your own commands.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll.vendor</span> <span class="kn">import</span> <span class="n">cmdx</span>
-<span class="kn">from</span> <span class="nn">ragdoll.tools</span> <span class="kn">import</span> <span class="n">markers_tool</span> <span class="k">as</span> <span class="n">markers</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">recording</span>
 
 
 <span class="k">def</span> <span class="nf">custom_attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marker_to_dagnode</span><span class="p">):</span>
@@ -2304,10 +2308,10 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="n">old_attach</span>
 <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="n">old_attach</span> <span class="o">=</span> <span class="n">markers</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span>
+    <span class="n">old_attach</span> <span class="o">=</span> <span class="n">recording</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span>
 
 <span class="c1"># Replace with custom implementation</span>
-<span class="n">markers</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span> <span class="o">=</span> <span class="n">custom_attach</span>
+<span class="n">recording</span><span class="o">.</span><span class="n">_Recorder</span><span class="o">.</span><span class="n">_attach</span> <span class="o">=</span> <span class="n">custom_attach</span>
 </code></pre></div>
 <p><br></p>
 <h4 id="usage">Usage</h4>
