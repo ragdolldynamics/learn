@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="It's a secret">
+        <meta name="description" content="Automated walks, runs, jumps and dancing 💃">
       
       
       
@@ -24,7 +24,7 @@
 
     
       
-        <title>Ragdoll Locomotion - Learn Ragdoll</title>
+        <title>Locomotion - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#new-defaults" class="md-skip">
+        <a href="#locomotion" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ragdoll Locomotion
+              Locomotion
             
           </span>
         </div>
@@ -2089,44 +2089,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-defaults" class="md-nav__link">
-    New Defaults
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#locomotion" class="md-nav__link">
     Locomotion
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Locomotion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta" class="md-nav__link">
-    Beta
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -2139,6 +2111,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#workflow" class="md-nav__link">
     Workflow
   </a>
@@ -2146,8 +2125,105 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#press-t" class="md-nav__link">
+    Press T
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-processing" class="md-nav__link">
+    Background Processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rig-compatibility" class="md-nav__link">
+    Rig Compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-characters" class="md-nav__link">
+    Multiple Characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    Physics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording" class="md-nav__link">
+    Recording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-sequencer" class="md-nav__link">
+    Step Sequencer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targets" class="md-nav__link">
+    Targets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    Limits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#terrain" class="md-nav__link">
     Terrain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-constraints" class="md-nav__link">
+    Manipulator &amp; Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulator-namespaces" class="md-nav__link">
+    Manipulator &amp; Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-defaults" class="md-nav__link">
+    New Defaults
   </a>
   
 </li>
@@ -2175,53 +2251,28 @@
                   </a>
                 
                 
-                  <h1>Ragdoll Locomotion</h1>
+                  <h1>Locomotion</h1>
                 
-                <p>Next beta is on the way!</p>
+                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/172001961-ff5068a5-c0ef-4f44-b092-6a75cc5c5657.png">
+    <source src="https://user-images.githubusercontent.com/2152766/172001957-5a04d2cd-b973-4fa8-88b2-6e506e9bef10.mp4" type="video/mp4">
+</video>
+
+<p>The highlight for this release is <strong>Locomotion!</strong></p>
 <ul>
-<li>New defaults</li>
-<li>Glue Constraint</li>
-<li>Force</li>
-<li>Recording loops (just remove the hierarchy?)</li>
-<li>Multiple Manipulators &amp; Edits</li>
-<li>Replace Mesh without connection</li>
-<li>Export Replaced Mesh</li>
-</ul>
-<p><br></p>
-<h3 id="new-defaults">New Defaults</h3>
-<ul>
-<li>Air Density = 0.1</li>
-<li>Substeps &amp; Iterations = 8</li>
+<li><a href="#locomotion"><strong>ADDED</strong> Locomotion</a> The thing you are most curious about. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></li>
+<li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> A few more of these</li>
 </ul>
 <p><br></p>
 <h3 id="locomotion">Locomotion</h3>
-<hr />
-<p>Hi all,</p>
-<p>Or should I say, hello to the few select members participating in this beta. <img alt="🙂" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f642.svg" title=":slight_smile:" /> Exclusive!</p>
-<table>
-<thead>
-<tr>
-<th align="left">Question</th>
-<th align="left">Answer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">So, what is a beta?</td>
-<td align="left">It's an unpolished, unfinished version of the next release</td>
-</tr>
-<tr>
-<td align="left">Will it crash my Maya?</td>
-<td align="left">Naaah. Ok, it might!</td>
-</tr>
-<tr>
-<td align="left">What's new?</td>
-<td align="left">Automatic locomotion!</td>
-</tr>
-</tbody>
-</table>
+<p>The above animation is automatically generated, given just a handful of parameters to ragdoll.</p>
+<ol>
+<li>A <code>Start</code> and <code>End Position</code></li>
+<li>A <code>Step Sequence</code></li>
+<li>One or more <code>Limits</code></li>
+</ol>
+<p>I'll walk through what each of these mean in the rest of this documentation.</p>
 <p><br></p>
-<h3 id="examples">Examples</h3>
+<h4 id="examples">Examples</h4>
 <p>Let's start with a quick look at what you can get out of this new toy.</p>
 <p><strong>Spot and Friends</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/170711526-092680fa-e49c-46d5-8dcb-5c7fe14b8a8a.mp4" type="video/mp4"></video></p>
@@ -2253,18 +2304,33 @@
 <p>But with some physics, it's starting to look nice. :)</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/170711541-1c04909d-f38d-480f-8bec-9cc308d29f44.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="overview">Overview</h3>
-<p>I give you, automatic locomotion! <img alt="👏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44f.svg" title=":clap:" /></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/169018059-f6c09edb-344e-44fe-9d16-ab59cba5b3b3.mp4" type="video/mp4"></video></p>
+<h4 id="abilities">Abilities</h4>
+<p>Here's what we're aiming for with this release.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=k7cGyYaxUnI&amp;t=11s&amp;ab_channel=BBCEarth">Full clip</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172006117-69894e8c-4346-4479-8592-018285a984d4.mp4" type="video/mp4"></video></p>
+<p>To achieve this, you've got control over:</p>
+<ol>
+<li>The start and end positions of the body and feet</li>
+<li>The order and duration of steps, called a <code>Step Sequence</code></li>
+<li>An optional <code>Terrain</code> upon which to walk</li>
+<li>A few additional extras for fine-tuning things</li>
+</ol>
+<p>There can be any number of feet and it can travel any amount of distance. The <code>Step Sequence</code> is how you're able to achieve different <em>kind</em> of walks.</p>
+<ul>
+<li>Walking</li>
+<li>Running</li>
+<li>Trotting</li>
+<li>Dancing</li>
+<li>Jumping</li>
+<li>...</li>
+</ul>
+<p>And the <code>Terrain</code> is how it can do this across geometry of any complexity.</p>
 <p><br></p>
 <h4 id="limitations">Limitations</h4>
-<p>Before we get too excited, let's talk about what this <em>can't</em> do. This technology generates locomotion from scratch, given:</p>
-<ol>
-<li>A starting position</li>
-<li>An ending position</li>
-<li>A "step sequence"</li>
-</ol>
-<p>However, it only understands 2 things.</p>
+<p>Let's talk about what cannot be solved with Ragdoll <code>Locomotion</code>.</p>
+<p>As of this release, it only understands 2 things.</p>
 <ol>
 <li>The body</li>
 <li>The foot</li>
@@ -2283,49 +2349,110 @@
 <li>8-legged creatures, e.g. spiders</li>
 <li>n-legged tentacle monsters</li>
 </ul>
-<p>The legs themselves aren't taken into consideration. Which might seem like it's not enough information to walk?! But, surprisingly, with only these 2 concepts, we'll be able achieve a large variety of locomotion.</p>
-<p>Let's put it this way, out of every possible locomotion, Ragdoll is currently able to automate just a tiny tiny portion of it.</p>
-<p><img width=400 src=https://user-images.githubusercontent.com/2152766/169239164-a849af77-40ac-4597-b60c-87ec92586910.png></p>
-<p><br></p>
-<h4 id="beta">Beta</h4>
-<p>One last thing about limitations, but more related to this particular Beta, is that out of all possible combinations of input you can give to Ragdoll, only a tiny tiny portion of that is actually "valid". For example, you can give Ragdoll an infinite mass, but Ragdoll cannot work with infinite masses. You can ask it to put a foot 3 kilometers away from the body, but it cannot find any reasonable solution to that request.</p>
-<p>So part of the challenge of this beta is finding the boundaries of what it actually can do, and that's where we could use your help!</p>
-<p>Now, with that out the way, let's look at what it <em>can</em> do!</p>
-<p><br></p>
-<h4 id="abilities">Abilities</h4>
-<p>Here's what we're aiming for with this release.</p>
-<p><a href="https://www.youtube.com/watch?v=k7cGyYaxUnI&amp;t=11s&amp;ab_channel=BBCEarth">https://www.youtube.com/watch?v=k7cGyYaxUnI&amp;t=11s&amp;ab_channel=BBCEarth</a></p>
-<p>To achieve this, you've got control over:</p>
-<ol>
-<li>The start and end positions of the body and feet</li>
-<li>The order and duration of steps, called a <code>Step Sequence</code></li>
-<li>An optional <code>Terrain</code> upon which to walk</li>
-</ol>
-<p>There can be any number of feet and it can travel any amount of distance. The <code>Step Sequence</code> is how you're able to achieve different <em>kind</em> of walks.</p>
-<ul>
-<li>Walking</li>
-<li>Running</li>
-<li>Trotting</li>
-<li>Dancing</li>
-<li>...</li>
-</ul>
-<p>And the <code>Terrain</code> is how it can do this across geometry of any complexity.</p>
-<p>Can you combine this with Markers? Yes!</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/169236391-7cab7ade-d28a-4640-88d2-af758ffef6e8.mp4" type="video/mp4"></video></p>
+<p>With that out the way, let's look at what it <em>can</em> do!</p>
 <p><br></p>
 <h4 id="workflow">Workflow</h4>
 <p>Here's what you do.</p>
 <ol>
 <li>Select body</li>
 <li>Select feet</li>
-<li>Go!</li>
+<li>Run <code>Assign Plan</code></li>
 </ol>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/169246610-19412246-a844-441a-baed-684628bf9585.mp4" type="video/mp4"></video></p>
-<p>And you can have multiple characters in the same scene too.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/169246630-09f93135-8da5-4781-8b75-bb35d246c767.mp4" type="video/mp4"></video></p>
+<div class="admonition question">
+<p class="admonition-title">Plan?</p>
+<p>The generated locomotion is the result of a "plan", meaning each of the inputs you give it. Including this initial selection.</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172054968-a9008c99-a1db-41e5-a83a-205b56a7a04a.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="press-t">Press T</h4>
+<p>Locomotion also has a manipulator, accessible by selecting the <code>rPlan</code> node and pressing <code>T</code> on your keyboard.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172054970-c4d5e81b-7b34-4b6a-8d5d-68bc63cc2562.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="background-processing">Background Processing</h4>
+<p>Locomotion is computed in the background.</p>
+<p>Normally, it'll take a second or two to compute 4-12 seconds worth of locomotion, and you can safely interact with Maya whilst it's running. It has <em>zero</em> impact on your overall Maya or character rig performance.</p>
+<p><br></p>
+<h4 id="rig-compatibility">Rig Compatibility</h4>
+<p>Anything from a box with a sphere for feet to the most complex digi-double will do.</p>
+<p>The rig in the above example is nothing special, as you've seen from the examples above this works on "rigs" as complex as a box and 2 spheres.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172054967-17bb7479-220d-4167-bf2e-af0f034f9b31.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="multiple-characters">Multiple Characters</h4>
+<p>You can have as many characters in the scene as you like.</p>
+<div class="admonition info">
+<p class="admonition-title">Parallelism</p>
+<p>These currently run 1 at a time, but the next release will unlock this to 1-per-core. Meaning you can have 128 characters computed in parallel on a 64-core AMD CPU. Now for what purpose could you ever need that many? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+</div>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172055339-02b84560-f6ff-4c5e-8471-d654f706796c.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="physics">Physics</h4>
+<p>Locomotion is an entirely separate "brain" that you may, or may not, want to combine with regular Markers.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/169236391-7cab7ade-d28a-4640-88d2-af758ffef6e8.mp4" type="video/mp4"></video></p>
+<p>Body and/or feet can be <code>Kinematic</code> or driven by a <code>Pin Constraint</code>, or anything inbetween.</p>
+<p><br></p>
+<h4 id="recording">Recording</h4>
+<p>Unlike a simulation, <code>Locomotion</code> is entirely <em>time independent</em>. So it isn't strictly necessary to record; it will run directly on your character rig.</p>
+<p>You can edit the locomotion as keyframes via Maya's native <code>Bake Results</code> command.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172055468-518ab838-015f-499f-8b1e-da4a2c6dc219.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="step-sequencer">Step Sequencer</h4>
+<p>This will become your new best friend. With an easily recognisable pattern for when to move your feet.</p>
+<ol>
+<li>Select <code>Sequencer Mode</code></li>
+<li>Hold <code>Shift</code> to paint</li>
+<li>Hold <code>Ctrl</code> to erase</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/171860660-f65512a1-083b-467d-8bde-9beebf17cb51.mp4" type="video/mp4"></video></p>
+<p>It can be used to produce a wide variety of locomotion, such as this frog sequence.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172054022-e32f83a4-4393-46ee-8c1d-7214c0d7702b.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="targets">Targets</h4>
+<p>Once you've figured <em>how</em> to get somewhere, next up is figuring out <em>where</em> to go.</p>
+<ol>
+<li>Select <code>Target Mode</code></li>
+<li>Select either <code>Start</code> or <code>End</code> of the body or foot</li>
+<li>Use the <code>Translate</code> gizmo to control the position of either <code>body</code> or <code>foot</code></li>
+<li>Use the <code>Rotate</code> gizmo to control the start and end orientation of the <code>body</code></li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/171860665-b4d68503-8bee-4eed-998b-0b9dcfa44c51.mp4" type="video/mp4"></video></p>
+<p>Use the <code>Rotate</code> gizmo to control the orientation of the body at the start or end positions.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172058732-eb20779d-6218-4993-99be-9ebfe2af8760.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="limits">Limits</h4>
+<p>Is your character jumping or limping? Maybe dancing? Limits control the area in which each foot is allowed to move.</p>
+<ol>
+<li>Select <code>Limit Mode</code></li>
+<li>Select the <code>body</code> to adjust the size of your character</li>
+<li>Select a <code>foot</code> to adjust the amount of motion a foot is allowed to have</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/171860667-a52fb518-70f0-4387-b922-63c3827c4254.mp4" type="video/mp4"></video></p>
+<p>Here's an example of how a short limit on one foot, and long steps with the other foot, can generate a wounded or limping locomotion.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172017979-8ccabe7a-ae54-4f80-8d1c-2c29fc67b8a4.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172017983-1b6207a8-910a-4801-8fca-3dd81beac54a.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="terrain">Terrain</h4>
 <p>Things can easily get more interesting by swapping out that flat ground with some geometry.</p>
+<p><br></p>
+<h3 id="quality-of-life">Quality of Life</h3>
+<p>In addition to locomotion, a few minor things were improved in this release.</p>
+<p><br></p>
+<h4 id="manipulator-constraints">Manipulator &amp; Constraints</h4>
+<p>With the previous release keeping track of the order in which you select things using the manipulator, this release carries on the trend by enabling constraints to be made from within the comfort of the Manipulator. 🤗</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172004986-9619f1b1-c8ff-4ef9-ab2b-1e85bf813dc7.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="manipulator-namespaces">Manipulator &amp; Namespaces</h4>
+<p>If you had 2 controls of the same name but in different namespaces, the Manipulator could get confused about which one you were actually editing.</p>
+<p>This has now been fixed.</p>
+<p><br></p>
+<h4 id="new-defaults">New Defaults</h4>
+<p>In response to feedback on the default values, 3 of them has seen an upgrade.</p>
+<ul>
+<li><code>Air Density = 1.0 -&gt; 0.1</code></li>
+<li><code>Substeps = 4 -&gt; 8</code></li>
+<li><code>Iterations = 4 -&gt; 8</code></li>
+</ul>
+<p>These can all be found on the <code>rSolver</code> node. And will result in more accurate simulation and less explosions. Bearing in mind that many simulations do not require this amount of substeps and iterations, and they come at the expense of performance. So if you find yourself in need of more juice, lower these back down to 4 or lower. If it looks right, it is right.</p>
                 
                   
                     
@@ -2334,7 +2461,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-05-22
+      Last update: 2022-06-06
     
   </small>
 </div>
