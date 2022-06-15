@@ -17,7 +17,7 @@
         <meta name="author" content="mottosso">
       
       <link rel="shortcut icon" href="../../favicon-256x256.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.1.6">
     
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
 
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -141,7 +141,7 @@
     
       <div class="md-header-nav__source">
         
-<a href="https://github.com/mottosso/ragdoll/" title="Go to repository" class="md-source">
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -171,7 +171,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -181,7 +181,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/mottosso/ragdoll/" title="Go to repository" class="md-source">
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -1391,6 +1391,24 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
+      <a href="../../releases/2022.06.15/" class="md-nav__link">
+        
+
+        2022.06.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
       <a href="../../releases/2022.06.09/" class="md-nav__link">
         
 
@@ -2495,7 +2513,9 @@
 <li>Run <code>Sphere</code> from the <code>Polygon Primitives</code> submenu of the <code>Create</code> main menu</li>
 <li>Translate the sphere to <code>Translate Y = 5.0</code></li>
 </ol>
-<details class="question"><summary>What about NURBS?</summary><p>Yes, if you prefer, you can also use a NURBS sphere.</p>
+<details class="question">
+<summary>What about NURBS?</summary>
+<p>Yes, if you prefer, you can also use a NURBS sphere.</p>
 </details>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130042846-17b46ae2-e8b1-432f-9382-945a7727f494.mp4" type="video/mp4"></video></p>
 <p><br></p>
@@ -2515,7 +2535,9 @@
 <li>Select <code>rMarker_pSphere1</code> in the Channel Box</li>
 <li>Set <code>Bounciness = 1.0</code></li>
 </ol>
-<details class="question"><summary>What does 1.0 mean?</summary><p>It means 100%! Technically, it means any force produced by the ball hitting the ground is reversed in its entirety with <em>no</em> loss of energy what-so-ever.</p>
+<details class="question">
+<summary>What does 1.0 mean?</summary>
+<p>It means 100%! Technically, it means any force produced by the ball hitting the ground is reversed in its entirety with <em>no</em> loss of energy what-so-ever.</p>
 </details>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166876150-52dae8fb-8939-4156-af05-365ee2b14b1d.mp4" type="video/mp4"></video></p>
 <p><br></p>
@@ -2526,7 +2548,9 @@
 <li>Select <code>rMarker_rGround</code> in the Channel Box</li>
 <li>Set <code>Bounciness = 1.0</code></li>
 </ol>
-<details class="question"><summary>Where did the ground come from?</summary><p>Ragdoll creates this ground automatically for you whenever the first marker is assigned. It can be disabled by setting <code>Create Ground = Off</code> in the <code>Assign Marker</code> option dialog.</p>
+<details class="question">
+<summary>Where did the ground come from?</summary>
+<p>Ragdoll creates this ground automatically for you whenever the first marker is assigned. It can be disabled by setting <code>Create Ground = Off</code> in the <code>Assign Marker</code> option dialog.</p>
 </details>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/166876506-4fd8da18-ef15-496f-b7ed-522d93a7388c.mp4" type="video/mp4"></video></p>
 <p><br></p>
@@ -2538,7 +2562,9 @@
 <li>Go to the <code>Advanced</code> tab in the <code>Attribute Editor</code></li>
 <li>Set <code>Bounce Threshold Velocity = 0.1</code></li>
 </ol>
-<details class="question"><summary>What does Bounce Threshold Velocity mean?</summary><p>It is how small of a bounce Ragdoll should consider to be a bounce, until it eventually stops it from bouncing.</p>
+<details class="question">
+<summary>What does Bounce Threshold Velocity mean?</summary>
+<p>It is how small of a bounce Ragdoll should consider to be a bounce, until it eventually stops it from bouncing.</p>
 <p>A value of <code>0.0</code> theoretically means the objects would <em>never</em> stop bouncing. No matter their <code>Bounciness</code>. Each bounce would simply get smaller and smaller into infinity!</p>
 <p>In the real world, objects would naturally come to a halt at some point due to friction in the air and along the surfaces of the two objects. With Ragdoll, we only have approximations of such things so as to make a simulation run in real-time, and as a result we need to manually tune this parameter until we find a value that suits our taste.</p>
 </details>
@@ -2550,7 +2576,9 @@
 <li>Select <code>rSolver</code></li>
 <li>Reduce <code>Air Density = 0.0</code></li>
 </ol>
-<details class="question"><summary>What is Air Density?</summary><p>This attribute can be used to emulate the effect air has on your simulation. It can be used to achieve effects <em>other</em> than air too.</p>
+<details class="question">
+<summary>What is Air Density?</summary>
+<p>This attribute can be used to emulate the effect air has on your simulation. It can be used to achieve effects <em>other</em> than air too.</p>
 <table>
 <thead>
 <tr>
@@ -2648,7 +2676,9 @@
 
 <p>See how despite this most definitely <em>not</em> being a simulation (or is it?) we are <em>still</em> getting bounces that don't actually touch the ground! The reason is simply that a camera can only capture <em>moments</em> of reality. It can only <em>sample</em> it.</p>
 <p>In this case, the ball <em>did</em> touch the floor, but the camera caught at a slightly different time. Shortly before and after contact. This is how you can think of Ragdoll too; a camera for physics.</p>
-<details class="question"><summary>Can you overeducate me?</summary><p>With pleasure. 😁 Let's look at <em>audio</em>.</p>
+<details class="question">
+<summary>Can you overeducate me?</summary>
+<p>With pleasure. 😁 Let's look at <em>audio</em>.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/130089957-7261ab3b-a0ab-4861-933a-f034d4debcee.png" /></p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)">Wikipedia Reference</a></li>
@@ -2656,10 +2686,14 @@
 <p>Notice how sound itself, represented by the curved line, is continuous - of infinite resolution - and that what we capture in our computers are samples of it, at some fixed resolution - typically at 44,000 fps or as it is more commonly known <code>44khz</code>.</p>
 <p>Ragdoll works like this too. Physics is continous, but Ragdoll can only provide you with snapshots of physics at a fixed resolution; the resolution of your framerate.</p>
 </details>
-<details class="question"><summary>Is every bouncing ball tutorial on YouTube wrong?</summary><p>A typical bouncing ball tutorial has the ball come into contact on whole frames. But because the time between each bounce is decreasing, it is <em>impossible</em> for every bounce to land on a whole frame.</p>
+<details class="question">
+<summary>Is every bouncing ball tutorial on YouTube wrong?</summary>
+<p>A typical bouncing ball tutorial has the ball come into contact on whole frames. But because the time between each bounce is decreasing, it is <em>impossible</em> for every bounce to land on a whole frame.</p>
 <p>So in a way, yes, they are wrong! Science says so!</p>
 </details>
-<details class="question"><summary>Should I change the way I animate?</summary><p>Well, it depends. Take motion blur for example.</p>
+<details class="question">
+<summary>Should I change the way I animate?</summary>
+<p>Well, it depends. Take motion blur for example.</p>
 <p>Because you see, the final position from a video recorded tennis ball is only half the story. Motion blur isn't the result of only these samples, but of the <em>actual</em> continous motion. As light hits the lens inbetween the shutter opening and closing, the ball is still moving.</p>
 <p>To accurately reproduce this effect in your animation or with Ragdoll, you still need those inbetween positions of the ball. Just so that your renderer can throw those away once it's done computing motion blur.</p>
 <p>Even without motion blur, your eyes and brain still interprets the ball not hitting the ground as though it floats or hits an invisible obstacle. So for the greatest sense of realism when everything has been said and done and the images actually reach your eyes (brain), you may <em>still</em> want to defy physics and realism.</p>
@@ -2724,17 +2758,6 @@
 <p>To address this, increase the threshold until it stops.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/130202749-db01636e-402a-4a4d-ac4b-932eb1795828.mp4" type="video/mp4"></video></p>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2022-05-07
-    
-  </small>
-</div>
                   
                 
               
@@ -2808,7 +2831,7 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
