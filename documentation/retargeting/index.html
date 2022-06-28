@@ -461,6 +461,26 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
+      <a href="../locomotion/" class="md-nav__link">
+        
+        <img src="/icons/plan_black.png">
+        
+
+        Locomotion
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
       <a href="../constraints/" class="md-nav__link">
         
         <img src="/icons/constraint_black.png">
@@ -613,26 +633,60 @@
     Retarget
   </a>
   
+    <nav class="md-nav" aria-label="Retarget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    Warnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-demo" class="md-nav__link">
+    Complete Demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reassign" class="md-nav__link">
     Reassign
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#reparent" class="md-nav__link">
     Reparent
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#untarget" class="md-nav__link">
     Untarget
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2205,26 +2259,60 @@
     Retarget
   </a>
   
+    <nav class="md-nav" aria-label="Retarget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    Warnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-demo" class="md-nav__link">
+    Complete Demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reassign" class="md-nav__link">
     Reassign
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#reparent" class="md-nav__link">
     Reparent
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#untarget" class="md-nav__link">
     Untarget
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2254,14 +2342,63 @@
 
 <p>Assign to joints, record to controls.</p>
 <p><br></p>
-<h4 id="retarget">Retarget</h4>
-<p>Any moderately complex character will have parts better suited for capturing and others for recording onto.</p>
-<p>For example, in order to control a simulation with IK controls, we must first assign Markers onto the underlying joints driven by those IK controls. Then, we <em>retarget</em> those joints back onto the IK controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145726981-69480bda-62df-475a-87d5-0c243c79be8d.mp4" type="video/mp4"></video></p>
-
-<p>In this example, markers are assigned to the upper body controls, but then to the joints of the lower body. We don't want keyframes on these joints, so we <em>retarget</em> these keyframes onto the IK controls.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145726993-3bfb60a2-cc13-4b95-b6f2-8fa62f0a1a7e.mp4" type="video/mp4"></video></p>
-
+<h3 id="retarget">Retarget</h3>
+<p>You can visually see where keyframes go upon running <code>Record Simulation</code>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/165936832-f7801f75-2b11-40c0-868f-fdbf9f06e98e.png" /></p>
+<p><br></p>
+<h4 id="usage">Usage</h4>
+<p>Let's take a look at what this UI is, what it can do for you and when to use it.</p>
+<ul>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=0">00:00</a> Why a UI?</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=30">00:30</a> How to previously spot a retarget</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=90">01:30</a> Spotting suspicious targets</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=131">02:11</a> Warning indicator</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=155">02:30</a> Untarget</li>
+<li><a href="https://youtu.be/uQ-gCUidcJE?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=162">02:42</a> Retarget</li>
+</ul>
+<p><a href="https://youtu.be/uQ-gCUidcJE"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201292-ca02a9ad-d358-48f8-a227-f2dbaad8c6e0.png" /></a></p>
+<p><br></p>
+<h4 id="warnings">Warnings</h4>
+<p>The UI can help you spot problems with recording, before recording happens.</p>
+<ul>
+<li><a href="https://youtu.be/vM0LMnSookQ?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=0">00:00</a> Constrained Channels</li>
+<li><a href="https://youtu.be/vM0LMnSookQ?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=8">00:08</a> Locked Channels</li>
+<li><a href="https://youtu.be/vM0LMnSookQ?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=60">00:60</a> Keyframed Channels</li>
+<li><a href="https://youtu.be/vM0LMnSookQ?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=71">00:71</a> Hidden Channels</li>
+</ul>
+<p><a href="https://youtu.be/vM0LMnSookQ"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201189-e8eea447-fb37-4724-af4c-dc4c7b0b2f6b.png" /></a></p>
+<p>In this case, some of our markers are retargeted onto joints that are driven by some other object. If we were to attempt to record these, it's unclear what the result should be.</p>
+<ol>
+<li>Should they retain their connection to the thing already driving them?</li>
+<li>Or should they abandon that, and become keyframed by the simulation?</li>
+</ol>
+<p>Neither of these are a great pick, since we don't want to break the rig, but we also want our simulation to go <em>somewhere</em>.</p>
+<p><br></p>
+<h4 id="workflow">Workflow</h4>
+<p>Once you've assigned your markers, grab a clean slate and gain complete control over where animation is to be recorded.</p>
+<ul>
+<li><a href="https://youtu.be/QKY3w3pyWTI?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=0">00:00</a> Intro</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=18">00:18</a> Untarget everything</li>
+<li><a href="https://youtu.be/QKY3w3pyWTI?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=25">00:25</a> Retarget one at a time</li>
+</ul>
+<p><a href="https://youtu.be/QKY3w3pyWTI"><img alt="image" src="https://user-images.githubusercontent.com/2152766/166201125-9c4327b3-d912-4fd6-b851-48a4028b1c8e.png" /></a></p>
+<p><br></p>
+<h4 id="complete-demo">Complete Demo</h4>
+<p>And finally, here's a longer-form example of a full setup of the Truong Dragon that we did a livestream on a while back.</p>
+<ul>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=0">00:00</a> Assigning Markers</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=18">00:38</a> Spine Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=61">01:01</a> Wing Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=87">01:27</a> IK Legs</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=140">02:20</a> IK Shapes</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=167">02:37</a> Tail</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=188">03:08</a> Retargeting</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=220">03:40</a> IK Retargeting</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=276">04:36</a> Test Animation</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=300">05:00</a> Mass Distribution</li>
+<li><a href="https://youtu.be/Zf-aNFNpnT8?list=PLL4XIS5Woc6n89Mn_G394Y4RCuPLdVibP&amp;t=336">05:36</a> Record</li>
+</ul>
+<p><a href="https://youtu.be/Zf-aNFNpnT8"><img alt="" src="https://user-images.githubusercontent.com/2152766/166235869-1be2824f-60fc-463c-8aa7-b2c132ac122c.png" /></a></p>
 <p><br></p>
 <h4 id="reassign">Reassign</h4>
 <p>The opposite of Retarget.</p>
