@@ -562,6 +562,19 @@
     Multiple Characters
   </a>
   
+    <nav class="md-nav" aria-label="Multiple Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-processing" class="md-nav__link">
+    Parallel Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -602,13 +615,6 @@
         <li class="md-nav__item">
   <a href="#terrain" class="md-nav__link">
     Terrain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parallel-locomotion" class="md-nav__link">
-    Parallel Locomotion
   </a>
   
 </li>
@@ -2358,6 +2364,19 @@
     Multiple Characters
   </a>
   
+    <nav class="md-nav" aria-label="Multiple Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-processing" class="md-nav__link">
+    Parallel Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2398,13 +2417,6 @@
         <li class="md-nav__item">
   <a href="#terrain" class="md-nav__link">
     Terrain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parallel-locomotion" class="md-nav__link">
-    Parallel Locomotion
   </a>
   
 </li>
@@ -2495,7 +2507,7 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/170711541-1c04909d-f38d-480f-8bec-9cc308d29f44.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="abilities">Abilities</h3>
-<p>Here's what we're aiming for with this release.</p>
+<p>Here's what we're aiming for with this feature.</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=k7cGyYaxUnI&amp;t=11s&amp;ab_channel=BBCEarth">Full clip</a></li>
 </ul>
@@ -2520,7 +2532,7 @@
 <p><br></p>
 <h3 id="limitations">Limitations</h3>
 <p>Let's talk about what cannot be solved with Ragdoll <code>Locomotion</code>.</p>
-<p>As of this release, it only understands 2 things.</p>
+<p>Currently, it only understands 2 things.</p>
 <ol>
 <li>The body</li>
 <li>The foot</li>
@@ -2556,11 +2568,17 @@
 <p><br></p>
 <h3 id="multiple-characters">Multiple Characters</h3>
 <p>You can have as many characters in the scene as you like.</p>
-<div class="admonition info">
-<p class="admonition-title">Parallelism</p>
-<p>These currently run 1 at a time, but the next release will unlock this to 1-per-core. Meaning you can have 128 characters computed in parallel on a 64-core AMD CPU. Now for what purpose could you ever need that many? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
-</div>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172055339-02b84560-f6ff-4c5e-8471-d654f706796c.mp4" type="video/mp4"></video></p>
+<h4 id="parallel-processing">Parallel Processing</h4>
+<p>That's right! If 1 character takes 2 seconds to compute, 5 characters also takes 2 seconds to compute. Or 10 characters, or <em>100 characters</em>. 2 seconds in total, that's all you'd have to wait, up to the number of cores on your system.</p>
+<p>As core-count continues to increase in our machines, you can expect the number of characters being run in parallel to increase as well, up to the level of full crowds; each individual character a unique and precise sequence of steps that conform to their environment.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/173349636-739ab947-80e3-4253-804d-03e937db7a97.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Juice Left</p>
+<p>There is still a little bit of juice left to squeeze.</p>
+<p>At the moment, if Ragdoll detects <em>any</em> relation between one plan and another, it will run these one-by-one.</p>
+<p>Normally, this is not the case, but if you for example connect the output of one plan to the input of another, there isn't much that can be done other than wait for one to finish. However this can also happen when unrelated things are connected, such as your character being connected to two plans, such that you can blend between them. This is too much, and will be addressed in a future release. Subtle balance!</p>
+</div>
 <p><br></p>
 <h3 id="physics">Physics</h3>
 <p>Locomotion is an entirely separate "brain" that you may, or may not, want to combine with regular Markers.</p>
@@ -2612,17 +2630,6 @@
 <p>Things can easily get more interesting by swapping out that flat ground with some geometry.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/172918452-b9890082-9a29-4caf-a147-849aa0a38078.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="parallel-locomotion">Parallel Locomotion</h3>
-<p>That's right! If 1 character takes 2 seconds to compute, 5 characters also takes 2 seconds to compute. Or 10 characters, or <em>100 characters</em>. 2 seconds in total, that's all you'd have to wait, up to the number of cores on your system.</p>
-<p>As core-count continues to increase in our machines, you can expect the number of characters being run in parallel to increase as well, up to the level of full crowds; each individual character a unique and precise sequence of steps that conform to their environment.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/173349636-739ab947-80e3-4253-804d-03e937db7a97.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Juice Left</p>
-<p>There is still a little bit of juice left to squeeze.</p>
-<p>At the moment, if Ragdoll detects <em>any</em> relation between one plan and another, it will run these one-by-one.</p>
-<p>Normally, this is not the case, but if you for example connect the output of one plan to the input of another, there isn't much that can be done other than wait for one to finish. However this can also happen when unrelated things are connected, such as your character being connected to two plans, such that you can blend between them. This is too much, and will be addressed in a future release. Subtle balance!</p>
-</div>
-<p><br></p>
 <h3 id="shift-to-toggle">Shift to Toggle</h3>
 <p>You can choose whether to use the Shift and Control keys to add and remove steps in the Locomotion Step Sequencer, or whether to use Shift for both. Dragging over a filled step will erase it, whereas dragging over an unfilled step will fill it. A toggle!</p>
 <!--  -->
@@ -2635,7 +2642,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-06-29
+      Last update: 2022-07-12
     
   </small>
 </div>

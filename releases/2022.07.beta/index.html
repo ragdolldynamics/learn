@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="There isn't any">
+        <meta name="description" content="A bunch of little things">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.06.19/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.07.beta/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>... - Learn Ragdoll</title>
+        <title>Quality of Life - Learn Ragdoll</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ...
+              Quality of Life
             
           </span>
         </div>
@@ -2159,6 +2159,41 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#simplified-density" class="md-nav__link">
+    Simplified Density
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frameskip-default" class="md-nav__link">
+    Frameskip Default
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignore-mass" class="md-nav__link">
+    Ignore Mass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-solver-attributes" class="md-nav__link">
+    Import Solver Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-selection-for-record" class="md-nav__link">
+    Use Selection for Record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fields-crash" class="md-nav__link">
     Fields Crash
   </a>
@@ -2179,6 +2214,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#non-deterministic-convex-hull" class="md-nav__link">
+    Non-deterministic Convex Hull
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewport-refresh" class="md-nav__link">
+    Viewport Refresh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locomotion-crash" class="md-nav__link">
+    Locomotion Crash
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2192,29 +2248,34 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.06.19.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.07.beta.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>...</h1>
+                  <h1>Quality of Life</h1>
                 
                 <ul>
 <li><a href=""><strong>ADDED</strong> Closed Loop Recording</a> Faster and more robust recording!</li>
-<li><a href=""><strong>ADDED</strong> Limit Constraint</a> Extra limits, good for mechanical</li>
+<li><a href=""><strong>ADDED</strong> Limit Constraint</a> Extra limits, good for mechanical contraptions</li>
+<li><a href="#frameskip-default"><strong>ADDED</strong> New Frameskip Default</a> More intuitive, less surprising skipped frames</li>
+<li><a href="#simplified-density"><strong>ADDED</strong> Simplified Density</a> No more types, just a number</li>
 <li><a href=""><strong>ADDED</strong> Attach Constraint</a> Like a Weld Constraint, but soft and animated</li>
-<li><a href=""><strong>ADDED</strong> Frameskip Ignore</a></li>
-<li><a href=""><strong>FIXED</strong> Import Solver Attributes</a></li>
-<li><a href=""><strong>FIXED</strong> Use Selection for Record and Snap</a></li>
+<li><a href="#frameskip-default"><strong>ADDED</strong> Frameskip Ignore</a> A more intuitive behaviour when skipping frmaes</li>
+<li><a href="#ignore-mass"><strong>ADDED</strong> Ignore Mass</a> More predictable stiffness</li>
+<li><a href="#import-solver-attributes"><strong>FIXED</strong> Import Solver Attributes</a> Minor bug squashes!</li>
+<li><a href="#use-selection-for-record"><strong>FIXED</strong> Use Selection for Record and Snap</a> The Use Selection option now works as expected</li>
 <li><a href="#group-enable"><strong>FIXED</strong> Group Enable</a> Enable and disable markers of a group, all at once</li>
 <li><a href=""><strong>FIXED</strong> Locomotion Update Button</a> Update button could become stuck and unclickable</li>
 <li><a href="#empty-terrain"><strong>FIXED</strong> Locomotion Empty Terrain</a> More robust handling of terrain</li>
 <li><a href="#predictable-enabled-state"><strong>FIXED</strong> Predictable Enabled Attribute</a></li>
-<li><a href=""><strong>FIXED</strong> Infinite Terrain</a></li>
+<li><a href="#infinite-terrain"><strong>FIXED</strong> Infinite Terrain</a></li>
 <li><a href=""><strong>WARNING</strong> Non-deterministic auto convex hull</a></li>
 <li><a href="#fields-crash"><strong>FIXED</strong> Fields Crash</a></li>
 <li><a href="#solver-bounding-box"><strong>FIXED</strong> Solver Bounding Box</a></li>
 <li><a href="#locomotion-on-linux"><strong>FIXED</strong> Locomotion on Linux</a> A blunder in the last release prevented use on Linux</li>
+<li><a href="#viewport-refresh"><strong>FIXED</strong> Viewport Refresh</a> Meshes and limits sometimes would not refresh properly</li>
+<li><a href="#locomotion-crash"><strong>FIXED</strong> Locomotion Crash</a> Occasional crash on scene-open with a plan in your scene</li>
 </ul>
 <p><br></p>
 <h3 id="predictable-enabled-state">Predictable Enabled State</h3>
@@ -2231,7 +2292,33 @@
 <p>It works. That isn't particularly intuitive, and has now been fixed!</p>
 <p><br></p>
 <h3 id="infinite-terrain">Infinite Terrain</h3>
-<p>Ragdoll makes a "heightmap" from the mesh you provide as a terrain.</p>
+<p>If you provide Locomotion with a terrain, it will generate a heightmap from it. Where there wasn't geometry, such as outside the borders of the geometry or inside of holes, it would struggle to figure out what to do.</p>
+<p>This release now extends your terrain in every direction, such that you get more what you'd expect.</p>
+<p><br></p>
+<h3 id="simplified-density">Simplified Density</h3>
+<p>Fewer options for working with density, now it's just a single number.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/178429590-c71261d7-2163-46df-a6fc-359c78f46aed.mp4" type="video/mp4"></video></p>
+<p>As it turns out, the presets were really limiting and was rarely a good fit for anything. And they didn't make intuitive sense either. "Uranium"? I don't know how heavy that is, when should I use it?</p>
+<p>So instead, a single <code>Density</code> value with a default value of <code>1</code> remains. This is the previous <code>Density Custom</code> attribute with a shorter name, so if you were already using this attribute then you already know what to expect.</p>
+<p>With a special density of <code>0</code> you'll be greeted by the <code>Mass</code> attribute to disable automatically computing mass from the size and volume of your shape.</p>
+<p><br></p>
+<h3 id="frameskip-default">Frameskip Default</h3>
+<p>When a frame is skipped, Ragdoll would normally pause simulation and wait for you to return to the last successfully simulated frame. This ensures that the simulation always produces the same result each time you play. But also means it is unable to solve if Maya skips a frame, as can happen when a rig is especially heavy or when playing back with Audio.</p>
+<p>This mode is called <code>Pause</code> and the alternative is a mode called <code>Ignore</code> which will continue solving even though it isn't given each and every frame.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/178108006-d2d13028-6de5-43f9-b3fb-6757ad8e9b1f.png" /></p>
+<p><code>Ignore</code> is now the new default, to avoid surprises especially for beginners who might not know why simulation suddenly stops for no apparent reason. You are still advised to stick with <code>Pause</code> especially towards the end of fine-tuning your work. That's the only mode in which Ragdoll can guarantee that each and every playthrough is identical unless you have actually changed something in your animation.</p>
+<p><br></p>
+<h3 id="ignore-mass">Ignore Mass</h3>
+<p>You can now choose to work with <code>Stiffness</code> values without worrying about the weight of markers.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/178421897-b04eaf58-74f8-40cc-920b-ed3be47b49dd.mp4" type="video/mp4"></video></p>
+<p>This can help get a better understanding of what a value of 1 means, as it would no longer depend on the mass of a marker, which is automatically computed per default. The marker would retain its mass, such that if a heavy marker fell on a light marker it would still act accordingly. But the stiffness values would act as though they weighed the same.</p>
+<p>Should this be enabled per default? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /> What are the consequences of this option? Let's find out!</p>
+<p><br></p>
+<h3 id="import-solver-attributes">Import Solver Attributes</h3>
+<p>A bug was found whereby the attributes from your solver would get exported properly, but not imported! This has now been fixed.</p>
+<p><br></p>
+<h3 id="use-selection-for-record">Use Selection for Record</h3>
+<p>The previous release broke the <code>Use Selection</code> option for <code>Record Simulation</code> and <code>Snap to Simulation</code> commands. This has now been fixed!</p>
 <p><br></p>
 <h3 id="fields-crash">Fields Crash</h3>
 <p>A bug was found (thanks Andrei!) whereby having fields on your scene could cause a crash. This was related to the field trying to also affect the "world" rather than just the markers. This has now been fixed.</p>
@@ -2243,6 +2330,15 @@
 <h3 id="locomotion-on-linux">Locomotion On Linux</h3>
 <p>We spent a lot of effort getting Locomotion running on Linux, only to trip over our own feet for release and include a spelling error in the Maya <code>.mod</code> file causing Ragdoll to not find the Locomotion executable!</p>
 <p>This has now been fixed, Linux users unite!</p>
+<p><br></p>
+<h3 id="non-deterministic-convex-hull">Non-deterministic Convex Hull</h3>
+<p><br></p>
+<h3 id="viewport-refresh">Viewport Refresh</h3>
+<p>Disabling and enabling a marker could sometimes leave it behind in the viewport, until the solver was hidden and unhidden, or the scene reloaded.</p>
+<p>This has now been fixed.</p>
+<p><br></p>
+<h3 id="locomotion-crash">Locomotion Crash</h3>
+<p>Ragdoll could sometimes bring Maya down when opening a scene containing a plan, for locomotion. This happened due to some really intricate memory and threading issues that you would not be interested in knowing more about. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /> Rest assured, this has now been fixed!</p>
                 
                   
                     
@@ -2251,7 +2347,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-06-22
+      Last update: 2022-07-12
     
   </small>
 </div>
