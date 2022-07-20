@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A bunch of little things">
+        <meta name="description" content="Baking, converting and import/export of meshes">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.07.beta/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.07.20/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Quality of Life - Learn Ragdoll</title>
+        <title>Meshes Meshes Meshes - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#predictable-enabled-state" class="md-skip">
+        <a href="#showcase" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quality of Life
+              Meshes Meshes Meshes
             
           </span>
         </div>
@@ -1182,6 +1182,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1190,7 +1192,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1200,7 +1202,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1221,6 +1223,251 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2022.07.20
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2022.07.20
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raggraph" class="md-nav__link">
+    Raggraph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translate-rotate-stiffness" class="md-nav__link">
+    Translate Rotate Stiffness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-export-import" class="md-nav__link">
+    Mesh Export Import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-decomposition-20" class="md-nav__link">
+    Convex Decomposition 2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-to-mesh" class="md-nav__link">
+    Convert to Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-constraint" class="md-nav__link">
+    Attach Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#closed-loop-recording" class="md-nav__link">
+    Closed Loop Recording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-constraint-axes" class="md-nav__link">
+    Pin Constraint Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictable-enabled-state" class="md-nav__link">
+    Predictable Enabled State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-terrain" class="md-nav__link">
+    Infinite Terrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-density" class="md-nav__link">
+    Simplified Density
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore-mass" class="md-nav__link">
+    Ignore Mass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frameskip-default" class="md-nav__link">
+    Frameskip Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-geometry" class="md-nav__link">
+    Output Geometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-hud" class="md-nav__link">
+    Cache HUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-stuck-at-0" class="md-nav__link">
+    Record Stuck at 0%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-solver-attributes" class="md-nav__link">
+    Import Solver Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-selection-for-record" class="md-nav__link">
+    Use Selection for Record
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-crash" class="md-nav__link">
+    Fields Crash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver-bounding-box" class="md-nav__link">
+    Solver Bounding Box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locomotion-on-linux" class="md-nav__link">
+    Locomotion On Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport-refresh" class="md-nav__link">
+    Viewport Refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locomotion-crash" class="md-nav__link">
+    Locomotion Crash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2145,93 +2392,183 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raggraph" class="md-nav__link">
+    Raggraph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translate-rotate-stiffness" class="md-nav__link">
+    Translate Rotate Stiffness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-export-import" class="md-nav__link">
+    Mesh Export Import
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-decomposition-20" class="md-nav__link">
+    Convex Decomposition 2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-to-mesh" class="md-nav__link">
+    Convert to Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-constraint" class="md-nav__link">
+    Attach Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#closed-loop-recording" class="md-nav__link">
+    Closed Loop Recording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-constraint-axes" class="md-nav__link">
+    Pin Constraint Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#predictable-enabled-state" class="md-nav__link">
     Predictable Enabled State
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#infinite-terrain" class="md-nav__link">
     Infinite Terrain
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#simplified-density" class="md-nav__link">
     Simplified Density
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#frameskip-default" class="md-nav__link">
-    Frameskip Default
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ignore-mass" class="md-nav__link">
     Ignore Mass
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#frameskip-default" class="md-nav__link">
+    Frameskip Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-geometry" class="md-nav__link">
+    Output Geometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-hud" class="md-nav__link">
+    Cache HUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-stuck-at-0" class="md-nav__link">
+    Record Stuck at 0%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#import-solver-attributes" class="md-nav__link">
     Import Solver Attributes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#use-selection-for-record" class="md-nav__link">
     Use Selection for Record
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fields-crash" class="md-nav__link">
     Fields Crash
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#solver-bounding-box" class="md-nav__link">
     Solver Bounding Box
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#locomotion-on-linux" class="md-nav__link">
     Locomotion On Linux
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#non-deterministic-convex-hull" class="md-nav__link">
-    Non-deterministic Convex Hull
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#viewport-refresh" class="md-nav__link">
     Viewport Refresh
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#locomotion-crash" class="md-nav__link">
     Locomotion Crash
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2248,21 +2585,29 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.07.beta.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.07.20.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Quality of Life</h1>
+                  <h1>2022.07.20</h1>
                 
-                <ul>
-<li><a href=""><strong>ADDED</strong> Closed Loop Recording</a> Faster and more robust recording!</li>
-<li><a href=""><strong>ADDED</strong> Limit Constraint</a> Extra limits, good for mechanical contraptions</li>
+                <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179921416-8779fc69-e5e1-4342-8974-cd74e4896c37.png" /></p>
+<p>Highlight for this release is <strong>Meshes meshes meshes!</strong></p>
+<ul>
+<li><a href="#translate-rotate-stiffness"><strong>ADDED</strong> Translate &amp; Rotate Stiffness</a> Simplified "Pose Stiffness"</li>
+<li><a href="#mesh-export-import"><strong>ADDED</strong> Mesh Export &amp; Imoprt</a> Meshes are now included when exporting and importing!</li>
+<li><a href="##attach-constraint"><strong>ADDED</strong> Attach Constraint</a> Like a Weld Constraint, but soft and animated</li>
+<li><a href="#closed-loop-recording"><strong>ADDED</strong> Closed Loop Recording</a> Alternatively recording strategy</li>
+<li><a href="#pin-constraint-axes"><strong>ADDED</strong> Pin Constraint Axes</a> Fine-grained control over each axis of a pin constraint</li>
 <li><a href="#frameskip-default"><strong>ADDED</strong> New Frameskip Default</a> More intuitive, less surprising skipped frames</li>
+<li><a href="#output-geometry"><strong>ADDED</strong> Output Geometry</a> You can now generate Maya geometry from a Ragdoll Convex Hull</li>
 <li><a href="#simplified-density"><strong>ADDED</strong> Simplified Density</a> No more types, just a number</li>
-<li><a href=""><strong>ADDED</strong> Attach Constraint</a> Like a Weld Constraint, but soft and animated</li>
-<li><a href="#frameskip-default"><strong>ADDED</strong> Frameskip Ignore</a> A more intuitive behaviour when skipping frmaes</li>
+<li><a href="#convex-decomposition-2-0"><strong>ADDED</strong> Convex Decomposition 2.0</a> More performance, simpler interface</li>
+<li><a href="#frameskip-default"><strong>ADDED</strong> Frameskip Ignore</a> A more intuitive behaviour when skipping frames</li>
 <li><a href="#ignore-mass"><strong>ADDED</strong> Ignore Mass</a> More predictable stiffness</li>
+<li><a href="#cache-hud"><strong>ADDED</strong> Cache HUD</a> More accessible cache options</li>
+<li><a href="#record-stuck"><strong>FIXED</strong> Record Stuck at 0%</a> Fix for a semi-common recording issue</li>
 <li><a href="#import-solver-attributes"><strong>FIXED</strong> Import Solver Attributes</a> Minor bug squashes!</li>
 <li><a href="#use-selection-for-record"><strong>FIXED</strong> Use Selection for Record and Snap</a> The Use Selection option now works as expected</li>
 <li><a href="#group-enable"><strong>FIXED</strong> Group Enable</a> Enable and disable markers of a group, all at once</li>
@@ -2276,9 +2621,200 @@
 <li><a href="#locomotion-on-linux"><strong>FIXED</strong> Locomotion on Linux</a> A blunder in the last release prevented use on Linux</li>
 <li><a href="#viewport-refresh"><strong>FIXED</strong> Viewport Refresh</a> Meshes and limits sometimes would not refresh properly</li>
 <li><a href="#locomotion-crash"><strong>FIXED</strong> Locomotion Crash</a> Occasional crash on scene-open with a plan in your scene</li>
+<li><a href="#cacheless-save"><strong>FIXED</strong> Cacheless Save</a> Fresh simulation on every scene open</li>
 </ul>
 <p><br></p>
-<h3 id="predictable-enabled-state">Predictable Enabled State</h3>
+<h3 id="showcase">Showcase</h3>
+<p>We've launched a Ragdoll Challenge since the last release, here are some highlights!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/ragdoll-july-challenge/351/23">July Challenge</a></li>
+</ul>
+<p><strong>Crabomotion</strong></p>
+<p>From the ongoing competition by Kaehwai.</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/got-a-plan/464">https://forums.ragdolldynamics.com/t/got-a-plan/464</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722459-90002d26-c3bf-4f03-8d42-36ef08280383.mp4" type="video/mp4"></video></p>
+<p><strong>Hands</strong></p>
+<p>By V4NDL0 on the forums.</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/crab-competition/399">https://forums.ragdolldynamics.com/t/crab-competition/399</a></li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722463-26ad1f76-7643-46be-b7e8-34bc56a13736.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722475-dc1b57b1-b0c7-47e1-a3a4-e34156488690.mp4" type="video/mp4"></video></p>
+<p><strong>Jason</strong></p>
+<p>Some clips from Jason's LinkedIn feed over the past 2 weeks.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722493-814cd27f-4c52-417d-94d3-d4e7127582a2.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722496-4cb418fd-9884-4f5e-8727-5a9d4ff3bac7.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722503-42ad21ac-3e83-4791-b294-579ef89b08ef.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722511-7f2f92dd-ff5b-4e6d-b04e-8257ef0884ff.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179722513-251ff2f0-0a50-4ffb-9284-085281fbd4e4.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="raggraph">Raggraph</h3>
+<p>In August, we're heading to Siggraph 2022 in Vancouver! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/siggraph-2022">https://forums.ragdolldynamics.com/t/siggraph-2022</a></li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179920130-ae6fe751-2fa5-4c1a-9327-fd342475ba44.png" /></p>
+<p>We'll be over here, at <strong>booth 442</strong>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179921073-f5c06875-9d31-42a8-9ffb-097de4176b38.png" /></p>
+<p>Running a handful of demos of how Locomotion works under the hood (hint: robotics tech!) along with the basics of Ragdoll.</p>
+<p>Our booth will look something like this.</p>
+<p><img alt="siggraphbooth" src="https://user-images.githubusercontent.com/2152766/179920802-30661e81-3551-4266-bcc1-9703d47a87e5.png" /></p>
+<p>We'll be wearing t-shirts that look like this.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179920925-59725126-5f5e-487e-b373-1fbebc5cea97.png" /></p>
+<p>And have some nice banners that look like this.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179920990-1b83b883-ce26-4f5c-a54f-9829de503849.png" /></p>
+<p>Preliminary schedule looks like this.</p>
+<ul>
+<li>Aug 9<sup>th</sup>:<ul>
+<li>11:00 Intro with manikin</li>
+<li>13:00 Dragon rig setup</li>
+<li>14:00 Dneg</li>
+<li>15:00 Requests</li>
+<li>18:00 End</li>
+</ul>
+</li>
+<li>Aug 10<sup>th</sup>:<ul>
+<li>10:00 Hands and fingers</li>
+<li>11:00 Self-walking rhino</li>
+<li>14:00 Dneg</li>
+<li>15:00 Requests</li>
+<li>18:00 End</li>
+</ul>
+</li>
+<li>Aug 11<sup>th</sup>:<ul>
+<li>10:00 Locomotion</li>
+<li>11:00 Dneg</li>
+<li>13:00 Best of/Requests</li>
+<li>16:00 End</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h3 id="translate-rotate-stiffness">Translate Rotate Stiffness</h3>
+<p>The most important and complex aspect of Ragdoll are the Pose parameters.</p>
+<ul>
+<li><code>Pose Stiffness</code></li>
+<li><code>Pose Damping</code></li>
+<li><code>Pose Space</code></li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179751321-fa5bb674-0ab6-4107-a4b0-794bbf199c75.png" /></p>
+<p>In an effort to simplify these attributes, you'll now find an alternative - <em>experimental</em> - set of attributes.</p>
+<ul>
+<li><code>Translate Stiffness</code></li>
+<li><code>Translate Damping</code></li>
+<li><code>Rotate Stiffness</code></li>
+<li><code>Rotate Damping</code></li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179751500-682e4797-4eef-40f3-b103-b0cd4819a97d.png" /></p>
+<p>A <code>Translate Stiffness = -1</code> means "infinite" or "locked". It's the equivalent of <code>Translate Motion = Locked</code>.</p>
+<p>Use the new option in the <code>Assign</code> option box to enable these.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179751635-aede0b92-0426-4590-8c06-4b6b4b351fc7.png" /></p>
+<p><br></p>
+<h3 id="mesh-export-import">Mesh Export Import</h3>
+<p>Any replaced mesh is now included in the exported <code>.rag</code> file, enabling you to import meshes onto characters that are missing the originally replaced mesh.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179751725-15fdd203-0b3e-4221-9bc2-8f27f826dbf4.mp4" type="video/mp4"></video></p>
+<p>This should help keep both scene files and rag files clean and self-contained!</p>
+<p>To the programmers out there, the <code>.rag</code> file now features this section.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;ConvexMeshComponents&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;indices&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;UintArray&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="mi">1</span><span class="p">,</span>
+                <span class="mi">2</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;vertices&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PointArray&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mf">1.8463890552520752</span><span class="p">,</span>
+                <span class="mf">-0.5881761908531189</span><span class="p">,</span>
+                <span class="mf">-0.28559789061546326</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ConvexMeshComponents&quot;</span>
+<span class="p">},</span>
+</code></pre></div>
+<p>These are unique vertex positions of one <em>or more</em> meshes. Ragdoll separates them into individual convex hulls by looking towards their connectivity, as per the <code>indices</code> array.</p>
+<p>As a side-effect, you are now also able to <em>delete</em> the mesh you used with <code>Replace Mesh</code>. Keeping your scene a little more clean.</p>
+<p><br></p>
+<h3 id="convex-decomposition-20">Convex Decomposition 2.0</h3>
+<p>The automated convex hull mechanic has been updated and is now both faster and easier to work with.</p>
+<p><strong>Before</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179947682-356a84e1-d002-4e94-a175-8cee4f1cad41.png" /></p>
+<p><strong>After</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179947815-f0fe07ab-1b02-4245-956b-cec45a3414ba.png" /></p>
+<p>Furthermore, you now have the option of <em>baking</em> the automatically computed convex hull so as to avoid recomputing it each time you open the Maya scene file.</p>
+<p>For example, here we've got a decomposited human mesh.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179953926-70a4923e-83a3-46fe-b132-1454190e5119.mp4" type="video/mp4"></video></p>
+<p>And here you can see how we get to keep the collider, but lose both the connection and the automatic decomposition. File-open times are now optimised, as well as file size. As we only store the bare essential vertices for the convex hulls!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179953932-bce51977-ac4d-4117-8b19-9c431a12f629.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="convert-to-mesh">Convert to Mesh</h3>
+<p>You can now convert any Marker geometry - including convex hulls - into Maya geometry!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179949727-3732a881-a05b-4af7-aa7a-08c2e681965d.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="attach-constraint">Attach Constraint</h3>
+<p>The Pin Constraint has been expanded and can now pin one marker <em>to another</em>.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179913071-b4080f25-135e-4269-88f5-82e5020cf1bf.mp4" type="video/mp4"></video></p>
+<div class="admonition hint">
+<p class="admonition-title">Under the hood</p>
+<p>This is exactly the same as calling <code>Reparent</code> to parent one marker to another. Except a marker can be attached to <em>many</em> other markers, and their relationship can be animated!</p>
+</div>
+<p>Here's how it works.</p>
+<ol>
+<li>Select child</li>
+<li>Select parent</li>
+<li>Attach</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179915371-55667ec9-6e3c-43a2-a98e-5af341880fb1.mp4" type="video/mp4"></video></p>
+<p>Let's take a closer look.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179916275-3d6477f9-7bd4-47b6-bb90-54c9115d5fbb.mp4" type="video/mp4"></video></p>
+<p>Here we've got two independent markers. No parent and child relationship. Now let's attach the box to the torus.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179916280-6f2925df-d777-46e0-8b71-3786fe793cba.mp4" type="video/mp4"></video></p>
+<p>As you'd expect, the box is now a child of the torus. You can use the handle to reposition exactly <em>where</em> this box is attached onto the torus.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179916285-f1ea7c78-0f35-46d7-ad7a-197d4a97a542.mp4" type="video/mp4"></video></p>
+<p>The position and orientation can be animated too. It's a rather complex little constraint, but very powerful!</p>
+<p><br></p>
+<h3 id="quality-of-life">Quality of Life</h3>
+<p>Next up, let's have a look at some of the minor improvements made to put a smile on your face.</p>
+<p><br></p>
+<h4 id="closed-loop-recording">Closed Loop Recording</h4>
+<p>If you parent the tip to the root, you'll get a closed loop. Something Maya natively cannot do, but Ragdoll can. And for good reason, since you can do things like this!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179906061-802fd149-d18a-4f5c-89a6-5c412f456988.png" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179906003-10ef4359-8e9f-4616-abc6-fd33768d90c6.mp4" type="video/mp4"></video></p>
+<p>However, it wasn't able to record it. <img alt="😅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f605.svg" title=":sweat_smile:" /> Until now. :)</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179908065-ca6c52c3-8af4-4170-9dc2-b8a2a6f68c78.mp4" type="video/mp4"></video></p>
+<div class="admonition question">
+<p class="admonition-title">Why make this an option?</p>
+<p>Yes, if it's able to do <em>more</em> than why not just leave this as default and remove the option?</p>
+<p>Well, as it happens, there are times when closed loop recording performs worse than regular recording. Keep an eye out for what happens between frames, your rotation channels might be under stress, and let us know in the forums how it got that way. It's something I'd like to sort out.</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/closed-loop/146">https://forums.ragdolldynamics.com/t/closed-loop/146</a></li>
+</ul>
+</div>
+<p><br></p>
+<h4 id="pin-constraint-axes">Pin Constraint Axes</h4>
+<p>You can now control individual axes of a pin constraint, just like you can with <code>Pose Space = World</code> on normal markers.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/179761528-ff9d66df-ae2d-4c7b-9eed-9cab149ee2c8.png" /></p>
+<p>For example, here's what happens if we pin it along X and Z, but ignore the Y axis.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179908881-53b2c674-e094-4c65-8661-a2f7730d1ad2.mp4" type="video/mp4"></video></p>
+<p>Likewise, here we only pin the Z axis. Notice how it's only allowed to move along the Z plane, staying at wherever the pin is in Z.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179908883-7a7c72bf-93ca-49bb-832a-7fb26831f006.mp4" type="video/mp4"></video></p>
+<p>And similarly for X.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179908888-8bc34373-01b2-45eb-8a41-dca0a8be025e.mp4" type="video/mp4"></video></p>
+<p>The rotation works the same, except Twist represents the X axis and Swing is both Y and Z.</p>
+<p><br></p>
+<h4 id="predictable-enabled-state">Predictable Enabled State</h4>
 <p>Every Ragdoll node has an <code>Enabled</code> attribute for you to temporarily and non-destructively enable and disable the node without physically removing it from the scene. It acts indentically to physically deleting that node, but is safe to do even on a referenced node.</p>
 <p>However, in the previous release you could find yourself..</p>
 <ol>
@@ -2291,53 +2827,83 @@
 </ol>
 <p>It works. That isn't particularly intuitive, and has now been fixed!</p>
 <p><br></p>
-<h3 id="infinite-terrain">Infinite Terrain</h3>
+<h4 id="infinite-terrain">Infinite Terrain</h4>
 <p>If you provide Locomotion with a terrain, it will generate a heightmap from it. Where there wasn't geometry, such as outside the borders of the geometry or inside of holes, it would struggle to figure out what to do.</p>
 <p>This release now extends your terrain in every direction, such that you get more what you'd expect.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179756274-9491d1a0-2336-42e6-b251-9598cebaac6a.mp4" type="video/mp4"></video></p>
+<p>Notice how he's able to start outside of the terrain, and step on missing parts of the terrain!</p>
 <p><br></p>
-<h3 id="simplified-density">Simplified Density</h3>
+<h4 id="simplified-density">Simplified Density</h4>
 <p>Fewer options for working with density, now it's just a single number.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/178429590-c71261d7-2163-46df-a6fc-359c78f46aed.mp4" type="video/mp4"></video></p>
 <p>As it turns out, the presets were really limiting and was rarely a good fit for anything. And they didn't make intuitive sense either. "Uranium"? I don't know how heavy that is, when should I use it?</p>
 <p>So instead, a single <code>Density</code> value with a default value of <code>1</code> remains. This is the previous <code>Density Custom</code> attribute with a shorter name, so if you were already using this attribute then you already know what to expect.</p>
 <p>With a special density of <code>0</code> you'll be greeted by the <code>Mass</code> attribute to disable automatically computing mass from the size and volume of your shape.</p>
 <p><br></p>
-<h3 id="frameskip-default">Frameskip Default</h3>
-<p>When a frame is skipped, Ragdoll would normally pause simulation and wait for you to return to the last successfully simulated frame. This ensures that the simulation always produces the same result each time you play. But also means it is unable to solve if Maya skips a frame, as can happen when a rig is especially heavy or when playing back with Audio.</p>
-<p>This mode is called <code>Pause</code> and the alternative is a mode called <code>Ignore</code> which will continue solving even though it isn't given each and every frame.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/178108006-d2d13028-6de5-43f9-b3fb-6757ad8e9b1f.png" /></p>
-<p><code>Ignore</code> is now the new default, to avoid surprises especially for beginners who might not know why simulation suddenly stops for no apparent reason. You are still advised to stick with <code>Pause</code> especially towards the end of fine-tuning your work. That's the only mode in which Ragdoll can guarantee that each and every playthrough is identical unless you have actually changed something in your animation.</p>
-<p><br></p>
-<h3 id="ignore-mass">Ignore Mass</h3>
+<h4 id="ignore-mass">Ignore Mass</h4>
 <p>You can now choose to work with <code>Stiffness</code> values without worrying about the weight of markers.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/178421897-b04eaf58-74f8-40cc-920b-ed3be47b49dd.mp4" type="video/mp4"></video></p>
 <p>This can help get a better understanding of what a value of 1 means, as it would no longer depend on the mass of a marker, which is automatically computed per default. The marker would retain its mass, such that if a heavy marker fell on a light marker it would still act accordingly. But the stiffness values would act as though they weighed the same.</p>
 <p>Should this be enabled per default? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /> What are the consequences of this option? Let's find out!</p>
 <p><br></p>
-<h3 id="import-solver-attributes">Import Solver Attributes</h3>
+<h4 id="frameskip-default">Frameskip Default</h4>
+<p>When a frame is skipped, Ragdoll would normally pause simulation and wait for you to return to the last successfully simulated frame. This ensures that the simulation always produces the same result each time you play. But also means it is unable to solve if Maya skips a frame, as can happen when a rig is especially heavy or when playing back with Audio.</p>
+<p>This mode is called <code>Pause</code> and the alternative is a mode called <code>Ignore</code> which will continue solving even though it isn't given each and every frame.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/178108006-d2d13028-6de5-43f9-b3fb-6757ad8e9b1f.png" /></p>
+<p><code>Ignore</code> is now the new default, to avoid surprises especially for beginners who might not know why simulation suddenly stops for no apparent reason. You are still advised to stick with <code>Pause</code> especially towards the end of fine-tuning your work. That's the only mode in which Ragdoll can guarantee that each and every playthrough is identical unless you have actually changed something in your animation.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179957903-da230e88-0c13-4c36-9729-69e6acf22053.mp4" type="video/mp4"></video></p>
+<p>The two lines towards the bottom tell you two things.</p>
+<ol>
+<li>Which frames were successfully read from Maya</li>
+<li>Which frames were simulated</li>
+</ol>
+<p>Ideally, for the most accurate and consistent results, these two should be identical. And when they are, they are hidden. They can be explicitly enabled via the Solver Display settings, called <code>Draw Buffer</code>.</p>
+<p><img width="326" alt="image" src="https://user-images.githubusercontent.com/2152766/179958284-12febf5e-7d21-4ead-951c-11d0c10af7bb.png"></p>
+<p><br></p>
+<h4 id="output-geometry">Output Geometry</h4>
+<p>In addition to the <code>Convert to Mesh</code> menu option, advanced users can now also experiment with the new <code>rMarker.outputGeometry</code> attribute which provides access to the computed convex hull!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179956810-844e8b81-95d6-44b0-9e79-0a1bdb0e9526.mp4" type="video/mp4"></video></p>
+<p>This is a live attribute, regenerating the mesh whenever anything affects the convex hull generated for collisions.</p>
+<p><br></p>
+<h4 id="cache-hud">Cache HUD</h4>
+<p>You'll now find buttons in the viewport for manipulating the solver cache.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179919861-e5b5fdef-cc1d-4c57-84d6-d5ca2cff254c.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="record-stuck-at-0">Record Stuck at 0%</h4>
+<p>Some users experienced recording getting stuck before it even began.</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/recording-simulation-in-unlimited-progress-stuck-at-0/227/26">https://forums.ragdolldynamics.com/t/recording-simulation-in-unlimited-progress-stuck-at-0/227/26</a></li>
+</ul>
+<p>This should set solve that!</p>
+<div class="admonition info">
+<p class="admonition-title">Behind the scenes</p>
+<p>For you programmers and riggers out there; as it turns out, calling <code>OpenMayaAnim.MAnimControl.setCurrentTime</code> is not safe. When Maya wants to compute one or more things in parallel, this call could cause a deadlock. The simple solution, and the one employed here, was to instead use <code>cmds.currentTime</code>. It was the strangest thing.</p>
+<p>The alternative solution was to use Serial or DG evaluation modes.</p>
+</div>
+<p><br></p>
+<h4 id="import-solver-attributes">Import Solver Attributes</h4>
 <p>A bug was found whereby the attributes from your solver would get exported properly, but not imported! This has now been fixed.</p>
 <p><br></p>
-<h3 id="use-selection-for-record">Use Selection for Record</h3>
+<h4 id="use-selection-for-record">Use Selection for Record</h4>
 <p>The previous release broke the <code>Use Selection</code> option for <code>Record Simulation</code> and <code>Snap to Simulation</code> commands. This has now been fixed!</p>
 <p><br></p>
-<h3 id="fields-crash">Fields Crash</h3>
+<h4 id="fields-crash">Fields Crash</h4>
 <p>A bug was found (thanks Andrei!) whereby having fields on your scene could cause a crash. This was related to the field trying to also affect the "world" rather than just the markers. This has now been fixed.</p>
 <p><br></p>
-<h3 id="solver-bounding-box">Solver Bounding Box</h3>
+<h4 id="solver-bounding-box">Solver Bounding Box</h4>
 <p>Minor nitpick, if you had 2 or more solvers, unselected, and tried to "Fit all" (the F or A-key), it may not have actually fit all of the solvers. This has now been fixed.</p>
 <p>The problem was that each solver was taking every marker into account, even those that did not belong to it.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/179959231-22aaaa9d-62b0-46db-8b0e-77c86623e0c2.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="locomotion-on-linux">Locomotion On Linux</h3>
+<h4 id="locomotion-on-linux">Locomotion On Linux</h4>
 <p>We spent a lot of effort getting Locomotion running on Linux, only to trip over our own feet for release and include a spelling error in the Maya <code>.mod</code> file causing Ragdoll to not find the Locomotion executable!</p>
 <p>This has now been fixed, Linux users unite!</p>
 <p><br></p>
-<h3 id="non-deterministic-convex-hull">Non-deterministic Convex Hull</h3>
-<p><br></p>
-<h3 id="viewport-refresh">Viewport Refresh</h3>
+<h4 id="viewport-refresh">Viewport Refresh</h4>
 <p>Disabling and enabling a marker could sometimes leave it behind in the viewport, until the solver was hidden and unhidden, or the scene reloaded.</p>
 <p>This has now been fixed.</p>
 <p><br></p>
-<h3 id="locomotion-crash">Locomotion Crash</h3>
+<h4 id="locomotion-crash">Locomotion Crash</h4>
 <p>Ragdoll could sometimes bring Maya down when opening a scene containing a plan, for locomotion. This happened due to some really intricate memory and threading issues that you would not be interested in knowing more about. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /> Rest assured, this has now been fixed!</p>
                 
                   
@@ -2347,7 +2913,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-07-19
+      Last update: 2022-07-20
     
   </small>
 </div>
@@ -2367,6 +2933,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serialisation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2022.06.15/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2022.06.15
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
