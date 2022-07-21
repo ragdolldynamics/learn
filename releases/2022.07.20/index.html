@@ -2596,7 +2596,7 @@
 <p>Highlight for this release is <strong>Meshes meshes meshes!</strong></p>
 <ul>
 <li><a href="#translate-rotate-stiffness"><strong>ADDED</strong> Translate &amp; Rotate Stiffness</a> Simplified "Pose Stiffness"</li>
-<li><a href="#mesh-export-import"><strong>ADDED</strong> Mesh Export &amp; Imoprt</a> Meshes are now included when exporting and importing!</li>
+<li><a href="#mesh-export-import"><strong>ADDED</strong> Mesh Export &amp; Import</a> Meshes are now included when exporting and importing!</li>
 <li><a href="##attach-constraint"><strong>ADDED</strong> Attach Constraint</a> Like a Weld Constraint, but soft and animated</li>
 <li><a href="#closed-loop-recording"><strong>ADDED</strong> Closed Loop Recording</a> Alternatively recording strategy</li>
 <li><a href="#pin-constraint-axes"><strong>ADDED</strong> Pin Constraint Axes</a> Fine-grained control over each axis of a pin constraint</li>
@@ -2876,7 +2876,7 @@
 <ul>
 <li><a href="https://forums.ragdolldynamics.com/t/recording-simulation-in-unlimited-progress-stuck-at-0/227/26">https://forums.ragdolldynamics.com/t/recording-simulation-in-unlimited-progress-stuck-at-0/227/26</a></li>
 </ul>
-<p>This should set solve that!</p>
+<p>This should solve that!</p>
 <div class="admonition info">
 <p class="admonition-title">Behind the scenes</p>
 <p>For you programmers and riggers out there; as it turns out, calling <code>OpenMayaAnim.MAnimControl.setCurrentTime</code> is not safe. When Maya wants to compute one or more things in parallel, this call could cause a deadlock. The simple solution, and the one employed here, was to instead use <code>cmds.currentTime</code>. It was the strangest thing.</p>
