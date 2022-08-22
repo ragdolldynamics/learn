@@ -2695,7 +2695,11 @@ maya
 <span class="m">2021</span>-05-12, <span class="m">11</span>:58:51 &lt;notification&gt;: New connection from IP: ::ffff:127.0.0.1
 <span class="m">2021</span>-05-12, <span class="m">11</span>:58:51 &lt;notification&gt;: Lease was released by client <span class="o">(</span>marcus, <span class="m">1</span>, <span class="nv">IP</span><span class="o">=</span>::ffff:127.0.0.1, <span class="nv">PID</span><span class="o">=</span><span class="m">14328</span><span class="o">)</span>. Used / Total leases: <span class="m">0</span> / <span class="m">1</span>
 </code></pre></div>
-<p>A Python and web interface to this will be part of a future release, but the formatting can be relied upon for building your own monitoring mechanism.</p>
+<p>The <code>tfs-log.txt</code> file is dynamically updated as users lease and drop licences, and includes mention of how many licences are in use and remaining. You can monitor the tail of this file for real-time updates, and use any tooling to parse these notifications into your own infrastructure.</p>
+<p><strong>See Also</strong></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/floating-server-web-api">https://forums.ragdolldynamics.com/t/floating-server-web-api</a></li>
+</ul>
 <p><br></p>
 <h3 id="what-does-the-server-say-when-a-lease-request-is-rejected">What does the server say when a lease request is rejected?</h3>
 <p>With <code>level="notification"</code> it'll say this.</p>
