@@ -2281,6 +2281,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#failed-to-deactivate-old-product-key" class="md-nav__link">
+    Failed to Deactivate Old Product Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-parse-the-configuration-xml-file" class="md-nav__link">
+    Failed to Parse the Configuration XML File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#what-happens-when-my-server-is-offline" class="md-nav__link">
     What happens when my server is offline?
   </a>
@@ -2583,11 +2597,41 @@ maya
 <li>Activate using the response from the same computer</li>
 </ol>
 <p>Here's how to generate the request.</p>
-<div class="highlight"><pre><span></span><code>./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;~/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;YOUR-SERIAL-NUMBER&quot;</span> 
+<div class="highlight"><pre><span></span><code>./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;YOUR-SERIAL-NUMBER&quot;</span>
 </code></pre></div>
 <p>And here's how to apply the response.</p>
-<div class="highlight"><pre><span></span><code>./turbofloatserver -aresp<span class="o">=</span><span class="s2">&quot;~/ActivationResponse.xml&quot;</span> -a
+<div class="highlight"><pre><span></span><code>./turbofloatserver -aresp<span class="o">=</span><span class="s2">&quot;/path/to/ActivationResponse.xml&quot;</span> -a
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Absolute Path</p>
+<p>Take care to replace the path in the above commands, and use an absolute path rather than anything relative or special such as <code>~/</code>. The <code>turbofloatserver</code> command can get a little cranky about those things.</p>
+</div>
+<p><br></p>
+<h3 id="failed-to-deactivate-old-product-key">Failed to Deactivate Old Product Key</h3>
+<p>Can happen during offline activation if your local machine is activated <em>twice</em>.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+<span class="c1"># Failed to deactivate old product key.</span>
+</code></pre></div>
+<p>If this happens, locally deactivate your machine and try again.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -deact
+./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="failed-to-parse-the-configuration-xml-file">Failed to Parse the Configuration XML File</h3>
+<p>Can happen if the activation <strong>request</strong> is passed in as a <strong>response</strong>.</p>
+<ul>
+<li>Activation Request is provided by <code>turbofloatserver</code> and is uploaded to <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+<li>Activation Response is provided by <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a> and passed to <code>turbofloatserver</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<p>Should instead be:</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationResponse.xml&quot;</span> -a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>Note the "Response" and not "Request"</p>
+</blockquote>
 <p><br></p>
 <h3 id="what-happens-when-my-server-is-offline">What happens when my server is offline?</h3>
 <p>Leasing will attempt to connect for about 2 seconds until giving up. During that time, Maya may appear frozen.</p>
@@ -2752,7 +2796,7 @@ WantedBy=multi-user.target
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-05-14
+      Last update: 2022-08-23
     
   </small>
 </div>

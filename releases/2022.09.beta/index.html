@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.08.beta/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.09.beta/">
       
       
         <meta name="author" content="mottosso">
@@ -2171,13 +2171,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hashtag-norigging" class="md-nav__link">
-    Hashtag #norigging
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -2268,6 +2261,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#visual-undo" class="md-nav__link">
+    Visual Undo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-live-mode" class="md-nav__link">
+    Recording Live Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#future" class="md-nav__link">
     Future
   </a>
@@ -2293,6 +2300,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#selective-export-todo" class="md-nav__link">
+    Selective Export (todo)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-export-todo" class="md-nav__link">
+    Named Export (todo)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewport-selection" class="md-nav__link">
+    Viewport Selection
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2306,7 +2334,7 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.08.beta.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.09.beta.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -2318,8 +2346,11 @@
 <li><a href="#live-mode"><strong>ADDED</strong> Live Mode</a> The true meaning of "Animate with Physics"</li>
 <li><a href="#open-physics"><strong>ADDED</strong> Open Physics</a> Get rid of your rig, use physics vanilla-style!</li>
 <li><a href=""><strong>ADDED</strong> Replace Mesh API Tweak</a></li>
+<li><a href="#selective-export"><strong>ADDED</strong> Selective Export</a></li>
+<li><a href="#named-export"><strong>ADDED</strong> Named Export</a></li>
 <li><a href=""><strong>ADDED</strong> Keyable Gravity</a></li>
 <li><a href=""><strong>ADDED</strong> Plan Duration</a> Control the default duration of a newly assigned plan</li>
+<li><a href="#viewport-selection"><strong>ADDED</strong> Viewport Selection</a> Select a solver via regular viewport-select!</li>
 </ul>
 <p><br></p>
 <h3 id="live-mode">Live Mode</h3>
@@ -2348,10 +2379,6 @@
 <li>Start animating</li>
 </ol>
 <p>And that's where things are going.</p>
-<p><br></p>
-<h4 id="hashtag-norigging">Hashtag <code>#norigging</code></h4>
-<p>Rigging and animation has been far too complex for far too long. It's time to shake things up a bit.</p>
-<p>Following this release, we'll be replacing steps (2) and (3) with a click-and-drag interface for rigging any mesh; which would include relevant skinning too. Very much like Maya's volume-based skinning, for those familiar with it. Simple, yet effective.</p>
 <p><br></p>
 <h4 id="usage">Usage</h4>
 <p>Let's have a closer look at what this thing can do today.</p>
@@ -2397,14 +2424,25 @@
 <h5 id="transfer-toggle">Transfer Toggle</h5>
 <p>Like Drop and Tense, this button can also be toggled, meaning the pose is transferred as soon as you let go of the mouse cursor.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/181229698-026257ba-a17c-457a-9b9e-14ddb2cf011d.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h4 id="animation">Animation</h4>
 <p>And these are the tools you use to animate. <img alt="🙂" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f642.svg" title=":slight_smile:" /></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/181230279-a56557cf-cf66-4622-a35d-40617c83ed0a.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="visual-undo">Visual Undo</h4>
+<p>The timeline helps you understand where undo will take you.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/195035555-dfe463ef-3db8-44b7-821d-199648408e04.mp4" type="video/mp4"></video></p>
+<p>You can also interact with the timeline, for fine control over where in history you want to go.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/195035563-cb21ff2d-a019-4503-8767-d6da79d97a14.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="recording-live-mode">Recording Live Mode</h4>
+<p>Use Live Mode with <code>Cache = Static</code> enabled to enable recording of your interactions with characters.</p>
+<p><br></p>
 <h4 id="future">Future</h4>
 <p>The tools I've shown you so far cover the basics. This is the direction Ragdoll is taking. For Ragdoll to entirely <strong>replace all of rigging and the use of traditional rigs</strong>. A hefty goal!</p>
 <p>Rigging and animation haven't changed in.. what, 30 years? Why is that? Because it's a hard problem. Because early on, we found something really, really good. Something that was ahead of its time. I mean, who ever thought that we'd be able to be creative with the mechanical, technical and mathematical process we have now? I mean, the Graph Editor? We love it, we need it. But think about that; you are looking at timeseries of information and are making sense out of it not because it is natural, but because you've forced yourself to learn how to interpret it.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/181334577-22ed79c3-0e44-4f72-a4e5-2c49d6ece9b1.mp4" type="video/mp4"></video></p>
-<p>So, the Graph Editor is going too. ;) You'll be rigging and animating entirely with physics from now (soon) on, and you'll think back at the early days of animation the same way modelers look at box modeling and lighting artists look back at bounce lights and surface normals.</p>
+<p>So, the Graph Editor is going too. 😉 You'll be rigging and animating entirely with physics from now (soon) on, and you'll think back at the early days of animation the same way modelers look at box modeling and lighting artists look back at bounce lights and surface normals.</p>
 <p><br></p>
 <h3 id="open-physics">Open Physics</h3>
 <p>You can now open a <code>.rag</code> file without anything already existing in your scene.</p>
@@ -2412,6 +2450,21 @@
 <p><br></p>
 <h3 id="replace-mesh-tweak">Replace Mesh Tweak</h3>
 <p>The <code>api.replaceMesh()</code> command now automatically changes your <code>rMarker.shapeType</code> attribute to <code>Mesh</code>.</p>
+<p><br></p>
+<h3 id="selective-export-todo">Selective Export (todo)</h3>
+<p>Cherry-pick the things you want included in your export, via the new <code>Export</code> attribute, found on all Ragdoll nodes. <code>On</code> by default, if <code>Off</code> then it will be invisible to the export process.</p>
+<p>You'd use it when you have things in your scene you know aren't interesting to export. The Ground Plane for example is <code>Off</code> per default, since it's unlikely you'd want that included in a new scene.</p>
+<p><br></p>
+<h3 id="named-export-todo">Named Export (todo)</h3>
+<p>You can now include a custom name in your exported characters, this name will appear in the Asset Browser.</p>
+<div class="admonition tip">
+<p class="admonition-title">Developers</p>
+<p>For you JSON-jugglers out there, the <code>.rag</code> file will now contain an extra <code>"name"</code> field with whatever the artist puts here. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+</div>
+<p><br></p>
+<h3 id="viewport-selection">Viewport Selection</h3>
+<p>You can now select a solver as though it was just another regular node in Maya. It is selectable as a <code>Locator</code>, meaning it can be toggled via the <code>?</code> icon up top!</p>
+<p><a href="https://user-images.githubusercontent.com/2152766/189684348-259594e2-bb71-489c-9ca6-9f0b6e92d73f.mp4">https://user-images.githubusercontent.com/2152766/189684348-259594e2-bb71-489c-9ca6-9f0b6e92d73f.mp4</a></p>
                 
                   
                     
@@ -2420,7 +2473,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-08-18
+      Last update: 2022-10-12
     
   </small>
 </div>
