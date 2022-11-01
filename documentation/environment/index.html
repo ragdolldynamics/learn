@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="All new and important information about the basic tools and workflows for Ragdoll">
+        <meta name="description" content="The real-time physics solver for Maya">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.08.28/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/documentation/environment/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>New Tutorials - Learn Ragdoll</title>
+        <title>Environment - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#new-tutorials" class="md-skip">
+        <a href="#environment" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              New Tutorials
+              Environment
             
           </span>
         </div>
@@ -330,6 +330,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -338,7 +340,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -348,7 +350,7 @@
           data-md-toggle="nav-3"
           type="checkbox"
           id="nav-3"
-          
+          checked
         />
       
 
@@ -379,7 +381,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/marker/" class="md-nav__link">
+      <a href="../marker/" class="md-nav__link">
         
         <img src="/icons/marker_black.png">
         
@@ -399,7 +401,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/group/" class="md-nav__link">
+      <a href="../group/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -419,7 +421,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/solver/" class="md-nav__link">
+      <a href="../solver/" class="md-nav__link">
         
         <img src="/icons/solver_black.png">
         
@@ -435,18 +437,84 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../../documentation/environment/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
         <img src="/icons/environment_black.png">
         
 
         Environment
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -459,7 +527,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/manipulator/" class="md-nav__link">
+      <a href="../manipulator/" class="md-nav__link">
         
         <img src="/icons/manipulator_black.png">
         
@@ -479,7 +547,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/locomotion/" class="md-nav__link">
+      <a href="../locomotion/" class="md-nav__link">
         
         <img src="/icons/plan_black.png">
         
@@ -499,7 +567,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/constraints/" class="md-nav__link">
+      <a href="../constraints/" class="md-nav__link">
         
         <img src="/icons/constraint_black.png">
         
@@ -519,7 +587,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/fields/" class="md-nav__link">
+      <a href="../fields/" class="md-nav__link">
         
         <img src="/icons/force_black.png">
         
@@ -539,7 +607,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/import_physics/" class="md-nav__link">
+      <a href="../import_physics/" class="md-nav__link">
         
         <img src="/icons/save_black.png">
         
@@ -559,7 +627,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/record_simulation/" class="md-nav__link">
+      <a href="../record_simulation/" class="md-nav__link">
         
         <img src="/icons/record_black.png">
         
@@ -579,7 +647,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/snap_to_simulation/" class="md-nav__link">
+      <a href="../snap_to_simulation/" class="md-nav__link">
         
         <img src="/icons/snap_black.png">
         
@@ -599,7 +667,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/retargeting/" class="md-nav__link">
+      <a href="../retargeting/" class="md-nav__link">
         
         <img src="/icons/retarget_black.png">
         
@@ -619,7 +687,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/level_of_detail/" class="md-nav__link">
+      <a href="../level_of_detail/" class="md-nav__link">
         
         <img src="/icons/hair2_black.png">
         
@@ -639,7 +707,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/cache/" class="md-nav__link">
+      <a href="../cache/" class="md-nav__link">
         
         <img src="/icons/bake_black.png">
         
@@ -659,7 +727,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/link/" class="md-nav__link">
+      <a href="../link/" class="md-nav__link">
         
         <img src="/icons/link_black.png">
         
@@ -679,7 +747,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../documentation/utilities/" class="md-nav__link">
+      <a href="../utilities/" class="md-nav__link">
         
         <img src="/icons/replace_black.png">
         
@@ -1202,8 +1270,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -1212,7 +1278,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1222,7 +1288,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          checked
+          
         />
       
 
@@ -1253,7 +1319,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.07.20/" class="md-nav__link">
+      <a href="../../releases/2022.07.20/" class="md-nav__link">
         
 
         2022.07.20
@@ -1271,7 +1337,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.06.15/" class="md-nav__link">
+      <a href="../../releases/2022.06.15/" class="md-nav__link">
         
 
         2022.06.15
@@ -1289,7 +1355,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.06.09/" class="md-nav__link">
+      <a href="../../releases/2022.06.09/" class="md-nav__link">
         
 
         2022.06.09
@@ -1307,7 +1373,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.05.04/" class="md-nav__link">
+      <a href="../../releases/2022.05.04/" class="md-nav__link">
         
 
         2022.05.04
@@ -1325,7 +1391,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.03.14/" class="md-nav__link">
+      <a href="../../releases/2022.03.14/" class="md-nav__link">
         
 
         2022.03.14
@@ -1343,7 +1409,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.02.28/" class="md-nav__link">
+      <a href="../../releases/2022.02.28/" class="md-nav__link">
         
 
         2022.02.28
@@ -1361,7 +1427,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.02.14/" class="md-nav__link">
+      <a href="../../releases/2022.02.14/" class="md-nav__link">
         
 
         2022.02.14
@@ -1379,7 +1445,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.02.01/" class="md-nav__link">
+      <a href="../../releases/2022.02.01/" class="md-nav__link">
         
 
         2022.02.01
@@ -1397,7 +1463,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.01.21/" class="md-nav__link">
+      <a href="../../releases/2022.01.21/" class="md-nav__link">
         
 
         2022.01.21
@@ -1415,7 +1481,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.01.17/" class="md-nav__link">
+      <a href="../../releases/2022.01.17/" class="md-nav__link">
         
 
         2022.01.17
@@ -1433,7 +1499,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.12.15/" class="md-nav__link">
+      <a href="../../releases/2021.12.15/" class="md-nav__link">
         
 
         2021.12.15
@@ -1451,7 +1517,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.12.12/" class="md-nav__link">
+      <a href="../../releases/2021.12.12/" class="md-nav__link">
         
 
         2021.12.12
@@ -1469,7 +1535,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.11.15/" class="md-nav__link">
+      <a href="../../releases/2021.11.15/" class="md-nav__link">
         
 
         2021.11.15
@@ -1487,7 +1553,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.10.25/" class="md-nav__link">
+      <a href="../../releases/2021.10.25/" class="md-nav__link">
         
 
         2021.10.25
@@ -1505,7 +1571,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.10.07/" class="md-nav__link">
+      <a href="../../releases/2021.10.07/" class="md-nav__link">
         
 
         2021.10.07
@@ -1523,7 +1589,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.09.27/" class="md-nav__link">
+      <a href="../../releases/2021.09.27/" class="md-nav__link">
         
 
         2021.09.27
@@ -1537,179 +1603,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2021.08.28
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../../releases/2021.08.28/" class="md-nav__link">
         
 
         2021.08.28
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#new-tutorials" class="md-nav__link">
-    New Tutorials
-  </a>
-  
-    <nav class="md-nav" aria-label="New Tutorials">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bouncing-ball" class="md-nav__link">
-    Bouncing Ball
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rally-car" class="md-nav__link">
-    Rally Car
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manikin" class="md-nav__link">
-    Manikin
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#personal-ui" class="md-nav__link">
-    Personal UI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#social-media" class="md-nav__link">
-    Social Media
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pivot-editor" class="md-nav__link">
-    Pivot Editor
-  </a>
-  
-    <nav class="md-nav" aria-label="Pivot Editor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spin-swap" class="md-nav__link">
-    Spin &amp; Swap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mirror" class="md-nav__link">
-    Mirror
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#channel-box-co-op" class="md-nav__link">
-    Channel Box Co-op
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#snap" class="md-nav__link">
-    Snap
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#worldspace-trajectories" class="md-nav__link">
-    Worldspace Trajectories
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sphere-rendering" class="md-nav__link">
-    Sphere Rendering
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#floating-server-details" class="md-nav__link">
-    Floating Server Details
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -1722,7 +1625,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.08.06/" class="md-nav__link">
+      <a href="../../releases/2021.08.06/" class="md-nav__link">
         
 
         2021.08.06
@@ -1740,7 +1643,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.27/" class="md-nav__link">
+      <a href="../../releases/2021.07.27/" class="md-nav__link">
         
 
         2021.07.27
@@ -1758,7 +1661,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.15/" class="md-nav__link">
+      <a href="../../releases/2021.07.15/" class="md-nav__link">
         
 
         2021.07.15
@@ -1776,7 +1679,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.02/" class="md-nav__link">
+      <a href="../../releases/2021.07.02/" class="md-nav__link">
         
 
         2021.07.02
@@ -1794,7 +1697,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.06.10/" class="md-nav__link">
+      <a href="../../releases/2021.06.10/" class="md-nav__link">
         
 
         2021.06.10
@@ -1812,7 +1715,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.06.07/" class="md-nav__link">
+      <a href="../../releases/2021.06.07/" class="md-nav__link">
         
 
         2021.06.07
@@ -1830,7 +1733,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.05.17/" class="md-nav__link">
+      <a href="../../releases/2021.05.17/" class="md-nav__link">
         
 
         2021.05.17
@@ -1848,7 +1751,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.05.10/" class="md-nav__link">
+      <a href="../../releases/2021.05.10/" class="md-nav__link">
         
 
         2021.05.10
@@ -1866,7 +1769,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.28/" class="md-nav__link">
+      <a href="../../releases/2021.04.28/" class="md-nav__link">
         
 
         2021.04.28
@@ -1884,7 +1787,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.23/" class="md-nav__link">
+      <a href="../../releases/2021.04.23/" class="md-nav__link">
         
 
         2021.04.23
@@ -1902,7 +1805,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.11/" class="md-nav__link">
+      <a href="../../releases/2021.04.11/" class="md-nav__link">
         
 
         2021.04.11
@@ -1920,7 +1823,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.25/" class="md-nav__link">
+      <a href="../../releases/2021.03.25/" class="md-nav__link">
         
 
         2021.03.25
@@ -1938,7 +1841,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.23/" class="md-nav__link">
+      <a href="../../releases/2021.03.23/" class="md-nav__link">
         
 
         2021.03.23
@@ -1956,7 +1859,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.11/" class="md-nav__link">
+      <a href="../../releases/2021.03.11/" class="md-nav__link">
         
 
         2021.03.11
@@ -1974,7 +1877,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.04/" class="md-nav__link">
+      <a href="../../releases/2021.03.04/" class="md-nav__link">
         
 
         2021.03.04
@@ -1992,7 +1895,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.01/" class="md-nav__link">
+      <a href="../../releases/2021.03.01/" class="md-nav__link">
         
 
         2021.03.01
@@ -2010,7 +1913,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.02.07/" class="md-nav__link">
+      <a href="../../releases/2021.02.07/" class="md-nav__link">
         
 
         2021.02.07
@@ -2028,7 +1931,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.27/" class="md-nav__link">
+      <a href="../../releases/2021.01.27/" class="md-nav__link">
         
 
         2021.01.27
@@ -2046,7 +1949,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.17/" class="md-nav__link">
+      <a href="../../releases/2021.01.17/" class="md-nav__link">
         
 
         2021.01.17
@@ -2064,7 +1967,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.15/" class="md-nav__link">
+      <a href="../../releases/2021.01.15/" class="md-nav__link">
         
 
         2021.01.15
@@ -2082,7 +1985,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.14/" class="md-nav__link">
+      <a href="../../releases/2021.01.14/" class="md-nav__link">
         
 
         2021.01.14
@@ -2100,7 +2003,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.04/" class="md-nav__link">
+      <a href="../../releases/2021.01.04/" class="md-nav__link">
         
 
         2021.01.04
@@ -2118,7 +2021,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.18/" class="md-nav__link">
+      <a href="../../releases/2020.12.18/" class="md-nav__link">
         
 
         2020.12.18
@@ -2136,7 +2039,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.07/" class="md-nav__link">
+      <a href="../../releases/2020.12.07/" class="md-nav__link">
         
 
         2020.12.07
@@ -2154,7 +2057,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.01/" class="md-nav__link">
+      <a href="../../releases/2020.12.01/" class="md-nav__link">
         
 
         2020.12.01
@@ -2172,7 +2075,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.24/" class="md-nav__link">
+      <a href="../../releases/2020.11.24/" class="md-nav__link">
         
 
         2020.11.24
@@ -2190,7 +2093,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.23/" class="md-nav__link">
+      <a href="../../releases/2020.11.23/" class="md-nav__link">
         
 
         2020.11.23
@@ -2208,7 +2111,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.22/" class="md-nav__link">
+      <a href="../../releases/2020.11.22/" class="md-nav__link">
         
 
         2020.11.22
@@ -2226,7 +2129,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.17/" class="md-nav__link">
+      <a href="../../releases/2020.11.17/" class="md-nav__link">
         
 
         2020.11.17
@@ -2244,7 +2147,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.16/" class="md-nav__link">
+      <a href="../../releases/2020.11.16/" class="md-nav__link">
         
 
         2020.11.16
@@ -2262,7 +2165,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.10/" class="md-nav__link">
+      <a href="../../releases/2020.11.10/" class="md-nav__link">
         
 
         2020.11.10
@@ -2348,119 +2251,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-tutorials" class="md-nav__link">
-    New Tutorials
+  <a href="#environment" class="md-nav__link">
+    Environment
   </a>
   
-    <nav class="md-nav" aria-label="New Tutorials">
+    <nav class="md-nav" aria-label="Environment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bouncing-ball" class="md-nav__link">
-    Bouncing Ball
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rally-car" class="md-nav__link">
-    Rally Car
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manikin" class="md-nav__link">
-    Manikin
+  <a href="#performance" class="md-nav__link">
+    Performance
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#personal-ui" class="md-nav__link">
-    Personal UI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#social-media" class="md-nav__link">
-    Social Media
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pivot-editor" class="md-nav__link">
-    Pivot Editor
-  </a>
-  
-    <nav class="md-nav" aria-label="Pivot Editor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spin-swap" class="md-nav__link">
-    Spin &amp; Swap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mirror" class="md-nav__link">
-    Mirror
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#channel-box-co-op" class="md-nav__link">
-    Channel Box Co-op
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#snap" class="md-nav__link">
-    Snap
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#worldspace-trajectories" class="md-nav__link">
-    Worldspace Trajectories
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sphere-rendering" class="md-nav__link">
-    Sphere Rendering
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#floating-server-details" class="md-nav__link">
-    Floating Server Details
-  </a>
   
 </li>
       
@@ -2477,110 +2283,76 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.08.28.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/documentation/environment.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2021.08.28</h1>
+                  <h1>Environment</h1>
                 
-                <p>Highlight for this release is <strong>new tutorials!</strong></p>
-<ul>
-<li><a href="#tutorials"><strong>ADDED</strong> Tutorials</a> Three new tutorials covering basics up to anatomical correctness!</li>
-<li><a href="#pivot-editor"><strong>ADDED</strong> Pivot Editor</a> Faster wheels and knees with this new UI</li>
-<li><a href="#personal-ui"><strong>ADDED</strong> Personal UI</a> More accurate licence information in the Ragdoll UI</li>
-<li><a href="#social-media"><strong>ADDED</strong> Social Media</a> We're everywhere now!</li>
-<li><a href="#worldspace-trajectories"><strong>FIXED</strong> Worldspace Trajectories</a> Now drawn correctly, in worldspace</li>
-<li><a href="#sphere-rendering"><strong>FIXED</strong> Sphere Rendering</a> Minor tweak to the look of the <code>Sphere</code> shape type</li>
-<li><a href="#floating-server-details"><strong>FIXED</strong> Floating Server Details</a> Minor bug fix for floating licence users</li>
-</ul>
-<p><br></p>
-<h3 id="new-tutorials">New Tutorials</h3>
-<p>Three new tutorials from basics to intermediate, with more to come!</p>
-<p><br></p>
-<h4 id="bouncing-ball">Bouncing Ball</h4>
-<p>Learn the fundamentals of Ragdoll in this classic animation tutorial. </p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130355602-32378019-c606-449d-9b56-02a8e57ae821.mp4" type="video/mp4"></video></p>
-<div class="hboxlayout">
-<a href="/tutorials/bouncing_ball" class="button blue"><b>View Tutorial</b></a>
+                <div class="hero-container">
+    <img class="hero-image" src=/yoga12.png>
 </div>
 
+<p>Collide against complex but immovable geometry.</p>
 <p><br></p>
-<h4 id="rally-car">Rally Car</h4>
-<p>Build upon the skills learnt with a bouncing ball to combine several rigids into a car (with an engine!)</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130355317-1874d90b-c366-43bc-a803-18467b9dc3bf.mp4" type="video/mp4"></video></p>
-<div class="hboxlayout">
-<a href="/tutorials/rally_car" class="button blue"><b>View Tutorial</b></a>
+<h3 id="environment">Environment</h3>
+<p>Ragdoll supports static environments; meaning environments that cannot move or deform, but allow for normal polygonal geometry without the need for a simplified <a href="">"convex hull"</a>.</p>
+<p>As you might expect, this works well for environments like terrain and other complex geometry that is otherwise hard to turn into a rounded mesh.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/155138876-9544e306-c93f-4891-ad3d-070ed8a78826.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="performance">Performance</h4>
+<p>It's fast.</p>
+<p>Normal shapes are limited in how complex they can get, and as such you never really run into a situation where the shape noticeably affects performance.</p>
+<p>Triangle meshes are different; they can be of <em>any</em> complexity. Up to millions of polygons and beyond. So it falls upon you to decide where to make the performance/quality tradeoff!</p>
+<table>
+<thead>
+<tr>
+<th align="left">Vertex Count</th>
+<th align="left">Cooking Time</th>
+<th align="left">Run-time performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">400</td>
+<td align="left">0.39 ms</td>
+<td align="left">685 fps</td>
+</tr>
+<tr>
+<td align="left">8'000</td>
+<td align="left">3.51 ms</td>
+<td align="left">599 fps</td>
+</tr>
+<tr>
+<td align="left">16'000</td>
+<td align="left">14.3 ms</td>
+<td align="left">594 fps</td>
+</tr>
+<tr>
+<td align="left">64'000</td>
+<td align="left">61.5 ms</td>
+<td align="left">327 fps</td>
+</tr>
+<tr>
+<td align="left">256'000</td>
+<td align="left">287.7 ms</td>
+<td align="left">40 fps</td>
+</tr>
+<tr>
+<td align="left">1'000'000</td>
+<td align="left">1490 ms</td>
+<td align="left">2 fps</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition question">
+<p class="admonition-title">What is cooking time?</p>
+<p>The time it takes for Ragdoll to convert your polygonal geometry into the internal representation needed for collision detection. It involves splitting up the mesh into areas or "zones" for faster lookup.</p>
+<p>This only happens when the mesh actively changes and when first opening the Maya scene, and won't affect playback speed.</p>
 </div>
-
-<p><br></p>
-<h4 id="manikin">Manikin</h4>
-<p>Construct a full ragdoll from any rig, even your own custom one!</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130355301-d1e45c50-045c-4f9e-9394-6e665ac770b2.mp4" type="video/mp4"></video></p>
-<div class="hboxlayout">
-<a href="/tutorials/manikin" class="button blue"><b>View Tutorial</b></a>
-</div>
-
-<p><br></p>
-<h3 id="personal-ui">Personal UI</h3>
-<p>The Licence Window at the bottom of the Ragdoll menu now accurately displays your current licence, including Personal, Complete, Unlimited and Batch, along with the licence type - <code>Floating</code> or <code>Node Locked</code>.</p>
-<p><img class="poster no-radius" src=https://user-images.githubusercontent.com/2152766/129899581-cec76be1-9761-40db-add5-bb1a7dfe688e.png></p>
-<p><br></p>
-<h3 id="social-media">Social Media</h3>
-<p>Can you believe it. A clear sign of success, not everyone is on Twitter! If you're one of the lucky few, you can now follow along with updates to the project, documentation and general company news from there!</p>
-<ul>
-<li><a href="https://twitter.com/ragdolldynamics">https://twitter.com/ragdolldynamics</a></li>
-<li><a href="https://facebook.com/ragdolldynamics">https://facebook.com/ragdolldynamics</a></li>
-<li><a href="https://reddit.com/user/ragdolldynamics">https://reddit.com/user/ragdolldynamics</a></li>
-<li><a href="https://youtube.com/c/RagdollDynamics">https://youtube.com/c/RagdollDynamics</a></li>
-</ul>
-<!-- - https://instagram.com/ragdolldynamics -->
-
-<p>The only question is, who's going to be the <em>first</em> to follow? 😱</p>
-<p><a href="https://twitter.com/ragdolldynamics"><img alt="image" src="https://user-images.githubusercontent.com/2152766/129900266-790ab8f1-8858-44ee-9e15-e49eb368de85.png" /></a></p>
-<p><br></p>
-<h3 id="pivot-editor">Pivot Editor</h3>
-<p>In making he tutorials, the main bottleneck in terms of time taken was editing constraints. They are both complex and difficult to manage.</p>
-<p>This release addresses this problem with the Pivot Editor GUI.</p>
-<p><br></p>
-<h4 id="basics">Basics</h4>
-<p>Here's how to use it to tune a broken knee.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130945904-77eb1ad2-faa3-40a4-8fb1-e3afe473c7f4.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="spin-swap">Spin &amp; Swap</h4>
-<p>One of the main reasons to want to edit constraint pivots is to align the Twist axis with the main rotation of a knee or elbow. </p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130945895-8236baea-7b4e-433c-8884-ce32b9668581.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="mirror">Mirror</h4>
-<p>If the pivots face in opposite directions, orientations can be un-mirrored with the <code>Mirror</code> option.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130945889-dbf282ec-04fb-4780-8b63-9d7fb67f37d4.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="channel-box-co-op">Channel Box Co-op</h4>
-<p>Tuning limits alongside pivots works well too, middle-click drag attributes from the Channel Box like you normally would, whilst dragging in the UI to compensate.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130945899-62abade5-b96f-4555-bae1-f94c0e351c1c.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="snap">Snap</h4>
-<p>Use the snap option to make precise adjustment to specific angles.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130946210-40fc287f-f773-4df1-86e9-764db9e2d05f.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="worldspace-trajectories">Worldspace Trajectories</h3>
-<p>Trajectories used to follow the scene wherever it went. Now they'll stay put, where they belong.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130568171-133ad45d-7844-4332-9d4b-1fa2091558c5.mp4" type="video/mp4"></video></p>
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/130568174-c56d1553-237b-45b6-89e9-cc4d28b23dcd.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="sphere-rendering">Sphere Rendering</h3>
-<p>This fixes a minor annoyance you may have noticed, of the outline of spheres visible in shaded mode.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/129890945-77f94738-5917-4513-8d08-0936f5b3584c.mp4" type="video/mp4"></video></p>
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/129890952-19894406-99cf-4d42-88ff-4c1777a40295.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="floating-server-details">Floating Server Details</h3>
-<p>When you first lease a licence from your licence server, the IP and port details are stored on the local machine for quicker access the next time.</p>
-<p>However, if you then later needed to change those details, then any local machine previously leasing a licence would not be able to update their details.</p>
-<p>This has now been fixed!</p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/155157548-7d8c7fee-4dfd-4822-be56-5f18ae4dd584.mp4" type="video/mp4"></video></p>
                 
                   
                     
@@ -2589,7 +2361,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2022-11-01
     
   </small>
 </div>
@@ -2613,7 +2385,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2021.09.27/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../solver/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2622,19 +2394,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2021.09.27
+                Solver
               </div>
             </div>
           </a>
         
         
-          <a href="../2021.08.06/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../manipulator/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2021.08.06
+                Manipulator
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
