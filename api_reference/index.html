@@ -2317,6 +2317,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extractphysics" class="md-nav__link">
+    extractPhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#deletephysics" class="md-nav__link">
     deletePhysics
   </a>
@@ -2453,6 +2460,10 @@
 <tr>
 <td align="left"><strong>reinterpretPhysics</strong></td>
 <td align="left">Recreate Maya scene from exported Ragdoll file</td>
+</tr>
+<tr>
+<td align="left"><strong>extractPhysics</strong></td>
+<td align="left">Generate an animated joint hierarchy from <code>solver</code></td>
 </tr>
 <tr>
 <td align="left"><strong>deletePhysics</strong></td>
@@ -2698,6 +2709,18 @@
 <span class="sd">    User-interface attributes like `density` and display settings</span>
 <span class="sd">    are restored from a file otherwise mostly contains the raw</span>
 <span class="sd">    simulation data.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="extractphysics">extractPhysics</h3>
+<p>Generate an animated joint hierarchy from <code>solver</code>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extractPhysics</span><span class="p">(</span><span class="n">solver</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate an animated joint hierarchy from `solver`</span>
+
+<span class="sd">    This will generate a new joint hierarchy and apply the full</span>
+<span class="sd">    simulation as keyframes onto it, for a complete replica of</span>
+<span class="sd">    the simulation in a Ragdoll-independent way.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
