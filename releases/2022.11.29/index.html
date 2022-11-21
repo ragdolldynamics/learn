@@ -2343,12 +2343,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    Rendering
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-outline" class="md-nav__link">
+    Selection Outline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-selection" class="md-nav__link">
+    Group Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2x-performance" class="md-nav__link">
     2x Performance
   </a>
   
-    <nav class="md-nav" aria-label="2x Performance">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#parallelism" class="md-nav__link">
@@ -2577,6 +2598,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mesh-import-in-maya-2023" class="md-nav__link">
+    Mesh Import in Maya 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#known-issue-render-gliches-from-the-inside" class="md-nav__link">
     Known Issue - Render Gliches from the Inside
   </a>
@@ -2641,6 +2669,20 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572286-cadcbb52-e928-45c9-a892-ac666f334d1e.mp4" type="video/mp4"></video></p>
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572294-345dbf2a-8ec4-4765-9c06-fe4667f049b1.mp4" type="video/mp4"></video></p>
+<p><strong>Live Wyvern</strong></p>
+<p>Made with the beta versino of Live Mode by @emi on the forums.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203115204-e14f40b1-3c6b-4923-8e28-412a896a9ea0.mp4" type="video/mp4"></video></p>
+<p><strong>Interactive Wyvern</strong></p>
+<p>Animated in Interactive Mode, with caching enabled.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203116779-c7141894-30c4-4c5c-aca5-c2bb84781fb6.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203117137-7794d480-0738-4a07-99fc-378612037900.mp4" type="video/mp4"></video></p>
+<p><strong>Live Dance</strong></p>
+<p>Animated with Live Mode, and re-simulated for balance!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/196401808-a3317f5d-7142-4fd4-82cf-2bf9fe96410e.mp4" type="video/mp4"></video></p>
+<p><strong>Catfish</strong></p>
+<p>Made with a beta version of Live Mode by @riccardo_p on the forums.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203118942-3e0b5a97-118d-499d-9ceb-01e025a7ec4a.mp4" type="video/mp4"></video></p>
 <p><strong>Halloween</strong></p>
 <p>This happened. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
 <ul>
@@ -2815,8 +2857,36 @@
 </ul>
 <p><a href="https://youtu.be/kmY5NSmbkZo"><img alt="image" src="https://user-images.githubusercontent.com/2152766/203064653-8decbeb2-cf01-49c2-8ff8-d1feeb5a63bf.png" /></a></p>
 <p><br></p>
-<h3 id="2x-performance">2x Performance</h3>
-<p>The viewport rendering pipeline has seen an overhaul - replacing much of Maya's own API for our own based on OpenGL 4 and DirectX 11 - resulting in 200% performance improvement at minimum; from 50 fps to 200 fps in the general case.</p>
+<h3 id="rendering">Rendering</h3>
+<p>The viewport rendering pipeline has seen an overhaul - replacing much of Maya's own API for our own based on OpenGL 4 and DirectX 11.</p>
+<p>The result is a much nicer presentation of Markers, especially those with a Mesh. But that's not all. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /> It also resulted in a <strong>400% performance improvement</strong> to rendering, which means that the total time of simulation plus rendering is now 200% faster</p>
+<ul>
+<li>50 FPS -&gt; 100 FPS</li>
+<li>50 FPS -&gt; 200 FPS in some cases</li>
+</ul>
+<p><img width="960" alt="image" src="https://user-images.githubusercontent.com/2152766/203105698-178d9b40-67aa-4ed6-822e-c6b9d497d840.png"></p>
+<p><img width="960" alt="image" src="https://user-images.githubusercontent.com/2152766/203105825-a0d666c9-b874-4952-87a9-72cc1801d73f.png"></p>
+<p><br></p>
+<h4 id="selection-outline">Selection Outline</h4>
+<p>Selection and anything "wireframe" in general has been significantly improved.</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203112809-542ca912-b59c-4aae-bcd4-04c3f8bf53a3.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203112810-e9efcf9c-7cc9-4bda-b346-32f54d3abf5d.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="group-selection">Group Selection</h4>
+<p>This has also seen a major face lift since the last release, resulting in a much more clear idea of what's included in a given group. Rather than the lasso from the prior release, which was great! But, it wasn't able to clearly visualise markers inbetween many other markers, since the lasso would encapsulate those too!</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203108800-99fb1ca1-6cb7-4bea-8136-13a00502fb2f.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203108814-6aac40ba-7983-4221-af8d-051ad0b4bfa8.mp4" type="video/mp4"></video></p>
+<div class="admonition info">
+<p class="admonition-title">Old Rendering</p>
+<p>If you prefer, you can still enable the old group drawing. It's merely disabled in the Solver Display section of the Attribute Editor.</p>
+<p><img width="335" alt="image" src="https://user-images.githubusercontent.com/2152766/203109335-7fd71f87-41d0-40c8-88cd-45b84398aae4.png"></p>
+</div>
+<p><br></p>
+<h4 id="2x-performance">2x Performance</h4>
 <p>Here's a simple performance test to give you some idea!</p>
 <p><strong>Before</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200580793-c88d61d4-de60-4723-8a4c-4b2bf5aa8f15.mp4" type="video/mp4"></video></p>
@@ -2944,6 +3014,8 @@
 <li><a href="https://youtu.be/R7OgDiJTzXs">Live Mode 13 - Hierarchy</a></li>
 <li><a href="https://youtu.be/fWy2ewVYJAM">Live Mode 14 - Maintain Child Orientation</a></li>
 <li><a href="https://youtu.be/HZ1NoSvq5v4">Live Mode 15 - Pause When Inactive</a></li>
+<li><a href="https://youtu.be/0dr5Dk_cnjc">Live Mode 16 - Interactive Mode 3</a></li>
+<li><a href="https://youtu.be/hWdm6vwWnMQ">Live Mode 17 - Record your Live Mode 2</a></li>
 </ul>
 <p><br></p>
 <h3 id="translate-rotate-stiffness">Translate &amp; Rotate Stiffness</h3>
@@ -3004,6 +3076,29 @@
 <p>Notice how as the character grows in size, the effect of the Distance Constraint diminishes. That's because with greater size comes greater <em>mass</em>. You can control this via <code>Density = 0</code> which allows you to give a character a fixed mass regardless of size, which you may or may not want!</p>
 </div>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203030460-1e7b4b10-34d9-48af-926f-656eb332c9c7.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="mesh-import-in-maya-2023">Mesh Import in Maya 2023</h3>
+<p>A tiny little typo slipped in with the prior release, 2022.07.20, which led to you being unable to import anything with replaced meshes. :sad: This has now been fixed! :party:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ri</span><span class="o">.</span><span class="n">import_physics</span><span class="p">()</span>
+<span class="o">//</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_create_solvers</span><span class="p">()</span> <span class="o">-</span> <span class="n">Creating</span> <span class="n">solver</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">..</span>
+<span class="o">//</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_create_groups</span><span class="p">()</span> <span class="o">-</span> <span class="n">Creating</span> <span class="n">group</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">..</span>
+<span class="o">//</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_create_markers</span><span class="p">()</span> <span class="o">-</span> <span class="n">Creating</span> <span class="n">marker</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">..</span>
+<span class="o">//</span> <span class="ne">Warning</span><span class="p">:</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_import_physics_wrapper</span><span class="p">()</span> <span class="o">-</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\interactive.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">3604</span><span class="p">,</span> <span class="ow">in</span> <span class="n">_import_physics_wrapper</span>
+<span class="o">//</span>     <span class="n">_singleton_import_loader</span><span class="o">.</span><span class="n">reinterpret</span><span class="p">()</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\internal.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">441</span><span class="p">,</span> <span class="ow">in</span> <span class="n">_undo_chunk</span>
+<span class="o">//</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\dump.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">450</span><span class="p">,</span> <span class="ow">in</span> <span class="n">reinterpret</span>
+<span class="o">//</span>     <span class="n">rdmarkers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_markers</span><span class="p">(</span><span class="n">rdgroups</span><span class="p">,</span> <span class="n">rdsolvers</span><span class="p">)</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\dump.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">665</span><span class="p">,</span> <span class="ow">in</span> <span class="n">_create_markers</span>
+<span class="o">//</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_apply_marker</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="n">rdmarker</span><span class="p">)</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\dump.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1272</span><span class="p">,</span> <span class="ow">in</span> <span class="n">_apply_marker</span>
+<span class="o">//</span>     <span class="n">mobj</span> <span class="o">=</span> <span class="n">meshes_to_mobj</span><span class="p">(</span><span class="n">Meshes</span><span class="p">)</span>
+<span class="o">//</span>   <span class="n">File</span> <span class="s2">&quot;C:\Users\marcus\Documents\maya\modules\Ragdoll-2022_07_20\scripts</span><span class="se">\r</span><span class="s2">agdoll\dump.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1299</span><span class="p">,</span> <span class="ow">in</span> <span class="n">meshes_to_mobj</span>
+<span class="o">//</span>     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygon_connects</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">):</span>
+<span class="o">//</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span> <span class="nb">object</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">an</span> <span class="n">integer</span>
+<span class="o">//</span> <span class="ne">Warning</span><span class="p">:</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_import_physics_wrapper</span><span class="p">()</span> <span class="o">-</span> <span class="n">An</span> <span class="n">unexpected</span> <span class="n">error</span> <span class="n">occurred</span><span class="p">,</span> <span class="n">see</span> <span class="n">Script</span> <span class="n">Editor</span>
+</code></pre></div>
 <p><br></p>
 <h3 id="known-issue-render-gliches-from-the-inside">Known Issue - Render Gliches from the Inside</h3>
 <p>Moving the camera inside of a marker with an outline can look a little freaky!</p>
