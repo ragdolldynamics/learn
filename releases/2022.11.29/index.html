@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.11.26/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.11.29/">
       
       
         <meta name="author" content="mottosso">
@@ -2330,8 +2330,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rigging-for-live-mode" class="md-nav__link">
+    Rigging for Live Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rigging-with-multi-cut" class="md-nav__link">
     Rigging with Multi-Cut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-rig-and-maya-native-rigs" class="md-nav__link">
+    Live Rig and Maya Native Rigs
   </a>
   
 </li>
@@ -2507,6 +2521,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beta-videos" class="md-nav__link">
+    Beta Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#translate-rotate-stiffness" class="md-nav__link">
     Translate &amp; Rotate Stiffness
   </a>
@@ -2588,7 +2609,7 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.11.26.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.11.29.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -2605,7 +2626,6 @@
 <li><a href="#asset-library"><strong>ADDED</strong> Asset Library</a> Premade assets with room for your own collection</li>
 <li><a href="#2x-performance"><strong>ADDED</strong> 2x Performance</a> 4x faster rendering means 2x faster overall performance</li>
 <li><a href="#selection-outline"><strong>ADDED</strong> Selection Outline</a> Easier and nice-to-look at rendering</li>
-<li><a href="#locomotion-2-0"><strong>ADDED</strong> Locomotion 2.0</a> Multiple targets and animation refinement</li>
 <li><a href="#translate-rotate-stiffness"><strong>UPDATED</strong> Translate &amp; Rotate Stiffness</a> Simpler! No more "pose space", what even <em>was</em> that?!</li>
 <li><a href="#selective-export"><strong>ADDED</strong> Selective Export</a> Exclude or include individual Markers, Groups or Solvers</li>
 <li><a href="#keyable-gravity"><strong>ADDED</strong> Keyable Gravity</a> Gravity can now be animated!</li>
@@ -2631,6 +2651,9 @@
 <li><a href="https://www.linkedin.com/posts/jason-snyman-84711b1_halloween-maya3d-skeleton-activity-6992912932334362624-EcJD/?utm_source=share&amp;utm_medium=member_ios">On LinkedIn</a></li>
 </ul>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572324-4f66fa1e-8f5f-4961-9631-24c05727f8da.mp4" type="video/mp4"></video></p>
+<p><strong>Ho Ho Ho</strong></p>
+<p>A little early, or is it? <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203032056-ce718c05-fdb5-46d6-8965-47a6390072f9.mp4" type="video/mp4"></video></p>
 <p><strong>Live Mode Workflow</strong></p>
 <p>One example of how to use the new Live Mode from this release.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572348-87015e8b-688e-4354-8ef1-9fcbcadb38ab.mp4" type="video/mp4"></video></p>
@@ -2760,7 +2783,8 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/195035563-cb21ff2d-a019-4503-8767-d6da79d97a14.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="recording-live-mode">Recording Live Mode</h4>
-<p>Use Live Mode with <code>Cache = Static</code> enabled to enable recording of your interactions with characters.</p>
+<p>Use Live Mode with <code>Cache = Static</code> to enable recording of your interactions!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203033206-aa9d01ad-a933-4017-81cd-2b44ad76dd5d.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="interactive-mode">Interactive Mode</h4>
 <p>Toggle the Lock button far-right to keep simulating outside of the Manipulator.</p>
@@ -2776,12 +2800,26 @@
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572348-87015e8b-688e-4354-8ef1-9fcbcadb38ab.mp4" type="video/mp4"></video></p>
 <p><br></p>
+<h4 id="rigging-for-live-mode">Rigging for Live Mode</h4>
+<p>In order for your characters to work with Live Mode, you'll need to take a few things into consideration. Primarily that your character has FK controls with the ability to disable space switches and other mechanics that differ from a straightforward parent/child relationship.</p>
+<ul>
+<li><a href="https://youtu.be/fx-BT6eDxDE">https://youtu.be/fx-BT6eDxDE</a> (4:15 mins)</li>
+</ul>
+<p><a href="https://youtu.be/fx-BT6eDxDE"><img alt="image" src="https://user-images.githubusercontent.com/2152766/203038560-028f357f-fc90-40ba-ba84-782f419dc0c1.png" /></a></p>
+<p><br></p>
 <h4 id="rigging-with-multi-cut">Rigging with Multi-Cut</h4>
 <p>A quick tutorial on how to setup a character using Maya's multi-cut, and then export and load this character to assemble it alongside our favourite Manikin!</p>
 <ul>
 <li><a href="https://youtu.be/Si_l8B82c9w">https://youtu.be/Si_l8B82c9w</a> (10:06 mins)</li>
 </ul>
 <p><a href="https://youtu.be/Si_l8B82c9w"><img alt="image" src="https://user-images.githubusercontent.com/2152766/202854943-48a3dcd8-5b06-4971-9000-220ad690b2c8.png" /></a></p>
+<p><br></p>
+<h4 id="live-rig-and-maya-native-rigs">Live Rig and Maya Native Rigs</h4>
+<p>Here's an example of how you can "trick" Live Mode into working for you with any traditional Maya rig.</p>
+<ul>
+<li><a href="https://youtu.be/kmY5NSmbkZo">https://youtu.be/kmY5NSmbkZo</a> (5:13 mins)</li>
+</ul>
+<p><a href="https://youtu.be/kmY5NSmbkZo"><img alt="image" src="https://user-images.githubusercontent.com/2152766/203064653-8decbeb2-cf01-49c2-8ff8-d1feeb5a63bf.png" /></a></p>
 <p><br></p>
 <h3 id="2x-performance">2x Performance</h3>
 <p>The viewport rendering pipeline has seen an overhaul - replacing much of Maya's own API for our own based on OpenGL 4 and DirectX 11 - resulting in 200% performance improvement at minimum; from 50 fps to 200 fps in the general case.</p>
@@ -2893,6 +2931,28 @@
 <p>A generic lion, in bad need of limits. Can you help him?</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/202759794-86e20933-d61f-4b67-bf19-404b0ce85ac6.mp4" type="video/mp4"></video></p>
 <p><br></p>
+<h3 id="beta-videos">Beta Videos</h3>
+<p>A series of videos made during the beta, some of which are out of date but still potentially useful!</p>
+<ul>
+<li><a href="https://youtu.be/cCTs7poiHFw">Live Mode 0 - Asset Library</a></li>
+<li><a href="https://youtu.be/lhpttF0sS8U">Live Mode 1 - Introduction</a></li>
+<li><a href="https://youtu.be/7LYOo3ZOKQM">Live Mode 2 - Edit Any Frame</a></li>
+<li><a href="https://youtu.be/AOHHBowjKMM">Live Mode 3 - Tense Children</a></li>
+<li><a href="https://youtu.be/j0N9LDA5Eg4">Live Mode 4 - Shift + Drag</a></li>
+<li><a href="https://youtu.be/Nsvh38zrFjQ">Live Mode 5 - Timeline</a></li>
+<li><a href="https://youtu.be/D5slMTTl2LI">Live Mode 6 - Drop</a></li>
+<li><a href="https://youtu.be/fjiHn2LSgHA">Live Mode 7 - Drop</a></li>
+<li><a href="https://youtu.be/VLM0zca-B54">Live Mode 7 - Shift + Drop</a></li>
+<li><a href="https://youtu.be/7YB5qU88Gdk">Live Mode 8 - Tense</a></li>
+<li><a href="https://youtu.be/ozCdvCLpvEA">Live Mode 9 - Shift + Tense</a></li>
+<li><a href="https://youtu.be/yhXPSvOiJco">Live Mode 10 - Ctrl + Click</a></li>
+<li><a href="https://youtu.be/iLtW7ndsM78">Live Mode 11 - Transfer</a></li>
+<li><a href="https://youtu.be/w4CXi69qx2E">Live Mode 12 - Sync Timeline</a></li>
+<li><a href="https://youtu.be/R7OgDiJTzXs">Live Mode 13 - Hierarchy</a></li>
+<li><a href="https://youtu.be/fWy2ewVYJAM">Live Mode 14 - Maintain Child Orientation</a></li>
+<li><a href="https://youtu.be/HZ1NoSvq5v4">Live Mode 15 - Pause When Inactive</a></li>
+</ul>
+<p><br></p>
 <h3 id="translate-rotate-stiffness">Translate &amp; Rotate Stiffness</h3>
 <p>We've making a change to how you animate with the "stiffness" attributes.</p>
 <p><img width="434" alt="image" src="https://user-images.githubusercontent.com/2152766/201091865-25b0c1b7-6a11-440e-9970-1a1b400c74a4.png"></p>
@@ -2937,14 +2997,20 @@
 <p>The prior members remain, but should not be used.</p>
 <p><br></p>
 <h3 id="import-attach-constraint">Import Attach Constraint</h3>
-<hr />
+<p>You can now export and import the Attach Constraint!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203028850-aec1b326-42fa-436e-853a-c0d22a15c151.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="scale-attach-constraint">Scale Attach Constraint</h3>
 <p>You can now scale characters that use the Attach Constraint.</p>
-<hr />
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203029305-558d63dc-2e28-4c15-a205-d43d70beea13.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h3 id="scale-distance-constraints">Scale Distance Constraints</h3>
 <p>The minimum and maximum values of the Distance Constraint is now scaled alongside your character, just as you'd expect!</p>
-<hr />
+<div class="admonition tip">
+<p class="admonition-title">Pro tip</p>
+<p>Notice how as the character grows in size, the effect of the Distance Constraint diminishes. That's because with greater size comes greater <em>mass</em>. You can control this via <code>Density = 0</code> which allows you to give a character a fixed mass regardless of size, which you may or may not want!</p>
+</div>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203030460-1e7b4b10-34d9-48af-926f-656eb332c9c7.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="known-issue-render-gliches-from-the-inside">Known Issue - Render Gliches from the Inside</h3>
 <p>Moving the camera inside of a marker with an outline can look a little freaky!</p>
@@ -2958,7 +3024,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-11-20
+      Last update: 2022-11-21
     
   </small>
 </div>
