@@ -2639,7 +2639,7 @@
 <li><a href="#live-mode"><strong>ADDED</strong> Interactive Mode</a> Real-time physics as you animate</li>
 <li><a href="#load-physics"><strong>ADDED</strong> Load Physics</a> Lightweight and physically-based character rigs</li>
 <li><a href="#asset-library"><strong>ADDED</strong> Asset Library</a> Premade assets with room for your own collection</li>
-<li><a href="#2x-performance"><strong>ADDED</strong> 2x Performance</a> 4x faster rendering means 2x faster overall performance</li>
+<li><a href="#2x-performance"><strong>ADDED</strong> 2x Performance</a> 4x faster rendering means 2x faster playback performance</li>
 <li><a href="#selection-outline"><strong>ADDED</strong> Selection Outline</a> Easier and nice-to-look at rendering</li>
 <li><a href="#translate-rotate-stiffness"><strong>UPDATED</strong> Translate &amp; Rotate Stiffness</a> Simpler! No more "pose space", what even <em>was</em> that?!</li>
 <li><a href="#selective-export"><strong>ADDED</strong> Selective Export</a> Exclude or include individual Markers, Groups or Solvers</li>
@@ -2654,7 +2654,7 @@
 <p><strong>Ragdoll 3 Trailer</strong></p>
 <p>A 2 minute summary of what you'll find in this document!</p>
 <ul>
-<li><a href="https://youtu.be/YTSty1qhlAg">YouTube - Trailer</a> (2:00 mins)</li>
+<li><a href="https://youtu.be/KqwdpN4EIVs">YouTube - Trailer</a> (2:00 mins)</li>
 <li><a href="https://youtu.be/fx-BT6eDxDE">YouTube - Rigging for Live Mode</a> (4:15 mins)</li>
 <li><a href="https://youtu.be/Si_l8B82c9w">YouTube - Rigging with Multi-Cut</a> (10:06 mins)</li>
 <li><a href="https://youtu.be/kmY5NSmbkZo">YouTube - Live Rig and Maya Native Rigs</a> (5:13 mins)</li>
@@ -2670,13 +2670,8 @@
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572294-345dbf2a-8ec4-4765-9c06-fe4667f049b1.mp4" type="video/mp4"></video></p>
 <p><strong>Live Wyvern</strong></p>
-<p>Made with the beta versino of Live Mode by @emi on the forums.</p>
+<p>Made with the beta version of Live Mode by @emi on the forums.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203115204-e14f40b1-3c6b-4923-8e28-412a896a9ea0.mp4" type="video/mp4"></video></p>
-<p><strong>Interactive Wyvern</strong></p>
-<p>Animated in Interactive Mode, with caching enabled.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203116779-c7141894-30c4-4c5c-aca5-c2bb84781fb6.mp4" type="video/mp4"></video></p>
-<!--  -->
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203117137-7794d480-0738-4a07-99fc-378612037900.mp4" type="video/mp4"></video></p>
 <p><strong>Live Dance</strong></p>
 <p>Animated with Live Mode, and re-simulated for balance!</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/196401808-a3317f5d-7142-4fd4-82cf-2bf9fe96410e.mp4" type="video/mp4"></video></p>
@@ -2695,6 +2690,11 @@
 <p><strong>Live Mode Workflow</strong></p>
 <p>One example of how to use the new Live Mode from this release.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/200572348-87015e8b-688e-4354-8ef1-9fcbcadb38ab.mp4" type="video/mp4"></video></p>
+<p><strong>Interactive Wyvern</strong></p>
+<p>Animated in Interactive Mode, with caching enabled.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203116779-c7141894-30c4-4c5c-aca5-c2bb84781fb6.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203117137-7794d480-0738-4a07-99fc-378612037900.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="ragdoll-30">Ragdoll 3.0</h3>
 <p>That's right, this is a big one!</p>
@@ -2859,11 +2859,9 @@
 <p><br></p>
 <h3 id="rendering">Rendering</h3>
 <p>The viewport rendering pipeline has seen an overhaul - replacing much of Maya's own API for our own based on OpenGL 4 and DirectX 11.</p>
-<p>The result is a much nicer presentation of Markers, especially those with a Mesh. But that's not all. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /> It also resulted in a <strong>400% performance improvement</strong> to rendering, which means that the total time of simulation plus rendering is now 200% faster</p>
-<ul>
-<li>50 FPS -&gt; 100 FPS</li>
-<li>50 FPS -&gt; 200 FPS in some cases</li>
-</ul>
+<p>The result is a much nicer presentation of Markers, especially those with a Mesh.</p>
+<p>But that's not all. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<p>It also resulted in a <strong>4x performance improvement</strong> to rendering, which means that playback performance is now 2x faster!</p>
 <p><img width="960" alt="image" src="https://user-images.githubusercontent.com/2152766/203105698-178d9b40-67aa-4ed6-822e-c6b9d497d840.png"></p>
 <p><img width="960" alt="image" src="https://user-images.githubusercontent.com/2152766/203105825-a0d666c9-b874-4952-87a9-72cc1801d73f.png"></p>
 <p><br></p>
@@ -3022,7 +3020,7 @@
 <p>We've making a change to how you animate with the "stiffness" attributes.</p>
 <p><img width="434" alt="image" src="https://user-images.githubusercontent.com/2152766/201091865-25b0c1b7-6a11-440e-9970-1a1b400c74a4.png"></p>
 <p>Primarily, we're removing the <code>Pose Space</code> attribute. If you hadn't yet used it, good on you. It was far too complicated of an attribute to make sense of.</p>
-<p>If you <em>have</em> been using it, you'll be pleased to know that the behavior is now entirely consolidated into the Pin Constraint which performs exactly the same behaviour except without the mental overhead of figuring out what a "Custom" space actually is.</p>
+<p>If you <em>have</em> been using it, you'll be pleased to know that the behaviour is now entirely consolidated into the Pin Constraint which performs exactly the same behaviour except without the mental overhead of figuring out what a "Custom" space actually is.</p>
 <p><strong>Before</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/201092944-e1de00d4-0d27-49c0-80c6-0db90855954f.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
@@ -3078,7 +3076,7 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/203030460-1e7b4b10-34d9-48af-926f-656eb332c9c7.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="mesh-import-in-maya-2023">Mesh Import in Maya 2023</h3>
-<p>A tiny little typo slipped in with the prior release, 2022.07.20, which led to you being unable to import anything with replaced meshes. :sad: This has now been fixed! :party:</p>
+<p>A tiny little typo slipped in with the prior release, 2022.07.20, which led to you being unable to import anything with replaced meshes. 😭 This has now been fixed! 🥳</p>
 <div class="highlight"><pre><span></span><code><span class="n">ri</span><span class="o">.</span><span class="n">import_physics</span><span class="p">()</span>
 <span class="o">//</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_create_solvers</span><span class="p">()</span> <span class="o">-</span> <span class="n">Creating</span> <span class="n">solver</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">..</span>
 <span class="o">//</span> <span class="n">ragdoll</span><span class="o">.</span><span class="n">_create_groups</span><span class="p">()</span> <span class="o">-</span> <span class="n">Creating</span> <span class="n">group</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">..</span>
