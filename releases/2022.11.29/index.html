@@ -1202,6 +1202,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1210,7 +1212,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1220,7 +1222,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1241,6 +1243,499 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2022.11.29
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2022.11.29
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-30" class="md-nav__link">
+    Ragdoll 3.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-freelancer" class="md-nav__link">
+    Ragdoll Freelancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-mode" class="md-nav__link">
+    Live Mode
+  </a>
+  
+    <nav class="md-nav" aria-label="Live Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-posing" class="md-nav__link">
+    General Posing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-press-hold" class="md-nav__link">
+    Drop Press &amp; Hold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-toggle" class="md-nav__link">
+    Drop Toggle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tense-press-hold" class="md-nav__link">
+    Tense Press &amp; Hold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tense-toggle" class="md-nav__link">
+    Tense Toggle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mask" class="md-nav__link">
+    Mask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unmask-all" class="md-nav__link">
+    Unmask All
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mask-parent" class="md-nav__link">
+    Mask Parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-pose" class="md-nav__link">
+    Transfer Pose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-toggle" class="md-nav__link">
+    Transfer Toggle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    Animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-undo" class="md-nav__link">
+    Visual Undo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-live-mode" class="md-nav__link">
+    Recording Live Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-mode" class="md-nav__link">
+    Interactive Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigging-for-live-mode" class="md-nav__link">
+    Rigging for Live Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigging-with-multi-cut" class="md-nav__link">
+    Rigging with Multi-Cut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-rig-and-maya-native-rigs" class="md-nav__link">
+    Live Rig and Maya Native Rigs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    Rendering
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-outline" class="md-nav__link">
+    Selection Outline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-selection" class="md-nav__link">
+    Group Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2x-performance" class="md-nav__link">
+    2x Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallelism" class="md-nav__link">
+    Parallelism
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-physics" class="md-nav__link">
+    Load Physics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-library" class="md-nav__link">
+    Asset Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Asset Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-history" class="md-nav__link">
+    Version History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licence-information" class="md-nav__link">
+    Licence Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-loads" class="md-nav__link">
+    Multiple Loads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    Assets
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alien" class="md-nav__link">
+    Alien
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dog" class="md-nav__link">
+    Dog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manikin" class="md-nav__link">
+    Manikin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spaceman" class="md-nav__link">
+    Spaceman
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pirate" class="md-nav__link">
+    Pirate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rhino" class="md-nav__link">
+    Rhino
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wasp" class="md-nav__link">
+    Wasp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cowboy" class="md-nav__link">
+    Cowboy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon" class="md-nav__link">
+    Dragon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batty" class="md-nav__link">
+    Batty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shark" class="md-nav__link">
+    Shark
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dude" class="md-nav__link">
+    Dude
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lion" class="md-nav__link">
+    Lion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beta-videos" class="md-nav__link">
+    Beta Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translate-rotate-stiffness" class="md-nav__link">
+    Translate &amp; Rotate Stiffness
+  </a>
+  
+    <nav class="md-nav" aria-label="Translate &amp; Rotate Stiffness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backwards-compatibility" class="md-nav__link">
+    Backwards Compatibility
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-mesh-tweak" class="md-nav__link">
+    Replace Mesh Tweak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selective-export" class="md-nav__link">
+    Selective Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragfile-schema-update" class="md-nav__link">
+    Ragfile Schema Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-attach-constraint" class="md-nav__link">
+    Import Attach Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-attach-constraint" class="md-nav__link">
+    Scale Attach Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-distance-constraints" class="md-nav__link">
+    Scale Distance Constraints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-import-in-maya-2023" class="md-nav__link">
+    Mesh Import in Maya 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issue-render-gliches-from-the-inside" class="md-nav__link">
+    Known Issue - Render Gliches from the Inside
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2629,7 +3124,7 @@
                   </a>
                 
                 
-                  <h1>Live Mode</h1>
+                  <h1>2022.11.29</h1>
                 
                 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/200574455-3f800aaa-3cd7-4977-b488-2e202316e944.png" /></p>
 <p>Highlight for this release is <strong>Live Mode!</strong></p>
@@ -3130,6 +3625,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serialisation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2022.07.20/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2022.07.20
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
