@@ -510,8 +510,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pee-gees-and-tee-gees" class="md-nav__link">
-    Pee-gees and Tee-gees
+  <a href="#solvertype-differences" class="md-nav__link">
+    solverType Differences
   </a>
   
 </li>
@@ -2358,8 +2358,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pee-gees-and-tee-gees" class="md-nav__link">
-    Pee-gees and Tee-gees
+  <a href="#solvertype-differences" class="md-nav__link">
+    solverType Differences
   </a>
   
 </li>
@@ -2431,8 +2431,28 @@
 <p>Rather than having to specify which frame to start simulating at, Ragdoll can keep track of your animation start frame. Either the start of the <em>range</em>, or the full timeline. Or, you can still set a <code>Custom</code> start time for when you do care about specifics.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/136388759-8cf91122-c779-4425-9c5b-492597595262.png" /></p>
 <p><br></p>
-<h3 id="pee-gees-and-tee-gees">Pee-gees and Tee-gees</h3>
-<p>Two sides of the same coin.</p>
+<h3 id="solvertype-differences"><code>solverType</code> Differences</h3>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><strong>Strong</strong></td>
+<td align="left">Better for characters, it makes the <code>Rotate Stiffness</code> stronger; more capable of matching the animated pose. It can become unstable if there are too many loose objects in the scene.</td>
+</tr>
+<tr>
+<td align="right"><strong>Stable</strong></td>
+<td align="left">Better for many independent objects, like a destruction scene.</td>
+</tr>
+</tbody>
+</table>
+<p>You can find <code>solverType</code> under the Channel Box and the Attribute Editor.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/1909761/216326942-84a2f823-ce62-47e7-932a-bca694214a9f.png" /></p>
+<p><img alt="" src="https://user-images.githubusercontent.com/1909761/216327726-d6be8dcc-6cad-44eb-9cfc-0ded994ee6c3.png" /></p>
                 
                   
                     
@@ -2441,7 +2461,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2023-02-02
     
   </small>
 </div>

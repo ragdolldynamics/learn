@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trajectories" class="md-skip">
+        <a href="#showcase" class="md-skip">
           Skip to content
         </a>
       
@@ -2221,8 +2221,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solver-update" class="md-nav__link">
+    Solver Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-group" class="md-nav__link">
+    Collision Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trajectories" class="md-nav__link">
     Trajectories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-independent-fields" class="md-nav__link">
+    Mass Independent Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-constraint-pivot" class="md-nav__link">
+    Pin Constraint Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-constraint-pivot" class="md-nav__link">
+    Attach Constraint Pivot
   </a>
   
 </li>
@@ -2249,16 +2291,93 @@
                 
                 <p>Highlight for this release is <strong>?!</strong></p>
 <ul>
+<li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
+<li><a href="#collision-group"><strong>ADDED</strong> Collision Group</a> More intuitive management of what does and does <em>not</em> collide</li>
 <li><a href="#locomotion-2"><strong>ADDED</strong> Locomotion 2.0</a> A ton of improvements and new abilities!</li>
 <li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a></li>
 <li><a href="#refinement"><strong>ADDED</strong> Iterative Updates</a></li>
 <li><a href="#feet"><strong>ADDED</strong> Feet</a></li>
 <li><a href="#new-gizmos"><strong>ADDED</strong> New Gizmos</a></li>
 <li><a href="#trajectories-returns"><strong>ADDED</strong> Trajectories Returns</a> Faster and stronger!</li>
+<li><a href="#mass-independent-fields"><strong>ADDED</strong> Mass Independent Fields</a> More intuitive fields</li>
 </ul>
 <p><br></p>
+<h3 id="showcase">Showcase</h3>
+<p>As is tradition, let's start off with some of the cool Ragdoll material surfacing across the interwebs since the last release.</p>
+<p><strong>Oh Deer</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750106-f78b4306-ef02-45b8-a50e-6026907272de.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750138-49082192-a2d4-4f86-aea4-ead77092f659.mp4" type="video/mp4"></video></p>
+<p><strong>Fast Food</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750117-960366b2-700c-42e8-9610-4e5aa6191840.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="solver-update">Solver Update</h3>
+<p>The underlying maths behind your physics has been modernised to resolve subtle issues but primarily lay the foundation for new things to come. You shouldn't notice much of any difference, apart from subtle things like this.</p>
+<ul>
+<li>Before 600 boxes: 69-81 fps</li>
+<li>After 600 boxes: 71-84 fps (lots of independent rigid bodies)</li>
+<li>Before Wyvern: 82 fps</li>
+<li>After Wyvern: 79 fps (lots of connected and constrained rigid bodies)</li>
+</ul>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/214250292-f38e6db0-c564-4203-b782-053070958e18.mp4" /></p>
+<p><br></p>
+<h3 id="collision-group">Collision Group</h3>
+<p>You can now more easily manage which Markers collide, and which does not!</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/217063977-1faaa176-a5e2-4798-a3db-a1741d36fa29.png" /></p>
+<p><strong>Create New Collision Group</strong></p>
+<p>Assign to two or more Markers to create a new collision group.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063510-cbc399b4-efa2-45dc-b3e2-66665fcb9d3d.mp4" type="video/mp4"></video></p>
+<p><strong>Add to Existing Collision Group</strong></p>
+<p>Select a collision group along with one or more Markers to add.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063519-48c104cf-b3db-4281-b43f-c555bdba734c.mp4" type="video/mp4"></video></p>
+<p><strong>Remove from Existing Collision Group</strong></p>
+<p>Similarly remove Markers.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063524-0dad1dbb-27f9-424a-94ee-1b470c9244eb.mp4" type="video/mp4"></video></p>
+<p><strong>Multiple Collision Groups</strong></p>
+<p>Select multiple groups to visualise them together. They will each occupy a (customisable) color.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063993-89df60f0-974f-44eb-82de-ab2e5cb2a3b9.mp4" type="video/mp4"></video></p>
+<p><strong>Merge Collision Groups</strong></p>
+<p>Assign to two or more groups to combine them.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063533-997ab9c5-27dd-4c49-8fb8-a63129ace7e8.mp4" type="video/mp4"></video></p>
+<p><strong>Python API Additions</strong></p>
+<p>For the Python folk out there, these members were added to the Python API.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="c1"># Create a new group</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">assign_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">)</span>
+
+<span class="c1"># Add some more markers</span>
+<span class="n">api</span><span class="o">.</span><span class="n">add_to_collision_group</span><span class="p">(</span><span class="n">other_markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+<span class="c1"># Remove some markers</span>
+<span class="n">api</span><span class="o">.</span><span class="n">remove_from_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
 <h3 id="trajectories">Trajectories</h3>
-<hr />
+<p>You can now visualise the trajectories of your Markers via the Solver Display attribute.</p>
+<p><img width="313" alt="image" src="https://user-images.githubusercontent.com/2152766/214253349-daf6b374-a5f4-40a2-9581-16ef6abedc71.png"></p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/214253208-79af7af6-0e87-4b6f-b748-9a32547d5a2f.mp4" /></p>
+<p><br></p>
+<h3 id="mass-independent-fields">Mass Independent Fields</h3>
+<p>Fields are now independent of Marker mass; meaning that large characters like trolls and giants are affected equal to small things like screws and dust.</p>
+<p>Explain these.</p>
+<ul>
+<li><code>solver.forceMode = Velocity Change</code></li>
+<li><code>solver.perSubstep = false</code></li>
+</ul>
+<p><br></p>
+<h3 id="pin-constraint-pivot">Pin Constraint Pivot</h3>
+<p>You can now control where on a Marker to Pin Constrain it.</p>
+<blockquote>
+<p>Hold <code>D</code> to edit the position of the rotate pivot</p>
+</blockquote>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215749722-9b943813-41d2-48d2-9232-49af53d62c5c.mp4" type="video/mp4"></video></p>
+<!--  -->
+
+<p><br></p>
+<h3 id="attach-constraint-pivot">Attach Constraint Pivot</h3>
+<p>Like the Pin Constraint, Attach Constraints can have their pivots edited too. Especially useful if you are looking to attach two Markers at a specific location.</p>
+<p><a href="https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4">https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4</a></p>
                 
                   
                     
@@ -2267,7 +2386,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-12-19
+      Last update: 2023-02-07
     
   </small>
 </div>

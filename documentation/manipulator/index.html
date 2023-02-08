@@ -2447,7 +2447,7 @@
 <p>Interactively manipulate shapes and limits using the Manipulator.</p>
 <p><br></p>
 <h3 id="manipulator">Manipulator</h3>
-<p>One of the most challenging aspect of Ragdoll to date is editing shapes and limits. These have now been <em>greatly</em> simplified via the use of "manipulators", similar to your standard Translate/Rotate/Scale manipulators. Except on steroids.</p>
+<p>One of the most challenging aspects of Ragdoll to date is editing shapes and limits. These have now been <em>greatly</em> simplified via the use of "manipulators", similar to your standard Translate/Rotate/Scale manipulators. Except on steroids.</p>
 <p>Here's a 21 second overview.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145669018-15c6847a-b031-4770-afe3-5a0b0bf50082.mp4" type="video/mp4"></video></p>
 
@@ -2468,6 +2468,10 @@
 <li><code>rdPinConstraint</code></li>
 <li><code>rdFixedConstraint</code></li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Manipulator UI Scale</p>
+<p>If the Manipulator's UI is too big or too small, you can change that via <code>Ragdoll &gt; System &gt; Ragdoll Preferences &gt; Resolution Scale</code>. Make sure to restart Maya or reload Ragdoll after changing the Resolution Scale.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Solver Shape</p>
 <p>At the time of this writing, the solver needs its <em>shape</em> selected, not the parent transform. This will be addressed in a future release.</p>
@@ -2601,7 +2605,7 @@
 
 <div class="admonition info">
 <p class="admonition-title">Why are they moving?</p>
-<p>Under the hood, each axis must be still be symmetrical; edits only appear to be asymmetrical for your convenience. What's really happening is the entire limit is both changing shape and also rotating and the rotation is causing all axes to move.</p>
+<p>Under the hood, each axis must still be symmetrical; edits only appear to be asymmetrical for your convenience. What's really happening is the entire limit is both changing shape and also rotating and the rotation is causing all axes to move.</p>
 <p>This is an inherent limitation (pun!) of limits in Ragdoll and is unlikely to be addressed in the future, so we'll have to work with it.</p>
 </div>
 <p>If you mess up and want to start from scratch, hit the <code>Reset</code> button, also found under..</p>
@@ -2663,7 +2667,7 @@
 <p><br></p>
 <h4 id="undo-redo">Undo &amp; Redo</h4>
 <p>No surprises here.</p>
-<p>Changes made using the manipulator is undoable as you would expect, with the exception that it currently does not let you undo <em>the selection itself</em> like normal Maya selection does; this will be addressed in a future release.</p>
+<p>Changes made using the manipulator are undoable as you would expect, with the exception that it currently does not let you undo <em>the selection itself</em> like normal Maya selection does; this will be addressed in a future release.</p>
 <p><br></p>
 <h4 id="fit-to-view">Fit-to-view</h4>
 <p>Tap the <code>F</code> key to fit any selected Marker(s) to the view, like you would expect from selected Maya nodes.</p>
@@ -2704,7 +2708,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2023-02-07
     
   </small>
 </div>
