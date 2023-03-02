@@ -2228,6 +2228,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#account-management" class="md-nav__link">
+    Account Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solver-update" class="md-nav__link">
     Solver Update
   </a>
@@ -2263,8 +2270,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#good-bye-2018" class="md-nav__link">
+    Good Bye 2018
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attach-constraint-pivot" class="md-nav__link">
     Attach Constraint Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-up-assets" class="md-nav__link">
+    Z-up Assets
   </a>
   
 </li>
@@ -2291,25 +2312,40 @@
                 
                 <p>Highlight for this release is <strong>?!</strong></p>
 <ul>
-<li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
+<li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
 <li><a href="#collision-group"><strong>ADDED</strong> Collision Group</a> More intuitive management of what does and does <em>not</em> collide</li>
 <li><a href="#locomotion-2"><strong>ADDED</strong> Locomotion 2.0</a> A ton of improvements and new abilities!</li>
-<li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a></li>
-<li><a href="#refinement"><strong>ADDED</strong> Iterative Updates</a></li>
+<li><a href="#multi-target"><strong>ADDED</strong> Multi-target</a> Go left, then right, then turn around and go right again!</li>
+<li><a href="#multi-plan"><strong>ADDED</strong> Multi-plan</a> Chain plans together, each running in parallel!</li>
+<li><a href="#good-bye-2018"><strong>ADDED</strong> Good Bye 2018</a> Maya 2018, may you rest in peace</li>
+<li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a> Turn your blocky animation into final</li>
+<li><a href="#refinement"><strong>ADDED</strong> Iterative Updates</a> More immediate and continuous updates</li>
 <li><a href="#feet"><strong>ADDED</strong> Feet</a></li>
-<li><a href="#new-gizmos"><strong>ADDED</strong> New Gizmos</a></li>
+<li><a href="#new-gizmos"><strong>ADDED</strong> New Gizmos</a> Simplified authoring of targets</li>
 <li><a href="#trajectories-returns"><strong>ADDED</strong> Trajectories Returns</a> Faster and stronger!</li>
 <li><a href="#mass-independent-fields"><strong>ADDED</strong> Mass Independent Fields</a> More intuitive fields</li>
+<li><a href="#z-up-assets"><strong>ADDED</strong> Z-up Assets</a> Assets are now "bi-axial" <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></li>
+<li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
 </ul>
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
 <p>As is tradition, let's start off with some of the cool Ragdoll material surfacing across the interwebs since the last release.</p>
+<p><strong>60s Marionettes</strong></p>
+<p>Some excellent use of Ragdoll here by <a href="https://forums.ragdolldynamics.com/t/using-ragdoll-to-animate-1960s-style-sci-fi-marionettes/815">Ernst-Jan on the forums</a></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222101613-5bf3575f-7987-4868-a42c-5c39d65bc83c.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222101635-805341a1-b674-4e19-80e0-70a9c2963aff.mp4" type="video/mp4"></video></p>
+<p><strong>Human Ball</strong></p>
+<p>Zombies + Radial field = This, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7028302454333014016/">by Jason</a></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222101673-11b4a237-d8aa-4b39-8c4f-fe5dc8ff3f2c.mp4" type="video/mp4"></video></p>
 <p><strong>Oh Deer</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750106-f78b4306-ef02-45b8-a50e-6026907272de.mp4" type="video/mp4"></video></p>
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750138-49082192-a2d4-4f86-aea4-ead77092f659.mp4" type="video/mp4"></video></p>
 <p><strong>Fast Food</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750117-960366b2-700c-42e8-9610-4e5aa6191840.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="account-management">Account Management</h3>
 <p><br></p>
 <h3 id="solver-update">Solver Update</h3>
 <p>The underlying maths behind your physics has been modernised to resolve subtle issues but primarily lay the foundation for new things to come. You shouldn't notice much of any difference, apart from subtle things like this.</p>
@@ -2375,9 +2411,19 @@
 <!--  -->
 
 <p><br></p>
+<h3 id="good-bye-2018">Good Bye 2018</h3>
+<p>Ragdoll now only supports Maya 2019-2023, with 2024 coming up soon!</p>
+<p><br></p>
 <h3 id="attach-constraint-pivot">Attach Constraint Pivot</h3>
 <p>Like the Pin Constraint, Attach Constraints can have their pivots edited too. Especially useful if you are looking to attach two Markers at a specific location.</p>
-<p><a href="https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4">https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4</a></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="z-up-assets">Z-up Assets</h3>
+<p>You can now export assets from a Y-up Maya scene, and load it into a Z-up Maya scene! This means our default assets, which were made in a Y-up environment, will now load perfectly fine in your Z-up scenes.</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978903-a02d232d-9418-479b-b8cf-d4d03d8d0324.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978910-9e950715-dbf4-4621-8768-610088263d14.mp4" type="video/mp4"></video></p>
                 
                   
                     
@@ -2386,7 +2432,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-02-07
+      Last update: 2023-03-02
     
   </small>
 </div>
