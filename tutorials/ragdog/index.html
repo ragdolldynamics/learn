@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Model complex environments with Maya's native fields!">
+        <meta name="description" content="Learn how to rig a dog mesh from scratch">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.02.14/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/tutorials/ragdog/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Fields - Learn Ragdoll</title>
+        <title>Ragdog - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jason-snyman" class="md-skip">
+        <a href="#ragdog" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fields
+              Ragdog
             
           </span>
         </div>
@@ -751,6 +751,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -759,7 +761,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -769,7 +771,7 @@
           data-md-toggle="nav-4"
           type="checkbox"
           id="nav-4"
-          
+          checked
         />
       
 
@@ -800,7 +802,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/videos/" class="md-nav__link">
+      <a href="../videos/" class="md-nav__link">
         
         <img src="/icons/camera_black.png">
         
@@ -820,7 +822,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin/" class="md-nav__link">
+      <a href="../manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -840,7 +842,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ragdoll/" class="md-nav__link">
+      <a href="../manikin_ragdoll/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -860,7 +862,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ik/" class="md-nav__link">
+      <a href="../manikin_ik/" class="md-nav__link">
         
         <img src="/icons/chain_black.png">
         
@@ -880,7 +882,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/mocap_chap/" class="md-nav__link">
+      <a href="../mocap_chap/" class="md-nav__link">
         
         <img src="/icons/mocap_black.png">
         
@@ -900,7 +902,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/rookie_wasp/" class="md-nav__link">
+      <a href="../rookie_wasp/" class="md-nav__link">
         
         <img src="/icons/wasp_black.png">
         
@@ -916,18 +918,85 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../../tutorials/ragdog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ragdog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
         <img src="/icons/bone_black.png">
         
 
         Ragdog
       </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ragdog" class="md-nav__link">
+    Ragdog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Main navigation item -->
   
 
           
@@ -940,7 +1009,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/cloth_emulation/" class="md-nav__link">
+      <a href="../cloth_emulation/" class="md-nav__link">
         
         <img src="/icons/cloth_black.png">
         
@@ -960,7 +1029,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/self_walking/" class="md-nav__link">
+      <a href="../self_walking/" class="md-nav__link">
         
         <img src="/icons/control_black.png">
         
@@ -980,7 +1049,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/bouncing_ball/" class="md-nav__link">
+      <a href="../bouncing_ball/" class="md-nav__link">
         
         <img src="/icons/physics_black.png">
         
@@ -1262,8 +1331,6 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
@@ -1272,7 +1339,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1282,7 +1349,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          checked
+          
         />
       
 
@@ -1313,7 +1380,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.11.29/" class="md-nav__link">
+      <a href="../../releases/2022.11.29/" class="md-nav__link">
         
 
         2022.11.29
@@ -1331,7 +1398,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.07.20/" class="md-nav__link">
+      <a href="../../releases/2022.07.20/" class="md-nav__link">
         
 
         2022.07.20
@@ -1349,7 +1416,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.06.15/" class="md-nav__link">
+      <a href="../../releases/2022.06.15/" class="md-nav__link">
         
 
         2022.06.15
@@ -1367,7 +1434,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.06.09/" class="md-nav__link">
+      <a href="../../releases/2022.06.09/" class="md-nav__link">
         
 
         2022.06.09
@@ -1385,7 +1452,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.05.04/" class="md-nav__link">
+      <a href="../../releases/2022.05.04/" class="md-nav__link">
         
 
         2022.05.04
@@ -1403,7 +1470,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.03.14/" class="md-nav__link">
+      <a href="../../releases/2022.03.14/" class="md-nav__link">
         
 
         2022.03.14
@@ -1421,7 +1488,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.02.28/" class="md-nav__link">
+      <a href="../../releases/2022.02.28/" class="md-nav__link">
         
 
         2022.02.28
@@ -1435,297 +1502,16 @@
   <!-- Determine class according to state -->
   
   
-    
-  
 
   <!-- Main navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- Active checkbox expands items contained within nested section -->
-      <input
-        class="md-nav__toggle md-toggle"
-        data-md-toggle="toc"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Render table of contents, if not empty -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2022.02.14
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../../releases/2022.02.14/" class="md-nav__link">
         
 
         2022.02.14
       </a>
-
-      <!-- Show table of contents -->
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#jason-snyman" class="md-nav__link">
-    Jason Snyman
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#showcase" class="md-nav__link">
-    Showcase
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manikin-30" class="md-nav__link">
-    Manikin 3.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
-    Fields
-  </a>
-  
-    <nav class="md-nav" aria-label="Fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#turbulence" class="md-nav__link">
-    Turbulence
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drag" class="md-nav__link">
-    Drag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wind" class="md-nav__link">
-    Wind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gravity" class="md-nav__link">
-    Gravity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#newton" class="md-nav__link">
-    Newton
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#radial" class="md-nav__link">
-    Radial
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uniform" class="md-nav__link">
-    Uniform
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vortex" class="md-nav__link">
-    Vortex
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-axis-field" class="md-nav__link">
-    Volume Axis Field
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-curve" class="md-nav__link">
-    Volume Curve
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-fields" class="md-nav__link">
-    Combined Fields
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#centroids" class="md-nav__link">
-    Centroids
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#centroid-seed" class="md-nav__link">
-    Centroid Seed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-selected-as-source" class="md-nav__link">
-    Use Selected as Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#field-scale" class="md-nav__link">
-    Field Scale
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ignore-field" class="md-nav__link">
-    Ignore Field
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#force-modes" class="md-nav__link">
-    Force Modes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compound-shape" class="md-nav__link">
-    Compound Shape
-  </a>
-  
-    <nav class="md-nav" aria-label="Compound Shape">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mesh-decomposition" class="md-nav__link">
-    Mesh Decomposition
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robust-frame-skips" class="md-nav__link">
-    Robust Frame Skips
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-and-hud" class="md-nav__link">
-    Manipulator and HUD
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kinematic-stiffness" class="md-nav__link">
-    Kinematic Stiffness
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#untrusted-plugin-location" class="md-nav__link">
-    Untrusted Plugin Location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#negative-scale-edgecase" class="md-nav__link">
-    Negative Scale Edgecase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#import-additions" class="md-nav__link">
-    Import Additions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capsule-length" class="md-nav__link">
-    Capsule Length
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Main navigation item -->
   
 
           
@@ -1738,7 +1524,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.02.01/" class="md-nav__link">
+      <a href="../../releases/2022.02.01/" class="md-nav__link">
         
 
         2022.02.01
@@ -1756,7 +1542,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.01.21/" class="md-nav__link">
+      <a href="../../releases/2022.01.21/" class="md-nav__link">
         
 
         2022.01.21
@@ -1774,7 +1560,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2022.01.17/" class="md-nav__link">
+      <a href="../../releases/2022.01.17/" class="md-nav__link">
         
 
         2022.01.17
@@ -1792,7 +1578,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.12.15/" class="md-nav__link">
+      <a href="../../releases/2021.12.15/" class="md-nav__link">
         
 
         2021.12.15
@@ -1810,7 +1596,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.12.12/" class="md-nav__link">
+      <a href="../../releases/2021.12.12/" class="md-nav__link">
         
 
         2021.12.12
@@ -1828,7 +1614,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.11.15/" class="md-nav__link">
+      <a href="../../releases/2021.11.15/" class="md-nav__link">
         
 
         2021.11.15
@@ -1846,7 +1632,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.10.25/" class="md-nav__link">
+      <a href="../../releases/2021.10.25/" class="md-nav__link">
         
 
         2021.10.25
@@ -1864,7 +1650,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.10.07/" class="md-nav__link">
+      <a href="../../releases/2021.10.07/" class="md-nav__link">
         
 
         2021.10.07
@@ -1882,7 +1668,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.09.27/" class="md-nav__link">
+      <a href="../../releases/2021.09.27/" class="md-nav__link">
         
 
         2021.09.27
@@ -1900,7 +1686,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.08.28/" class="md-nav__link">
+      <a href="../../releases/2021.08.28/" class="md-nav__link">
         
 
         2021.08.28
@@ -1918,7 +1704,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.08.06/" class="md-nav__link">
+      <a href="../../releases/2021.08.06/" class="md-nav__link">
         
 
         2021.08.06
@@ -1936,7 +1722,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.27/" class="md-nav__link">
+      <a href="../../releases/2021.07.27/" class="md-nav__link">
         
 
         2021.07.27
@@ -1954,7 +1740,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.15/" class="md-nav__link">
+      <a href="../../releases/2021.07.15/" class="md-nav__link">
         
 
         2021.07.15
@@ -1972,7 +1758,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.07.02/" class="md-nav__link">
+      <a href="../../releases/2021.07.02/" class="md-nav__link">
         
 
         2021.07.02
@@ -1990,7 +1776,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.06.10/" class="md-nav__link">
+      <a href="../../releases/2021.06.10/" class="md-nav__link">
         
 
         2021.06.10
@@ -2008,7 +1794,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.06.07/" class="md-nav__link">
+      <a href="../../releases/2021.06.07/" class="md-nav__link">
         
 
         2021.06.07
@@ -2026,7 +1812,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.05.17/" class="md-nav__link">
+      <a href="../../releases/2021.05.17/" class="md-nav__link">
         
 
         2021.05.17
@@ -2044,7 +1830,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.05.10/" class="md-nav__link">
+      <a href="../../releases/2021.05.10/" class="md-nav__link">
         
 
         2021.05.10
@@ -2062,7 +1848,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.28/" class="md-nav__link">
+      <a href="../../releases/2021.04.28/" class="md-nav__link">
         
 
         2021.04.28
@@ -2080,7 +1866,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.23/" class="md-nav__link">
+      <a href="../../releases/2021.04.23/" class="md-nav__link">
         
 
         2021.04.23
@@ -2098,7 +1884,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.04.11/" class="md-nav__link">
+      <a href="../../releases/2021.04.11/" class="md-nav__link">
         
 
         2021.04.11
@@ -2116,7 +1902,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.25/" class="md-nav__link">
+      <a href="../../releases/2021.03.25/" class="md-nav__link">
         
 
         2021.03.25
@@ -2134,7 +1920,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.23/" class="md-nav__link">
+      <a href="../../releases/2021.03.23/" class="md-nav__link">
         
 
         2021.03.23
@@ -2152,7 +1938,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.11/" class="md-nav__link">
+      <a href="../../releases/2021.03.11/" class="md-nav__link">
         
 
         2021.03.11
@@ -2170,7 +1956,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.04/" class="md-nav__link">
+      <a href="../../releases/2021.03.04/" class="md-nav__link">
         
 
         2021.03.04
@@ -2188,7 +1974,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.03.01/" class="md-nav__link">
+      <a href="../../releases/2021.03.01/" class="md-nav__link">
         
 
         2021.03.01
@@ -2206,7 +1992,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.02.07/" class="md-nav__link">
+      <a href="../../releases/2021.02.07/" class="md-nav__link">
         
 
         2021.02.07
@@ -2224,7 +2010,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.27/" class="md-nav__link">
+      <a href="../../releases/2021.01.27/" class="md-nav__link">
         
 
         2021.01.27
@@ -2242,7 +2028,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.17/" class="md-nav__link">
+      <a href="../../releases/2021.01.17/" class="md-nav__link">
         
 
         2021.01.17
@@ -2260,7 +2046,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.15/" class="md-nav__link">
+      <a href="../../releases/2021.01.15/" class="md-nav__link">
         
 
         2021.01.15
@@ -2278,7 +2064,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.14/" class="md-nav__link">
+      <a href="../../releases/2021.01.14/" class="md-nav__link">
         
 
         2021.01.14
@@ -2296,7 +2082,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2021.01.04/" class="md-nav__link">
+      <a href="../../releases/2021.01.04/" class="md-nav__link">
         
 
         2021.01.04
@@ -2314,7 +2100,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.18/" class="md-nav__link">
+      <a href="../../releases/2020.12.18/" class="md-nav__link">
         
 
         2020.12.18
@@ -2332,7 +2118,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.07/" class="md-nav__link">
+      <a href="../../releases/2020.12.07/" class="md-nav__link">
         
 
         2020.12.07
@@ -2350,7 +2136,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.12.01/" class="md-nav__link">
+      <a href="../../releases/2020.12.01/" class="md-nav__link">
         
 
         2020.12.01
@@ -2368,7 +2154,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.24/" class="md-nav__link">
+      <a href="../../releases/2020.11.24/" class="md-nav__link">
         
 
         2020.11.24
@@ -2386,7 +2172,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.23/" class="md-nav__link">
+      <a href="../../releases/2020.11.23/" class="md-nav__link">
         
 
         2020.11.23
@@ -2404,7 +2190,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.22/" class="md-nav__link">
+      <a href="../../releases/2020.11.22/" class="md-nav__link">
         
 
         2020.11.22
@@ -2422,7 +2208,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.17/" class="md-nav__link">
+      <a href="../../releases/2020.11.17/" class="md-nav__link">
         
 
         2020.11.17
@@ -2440,7 +2226,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.16/" class="md-nav__link">
+      <a href="../../releases/2020.11.16/" class="md-nav__link">
         
 
         2020.11.16
@@ -2458,7 +2244,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2020.11.10/" class="md-nav__link">
+      <a href="../../releases/2020.11.10/" class="md-nav__link">
         
 
         2020.11.10
@@ -2544,237 +2330,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jason-snyman" class="md-nav__link">
-    Jason Snyman
+  <a href="#ragdog" class="md-nav__link">
+    Ragdog
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#showcase" class="md-nav__link">
-    Showcase
+  <a href="#videos" class="md-nav__link">
+    Videos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#manikin-30" class="md-nav__link">
-    Manikin 3.0
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
-    Fields
-  </a>
-  
-    <nav class="md-nav" aria-label="Fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#turbulence" class="md-nav__link">
-    Turbulence
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drag" class="md-nav__link">
-    Drag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wind" class="md-nav__link">
-    Wind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gravity" class="md-nav__link">
-    Gravity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#newton" class="md-nav__link">
-    Newton
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#radial" class="md-nav__link">
-    Radial
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uniform" class="md-nav__link">
-    Uniform
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vortex" class="md-nav__link">
-    Vortex
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-axis-field" class="md-nav__link">
-    Volume Axis Field
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-curve" class="md-nav__link">
-    Volume Curve
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-fields" class="md-nav__link">
-    Combined Fields
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#centroids" class="md-nav__link">
-    Centroids
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#centroid-seed" class="md-nav__link">
-    Centroid Seed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-selected-as-source" class="md-nav__link">
-    Use Selected as Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#field-scale" class="md-nav__link">
-    Field Scale
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ignore-field" class="md-nav__link">
-    Ignore Field
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#force-modes" class="md-nav__link">
-    Force Modes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compound-shape" class="md-nav__link">
-    Compound Shape
-  </a>
-  
-    <nav class="md-nav" aria-label="Compound Shape">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mesh-decomposition" class="md-nav__link">
-    Mesh Decomposition
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    Quality of Life
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robust-frame-skips" class="md-nav__link">
-    Robust Frame Skips
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manipulator-and-hud" class="md-nav__link">
-    Manipulator and HUD
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kinematic-stiffness" class="md-nav__link">
-    Kinematic Stiffness
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#untrusted-plugin-location" class="md-nav__link">
-    Untrusted Plugin Location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#negative-scale-edgecase" class="md-nav__link">
-    Negative Scale Edgecase
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#import-additions" class="md-nav__link">
-    Import Additions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capsule-length" class="md-nav__link">
-    Capsule Length
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2791,378 +2363,53 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.02.14.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/tutorials/ragdog.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>2022.02.14</h1>
+                  <h1>Ragdog</h1>
                 
-                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/153820776-837ffbf2-617b-4cdf-9741-faf683332f70.png">
-    <source src="https://user-images.githubusercontent.com/2152766/153820715-0149c823-68f1-4e36-9308-88dd4a2ba4a8.mp4" type="video/mp4">
+                <video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/202715616-4d4a4efe-e239-47ca-94de-cb57dd923d98.mp4" type="video/mp4">
 </video>
 
-<p>Highlight for this release is <strong>Fields!</strong></p>
+<h3 id="ragdog">Ragdog</h3>
+<p>In this tutorial, we'll rig a character from scratch and assign meshes and limits to it.</p>
+<div class="admonition success">
+<p class="admonition-title">Version 1.0 - Up to date</p>
+<p>Written for Ragdoll <code>2022.03.14</code> and above.</p>
+</div>
+<p><strong>Estimated Time</strong></p>
 <ul>
-<li><a href="#fields"><strong>ADDED</strong> Fields</a> All of Maya's native fields, now supported by Ragdoll</li>
-<li><a href="#compound-shapes"><strong>ADDED</strong> Compound Shapes</a> Combine multiple meshes for a single collision shape</li>
-<li><a href="#manikin-3"><strong>ADDED</strong> Manikin 3</a> Next iteration of the default Ragdoll rig</li>
-<li><a href="#robust-frame-skips"><strong>FIXED</strong> Robust Frame Skips</a> Unbreakable real-time playback</li>
-<li><a href="#kinematic-stiffness"><strong>FIXED</strong> Kinematic Stiffness</a> Kinematic markers acting more like you'd expect</li>
-<li><a href="#manipulator-and-hud"><strong>FIXED</strong> Manipulator and Viewport HUD</a> Better handling of hiding of the HUD</li>
-<li><a href="#negative-scale"><strong>FIXED</strong> Negative Scale</a> One more edgecase caught and squashed!</li>
-<li><a href="#untrusted-plugin-location"><strong>FIXED</strong> Untrusted Plug-in Locator</a> One less warning to worry about</li>
-<li><a href="#negative-scale"><strong>FIXED</strong> Kinematic Stiffness</a> Stiffness of kinematic now affects dynamic parent as expected</li>
-<li><a href="#capsule-length"><strong>FIXED</strong> Capsule Length Axis</a> Use the Maya scale manipulator as you'd expect</li>
+<li>🕐 30 minutes</li>
 </ul>
-<p><br></p>
-<h3 id="jason-snyman">Jason Snyman</h3>
-<p>Today I'm happy to announce that Jason Snyman joins Ragdoll Dynamics! 🎉</p>
+<p><strong>You will need</strong></p>
 <ul>
-<li><a href="https://www.linkedin.com/in/jason-snyman-84711b1/">https://www.linkedin.com/in/jason-snyman-84711b1/</a></li>
+<li>✔️ Nothing, assets are provided</li>
 </ul>
-<p>Jason is a wizard of an animator with 20 years of experience in the industry - from King Kong and Avatar to Game of Thrones - and will be helping you become the best animator you can be, with Ragdoll at your side. That means tutorials, live streams and more of these awesome demos you may already have seen on LinkedIn!</p>
-<table>
-<thead>
-<tr>
-<th align="left">Batman and Shark</th>
-<th align="left">Dragon and Kong</th>
-<th align="left">Dragon on Branch</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://www.linkedin.com/posts/jason-snyman-84711b1_batman-ragdoll-shark-activity-6868800187423440898-zPN_"><img alt="" src="https://user-images.githubusercontent.com/2152766/153833128-a22f845b-3811-43fc-bd7c-eb726f0700a4.png" /></a></td>
-<td align="left"><a href="https://www.linkedin.com/posts/jason-snyman-84711b1_animation-creature-vfx-activity-6897598080301060096-lYXW"><img alt="" src="https://user-images.githubusercontent.com/2152766/153833127-0515fcf9-6f60-421d-b128-14161127ff14.png" /></a></td>
-<td align="left"><a href="https://www.linkedin.com/posts/jason-snyman-84711b1_maya-animation-simulation-activity-6876796400018051072-HZv5"><img alt="" src="https://user-images.githubusercontent.com/2152766/153833124-c935fd86-c5f8-4d07-bdca-b3dc3f7b02f2.png" /></a></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="showcase">Showcase</h3>
-<p>You know the drill. Let's get into it. <img alt="🥳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f973.svg" title=":partying_face:" /></p>
-<p><strong>Live Stream</strong></p>
-<p>We hosted a live stream last Friday! If you couldn't make it, it's been recorded and is made available here. :)</p>
+<p><strong>You will learn</strong></p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=P9iEX-IuiRI">https://www.youtube.com/watch?v=P9iEX-IuiRI</a></li>
+<li>✔️ How to rig a mesh with Maya joints</li>
+<li>✔️ How to assign Markers to joints</li>
+<li>✔️ How to prepare a mesh for collisions</li>
+<li>✔️ How to assign complex anatomical limits</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=P9iEX-IuiRI"><img alt="image" src="https://user-images.githubusercontent.com/2152766/153710876-51a3453e-b4e5-4c02-85e8-ce67d47eb45a.png" /></a></p>
-<p><strong>Dragon</strong></p>
-<p>Jason's latest animation, using the newly added <a href="#fields">Fields</a>! Model by <a href="https://www.linkedin.com/in/antoine-verney-carron-b633b2127/">Antoine Verney-Carron</a></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153711092-c2c41ad3-45a1-4332-aaf9-5b9aa3e0a13a.mp4" type="video/mp4"></video></p>
-
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153710738-bf338e93-80ff-4664-934c-a6366527a403.mp4" type="video/mp4"></video></p>
-
-<p><strong>Dragon ❤️ Kong</strong></p>
-<p>I just can't stop watching this.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153710735-c1a76616-6f3d-4a93-83b5-3064a34f3c9f.mp4" type="video/mp4"></video></p>
-
-<p><strong>Manikin Marine</strong></p>
-<p>He's packing!</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153712893-557ff7a3-60f1-4e75-bb94-f5bf1c4a8fda.mp4" type="video/mp4"></video></p>
-
-<p><strong>Tentacle Field</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153713199-7f5dc49a-84f5-4709-94dd-17bbfd53bed1.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="manikin-30">Manikin 3.0</h3>
-<p>The Manikin has been updated to leverage the new goodies from this release, go ahead and grab it here!</p>
-<p><strong>Features</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> IK/FK legs</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> IK/FK arms</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Anatomical limits</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> New compound shapes</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Fully scalable</li>
+<p><strong>Where to find help</strong></p>
+<p>If you find or run into any issues with these tutorials, here's what you can do.</p>
+<ul>
+<li>✔️ Ask in <a href="https://ragdolldynamics.com/chat">the chat</a></li>
+<li>✔️ Ask on <a href="https://forums.ragdolldynamics.com/">the forums</a></li>
 </ul>
-<div class="hboxlayout justify-left">
-<a href="https://files.ragdolldynamics.com/api/public/dl/Nhoqd3K8/manikin_v3.zip" class="button red"><b>Download</b></a>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153716724-88179039-7d03-4b1d-9b9a-7904ae199be5.mp4" type="video/mp4"></video></p>
-
 <p><br></p>
-<h3 id="fields">Fields</h3>
-<p>Ragdoll now supports all of Maya's native <a href="https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-SimulationEffects/files/GUID-85AEE528-4477-46DF-8B9E-2E8AEC3C8784-htm.html">fields</a>.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153752085-8e748110-75f4-40c7-b05a-bd15d56963e5.png" /></p>
-<div class="admonition question">
-<p class="admonition-title">What are fields?</p>
-<p>A field represents a set of forces applied to each Marker. Ranging from <code>Gravity</code> to <code>Turbulence</code>, each field carries unique properties you can use to emulate some environment or environmental effect, like wind and gravity fields along a curve.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">What is the difference from regular Maya fields?</p>
-<p>They are the very same!</p>
-<p>If you're already familiar with them, from e.g. nParticles of nCloth, then you can leverage your experience with Ragdoll, and vice versa if you ever venture into nCloth and friends.</p>
-</div>
-<p>Let's walk through these fields one-by-one!</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153713200-63ffe691-9718-4e39-a1c3-17669db5821d.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="turbulence">Turbulence</h4>
-<p>The perhaps most interesting field. Apply forces in "random" directions, based on the worldspace positions of your Markers.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750169-07891084-b935-4dd1-b69a-7a2863873c5e.mp4" type="video/mp4"></video></p>
-
-<p>The way to think of turbulence is as Perlin Noise you may have seen in images such as this.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153750302-465f1747-0527-49e6-b946-dd96156eefad.png" /></p>
-<p>Where the amount of white determines the amount of force being applied. As a Marker travels across this field, both the magnitude and direction changes in interesting ways.</p>
-<p><br></p>
-<h4 id="drag">Drag</h4>
-<p>Apply an <em>opposite</em> force to any motion.</p>
-<p>The faster things move, the greater the force.</p>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip</p>
-<p>This field is similar to Ragdoll's <code>Air Density</code>. Not <em>technically</em>, but practically.</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750407-dbc9d7eb-4135-488d-8755-48bc532cf029.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="wind">Wind</h4>
-<p>Apply a uniform force, at a given speed, in a given direction. Like wind, including a kitchen fan with some <code>Spread</code>.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750615-bd2eba9e-7a29-407d-94ad-657ef59d4444.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="gravity">Gravity</h4>
-<p>A familiar force, except this one can be also be animated!</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750684-25ee1e0b-2120-423d-8189-9bbfd254600e.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="newton">Newton</h4>
-<p>Force Markers towards or away from a point in space.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153719442-8c1b0d88-b4fa-4310-901e-ea79472c3aaa.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="radial">Radial</h4>
-<p>A more curious field; with a force which <em>increases</em> as it gets farther from the source.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750760-da2803c4-1a57-455d-9908-b7cf3a3394f7.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="uniform">Uniform</h4>
-<p>Apply a constant force. That's all.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750848-f8326f5e-863a-4c2b-a052-a39a603e0d1f.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="vortex">Vortex</h4>
-<p>Apply forces in a circular pattern.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153750929-9c1a8e2f-c339-4b51-b451-88fe61550433.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="volume-axis-field">Volume Axis Field</h4>
-<p>A field for when you don't know what field you want.</p>
-<p>A true Swiss Army Knife of fields, can do everything from Vortex, to Newton to Turbulence in one convenient node.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153751617-5b291e01-48e7-4974-bc7c-72cc7f701be6.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="volume-curve">Volume Curve</h4>
-<p>Have some fun with this curve-based field. Perhaps to emulate an underwater current?</p>
-<p>In this example, I'm also using a <code>Drag</code> field to keep things from flying off into space.</p>
-<div class="admonition tip">
-<p class="admonition-title">Pro tip</p>
-<p>The curve is a normal Maya NURBS curve. If you need more points, right click and add points as you normally would.</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153767442-45e86095-a0c3-4e08-a766-93249648687a.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="combined-fields">Combined Fields</h4>
-<p>Make two or more fields to combine their effect and create complex forces or series of forces!</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153752341-8f4956e9-5366-4901-95f6-c228bad85138.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="centroids">Centroids</h4>
-<p>Where within each Marker should a field apply forces?</p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> Center of Mass</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Volumetric</li>
+<h3 id="videos">Videos</h3>
+<p>Here's the video on YouTube.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Si_l8B82c9w">YouTube</a></li>
 </ul>
-<p>At the center, forces will be nice and predictable; except they won't be able to introduce <em>rotations</em> to your Marker, which may or may not be what you want. For the most realistic fields, use volumetric centroids.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153761018-6395874a-65f9-4a86-8e60-ec98f1b3186a.png" /></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153760596-0ae4831a-799b-4fb2-a84c-fac4c3cd3843.mp4" type="video/mp4"></video></p>
-
-<p>Here's another example using the Turbulence Field.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153760597-53ed266c-d8a9-4cb7-aa55-d30e11fc4080.mp4" type="video/mp4"></video></p>
-
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153768590-07e9b49e-59fc-4fbc-bc38-420044f436d7.png" /></p>
-<div class="admonition hint">
-<p class="admonition-title">Which is better?</p>
-<p>Up to you! There is a <em>tiny</em> performance penalty for volumetric origins, as the number of forces increase. But you shouldn't notice much if any impact on performance.</p>
-</div>
 <p><br></p>
-<h4 id="centroid-seed">Centroid Seed</h4>
-<p>For complex meshes, centroids can end up in unwanted locations or gather in an area with dense vertices. That's when you can give the algorithm a little jolt to try and see whether there is a better alternative out there.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153838710-891d6604-003f-4eac-8c95-a690adc4aa8f.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="use-selected-as-source">Use Selected as Source</h4>
-<p>Some forces act according to their position in the world. Attach a field to a Marker to create an interesting relationship between the two.</p>
-<div class="admonition warning">
-<p class="admonition-title">Non-commercial Ragdoll</p>
-<p>This feature is limited to 100 frames in non-commercial versions of Ragdoll.</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/152635411-0f810a24-6e6e-46dc-9f56-4fcdf5494d45.mp4" type="video/mp4"></video></p>
-
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153752546-67d71938-afd6-4187-aebd-89165fc77817.mp4" type="video/mp4"></video></p>
-
-<p>Distance constrain two markers, and attach a field to the outer-most Marker for a doubly-interesting effect. That also wrecks your brain. 🙃</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153765980-641d3ce2-6c40-4956-8a2e-d75703e94c52.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="field-scale">Field Scale</h4>
-<p>If forces start becoming large, you may find yourself in a situation where the visualisation needs to tone down just a bit.</p>
-<p>In the solver settings, you will find options to scale those lines (i.e. <code>Field Scale</code>), as well as control how many steps into the future (i.e. <code>Field Iterations</code>) it should draw for you.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153766135-6804cda2-3b85-4560-bf01-f2480fb0dc49.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="ignore-field">Ignore Field</h4>
-<p>Fine-tune the effect of fields by having one or more Markers <em>ignore</em> the effect of fields.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153839253-65fa756c-373f-40e3-9c67-e1a4e52884e1.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="force-modes">Force Modes</h4>
-<p>Fields can apply to your markers in 2 different ways.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Mode</th>
-<th align="left">Description</th>
-<th align="left">Math</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Force</td>
-<td align="left">Traditional force</td>
-<td align="left"><code>mass * distance / time^2</code></td>
-</tr>
-<tr>
-<td align="left">Impulse</td>
-<td align="left">Typically used for contacts</td>
-<td align="left"><code>mass * distance / time</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition question">
-<p class="admonition-title">Which should I use?</p>
-<p>The default is <code>Force</code>, whereas <code>Impulse</code> is what is typically used for collision handling. Experiment, and let us know which you prefer!</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153840245-90a8b6b1-1270-4e4a-9849-d973e837aaed.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="compound-shape">Compound Shape</h3>
-<p>Combine multiple meshes for a complex "compound shape".</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153766360-534bc842-ac61-471f-9a46-dd1a93735c11.mp4" type="video/mp4"></video></p>
-
-<p>Vertices connected by edges are considered an "island", each island is then turned into an independent convex hull. Like this complex endevour.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153712923-6f8ffbd6-595a-4a0d-a103-219647e4c89c.mp4" type="video/mp4"></video></p>
-
-<div class="admonition info">
-<p class="admonition-title">434 islands in 147 ms</p>
-<p>That's how long it took Ragdoll to generate the simulation volumes for the above meshes.</p>
-</div>
-<p>You can slice an dice any mesh to introduce new islands at will, for complete control.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153712924-39379d67-f5a5-479b-82d6-290aef0db388.mp4" type="video/mp4"></video></p>
-
-<div class="admonition question">
-<p class="admonition-title">Performance?</p>
-<p>If you're wondering what effect this many meshes has on your simulation, the answer is we haven't noticed any. Go crazy, and if you do notice anything, let us know!</p>
-</div>
-<p><br></p>
-<h4 id="mesh-decomposition">Mesh Decomposition</h4>
-<p>Collision shapes are generated from each individual "island"; that is, groups of vertices that are connected by at least one edge. When you combine two or more meshes together, they will naturally form individal islands.</p>
-<p>Sometimes, you'd rather treat the entire mesh as one big shape and for that you can use the <code>Mesh Decomposition = Mesh Islands</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Shape Vertex Limit</p>
-<p>Also notice how the vertex limit is applied to <em>each island</em>. Meaning that you can achieve much higher resolution for your collision shapes by cutting things up into pieces!</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153836772-991495dd-9418-4fb7-8015-f9899cc8443c.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h3 id="quality-of-life">Quality of Life</h3>
-<p>Let's brighten up your day, shall we? 🥰</p>
-<p><br></p>
-<h4 id="robust-frame-skips">Robust Frame Skips</h4>
-<p>Anyone playing back their simulation to audio may prefer Ragdoll with a <code>Frameskip Method = Ignore</code>. Such that it'll keep simulating, even though the result won't be 100% reproducible.</p>
-<p>But! If you did, you may have ran into this.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153719239-fc111906-961c-4851-a67f-dde14c846b76.mp4" type="video/mp4"></video></p>
-
-<p>Notice how it sometimes fails to keep up with fast time changes? Well, no longer!</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153719242-a3c5dfe0-0651-4643-ad09-ed6b6695e5b8.mp4" type="video/mp4"></video></p>
-
-<div class="admonition tip">
-<p class="admonition-title">Caveat</p>
-<p>Like before however, the simulated result you get when frames are skipped will still differ from the result when frames are not skipped, or when different frames get skipped.</p>
-<p>The final recorded result will not skip any frames, so you should use this while working but ensure there aren't any frames skipped when you tune and tweak the final values.</p>
-</div>
-<p><br></p>
-<h4 id="manipulator-and-hud">Manipulator and HUD</h4>
-<p>The View Cube and other viewport ornaments are automatically and temporarily hidden whenever you use the Manipulator. But sometimes, Ragdoll could get confused and leave you having to manually re-enable the viewport HUD.</p>
-<p>This has now been fixed, and Ragdoll will more predictably re-enable any HUD it hides.</p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/153719428-da4a3427-42bf-4afa-b039-4bfd11285253.mp4" type="video/mp4"></video></p>
-
-<p><br></p>
-<h4 id="kinematic-stiffness">Kinematic Stiffness</h4>
-<p>Markers set to <code>Kinematic</code> would also lose their stiffness with their parent.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/153824447-c1a65168-357a-44df-9159-2d37e567ecf5.mp4" type="video/mp4"></video></p>
-<p><strong>After</strong></p>
-<p>This has now been fixed.</p>
-<div class="admonition hint">
-<p class="admonition-title">Pro tip</p>
-<p>To achieve the effect from the previous version, set <code>Pose Stiffness</code> to 0</p>
-</div>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/153824449-038de100-d332-494d-b8b0-eb76d34c5987.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="untrusted-plugin-location">Untrusted Plugin Location</h4>
-<p>Users of Maya 2022 would experience this dialog when getting started with Ragdoll.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/153831679-c87b78ae-03fc-4ba6-a6d2-b249ad975ca7.png" /></p>
-<p>This has now been fixed.</p>
-<p><br></p>
-<h4 id="negative-scale-edgecase">Negative Scale Edgecase</h4>
-<p>A rare case was discovered by @BigRoy whereby negatively scaled controllers would yield an incorrect shape drawing. The simulation was fine, but it wasn't looking quite right in the viewport.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/153821617-59c29319-dd88-4447-a657-5809aeb69455.mp4" type="video/mp4"></video></p>
-<p><strong>After</strong></p>
-<p>This has now been fixed!</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/153821623-81ef81a6-d7f4-4985-8c0b-941d13c6227f.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="import-additions">Import Additions</h4>
-<p>These attributes were added to the export and import mechanism.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Nice Name</th>
-<th align="left">Long Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">World Pose Translate X</td>
-<td align="left"><code>driveAbsoluteLinearX</code></td>
-</tr>
-<tr>
-<td align="left">World Pose Translate Y</td>
-<td align="left"><code>driveAbsoluteLinearY</code></td>
-</tr>
-<tr>
-<td align="left">World Pose Translate Z</td>
-<td align="left"><code>driveAbsoluteLinearZ</code></td>
-</tr>
-<tr>
-<td align="left">Pose Twist Amount</td>
-<td align="left"><code>driveAngularAmountTwist</code></td>
-</tr>
-<tr>
-<td align="left">Pose Swing Amount</td>
-<td align="left"><code>driveAngularAmountSwing</code></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h4 id="capsule-length">Capsule Length</h4>
-<p>All this time, capsules had been scaled in an axis that didn't align with your scale manipulator. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
-<p>No longer!</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/152698555-3645b725-3279-422b-8ee2-e3a248fa82d1.mp4" type="video/mp4"></video></p>
-
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/152698556-f2079886-3234-411d-9548-47f6cc8143de.mp4" type="video/mp4"></video></p>
+<h3 id="next-steps">Next Steps</h3>
+<p>This technique applies to any mesh you can find and is suitable for animators to go at themselves, so go crazy!</p>
                 
                   
                     
@@ -3171,7 +2418,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2023-03-06
     
   </small>
 </div>
@@ -3195,7 +2442,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../2022.02.28/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../rookie_wasp/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -3204,19 +2451,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2022.02.28
+                Rookie Wasp
               </div>
             </div>
           </a>
         
         
-          <a href="../2022.02.01/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cloth_emulation/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2022.02.01
+                Cloth Emulation
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
