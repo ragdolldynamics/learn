@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Learn how to emulate cloth with rigid bodies">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/nodes/rdConstraintMultiplier/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/tutorials/cloth_emulation/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>rdConstraintMultiplier - Learn Ragdoll</title>
+        <title>Cloth Emulation - Learn Ragdoll</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#attributes" class="md-skip">
+        <a href="#cloth-emulation" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              rdConstraintMultiplier
+              Cloth Emulation
             
           </span>
         </div>
@@ -173,9 +173,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -753,6 +751,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -761,7 +761,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -771,7 +771,7 @@
           data-md-toggle="nav-4"
           type="checkbox"
           id="nav-4"
-          
+          checked
         />
       
 
@@ -802,7 +802,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/videos/" class="md-nav__link">
+      <a href="../videos/" class="md-nav__link">
         
         <img src="/icons/camera_black.png">
         
@@ -822,7 +822,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin/" class="md-nav__link">
+      <a href="../manikin/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -842,7 +842,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ragdoll/" class="md-nav__link">
+      <a href="../manikin_ragdoll/" class="md-nav__link">
         
         <img src="/icons/ragdoll_black.png">
         
@@ -862,7 +862,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ik/" class="md-nav__link">
+      <a href="../manikin_ik/" class="md-nav__link">
         
         <img src="/icons/chain_black.png">
         
@@ -882,7 +882,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/mocap_chap/" class="md-nav__link">
+      <a href="../mocap_chap/" class="md-nav__link">
         
         <img src="/icons/mocap_black.png">
         
@@ -902,7 +902,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/rookie_wasp/" class="md-nav__link">
+      <a href="../rookie_wasp/" class="md-nav__link">
         
         <img src="/icons/wasp_black.png">
         
@@ -918,11 +918,98 @@
   <!-- Determine class according to state -->
   
   
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cloth Emulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+        <img src="/icons/cloth_black.png">
+        
+
+        Cloth Emulation
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloth-emulation" class="md-nav__link">
+    Cloth Emulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
 
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/self_walking/" class="md-nav__link">
+      <a href="../self_walking/" class="md-nav__link">
         
         <img src="/icons/control_black.png">
         
@@ -942,7 +1029,7 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../tutorials/bouncing_ball/" class="md-nav__link">
+      <a href="../bouncing_ball/" class="md-nav__link">
         
         <img src="/icons/physics_black.png">
         
@@ -2208,9 +2295,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2225,8 +2310,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
+  <a href="#cloth-emulation" class="md-nav__link">
+    Cloth Emulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
   </a>
   
 </li>
@@ -2244,110 +2343,58 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/nodes/rdConstraintMultiplier.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/tutorials/cloth_emulation.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>rdConstraintMultiplier</h1>
+                  <h1>Cloth Emulation</h1>
                 
-                <p><img class="node-header" src=https://user-images.githubusercontent.com/2152766/107141752-d9dee480-6922-11eb-9e8b-74ede169db12.png></p>
-<p>Reference sheet for the <code>rdConstraintMultiplier</code> node type.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
-<span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;rdConstraintMultiplier&quot;</span><span class="p">)</span>
-</code></pre></div>
+                <video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://user-images.githubusercontent.com/2152766/118454163-f9d72e80-b6ef-11eb-86ff-179aefa169c8.mp4" type="video/mp4">
+</video>
+
+<h3 id="cloth-emulation">Cloth Emulation</h3>
+<p>In this tutorial, we'll use many interconnected Markers to <em>emulate</em> cloth.</p>
+<div class="admonition success">
+<p class="admonition-title">Version 1.0 - Up to date</p>
+<p>Written for Ragdoll <code>2022.03.14</code> and above.</p>
+</div>
+<p><strong>Estimated Time</strong></p>
+<ul>
+<li>🕐 20 minutes</li>
+</ul>
+<p><strong>You will need</strong></p>
+<ul>
+<li>✔️ Nothing, assets are provided</li>
+</ul>
+<p><strong>You will learn</strong></p>
+<ul>
+<li>✔️ How to create a grid of connected Markers</li>
+<li>✔️ How to tune this grid to look like cloth</li>
+</ul>
+<p><strong>Where to find help</strong></p>
+<p>If you find or run into any issues with these tutorials, here's what you can do.</p>
+<ul>
+<li>✔️ Ask in <a href="https://ragdolldynamics.com/chat">the chat</a></li>
+<li>✔️ Ask on <a href="https://forums.ragdolldynamics.com/">the forums</a></li>
+</ul>
 <p><br></p>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Attribute</th>
-<th align="left">Description</th>
-<th align="left">Keyable</th>
-<th align="left">Type</th>
-<th align="left">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>.angularDriveDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularDriveDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularDriveStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularDriveStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularLimitDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularLimitDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.angularLimitStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.angularLimitStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.driveStrength</code></td>
-<td align="left">Multiplier for <code>rdConstraint.driveStrength</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.limitStrength</code></td>
-<td align="left">Multiplier for <code>rdConstraint.limitStrength</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearDriveDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearDriveDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearDriveStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearDriveStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearLimitDamping</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearLimitDamping</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.linearLimitStiffness</code></td>
-<td align="left">Multiplier for <code>rdConstraint.linearLimitStiffness</code></td>
-<td align="left">✔️</td>
-<td align="left"><nobr><code>float</code></nobr></td>
-<td align="left">1.0</td>
-</tr>
-<tr>
-<td align="left"><code>.version</code></td>
-<td align="left">Version of Ragdoll used to create this node. Saved with scene to keep track of what version of Ragdoll the node was created with.</td>
-<td align="left"></td>
-<td align="left"><nobr><code>int</code></nobr></td>
-<td align="left">0</td>
-</tr>
-</tbody>
-</table>
+<h3 id="videos">Videos</h3>
+<p>See here for part 1 of 1 this tutorial.</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/any-tips-or-suggestions-for-cloth-animation/549/2">Introduction</a></li>
+<li><a href="https://forums.ragdolldynamics.com/t/any-tips-or-suggestions-for-cloth-animation/549/3">First Draft</a></li>
+<li><a href="https://forums.ragdolldynamics.com/t/any-tips-or-suggestions-for-cloth-animation/549/5">Final Version</a></li>
+<li><a href="https://forums.ragdolldynamics.com/t/any-tips-or-suggestions-for-cloth-animation/549/7">Walkthrough</a></li>
+</ul>
+<p><br></p>
+<h3 id="next-steps">Next Steps</h3>
+<p>This has been a tutorial on how to <em>emulate</em> - <u>not simulate</u> - cloth. Because Ragdoll currently does not understand deformations. It only understands hard objects.</p>
+<p>So, how else can you make hard objects appear like cloth? Share your experiences with the community!</p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com">Forums</a></li>
+</ul>
                 
                   
                     
@@ -2356,7 +2403,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2022-04-04
+      Last update: 2023-03-06
     
   </small>
 </div>
@@ -2376,6 +2423,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../rookie_wasp/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Rookie Wasp
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../self_walking/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Self Walking
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
