@@ -7,11 +7,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Beta">
+        <meta name="description" content="The next iteration of our autonomous locomotion solver">
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2022.12.beta/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2023.03.beta/">
       
       
         <meta name="author" content="mottosso">
@@ -24,7 +24,7 @@
 
     
       
-        <title>Beta - Learn Ragdoll</title>
+        <title>Locomotion 2.0 - Learn Ragdoll</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header-nav__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Beta
+              Locomotion 2.0
             
           </span>
         </div>
@@ -2268,6 +2268,129 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#locomotion-20" class="md-nav__link">
+    Locomotion 2.0
+  </a>
+  
+    <nav class="md-nav" aria-label="Locomotion 2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-workflow" class="md-nav__link">
+    New Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-updates" class="md-nav__link">
+    Iterative Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-manipulators" class="md-nav__link">
+    New Manipulators
+  </a>
+  
+    <nav class="md-nav" aria-label="New Manipulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate" class="md-nav__link">
+    Translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate" class="md-nav__link">
+    Rotate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    Height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-snapping" class="md-nav__link">
+    Terrain Snapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-target" class="md-nav__link">
+    Multi-target
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-target">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    Timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin" class="md-nav__link">
+    Pin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-plan" class="md-nav__link">
+    Multi-plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-to-plan" class="md-nav__link">
+    Animation to Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-accuracy" class="md-nav__link">
+    Terrain Accuracy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-origin" class="md-nav__link">
+    Reset Origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#account-management" class="md-nav__link">
     Account Management
   </a>
@@ -2338,6 +2461,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#linked-solver-crash" class="md-nav__link">
+    Linked Solver Crash
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2364,6 +2494,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    Python API
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2377,35 +2514,41 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2022.12.beta.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2023.03.beta.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Beta</h1>
+                  <h1>Locomotion 2.0</h1>
                 
-                <p>Highlight for this release is <strong>?!</strong></p>
+                <p>Highlight for this release is <strong>Locomotion 2.0</strong></p>
 <ul>
-<li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
-<li><a href="#collision-group"><strong>ADDED</strong> Collision Group</a> More intuitive management of what does and does <em>not</em> collide</li>
 <li><a href="#locomotion-2"><strong>ADDED</strong> Locomotion 2.0</a> A ton of improvements and new abilities!</li>
 <li><a href="#multi-target"><strong>ADDED</strong> Multi-target</a> Go left, then right, then turn around and go right again!</li>
 <li><a href="#multi-plan"><strong>ADDED</strong> Multi-plan</a> Chain plans together, each running in parallel!</li>
+<li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
+<li><a href="#collision-group"><strong>ADDED</strong> Collision Group</a> More intuitive management of what does and does <em>not</em> collide</li>
 <li><a href="#multi-replace-mesh"><strong>ADDED</strong> Multi-replace mesh</a> Replace with multiple meshes!</li>
-<li><a href="#good-bye-2018"><strong>ADDED</strong> Good Bye 2018</a> Maya 2018, may you rest in peace</li>
 <li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a> Turn your blocky animation into final</li>
 <li><a href="#refinement"><strong>ADDED</strong> Iterative Updates</a> More immediate and continuous updates</li>
-<li><a href="#feet"><strong>ADDED</strong> Feet</a></li>
 <li><a href="#new-gizmos"><strong>ADDED</strong> New Gizmos</a> Simplified authoring of targets</li>
 <li><a href="#trajectories-returns"><strong>ADDED</strong> Trajectories Returns</a> Faster and stronger!</li>
 <li><a href="#mass-independent-fields"><strong>ADDED</strong> Mass Independent Fields</a> More intuitive fields</li>
 <li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Less worry about the start frame</li>
 <li><a href="#z-up-assets"><strong>ADDED</strong> Z-up Assets</a> Assets are now "bi-axial" <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></li>
+<li><a href="#good-bye-2018"><strong>ADDED</strong> Good Bye 2018</a> Maya 2018, may you rest in peace</li>
 <li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
 </ul>
 <p><br></p>
 <h3 id="showcase">Showcase</h3>
 <p>As is tradition, let's start off with some of the cool Ragdoll material surfacing across the interwebs since the last release.</p>
+<p><strong>Mechanical Spider</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224162372-3d7a7ec2-87be-42c0-8c78-3bb307a2ec63.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224361357-9318e0a7-158d-40cb-b338-e94eb6d41af5.mp4" type="video/mp4"></video></p>
+<blockquote>
+<p>"Mechanical Spider" by <a href="https://skfb.ly/o8YNv">vertexmonster</a></p>
+</blockquote>
 <p><strong>60s Marionettes</strong></p>
 <p>Some excellent use of Ragdoll here by <a href="https://forums.ragdolldynamics.com/t/using-ragdoll-to-animate-1960s-style-sci-fi-marionettes/815">Ernst-Jan on the forums</a></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222101613-5bf3575f-7987-4868-a42c-5c39d65bc83c.mp4" type="video/mp4"></video></p>
@@ -2424,8 +2567,97 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222778170-432b804c-e04a-4491-99de-bdfe2f741b87.mp4" type="video/mp4"></video></p>
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222778176-c84acd17-9798-4039-a322-c44e16ff8a2e.mp4" type="video/mp4"></video></p>
-<!--  -->
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215750117-960366b2-700c-42e8-9610-4e5aa6191840.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="locomotion-20">Locomotion 2.0</h3>
+<p>First released in June 2022, this automated method of generating complete character locomotion has seen a major update!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224162372-3d7a7ec2-87be-42c0-8c78-3bb307a2ec63.mp4" type="video/mp4"></video></p>
+<p>With a new and much more intuitive workflow, ability to locomote along a path, with feet snapping to terrain and interactive updates as the solver works, you'll be able to achieve much greater results with far less headaches.</p>
+<p><br></p>
+<h4 id="new-workflow">New Workflow</h4>
+<p>Locomotion <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> Markers.</p>
+<p>Borrowing from Markers, Locomotion no longer occupies your animation channels directly. Instead, a preview is shown for you to evaluate and later record.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224264568-8b9f3cd2-8617-447f-931b-622496cb59b4.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="iterative-updates">Iterative Updates</h4>
+<p>More insight into while you wait.</p>
+<p>Locomotion will now show you each result it comes up with, as it searches for one that both looks great and fulfils each of your requirement; targets, limits, mass and gravity.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224358858-80531575-ed2a-4f5d-aa09-4c7751db31f6.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="new-manipulators">New Manipulators</h4>
+<p>Editing targets and limits was a huge chore with Locomotion 1.0. This new release makes authoring plans much less error prone and more fun.</p>
+<h5 id="translate">Translate</h5>
+<p>Drag the gizmo to translate a target. Notice how it is no longer possible to author invalid targets that hover above the ground, a significant burden to anyone trying to achieve nice results has been lifted!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224268505-efdb906e-e0f7-4bc5-9492-affae4628b0a.mp4" type="video/mp4"></video></p>
+<h5 id="rotate">Rotate</h5>
+<p>Hold Ctrl (on Windows and Linux, Cmd on Mac) to rotate a target.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224268508-4e924f2d-5edc-4559-a3a1-316df361ac38.mp4" type="video/mp4"></video></p>
+<h5 id="height">Height</h5>
+<p>Hold Shift to adjust the height of the body. Feet must always touch the ground.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224268516-d352e15c-1911-4b06-9115-cdc7f7c4b550.mp4" type="video/mp4"></video></p>
+<h5 id="terrain-snapping">Terrain Snapping</h5>
+<p>Aligning feet to the ground in the case of having a terrain was even more daunting; but no longer! Now feet automatically snap to any terrain.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224269609-11ba41ff-1a3b-4099-8b2e-153d0d6c3571.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="multi-target">Multi-target</h4>
+<p>Go there, then here. Do a twirl, and then go over there!</p>
+<p>In Locomotion 1.0, you were able to specify a start and end position for your character. But now, you can specify any number of points inbetween, effectively a path!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224280057-9a37ad0a-77cd-4405-aa79-9164991ef15a.mp4" type="video/mp4"></video></p>
+<h5 id="timing">Timing</h5>
+<p>Start fast, then walk slowly. Then finish fast!</p>
+<p>With more than 1 target, you also need to decide at <em>when</em> you intend on a target being reached. Click and drag on the targets in the UI to adjust.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224280064-162f438a-d549-46c5-b8da-b0757ceb46ae.mp4" type="video/mp4"></video></p>
+<p><strong>Shading</strong></p>
+<p>You'll notice that each target has two shades, a top and bottom.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Shade</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Top</td>
+<td align="left">Distance, dark is less</td>
+</tr>
+<tr>
+<td align="left">Bottom</td>
+<td align="left">Timing, dark is less</td>
+</tr>
+</tbody>
+</table>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224280602-a0b43722-ca3f-4a4a-96f2-a6daabaa6a8f.mp4" type="video/mp4"></video></p>
+<h5 id="pin">Pin</h5>
+<p>Targets are guidelines to Locomotion. It'll try to follow them, but if some are physically impossible or there are conflicting goals then it will try and find a compromise. Sometimes, you need the target to be more respected, and that's when you can "pin" a target.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224279559-40b60051-fda2-4685-b618-6e9e498804e4.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="multi-plan">Multi-plan</h4>
+<p>Create complex locomotion by stringing together two or more plans.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224361357-9318e0a7-158d-40cb-b338-e94eb6d41af5.mp4" type="video/mp4"></video></p>
+<p>Complete the illusion by blending them all together with traditional Marker physics.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224361652-b0e0cdcb-cd24-4c40-accd-5501a162abf0.mp4" type="video/mp4"></video></p>
+<p>Here's how it works.</p>
+<ol>
+<li>Select a plan</li>
+<li>Select a second plan</li>
+<li>Run Align Plans</li>
+</ol>
+<p>The command will start the second plan where the first plan ends, creating one continuous motion.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224362446-fdccfb61-509b-4693-a0ee-cf71d4de05e3.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="animation-to-plan">Animation to Plan</h4>
+<p>A "make good" button?</p>
+<p>We've talked about generating an animation from a plan, but what about <u>the reverse</u>? What if we could use your animation as input to the plan, and output <u>a refined version of it</u>? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224272986-8eefbb99-bc79-46aa-8adf-c26dbe205a58.mp4" type="video/mp4"></video></p>
+<p>The <code>Animation to Plan</code> menu item evaluates your animation and converts it into (1) targets and (2) stepsequence; the ingredients to a fully defined plan.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224272997-e016d006-7488-49fe-883b-34e5027503be.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="terrain-accuracy">Terrain Accuracy</h4>
+<p>Plans now more accurately follows your terrain and enables you to visualise what Locomotion sees.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224270568-af07316a-9fb0-4ccb-b3e0-e5e5eb006675.mp4" type="video/mp4"></video></p>
+<h4 id="reset-origin">Reset Origin</h4>
+<p>If you change the starting position of your plan, or move the character after having assigned a plan, you can re-align the two with the Reset Origin command.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224351031-ccd846e6-d896-4183-ad93-2c4ef2f0452c.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="account-management">Account Management</h3>
 <p>You can now monitor and manage your account with us, starting with performing remote deactivation of your node-locked licences.</p>
@@ -2466,24 +2698,13 @@
 <p><strong>Merge Collision Groups</strong></p>
 <p>Assign to two or more groups to combine them.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/217063533-997ab9c5-27dd-4c49-8fb8-a63129ace7e8.mp4" type="video/mp4"></video></p>
-<p><strong>Python API Additions</strong></p>
-<p>For the Python folk out there, these members were added to the Python API.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
-
-<span class="c1"># Create a new group</span>
-<span class="n">group</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">assign_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">)</span>
-
-<span class="c1"># Add some more markers</span>
-<span class="n">api</span><span class="o">.</span><span class="n">add_to_collision_group</span><span class="p">(</span><span class="n">other_markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
-
-<span class="c1"># Remove some markers</span>
-<span class="n">api</span><span class="o">.</span><span class="n">remove_from_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
-</code></pre></div>
 <p><br></p>
 <h3 id="trajectories">Trajectories</h3>
 <p>You can now visualise the trajectories of your Markers via the Solver Display attribute.</p>
 <p><img width="313" alt="image" src="https://user-images.githubusercontent.com/2152766/214253349-daf6b374-a5f4-40a2-9581-16ef6abedc71.png"></p>
-<p><img alt="" src="https://user-images.githubusercontent.com/2152766/214253208-79af7af6-0e87-4b6f-b748-9a32547d5a2f.mp4" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/214253208-79af7af6-0e87-4b6f-b748-9a32547d5a2f.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224365970-d3e3f796-e3da-4072-86b2-308f95644a2c.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="mass-independent-fields">Mass Independent Fields</h3>
 <p>Fields are now independent of Marker mass; meaning that large characters like trolls and giants are affected equal to small things like screws and dust.</p>
@@ -2517,7 +2738,6 @@
 <p>Like the Pin Constraint, Attach Constraints can have their pivots edited too. Especially useful if you are looking to attach two Markers at a specific location.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
 <p><br></p>
 <h4 id="edits-on-start-frame">Edits on Start Frame</h4>
@@ -2527,6 +2747,9 @@
 <h4 id="symmetry-and-undo">Symmetry and Undo</h4>
 <p>You can now undo both sides at once, as you'd expect!</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222776015-1eaebb69-3220-4dde-945e-7082935ca320.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="linked-solver-crash">Linked Solver Crash</h4>
+<p>Many linked solvers could potentially crash Maya, no longer!</p>
 <p><br></p>
 <h3 id="good-bye-2018">Good Bye 2018</h3>
 <p>Ragdoll now only supports Maya 2019-2023, with 2024 coming up soon!</p>
@@ -2539,7 +2762,7 @@
 <li>Before Wyvern: 82 fps</li>
 <li>After Wyvern: 79 fps (lots of connected and constrained rigid bodies)</li>
 </ul>
-<p><img alt="" src="https://user-images.githubusercontent.com/2152766/214250292-f38e6db0-c564-4203-b782-053070958e18.mp4" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/214250292-f38e6db0-c564-4203-b782-053070958e18.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="z-up-assets">Z-up Assets</h3>
 <p>You can now export assets from a Y-up Maya scene, and load it into a Z-up Maya scene! This means our default assets, which were made in a Y-up environment, will now load perfectly fine in your Z-up scenes.</p>
@@ -2547,6 +2770,20 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978903-a02d232d-9418-479b-b8cf-d4d03d8d0324.mp4" type="video/mp4"></video></p>
 <p><strong>After</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978910-9e950715-dbf4-4621-8768-610088263d14.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="python-api">Python API</h3>
+<p>For the Python folk out there, these members were added to the Python API.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="c1"># Create a new group</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">assign_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">)</span>
+
+<span class="c1"># Add some more markers</span>
+<span class="n">api</span><span class="o">.</span><span class="n">add_to_collision_group</span><span class="p">(</span><span class="n">other_markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+<span class="c1"># Remove some markers</span>
+<span class="n">api</span><span class="o">.</span><span class="n">remove_from_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+</code></pre></div>
                 
                   
                     
@@ -2555,7 +2792,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-03-03
+      Last update: 2023-03-10
     
   </small>
 </div>
