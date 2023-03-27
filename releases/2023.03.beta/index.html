@@ -2398,6 +2398,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#blend-simulation" class="md-nav__link">
+    Blend Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Blend Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solver-blend" class="md-nav__link">
+    Solver Blend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepped-simulation" class="md-nav__link">
+    Stepped Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepped Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smooth-input-stepped-output" class="md-nav__link">
+    Smooth input, Stepped output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stepped-input-stepped-output" class="md-nav__link">
+    Stepped input, Stepped output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freaky-time" class="md-nav__link">
+    Freaky Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-method" class="md-nav__link">
+    Time Method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#collision-group" class="md-nav__link">
     Collision Group
   </a>
@@ -2448,6 +2509,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#new-behaviour-names" class="md-nav__link">
+    New Behaviour Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#edits-on-start-frame" class="md-nav__link">
     Edits on Start Frame
   </a>
@@ -2462,14 +2530,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#z-up-assets" class="md-nav__link">
+    Z-up Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#linked-solver-crash" class="md-nav__link">
     Linked Solver Crash
   </a>
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deprecating-max-mass-ratio" class="md-nav__link">
+    Deprecating Max Mass Ratio
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-off-bug" class="md-nav__link">
+    One-off bug
+  </a>
   
 </li>
       
@@ -2488,7 +2577,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#z-up-assets" class="md-nav__link">
+  <a href="#z-up-assets_1" class="md-nav__link">
     Z-up Assets
   </a>
   
@@ -2527,6 +2616,8 @@
 <li><a href="#multi-target"><strong>ADDED</strong> Multi-target</a> Go left, then right, then turn around and go right again!</li>
 <li><a href="#multi-plan"><strong>ADDED</strong> Multi-plan</a> Chain plans together, each running in parallel!</li>
 <li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
+<li><a href="#stepped-simulation"><strong>ADDED</strong> Stepped Simulation</a> Simulate on 2's!</li>
+<li><a href="#blend-simulation"><strong>ADDED</strong> Blend Simulation</a> Smooth transition between animation and simulation</li>
 <li><a href="#collision-group"><strong>ADDED</strong> Collision Group</a> More intuitive management of what does and does <em>not</em> collide</li>
 <li><a href="#multi-replace-mesh"><strong>ADDED</strong> Multi-replace mesh</a> Replace with multiple meshes!</li>
 <li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a> Turn your blocky animation into final</li>
@@ -2535,7 +2626,6 @@
 <li><a href="#trajectories-returns"><strong>ADDED</strong> Trajectories Returns</a> Faster and stronger!</li>
 <li><a href="#mass-independent-fields"><strong>ADDED</strong> Mass Independent Fields</a> More intuitive fields</li>
 <li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Less worry about the start frame</li>
-<li><a href="#z-up-assets"><strong>ADDED</strong> Z-up Assets</a> Assets are now "bi-axial" <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></li>
 <li><a href="#good-bye-2018"><strong>ADDED</strong> Good Bye 2018</a> Maya 2018, may you rest in peace</li>
 <li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
 </ul>
@@ -2680,6 +2770,58 @@
 <p>For the time being, please contact us for login details.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222779782-075b5601-5948-4318-8bf4-a083c8147a56.mp4" type="video/mp4"></video></p>
 <p><br></p>
+<h3 id="blend-simulation">Blend Simulation</h3>
+<p>Ragdoll records your simulation onto a layer, and this layer has a <code>Weight</code> attribute that you can animate to blend between simulation and animation.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919674-c90004e8-7e5b-4bdd-8f09-081144b7c92d.mp4" type="video/mp4"></video></p>
+<p>But, most of the time, it isn't doing what you'd expect. <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919681-9ccac493-736c-43f0-963e-0418341e2053.mp4" type="video/mp4"></video></p>
+<p>A new option has been added to the Record Simulation option dialog to solve this.</p>
+<p><img width="438" alt="image" src="https://user-images.githubusercontent.com/2152766/227924927-cdaf991f-67ca-48c3-86c3-c1681fdacfbb.png"></p>
+<p>Here you can see the effect in action.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227924964-e6bfd942-50bd-4f8a-b93e-c4dc2e5e0d5a.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="solver-blend">Solver Blend</h4>
+<p>There is now an option to blend between animation and simulation <em>before</em> recording!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919686-b9b6b9a0-3932-405c-b71e-b1cc3b4c074a.mp4" type="video/mp4"></video></p>
+<p>Here are some more examples.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227920101-087d40a1-acf3-4469-b0a1-27cc7851ac93.mp4" type="video/mp4"></video></p>
+<p>This will also work alongside <code>Translate Motion = Soft</code>.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227920109-6056fb9c-d4c9-476e-ba57-d7c029992a81.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="stepped-simulation">Stepped Simulation</h3>
+<p>Japanese anime, and 2D animation in general, is normally animated on 2's, 3's and sometimes 4's and sometimes at arbitrary times altogether.</p>
+<p>Previously, Ragdoll was only ever able to produce 1 frame per Maya frame, meaning the animator would retroactively need to reduce the keys to only happen when animation happens. No longer!</p>
+<p><br></p>
+<h4 id="smooth-input-stepped-output">Smooth input, Stepped output</h4>
+<p>In the simplest case, Ragdoll can be instructed to output simulation ever other or every third frame, or every fourth. Creating a 2D or stopmotion kind of look.</p>
+<p><br></p>
+<h4 id="stepped-input-stepped-output">Stepped input, Stepped output</h4>
+<p>In the more complex case, consider this animation.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227786054-ca4eb95d-e3be-4de0-a9a2-3753d98dc06d.mp4" type="video/mp4"></video></p>
+<p>Notice how there are pauses between frames, and that keyframes are not distributed evenly. Some have a 2 frame pause, some a 5 frame pause. Here's what would happen if you were to try and simulate this.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227786057-394cd6bf-d117-48fb-b7f9-6051f45420e3.mp4" type="video/mp4"></video></p>
+<p>Notice how the torso and especially the tail gets jerked around. Because during each pause, Ragdoll goes ahead and simulates it as though the character came to a complete halt. And then kicks off again when it moves, at a very high velocity.</p>
+<p>You can now match simulation to when animation occurs, via the new <code>Animate Time</code> menu item.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227786060-410c7845-65eb-4234-8ac1-86e9b56b7dfa.mp4" type="video/mp4"></video></p>
+<p>Now simulation only happens when the character actually moves. You can control the frequency and time delta of each frame by tuning the resulting animation curve.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/227786255-09ede140-534b-43ad-a543-79e49e7e0a16.png" /></p>
+<p><br></p>
+<h4 id="freaky-time">Freaky Time</h4>
+<p>Time is controlled via a normal animation curve, and there's no reason it cannot also go backwards. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227787462-6282a8a1-27f5-45bf-9d6b-43b3007f3441.mp4" type="video/mp4"></video></p>
+<p>Let your creativity out!</p>
+<p><br></p>
+<h4 id="time-method">Time Method</h4>
+<p>Normally, during playback Maya will transition from one frame to the next. For example, from frame 1 to 2. But sometimes, when a rig is too heavy, Maya may skip a frame or two. For example from 1 to 3, without first visiting frame 2.</p>
+<p>To Maya, the different in time between frame 1 and 2 is about 1/24 seconds, with a playback rate of 24 fps; that is, about 41 milliseconds. The difference between frames 1 and 3 is 83 milliseconds.</p>
+<p>To Ragdoll, the difference is always 41 milliseconds. No matter the difference in Maya. Why does that matter? Well, consider this.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227769894-40b4dbf1-70e7-4706-a24c-16d306f8d671.mp4" type="video/mp4"></video></p>
+<p>At frame 17, the character hits the ground. But what if we go to frame 17 immediately, and skip a few more frames?</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227769896-dfb0c731-a1f7-497e-8718-d1ca718ea256.mp4" type="video/mp4"></video></p>
+<p>Now the character hits the ground at frame 78! To Maya, 78 frames has passed; about 3 seconds. But to Ragdoll, barely a second has passed.</p>
+<p>With the new <code>Time Method</code> attribute, you can now choose to handle this in a realistic way instead.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227770104-1c359d80-a7e9-4de0-9e49-f102be962404.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h3 id="collision-group">Collision Group</h3>
 <p>You can now more easily manage which Markers collide, and which does not!</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/217063977-1faaa176-a5e2-4798-a3db-a1741d36fa29.png" /></p>
@@ -2739,6 +2881,37 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/215749729-c8da6342-33c7-46c8-86b7-adc7e2addae1.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
+<p>Last but not least, a few minor things to make your life easier.</p>
+<p><br></p>
+<h4 id="new-behaviour-names">New Behaviour Names</h4>
+<p>The options for a Marker's <code>Behaviour</code> attribute has been updated for more clarity.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Old Name</th>
+<th align="left"></th>
+<th align="left">New Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Inherit</code></td>
+<td align="left">-&gt;</td>
+<td align="left"><code>Use Group</code></td>
+</tr>
+<tr>
+<td align="left"><code>Kinematic</code></td>
+<td align="left">-&gt;</td>
+<td align="left"><code>Animated</code></td>
+</tr>
+<tr>
+<td align="left"><code>Dynamic</code></td>
+<td align="left">-&gt;</td>
+<td align="left"><code>Simulated</code></td>
+</tr>
+</tbody>
+</table>
+<p>The name "kinematic" is the technical term for when something is animated, so we figured we may as well call it what it is! A Marker set to <code>Animated</code> is entirely animated, with no simulation applied. It may affect other <code>Simulated</code> Markers, but cannot be affected by them.</p>
 <p><br></p>
 <h4 id="edits-on-start-frame">Edits on Start Frame</h4>
 <p>Some things in Ragdoll can be animated, others cannot. Those that cannot can also not be changed on any frame other than the start frame.</p>
@@ -2748,8 +2921,29 @@
 <p>You can now undo both sides at once, as you'd expect!</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222776015-1eaebb69-3220-4dde-945e-7082935ca320.mp4" type="video/mp4"></video></p>
 <p><br></p>
+<h4 id="z-up-assets">Z-up Assets</h4>
+<p>You can now export assets from a Y-up Maya scene, and load it into a Z-up Maya scene! This means our default assets, which were made in a Y-up environment, will now load perfectly fine in your Z-up scenes.</p>
+<p><strong>Before</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978903-a02d232d-9418-479b-b8cf-d4d03d8d0324.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978910-9e950715-dbf4-4621-8768-610088263d14.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h4 id="linked-solver-crash">Linked Solver Crash</h4>
 <p>Many linked solvers could potentially crash Maya, no longer!</p>
+<p><br></p>
+<h4 id="deprecating-max-mass-ratio">Deprecating Max Mass Ratio</h4>
+<p>Ragdoll likes when the masses of objects that interact are somewhat similar. A 60kg character sitting on a 100kg horse is 👌. But a million ton planet falling onto a 60g ant is less than OK.</p>
+<p>To combat this, an attribute was introduced a while back called <code>Max Mass Ratio</code> whose job it was to even out the differences ("ratio") between masses. But it didn't work that great, the simulation was no happier because of it.</p>
+<p>So in this release, we are deprecating this attribute. It will still exist in your scene, and can be found at the very bottom of the Solver node in the Attribute Editor. If you find yourself needing it, let us know. If not, you have one less thing to worry about.</p>
+<p><br></p>
+<h3 id="one-off-bug">One-off bug</h3>
+<p>Ragdoll was reading values from Maya that were 1 frame too old.</p>
+<p><strong>Before</strong></p>
+<p>I'm stepping through the simulation, notice how the pelvis is set to <code>Animated</code> (Kinematic) but how it doesn't actually have an effect until the next frame?</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227778001-d60a03e8-a0f3-4698-85fe-9e12026b846a.mp4" type="video/mp4"></video></p>
+<p><strong>After</strong></p>
+<p>This has now been fixed.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227778004-d21a6b2b-8067-4b07-88ec-6246d5260ea5.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="good-bye-2018">Good Bye 2018</h3>
 <p>Ragdoll now only supports Maya 2019-2023, with 2024 coming up soon!</p>
@@ -2764,7 +2958,7 @@
 </ul>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/214250292-f38e6db0-c564-4203-b782-053070958e18.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h3 id="z-up-assets">Z-up Assets</h3>
+<h3 id="z-up-assets_1">Z-up Assets</h3>
 <p>You can now export assets from a Y-up Maya scene, and load it into a Z-up Maya scene! This means our default assets, which were made in a Y-up environment, will now load perfectly fine in your Z-up scenes.</p>
 <p><strong>Before</strong></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978903-a02d232d-9418-479b-b8cf-d4d03d8d0324.mp4" type="video/mp4"></video></p>
@@ -2784,6 +2978,21 @@
 <span class="c1"># Remove some markers</span>
 <span class="n">api</span><span class="o">.</span><span class="n">remove_from_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
 </code></pre></div>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>8ec0084a9 (Update beta notes)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
                 
                   
                     
@@ -2792,7 +3001,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-03-10
+      Last update: 2023-03-27
     
   </small>
 </div>
