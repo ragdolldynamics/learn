@@ -2391,6 +2391,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#maya-2024" class="md-nav__link">
+    Maya 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#account-management" class="md-nav__link">
     Account Management
   </a>
@@ -2550,6 +2557,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#restore-t-key" class="md-nav__link">
+    Restore T Key
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2563,22 +2577,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#good-bye-2018" class="md-nav__link">
-    Good Bye 2018
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#solver-update" class="md-nav__link">
     Solver Update
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#z-up-assets_1" class="md-nav__link">
-    Z-up Assets
   </a>
   
 </li>
@@ -2613,8 +2613,7 @@
                 <p>Highlight for this release is <strong>Locomotion 2.0</strong></p>
 <ul>
 <li><a href="#locomotion-2"><strong>ADDED</strong> Locomotion 2.0</a> A ton of improvements and new abilities!</li>
-<li><a href="#multi-target"><strong>ADDED</strong> Multi-target</a> Go left, then right, then turn around and go right again!</li>
-<li><a href="#multi-plan"><strong>ADDED</strong> Multi-plan</a> Chain plans together, each running in parallel!</li>
+<li><a href="#maya-2024"><strong>ADDED</strong> Maya 2024</a> Support for Maya 2024 is here!</li>
 <li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
 <li><a href="#stepped-simulation"><strong>ADDED</strong> Stepped Simulation</a> Simulate on 2's!</li>
 <li><a href="#blend-simulation"><strong>ADDED</strong> Blend Simulation</a> Smooth transition between animation and simulation</li>
@@ -2749,6 +2748,11 @@
 <p>If you change the starting position of your plan, or move the character after having assigned a plan, you can re-align the two with the Reset Origin command.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224351031-ccd846e6-d896-4183-ad93-2c4ef2f0452c.mp4" type="video/mp4"></video></p>
 <p><br></p>
+<h3 id="maya-2024">Maya 2024</h3>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/228585587-97ce4b3c-63ee-4d28-ac05-7039cfd44bd3.png" /></p>
+<p>Released just a few days ago, Ragdoll is fully onboard. <img alt="🥳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f973.svg" title=":partying_face:" /></p>
+<p>On the other hand, Maya 2018 has left the chat and is no longer supported by Ragdoll (or Autodesk, for that matter!)</p>
+<p><br></p>
 <h3 id="account-management">Account Management</h3>
 <p>You can now monitor and manage your account with us, starting with performing remote deactivation of your node-locked licences.</p>
 <ul>
@@ -2867,7 +2871,7 @@
 <p>Assign to a control, and then use <code>Replace Mesh</code> alongside any geometry to use this geometry for collision detection.</p>
 <p>However!</p>
 <p>Sometimes collisions are more complex and require <em>multiple</em> meshes to make up 1 physical collision shape. You can now achieve this with ease.</p>
-<p>You can now select any number of meshes and use the combination of them as a collision shape. :party:</p>
+<p>You can now select any number of meshes and use the combination of them as a collision shape. <img alt="🥳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f973.svg" title=":partying_face:" /></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222769502-9aaa7418-887f-47f1-b272-5e8b6b31994a.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="pin-constraint-pivot">Pin Constraint Pivot</h3>
@@ -2936,6 +2940,10 @@
 <p>To combat this, an attribute was introduced a while back called <code>Max Mass Ratio</code> whose job it was to even out the differences ("ratio") between masses. But it didn't work that great, the simulation was no happier because of it.</p>
 <p>So in this release, we are deprecating this attribute. It will still exist in your scene, and can be found at the very bottom of the Solver node in the Attribute Editor. If you find yourself needing it, let us know. If not, you have one less thing to worry about.</p>
 <p><br></p>
+<h4 id="restore-t-key">Restore T Key</h4>
+<p>There's an option to restore the functionality of the T key, and to change it to something else.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228199138-41045d55-ca23-4cf3-83f5-e364b8a2fc1d.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h3 id="one-off-bug">One-off bug</h3>
 <p>Ragdoll was reading values from Maya that were 1 frame too old.</p>
 <p><strong>Before</strong></p>
@@ -2944,9 +2952,6 @@
 <p><strong>After</strong></p>
 <p>This has now been fixed.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227778004-d21a6b2b-8067-4b07-88ec-6246d5260ea5.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="good-bye-2018">Good Bye 2018</h3>
-<p>Ragdoll now only supports Maya 2019-2023, with 2024 coming up soon!</p>
 <p><br></p>
 <h3 id="solver-update">Solver Update</h3>
 <p>The underlying maths behind your physics has been modernised to resolve subtle issues but primarily lay the foundation for new things to come. You shouldn't notice much of any difference, apart from subtle things like this.</p>
@@ -2957,13 +2962,6 @@
 <li>After Wyvern: 79 fps (lots of connected and constrained rigid bodies)</li>
 </ul>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/214250292-f38e6db0-c564-4203-b782-053070958e18.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="z-up-assets_1">Z-up Assets</h3>
-<p>You can now export assets from a Y-up Maya scene, and load it into a Z-up Maya scene! This means our default assets, which were made in a Y-up environment, will now load perfectly fine in your Z-up scenes.</p>
-<p><strong>Before</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978903-a02d232d-9418-479b-b8cf-d4d03d8d0324.mp4" type="video/mp4"></video></p>
-<p><strong>After</strong></p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/218978910-9e950715-dbf4-4621-8768-610088263d14.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="python-api">Python API</h3>
 <p>For the Python folk out there, these members were added to the Python API.</p>
@@ -3001,7 +2999,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-03-27
+      Last update: 2023-03-29
     
   </small>
 </div>
