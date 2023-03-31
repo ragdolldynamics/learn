@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2023.03.beta/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2023.04.01/">
       
       
         <meta name="author" content="mottosso">
@@ -1262,6 +1262,8 @@
   <!-- Determine class according to state -->
   
   
+    
+  
 
   <!-- Main navigation item with nested items -->
   
@@ -1270,7 +1272,7 @@
     
 
     <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
       <!-- Active checkbox expands items contained within nested section -->
       
@@ -1280,7 +1282,7 @@
           data-md-toggle="nav-10"
           type="checkbox"
           id="nav-10"
-          
+          checked
         />
       
 
@@ -1301,6 +1303,421 @@
         <ul class="md-nav__list" data-md-scrollfix>
 
           <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2023.04.01
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2023.04.01
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    Showcase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locomotion-20" class="md-nav__link">
+    Locomotion 2.0
+  </a>
+  
+    <nav class="md-nav" aria-label="Locomotion 2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-workflow" class="md-nav__link">
+    New Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-updates" class="md-nav__link">
+    Iterative Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-manipulators" class="md-nav__link">
+    New Manipulators
+  </a>
+  
+    <nav class="md-nav" aria-label="New Manipulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate" class="md-nav__link">
+    Translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate" class="md-nav__link">
+    Rotate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    Height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-snapping" class="md-nav__link">
+    Terrain Snapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-target" class="md-nav__link">
+    Multi-target
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-target">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    Timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin" class="md-nav__link">
+    Pin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-plan" class="md-nav__link">
+    Multi-plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-to-plan" class="md-nav__link">
+    Animation to Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-accuracy" class="md-nav__link">
+    Terrain Accuracy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-starting-position" class="md-nav__link">
+    Reset Starting Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-debugging" class="md-nav__link">
+    Terrain Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-tutorials" class="md-nav__link">
+    New Tutorials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya-2024" class="md-nav__link">
+    Maya 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-management" class="md-nav__link">
+    Account Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blend-simulation" class="md-nav__link">
+    Blend Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Blend Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepped-simulation" class="md-nav__link">
+    Stepped Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepped Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smooth-input-stepped-output" class="md-nav__link">
+    Smooth input, Stepped output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stepped-input-stepped-output" class="md-nav__link">
+    Stepped input, Stepped output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freaky-time" class="md-nav__link">
+    Freaky Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-method" class="md-nav__link">
+    Time Method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-group" class="md-nav__link">
+    Collision Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trajectories" class="md-nav__link">
+    Trajectories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-independent-fields" class="md-nav__link">
+    Mass Independent Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-replace-mesh" class="md-nav__link">
+    Multi Replace Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-constraint-pivot" class="md-nav__link">
+    Pin Constraint Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-constraint-pivot" class="md-nav__link">
+    Attach Constraint Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-of-life" class="md-nav__link">
+    Quality of Life
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-behaviour-names" class="md-nav__link">
+    New Behaviour Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edits-on-start-frame" class="md-nav__link">
+    Edits on Start Frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetry-and-undo" class="md-nav__link">
+    Symmetry and Undo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-up-assets" class="md-nav__link">
+    Z-up Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked-solver-crash" class="md-nav__link">
+    Linked Solver Crash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecating-max-mass-ratio" class="md-nav__link">
+    Deprecating Max Mass Ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-t-key" class="md-nav__link">
+    Restore T Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-off-bug" class="md-nav__link">
+    One-off bug
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solver-update" class="md-nav__link">
+    Solver Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
           
             
 
@@ -2379,14 +2796,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reset-origin" class="md-nav__link">
-    Reset Origin
+  <a href="#reset-starting-position" class="md-nav__link">
+    Reset Starting Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terrain-debugging" class="md-nav__link">
+    Terrain Debugging
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-tutorials" class="md-nav__link">
+    New Tutorials
+  </a>
   
 </li>
       
@@ -2413,8 +2844,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solver-blend" class="md-nav__link">
-    Solver Blend
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
   </a>
   
 </li>
@@ -2603,16 +3041,21 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2023.03.beta.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2023.04.01.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Locomotion 2.0</h1>
+                  <h1>2023.04.01</h1>
                 
-                <p>Highlight for this release is <strong>Locomotion 2.0</strong></p>
+                <video autoplay class="poster" muted="muted" loop="loop" width=100% poster="https://user-images.githubusercontent.com/2152766/229084657-c7aa80a4-ac67-486b-b747-ee63ccc9d27a.png">
+    <source src="https://user-images.githubusercontent.com/2152766/229084512-fc31b44a-5c4c-4c3f-8a93-24b59b011ea7.mp4" type="video/mp4">
+</video>
+
+<p>Highlight for this release is <strong>Locomotion 2.0</strong></p>
 <ul>
 <li><a href="#locomotion-2"><strong>ADDED</strong> Locomotion 2.0</a> A ton of improvements and new abilities!</li>
+<li><a href="#new-tutorials"><strong>ADDED</strong> New Tutorials</a> New Tutorials from Elbebawy</li>
 <li><a href="#maya-2024"><strong>ADDED</strong> Maya 2024</a> Support for Maya 2024 is here!</li>
 <li><a href="#account-management"><strong>ADDED</strong> Account Management</a> Manage your Ragdoll account with ease</li>
 <li><a href="#stepped-simulation"><strong>ADDED</strong> Stepped Simulation</a> Simulate on 2's!</li>
@@ -2621,11 +3064,9 @@
 <li><a href="#multi-replace-mesh"><strong>ADDED</strong> Multi-replace mesh</a> Replace with multiple meshes!</li>
 <li><a href="#refinement"><strong>ADDED</strong> Animation Refinement</a> Turn your blocky animation into final</li>
 <li><a href="#refinement"><strong>ADDED</strong> Iterative Updates</a> More immediate and continuous updates</li>
-<li><a href="#new-gizmos"><strong>ADDED</strong> New Gizmos</a> Simplified authoring of targets</li>
 <li><a href="#trajectories-returns"><strong>ADDED</strong> Trajectories Returns</a> Faster and stronger!</li>
 <li><a href="#mass-independent-fields"><strong>ADDED</strong> Mass Independent Fields</a> More intuitive fields</li>
 <li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Less worry about the start frame</li>
-<li><a href="#good-bye-2018"><strong>ADDED</strong> Good Bye 2018</a> Maya 2018, may you rest in peace</li>
 <li><a href="#solver-update"><strong>UPDATED</strong> Solver Update</a> New and improved, subtly different</li>
 </ul>
 <p><br></p>
@@ -2656,6 +3097,9 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222778170-432b804c-e04a-4491-99de-bdfe2f741b87.mp4" type="video/mp4"></video></p>
 <!--  -->
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222778176-c84acd17-9798-4039-a322-c44e16ff8a2e.mp4" type="video/mp4"></video></p>
+<p><strong>A Whale of a Time</strong></p>
+<p>Jason jason jason.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228855206-a427582f-ef35-4b09-bf69-14d5e313e30a.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="locomotion-20">Locomotion 2.0</h3>
 <p>First released in June 2022, this automated method of generating complete character locomotion has seen a major update!</p>
@@ -2744,9 +3188,34 @@
 <h4 id="terrain-accuracy">Terrain Accuracy</h4>
 <p>Plans now more accurately follows your terrain and enables you to visualise what Locomotion sees.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224270568-af07316a-9fb0-4ccb-b3e0-e5e5eb006675.mp4" type="video/mp4"></video></p>
-<h4 id="reset-origin">Reset Origin</h4>
-<p>If you change the starting position of your plan, or move the character after having assigned a plan, you can re-align the two with the Reset Origin command.</p>
+<p><br></p>
+<h4 id="reset-starting-position">Reset Starting Position</h4>
+<p>If you change the starting position of your plan, or move the character after having assigned a plan, you can re-align the two with the Reset Starting Position command.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224351031-ccd846e6-d896-4183-ad93-2c4ef2f0452c.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="terrain-debugging">Terrain Debugging</h4>
+<p>If your terrain has two sides, Locomotion can struggle to snap its feet to the one you intend.</p>
+<p>Here's a problematic result.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228790647-e7bff316-a229-48db-81e8-529f0b944754.mp4" type="video/mp4"></video></p>
+<p>If we look at the feet snapping, we can see how they tend to snap towards the lower side of this terrain.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228790661-e9abbd1c-060c-41a4-ade6-72e3b8f4c867.mp4" type="video/mp4"></video></p>
+<p>We can resolve this by removing the lower side altogether.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228790654-8afa6e5b-eae7-49c3-b498-5f27addd7607.mp4" type="video/mp4"></video></p>
+<p>And presto, all good!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/228790674-ba5661c4-7cc6-407e-95bc-befcd067564e.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="new-tutorials">New Tutorials</h3>
+<p>Mohamed Elbebawy has produced a new series of tutorials for Ragdoll, available here.</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLL4XIS5Woc6ni2l0406JzjKlRwkrVTdly">Elbebawy Playlist</a><ul>
+<li><a href="https://www.youtube.com/watch?v=uIl-rMPd2rw&amp;list=PLL4XIS5Woc6ni2l0406JzjKlRwkrVTdly&amp;index=1">Elbebawy Series 1 - Blowing in the Wind</a></li>
+<li><a href="https://www.youtube.com/watch?v=JTfeFi_z5u0&amp;list=PLL4XIS5Woc6ni2l0406JzjKlRwkrVTdly&amp;index=2">Elbebawy Series 2 - Mocap pt. 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=-S3KoTmW17w&amp;list=PLL4XIS5Woc6ni2l0406JzjKlRwkrVTdly&amp;index=3">Elbebawy Series 2 - Mocap pt. 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=9S4W4VNEFYg&amp;list=PLL4XIS5Woc6ni2l0406JzjKlRwkrVTdly&amp;index=4">Elbebawy Series 2 - Mocap pt. 3</a></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/229113304-6529cf6f-b881-48de-9d01-3db871df470f.png" /></p>
 <p><br></p>
 <h3 id="maya-2024">Maya 2024</h3>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/228585587-97ce4b3c-63ee-4d28-ac05-7039cfd44bd3.png" /></p>
@@ -2775,7 +3244,18 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/222779782-075b5601-5948-4318-8bf4-a083c8147a56.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="blend-simulation">Blend Simulation</h3>
-<p>Ragdoll records your simulation onto a layer, and this layer has a <code>Weight</code> attribute that you can animate to blend between simulation and animation.</p>
+<p>There are now 2 ways in which to blend between simulation and animation; before or after.</p>
+<p><br></p>
+<h4 id="before">Before</h4>
+<p>There is now an option to blend between animation and simulation <em>before</em> recording!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919686-b9b6b9a0-3932-405c-b71e-b1cc3b4c074a.mp4" type="video/mp4"></video></p>
+<p>Here are some more examples.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227920101-087d40a1-acf3-4469-b0a1-27cc7851ac93.mp4" type="video/mp4"></video></p>
+<p>This will also work alongside <code>Translate Motion = Soft</code>.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/229121708-db587cde-eb61-401f-b458-9516270c6e81.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="after">After</h4>
+<p>Ragdoll typically records your simulation onto a layer, and this layer has a <code>Weight</code> attribute that you can animate to blend between simulation and animation.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919674-c90004e8-7e5b-4bdd-8f09-081144b7c92d.mp4" type="video/mp4"></video></p>
 <p>But, most of the time, it isn't doing what you'd expect. <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919681-9ccac493-736c-43f0-963e-0418341e2053.mp4" type="video/mp4"></video></p>
@@ -2784,20 +3264,13 @@
 <p>Here you can see the effect in action.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227924964-e6bfd942-50bd-4f8a-b93e-c4dc2e5e0d5a.mp4" type="video/mp4"></video></p>
 <p><br></p>
-<h4 id="solver-blend">Solver Blend</h4>
-<p>There is now an option to blend between animation and simulation <em>before</em> recording!</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227919686-b9b6b9a0-3932-405c-b71e-b1cc3b4c074a.mp4" type="video/mp4"></video></p>
-<p>Here are some more examples.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227920101-087d40a1-acf3-4469-b0a1-27cc7851ac93.mp4" type="video/mp4"></video></p>
-<p>This will also work alongside <code>Translate Motion = Soft</code>.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227920109-6056fb9c-d4c9-476e-ba57-d7c029992a81.mp4" type="video/mp4"></video></p>
-<p><br></p>
 <h3 id="stepped-simulation">Stepped Simulation</h3>
 <p>Japanese anime, and 2D animation in general, is normally animated on 2's, 3's and sometimes 4's and sometimes at arbitrary times altogether.</p>
 <p>Previously, Ragdoll was only ever able to produce 1 frame per Maya frame, meaning the animator would retroactively need to reduce the keys to only happen when animation happens. No longer!</p>
 <p><br></p>
 <h4 id="smooth-input-stepped-output">Smooth input, Stepped output</h4>
 <p>In the simplest case, Ragdoll can be instructed to output simulation ever other or every third frame, or every fourth. Creating a 2D or stopmotion kind of look.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/229100190-5a259a39-8ab9-43f6-9faa-6c19795be4c4.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="stepped-input-stepped-output">Stepped input, Stepped output</h4>
 <p>In the more complex case, consider this animation.</p>
@@ -2805,9 +3278,13 @@
 <p>Notice how there are pauses between frames, and that keyframes are not distributed evenly. Some have a 2 frame pause, some a 5 frame pause. Here's what would happen if you were to try and simulate this.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227786057-394cd6bf-d117-48fb-b7f9-6051f45420e3.mp4" type="video/mp4"></video></p>
 <p>Notice how the torso and especially the tail gets jerked around. Because during each pause, Ragdoll goes ahead and simulates it as though the character came to a complete halt. And then kicks off again when it moves, at a very high velocity.</p>
-<p>You can now match simulation to when animation occurs, via the new <code>Animate Time</code> menu item.</p>
+<p>You can now match simulation to when animation occurs, via the new <code>Warp Time</code> menu item.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/227786060-410c7845-65eb-4234-8ac1-86e9b56b7dfa.mp4" type="video/mp4"></video></p>
 <p>Now simulation only happens when the character actually moves. You can control the frequency and time delta of each frame by tuning the resulting animation curve.</p>
+<div class="admonition hint">
+<p class="admonition-title">Restore Time</p>
+<p>Use <code>Restore Time</code> to get back to a non-stepped simulation.</p>
+</div>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/227786255-09ede140-534b-43ad-a543-79e49e7e0a16.png" /></p>
 <p><br></p>
 <h4 id="freaky-time">Freaky Time</h4>
@@ -2853,12 +3330,15 @@
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/224365970-d3e3f796-e3da-4072-86b2-308f95644a2c.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="mass-independent-fields">Mass Independent Fields</h3>
-<p>Fields are now independent of Marker mass; meaning that large characters like trolls and giants are affected equal to small things like screws and dust.</p>
-<p>Explain these.</p>
-<ul>
-<li><code>solver.forceMode = Velocity Change</code></li>
-<li><code>solver.perSubstep = false</code></li>
-</ul>
+<p>Fields were introduced in <a href="/releases/2022.02.14">Ragdoll 2022.02.14</a> to help apply environment effects such as wind and turbulence to your animations.</p>
+<p>Forces are applied as they would in real life... which isn't always practical!</p>
+<p>Consider this.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/229102454-63da94be-f23a-444b-92b8-e2ae1505b12c.mp4" type="video/mp4"></video></p>
+<p>Here, as the character grows in size, so does its mass. As the mass increases, the effect of the turbulence force diminishes. Since the same force is applied to a now much-heavier object. Like if you pushed on a woodden door and then tried pushing a car; your muscles remain as strong, but the object is now much heavier.</p>
+<p>With this release, forces are instead applied evenly regardless of mass, which should result is more control and predictability of your simulation.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/229101787-a5342fcb-b77b-45b5-9c55-cc4eaea51bbf.mp4" type="video/mp4"></video></p>
+<p>You can revert to the old (realistic) behaviour by changing <code>Force Mode</code> from <code>Velocity Change</code> to <code>Force</code> in the <code>rSolver</code> node.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/229110842-125285ee-3f6a-4664-855f-b6e008fdac7a.png" /></p>
 <p><br></p>
 <h3 id="multi-replace-mesh">Multi Replace Mesh</h3>
 <p>Ragdoll supports 4 geometry types for collisions.</p>
@@ -2920,6 +3400,7 @@
 <h4 id="edits-on-start-frame">Edits on Start Frame</h4>
 <p>Some things in Ragdoll can be animated, others cannot. Those that cannot can also not be changed on any frame other than the start frame.</p>
 <p>This used to be a chore, and is no longer! Ragdoll will now automatically return to the start frame when it needs to, leaving you with less to worry about.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/229111932-79f058c4-e64c-4e07-925f-db5955759597.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h4 id="symmetry-and-undo">Symmetry and Undo</h4>
 <p>You can now undo both sides at once, as you'd expect!</p>
@@ -2976,21 +3457,6 @@
 <span class="c1"># Remove some markers</span>
 <span class="n">api</span><span class="o">.</span><span class="n">remove_from_collision_group</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
 </code></pre></div>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>8ec0084a9 (Update beta notes)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
                 
                   
                     
@@ -2999,7 +3465,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-03-29
+      Last update: 2023-03-31
     
   </small>
 </div>
@@ -3019,6 +3485,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../serialisation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Serialisation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2022.11.29/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2022.11.29
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
