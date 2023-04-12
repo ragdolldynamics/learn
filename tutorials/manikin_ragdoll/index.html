@@ -2619,10 +2619,10 @@
 <p>Next let's see how our character behaves when there isn't any animation around to steer it.</p>
 <ol>
 <li>Select <code>hip_ctl_rGroup</code></li>
-<li>Set <code>Behaviour = Dynamic</code></li>
-<li>Set <code>Pose Stiffness = 0.0</code></li>
+<li>Set <code>Behaviour = Simulated</code></li>
+<li>Set <code>Rotate Stiffness = 0.0</code></li>
 </ol>
-<p>As in our last tutorial when we changed the <code>hip_ctl</code> from <code>Kinematic</code> to <code>Dynamic</code>, now we do the same but for the whole character!</p>
+<p>As in our last tutorial when we changed the <code>hip_ctl</code> from <code>Animated</code> to <code>Simulated</code>, now we do the same but for the whole character!</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388195-22886314-833f-4785-9b80-1d90b35d54e7.mp4" type="video/mp4"></video></p>
 
 <p><em>Yikes!</em> That's a mess. No longer is the animation holding a pose together, it's all up to gravity and the anatomy of our character now.</p>
@@ -2751,7 +2751,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-02-07
+      Last update: 2023-04-12
     
   </small>
 </div>

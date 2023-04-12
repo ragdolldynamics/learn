@@ -898,11 +898,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamics" class="md-nav__link">
-    Dynamics
+  <a href="#simulateds" class="md-nav__link">
+    Simulateds
   </a>
   
-    <nav class="md-nav" aria-label="Dynamics">
+    <nav class="md-nav" aria-label="Simulateds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2485,11 +2485,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamics" class="md-nav__link">
-    Dynamics
+  <a href="#simulateds" class="md-nav__link">
+    Simulateds
   </a>
   
-    <nav class="md-nav" aria-label="Dynamics">
+    <nav class="md-nav" aria-label="Simulateds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2674,7 +2674,7 @@
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/129543646-4880f774-85cc-418b-aa24-e19f169d9538.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h3 id="dynamics">Dynamics</h3>
+<h3 id="simulateds">Simulateds</h3>
 <p>The stage is set, now let's apply physics.</p>
 <p><br></p>
 <h4 id="torso">Torso</h4>
@@ -2737,7 +2737,7 @@
 <p>That's enough setup, let's drop him!</p>
 <ol>
 <li>Select <code>hip_ctl</code></li>
-<li>Set <code>Behaviour = Dynamic</code></li>
+<li>Set <code>Behaviour = Simulated</code></li>
 <li>Drop the Manikin a few times</li>
 </ol>
 <div class="admonition hint">
@@ -2747,11 +2747,11 @@
 </div>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145350753-c9a74397-6e5c-41ed-b06b-03e596860952.mp4" type="video/mp4"></video></p>
 
-<p>The default behaviour for <code>Assign and Connect</code> is to give the first selection - the "root" - a <code>Kinematic</code> behaviour.</p>
+<p>The default behaviour for <code>Assign and Connect</code> is to give the first selection - the "root" - a <code>Animated</code> behaviour.</p>
 <div class="admonition question">
-<p class="admonition-title">What does Kinematic mean?</p>
-<p><strong>Kinematic</strong> means "copy the animation into simulation and make no changes to it"</p>
-<p>By instead setting this to <code>Dynamic</code>, then Ragdoll will only use the animation for the starting position and orientation of the simulation.</p>
+<p class="admonition-title">What does Animated mean?</p>
+<p><strong>Animated</strong> means "copy the animation into simulation and make no changes to it"</p>
+<p>By instead setting this to <code>Simulated</code>, then Ragdoll will only use the animation for the starting position and orientation of the simulation.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Inherit</p>
@@ -2830,7 +2830,7 @@
 
 <p><br></p>
 <h3 id="next-steps">Next Steps</h3>
-<p>In the next tutorial, we'll take this a bit further. As you play around with the <code>Pose Stiffness</code> on either the <code>rGroup</code> or individual <code>rMarker</code> nodes, you'll find some limbs start to misbehave. Especially the knees and elbows, that normally won't allow rotations past a certain angle in a real human (or Manikin for that matter!). That isn't the case here, because we've left out a critical part of any complete ragdoll.</p>
+<p>In the next tutorial, we'll take this a bit further. As you play around with the <code>Rotate Stiffness</code> on either the <code>rGroup</code> or individual <code>rMarker</code> nodes, you'll find some limbs start to misbehave. Especially the knees and elbows, that normally won't allow rotations past a certain angle in a real human (or Manikin for that matter!). That isn't the case here, because we've left out a critical part of any complete ragdoll.</p>
 <ul>
 <li><a href="/tutorials/manikin_ragdoll">Full Ragdoll</a></li>
 </ul>
@@ -2843,7 +2843,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-02-08
+      Last update: 2023-04-12
     
   </small>
 </div>
