@@ -2397,6 +2397,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-do-i-reactivate-my-licence-offline" class="md-nav__link">
+    How do I reactivate my licence offline?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-reactivate-my-licence-online" class="md-nav__link">
+    How do I reactivate my licence online?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#failed-to-deactivate-old-product-key" class="md-nav__link">
     Failed to Deactivate Old Product Key
   </a>
@@ -2721,6 +2735,32 @@ maya
 <p class="admonition-title">Absolute Path</p>
 <p>Take care to replace the path in the above commands, and use an absolute path rather than anything relative or special such as <code>~/</code>. The <code>turbofloatserver</code> command can get a little cranky about those things.</p>
 </div>
+<p><br></p>
+<h3 id="how-do-i-reactivate-my-licence-offline">How do I reactivate my licence <em>offline</em>?</h3>
+<p>If you are offline and changes has been made to your licence on our end, such as the number of seats changing or a new expiry date has been set, here is what you need to do.</p>
+<p><strong>1. Deactivate locally and remotely</strong></p>
+<p>Run the following command, replacing the path with one that can be written to.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -deact<span class="o">=</span><span class="s2">&quot;/path/to/DeactivationRequest.xml&quot;</span>
+</code></pre></div>
+<p>This should generate the file <code>DeactivationRequest.xml</code> that should look something like this.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;DeactivationRequest&gt;</span>blablabla<span class="nt">&lt;/DeactivationRequest&gt;</span>
+</code></pre></div>
+<p>Now paste the contents of this file into to <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a> along with your serial and press <strong>Deactivate</strong>.</p>
+<p>Your licence is now deactivated both on locally and remotely.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you forget to pass the <code>DeactivationRequest.xml</code> into the offline deactivation page, Ragdoll will not know about your deactivation. It will continue to believe that your licence remains activated, and may prevent you from activating it twice.</p>
+<p>If this happens, <a href="mailto:licencing@ragdolldynamics.com">contact us</a> such that we can manually deactivate your licence on our end.</p>
+</div>
+<p><strong>2. Activate</strong></p>
+<p>Next, follow the steps in <a href="#can-i-activate-my-server-offline">Can I activate my server offline</a> as usual.</p>
+<p><br></p>
+<h3 id="how-do-i-reactivate-my-licence-online">How do I reactivate my licence <em>online</em>?</h3>
+<p>If your licence has been activated <strong>online</strong> and has been updated on our end, you may need to reactivate your licence.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver -deact
+./turbofloatserver -a<span class="o">=</span><span class="s2">&quot;KWVT-U5RS-...&quot;</span>
+</code></pre></div>
+<p>This will refresh your local licence with whatever changes occured on our end.</p>
 <p><br></p>
 <h3 id="failed-to-deactivate-old-product-key">Failed to Deactivate Old Product Key</h3>
 <p>Can happen during offline activation if your local machine is activated <em>twice</em>.</p>
