@@ -667,6 +667,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#experimental-settings" class="md-nav__link">
+    Experimental Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnet-tuning" class="md-nav__link">
+    Magnet Tuning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-pin-constraints" class="md-nav__link">
+    Include Pin Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-fields" class="md-nav__link">
+    Include Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2604,6 +2645,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#experimental-settings" class="md-nav__link">
+    Experimental Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnet-tuning" class="md-nav__link">
+    Magnet Tuning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-pin-constraints" class="md-nav__link">
+    Include Pin Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-fields" class="md-nav__link">
+    Include Fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2759,6 +2841,56 @@
 <li><a href="https://youtu.be/kmY5NSmbkZo">https://youtu.be/kmY5NSmbkZo</a> (5:13 mins)</li>
 </ul>
 <p><a href="https://youtu.be/kmY5NSmbkZo"><img alt="image" src="https://user-images.githubusercontent.com/2152766/203064653-8decbeb2-cf01-49c2-8ff8-d1feeb5a63bf.png" /></a></p>
+<p><br></p>
+<h3 id="experimental-settings">Experimental Settings</h3>
+<p>At the bottom-left hand corner of Live Mode, you'll find a set of experimental controls.</p>
+<p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/245086193-53fc4bed-5c4e-45b5-8256-d1d0f6aaf6e1.png" /></p>
+<p><br></p>
+<h4 id="magnet-tuning">Magnet Tuning</h4>
+<p>Whenever you click and drag, you are dynamically creating and destroying a Pin Constraint. The settings for this Pin Constraint can be customised here.</p>
+<p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/245080664-7cc035fd-9efc-4ed1-9501-c2c88c55c483.png" /></p>
+<p>These can also affect the Modifier keys on the right-hand center of the Live Mode UI, such as how strong gravity should be or how tense the character should get when pressing the <code>Tense</code> button.</p>
+<p><br></p>
+<h4 id="include-pin-constraints">Include Pin Constraints</h4>
+<p>In Live Mode, all constraints are disabled. This way, they will not interfere with the primary purpose of Live Mode, which is to pose your character. However, outside of Live Mode, such as in <a href="#interactive-mode">Interactive Mode</a>, it may be useful to keep these active.</p>
+<p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/245081437-e7c6d685-1ea4-4e8e-8541-ccb7a30cf1b4.png" /></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/241284890-452a7e7a-754f-4c6b-b2e4-a5027f49d051.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/241284898-a33b256b-ca12-48ae-b89a-dc7104856065.mp4" type="video/mp4"></video></p>
+<p><strong>See example here</strong></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/interactive-mode/973/5">https://forums.ragdolldynamics.com/t/interactive-mode/973/5</a></li>
+</ul>
+<p><br></p>
+<h4 id="include-fields">Include Fields</h4>
+<p>Like Pin Constraints, Fields are disabled in Live Mode per default, but can be re-enabled using this button.</p>
+<p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/245081901-5d3cf147-689e-44b7-951b-71c2ddfc29bd.png" /></p>
+<p><br></p>
+<h4 id="workflows">Workflows</h4>
+<p>These are having a hard time finding a good default or place in the UI. They affect the overall workflow of Live Mode, so play with them but don't put too much faith into them.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Button</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Synchronise</td>
+<td align="left">Keep the Live Timeline in sync with the Maya timeline</td>
+</tr>
+<tr>
+<td align="left">Reset on Time Changed</td>
+<td align="left">Keep the simulation in sync with the Maya scene whenever time changes</td>
+</tr>
+<tr>
+<td align="left">Force Viewport Update</td>
+<td align="left">Improved interaction when in Interactive Mode</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/245086563-651dce3d-a83d-4041-b54b-8759d3962c09.png" /></p>
                 
                   
                     
