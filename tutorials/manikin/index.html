@@ -2611,14 +2611,22 @@
 </video>
 
 <h3 id="manikin">Manikin</h3>
+<p>Pick your target application. 👇</p>
+<div class="software-choice">
+    <div class="tab maya software-option active"><input type="radio" id="maya" name="software" value="Maya" onchange="setTab(event, 'maya')">
+    <label for="maya"><div class="software-label"><img width=16 src=https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/257483468-b5958734-ed1f-47de-9266-44eaba994220.png> Autodesk Maya</div></label></div>
+    <div class="tab blender software-option"><input type="radio" id="blender" name="software" value="Blender" onchange="setTab(event, 'blender')">
+    <label for="blender"><div class="software-label"><img width=16 src=https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/257483924-6328743a-71af-49a0-bd94-39cc89920e22.png> Blender</div></label></div>
+</div>
+
 <blockquote>
 <p>"Make your own motion reference"</p>
 </blockquote>
 <p>In this tutorial, we will setup a human-like character for use as reference or constraint target to your rig. You will be able to pose and position this Manikin like you would a real Manikin, and drop it from various heights and onto various obstacles to produce realistic poses as it falls.</p>
 <p>Something the animator can import and throw around for <em>reference</em> on how it would look like.</p>
 <div class="admonition success">
-<p class="admonition-title">Version 1.1 - Up to date</p>
-<p>Written for Ragdoll <code>2021.12.10</code> and above.</p>
+<p class="admonition-title">Version 1.2 - Up to date</p>
+<p>Written for Ragdoll <code>2023.08.01</code> and above.</p>
 </div>
 <p><strong>Estimated Time</strong></p>
 <ul>
@@ -2644,13 +2652,20 @@
 <p><br></p>
 <h3 id="bring-your-own-rig">Bring Your Own Rig</h3>
 <p>Follow this tutorial either using our provided Manikin rig, or your own character. It can have any number of limbs.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/129519170-59d6a109-e9eb-4fd0-87ef-f120050c9d7e.mp4" type="video/mp4"></video></p>
-
 <div class="hboxlayout justify-left">
 <a href="https://files.ragdolldynamics.com/api/public/dl/Q96vbUR5/manikin.zip" class="button blue"><b>Download Manikin</b></a>
 <a href="https://files.ragdolldynamics.com/api/public/dl/7PBY38gw/manikin1_final.zip" class="button red"><b>Download Final Scene</b></a>
 </div>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/243781079-1eb4bc30-5d2a-43ff-be1c-351361b85b4e.mp4" type="video/mp4"></video></p>
+<div class="hboxlayout justify-left">
+<a href="https://files.ragdolldynamics.com/api/public/dl/bckKPKkp/manikin_v3.blend" class="button blue"><b>Download Manikin</b></a>
+<a href="https://files.ragdolldynamics.com/api/public/dl/QyrniGox/manikin_v3_final.blend" class="button red"><b>Download Final Scene</b></a>
+</div>
+</div>
 <p><br></p>
 <h3 id="motivation">Motivation</h3>
 <blockquote>
@@ -2667,12 +2682,22 @@
 <p>As you will find, there is a lot more we can do once our motion reference is in 3D, on our actual character rig within Maya and infinitely <em>customisable</em>. As opposed to some video on the internet.</p>
 <p><br></p>
 <h3 id="setup">Setup</h3>
+<div class="tab-content maya">
 <p>Create a new reference of your chosen character rig or download this Manikin rig to get started.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/129542838-94f80604-326d-4625-aac6-559092a4338d.mp4" type="video/mp4"></video></p>
-
 <p>Play around with the controls to get a feel for what we're working with. This character is entirely FK which will make simulating it straightforward.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/129543646-4880f774-85cc-418b-aa24-e19f169d9538.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p>Open your chosen character rig or download the above Manikin rig to get started.</p>
+<p>Play around with the controls to get a feel for what we're working with.</p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257432215-229f145b-2701-447f-bb6a-42d606506b07.mp4" type="video/mp4"></video></p>
+<div class="admonition hint">
+<p class="admonition-title">FK or IK</p>
+<p><strong>Use FK for this tutorial</strong></p>
+<p>This Manikin rig has FK and IK (legs) controls, but we will focus on FK controls for this tutorial to keep things simple.</p>
+</div>
+</div>
 <p><br></p>
 <h3 id="simulation">Simulation</h3>
 <p>The stage is set, now let's apply physics!</p>
@@ -2692,8 +2717,20 @@
 <p>The <code>rdGroup</code> node contains attributes that affect all contained markers. It's where you'd edit the overall look and feel of your character, like how stiff it should be and whether or not body parts should collide with each other.</p>
 <p>Each Marker can either <strong>inherit</strong> or otherwise override these values.</p>
 </div>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145268730-9c58b545-63f8-4de7-8dd6-4a3e8e4a70a1.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257448363-a55e270c-35d0-4545-ada5-090062a54686.mp4" type="video/mp4"></video></p>
+<div class="admonition hint">
+<p class="admonition-title">Assignable Objects</p>
+<p>These objects can have Markers assigned to them in Blender.</p>
+<ul>
+<li>Mesh Object</li>
+<li>Pose Bone</li>
+</ul>
+</div>
+</div>
 <p><br></p>
 <h4 id="left-arm">Left Arm</h4>
 <p>Next we will continue from the <code>torso_ctl</code> and out into the arms.</p>
@@ -2712,13 +2749,21 @@
 <details class="question"><summary>Can I skip the clavicles?</summary><p>Yes, if you have extra controls - such as <code>twist</code> or <code>bend</code> - you can skip these if you don't care to simulate them.</p>
 <p>Simply skip over them as you select, from <code>torso_ctl</code> directly to <code>L_upperarm_ctl</code>.</p>
 </details>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145269586-121c8a06-5021-4f77-99a6-8373e23f6af4.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257451450-abc273fd-beb8-44d9-b524-1b6edc5fee5d.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="right-arm">Right Arm</h4>
 <p>Now repeat the above process for the other arm.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145269591-d4494551-00fc-4697-84d8-b378f4db22c1.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257456757-4d75ef78-e024-4611-b9fb-8ecb53937885.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="legs">Legs</h4>
 <p>Now let's continue down the hips and into the legs.</p>
@@ -2729,9 +2774,13 @@
 <li>Shift select <code>L_foot_ctl</code></li>
 <li>Run <code>Assign and Connect</code></li>
 </ol>
+<div class="tab-content maya">
 <p>We will address those <em>long</em> feet shortly. 👃</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145269594-29ca3623-b5bf-4cb9-ba4e-13fc5cb88fef.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257489324-6f15e30f-4ab1-485f-bbf9-338bb71925a2.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="drop-test">Drop Test</h4>
 <p>That's enough setup, let's drop him!</p>
@@ -2745,8 +2794,12 @@
 <p><strong>Behaviour</strong></p>
 <p>Each Marker has a "behaviour", which tells Ragdoll it should interpret the control it has been assigned. Should it fall with gravity? Should it try and match the pose? Should it remain fully animated, even in simulation?</p>
 </div>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145350753-c9a74397-6e5c-41ed-b06b-03e596860952.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257490306-216c2ceb-7954-434b-92ec-604c0495273c.mp4" type="video/mp4"></video></p>
+</div>
 <p>The default behaviour for <code>Assign and Connect</code> is to give the first selection - the "root" - a <code>Animated</code> behaviour.</p>
 <div class="admonition question">
 <p class="admonition-title">What does Animated mean?</p>
@@ -2760,7 +2813,12 @@
 <p><br></p>
 <h3 id="tuning">Tuning</h3>
 <p>Next let's address the elephant in the room; the shapes. They look awful.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/145351245-e409ff65-9c6e-4f43-896d-21d341179363.mp4" type="video/mp4"></video></p>
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257491014-e1bdda69-9b72-44fb-b2ff-6a8f0dffba2d.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="volumes">Volumes</h4>
 <p>The shape of each collider affects your simulation in 2 ways.</p>
@@ -2787,6 +2845,7 @@
 <p><br></p>
 <h4 id="shapes">Shapes</h4>
 <p>With this in mind, let's tune some shapes.</p>
+<div class="tab-content maya">
 <ol>
 <li>Run <code>Manipulator</code> from the <code>Ragdoll</code> menu</li>
 </ol>
@@ -2796,10 +2855,8 @@
 </div>
 <p>This brings up the <a href="/documentation/manipulator"><strong>Manipulator</strong></a> interface, where you can manipulate shapes using mouse gestures.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145367273-6a2ffdba-08e7-41d0-88d6-684033030a83.mp4" type="video/mp4"></video></p>
-
 <p>Great, now let's turn those hands and feet into boxes.</p>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145367278-ef9726c3-976c-45b6-b586-8bbc550ab76b.mp4" type="video/mp4"></video></p>
-
 <div class="admonition tip">
 <p class="admonition-title">Translate, Rotate and Scale</p>
 <p>Notice I'm using the..</p>
@@ -2814,6 +2871,36 @@
 <p class="admonition-title">Symmetry</p>
 <p>Also notice the edits are symmetrical; even when they don't start out that way like the feet!</p>
 </div>
+</div>
+<div class="tab-content blender">
+<ol>
+<li>Select <code>rSolver</code> object, within <code>Ragdoll</code> collection.</li>
+<li>Activate <code>Manipulator</code> tool at the Toolbar</li>
+</ol>
+<p>This brings up the <a href="/documentation/manipulator"><strong>Manipulator</strong></a> interface, where you can manipulate shapes using mouse
+gestures.</p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257494165-5c14ff21-7145-4e65-8e24-a3c6707df3c4.mp4" type="video/mp4"></video></p>
+<p>Great, now let's turn those hands and feet into boxes.</p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257505424-422f5f5e-4a87-483c-a1ab-0fdc659be609.mp4" type="video/mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Translate, Rotate and Scale</p>
+<p>Notice I'm using the..</p>
+<ul>
+<li><strong>Middle-Mouse Button</strong> to <code>Translate</code></li>
+<li><strong>CTRL + Middle-Mouse Button</strong> to <code>Rotate</code></li>
+<li><strong>CTRL + Left-Mouse Button</strong> to <code>Scale</code></li>
+</ul>
+<p>The help text screen-right will help you remember these.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Greater Value Step</p>
+<p>While dragging the value on Manipulator UI panel, you may hold <code>Shift</code> to increase value changing step.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Symmetry</p>
+<p>Also notice the edits are symmetrical; even when they don't start out that way like the feet!</p>
+</div>
 <p><br></p>
 <h3 id="recording">Recording</h3>
 <p>That's all there is for setting up your character rig for simulation! Let's now transfer the simulation back onto the rig.</p>
@@ -2821,13 +2908,40 @@
 <li>Run <code>Record Simulation</code></li>
 <li>Enjoy</li>
 </ol>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145383840-3759f76b-5e21-44d7-959d-27c202069f16.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257533561-47bbde5b-391c-4b8c-bc9f-9287eccefe18.mp4" type="video/mp4"></video></p>
+<div class="admonition question">
+<p class="admonition-title">Recording Options</p>
+<p>Hold <code>Ctrl</code> whilst clicking <code>Record Simulation</code> to configure the recording process.</p>
+<p><img width="293" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/ec2a21b2-e796-4c76-9ac9-1784d76e3384"></p>
+</div>
+</div>
 <p><br></p>
 <h4 id="start-again">Start Again</h4>
 <p>The recorded simulation ends up on an <strong>Animation Layer</strong>, and is also <strong>Cached</strong>. To start over, delete this layer and disable the cache.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145383834-69a72a25-0e85-442a-bc65-acc31bfbf197.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p>The simulation was recorded into the <strong>NLA Track</strong> of each marker assigned object with <em>Solo</em> enabled for playback.
+To start over, disable <em>Solo</em> mode for those tracks (or delete them).</p>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/257543506-e0738802-5b60-4d6e-8904-9f3b1b7dd81e.mp4" type="video/mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Initial Key</p>
+<p>By default, Ragdoll adds one keyframe on the simulation starting frame, this is to keep original pose intact after
+playback recorded animation.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Auto Cache</p>
+<p>If you have recording option <code>Auto Cache</code> enabled while recording, solver will remember simulation result after recorded,
+which can be helpful if you wish to compare the simulation against baked result. If so, don't forget to turn it off before
+next simulation.</p>
+<p><img width="321" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/6b1b145d-224f-4d61-bbf9-8a2094c5c70d"></p>
+</div>
+</div>
 <p><br></p>
 <h3 id="next-steps">Next Steps</h3>
 <p>In the next tutorial, we'll take this a bit further. As you play around with the <code>Rotate Stiffness</code> on either the <code>rGroup</code> or individual <code>rMarker</code> nodes, you'll find some limbs start to misbehave. Especially the knees and elbows, that normally won't allow rotations past a certain angle in a real human (or Manikin for that matter!). That isn't the case here, because we've left out a critical part of any complete ragdoll.</p>
@@ -2843,7 +2957,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-06-09
+      Last update: 2023-08-02
     
   </small>
 </div>

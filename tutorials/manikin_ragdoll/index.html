@@ -2583,11 +2583,19 @@
 </video>
 
 <h3 id="manikin-ragdoll">Manikin Ragdoll</h3>
+<p>Pick your target application. 👇</p>
+<div class="software-choice">
+    <div class="tab maya software-option active"><input type="radio" id="maya" name="software" value="Maya" onchange="setTab(event, 'maya')">
+    <label for="maya"><div class="software-label"><img width=16 src=https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/257483468-b5958734-ed1f-47de-9266-44eaba994220.png> Autodesk Maya</div></label></div>
+    <div class="tab blender software-option"><input type="radio" id="blender" name="software" value="Blender" onchange="setTab(event, 'blender')">
+    <label for="blender"><div class="software-label"><img width=16 src=https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/257483924-6328743a-71af-49a0-bd94-39cc89920e22.png> Blender</div></label></div>
+</div>
+
 <p>In the <a href="/tutorials/manikin">previous tutorial</a> we assigned markers onto a rig such that you can achieve overlapping motion.</p>
 <p>That's enough for some things, but other times you don't want <em>any</em> animation. You just want to drop a ragdoll someplace dangerous and watch it go.</p>
 <div class="admonition success">
-<p class="admonition-title">Version 1.1 - Up to date</p>
-<p>Written for Ragdoll <code>2021.12.10</code> and above.</p>
+<p class="admonition-title">Version 1.2 - Up to date</p>
+<p>Written for Ragdoll <code>2023.08.01</code> and above.</p>
 </div>
 <p><strong>Estimated Time</strong></p>
 <ul>
@@ -2607,29 +2615,49 @@
 <p><br></p>
 <h3 id="bring-your-own-rig">Bring Your Own Rig</h3>
 <p>Either continue from the <a href="/tutorials/manikin">last tutorial</a> or start anew with your own rig.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/129519170-59d6a109-e9eb-4fd0-87ef-f120050c9d7e.mp4" type="video/mp4"></video></p>
-
 <div class="hboxlayout justify-left">
 <a href="https://files.ragdolldynamics.com/api/public/dl/Q96vbUR5/manikin.zip" class="button blue"><b>Download Manikin</b></a>
 <a href="https://files.ragdolldynamics.com/api/public/dl/J2SLBN2T/manikin_ragdoll_final.zip" class="button red"><b>Download Final Scene</b></a>
 </div>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/243781079-1eb4bc30-5d2a-43ff-be1c-351361b85b4e.mp4" type="video/mp4"></video></p>
+<div class="hboxlayout justify-left">
+<a href="https://files.ragdolldynamics.com/api/public/dl/bckKPKkp/manikin_v3.blend" class="button blue"><b>Download Manikin</b></a>
+<a href="https://files.ragdolldynamics.com/api/public/dl/gjL7rvjU/manikin_v3_ragdoll_final.blend" class="button red"><b>Download Final Scene</b></a>
+</div>
+</div>
 <p><br></p>
 <h4 id="limits">Limits</h4>
 <p>Next let's see how our character behaves when there isn't any animation around to steer it.</p>
+<div class="tab-content maya">
 <ol>
 <li>Select <code>hip_ctl_rGroup</code></li>
 <li>Set <code>Behaviour = Simulated</code></li>
 <li>Set <code>Rotate Stiffness = 0.0</code></li>
 </ol>
+</div>
+<div class="tab-content blender">
+<ol>
+<li>Select <code>hip_FK_rGroup</code></li>
+<li>Set <code>Behaviour = Simulated</code></li>
+<li>Set <code>Rotate Stiffness = 0.0</code></li>
+</ol>
+</div>
 <p>As in our last tutorial when we changed the <code>hip_ctl</code> from <code>Animated</code> to <code>Simulated</code>, now we do the same but for the whole character!</p>
 <p><em>Yikes!</em> That's a mess. No longer is the animation holding a pose together, it's all up to gravity and the anatomy of our character now.</p>
 <p>The way we will address this is via "limits", which is like locked rotate channels except they also lock a <em>range</em> of values. We can use this to replicate natural limits in our human joints.</p>
 <p><br></p>
 <h4 id="legs">Legs</h4>
 <p>Let's start at legs and work our way up. First, let's figure out what axis we want to rotate, and which we want to <em>lock</em>.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145369873-2c71510c-9baa-4f42-8bbe-d136b68875b3.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256215197-cc1c73c8-ebdf-47dd-ab25-fb6d8b38c7ff.mp4" type="video/mp4"></video></p>
+</div>
 <p>Ok, great. The Z axis should rotate but X and Y should be locked.</p>
 <ol>
 <li>Run <code>Ragdoll -&gt; Manipulator</code></li>
@@ -2658,8 +2686,12 @@
 <li>Run <code>Ragdoll -&gt; Manipulator</code></li>
 <li>Edit the clavicle</li>
 </ol>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388216-00037e3b-a9d8-43b5-afae-2469c9b678e4.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256343312-649925e1-390a-4097-b71a-896441a03588.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="arms">Arms</h4>
 <p>We'll lock the <code>X</code> and <code>Y</code> axes of the lower arm like we did for the lower leg.</p>
@@ -2668,8 +2700,12 @@
 <li>Edit the lower arm</li>
 <li>Edit the hand</li>
 </ol>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388218-cc4eed3f-717a-4da3-8c5f-863feea53656.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256344984-a35527a0-8c16-416e-9649-0acaf00e700d.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="hip-and-spine">Hip and Spine</h4>
 <p>Both the hip and spine should be allowed to rotate around all three axes, so we can leave these at their default values for now.</p>
@@ -2677,17 +2713,28 @@
 <li>Run <code>Ragdoll -&gt; Manipulator</code></li>
 <li>Edit the hip and spine</li>
 </ol>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388208-d4229b41-8b0b-4143-8a06-02ce220d2da3.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256582336-43619924-cb22-4f6f-bc2d-cee03bf42159.mp4" type="video/mp4"></video></p>
+</div>
 <p>And that's it! From here, we can hide the limits to have another look at contacts.</p>
 <p><br></p>
 <h3 id="contacts">Contacts</h3>
-<p>If we hide away our limits for a moment, we can see something that's not right. Notice how the arm intersects the leg? That's because, per default, the limbs within a single group are allowed to overlap.</p>
+<p>If we hide away our limits for a moment, we can see something that's not right. Notice how the arms and legs intersecting each other? That's because, per default, limbs within a single group are allowed to overlap.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145388222-3e137858-9a8f-4f25-885b-04083bd09f8f.mp4" type="video/mp4"></video></p>
-
 <details class="hint"><summary>Should I enable Self Collision?</summary><p>Normally the answer is "no", but when you do, this can be overridden on the <code>rGroup</code> node.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145392157-cce05e62-9cd2-45d2-9bad-100816d5c051.png" /></p>
 </details>
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256354996-c83404b7-67f7-4275-a564-f6e2bfa94bb7.mp4" type="video/mp4"></video></p>
+<details class="hint"><summary>Should I enable Self Collision?</summary><p>Normally the answer is "no", but when you do, this can be overridden on the <code>rGroup</code> node.</p>
+<p><img alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256350778-2c0d0414-784a-4eae-9f3d-8d02682c1724.png" /></p>
+</details>
+</div>
 <p><br></p>
 <h4 id="overlap-group">Overlap Group</h4>
 <p>Let's address this by having these overlap with <code>Nothing</code>.</p>
@@ -2702,45 +2749,89 @@
 <li>✔️ How to tune the minimum and maximum bound of each limit</li>
 </ul>
 <p>As you tune, try dropping the Manikin from different heights and angles. Put an obstacle underneath for more detail and to catch more edge cases. Once you are unable to produce an unnatural pose, you are done!</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145396017-3175104f-f488-45c9-9a60-2ca326afb2e7.mp4" type="video/mp4"></video></p>
-
 <p><strong>Download Completed Scene</strong></p>
 <p>For your reference, here is the completed scene with the Manikin file referenced.</p>
 <div class="hboxlayout justify-left">
 <a href="https://files.ragdolldynamics.com/api/public/dl/Q96vbUR5/manikin.zip" class="button blue"><b>Download Manikin</b></a>
 <a href="https://files.ragdolldynamics.com/api/public/dl/J2SLBN2T/manikin_ragdoll_final.zip" class="button red"><b>Download Final Scene</b></a>
 </div>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256403420-f3f74607-5e90-484c-8da5-2164f31f5190.mp4" type="video/mp4"></video></p>
+<p><strong>Download Completed Scene</strong></p>
+<p>For your reference, here is the completed scene with the Manikin file referenced.</p>
+<div class="hboxlayout justify-left">
+<a href="https://files.ragdolldynamics.com/api/public/dl/bckKPKkp/manikin_v3.blend" class="button blue"><b>Download Manikin</b></a>
+<a href="https://files.ragdolldynamics.com/api/public/dl/gjL7rvjU/manikin_v3_ragdoll_final.blend" class="button red"><b>Download Final Scene</b></a>
+</div>
+</div>
 <p><br></p>
 <h4 id="damped-limits">Damped Limits</h4>
 <p>You can tune the behaviour of each limit to capture the look you're after, such as making things a little more <strong>damped</strong>.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145394548-4c74d571-d6fc-4266-93b6-4d5058a3247e.mp4" type="video/mp4"></video></p>
-
 <div class="admonition hint">
 <p class="admonition-title">Global Damping</p>
 <p>This, and other stiffness and damping-related attributes, can be controlled globally - for every limit in your scene - via the <code>rSolver</code> node.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/2152766/145394621-c4b9e7a7-c9dc-4c3c-b265-fe46386a82ca.png" /></p>
 </div>
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256404572-c385bd58-3e45-4595-8335-f88ac9d679c6.mp4" type="video/mp4"></video></p>
+<div class="admonition hint">
+<p class="admonition-title">Global Damping</p>
+<p>This, and other stiffness and damping-related attributes, can be controlled globally - for every limit in your scene - via the <code>rSolver</code> node.</p>
+<p><img alt="image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256404866-444ceb3b-6c90-439a-8ca9-ebf559e7ed23.png" /></p>
+</div>
+</div>
+<p><br></p>
 <h4 id="soft-limits">Soft Limits</h4>
 <p>Sometimes, a limit is <strong>hard</strong>. Like your elbow. It won't allow you to continue rotating it once it's straightened out. You'll break it!</p>
 <p>Other limits are more flexible. Let's reflect this in our simulation by reducing their range and lowering their <code>Stiffness</code>, accepting that they <em>will</em> exceed it, but get gently pushed back.</p>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145399669-b9bd968e-85d7-4bc0-8eb3-8b166caa648e.mp4" type="video/mp4"></video></p>
-
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256406294-9388f1c7-6d50-4005-aff7-ec6fde915a6c.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="accurate-feet">Accurate Feet</h4>
 <p>Feet contact with the ground is often more important than other contacts. For such cases, a box or capsule shape may not be enough.</p>
+<div class="tab-content maya">
 <p>So let's use <code>Replace Mesh</code> to fix that.</p>
 <ol>
 <li>Select <code>L_foot_jnt</code></li>
 <li>Select a mesh</li>
 <li>Run <code>Replace Mesh</code></li>
 </ol>
+</div>
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145395099-94ec0f4e-ecb6-4a65-8f7c-2087ac948ad9.mp4" type="video/mp4"></video></p>
 
+<div class="tab-content blender">
+<ol>
+<li>Select <code>L_foot_blend_jnt</code></li>
+<li>In Physics tab, scroll to <code>Default Shape</code> and find <code>Custom mesh shape</code> property</li>
+<li>Pick <code>L_foot_geo</code></li>
+<li>Change <code>Shape</code> to <code>Mesh</code> type</li>
+<li>Do the same to the other foot</li>
+</ol>
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256407789-42c5337e-b06a-4ac0-8417-4351e19a7961.mp4" type="video/mp4"></video></p>
+</div>
 <p><br></p>
 <h4 id="animation">Animation</h4>
 <p>In most cases, you'll want <em>some</em> control over the resulting simulation. Just a little bit.</p>
+<div class="admonition hint">
+<p class="admonition-title">Group Markers</p>
+<p>You could add/remove groups as you go for better control, each group multiplies stiffnesses and damping on each contained Marker.</p>
+</div>
+<div class="tab-content maya">
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145401847-e65cb830-d012-49eb-9953-82c4f04b503f.mp4" type="video/mp4"></video></p>
+</div>
+<div class="tab-content blender">
+<p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/3357009/256430656-4f14f899-b123-4a56-93f5-268f09735726.mp4" type="video/mp4"></video></p>
+</div>
                 
                   
                     
@@ -2749,7 +2840,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2023-06-01
+      Last update: 2023-08-02
     
   </small>
 </div>
