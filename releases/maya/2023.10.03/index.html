@@ -11,27 +11,26 @@
       
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/maya/2023.07.xx/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/maya/2023.10.03/">
       
       
         <meta name="author" content="mottosso">
       
-      <link rel="search" type="application/opensearchdescription+xml" href="../../../search.xml" title="Learn Ragdoll Search">
       <link rel="shortcut icon" href="../../../favicon-256x256.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6+insiders-1.11.1">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-6.1.6">
     
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
 
     
       
-        <title>Scene Scale and Live Mode - Learn Ragdoll</title>
+        <title>Scene Scale and Universal Transfer - Learn Ragdoll</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.699f7955.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.47d7edde.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -65,16 +64,15 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
   
-    
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#showcase" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../../../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -96,22 +94,17 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
-          <span class="md-ellipsis">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             Learn Ragdoll
           </span>
-        </div>
-        <div class="md-header-nav__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
-              Scene Scale and Live Mode
+              Scene Scale and Universal Transfer
             
           </span>
         </div>
-      </div>
-    </div>
-    <div class="md-header-nav__options">
       
     </div>
     
@@ -131,7 +124,6 @@
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
-      <div class="md-search__suggest" data-md-component="search-suggest"></div>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -149,7 +141,7 @@
     
       <div class="md-header-nav__source">
         
-<a href="https://github.com/mottosso/ragdoll/" title="Go to repository" class="md-source">
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -172,17 +164,14 @@
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://learn.ragdolldynamics.com" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
       
   <img src="../../../ragdoll_silhouette_black_512.png" alt="logo">
 
@@ -192,7 +181,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/mottosso/ragdoll/" title="Go to repository" class="md-source">
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -1311,6 +1300,24 @@
   <!-- Main navigation item with nested items -->
   
     <li class="md-nav__item">
+      <a href="../../2023.10.03/" class="md-nav__link">
+        
+
+        2023.10.03
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
       <a href="../../2023.04.01/" class="md-nav__link">
         
 
@@ -2263,8 +2270,7 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2279,6 +2285,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#showcase" class="md-nav__link">
     Showcase
   </a>
@@ -2286,9 +2299,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#live-mode-transfer" class="md-nav__link">
-    Live Mode Transfer
+  <a href="#unlimited-simulation" class="md-nav__link">
+    Unlimited Simulation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#universal-transfer" class="md-nav__link">
+    Universal Transfer
+  </a>
+  
+    <nav class="md-nav" aria-label="Universal Transfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    Tuning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    Iterations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-iterations" class="md-nav__link">
+    Minimum Iterations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2321,8 +2382,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unlimited-simulation" class="md-nav__link">
-    Unlimited Simulation
+  <a href="#influence" class="md-nav__link">
+    Influence
   </a>
   
 </li>
@@ -2333,6 +2394,33 @@
   </a>
   
     <nav class="md-nav" aria-label="Quality of Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prevent-duplicate-markers" class="md-nav__link">
+    Prevent Duplicate Markers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attach-constraint-selection-order" class="md-nav__link">
+    Attach Constraint Selection Order
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-constraint-parent" class="md-nav__link">
+    Attach Constraint Parent
+  </a>
+  
+    <nav class="md-nav" aria-label="Attach Constraint Parent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2354,6 +2442,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deprecated" class="md-nav__link">
+    Deprecated
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2367,63 +2462,202 @@
               
 
                 
-                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/maya/2023.07.xx.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/maya/2023.10.03.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Scene Scale and Live Mode</h1>
+                  <h1>Scene Scale and Universal Transfer</h1>
                 
-                <ul>
+                <p><img alt="" src="https://user-images.githubusercontent.com/2152766/270998228-b006754c-8949-4cd3-8539-7e2e3c353d3a.png" /></p>
+<ul>
 <li><a href="#unlimited-simulation"><strong>ADDED</strong> Unlimited Simulation</a> Simulate without a licence</li>
-<li><a href="#live-mode-transfer"><strong>ADDED</strong> Live Mode Transfer</a> Now works with any Maya rig!</li>
+<li><a href="#live-mode-transfer"><strong>ADDED</strong> Universal Transfer</a> Now works with any Maya rig!</li>
 <li><a href="#additive-recording"><strong>ADDED</strong> Additive Recording</a> Record onto an additive animation layer</li>
 <li><a href="#scene-scale"><strong>ADDED</strong> Scene Scale</a> Work at any scale, finally!</li>
 <li><a href="#update-physics"><strong>ADDED</strong> Update Physics</a> Presets, finally!</li>
 <li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Life, but better</li>
+<li><a href="#ghosting"><strong>ADDED</strong> Ghosting</a> Visualise both future and past</li>
 <li><a href="#optimised-import"><strong>UX</strong> Optimised Import &amp; Replace Mesh</a> Importing and loading .rag files is now 200% faster</li>
 <li><a href="#negative-fields"><strong>FIXED</strong> Negative Fields</a> Negative magnitude has been restored!</li>
 <li><a href="#lots-of-bugs"><strong>FIXED</strong> Lots of bugs</a> Many bugs were harmed in the making of this release</li>
 </ul>
 <p><br></p>
+<h3 id="overview">Overview</h3>
+<p>These release notes are the Maya-specific notes from the overall notes here.</p>
+<ul>
+<li><a href="../../2023.10.03">Ragdoll 2023.10.03</a></li>
+</ul>
+<p><br></p>
 <h3 id="showcase">Showcase</h3>
 <p>Let's start with the good stuff!</p>
-<p><insert dneg and weta stuff here></p>
-<p><br></p>
-<h3 id="live-mode-transfer">Live Mode Transfer</h3>
-<p>In Live Mode, you can pose your characters with physics tools. And since release last year, you have been able to transfer your pose back to your animated Maya character, except with major caveats. It could not be a normal Maya rig. It was strictly limited to the simplest of "rigs". A plain joint hierarchy, preferably.</p>
-<p>This changes today!</p>
-<ul>
-<li>Mention IK leg bending backwards cannot be represented by IK controls</li>
-</ul>
-<p><br></p>
-<h3 id="snap-to-simulation">Snap to Simulation</h3>
-<p>This little command has seen a overhaul and enables Live Mode to transfer your simulated pose back onto any Maya rig; something not possible before!</p>
-<p><br></p>
-<h3 id="additive-recording">Additive Recording</h3>
-<p>You can now record physics onto an additive layer, meaning layers can be combine, blended and kept active even when changing the underlying animation.</p>
-<ul>
-<li><a href="https://youtu.be/2zwxNOeHAzQ">https://youtu.be/2zwxNOeHAzQ</a></li>
-</ul>
-<p><br></p>
-<h3 id="scene-scale">Scene Scale</h3>
-<p>There is now an interactive widget to configure Ragdoll to fit your character.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/247216682-4fd02796-fa8f-46e0-b4a5-af58b6e7cb1a.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h3 id="mass-units">Mass Units</h3>
-<p>Units now make physical sense.</p>
-<p>This not only enables you to get a clear sense of what scale simulation happens at, but also provides accurate values of mass, in kilograms. A typical human weighs 60-100 kg and Ragdoll's forces depend on this being an accurate measure. Previously, mass was rather fixed at 6-10 kg as Ragdoll assumed your characters were roughly 18 cm tall, as is the norm (strangely enough!).</p>
-<p>With this release, characters of any scale will produce identical results.</p>
+<p><strong>Jasons Spider</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/270573663-88b738d1-9096-452b-990a-957d2f372afa.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/270573669-3e4d72f0-d3cc-49ce-bc60-edd01b4c51e4.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/270573672-36e552ad-97c7-4180-ab5a-abcfcd6c6790.mp4" type="video/mp4"></video></p>
+<!--  -->
+
+<p><strong>Davy Jones</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/270573680-6a04ed7a-4a47-4b00-9228-97c18e575d69.mp4" type="video/mp4"></video></p>
+<p><strong>Retro</strong></p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/270573689-0baa54e4-18c1-4844-9547-8b08a92da7fb.mp4" type="video/mp4"></video></p>
 <p><br></p>
 <h3 id="unlimited-simulation">Unlimited Simulation</h3>
-<p>Ragdoll will now happily simulate without requiring a licence. This has 2 main implications.</p>
+<p>Ragdoll will now happily simulate without requiring a licence.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270897668-01513d34-3cf9-4209-afdd-cc91ba4e7f3a.mp4" type="video/mp4"></video></p>
+<p>This has 2 main implications.</p>
 <ol>
 <li>Trial licences can be used for simulation and learning forever, yay!</li>
 <li>Floating licences no longer occupy a seat when simulating, only when recording</li>
 </ol>
 <p>Licences now only become relevant when getting simulation <em>out</em> of Ragdoll, primarily to record your simulation. This way, you can learn and experiment with simulation to your hearts content and only pay for licence and seat when you are happy with the result. How great is that!?</p>
 <p><br></p>
+<h3 id="universal-transfer">Universal Transfer</h3>
+<p>Live Mode now works with native Maya rigs!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980827-bab03f10-7924-4d8f-b67f-df281c574c6f.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980856-1212d196-7dcd-48bf-8aa7-f314ce6a7872.mp4" type="video/mp4"></video></p>
+<blockquote>
+<p>Rig from <a href="https://agora.community/content/stormtrooper-may">https://agora.community/content/stormtrooper-may</a></p>
+</blockquote>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271331472-1c557f67-6a17-4c8f-940f-8ecd1c8ad964.mp4" type="video/mp4"></video></p>
+<blockquote>
+<p>Rig from <a href="https://www.cgspectrum.com/resources/tiger-animation-rig">https://www.cgspectrum.com/resources/tiger-animation-rig</a></p>
+</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">IK too</p>
+<p>Notice how all controllers, including IK, is transferred. This was not possible before!</p>
+</div>
+<p>In Live Mode, you can pose your characters with physics tools. And since release last year, you have been able to transfer your pose back to your animated Maya character, except with major caveats. It could not be a normal Maya rig. It was strictly limited to the simplest of "rigs". A plain joint hierarchy, preferably.</p>
+<p>This changes today!</p>
+<p><br></p>
+<h4 id="background">Background</h4>
+<p>So, wasn't this the case already?</p>
+<p>Live Mode was released with Ragdoll <a href="../../2022.11.29">2022.11.29</a> as a means of experimenting and gaining intuition of limits and contacts. With it came the ability to transfer the live poses back onto the Maya character. However, it only supported characters loaded natively with Ragdoll, or at best very simplistic native Maya rigs. Those that consisted of a plain FK hierarchy, such as a joint hierarchy.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/271194626-6e06a632-93d4-47b8-9cb4-757d2f5979ce.mp4" /></p>
+<p>At the time, it seemed mechanic would not be possible with native Maya rigs, since Ragdoll relies on this hierarchy to figure out the final position and orientation of each body part. For example, to know where the hand it, it first needs to know where the arm is, where the torso is and where the hip is. The hand all depend on that position.</p>
+<p>Native Maya rigs don't work like that; they rarely form a linear hierarchy like this, with IK and space switching constraints and stretchy limbs all complicating the transformation path from hip to hand.</p>
+<p><br></p>
+<h4 id="tuning">Tuning</h4>
+<p>The universal transfer is an "iterative" solver. Here's how it works:</p>
+<ol>
+<li>For every control in your rig..</li>
+<li>Try and match the corresponding Marker..</li>
+<li>Repeat, until each control is a close match</li>
+</ol>
+<p>The challenge is that some control cause other controls to move. For example, after Ragdoll has matched the foot, matching the upper leg would move the foot again. And so the process needs to be repeated until each <em>cyclic dependency</em> is resolved.</p>
+<p>Per default, Ragdoll will iterate up to 4 times, and stop as soon as controls get "close enough". The distance Ragdoll considers "close enough" is called "tolerance" and the number of times it attempts to reach that position is called "iterations".</p>
+<p>Here's the normal circumstances.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018847-c9c05e57-aff5-4e46-ba69-759e3c7be9e9.mp4" type="video/mp4"></video></p>
+<p>And here's what happens when you tune iterations.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018855-b2762e64-4ef8-43e9-965d-0347ce4325a1.mp4" type="video/mp4"></video></p>
+<p>Notice how that with just 1 iteration, it isn't enough to transfer once. You'll have to keep pressing the transfer button until your character is close enough. That's that's exactly what iterations do; they keep pressing the button until it's close enough.</p>
+<p><br></p>
+<h4 id="iterations">Iterations</h4>
+<p>Here's a visual to help you understand the effect of iterations.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271202715-2c9326ca-2db5-47f4-b442-17b671c5befe.mp4" type="video/mp4"></video></p>
+<p>Here, iterations are set to 1, meaning that each time we click we run exactly 1 iteration.</p>
+<div class="admonition hint">
+<p class="admonition-title">Pro Tip</p>
+<p>You can manually type in an iteration count, such as 8 or 16, in case 4 is not enough. Generally, it depends on the number of cycles in your rig that contradicts the hierarchy. For example, if the upper leg is affected by the foot, then that's a cycle. This is also the most common cycle for IK-based rigs, where the upper leg is affected by the pole vector which is typically affected by the foot.</p>
+</div>
+<p><br></p>
+<h4 id="minimum-iterations">Minimum Iterations</h4>
+<p>Sometimes, Ragdoll thinks it finds a close match, but you as a human know better. That's when you can <em>force</em> Ragdoll to keep trying to find a match for X number of times. This number is the minimum number of iterations.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/271021290-e8cdb5f3-2d08-48d5-963f-8dbe70bdc6ec.png" /></p>
+<p><br></p>
+<h4 id="limitations">Limitations</h4>
+<p>Some rigs are still out of bounds for Ragdoll, no matter how many iterations. Here are a few things you can potentially expect depending on the complexity of your rigs.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271315784-44bcc764-1751-4fc9-a10c-a54f3c944c9a.mp4" type="video/mp4"></video></p>
+<p>Notice how the arm sometimes doesn't match, until you hit the transfer button a few times.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>If you find a pattern, something small that consistently fails, let us know. We'd like to solve this!</p>
+</div>
+<p><br></p>
+<h3 id="snap-to-simulation">Snap to Simulation</h3>
+<p>This button has seen an upgrade too, and now works like the Live Mode transfer!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270983528-dd0553fc-0469-473b-8181-b497e3de0960.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h3 id="additive-recording">Additive Recording</h3>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/271248507-5c319bec-21e1-40e3-9037-dd4d42edbce6.png" /></p>
+<p>You can now record physics onto an additive layer, meaning layers can be combine, blended and kept active even when changing the underlying animation.</p>
+<p><a href="https://youtu.be/2zwxNOeHAzQ"><img alt="" src="https://user-images.githubusercontent.com/2152766/271195410-508df5e1-8579-4537-9b36-b9e978ac937f.png" /></a></p>
+<p><br></p>
+<h3 id="scene-scale">Scene Scale</h3>
+<p>There is now an interactive widget to configure Ragdoll to fit your character.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/247216682-4fd02796-fa8f-46e0-b4a5-af58b6e7cb1a.mp4" type="video/mp4"></video></p>
+<p>When creating your first scene, Ragdoll will automatically try and detect your scene scale based on your first assignments.</p>
+<p>See this option in the UI for how to control this.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/270988314-29f74fec-de17-439a-bb1b-e21d05c88a9a.png" /></p>
+<p><br></p>
+<h3 id="mass-units">Mass Units</h3>
+<p>Units now make physical sense.</p>
+<p>This not only enables you to get a clear sense of what scale simulation happens at, but also provides accurate values of mass, in kilograms. A typical human weighs 60-100 kg and Ragdoll's forces depend on this being an accurate measure. Previously, mass was rather fixed at 6-10 kg as Ragdoll assumed your characters were roughly 18 cm tall, as is the norm (strangely enough!).</p>
+<p>With this release, characters of any scale will produce identical results.</p>
+<p><br></p>
+<h3 id="influence">Influence</h3>
+<p>The Attach Constraint has a new attribute called <code>Influence</code> that lets you control the amount of influence the child has over its parent.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.0</td>
+<td style="text-align: left;">Child has <em>no</em> influence, pulls child towards itself</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;">Parent and child hinfluence, pulls parent towards itself</td>
+</tr>
+<tr>
+<td style="text-align: left;">ave <em>equal</em> influence, this is  the default</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">Child has <em>all</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usecases</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Punching a punch bag and always landing exactly where you intend … even when the bag is in motion</li>
+<li>Catching a ball where you have it only follow Z and X so the hand adjusts to catch</li>
+<li>For the legs pulling towards the branch, rather then both pulling to each other</li>
+<li>An action hero jumping to grab a rope, can get the hand to pull or go to where it needs to be then lock it in for the swing</li>
+</ul>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/268588385-579ce1e8-b01b-45e3-bea5-226224279680.mp4" type="video/mp4"></video></p>
+<p>And yes, you can animate this attribute!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/268706197-e93c1fc4-c4e9-4648-94d4-1ff4f3ac17a0.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h3 id="quality-of-life">Quality of Life</h3>
+<p>A number of smaller things have been addressed, take a look!</p>
+<p><br></p>
+<h4 id="prevent-duplicate-markers">Prevent Duplicate Markers</h4>
+<p>Sometimes, you accidentally assign</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/268616357-b1474827-88aa-419f-b70c-8da4fee1981e.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="attach-constraint-selection-order">Attach Constraint Selection Order</h4>
+<p>The order in which you select now reflects Maya's native Parent Constraint.</p>
+<ol>
+<li>Parent</li>
+<li>Child</li>
+<li>Attach!</li>
+</ol>
+<p><br></p>
+<h3 id="attach-constraint-parent">Attach Constraint Parent</h3>
+<p>You can now unparent an attach constraint, leaving it at the root of your Outliner. There's a new option called "Embedded" in the UI you can use to set the default.</p>
+<p><img alt="" src="https://github.com/mottosso/upload/assets/2152766/bd12f05e-28a9-4ea2-bae5-1755448f7ae2" /></p>
 <p><br></p>
 <h4 id="scalable-uis">Scalable UIs</h4>
 <p>You can now resize</p>
@@ -2441,18 +2675,11 @@
 <p>The idea being that you can choose whether controls should receive translation keyframes, rotation keyframes or both. It didn't work; because the way we recorded was somewhat limited.</p>
 <p>This changes today, and you are now able to use these attribute to selectively skip or include channels that would otherwise receive keyframes.</p>
 <p><img alt="" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2152766/253030082-170dab6a-25bf-4a12-a76c-0ba71df649a3.png" /></p>
+<p><br></p>
+<h3 id="deprecated">Deprecated</h3>
+<p>The <code>Drive Per Substep</code> attribute on the Solver node turned out to be a success and is now always-on!</p>
+<p>The <code>Frameskip Method</code> attribute on the Solver node has been removed, turns out Pausing the simulation is never really that useful!</p>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2023-07-13
-    
-  </small>
-</div>
                   
                 
               
@@ -2478,12 +2705,10 @@
             Copyright &copy; 2020-2022 mottosso
           </div>
         
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material-insiders/" target="_blank" rel="noopener">
-            Material for MkDocs Insiders
-          </a>
-        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -2492,17 +2717,16 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.d95a11d4.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.ddc6d53e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.0f64ce30.min.js"
-          }, typeof search !== "undefined" && search),
-          version: {}
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
         })
       </script>
       
