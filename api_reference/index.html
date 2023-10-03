@@ -2408,6 +2408,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#importphysics" class="md-nav__link">
+    importPhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatephysics" class="md-nav__link">
+    updatePhysics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recordphysics" class="md-nav__link">
     recordPhysics
   </a>
@@ -2520,7 +2534,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>createPinConstraint</strong></td>
-<td style="text-align: left;">Create a new pin constraint for <code>parent</code> and optionally <code>parent</code></td>
+<td style="text-align: left;">Create a new constraint for <code>parent</code> and optionally <code>parent</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>createFixedConstraint</strong></td>
@@ -2569,6 +2583,14 @@
 <tr>
 <td style="text-align: left;"><strong>exportPhysics</strong></td>
 <td style="text-align: left;">Export everything Ragdoll-related into <code>fname</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>importPhysics</strong></td>
+<td style="text-align: left;">Recreate Maya scene from exported Ragdoll file</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>updatePhysics</strong></td>
+<td style="text-align: left;">Update existing physics from an exported Ragdoll file</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>recordPhysics</strong></td>
@@ -2678,9 +2700,15 @@
 </code></pre></div>
 <br></p>
 <h3 id="createpinconstraint">createPinConstraint</h3>
-<p>Create a new pin constraint for <code>parent</code> and optionally <code>parent</code>
+<p>Create a new constraint for <code>parent</code> and optionally <code>parent</code>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">createPinConstraint</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a new pin constraint for `parent` and optionally `parent`</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a new constraint for `parent` and optionally `parent`</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        child (rdMarker): Affected Marker</span>
+<span class="sd">        parent (rdMarker, optional): Attach child to parent, otherwise to world</span>
+<span class="sd">        transform (dagNode, optional): Parent the constraint shape node here</span>
+<span class="sd">        opts (dict, optional): User options</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
@@ -2840,6 +2868,26 @@
 
 <span class="sd">    Returns:</span>
 <span class="sd">        data (dict): Exported data as a dictionary</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="importphysics">importPhysics</h3>
+<p>Recreate Maya scene from exported Ragdoll file
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">importPhysics</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Recreate Maya scene from exported Ragdoll file</span>
+
+<span class="sd">    User-interface attributes like `density` and display settings</span>
+<span class="sd">    are restored from a file otherwise mostly contains the raw</span>
+<span class="sd">    simulation data.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<br></p>
+<h3 id="updatephysics">updatePhysics</h3>
+<p>Update existing physics from an exported Ragdoll file
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">updatePhysics</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update existing physics from an exported Ragdoll file</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
