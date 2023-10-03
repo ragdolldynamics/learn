@@ -2288,33 +2288,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-physics" class="md-nav__link">
-    Update Physics
-  </a>
-  
-    <nav class="md-nav" aria-label="Update Physics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-api" class="md-nav__link">
-    Update API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#universal-transfer" class="md-nav__link">
     Universal Transfer
   </a>
@@ -2360,6 +2333,33 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-physics" class="md-nav__link">
+    Update Physics
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Physics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-api" class="md-nav__link">
+    Update API
   </a>
   
 </li>
@@ -2574,8 +2574,8 @@
 <li><a href="#mass-units"><strong>ADDED</strong> Mass Units</a> Kilograms!</li>
 <li><a href="#influence"><strong>ADDED</strong> Influence</a> Animatable, one-way attach constraints</li>
 <li><a href="#quality-of-life"><strong>ADDED</strong> Quality of Life</a> Life, but better</li>
-<li><a href="#api-changes"><strong>ADDED</strong> API Changes</a></li>
-<li><a href="#deprecated"><strong>ADDED</strong> Deprecated</a></li>
+<li><a href="#api-changes"><strong>ADDED</strong> API Changes</a> For you hackers and slashers out there</li>
+<li><a href="#deprecated"><strong>ADDED</strong> Deprecated</a> A few things less to worry about</li>
 </ul>
 <p><br></p>
 <h3 id="overview">Overview</h3>
@@ -2607,7 +2607,74 @@
 <li>Trial licences can be used for simulation and learning forever, yay!</li>
 <li>Floating licences no longer occupy a seat when simulating, only when recording</li>
 </ol>
-<p>Licences now only become relevant when getting simulation <em>out</em> of Ragdoll, primarily to record your simulation. This way, you can learn and experiment with simulation to your hearts content and only pay for licence and seat when you are happy with the result. How great is that!?</p>
+<p>Licences now only become relevant when getting simulation <em>out</em> of Ragdoll, primarily to record your simulation. This way, you can learn and experiment with simulation to your hearts content and only pay for a licence and seat when you are happy with the result. How great is that?</p>
+<p><br></p>
+<h3 id="universal-transfer">Universal Transfer</h3>
+<p>Live Mode now works with native Maya rigs!</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980827-bab03f10-7924-4d8f-b67f-df281c574c6f.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980856-1212d196-7dcd-48bf-8aa7-f314ce6a7872.mp4" type="video/mp4"></video></p>
+<blockquote>
+<p>Rig from <a href="https://agora.community/content/stormtrooper-may">https://agora.community/content/stormtrooper-may</a></p>
+</blockquote>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271331472-1c557f67-6a17-4c8f-940f-8ecd1c8ad964.mp4" type="video/mp4"></video></p>
+<blockquote>
+<p>Rig from <a href="https://www.cgspectrum.com/resources/tiger-animation-rig">https://www.cgspectrum.com/resources/tiger-animation-rig</a></p>
+</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">IK too</p>
+<p>Notice how all controllers, including IK, is transferred. This was not possible before!</p>
+</div>
+<p><br></p>
+<h4 id="distraction-free-posing">Distraction Free Posing</h4>
+<p>Use Live Mode as a substitute for your normal animation controls, by SHIFT clicking on the transfer button. This overlays Ragdoll over your character and automatically transfers upon releasing the mouse cursor.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271530204-bc31cabc-88b8-4e76-b892-2eb414acce89.mp4" type="video/mp4"></video></p>
+<p>At this point, we can go distraction-free and hide all NURBS control to work entirely with Live Mode.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271530210-9feaa6aa-66c9-4805-9f71-6f8c62319cb0.mp4" type="video/mp4"></video></p>
+<p><br></p>
+<h4 id="background">Background</h4>
+<p>So, wasn't this the case already?</p>
+<p>Live Mode was released with Ragdoll <a href="../../2022.11.29">2022.11.29</a> as a means of experimenting and gaining intuition of limits and contacts. With it came the ability to transfer the live poses back onto the Maya character. However, it only supported characters loaded natively with Ragdoll, or at best very simplistic native Maya rigs. Those that consisted of a plain FK hierarchy, such as a joint hierarchy.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271194626-6e06a632-93d4-47b8-9cb4-757d2f5979ce.mp4" type="video/mp4"></video></p>
+<p>At the time, it seemed this mechanic would not be possible with native Maya rigs, since Ragdoll relies on this hierarchy to figure out the final position and orientation of each body part. For example, to know where the hand is, Ragdoll first needs to know where the arm is, which needs to know where the torso is and where the hip is and so on. The hand depend on those positions.</p>
+<p>Native Maya rigs don't work like that; they rarely form a linear hierarchy like this, with IK and space switching constraints and stretchy limbs all complicating the transformation path from hip to hand.</p>
+<p><br></p>
+<h4 id="tuning">Tuning</h4>
+<p>The universal transfer is an "iterative" solver. Here's how it works:</p>
+<ol>
+<li>For every control in your rig..</li>
+<li>Try and match the corresponding Marker..</li>
+<li>Repeat, until each control is a close match</li>
+</ol>
+<p>The challenge is that some control cause other controls to move. For example, after Ragdoll has matched the foot, matching the upper leg would move the foot again. And so the process needs to be repeated until each <em>cyclic dependency</em> is resolved.</p>
+<p>Per default, Ragdoll will iterate up to 4 times, and stop as soon as controls get "close enough". The distance Ragdoll considers "close enough" is called "tolerance" and the number of times it attempts to reach that position is called "iterations".</p>
+<p>Here's the normal circumstances.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018847-c9c05e57-aff5-4e46-ba69-759e3c7be9e9.mp4" type="video/mp4"></video></p>
+<p>And here's what happens when you tune iterations.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018855-b2762e64-4ef8-43e9-965d-0347ce4325a1.mp4" type="video/mp4"></video></p>
+<p>Notice how that with just 1 iteration, it isn't enough to transfer once. You'll have to keep pressing the transfer button until your character is close enough. That's that's exactly what iterations do; they keep pressing the button until it's close enough.</p>
+<p><br></p>
+<h4 id="iterations">Iterations</h4>
+<p>Here's one more visual to help you understand the effect of iterations.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271202715-2c9326ca-2db5-47f4-b442-17b671c5befe.mp4" type="video/mp4"></video></p>
+<p>Here, iterations are set to 1, meaning that each time we click we run exactly 1 iteration.</p>
+<div class="admonition hint">
+<p class="admonition-title">Pro Tip</p>
+<p>You can manually type in an iteration count, such as 8 or 16, in case 4 is not enough. Generally, it depends on the number of cycles in your rig that contradicts the hierarchy. For example, if the upper leg is affected by the foot, then that's a cycle. This is also the most common cycle for IK-based rigs, where the upper leg is affected by the pole vector which is typically affected by the foot.</p>
+</div>
+<p><br></p>
+<h4 id="minimum-iterations">Minimum Iterations</h4>
+<p>Sometimes, Ragdoll thinks it finds a close match, but you as a human know better. That's when you can <em>force</em> Ragdoll to keep trying to find a match for X number of times. This number is the minimum number of iterations.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/271021290-e8cdb5f3-2d08-48d5-963f-8dbe70bdc6ec.png" /></p>
+<p><br></p>
+<h4 id="limitations">Limitations</h4>
+<p>Some rigs are still out of bounds for Ragdoll, no matter how many iterations. Here are a few things you can potentially expect depending on the complexity of your rigs.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271315784-44bcc764-1751-4fc9-a10c-a54f3c944c9a.mp4" type="video/mp4"></video></p>
+<p>Notice how the arm sometimes doesn't match, until you hit the transfer button a few more times.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>If you find a pattern, something small that consistently fails, let us know. We'd like to solve this!</p>
+</div>
 <p><br></p>
 <h3 id="update-physics">Update Physics</h3>
 <p>Work faster and in parallel with your co-worker with this new feature.</p>
@@ -2694,73 +2761,6 @@
     <span class="s2">&quot;includeTargets&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><br></p>
-<h3 id="universal-transfer">Universal Transfer</h3>
-<p>Live Mode now works with native Maya rigs!</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980827-bab03f10-7924-4d8f-b67f-df281c574c6f.mp4" type="video/mp4"></video></p>
-<!--  -->
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/270980856-1212d196-7dcd-48bf-8aa7-f314ce6a7872.mp4" type="video/mp4"></video></p>
-<blockquote>
-<p>Rig from <a href="https://agora.community/content/stormtrooper-may">https://agora.community/content/stormtrooper-may</a></p>
-</blockquote>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271331472-1c557f67-6a17-4c8f-940f-8ecd1c8ad964.mp4" type="video/mp4"></video></p>
-<blockquote>
-<p>Rig from <a href="https://www.cgspectrum.com/resources/tiger-animation-rig">https://www.cgspectrum.com/resources/tiger-animation-rig</a></p>
-</blockquote>
-<div class="admonition hint">
-<p class="admonition-title">IK too</p>
-<p>Notice how all controllers, including IK, is transferred. This was not possible before!</p>
-</div>
-<p><br></p>
-<h4 id="distraction-free-posing">Distraction Free Posing</h4>
-<p>Use Live Mode as a substitute for your normal animation controls, by SHIFT clicking on the transfer button. This overlays Ragdoll over your character and automatically transfers upon releasing the mouse cursor.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271530204-bc31cabc-88b8-4e76-b892-2eb414acce89.mp4" type="video/mp4"></video></p>
-<p>At this point, we can go distraction-free and hide all NURBS control to work entirely with Live Mode.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271530210-9feaa6aa-66c9-4805-9f71-6f8c62319cb0.mp4" type="video/mp4"></video></p>
-<p><br></p>
-<h4 id="background">Background</h4>
-<p>So, wasn't this the case already?</p>
-<p>Live Mode was released with Ragdoll <a href="../../2022.11.29">2022.11.29</a> as a means of experimenting and gaining intuition of limits and contacts. With it came the ability to transfer the live poses back onto the Maya character. However, it only supported characters loaded natively with Ragdoll, or at best very simplistic native Maya rigs. Those that consisted of a plain FK hierarchy, such as a joint hierarchy.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271194626-6e06a632-93d4-47b8-9cb4-757d2f5979ce.mp4" type="video/mp4"></video></p>
-<p>At the time, it seemed this mechanic would not be possible with native Maya rigs, since Ragdoll relies on this hierarchy to figure out the final position and orientation of each body part. For example, to know where the hand is, Ragdoll first needs to know where the arm is, which needs to know where the torso is and where the hip is and so on. The hand depend on those positions.</p>
-<p>Native Maya rigs don't work like that; they rarely form a linear hierarchy like this, with IK and space switching constraints and stretchy limbs all complicating the transformation path from hip to hand.</p>
-<p><br></p>
-<h4 id="tuning">Tuning</h4>
-<p>The universal transfer is an "iterative" solver. Here's how it works:</p>
-<ol>
-<li>For every control in your rig..</li>
-<li>Try and match the corresponding Marker..</li>
-<li>Repeat, until each control is a close match</li>
-</ol>
-<p>The challenge is that some control cause other controls to move. For example, after Ragdoll has matched the foot, matching the upper leg would move the foot again. And so the process needs to be repeated until each <em>cyclic dependency</em> is resolved.</p>
-<p>Per default, Ragdoll will iterate up to 4 times, and stop as soon as controls get "close enough". The distance Ragdoll considers "close enough" is called "tolerance" and the number of times it attempts to reach that position is called "iterations".</p>
-<p>Here's the normal circumstances.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018847-c9c05e57-aff5-4e46-ba69-759e3c7be9e9.mp4" type="video/mp4"></video></p>
-<p>And here's what happens when you tune iterations.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271018855-b2762e64-4ef8-43e9-965d-0347ce4325a1.mp4" type="video/mp4"></video></p>
-<p>Notice how that with just 1 iteration, it isn't enough to transfer once. You'll have to keep pressing the transfer button until your character is close enough. That's that's exactly what iterations do; they keep pressing the button until it's close enough.</p>
-<p><br></p>
-<h4 id="iterations">Iterations</h4>
-<p>Here's one more visual to help you understand the effect of iterations.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271202715-2c9326ca-2db5-47f4-b442-17b671c5befe.mp4" type="video/mp4"></video></p>
-<p>Here, iterations are set to 1, meaning that each time we click we run exactly 1 iteration.</p>
-<div class="admonition hint">
-<p class="admonition-title">Pro Tip</p>
-<p>You can manually type in an iteration count, such as 8 or 16, in case 4 is not enough. Generally, it depends on the number of cycles in your rig that contradicts the hierarchy. For example, if the upper leg is affected by the foot, then that's a cycle. This is also the most common cycle for IK-based rigs, where the upper leg is affected by the pole vector which is typically affected by the foot.</p>
-</div>
-<p><br></p>
-<h4 id="minimum-iterations">Minimum Iterations</h4>
-<p>Sometimes, Ragdoll thinks it finds a close match, but you as a human know better. That's when you can <em>force</em> Ragdoll to keep trying to find a match for X number of times. This number is the minimum number of iterations.</p>
-<p><img alt="" src="https://user-images.githubusercontent.com/2152766/271021290-e8cdb5f3-2d08-48d5-963f-8dbe70bdc6ec.png" /></p>
-<p><br></p>
-<h4 id="limitations">Limitations</h4>
-<p>Some rigs are still out of bounds for Ragdoll, no matter how many iterations. Here are a few things you can potentially expect depending on the complexity of your rigs.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/2152766/271315784-44bcc764-1751-4fc9-a10c-a54f3c944c9a.mp4" type="video/mp4"></video></p>
-<p>Notice how the arm sometimes doesn't match, until you hit the transfer button a few more times.</p>
-<div class="admonition help">
-<p class="admonition-title">Help</p>
-<p>If you find a pattern, something small that consistently fails, let us know. We'd like to solve this!</p>
-</div>
 <p><br></p>
 <h3 id="snap-to-simulation">Snap to Simulation</h3>
 <p>This button has seen an upgrade too, and now works like the Live Mode transfer!</p>
