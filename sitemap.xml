@@ -566,6 +566,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://learn.ragdolldynamics.com/releases/maya/2023.11.xx/</loc>
+         <lastmod>2023-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://learn.ragdolldynamics.com/tutorials/animation_to_physics/</loc>
          <lastmod>2023-10-04</lastmod>
          <changefreq>daily</changefreq>
