@@ -2253,159 +2253,6 @@
 
   <!-- Main navigation item with nested items -->
   
-
-    <!-- Determine whether to render item as a section -->
-    
-
-    <!-- Render item with nested items -->
-    <li class="md-nav__item md-nav__item--nested">
-
-      <!-- Active checkbox expands items contained within nested section -->
-      
-      
-        <input
-          class="md-nav__toggle md-toggle"
-          data-md-toggle="nav-11"
-          type="checkbox"
-          id="nav-11"
-          
-        />
-      
-
-      <!-- Expand active pages -->
-      <label class="md-nav__link" for="nav-11">
-        Blog
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav
-        class="md-nav"
-        aria-label="Blog"
-        data-md-level="1"
-      >
-        <label class="md-nav__title" for="nav-11">
-          <span class="md-nav__icon md-icon"></span>
-          Blog
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-
-          <!-- Render nested item list -->
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="https://forums.ragdolldynamics.com/t/questions-about-the-legal-part-of-selling-plugins-from-colleague-developer/1110/3" class="md-nav__link">
-        
-
-        Building a Business
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../blog/20220809/" class="md-nav__link">
-        
-
-        SIGGRAPH 2022
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../blog/20210728_announce_1_0/" class="md-nav__link">
-        
-
-        Launch Announcement
-      </a>
-    </li>
-  
-
-          
-            
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../blog/20210713_july28/" class="md-nav__link">
-        
-
-        Launch Date
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-
-  <!-- Currently active page -->
-  
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
-
-
-<!-- Render current and nested navigation items -->
-
-
-  <!-- Determine class according to state -->
-  
-  
-
-  <!-- Main navigation item with nested items -->
-  
     <li class="md-nav__item">
       <a href="../about/" class="md-nav__link">
         
@@ -2733,10 +2580,9 @@ chmod<span class="w"> </span>+x<span class="w"> </span>turbofloatserver
 <li>See <a href="#can-i-activate-my-server-offline">Can I activate my server offline?</a></li>
 </ul>
 </details>
-<p>From here, you'll likely want <code>turbofloatserver -x</code> called automatically on reboot, such that Ragdoll and Maya can lease licences from it. The exact procedure varies between Linux distributions and company preferences, see the <a href="##how-do-i-run-my-server-in-the-background-using-systemd">systemd</a> section for tips on the most common approach.</p>
+<p>From here, you'll likely want <code>turbofloatserver -x</code> called automatically on reboot, such that Ragdoll and Maya can lease licences from it. The exact procedure varies between Linux distributions and company preferences, so I won't go into details here except to say that <a href="https://www.linux.com/training-tutorials/understanding-and-using-systemd/">systemd</a> is a common option.</p>
 <p><strong>More Details</strong></p>
 <ul>
-<li><a href="#how-do-i-run-my-server-in-the-background-using-systemd">Using systemd with Ragdoll</a></li>
 <li><a href="https://wyday.com/limelm/help/turbofloat-server/#install">Installation Options</a></li>
 <li><a href="https://wyday.com/limelm/help/turbofloat-server/#config">Configuration Options</a></li>
 </ul>
@@ -2826,7 +2672,7 @@ maya
 <details class="bug">
 <summary>Failed to initialise floating licence</summary>
 <p>If this message appears in your Script Editor upon loading the plug-in, take a closer look at your Output Window on Windows or terminal on Unix.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Error: ragdoll._install_floating() - Failed to initialise floating licence, error code &#39;1&#39; #</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Error: ragdoll._install_floating() - Failed to initialise floating licence, error code &#39;1&#39; # </span>
 </code></pre></div>
 </details>
 <details class="bug">
@@ -3111,40 +2957,7 @@ WantedBy=multi-user.target
 <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>turbofloat
 </code></pre></div>
 <p>And that's it. You should now have access to this server in the exact same way as you did when calling <code>turbofloatserver -x</code> manually.</p>
-<p>To check the status of your server, try this.</p>
-<div class="highlight"><pre><span></span><code>~/turbofloat$<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>turbofloat
-●<span class="w"> </span>turbofloat.service<span class="w"> </span>-<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI
-<span class="w">     </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/etc/systemd/system/turbofloat.service<span class="p">;</span><span class="w"> </span>enabled<span class="p">;</span><span class="w"> </span>vendor<span class="w"> </span>preset:<span class="w"> </span>enabled<span class="o">)</span>
-<span class="w">     </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>running<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>Wed<span class="w"> </span><span class="m">2023</span>-10-18<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>BST<span class="p">;</span><span class="w"> </span>37s<span class="w"> </span>ago
-<span class="w">   </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">81594</span><span class="w"> </span><span class="o">(</span>turbofloatserve<span class="o">)</span>
-<span class="w">      </span>Tasks:<span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="o">(</span>limit:<span class="w"> </span><span class="m">35692</span><span class="o">)</span>
-<span class="w">     </span>Memory:<span class="w"> </span><span class="m">1</span>.1M
-<span class="w">        </span>CPU:<span class="w"> </span>18ms
-<span class="w">     </span>CGroup:<span class="w"> </span>/system.slice/turbofloat.service
-<span class="w">             </span>└─81594<span class="w"> </span>/home/marcus/turbofloat/turbofloatserver<span class="w"> </span>-x<span class="w"> </span>-s
-
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Started<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI.
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span><span class="m">2023</span>-10-18,<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>Auto-detected<span class="w"> </span><span class="m">16</span><span class="w"> </span>CPU<span class="w"> </span>cores<span class="p">;</span><span class="w"> </span>creating<span class="w"> </span>a<span class="w"> </span>thread<span class="w"> </span>pool<span class="w"> </span>that<span class="w"> </span>large.
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span>Floating<span class="w"> </span>license<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>Ragdoll<span class="w"> </span>Dynamics<span class="w"> </span><span class="o">(</span>TFS<span class="w"> </span>v4.4.4.0<span class="o">)</span>
-</code></pre></div>
-<p>You can also use <code>journalctl</code> to follow the log interactively, as though it was running in the local terminal.</p>
-<div class="highlight"><pre><span></span><code>~/turbofloat$<span class="w"> </span>journalctl<span class="w"> </span>--follow<span class="w"> </span>--unit<span class="w"> </span>turbofloat
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Started<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI.
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span><span class="m">2023</span>-10-18,<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>Auto-detected<span class="w"> </span><span class="m">16</span><span class="w"> </span>CPU<span class="w"> </span>cores<span class="p">;</span><span class="w"> </span>creating<span class="w"> </span>a<span class="w"> </span>thread<span class="w"> </span>pool<span class="w"> </span>that<span class="w"> </span>large.
-Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span>Floating<span class="w"> </span>license<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>Ragdoll<span class="w"> </span>Dynamics<span class="w"> </span><span class="o">(</span>TFS<span class="w"> </span>v4.4.4.0<span class="o">)</span>
-</code></pre></div>
                 
-                  
-                    
-
-<hr>
-<div class="md-source-date">
-  <small>
-    
-      Last update: 2023-10-27
-    
-  </small>
-</div>
                   
                 
               
