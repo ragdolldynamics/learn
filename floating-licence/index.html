@@ -1,0 +1,3202 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/floating-licence/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="shortcut icon" href="../favicon-256x256.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-6.1.6">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>Floating licence - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learn Ragdoll
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Floating licence
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-3"
+          type="checkbox"
+          id="nav-3"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-3">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Documentation"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/marker/" class="md-nav__link">
+        
+        <img src="/icons/marker_black.png">
+        
+
+        Marker
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/group/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Group
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/solver/" class="md-nav__link">
+        
+        <img src="/icons/solver_black.png">
+        
+
+        Solver
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/environment/" class="md-nav__link">
+        
+        <img src="/icons/environment_black.png">
+        
+
+        Environment
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/manipulator/" class="md-nav__link">
+        
+        <img src="/icons/manipulator_black.png">
+        
+
+        Manipulator
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/live_mode/" class="md-nav__link">
+        
+        <img src="/icons/magnet_black.png">
+        
+
+        Live Mode
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/locomotion/" class="md-nav__link">
+        
+        <img src="/icons/plan_black.png">
+        
+
+        Locomotion
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/constraints/" class="md-nav__link">
+        
+        <img src="/icons/constraint_black.png">
+        
+
+        Constraints
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/fields/" class="md-nav__link">
+        
+        <img src="/icons/force_black.png">
+        
+
+        Fields
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/record_simulation/" class="md-nav__link">
+        
+        <img src="/icons/record_black.png">
+        
+
+        Record Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/snap_to_simulation/" class="md-nav__link">
+        
+        <img src="/icons/snap_black.png">
+        
+
+        Snap to Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/retargeting/" class="md-nav__link">
+        
+        <img src="/icons/retarget_black.png">
+        
+
+        Retargeting
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/level_of_detail/" class="md-nav__link">
+        
+        <img src="/icons/hair2_black.png">
+        
+
+        Level Of Detail
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/cache/" class="md-nav__link">
+        
+        <img src="/icons/bake_black.png">
+        
+
+        Cache
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/link/" class="md-nav__link">
+        
+        <img src="/icons/link_black.png">
+        
+
+        Link
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/utilities/" class="md-nav__link">
+        
+        <img src="/icons/replace_black.png">
+        
+
+        Utilities
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-4"
+          type="checkbox"
+          id="nav-4"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-4">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Tutorials"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/videos/" class="md-nav__link">
+        
+        <img src="/icons/camera_black.png">
+        
+
+        Videos
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Manikin
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin_ragdoll/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Full Ragdoll
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin_ik/" class="md-nav__link">
+        
+        <img src="/icons/chain_black.png">
+        
+
+        Inverse Kinematics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/mocap_chap/" class="md-nav__link">
+        
+        <img src="/icons/mocap_black.png">
+        
+
+        Mocap Chap
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/rookie_wasp/" class="md-nav__link">
+        
+        <img src="/icons/wasp_black.png">
+        
+
+        Rookie Wasp
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/ragdog/" class="md-nav__link">
+        
+        <img src="/icons/bone_black.png">
+        
+
+        Ragdog
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/cloth_emulation/" class="md-nav__link">
+        
+        <img src="/icons/cloth_black.png">
+        
+
+        Cloth Emulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/self_walking/" class="md-nav__link">
+        
+        <img src="/icons/control_black.png">
+        
+
+        Self Walking
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/bouncing_ball/" class="md-nav__link">
+        
+        <img src="/icons/physics_black.png">
+        
+
+        Bouncing Ball
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../menu/" class="md-nav__link">
+        
+
+        Menu Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+
+        API Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../licencing/" class="md-nav__link">
+        
+
+        Licencing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../serialisation/" class="md-nav__link">
+        
+
+        Serialisation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-10"
+          type="checkbox"
+          id="nav-10"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-10">
+        News
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="News"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-10">
+          <span class="md-nav__icon md-icon"></span>
+          News
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2023.10.03/" class="md-nav__link">
+        
+
+        2023.10.03
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2023.04.01/" class="md-nav__link">
+        
+
+        2023.04.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.11.29/" class="md-nav__link">
+        
+
+        2022.11.29
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.07.20/" class="md-nav__link">
+        
+
+        2022.07.20
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.06.15/" class="md-nav__link">
+        
+
+        2022.06.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.06.09/" class="md-nav__link">
+        
+
+        2022.06.09
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.05.04/" class="md-nav__link">
+        
+
+        2022.05.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.03.14/" class="md-nav__link">
+        
+
+        2022.03.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.28/" class="md-nav__link">
+        
+
+        2022.02.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.14/" class="md-nav__link">
+        
+
+        2022.02.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.01/" class="md-nav__link">
+        
+
+        2022.02.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.01.21/" class="md-nav__link">
+        
+
+        2022.01.21
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.01.17/" class="md-nav__link">
+        
+
+        2022.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.12.15/" class="md-nav__link">
+        
+
+        2021.12.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.12.12/" class="md-nav__link">
+        
+
+        2021.12.12
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.11.15/" class="md-nav__link">
+        
+
+        2021.11.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.10.25/" class="md-nav__link">
+        
+
+        2021.10.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.10.07/" class="md-nav__link">
+        
+
+        2021.10.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.09.27/" class="md-nav__link">
+        
+
+        2021.09.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.08.28/" class="md-nav__link">
+        
+
+        2021.08.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.08.06/" class="md-nav__link">
+        
+
+        2021.08.06
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.27/" class="md-nav__link">
+        
+
+        2021.07.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.15/" class="md-nav__link">
+        
+
+        2021.07.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.02/" class="md-nav__link">
+        
+
+        2021.07.02
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.10/" class="md-nav__link">
+        
+
+        2021.06.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.07/" class="md-nav__link">
+        
+
+        2021.06.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.17/" class="md-nav__link">
+        
+
+        2021.05.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.10/" class="md-nav__link">
+        
+
+        2021.05.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.28/" class="md-nav__link">
+        
+
+        2021.04.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.23/" class="md-nav__link">
+        
+
+        2021.04.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.11/" class="md-nav__link">
+        
+
+        2021.04.11
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.25/" class="md-nav__link">
+        
+
+        2021.03.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.23/" class="md-nav__link">
+        
+
+        2021.03.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.11/" class="md-nav__link">
+        
+
+        2021.03.11
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.04/" class="md-nav__link">
+        
+
+        2021.03.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.01/" class="md-nav__link">
+        
+
+        2021.03.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.02.07/" class="md-nav__link">
+        
+
+        2021.02.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.27/" class="md-nav__link">
+        
+
+        2021.01.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.17/" class="md-nav__link">
+        
+
+        2021.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.15/" class="md-nav__link">
+        
+
+        2021.01.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.14/" class="md-nav__link">
+        
+
+        2021.01.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.04/" class="md-nav__link">
+        
+
+        2021.01.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.18/" class="md-nav__link">
+        
+
+        2020.12.18
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.07/" class="md-nav__link">
+        
+
+        2020.12.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.01/" class="md-nav__link">
+        
+
+        2020.12.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.24/" class="md-nav__link">
+        
+
+        2020.11.24
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.23/" class="md-nav__link">
+        
+
+        2020.11.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.22/" class="md-nav__link">
+        
+
+        2020.11.22
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.17/" class="md-nav__link">
+        
+
+        2020.11.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.16/" class="md-nav__link">
+        
+
+        2020.11.16
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.10/" class="md-nav__link">
+        
+
+        2020.11.10
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-11"
+          type="checkbox"
+          id="nav-11"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-11">
+        Blog
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Blog"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-11">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="https://forums.ragdolldynamics.com/t/questions-about-the-legal-part-of-selling-plugins-from-colleague-developer/1110/3" class="md-nav__link">
+        
+
+        Building a Business
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20220809/" class="md-nav__link">
+        
+
+        SIGGRAPH 2022
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20210728_announce_1_0/" class="md-nav__link">
+        
+
+        Launch Announcement
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20210713_july28/" class="md-nav__link">
+        
+
+        Launch Date
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate" class="md-nav__link">
+    Activate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya" class="md-nav__link">
+    Maya
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-save-activation-request" class="md-nav__link">
+    Failed to Save Activation Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-load-product-details" class="md-nav__link">
+    Failed to Load Product Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-test-connectivity-between-my-machines" class="md-nav__link">
+    How can I test connectivity between my machines?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-limit-the-internet-access-of-my-licence-server" class="md-nav__link">
+    Can I limit the internet access of my licence server?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-activate-my-server-offline" class="md-nav__link">
+    Can I activate my server offline?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-reactivate-my-licence-offline" class="md-nav__link">
+    How do I reactivate my licence offline?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-reactivate-my-licence-online" class="md-nav__link">
+    How do I reactivate my licence online?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-deactivate-old-product-key" class="md-nav__link">
+    Failed to Deactivate Old Product Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-parse-the-configuration-xml-file" class="md-nav__link">
+    Failed to Parse the Configuration XML File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-my-server-is-offline" class="md-nav__link">
+    What happens when my server is offline?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-my-server-goes-offline" class="md-nav__link">
+    What happens when my server goes offline?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-change-the-port-used-by-the-server" class="md-nav__link">
+    Can I change the port used by the server?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-move-my-licence-server-to-a-different-machine" class="md-nav__link">
+    Can I move my licence server to a different machine?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-if-i-have-multiple-serial-numbers" class="md-nav__link">
+    What if I have multiple serial numbers?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-disable-the-splash-screen" class="md-nav__link">
+    Can I disable the splash screen?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-to-a-lease-when-maya-crashes" class="md-nav__link">
+    What happens to a lease when Maya crashes?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-fall-back-to-a-node-locked-licence" class="md-nav__link">
+    Can I fall back to a node-locked licence?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-activate-my-server-on-a-virtual-machine" class="md-nav__link">
+    Can I activate my server on a Virtual Machine?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-monitor-my-licence-server" class="md-nav__link">
+    Can I monitor my licence server?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-server-say-when-a-lease-request-is-rejected" class="md-nav__link">
+    What does the server say when a lease request is rejected?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-run-my-server-in-the-background-using-systemd" class="md-nav__link">
+    How do I run my server in the background using systemd?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/floating-licence.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Floating licence</h1>
+                
+                <p>Congratulations on your purchase of a floating licence for <strong>Ragdoll Dynamics</strong>!</p>
+<h2 id="overview">Overview</h2>
+<p>This page will help you get set-up with a licence server, on-premise, and instruct Ragdoll to "lease" a licence from it. The server itself can run on any machine and any platform, including Windows, Linux and MacOS, so long as it is accessible from the machine running Ragdoll.</p>
+<p><strong>Windows, Linux and MacOS</strong></p>
+<p>The server can run on a different operating system than your workstations. For example, a common scenario is having the server running on Linux and workstations run on a combination of Windows, MacOS and Linux.</p>
+<p>On each platform, the procedure is the same.</p>
+<ol>
+<li>Download the server software</li>
+<li>Optionally edit the configuration file</li>
+<li>Activate the server with your <code>Product Key</code></li>
+<li>Start it up</li>
+</ol>
+<p>The server will need to remain running in order for Ragdoll to lease licences.</p>
+<p><br></p>
+<h2 id="linux">Linux</h2>
+<p>Here's a typical series of commands for an x64 system, look inside <a href="https://files.ragdolldynamics.com/api/public/dl/hAlavAOP/TurboFloat-Server-Linux.zip">the .zip</a> for alternative Linux-based platforms.</p>
+<div class="admonition hint">
+<p class="admonition-title">Requirements</p>
+<p>Make sure you have <code>unzip</code> and <code>wget</code> at the ready, or use alternatives like <code>curl</code> and <code>tar</code> at your own leisure.</p>
+</div>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>turbofloat
+<span class="nb">cd</span><span class="w"> </span>turbofloat
+wget<span class="w"> </span>https://files.ragdolldynamics.com/api/public/dl/hAlavAOP/TurboFloat-Server-Linux.zip
+wget<span class="w"> </span>https://files.ragdolldynamics.com/api/public/dl/6lMDDMdn/TurboActivate.dat
+unzip<span class="w"> </span>TurboFloat-Server-Linux.zip
+mv<span class="w"> </span>bin-linux/x64/turbofloatserver<span class="w"> </span>./
+chmod<span class="w"> </span>+x<span class="w"> </span>turbofloatserver
+./turbofloatserver<span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;YOUR-SERIAL-NUMBER&quot;</span>
+./turbofloatserver<span class="w"> </span>-x
+<span class="c1"># Floating license server for Ragdoll Dynamics (TFS v4.4.4.0)</span>
+</code></pre></div>
+<blockquote>
+<p>You can optionally pass <code>-silent</code> after <code>-x</code> for less verbosity.</p>
+</blockquote>
+<details class="question">
+<summary>No internet?</summary>
+<p>The licence server can be activated offline.</p>
+<ul>
+<li>See <a href="#can-i-activate-my-server-offline">Can I activate my server offline?</a></li>
+</ul>
+</details>
+<p>From here, you'll likely want <code>turbofloatserver -x</code> called automatically on reboot, such that Ragdoll and Maya can lease licences from it. The exact procedure varies between Linux distributions and company preferences, see the <a href="##how-do-i-run-my-server-in-the-background-using-systemd">systemd</a> section for tips on the most common approach.</p>
+<p><strong>More Details</strong></p>
+<ul>
+<li><a href="#how-do-i-run-my-server-in-the-background-using-systemd">Using systemd with Ragdoll</a></li>
+<li><a href="https://wyday.com/limelm/help/turbofloat-server/#install">Installation Options</a></li>
+<li><a href="https://wyday.com/limelm/help/turbofloat-server/#config">Configuration Options</a></li>
+</ul>
+<p><br></p>
+<h2 id="windows">Windows</h2>
+<p>Here's what you need to do in order to run the licence server on the Windows platform.</p>
+<p><br></p>
+<h3 id="download">Download</h3>
+<ul>
+<li><a href="https://files.ragdolldynamics.com/api/public/dl/PdFO00Vv/TurboFloat-Server-Windows.zip"><code>TurboFloat-Server-Windows.zip</code></a></li>
+</ul>
+<p>Inside of this file you will find this.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/117801629-73809f80-b24c-11eb-83ee-c5b548a8c2f0.png" /></p>
+<p>Edit the <code>.xml</code> file with a <code>port</code> you would like to use.</p>
+<div class="admonition note">
+<p class="admonition-title">Port number</p>
+<p>Make note of this port number as you will need it later when connecting to it from Maya.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">64-bit Server</p>
+<p>If you need a 32-bit version of the server, find the appropriate <code>TurboFloat</code> binaries here.</p>
+<ul>
+<li><a href="https://wyday.com/download/">https://wyday.com/download/</a></li>
+</ul>
+</div>
+<p><br></p>
+<h3 id="activate">Activate</h3>
+<p>Next we'll need to activate the server. Open a <code>cmd.exe</code> or PowerShell prompt and type in the following.</p>
+<div class="highlight"><pre><span></span><code>TurboFloatServer.exe<span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;YOUR-SERIAL-NUMBER&quot;</span>
+</code></pre></div>
+<p>There should be no output from the command, unless there's a problem.</p>
+<details class="question">
+<summary>No internet?</summary>
+<p>The licence server can be activated offline.</p>
+<ul>
+<li>See <a href="#can-i-activate-my-server-offline">Can I activate my server offline?</a></li>
+</ul>
+</details>
+<p>Now you're ready to launch the server!</p>
+<p><br></p>
+<h3 id="start">Start</h3>
+<p>This next command will launch the server.</p>
+<div class="highlight"><pre><span></span><code>TurboFloatServer.exe<span class="w"> </span>-x
+<span class="c1"># Floating license server for Ragdoll Dynamics (TFS v4.4.3.0)</span>
+</code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Test</p>
+<p>This is a good place to test Ragdoll from within Maya, so <a href="#maya">scroll to the Maya section</a>, test it out and then come back here to finish things up.</p>
+</div>
+<p>All good? Great.</p>
+<p><strong>Optional</strong></p>
+<p>At this point, you can optionally have the server restart itself and run in the background by installing it as a "service".</p>
+<div class="highlight"><pre><span></span><code>TurboFloatServer.exe<span class="w"> </span>-i
+<span class="c1"># 2021-05-12, 07:47:26 &lt;error&gt;: OpenSCManager failed (5)</span>
+</code></pre></div>
+<p>To do that, you'll need to launch PowerShell/cmd as <strong>Administrator</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># As Administrator</span>
+TurboFloatServer.exe<span class="w"> </span>-i
+<span class="c1"># 2021-05-12, 07:48:40 &lt;notification&gt;: Service installed successfully.</span>
+</code></pre></div>
+<p>From here you can try launching Ragdoll Dynamics in Maya to see whether it manages to successfully lease a licence.</p>
+<p><strong>More Details</strong></p>
+<ul>
+<li><a href="https://wyday.com/limelm/help/turbofloat-server/#install">Installation Options</a></li>
+<li><a href="https://wyday.com/limelm/help/turbofloat-server/#config">Configuration Options</a></li>
+</ul>
+<p><br></p>
+<h2 id="maya">Maya</h2>
+<p>With a licence server running, your next step is having Ragdoll connect to it.</p>
+<p>On each platform, the procedure is the same.</p>
+<ul>
+<li>Set <code>RAGDOLL_FLOATING</code></li>
+<li>Load plug-in</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># From Python</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;RAGDOLL_FLOATING&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1:13&quot;</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">loadPlugin</span><span class="p">(</span><span class="s2">&quot;ragdoll&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># From an environment like bash</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">RAGDOLL_FLOATING</span><span class="o">=</span><span class="m">127</span>.0.0.1:13
+maya
+</code></pre></div>
+<p>The format of <code>RAGDOLL_FLOATING</code> is <code>&lt;ip-address&gt;:&lt;port-number&gt;</code>.</p>
+<p><br></p>
+<p><strong>Everything ok?</strong></p>
+<details class="bug">
+<summary>Failed to initialise floating licence</summary>
+<p>If this message appears in your Script Editor upon loading the plug-in, take a closer look at your Output Window on Windows or terminal on Unix.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Error: ragdoll._install_floating() - Failed to initialise floating licence, error code &#39;1&#39; #</span>
+</code></pre></div>
+</details>
+<details class="bug">
+<summary>Could not load ragdollfloat.dll</summary>
+<p>Windows users may experience this issue, which indicates a broken install. In your distribution, you should have seen both a <code>ragdoll.mll</code> and <code>ragdollfloat.dll</code>. Make sure this file exists, else <a href="mailto:licencing@ragdolldynamics.com">contact us</a> and we'll help you sort it.</p>
+</details>
+<p><br></p>
+<h2 id="python">Python</h2>
+<p>Just like with a node-locked licence, you can control the leasing of licences via Python.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">licence</span>
+
+<span class="c1"># Activate this machine</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">request_lease</span><span class="p">()</span>
+
+<span class="c1"># Deactivate this machine</span>
+<span class="n">licence</span><span class="o">.</span><span class="n">drop_lease</span><span class="p">()</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Let's have a look at a few common errors and how to solve them.</p>
+<p><br></p>
+<h3 id="failed-to-save-activation-request">Failed to Save Activation Request</h3>
+<p>This can happen when attempting to generate an activation request for offline activation.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;KWVT-U5RS-...&quot;</span><span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/bad/path/request.xml&quot;</span>
+<span class="c1"># &lt;error&gt;: Failed to save the activation request file.</span>
+<span class="c1"># &lt;error&gt;: Error code 0x1. Contact support or your system administrator.</span>
+</code></pre></div>
+<p>The path given, in this case <code>/bad/path/request.xml</code> might not be writable. Try a different path.</p>
+<p><br></p>
+<h3 id="failed-to-load-product-details">Failed to Load Product Details</h3>
+<p>This can happen when attempting to activate a floating licence</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;KWVT-U5RS-...&quot;</span>
+<span class="c1"># &lt;error&gt;: Failed to load the product details file.</span>
+<span class="c1"># &lt;error&gt;: Failed to load the settings.</span>
+</code></pre></div>
+<p>The <code>turbofloatserver</code> executable wasn't able to find the <code>TurboActivate.dat</code> file. This file should reside in the same folder as <code>turbofloatserver</code> and can be downloaded from here.</p>
+<ul>
+<li><a href="https://files.ragdolldynamics.com/api/public/dl/6lMDDMdn/TurboActivate.dat">https://files.ragdolldynamics.com/api/public/dl/6lMDDMdn/TurboActivate.dat</a></li>
+</ul>
+<p><br></p>
+<h2 id="faq">FAQ</h2>
+<p>Let's cover some common scenarios.</p>
+<p><br></p>
+<h3 id="how-can-i-test-connectivity-between-my-machines">How can I test connectivity between my machines?</h3>
+<p>To test whether machine A is accessible from machine B, try <code>ping</code>.</p>
+<div class="highlight"><pre><span></span><code>ping<span class="w"> </span><span class="m">10</span>.0.0.13
+<span class="c1"># Reply from 10.0.0.13: bytes=32 time=1ms TTL=117</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="can-i-limit-the-internet-access-of-my-licence-server">Can I limit the internet access of my licence server?</h3>
+<p>If you're in a secure network, you may want to limit the licence server to the least amount of external access. You can do so by "whitelisting" it in your firewall, using this URL and port number.</p>
+<ul>
+<li>url: <code>https://wyday.com</code></li>
+<li>port: <code>443</code></li>
+</ul>
+<p>More details here: <a href="https://wyday.com/limelm/help/turbofloat-server/">https://wyday.com/limelm/help/turbofloat-server/</a></p>
+<p><br></p>
+<h3 id="can-i-activate-my-server-offline">Can I activate my server offline?</h3>
+<p>Lifetime licences, yes. Monthly licences, no.</p>
+<p>Like node-locked licences, the floating licence server can be activated without an internet connection to the machine running the server.</p>
+<p>The procedure is the same on each platform.</p>
+<ol>
+<li>Generate an activation request from the computer running the licence server</li>
+<li>Go to <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+<li>Activate using the response from the same computer</li>
+</ol>
+<p>Here's how to generate the request.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;YOUR-SERIAL-NUMBER&quot;</span>
+</code></pre></div>
+<p>And here's how to apply the response.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-aresp<span class="o">=</span><span class="s2">&quot;/path/to/ActivationResponse.xml&quot;</span><span class="w"> </span>-a
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Absolute Path</p>
+<p>Take care to replace the path in the above commands, and use an absolute path rather than anything relative or special such as <code>~/</code>. The <code>turbofloatserver</code> command can get a little cranky about those things.</p>
+</div>
+<p><br></p>
+<h3 id="how-do-i-reactivate-my-licence-offline">How do I reactivate my licence <em>offline</em>?</h3>
+<p>If you are offline and changes has been made to your licence on our end, such as the number of seats changing or a new expiry date has been set, here is what you need to do.</p>
+<p><strong>1. Deactivate locally and remotely</strong></p>
+<p>Run the following command, replacing the path with one that can be written to.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-deact<span class="o">=</span><span class="s2">&quot;/path/to/DeactivationRequest.xml&quot;</span>
+</code></pre></div>
+<p>This should generate the file <code>DeactivationRequest.xml</code> that should look something like this.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;DeactivationRequest&gt;</span>blablabla<span class="nt">&lt;/DeactivationRequest&gt;</span>
+</code></pre></div>
+<p>Now paste the contents of this file into to <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a> along with your serial and press <strong>Deactivate</strong>.</p>
+<p>Your licence is now deactivated both on locally and remotely.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you forget to pass the <code>DeactivationRequest.xml</code> into the offline deactivation page, Ragdoll will not know about your deactivation. It will continue to believe that your licence remains activated, and may prevent you from activating it twice.</p>
+<p>If this happens, <a href="mailto:licencing@ragdolldynamics.com">contact us</a> such that we can manually deactivate your licence on our end.</p>
+</div>
+<p><strong>2. Activate</strong></p>
+<p>Next, follow the steps in <a href="#can-i-activate-my-server-offline">Can I activate my server offline</a> as usual.</p>
+<p><br></p>
+<h3 id="how-do-i-reactivate-my-licence-online">How do I reactivate my licence <em>online</em>?</h3>
+<p>If your licence has been activated <strong>online</strong> and has been updated on our end, you may need to reactivate your licence.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-deact
+./turbofloatserver<span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;KWVT-U5RS-...&quot;</span>
+</code></pre></div>
+<p>This will refresh your local licence with whatever changes occured on our end.</p>
+<p><br></p>
+<h3 id="failed-to-deactivate-old-product-key">Failed to Deactivate Old Product Key</h3>
+<p>Can happen during offline activation if your local machine is activated <em>twice</em>.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+<span class="c1"># Failed to deactivate old product key.</span>
+</code></pre></div>
+<p>If this happens, locally deactivate your machine and try again.</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-deact
+./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="failed-to-parse-the-configuration-xml-file">Failed to Parse the Configuration XML File</h3>
+<p>Can happen if the activation <strong>request</strong> is passed in as a <strong>response</strong>.</p>
+<ul>
+<li>Activation Request is provided by <code>turbofloatserver</code> and is uploaded to <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+<li>Activation Response is provided by <a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a> and passed to <code>turbofloatserver</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationRequest.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<p>Should instead be:</p>
+<div class="highlight"><pre><span></span><code>./turbofloatserver<span class="w"> </span>-areq<span class="o">=</span><span class="s2">&quot;/path/to/ActivationResponse.xml&quot;</span><span class="w"> </span>-a<span class="o">=</span><span class="s2">&quot;XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>Note the "Response" and not "Request"</p>
+</blockquote>
+<p><br></p>
+<h3 id="what-happens-when-my-server-is-offline">What happens when my server is offline?</h3>
+<p>Leasing will attempt to connect for about 2 seconds until giving up. During that time, Maya may appear frozen.</p>
+<p><br></p>
+<h3 id="what-happens-when-my-server-goes-offline">What happens when my server <em>goes</em> offline?</h3>
+<p>Leasing is re-done once every 30 minutes.</p>
+<p>30 minutes is the default value (see below), which means that if the server goes down whilst an artist is using it, the solver will be disabled within 30 minutes.</p>
+<p>The duration can be adjusted, however it is a balance since the time is also how long it takes for the server to <em>free</em> a lease as a result of a Maya crash.</p>
+<ul>
+<li>See <a href="#what-happens-to-a-lease-when-maya-crashes">What happens to a lease when Maya crashes?</a></li>
+</ul>
+<p><br></p>
+<h3 id="can-i-change-the-port-used-by-the-server">Can I change the port used by the server?</h3>
+<p>Yes.</p>
+<p>The default port is <code>13</code> and can be edited via the <code>TurboFloatServer-config.xml</code> file residing in the same directory as the server executable.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;config&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;bind</span><span class="w"> </span><span class="na">port=</span><span class="s">&quot;13&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/config&gt;</span>
+</code></pre></div>
+<ul>
+<li><a href="https://wyday.com/limelm/help/turbofloat-server/#config">More Configuration Options</a></li>
+</ul>
+<p><br></p>
+<h3 id="can-i-move-my-licence-server-to-a-different-machine">Can I move my licence server to a different machine?</h3>
+<p>Yes.</p>
+<p>To move a licence, you can deactivate it and then activate it again someplace else.</p>
+<div class="highlight"><pre><span></span><code>TurboFloatServer<span class="w"> </span>-deact
+</code></pre></div>
+<p>This will deactivate the server. The same can be done if your licence server is offline, by passing a filename to the command.</p>
+<div class="highlight"><pre><span></span><code>TurboFloatServer<span class="w"> </span>-deact<span class="o">=</span><span class="s2">&quot;deactivation_request.xml&quot;</span>
+</code></pre></div>
+<p>Open this file and paste the contents of it into the offline deactivation wizard here.</p>
+<ul>
+<li><a href="https://ragdolldynamics.com/offline">https://ragdolldynamics.com/offline</a></li>
+</ul>
+<p><br></p>
+<h3 id="what-if-i-have-multiple-serial-numbers">What if I have multiple serial numbers?</h3>
+<p>Complete, Unlimited and Batch have their own serial numbers and each serial number needs its own server.</p>
+<ul>
+<li>Each server needs to be a physical machine, but can under certain circumstances be allowed to run within a virtual machine; <a href="mailto:licencing@ragdolldynamics.com">contact us</a> if this is you.</li>
+<li>Each server needs their own unique address; they cannot run on the same machine.</li>
+</ul>
+<p>From there, provide each of your clients with the full server address to the pool it should lease licences from.</p>
+<p>For example.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Render farm</span>
+<span class="nv">RAGDOLL_FLOATING</span><span class="o">=</span><span class="m">10</span>.0.0.4:601
+
+<span class="c1"># Artist workstations</span>
+<span class="nv">RAGDOLL_FLOATING</span><span class="o">=</span><span class="m">10</span>.0.0.5:601
+</code></pre></div>
+<p><br></p>
+<h3 id="can-i-disable-the-splash-screen">Can I disable the splash screen?</h3>
+<p>Yes.</p>
+<p>Consumers of floating licences generally won't need to manage licenses themselves, and so the startup dialog can be avoided altogether for a smoother experience when inside of Maya.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">RAGDOLL_NO_STARTUP_DIALOG</span><span class="o">=</span><span class="m">1</span>
+maya
+</code></pre></div>
+<ul>
+<li>See <a href="/api/#environment-variables">Environment Variables</a> for details</li>
+</ul>
+<p><br></p>
+<h3 id="what-happens-to-a-lease-when-maya-crashes">What happens to a lease when Maya crashes?</h3>
+<p>A lease is automatically dropped upon unloading the plug-in or shutting down Maya. In the event of a Maya crash, a lease will automatically drop after 30 minutes per default.</p>
+<p>The time can be edited via the configuration file; a lower time means more compute and file resources are consumed on the server, the lowest value is 30 seconds.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;config&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;lease</span><span class="w"> </span><span class="na">length=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span><span class="cm">&lt;!-- seconds --&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/config&gt;</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="can-i-fall-back-to-a-node-locked-licence">Can I fall back to a node-locked licence?</h3>
+<p>Yes.</p>
+<p>Remove the <code>RAGDOLL_FLOATING</code> environment variable and reload the plug-in or restart Maya to attempt activation of a node-locked licence.</p>
+<p><br></p>
+<h3 id="can-i-activate-my-server-on-a-virtual-machine">Can I activate my server on a Virtual Machine?</h3>
+<p>No.</p>
+<p>The server cannot distinguish between two virtual machines which would make it possible to activate an endless amount of them with their own duplicate pools of licences.</p>
+<p>Although the <em>server</em> cannot run on a VM, clients <em>can</em>. E.g. running Docker for testing in a continous-integration environment or automation for simulation baking or rendering etc.</p>
+<p><br></p>
+<h3 id="can-i-monitor-my-licence-server">Can I monitor my licence server?</h3>
+<p>Yes.</p>
+<p>With a logging level set to "notification", you'll get real-time output from the server whenever a lease is requested and dropped, including..</p>
+<ol>
+<li>Time of event</li>
+<li>Expiry time</li>
+<li>IP</li>
+<li>Username</li>
+<li>PID (Process ID)</li>
+</ol>
+<p>The expiry is when the lease will be renewed. Normally not something you need to worry about, unless Maya crashes. This is then the time it'll take the server to realise the lease has been freed.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;config&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;log</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;tfs-log.txt&quot;</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;notification&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/config&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="m">2021</span>-05-12,<span class="w"> </span><span class="m">11</span>:58:47<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>New<span class="w"> </span>connection<span class="w"> </span>from<span class="w"> </span>IP:<span class="w"> </span>::ffff:127.0.0.1
+<span class="m">2021</span>-05-12,<span class="w"> </span><span class="m">11</span>:58:47<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>New<span class="w"> </span>lease<span class="w"> </span>assigned<span class="w"> </span><span class="o">(</span>marcus,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">IP</span><span class="o">=</span>::ffff:127.0.0.1,<span class="w"> </span><span class="nv">PID</span><span class="o">=</span><span class="m">14328</span><span class="o">)</span>.<span class="w"> </span>Expires:<span class="w"> </span><span class="m">2021</span>-05-12<span class="w"> </span><span class="m">11</span>:28:47<span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>UTC<span class="o">)</span>.<span class="w"> </span>Used<span class="w"> </span>/<span class="w"> </span>Total<span class="w"> </span>leases:<span class="w"> </span><span class="m">1</span><span class="w"> </span>/<span class="w"> </span><span class="m">1</span>
+<span class="m">2021</span>-05-12,<span class="w"> </span><span class="m">11</span>:58:51<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>New<span class="w"> </span>connection<span class="w"> </span>from<span class="w"> </span>IP:<span class="w"> </span>::ffff:127.0.0.1
+<span class="m">2021</span>-05-12,<span class="w"> </span><span class="m">11</span>:58:51<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>Lease<span class="w"> </span>was<span class="w"> </span>released<span class="w"> </span>by<span class="w"> </span>client<span class="w"> </span><span class="o">(</span>marcus,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">IP</span><span class="o">=</span>::ffff:127.0.0.1,<span class="w"> </span><span class="nv">PID</span><span class="o">=</span><span class="m">14328</span><span class="o">)</span>.<span class="w"> </span>Used<span class="w"> </span>/<span class="w"> </span>Total<span class="w"> </span>leases:<span class="w"> </span><span class="m">0</span><span class="w"> </span>/<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>The <code>tfs-log.txt</code> file is dynamically updated as users lease and drop licences, and includes mention of how many licences are in use and remaining. You can monitor the tail of this file for real-time updates, and use any tooling to parse these notifications into your own infrastructure.</p>
+<p><strong>See Also</strong></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/floating-server-web-api">https://forums.ragdolldynamics.com/t/floating-server-web-api</a></li>
+</ul>
+<p><br></p>
+<h3 id="what-does-the-server-say-when-a-lease-request-is-rejected">What does the server say when a lease request is rejected?</h3>
+<p>With <code>level="notification"</code> it'll say this.</p>
+<div class="highlight"><pre><span></span><code><span class="m">2021</span>-05-16,<span class="w"> </span><span class="m">14</span>:52:50<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>License<span class="w"> </span>lease<span class="w"> </span>request<span class="w"> </span>rejected<span class="w"> </span>because<span class="w"> </span>no<span class="w"> </span>more<span class="w"> </span>free<span class="w"> </span>slots,<span class="w"> </span><span class="nv">numTotalLics</span><span class="o">=</span><span class="m">9</span>,<span class="w"> </span><span class="nv">pkey</span><span class="o">=</span>YOUR-SERIAL-NUMBER
+</code></pre></div>
+<p><br></p>
+<h3 id="how-do-i-run-my-server-in-the-background-using-systemd">How do I run my server in the background using systemd?</h3>
+<p><a href="https://systemd.io/">systemd</a> is a common option for running background processes on Linux. Here's a quick run-down how to get <code>turbofloatserver</code> running with it.</p>
+<p><strong>Prerequisities</strong></p>
+<ol>
+<li>Make sure you can run <code>turbofloatserver -x</code> already</li>
+<li>Make note of the full path to your <code>turbofloatserver</code>, here we will assume <code>/turbofloat</code></li>
+</ol>
+<p>Ok, with that out of the way, create a new file called <code>/etc/systemd/system/turbofloat.service</code> with the content below.</p>
+<p><strong>turbofloat.service</strong></p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=TurboFloat server for CI
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/turbofloat/turbofloatserver -x -s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Replace with your Path</p>
+<p>Here we use <code>/turbofloat/turbofloatserver -x -s</code> but your path will likely be different!</p>
+</div>
+<p>Now let's start it.</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>start<span class="w"> </span>turbofloat
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">You may need sudo</p>
+<p>Unless you are logged in as a root/administrator user, you may need to use <code>sudo</code> with this command. E.g. <code>sudo systemctl</code></p>
+</div>
+<p>If there are no complaints, we're set to have this automatically run in the background whenever the computer restarts.</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>turbofloat
+</code></pre></div>
+<p>And that's it. You should now have access to this server in the exact same way as you did when calling <code>turbofloatserver -x</code> manually.</p>
+<p>To check the status of your server, try this.</p>
+<div class="highlight"><pre><span></span><code>~/turbofloat$<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>turbofloat
+●<span class="w"> </span>turbofloat.service<span class="w"> </span>-<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI
+<span class="w">     </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/etc/systemd/system/turbofloat.service<span class="p">;</span><span class="w"> </span>enabled<span class="p">;</span><span class="w"> </span>vendor<span class="w"> </span>preset:<span class="w"> </span>enabled<span class="o">)</span>
+<span class="w">     </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>running<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>Wed<span class="w"> </span><span class="m">2023</span>-10-18<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>BST<span class="p">;</span><span class="w"> </span>37s<span class="w"> </span>ago
+<span class="w">   </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">81594</span><span class="w"> </span><span class="o">(</span>turbofloatserve<span class="o">)</span>
+<span class="w">      </span>Tasks:<span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="o">(</span>limit:<span class="w"> </span><span class="m">35692</span><span class="o">)</span>
+<span class="w">     </span>Memory:<span class="w"> </span><span class="m">1</span>.1M
+<span class="w">        </span>CPU:<span class="w"> </span>18ms
+<span class="w">     </span>CGroup:<span class="w"> </span>/system.slice/turbofloat.service
+<span class="w">             </span>└─81594<span class="w"> </span>/home/marcus/turbofloat/turbofloatserver<span class="w"> </span>-x<span class="w"> </span>-s
+
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Started<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI.
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span><span class="m">2023</span>-10-18,<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>Auto-detected<span class="w"> </span><span class="m">16</span><span class="w"> </span>CPU<span class="w"> </span>cores<span class="p">;</span><span class="w"> </span>creating<span class="w"> </span>a<span class="w"> </span>thread<span class="w"> </span>pool<span class="w"> </span>that<span class="w"> </span>large.
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span>Floating<span class="w"> </span>license<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>Ragdoll<span class="w"> </span>Dynamics<span class="w"> </span><span class="o">(</span>TFS<span class="w"> </span>v4.4.4.0<span class="o">)</span>
+</code></pre></div>
+<p>You can also use <code>journalctl</code> to follow the log interactively, as though it was running in the local terminal.</p>
+<div class="highlight"><pre><span></span><code>~/turbofloat$<span class="w"> </span>journalctl<span class="w"> </span>--follow<span class="w"> </span>--unit<span class="w"> </span>turbofloat
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Started<span class="w"> </span>TurboFloat<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>CI.
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span><span class="m">2023</span>-10-18,<span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>&lt;notification&gt;:<span class="w"> </span>Auto-detected<span class="w"> </span><span class="m">16</span><span class="w"> </span>CPU<span class="w"> </span>cores<span class="p">;</span><span class="w"> </span>creating<span class="w"> </span>a<span class="w"> </span>thread<span class="w"> </span>pool<span class="w"> </span>that<span class="w"> </span>large.
+Oct<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:31:21<span class="w"> </span>minilinux<span class="w"> </span>turbofloatserver<span class="o">[</span><span class="m">81594</span><span class="o">]</span>:<span class="w"> </span>Floating<span class="w"> </span>license<span class="w"> </span>server<span class="w"> </span><span class="k">for</span><span class="w"> </span>Ragdoll<span class="w"> </span>Dynamics<span class="w"> </span><span class="o">(</span>TFS<span class="w"> </span>v4.4.4.0<span class="o">)</span>
+</code></pre></div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2023-10-27
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020-2022 mottosso
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../extra.js"></script>
+      
+    
+  </body>
+</html>

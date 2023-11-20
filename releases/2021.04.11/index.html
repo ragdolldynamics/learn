@@ -1,0 +1,3417 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ragdoll 2021.04.11 is released! Save your physics contraptions to disk, and load them into another scene onto the same or similar character controls.">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.04.11/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="shortcut icon" href="../../favicon-256x256.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-6.1.6">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>JSON Import - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#import" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learn Ragdoll
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              JSON Import
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-3"
+          type="checkbox"
+          id="nav-3"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-3">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Documentation"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/marker/" class="md-nav__link">
+        
+        <img src="/icons/marker_black.png">
+        
+
+        Marker
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/group/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Group
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/solver/" class="md-nav__link">
+        
+        <img src="/icons/solver_black.png">
+        
+
+        Solver
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/environment/" class="md-nav__link">
+        
+        <img src="/icons/environment_black.png">
+        
+
+        Environment
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manipulator/" class="md-nav__link">
+        
+        <img src="/icons/manipulator_black.png">
+        
+
+        Manipulator
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/live_mode/" class="md-nav__link">
+        
+        <img src="/icons/magnet_black.png">
+        
+
+        Live Mode
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/locomotion/" class="md-nav__link">
+        
+        <img src="/icons/plan_black.png">
+        
+
+        Locomotion
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/constraints/" class="md-nav__link">
+        
+        <img src="/icons/constraint_black.png">
+        
+
+        Constraints
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/fields/" class="md-nav__link">
+        
+        <img src="/icons/force_black.png">
+        
+
+        Fields
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/record_simulation/" class="md-nav__link">
+        
+        <img src="/icons/record_black.png">
+        
+
+        Record Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/snap_to_simulation/" class="md-nav__link">
+        
+        <img src="/icons/snap_black.png">
+        
+
+        Snap to Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/retargeting/" class="md-nav__link">
+        
+        <img src="/icons/retarget_black.png">
+        
+
+        Retargeting
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/level_of_detail/" class="md-nav__link">
+        
+        <img src="/icons/hair2_black.png">
+        
+
+        Level Of Detail
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/cache/" class="md-nav__link">
+        
+        <img src="/icons/bake_black.png">
+        
+
+        Cache
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/link/" class="md-nav__link">
+        
+        <img src="/icons/link_black.png">
+        
+
+        Link
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/utilities/" class="md-nav__link">
+        
+        <img src="/icons/replace_black.png">
+        
+
+        Utilities
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-4"
+          type="checkbox"
+          id="nav-4"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-4">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Tutorials"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/videos/" class="md-nav__link">
+        
+        <img src="/icons/camera_black.png">
+        
+
+        Videos
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/manikin/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Manikin
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/manikin_ragdoll/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Full Ragdoll
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/manikin_ik/" class="md-nav__link">
+        
+        <img src="/icons/chain_black.png">
+        
+
+        Inverse Kinematics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/mocap_chap/" class="md-nav__link">
+        
+        <img src="/icons/mocap_black.png">
+        
+
+        Mocap Chap
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/rookie_wasp/" class="md-nav__link">
+        
+        <img src="/icons/wasp_black.png">
+        
+
+        Rookie Wasp
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/ragdog/" class="md-nav__link">
+        
+        <img src="/icons/bone_black.png">
+        
+
+        Ragdog
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/cloth_emulation/" class="md-nav__link">
+        
+        <img src="/icons/cloth_black.png">
+        
+
+        Cloth Emulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/self_walking/" class="md-nav__link">
+        
+        <img src="/icons/control_black.png">
+        
+
+        Self Walking
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/bouncing_ball/" class="md-nav__link">
+        
+        <img src="/icons/physics_black.png">
+        
+
+        Bouncing Ball
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../download/" class="md-nav__link">
+        
+
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../menu/" class="md-nav__link">
+        
+
+        Menu Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+
+        API Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../licencing/" class="md-nav__link">
+        
+
+        Licencing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../serialisation/" class="md-nav__link">
+        
+
+        Serialisation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-10"
+          type="checkbox"
+          id="nav-10"
+          checked
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-10">
+        News
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="News"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-10">
+          <span class="md-nav__icon md-icon"></span>
+          News
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2023.10.03/" class="md-nav__link">
+        
+
+        2023.10.03
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2023.04.01/" class="md-nav__link">
+        
+
+        2023.04.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.11.29/" class="md-nav__link">
+        
+
+        2022.11.29
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.07.20/" class="md-nav__link">
+        
+
+        2022.07.20
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.06.15/" class="md-nav__link">
+        
+
+        2022.06.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.06.09/" class="md-nav__link">
+        
+
+        2022.06.09
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.05.04/" class="md-nav__link">
+        
+
+        2022.05.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.03.14/" class="md-nav__link">
+        
+
+        2022.03.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.02.28/" class="md-nav__link">
+        
+
+        2022.02.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.02.14/" class="md-nav__link">
+        
+
+        2022.02.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.02.01/" class="md-nav__link">
+        
+
+        2022.02.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.01.21/" class="md-nav__link">
+        
+
+        2022.01.21
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2022.01.17/" class="md-nav__link">
+        
+
+        2022.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.12.15/" class="md-nav__link">
+        
+
+        2021.12.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.12.12/" class="md-nav__link">
+        
+
+        2021.12.12
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.11.15/" class="md-nav__link">
+        
+
+        2021.11.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.10.25/" class="md-nav__link">
+        
+
+        2021.10.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.10.07/" class="md-nav__link">
+        
+
+        2021.10.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.09.27/" class="md-nav__link">
+        
+
+        2021.09.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.08.28/" class="md-nav__link">
+        
+
+        2021.08.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.08.06/" class="md-nav__link">
+        
+
+        2021.08.06
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.07.27/" class="md-nav__link">
+        
+
+        2021.07.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.07.15/" class="md-nav__link">
+        
+
+        2021.07.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.07.02/" class="md-nav__link">
+        
+
+        2021.07.02
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.06.10/" class="md-nav__link">
+        
+
+        2021.06.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.06.07/" class="md-nav__link">
+        
+
+        2021.06.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.05.17/" class="md-nav__link">
+        
+
+        2021.05.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.05.10/" class="md-nav__link">
+        
+
+        2021.05.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.04.28/" class="md-nav__link">
+        
+
+        2021.04.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.04.23/" class="md-nav__link">
+        
+
+        2021.04.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2021.04.11
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        2021.04.11
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+    <nav class="md-nav" aria-label="Import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-file-browser" class="md-nav__link">
+    1. File Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-content-preview" class="md-nav__link">
+    2. Content Preview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail" class="md-nav__link">
+    Thumbnail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-sensitive" class="md-nav__link">
+    Context Sensitive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-selection" class="md-nav__link">
+    Use Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace" class="md-nav__link">
+    Search and Replace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-namespace" class="md-nav__link">
+    Auto Namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-scene" class="md-nav__link">
+    Auto Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-clean" class="md-nav__link">
+    Ragdoll Clean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-python-api" class="md-nav__link">
+    Import Python API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-stability" class="md-nav__link">
+    Ragdoll Stability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya-2022-stability" class="md-nav__link">
+    Maya 2022 Stability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-shape" class="md-nav__link">
+    Edit Shape
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-attributes" class="md-nav__link">
+    Proxy Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-consistency" class="md-nav__link">
+    Python API Consistency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-explorer" class="md-nav__link">
+    Ragdoll Explorer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-level" class="md-nav__link">
+    Logging Level
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-updates" class="md-nav__link">
+    Developer Updates
+  </a>
+  
+    <nav class="md-nav" aria-label="Developer Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-components" class="md-nav__link">
+    New Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backwards-incompatibility" class="md-nav__link">
+    Backwards Incompatibility
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.03.25/" class="md-nav__link">
+        
+
+        2021.03.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.03.23/" class="md-nav__link">
+        
+
+        2021.03.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.03.11/" class="md-nav__link">
+        
+
+        2021.03.11
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.03.04/" class="md-nav__link">
+        
+
+        2021.03.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.03.01/" class="md-nav__link">
+        
+
+        2021.03.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.02.07/" class="md-nav__link">
+        
+
+        2021.02.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.01.27/" class="md-nav__link">
+        
+
+        2021.01.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.01.17/" class="md-nav__link">
+        
+
+        2021.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.01.15/" class="md-nav__link">
+        
+
+        2021.01.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.01.14/" class="md-nav__link">
+        
+
+        2021.01.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2021.01.04/" class="md-nav__link">
+        
+
+        2021.01.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.12.18/" class="md-nav__link">
+        
+
+        2020.12.18
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.12.07/" class="md-nav__link">
+        
+
+        2020.12.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.12.01/" class="md-nav__link">
+        
+
+        2020.12.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.24/" class="md-nav__link">
+        
+
+        2020.11.24
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.23/" class="md-nav__link">
+        
+
+        2020.11.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.22/" class="md-nav__link">
+        
+
+        2020.11.22
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.17/" class="md-nav__link">
+        
+
+        2020.11.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.16/" class="md-nav__link">
+        
+
+        2020.11.16
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../2020.11.10/" class="md-nav__link">
+        
+
+        2020.11.10
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-11"
+          type="checkbox"
+          id="nav-11"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-11">
+        Blog
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Blog"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-11">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="https://forums.ragdolldynamics.com/t/questions-about-the-legal-part-of-selling-plugins-from-colleague-developer/1110/3" class="md-nav__link">
+        
+
+        Building a Business
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../blog/20220809/" class="md-nav__link">
+        
+
+        SIGGRAPH 2022
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../blog/20210728_announce_1_0/" class="md-nav__link">
+        
+
+        Launch Announcement
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../blog/20210713_july28/" class="md-nav__link">
+        
+
+        Launch Date
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+    <nav class="md-nav" aria-label="Import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-file-browser" class="md-nav__link">
+    1. File Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-content-preview" class="md-nav__link">
+    2. Content Preview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail" class="md-nav__link">
+    Thumbnail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-sensitive" class="md-nav__link">
+    Context Sensitive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-selection" class="md-nav__link">
+    Use Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace" class="md-nav__link">
+    Search and Replace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-namespace" class="md-nav__link">
+    Auto Namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-scene" class="md-nav__link">
+    Auto Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragdoll-clean" class="md-nav__link">
+    Ragdoll Clean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-python-api" class="md-nav__link">
+    Import Python API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-stability" class="md-nav__link">
+    Ragdoll Stability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maya-2022-stability" class="md-nav__link">
+    Maya 2022 Stability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-shape" class="md-nav__link">
+    Edit Shape
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-attributes" class="md-nav__link">
+    Proxy Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api-consistency" class="md-nav__link">
+    Python API Consistency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragdoll-explorer" class="md-nav__link">
+    Ragdoll Explorer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-level" class="md-nav__link">
+    Logging Level
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-updates" class="md-nav__link">
+    Developer Updates
+  </a>
+  
+    <nav class="md-nav" aria-label="Developer Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-components" class="md-nav__link">
+    New Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backwards-incompatibility" class="md-nav__link">
+    Backwards Incompatibility
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/releases/2021.04.11.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>2021.04.11</h1>
+                
+                <p><img alt="import" src="https://user-images.githubusercontent.com/2152766/114271353-d5a97300-9a08-11eb-9437-59fb3b664c74.png" /></p>
+<p>Highlight for this release is <strong>import of physics</strong> from one character to another!</p>
+<ul>
+<li><a href="#import"><strong>ADDED</strong> Import</a> Animator-friendly export/import workflow for physics</li>
+<li><a href="#edit-shape"><strong>ADDED</strong> Edit Shape</a> Edit shapes using normal Maya manipulators</li>
+<li><a href="#logging-level"><strong>ADDED</strong> Logging Level</a> Tune how chatty Ragdoll is</li>
+<li><a href="#ragdoll-stability"><strong>IMPROVED</strong> Ragdoll Stability</a> Rock-solid undo support, go nuts!</li>
+<li><a href="#maya-2022-stability"><strong>IMPROVED</strong> Maya 2022 Stability</a> Steer clear</li>
+<li><a href="#ragdoll-explorer"><strong>IMPROVED</strong> Explorer</a> Next iteration of the Ragdoll Explorer</li>
+<li><a href="#proxy-attributes]"><strong>CHANGED</strong> Proxy Attributes</a> A small sacrifice for stability</li>
+<li><a href="#python-api-consistency]"><strong>CHANGED</strong> Python API Consistency</a> More to come</li>
+</ul>
+<p><br></p>
+<div class="admonition warning">
+<p class="admonition-title">Head's up Game Developers</p>
+<p><code>NameComponent</code> was changed, and <code>entity</code> values are now a fully-fledged type.</p>
+<p>See <a href="#backwards-incompatibility">Backwards Incompatibility</a> for details.</p>
+</div>
+<p><br></p>
+<p><strong>Import onto Selected Character</strong></p>
+<p><img alt="ragdollimportall" src="https://user-images.githubusercontent.com/2152766/114277580-a6ecc600-9a23-11eb-9e9b-d440a39d1c51.gif" /></p>
+<p><strong>Import onto the Ragcar</strong></p>
+<p><img alt="ragcarimport" src="https://user-images.githubusercontent.com/2152766/114273737-35a51700-9a13-11eb-9d46-9afcb0bc153e.gif" /></p>
+<p><strong>Import limbs of Tiger</strong></p>
+<p><img alt="ragdollimporttiger" src="https://user-images.githubusercontent.com/2152766/114277018-40ff3f00-9a21-11eb-92d7-f028bdaf249e.gif" /></p>
+<p><br></p>
+<h2 id="import">Import</h2>
+<p>Animators can now setup physics one character, export it, and then import onto another.</p>
+<p>The usecase is having spent time setting up a perfect ragdoll and then wanting to reuse this setup across multiple scenes, on multiple instances of the same referenced character, or on characters with similar naming scheme and anatomy. It can also be used to import parts of a character or individual objects.</p>
+<p><strong>Demo</strong></p>
+<p>Here's an <strong>18 second</strong> run-down of the complete workflow, from authoring to import.</p>
+<p><img alt="ragdollimportquick2" src="https://user-images.githubusercontent.com/2152766/114265098-d6311200-99e6-11eb-9b5f-8d2396d0506a.gif" /></p>
+<p><br></p>
+<h3 id="features">Features</h3>
+<p>Anything you can apply physics to can be exported.</p>
+<p>The nodes onto which physics is <em>imported</em>..</p>
+<ul>
+<li>✔️ Can have a different namespace</li>
+<li>✔️ Can have a different naming convention</li>
+<li>✔️ Can have a different pose</li>
+<li>✔️ Can have a different scale</li>
+<li>✔️ Can be animated</li>
+<li>✔️ Can be referenced</li>
+<li>✔️ Can be imported in pieces, based on what is currently selected</li>
+</ul>
+<p>It will remember..</p>
+<ul>
+<li>✔️ All edited attributes, like <code>Guide Strength</code></li>
+<li>✔️ All edited constraints, like their limits and frames</li>
+</ul>
+<p>It will <em>not</em> remember..</p>
+<ul>
+<li>❌ The convex hulls</li>
+<li>❌ The original root of your chains</li>
+</ul>
+<details class="info">
+<summary>About those 'Convex Hulls'..</summary>
+<p>Convex hulls, those triangulated versions of your Maya shapes - the <code>Mesh</code> shape type - are re-generated onto whatever character you import onto. This is probably what you want, and enables you to apply physics onto characters with <em>different</em> geometry from when you originally authored the physics. Although sometimes it's not, which is why this we be augmented in a future release.</p>
+</details>
+<details class="info">
+<summary>About the 'Original Root'..</summary>
+<p>The root in any chain is the first in your selection when creating the chain. If you build a network of chains - a "tree" - which is common for any character of more than 1 limb, the exported file will not remember which the <em>original</em> root was. It will figure out new roots procedurally based on their parent/child relationship which <em>may</em> or may not be the same as your original. For importing a full character, this makes no difference. Only for the advanced case of exporting a full character but then wanting to apply only the arm or leg of that character onto another character makes this problematic. This will be addressed in a future release.</p>
+</details>
+<p>And that's about it! It doesn't even have to be a "character", any combination of Maya nodes you can apply physics to can have their physics exported. Like a (rag)car, or just a (rag)box.</p>
+<p><br></p>
+<h3 id="user-interface">User Interface</h3>
+<p>In addition to import everything found in an exported file, there's a UI for more control.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/2152766/114264876-69694800-99e5-11eb-99d6-7df8a5976751.gif" /></p>
+<p>The UI resembles native Maya and Ragdoll option dialogs, with two interesting bits.</p>
+<p><img class="boxshadow" style="max-height: 600px;" src=https://user-images.githubusercontent.com/2152766/114264932-c36a0d80-99e5-11eb-874d-f81bb92eb0ca.png></p>
+<p><br></p>
+<h4 id="1-file-browser">1. File Browser</h4>
+<p>The top part displays other Ragdoll scene (<code>.rag</code>) files in the same directory as the selected file, along with the thumbnail stored during the time of export. The thumbnail currently isn't visible <em>during</em> export, it is captured from the currently active viewport. An Export UI with thumbnail preview (and more!) will be added in a future release.</p>
+<p><img class="boxshadow" src=https://user-images.githubusercontent.com/2152766/114264973-01673180-99e6-11eb-9890-fbfb463f2a85.png></p>
+<p><br></p>
+<h4 id="2-content-preview">2. Content Preview</h4>
+<p>This sections shows you the <em>contents</em> of the physics scene, ahead of actually importing it.</p>
+<p>It will visualise a number of things.</p>
+<ol>
+<li>Which Maya nodes will be "physicalised"?</li>
+<li>Which nodes present during export are <em>not</em> present in the currently opened scene?</li>
+<li>What was the original path of a node during export?</li>
+<li>What is the <em>destination</em> path of the node being imported?</li>
+<li><em>Is there</em> a destination node?</li>
+<li>Is the destination <em>already</em> physicalised?</li>
+<li>What was the original node <em>icon</em>, e.g. <code>nurbsCurve</code> or <code>mesh</code>?</li>
+<li>What is the <code>Shape Type</code> of the exported rigid, e.g <code>Capsule</code>?</li>
+</ol>
+<p><img class="boxshadow" src=https://user-images.githubusercontent.com/2152766/114264972-fc09e700-99e5-11eb-979c-0093b9086497.png></p>
+<p><br></p>
+<h3 id="introduction">Introduction</h3>
+<p>Did you see Snyder's Justice League? In it, they introduce and explain the "mother box" and how it is capable of turning the dust of a burnt house <em>back</em> into a house.</p>
+<p>This <code>Import</code> feature is the Mother Box of Ragdoll.</p>
+<p>The export format is identical to what game developers use to author physics in Maya and import it into their game engine. It contains <em>all</em> data managed by Ragdoll in full detail. Enough detail to reverse-engineer it back into a Maya scene, which is exactly what's going on here.</p>
+<p><br></p>
+<p><strong>Example Files</strong></p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/de0d1a54cab0f607bee3bef402042458"><code>mytiger.rag</code></a></li>
+<li><a href="https://gist.github.com/mottosso/6eed067563330d4f2041a89a506f9a6e"><code>mycharacter.rag</code></a></li>
+<li><a href="https://gist.github.com/mottosso/507e3116164a4b57b4fe8228216d70e0"><code>ragcar.rag</code></a></li>
+</ul>
+<p><br></p>
+<h3 id="thumbnail">Thumbnail</h3>
+<p>Each export captures the currently active 3d viewport for use as a thumbnail. So, whenever you export, remember to smile and wave! :D</p>
+<p><img alt="thumbnail5" src="https://user-images.githubusercontent.com/2152766/114277347-b6b7da80-9a22-11eb-96d0-e85b557e1395.gif" /></p>
+<p><br></p>
+<h3 id="context-sensitive">Context Sensitive</h3>
+<p>The visualisations will update as you select different nodes and edit the various options in the UI.</p>
+<p>To illustrate this, let's import onto the same scene we exported.</p>
+<p><strong>Export</strong></p>
+<p>Only one character is physicalised and exported.</p>
+<p><img alt="ragdoll_sacmescene_export" src="https://user-images.githubusercontent.com/2152766/114266161-aedd4380-99ec-11eb-8502-a78f025d718d.gif" /></p>
+<p><strong>Import</strong></p>
+<p>Notice that importing is not possible, since the character is already physicalised. Unless we replace the namespace, by selecting another character.</p>
+<p><img alt="ragdoll_sacmescene_autonamespace" src="https://user-images.githubusercontent.com/2152766/114266157-a553db80-99ec-11eb-89e2-408018b5e7ff.gif" /></p>
+<p><br></p>
+<h3 id="use-selection">Use Selection</h3>
+<p>Import onto selected nodes with <code>Use Selection</code> toggled (it's the default).</p>
+<p><img alt="partialimport" src="https://user-images.githubusercontent.com/2152766/114277027-4f4d5b00-9a21-11eb-96c8-8d486cfb025a.gif" /></p>
+<p><br></p>
+<h3 id="search-and-replace">Search and Replace</h3>
+<p>Every node is stored along with its full path, such as..</p>
+<div class="highlight"><pre><span></span><code>|root_grp|spine_grp|spine_ctrl
+</code></pre></div>
+<p>And in most cases can get quite long, with one or more namespaces and tens to hundreds of levels deep in hierarchy.</p>
+<div class="highlight"><pre><span></span><code>|_:Group|_:Main|_:DeformationSystem|_:Root_M|_:RootPart1_M|_:RootPart2_M|_:Spine1_M|_:Spine1Part1_M|_:Spine1Part2_M|_:Chest_M|_:Scapula_L|_:Shoulder_L|_:ShoulderPart1_L|_:ShoulderPart2_L|_:Elbow_L|_:ElbowPart1_L|_:ElbowPart2_L|_:Wrist_L|_:IndexFinger1_L
+</code></pre></div>
+<blockquote>
+<p>Here, the namespace is simply <code>_:</code></p>
+</blockquote>
+<p>The <code>Search and Replace</code> boxes of the UI can be used to replace parts of each path, to try and map the original path to whatever path is currently available in the scene.</p>
+<p><img alt="ragdollsearchreplace2" src="https://user-images.githubusercontent.com/2152766/114266420-36778200-99ee-11eb-9b2e-643215d8213e.gif" /></p>
+<p><br></p>
+<h3 id="auto-namespace">Auto Namespace</h3>
+<p>One challenge with export/import it remapping names from the original scene onto your new scene. Ragdoll solves the typical case of only the namespace being different with "Auto Namespace".</p>
+<p><img alt="autonamespace" src="https://user-images.githubusercontent.com/2152766/113845947-eac69d80-978d-11eb-8346-3e73bce1f2be.gif" /></p>
+<p>"Auto Namespace" will replace any namespace in the original file with whatever namespace is currently selected. Neat! If there are <em>multiple</em> namespaces, it'll use the last namespace. Let me know how you find that, there's room left to explore here. Most often, you only ever have a single namespace, but Maya does allow you to tie yourself into a knot if you really wanted to.</p>
+<p><br></p>
+<h3 id="auto-scene">Auto Scene</h3>
+<p>Locate and use the original physics scene from the original file, so as to preserve your multi-scene setups.</p>
+<p>For example, if your one character has 3 physics scenes - one for the right arm, one for the left and a single one for both legs - then "Auto Scene" will preserve these scenes for you.</p>
+<div class="admonition hint">
+<p class="admonition-title">Performance Tip</p>
+<p>Using more than one scene can improve performance significantly, as Ragdoll will <em>parallelise</em> each invidual scene. The caveat is that rigids in different scenes cannot interact with each other.</p>
+</div>
+<p><br></p>
+<h3 id="ragdoll-clean">Ragdoll Clean</h3>
+<p>Here's a quick way you can use this feature to "clean" a physics scene.</p>
+<ol>
+<li>Export</li>
+<li>Delete All</li>
+<li>Import</li>
+</ol>
+<p>The resulting scene will be "clean" in that it will have been broken down into its componens and reassembled again, not taking into account anything Ragdoll doesn't know about.</p>
+<p><img alt="ragdoll_clean" src="https://user-images.githubusercontent.com/2152766/114266336-b6511c80-99ed-11eb-841c-aa8bca7bf304.gif" /></p>
+<p>(I may just add a menu item for this, called <code>Clean</code> to do this in one go :)</p>
+<p><br></p>
+<h3 id="roadmap">Roadmap</h3>
+<p>A few things became apparent as I rounded off this feature</p>
+<ol>
+<li><strong>Export UI</strong> -  You'll want control over what that thumbnail looks like, currently it'll take a snapshot but not show you what that snapshot looks like until you look at it from the importer</li>
+<li><strong>Remember "root" of each chain</strong> - The importer will recognise what is a Rigid and what is a Chain, but it's having trouble distinguishing the root of each chain. For example, if you made the spine into a chain, followed by the two arms, odds are it'll think the hip leading out to the hand is one chain, and torso to head being another chain, and so on. This isn't an issue when importing a full character, but it'll keep you from being able to import only one of those chains. E.g. just the arm.</li>
+</ol>
+<p><br></p>
+<h3 id="import-python-api">Import Python API</h3>
+<p>Anything the UI can do can be done via Python, using the new <code>dump.Loader</code> object.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">dump</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">dump</span><span class="o">.</span><span class="n">Loader</span><span class="p">()</span>
+<span class="n">loader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;c:\path\to\myRagdoll.rag&quot;</span><span class="p">)</span>
+
+<span class="c1"># Search and replace these terms from the full node path</span>
+<span class="c1"># E.g. |root_grp|arm_left -&gt; |root_grp|arm_right</span>
+<span class="n">loader</span><span class="o">.</span><span class="n">set_replace</span><span class="p">((</span>
+    <span class="p">(</span><span class="s2">&quot;_left&quot;</span><span class="p">,</span> <span class="s2">&quot;_right&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;_ik&quot;</span><span class="p">,</span> <span class="s2">&quot;_fk&quot;</span><span class="p">),</span>
+<span class="p">))</span>
+
+<span class="c1"># An automatic method of search-and-replace, that replaces</span>
+<span class="c1"># any namespaces found in the file with this.</span>
+<span class="c1"># E.g. |char1:root_grp -&gt; |char2:root_grp</span>
+<span class="n">loader</span><span class="o">.</span><span class="n">set_namespace</span><span class="p">(</span><span class="s2">&quot;char2:&quot;</span><span class="p">)</span>
+
+<span class="c1"># Limit imported nodes to those with an absolute path </span>
+<span class="c1"># starting with *any* of these</span>
+<span class="n">loader</span><span class="o">.</span><span class="n">set_roots</span><span class="p">((</span>
+    <span class="s2">&quot;|char1:root_grp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;|char2:root_grp&quot;</span>
+<span class="p">))</span>
+
+<span class="c1"># Deconstruct the provided `.rag` file</span>
+<span class="c1"># (This is what is visualised in the UI)</span>
+<span class="c1"># (The exact layout of this data may change)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+
+<span class="c1"># Print a brief human-readable summary of the current analysis</span>
+<span class="n">loader</span><span class="o">.</span><span class="n">report</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Heads up</p>
+<p>Consider this a version 0.1 of the API, it will likely change in the future.</p>
+</div>
+<p><br></p>
+<h2 id="ragdoll-stability">Ragdoll Stability</h2>
+<p>Implementing import put a lot of strain on Ragdoll.</p>
+<p>Whereas before, authoring physics was a matter of calling one command at a time, playing around with the result, calling another. Maybe undoing every so often.</p>
+<p>Import on the other hand calls <em>tens to hundreds of commands</em> at once, undoing them en masse, redoing them en masse. It exposed a ton of flaws in the system that had gone unnoticed in all but the rarest of occasions. Crashes, a ton of them. The worst kind, the kind that doesn't tell you <em>anyhing</em> about <em>why</em> it crashes.</p>
+<p><img alt="ragdollstability" src="https://user-images.githubusercontent.com/2152766/114273743-3f2e7f00-9a13-11eb-98d4-e03a4531a4c0.gif" /></p>
+<p>The above an example of:</p>
+<ol>
+<li>Authoring lots of physics in different ways</li>
+<li>Undoing all of it</li>
+<li>Redoing all of it</li>
+<li>With no problem!</li>
+</ol>
+<p>I'm happy to say these have all been resolved, and the automated test-suite has grown 10x since the last release. Every command is tested, and tested again with undo, and again with redoing an undone redo. It is rock solid, and fast.</p>
+<p>You can now undo any command as-one, any number of times, redo it any number of times, undo your redo any number of times. Ragdoll will not be the cause of any crashes.</p>
+<p><br></p>
+<h2 id="maya-2022-stability">Maya 2022 Stability</h2>
+<p>Maya 2022 in its current state has proven incapable of reliably supporting Ragdoll.</p>
+<ul>
+<li><a href="https://forums.autodesk.com/t5/maya-programming/maya-2022-dagitem-was-nullptr/td-p/10217589">https://forums.autodesk.com/t5/maya-programming/maya-2022-dagitem-was-nullptr/td-p/10217589</a></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Maya 2022 may crash with Ragdoll</p>
+<p>That's right. Maya 2022 isn't quite baked yet, and needs a Service Pack. Until then, Ragdoll will run reliably so long as you don't delete anything, or try and open a new scene.</p>
+</div>
+<p>In addition to that, the multiplier nodes didn't quite work with Maya 2022, or more specifically with Python 3.</p>
+<div class="highlight"><pre><span></span><code>from<span class="w"> </span>ragdoll<span class="w"> </span>import<span class="w"> </span>interactive<span class="w"> </span>as<span class="w"> </span>ri
+ri.multiply_rigids<span class="o">()</span>
+<span class="c1"># Error: &#39;filter&#39; object is not subscriptable</span>
+<span class="c1"># Traceback (most recent call last):</span>
+<span class="c1">#   File &quot;&lt;maya console&gt;&quot;, line 2, in &lt;module&gt;</span>
+<span class="c1">#   File &quot;C:\Users\marcus\Documents\maya\modules\Ragdoll\python\ragdoll\interactive.py&quot;, line 2112, in multiply_rigids</span>
+<span class="c1">#     root = rigids[0].parent()</span>
+<span class="c1"># TypeError: &#39;filter&#39; object is not subscriptable #</span>
+</code></pre></div>
+<p>There were also crashes happening on deleting rigid bodies from your scene, these got swept away alongside a number of other fixes to the handling of nodes.</p>
+<p>So one step forward, one step back. :)</p>
+<p><br></p>
+<h2 id="edit-shape">Edit Shape</h2>
+<p>A new menu item got added for manipulating shapes with a native Maya transform, as an alternative to fiddling with numbers in the Channel Box.</p>
+<p><img alt="editshape" src="https://user-images.githubusercontent.com/2152766/113729903-5574cc00-96ef-11eb-9c14-37f177c4b219.gif" /></p>
+<p><br></p>
+<h2 id="proxy-attributes">Proxy Attributes</h2>
+<p>In Maya 2018 and 2020, the attributes added to your original animation controls that mirror those of Ragdoll were "proxy attributes". That is, they could be edited from either their original attribute, or the one connected to by your control.</p>
+<p>That's really convenient.</p>
+<p>Turns out, it is also really unstable. Most of the crashes happening so far, especially on deleting physics or starting a new scene, has come from proxy attributes messing everything up. It should't be surprising, even Maya struggles with them.</p>
+<div class="highlight"><pre><span></span><code><span class="n">node</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">)</span>
+<span class="n">shape</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;nurbsCurve&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">node</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s2">&quot;proxyVisibility&quot;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">shape</span> <span class="o">+</span> <span class="s2">&quot;.visibility&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="n">node</span> <span class="o">+</span> <span class="s2">&quot;.proxyVisibility&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">cmds</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span><span class="n">node</span> <span class="o">+</span> <span class="s2">&quot;.proxyVisibility&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># What should happen to the proxy attribute? :O</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">cmds</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span><span class="n">node</span> <span class="o">+</span> <span class="s2">&quot;.proxyVisibility&quot;</span><span class="p">)</span>
+<span class="c1"># RuntimeError: The value for the attribute could not be retrieved. # </span>
+</code></pre></div>
+<p>The same thing applies with access from the API. It just doesn't know what's going on. If we're lucky - which we have been so far - it'll just fail and tell you about it. Other times it'll fail and take Maya down with it. That's just bad.</p>
+<p>In Maya 2019, the problem was so severe that proxy attributes were simply not used. With this release, no proxy attributes are used.</p>
+<p>I hope to reintroduce them at a later date, once I discover is a safe method (read: workaround) to using them.</p>
+<p><br></p>
+<h2 id="python-api-consistency">Python API Consistency</h2>
+<p>The good news is, the Python API is maturing. The bad news is, this release introduces backwards incompatible changes.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">cube</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">scene</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">createScene</span><span class="p">()</span>
+<span class="n">rigid</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">createRigid</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</code></pre></div>
+<p>So far so good.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Before</span>
+<span class="n">api</span><span class="o">.</span><span class="n">socketConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">maintain_offset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># After</span>
+<span class="n">api</span><span class="o">.</span><span class="n">socketConstraint</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;maintainOffset&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+</code></pre></div>
+<p>Here's the change. These behavior-like arguments have been moved into an <code>opts={}</code> argument, and is now consistent across any commands that take "options". It's to faciliate a large number of options, both from the UI and scripting and enhance compatibility over time; with a dictionary, you can test for availability of arguments at run-time, as opposed to suffer the consequences of not being able to call an update function.</p>
+<p>I'm still exploring ways of getting more options into commands, without polluting the argument signature, without changing their order when an argument is deprecated, or changing an argument name when jargon inevitably changes. Using a dictionary for options-like arguments enables us to pass arbitrary sized options to functions, they can also be passed to functions that don't necessarily <em>need</em> all contained options, meaning you can establish a single options dictionary up-front and pass that to all relevant functions.</p>
+<p>It's too soon to tell whether the cons of this approach outweighs the pros. This is one reason for the API still going through changes.</p>
+<p>The non-optional arguments are those that are never intended to change, like the <code>createRigid(node)</code> argument. Every rigid needs something to make rigid. (Or so you'd think, as you can now also create a rigid from a new empty transform).</p>
+<p>So, the API has changed and will continue changing for a while longer.</p>
+<p><strong>Node/Attribute format</strong></p>
+<p>The Ragdoll scene format is stable and has been for months. It will remain compatible with future versions of Ragdoll, which means anything you build today (or months ago) will continue to work identically.</p>
+<p>The Python API on the other hand is not yet refined and is still changing. So when you build tools ontop of Ragdoll, keep in mind that nodes, their attributes and their connections are <em>stable</em>, but the means of creating those connections are not. So if you need stability <em>today</em>, look at what nodes and connections are made by the API, and do it yourself.</p>
+<p><br></p>
+<h2 id="ragdoll-explorer">Ragdoll Explorer</h2>
+<blockquote>
+<p>For developers</p>
+</blockquote>
+<p>Explorer has gotten an update, inching its way towards Outliner-like behavior and feel. Eventually maybe even an integration with the Outliner, similar to how USD slots into Maya 2022. That's quite neat!</p>
+<p><img alt="ragdollexplorer3" src="https://user-images.githubusercontent.com/2152766/113552099-9389c700-95ed-11eb-80ac-395bcededac9.gif" /></p>
+<p><br></p>
+<h2 id="logging-level">Logging Level</h2>
+<p>You can now tune the way Ragdoll communicates with you.</p>
+<ul>
+<li><code>Off</code> means it won't tell you anything, not even warnings</li>
+<li><code>Default</code> is what you've gotten used to so far</li>
+<li><code>Less</code> only shows you important messages that require you to take action</li>
+<li><code>More</code> is the full monty, performance metrics, detailed messages, you name it</li>
+</ul>
+<details class="hint">
+<summary>Programmer Jargon</summary>
+<p>These are animator-friendly jargon for the native <code>logging.INFO</code> and <code>logging.WARNING</code> levels. "Off" means <code>logging.CRITICAL</code> since Ragdoll does not emit any critical messages.</p>
+</details>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/113988393-56b90c80-9847-11eb-8c3b-f9785772dc14.png" /></p>
+<p><br></p>
+<h2 id="developer-updates">Developer Updates</h2>
+<p>A few things has been improved for those using Ragdoll as an authoring platform for other software like Unreal and general game engines.</p>
+<p><br></p>
+<h3 id="new-components">New Components</h3>
+<p>The export format has been graced with new components to accommodate for the import feature. As the name suggests, these are stricly related to UI and aren't required for reproducing the physics in another application or engine.</p>
+<p>They are meant to cover user elements in Maya such that they can be accurately reproduced on re-import back into Maya.</p>
+<p><strong>New Components</strong></p>
+<ul>
+<li><code>RigidUIComponent</code></li>
+<li><code>ConstraintUIComponent</code></li>
+<li><code>LimitUIComponent</code></li>
+<li><code>DriveUIComponent</code></li>
+<li><code>RigidMultiplierUIComponent</code></li>
+<li><code>ConstraintMultiplierUIComponent</code></li>
+</ul>
+<p>Here's what the new components may look like in your exported file.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RigidUIComponent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;shaded&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;airDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;shapeIcon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transform&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;multiplierEntity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Entity&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ConstraintUIComponent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;multiplierEntity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Entity&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;childIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LimitUIComponent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;angularStiffness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000000.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;angularDamping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10000.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;linearStiffness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000000.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;linearDamping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10000.0</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DriveUIComponent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;angularStiffness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10000.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;angularDamping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;linearStiffness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;linearDamping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<p>There's also an added section for "ui" related data, most interestingly a base64-encoded QPixmap of a <code>thumbnail</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;ui&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;filename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:/scenes/demo/advancedskeleton5.rag&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;thumbnail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;iVBORw0KGgoAAAAN ... lots more characters ...&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>That can be converted like this.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ragdoll</span> <span class="kn">import</span> <span class="n">ui</span>
+<span class="n">qpixmap</span> <span class="o">=</span> <span class="n">ui</span><span class="o">.</span><span class="n">base64_to_pixmap</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ui&quot;</span><span class="p">][</span><span class="s2">&quot;thumbnail&quot;</span><span class="p">])</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="backwards-incompatibility">Backwards Incompatibility</h3>
+<p>The export format has changed slightly, here's what you need to know.</p>
+<ol>
+<li><code>NameComponent.path</code> was changed from the full path + Ragdoll node to just full path.</li>
+<li>Entity values are now types instead of plain integers</li>
+</ol>
+<p>Example</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Before</span>
+<span class="o">|</span><span class="n">root_grp</span><span class="o">|</span><span class="n">spine1_ctrl</span><span class="o">|</span><span class="n">upperArm_ctrl</span><span class="o">|</span><span class="n">rRigid3</span>
+
+<span class="c1"># After</span>
+<span class="o">|</span><span class="n">root_grp</span><span class="o">|</span><span class="n">spine1_ctrl</span><span class="o">|</span><span class="n">upperArm_ctrl</span>
+</code></pre></div>
+<p>Some values were entities themselves, but there wasn't any way of knowing unless you explicitly new that <code>JointComponent.parent</code> is in fact an entity. This has now been addressed, and all entities now carry a <code>["type"]</code> signature.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Before</span>
+<span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;JointComponent&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;disableCollision&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;parent&quot;</span><span class="p">:</span> <span class="mi">16</span>
+        <span class="s2">&quot;child&quot;</span><span class="p">:</span> <span class="mi">15</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># After</span>
+<span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;JointComponent&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;disableCollision&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;parent&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Entity&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">16</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;child&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Entity&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">15</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2023-10-06
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../2021.04.23/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2021.04.23
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2021.03.25/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2021.03.25
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020-2022 mottosso
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3437 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The real-time physics solver for Maya">
+      
+      
+      
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/serialisation/">
+      
+      
+        <meta name="author" content="mottosso">
+      
+      <link rel="shortcut icon" href="../favicon-256x256.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-6.1.6">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>Serialisation - Learn Ragdoll</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-header-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learn Ragdoll
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Serialisation
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://learn.ragdolldynamics.com/" title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll">
+      
+  <img src="../ragdoll_silhouette_black_512.png" alt="logo">
+
+    </a>
+    Learn Ragdoll
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mottosso/ragdoll" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mottosso/ragdoll
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-3"
+          type="checkbox"
+          id="nav-3"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-3">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Documentation"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/marker/" class="md-nav__link">
+        
+        <img src="/icons/marker_black.png">
+        
+
+        Marker
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/group/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Group
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/solver/" class="md-nav__link">
+        
+        <img src="/icons/solver_black.png">
+        
+
+        Solver
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/environment/" class="md-nav__link">
+        
+        <img src="/icons/environment_black.png">
+        
+
+        Environment
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/manipulator/" class="md-nav__link">
+        
+        <img src="/icons/manipulator_black.png">
+        
+
+        Manipulator
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/live_mode/" class="md-nav__link">
+        
+        <img src="/icons/magnet_black.png">
+        
+
+        Live Mode
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/locomotion/" class="md-nav__link">
+        
+        <img src="/icons/plan_black.png">
+        
+
+        Locomotion
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/constraints/" class="md-nav__link">
+        
+        <img src="/icons/constraint_black.png">
+        
+
+        Constraints
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/fields/" class="md-nav__link">
+        
+        <img src="/icons/force_black.png">
+        
+
+        Fields
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/import_physics/" class="md-nav__link">
+        
+        <img src="/icons/save_black.png">
+        
+
+        Import Physics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/record_simulation/" class="md-nav__link">
+        
+        <img src="/icons/record_black.png">
+        
+
+        Record Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/snap_to_simulation/" class="md-nav__link">
+        
+        <img src="/icons/snap_black.png">
+        
+
+        Snap to Simulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/retargeting/" class="md-nav__link">
+        
+        <img src="/icons/retarget_black.png">
+        
+
+        Retargeting
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/level_of_detail/" class="md-nav__link">
+        
+        <img src="/icons/hair2_black.png">
+        
+
+        Level Of Detail
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/cache/" class="md-nav__link">
+        
+        <img src="/icons/bake_black.png">
+        
+
+        Cache
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/link/" class="md-nav__link">
+        
+        <img src="/icons/link_black.png">
+        
+
+        Link
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../documentation/utilities/" class="md-nav__link">
+        
+        <img src="/icons/replace_black.png">
+        
+
+        Utilities
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-4"
+          type="checkbox"
+          id="nav-4"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-4">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Tutorials"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/videos/" class="md-nav__link">
+        
+        <img src="/icons/camera_black.png">
+        
+
+        Videos
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Manikin
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin_ragdoll/" class="md-nav__link">
+        
+        <img src="/icons/ragdoll_black.png">
+        
+
+        Full Ragdoll
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/manikin_ik/" class="md-nav__link">
+        
+        <img src="/icons/chain_black.png">
+        
+
+        Inverse Kinematics
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/mocap_chap/" class="md-nav__link">
+        
+        <img src="/icons/mocap_black.png">
+        
+
+        Mocap Chap
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/rookie_wasp/" class="md-nav__link">
+        
+        <img src="/icons/wasp_black.png">
+        
+
+        Rookie Wasp
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/ragdog/" class="md-nav__link">
+        
+        <img src="/icons/bone_black.png">
+        
+
+        Ragdog
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/cloth_emulation/" class="md-nav__link">
+        
+        <img src="/icons/cloth_black.png">
+        
+
+        Cloth Emulation
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/self_walking/" class="md-nav__link">
+        
+        <img src="/icons/control_black.png">
+        
+
+        Self Walking
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/bouncing_ball/" class="md-nav__link">
+        
+        <img src="/icons/physics_black.png">
+        
+
+        Bouncing Ball
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../menu/" class="md-nav__link">
+        
+
+        Menu Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+
+        API Reference
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../licencing/" class="md-nav__link">
+        
+
+        Licencing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+    
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- Active checkbox expands items contained within nested section -->
+      <input
+        class="md-nav__toggle md-toggle"
+        data-md-toggle="toc"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+
+      <!-- Render table of contents, if not empty -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Serialisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+
+        Serialisation
+      </a>
+
+      <!-- Show table of contents -->
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecases" class="md-nav__link">
+    Usecases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-body" class="md-nav__link">
+    Rigid Body
+  </a>
+  
+    <nav class="md-nav" aria-label="Rigid Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive" class="md-nav__link">
+    Drive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    Output Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example" class="md-nav__link">
+    Code Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-examples" class="md-nav__link">
+    More Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="More Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tiger" class="md-nav__link">
+    Tiger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragcar" class="md-nav__link">
+    Ragcar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-skeleton" class="md-nav__link">
+    Advanced Skeleton
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Main navigation item -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-10"
+          type="checkbox"
+          id="nav-10"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-10">
+        News
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="News"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-10">
+          <span class="md-nav__icon md-icon"></span>
+          News
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2023.10.03/" class="md-nav__link">
+        
+
+        2023.10.03
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2023.04.01/" class="md-nav__link">
+        
+
+        2023.04.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.11.29/" class="md-nav__link">
+        
+
+        2022.11.29
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.07.20/" class="md-nav__link">
+        
+
+        2022.07.20
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.06.15/" class="md-nav__link">
+        
+
+        2022.06.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.06.09/" class="md-nav__link">
+        
+
+        2022.06.09
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.05.04/" class="md-nav__link">
+        
+
+        2022.05.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.03.14/" class="md-nav__link">
+        
+
+        2022.03.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.28/" class="md-nav__link">
+        
+
+        2022.02.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.14/" class="md-nav__link">
+        
+
+        2022.02.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.02.01/" class="md-nav__link">
+        
+
+        2022.02.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.01.21/" class="md-nav__link">
+        
+
+        2022.01.21
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2022.01.17/" class="md-nav__link">
+        
+
+        2022.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.12.15/" class="md-nav__link">
+        
+
+        2021.12.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.12.12/" class="md-nav__link">
+        
+
+        2021.12.12
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.11.15/" class="md-nav__link">
+        
+
+        2021.11.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.10.25/" class="md-nav__link">
+        
+
+        2021.10.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.10.07/" class="md-nav__link">
+        
+
+        2021.10.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.09.27/" class="md-nav__link">
+        
+
+        2021.09.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.08.28/" class="md-nav__link">
+        
+
+        2021.08.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.08.06/" class="md-nav__link">
+        
+
+        2021.08.06
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.27/" class="md-nav__link">
+        
+
+        2021.07.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.15/" class="md-nav__link">
+        
+
+        2021.07.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.07.02/" class="md-nav__link">
+        
+
+        2021.07.02
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.10/" class="md-nav__link">
+        
+
+        2021.06.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.06.07/" class="md-nav__link">
+        
+
+        2021.06.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.17/" class="md-nav__link">
+        
+
+        2021.05.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.05.10/" class="md-nav__link">
+        
+
+        2021.05.10
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.28/" class="md-nav__link">
+        
+
+        2021.04.28
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.23/" class="md-nav__link">
+        
+
+        2021.04.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.04.11/" class="md-nav__link">
+        
+
+        2021.04.11
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.25/" class="md-nav__link">
+        
+
+        2021.03.25
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.23/" class="md-nav__link">
+        
+
+        2021.03.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.11/" class="md-nav__link">
+        
+
+        2021.03.11
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.04/" class="md-nav__link">
+        
+
+        2021.03.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.03.01/" class="md-nav__link">
+        
+
+        2021.03.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.02.07/" class="md-nav__link">
+        
+
+        2021.02.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.27/" class="md-nav__link">
+        
+
+        2021.01.27
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.17/" class="md-nav__link">
+        
+
+        2021.01.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.15/" class="md-nav__link">
+        
+
+        2021.01.15
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.14/" class="md-nav__link">
+        
+
+        2021.01.14
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2021.01.04/" class="md-nav__link">
+        
+
+        2021.01.04
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.18/" class="md-nav__link">
+        
+
+        2020.12.18
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.07/" class="md-nav__link">
+        
+
+        2020.12.07
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.12.01/" class="md-nav__link">
+        
+
+        2020.12.01
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.24/" class="md-nav__link">
+        
+
+        2020.11.24
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.23/" class="md-nav__link">
+        
+
+        2020.11.23
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.22/" class="md-nav__link">
+        
+
+        2020.11.22
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.17/" class="md-nav__link">
+        
+
+        2020.11.17
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.16/" class="md-nav__link">
+        
+
+        2020.11.16
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../releases/2020.11.10/" class="md-nav__link">
+        
+
+        2020.11.10
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+
+    <!-- Determine whether to render item as a section -->
+    
+
+    <!-- Render item with nested items -->
+    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Active checkbox expands items contained within nested section -->
+      
+      
+        <input
+          class="md-nav__toggle md-toggle"
+          data-md-toggle="nav-11"
+          type="checkbox"
+          id="nav-11"
+          
+        />
+      
+
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="nav-11">
+        Blog
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav
+        class="md-nav"
+        aria-label="Blog"
+        data-md-level="1"
+      >
+        <label class="md-nav__title" for="nav-11">
+          <span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+
+          <!-- Render nested item list -->
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="https://forums.ragdolldynamics.com/t/questions-about-the-legal-part-of-selling-plugins-from-colleague-developer/1110/3" class="md-nav__link">
+        
+
+        Building a Business
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20220809/" class="md-nav__link">
+        
+
+        SIGGRAPH 2022
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20210728_announce_1_0/" class="md-nav__link">
+        
+
+        Launch Announcement
+      </a>
+    </li>
+  
+
+          
+            
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../blog/20210713_july28/" class="md-nav__link">
+        
+
+        Launch Date
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+  <!-- Determine class according to state -->
+  
+  
+
+  <!-- Main navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecases" class="md-nav__link">
+    Usecases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-body" class="md-nav__link">
+    Rigid Body
+  </a>
+  
+    <nav class="md-nav" aria-label="Rigid Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint" class="md-nav__link">
+    Constraint
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive" class="md-nav__link">
+    Drive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    Output Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example" class="md-nav__link">
+    Code Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-examples" class="md-nav__link">
+    More Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="More Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tiger" class="md-nav__link">
+    Tiger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ragcar" class="md-nav__link">
+    Ragcar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-skeleton" class="md-nav__link">
+    Advanced Skeleton
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+                  <a href="https://github.com/mottosso/ragdoll/edit/main/docs/pages/serialisation.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Serialisation</h1>
+                
+                <div class="hero-container">
+  <img class="hero-image" src=/yoga13.png>
+</div>
+
+<p>Serialise all rigid bodies to JSON, for import into external software such as Unreal, Unity, Godot, CryEngine or any other engine able to read and parse JSON, including your own custom game engine.</p>
+<div class="admonition info">
+<p class="admonition-title">Units</p>
+<ul>
+<li>All linear units are in <code>centimeters</code></li>
+<li>All angular units are in <code>radians</code></li>
+<li>All quaternions are ordered <code>XYZW</code></li>
+</ul>
+</div>
+<p><br></p>
+<h2 id="overview">Overview</h2>
+<p>On playback, Ragdoll generates a physical representation of your Maya scene, suitable for simulation. You can gain access to that representation, independent of Maya, for use in your own software and for your own purposes.</p>
+<p>This enables you to use Maya as an authoring environment for general-purpose physics scenes, including full or partial ragdolls, for characters or props and even full environments.</p>
+<h4 id="target-audience">Target Audience</h4>
+<ul>
+<li><strong>Game programmers</strong> working on a custom engine</li>
+<li><strong>Technical Directors</strong> working with e.g. Unreal Engine, Unity or CryEngine</li>
+<li><strong>Roboticists</strong> exploring algorithms on humanoids with rigid bodies</li>
+<li><strong>Scientists</strong> in Machine Learning in need of bespoke ragdolls for their work</li>
+</ul>
+<h4 id="usecases">Usecases</h4>
+<p>Once a ragdoll has been authored in Maya, it can be exported for later import into external software for a variety of purposes.</p>
+<ul>
+<li><strong>Game Development</strong> where main or secondary characters need a physics representation</li>
+<li><strong>Virtual Production</strong> where you need Motion Builder or Unreal Engine to reproduce physics happening in Maya for real-time feedback</li>
+<li><strong>Robotics</strong> where you want interactive control over parameters that are also applied to a physical real-world equivalent, like Boston Dynamics's Atlas</li>
+<li><strong>Reinforcement Learning</strong> where algorithm and articulation depend on each other and are iterated upon in parallel, like OpenAI's gym environments and algorithms</li>
+<li><strong>Debugging</strong> in cases where odd things happen and you just require deep insight into what the solver sees</li>
+</ul>
+<p><br></p>
+<h2 id="concepts">Concepts</h2>
+<p>Ragdoll internally stores data as "entities" and "components".</p>
+<ul>
+<li>Entity is a unique identifier for any "thing" in the solver, like a rigid body, a constraint or force.</li>
+<li>Component is a set of data, like the transformation or rigid body properties, associated to an entity</li>
+</ul>
+<p>The exported format reflects this relationship and looks something like this.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;upperArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;15&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;components&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NameComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;lowerArm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ColorComponent&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+        <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;Box&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="rigid-body">Rigid Body</h2>
+<p>A single translation/rotation pair.</p>
+<p><strong>Components</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>NameComponent</code></td>
+<td style="text-align: left;">Name and path in Maya</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ColorComponent</code></td>
+<td style="text-align: left;">Used in Maya viewport</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SceneComponent</code></td>
+<td style="text-align: left;">Reference to the scene entity this rigid belongs to</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RestComponent</code></td>
+<td style="text-align: left;">Initial transformation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RigidComponent</code></td>
+<td style="text-align: left;">Physics attributes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GeometryDescriptionComponent</code></td>
+<td style="text-align: left;">Shape attributes</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;RigidComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RigidComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;mass&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;friction&quot;</span><span class="p">:</span> <span class="mf">0.80</span><span class="p">,</span>
+    <span class="s2">&quot;restitution&quot;</span><span class="p">:</span> <span class="mf">0.10</span><span class="p">,</span>
+    <span class="s2">&quot;thickness&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;disableGravity&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;collide&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;kinematic&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;sleeping&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;positionIterations&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;velocityIterations&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;maxContactImpulse&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;maxDepenetrationVelocity&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;sleepThreshold&quot;</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span>
+    <span class="s2">&quot;enableCCD&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+
+    <span class="c1"># A value of -1 means &quot;automatically computed&quot;</span>
+    <span class="s2">&quot;angularMass&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># A value of 0 means &quot;automatically computed&quot;</span>
+    <span class="s2">&quot;centerOfMass&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="shape">Shape</h3>
+<p>Every rigid has exactly one collision shape. The transformation of this shape can be optionally offset, and that offset happens in the frame of the rigid.</p>
+<div class="highlight"><pre><span></span><code>    ________
+ ^ |\       \
+ | | \_______\
+ | |  |      |
+ o--\-|-&gt;    |
+  \  \|______|
+   \
+    v
+</code></pre></div>
+<p>In this example, the center of the box is offset from the center of the rigid along the X axis. Notice how the geometry is relative the axis of the rigid, so rotating the rigid along the Z axis would naturally take the geometry with it.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">,</span>
+
+    <span class="c1"># Used by Capsule</span>
+    <span class="s2">&quot;length&quot;</span><span class="p">:</span> <span class="mf">0.123</span><span class="p">,</span>
+
+    <span class="c1"># Used by Sphere</span>
+    <span class="s2">&quot;radius&quot;</span><span class="p">:</span> <span class="mf">0.012</span><span class="p">,</span>
+
+    <span class="c1"># Used by Box</span>
+    <span class="s2">&quot;extents&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.123</span><span class="p">,</span> <span class="mf">0.024</span><span class="p">,</span> <span class="mf">0.0247</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Translation relative the associated rigid</span>
+    <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.033</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Rotation relative the associated rigid</span>
+    <span class="c1"># Ordered as XYZW</span>
+    <span class="s2">&quot;rotation&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.87</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.47</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="constraint">Constraint</h2>
+<p>A relationship between two rigid bodies is referred to as a "constraint". A constraint <em>constrains</em> the way two rigid bodies move relative each other.</p>
+<p>For example, the position of the lower arm is typically associated with the tip of the upper arm. Wherever the upper arm goes, the lower arm must follow. It may also be further limited in how it is oriented, to e.g. prevent a lower arm from bending past the natural elbow limit; i.e. to rotate between 20-180 degrees along the Z axis, and 0-10 degrees around the X and Y axis (as that rotation would normally come from twisting the upper arm).</p>
+<ul>
+<li>All constraints are bi-directional</li>
+<li>Rigid A attaches to B, as B attaches to A</li>
+<li>The point on A where B attaches is referred to as the <code>parentFrame</code></li>
+<li>The point on B where A attaches is referred to as the <code>childFrame</code></li>
+</ul>
+<p>Despite the name, there is no notion of hierarchy or "parent" in Ragdoll; the naming reflects the hierarchy as represented in Maya, where constraints are parented to the rigid representing the <code>childFrame</code>.</p>
+<p><strong>Components</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>JointComponent</code></td>
+<td style="text-align: left;">References to associated rigids and frame matrices</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LimitComponent</code></td>
+<td style="text-align: left;">Optional limits on translation and/or rotation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DriveComponent</code></td>
+<td style="text-align: left;">Optional target transformation, i.e. the animation</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;JointComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;JointComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+    <span class="c1"># Reference to the associated rigid body entities</span>
+    <span class="s2">&quot;parent&quot;</span><span class="p">:</span> <span class="mi">1048586</span><span class="p">,</span>
+    <span class="s2">&quot;child&quot;</span><span class="p">:</span> <span class="mi">1048584</span><span class="p">,</span>
+
+    <span class="c1"># The translate/rotate of the parent</span>
+    <span class="c1"># rigid in the frame of child rigid</span>
+    <span class="s2">&quot;parentFrame&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.760</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.594</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.259</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.648</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.680</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.340</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0262</span><span class="p">,</span> <span class="mf">0.4274</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.903</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">10.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.646</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># The translate/rotate of the child</span>
+    <span class="c1"># rigid in the frame of parent rigid</span>
+    <span class="s2">&quot;childFrame&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.606</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.751</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.259</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.785</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.515</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.340</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.122</span><span class="p">,</span> <span class="mf">0.4103</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.903</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+
+    <span class="c1"># Allow intersections between connected rigids</span>
+    <span class="s2">&quot;disableCollision&quot;</span><span class="p">:</span> <span class="n">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="limit">Limit</h3>
+<p>Constraints may optionally have a "limit", which means it can keep a rigid within a given angle ("angular limit") or position ("linear limit").</p>
+<div class="admonition note">
+<p class="admonition-title">Min &amp; Max</p>
+<p>Values represent a upper end of a <em>range</em>. With <code>x=5</code> the minimum value of the linear X axis is <code>-5</code>.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;LimitComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LimitComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>           <span class="c1"># Linear limit along the X-axis</span>
+    <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;twist&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>       <span class="c1"># Angular limit along the X-axis</span>
+    <span class="s2">&quot;swing1&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>      <span class="c1"># ..Y</span>
+    <span class="s2">&quot;swing2&quot;</span><span class="p">:</span> <span class="mf">0.78</span><span class="p">,</span>      <span class="c1"># ..Z</span>
+    <span class="s2">&quot;angularStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearStiffness&quot;</span><span class="p">:</span> <span class="mf">1000000.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">10000.0</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Locked, Free or Limited</p>
+<p>A value of <code>-1</code> means the axis is "Locked", i.e. the value along this axis cannot change. A Point Constraint is typically locked on all linear axes, but free on the angular axes. A value of <code>0</code> means the axis if "Free", meaning it has no effect. It is "limitless". A value above <code>0</code> indicates the range of a given limit.</p>
+<ul>
+<li><code>&lt;0</code> means Locked</li>
+<li><code>=0</code> means Free</li>
+<li><code>&gt;0</code> means Limited</li>
+</ul>
+</div>
+<p><br></p>
+<h3 id="drive">Drive</h3>
+<p>A constraint may optionally have a "drive", which means having one rigid reach a <code>target</code> position and/or angle relative another rigid. The typical use case is having simulation match your input animation, where the animation provides the positions and angles.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;DriveComponent&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DriveComponent&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;linearStiffness&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;linearDamping&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularStiffness&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
+    <span class="s2">&quot;angularDamping&quot;</span><span class="p">:</span> <span class="mf">1000.0</span><span class="p">,</span>
+    <span class="s2">&quot;acceleration&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">0.973</span><span class="p">,</span> <span class="mf">0.2267</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="o">-</span><span class="mf">0.226</span><span class="p">,</span> <span class="mf">0.973</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="mf">0.1051</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.006</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="data-types">Data Types</h2>
+<p>In addition to the plain-old-data types <code>int</code>, <code>double</code> and <code>bool</code>, these are all possible data types found in the exported JSON.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Color4&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">0.4429999887943268</span><span class="p">,</span>  <span class="c1"># red</span>
+    <span class="mf">0.7049999833106995</span><span class="p">,</span>  <span class="c1"># green</span>
+    <span class="mf">0.9520000219345093</span>   <span class="c1"># blue</span>
+    <span class="mf">1.0</span>                  <span class="c1"># alpha</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">100.00001788139201</span><span class="p">,</span>  <span class="c1"># x</span>
+    <span class="mf">100.00001788139201</span><span class="p">,</span>  <span class="c1"># y</span>
+    <span class="mf">100.00000000000003</span>   <span class="c1"># z</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">0.8791841887437938</span><span class="p">,</span>     <span class="c1"># x</span>
+    <span class="o">-</span><span class="mf">0.47648206919348187</span><span class="p">,</span>   <span class="c1"># y</span>
+    <span class="o">-</span><span class="mf">2.7953360940182678e-8</span><span class="p">,</span> <span class="c1"># z</span>
+    <span class="mf">1.191501461145112e-7</span>    <span class="c1"># w</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+  <span class="c1"># Unscaled, unsheared matrix</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># rotation matrix</span>
+    <span class="mf">0.0</span><span class="p">,</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateX</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateY</span>
+    <span class="mf">0.0</span><span class="p">,</span> <span class="c1"># translateZ</span>
+    <span class="mf">1.0</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<h2 id="reference">Reference</h2>
+<h3 id="components">Components</h3>
+<p>These are all possible types of components found in the exported JSON.</p>
+<ul>
+<li><code>SolverComponent</code></li>
+<li><code>SceneComponent</code></li>
+<li><code>NameComponent</code></li>
+<li><code>ColorComponent</code></li>
+<li><code>RestComponent</code></li>
+<li><code>ScaleComponent</code></li>
+<li><code>RigidComponent</code></li>
+<li><code>GeometryDescriptionComponent</code></li>
+<li><code>JointComponent</code></li>
+<li><code>DriveComponent</code></li>
+<li><code>LimitComponent</code></li>
+<li><code>ConstraintUIComponent</code></li>
+<li><code>RigidUIComponent</code></li>
+<li><code>DriveUIComponent</code></li>
+<li><code>LimitUIComponent</code></li>
+</ul>
+<p><br></p>
+<h3 id="output-example">Output Example</h3>
+<p>Here's an example of what a complete dump looks like.</p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/ca60e9846f1becfa0c1a12681e73c917">Ragdoll Dump Output Example</a></li>
+</ul>
+<p><img alt="" src="https://user-images.githubusercontent.com/47274066/111270004-38386a80-8627-11eb-929b-caa7b04a4f49.png" /></p>
+<p><br></p>
+<h3 id="code-example">Code Example</h3>
+<p>Test your dump, by re-building the scene in Maya.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/47274066/111279930-22c93d80-8633-11eb-956d-c65730a2049f.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">ragdoll.vendor</span> <span class="kn">import</span> <span class="n">cmdx</span>
+
+
+<span class="k">class</span> <span class="nc">Component</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simplified access to component members&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;members&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span>
+
+        <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Vector3&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Color4&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Matrix44&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Matrix4</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Quaternion&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">Quaternion</span><span class="p">(</span><span class="o">*</span><span class="n">value</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unsupported type: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">dedump</span><span class="p">(</span><span class="n">dump</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagModifier</span><span class="p">()</span> <span class="k">as</span> <span class="n">mod</span><span class="p">:</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dump&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">entity</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dump</span><span class="p">[</span><span class="s2">&quot;entities&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">comps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;components&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="s2">&quot;RigidComponent&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">comps</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;NameComponent&quot;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="c1"># Bad export</span>
+            <span class="k">continue</span>
+
+        <span class="n">joint</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;ScaleComponent&quot;</span><span class="p">])</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;RestComponent&quot;</span><span class="p">])</span>
+        <span class="n">desc</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">comps</span><span class="p">[</span><span class="s2">&quot;GeometryDescriptionComponent&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Establish rigid transformation</span>
+        <span class="n">tm</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">TransformationMatrix</span><span class="p">(</span><span class="n">rest</span><span class="o">.</span><span class="n">matrix</span><span class="p">)</span>
+
+        <span class="c1"># Establish shape</span>
+        <span class="k">if</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Cylinder&quot;</span><span class="p">,</span> <span class="s2">&quot;Capsule&quot;</span><span class="p">):</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCylinder</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                                       <span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">,</span>
+                                       <span class="n">height</span><span class="o">=</span><span class="n">length</span><span class="p">,</span>
+                                       <span class="n">roundCap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                       <span class="n">subdivisionsCaps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;Box&quot;</span><span class="p">:</span>
+            <span class="n">extents</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">extents</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+            <span class="n">extents</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">z</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polyCube</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+                                   <span class="n">height</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+                                   <span class="n">depth</span><span class="o">=</span><span class="n">extents</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;Sphere&quot;</span><span class="p">:</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+            <span class="n">geo</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">polySphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unsupported shape type: </span><span class="si">%s</span><span class="s2">.type=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">desc</span><span class="o">.</span><span class="n">type</span><span class="p">))</span>
+            <span class="k">continue</span>
+
+        <span class="k">with</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">DagModifier</span><span class="p">()</span> <span class="k">as</span> <span class="n">mod</span><span class="p">:</span>
+            <span class="n">transform</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">joint</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
+            <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">translation</span><span class="p">()</span>
+            <span class="n">transform</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">rotation</span><span class="p">()</span>
+
+        <span class="c1"># Establish shape transformation</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">offset</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">offset</span><span class="o">.</span><span class="n">z</span> <span class="o">*=</span> <span class="n">scale</span><span class="o">.</span><span class="n">absolute</span><span class="o">.</span><span class="n">z</span>
+
+        <span class="n">geo</span> <span class="o">=</span> <span class="n">cmdx</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
+        <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;translate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">offset</span>
+        <span class="n">geo</span><span class="p">[</span><span class="s2">&quot;rotate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">rotation</span>
+
+        <span class="n">transform</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">geo</span><span class="p">)</span>
+
+
+<span class="c1"># Usage Example    </span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">ragdollDump</span><span class="p">()</span>
+<span class="n">dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
+<span class="n">dedump</span><span class="p">(</span><span class="n">dump</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<h3 id="more-examples">More Examples</h3>
+<h4 id="tiger">Tiger</h4>
+<p>Courtesy of <a href="http://www.cgspectrum.com">www.cgspectrum.com</a></p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/de0d1a54cab0f607bee3bef402042458"><code>mytiger.rag</code></a></li>
+</ul>
+<p><img width=400 src=https://user-images.githubusercontent.com/2152766/114277144-e87c7180-9a21-11eb-820d-7ef815c720ae.png></p>
+<h4 id="ragcar">Ragcar</h4>
+<p>Model from <a href="https://mecabricks.com">https://mecabricks.com</a></p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/507e3116164a4b57b4fe8228216d70e0"><code>ragcar.rag</code></a></li>
+</ul>
+<p><img width=400 src=https://user-images.githubusercontent.com/2152766/114277217-36917500-9a22-11eb-9120-efc0c6b011e6.png></p>
+<h4 id="advanced-skeleton">Advanced Skeleton</h4>
+<p>A generic human character, rigged with AS.</p>
+<ul>
+<li><a href="https://gist.github.com/mottosso/6eed067563330d4f2041a89a506f9a6e"><code>mycharacter.rag</code></a></li>
+</ul>
+<p><img width=400 src=https://user-images.githubusercontent.com/2152766/114277250-5fb20580-9a22-11eb-8d3a-520ae4ef8f94.png></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2023-10-06
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../licencing/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Licencing
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../releases/2023.10.03/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2023.10.03
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020-2022 mottosso
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../extra.js"></script>
+      
+    
+  </body>
+</html>
