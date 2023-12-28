@@ -29,6 +29,10 @@ a.md-nav__link img {
   margin-right: 3px;
 }
 
+.md-nav__link {
+  justify-content: flex-start;
+}
+
 [data-md-color-primary="white"] .md-nav__link--active,
 [data-md-color-primary="white"] .md-nav__link:active,
 [data-md-color-primary="white"] .md-nav__link {
