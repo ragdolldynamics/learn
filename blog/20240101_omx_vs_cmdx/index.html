@@ -2752,6 +2752,10 @@
 </tbody>
 </table>
 <p>Both omx and cmdx thinly wrap the Maya API, so both of their bottlenecks is Maya itself.</p>
+<div class="admonition hint">
+<p class="admonition-title">Source</p>
+<p>Tested on Maya 2024, Windows, source <a href="https://gist.github.com/mottosso/f967b388a2540fdf165dd5b3b6f1c2ca">here</a></p>
+</div>
 <div class="admonition bug">
 <p class="admonition-title">Bad performance</p>
 <p>The <a href="https://animallogic.github.io/AL_omx/introduction/perf_compare.html">AL performance comparison</a> of <code>cmds</code> ability to create is off by 3x, clocking in at 15 seconds.</p>
@@ -2876,11 +2880,15 @@
 <span class="k">def</span> <span class="nf">undo</span><span class="p">():</span>
     <span class="n">deleteNode</span><span class="p">()</span>
 </code></pre></div>
-<p>Maya implements undo via the "<a href="https://gameprogrammingpatterns.com/command.html">Command Pattern</a>". But there are others too, such as the "<a href="https://en.wikipedia.org/wiki/Memento_pattern">Memento Pattern</a>" utilised by Blender.</p>
-<blockquote>
-<p>Here's an excellent resource on it for deeper diving!
-<a href="https://gameprogrammingpatterns.com/command.html">https://gameprogrammingpatterns.com/command.html</a></p>
-</blockquote>
+<p>Maya implements undo via the "<a href="https://gameprogrammingpatterns.com/command.html">Command Pattern</a>".</p>
+<div class="admonition note">
+<p class="admonition-title">Alternatives</p>
+<p>There are other ways to implement undo, such as the "<a href="https://en.wikipedia.org/wiki/Memento_pattern">Memento Pattern</a>" utilised by Blender.</p>
+<p>Here's an excellent resource on it for deeper diving!</p>
+<ul>
+<li><a href="https://gameprogrammingpatterns.com/command.html">https://gameprogrammingpatterns.com/command.html</a></li>
+</ul>
+</div>
 <p>In a nutshell, it looks like this.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Command</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
