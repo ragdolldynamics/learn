@@ -2771,7 +2771,7 @@
 <span class="c1"># cmdx</span>
 <span class="n">node</span><span class="p">[</span><span class="s2">&quot;tx&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div>
-<p>This may seem both harmless and subjective, but I found early on that accessing attributes via dot-syntax was unsafe due to naming conflicts.</p>
+<p>This may seem both harmless and subjective, but I found early on that accessing attributes via dot-syntax was unsafe due to possible naming conflicts.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Attribute, function or property?</span>
 <span class="n">node</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">node</span><span class="o">.</span><span class="n">flash</span><span class="o">.</span><span class="n">keyable</span> <span class="o">=</span> <span class="kc">True</span>
@@ -2779,8 +2779,8 @@
 </code></pre></div>
 <p>..did these even exist, or did we just add new variables to the object?</p>
 <div class="admonition hint">
-<p class="admonition-title">My IDE would tell me</p>
-<p>An IDE is not an excuse - consider readers on GitHub, GitLab or BitBucket.</p>
+<p class="admonition-title">'But my IDE would tell me'</p>
+<p>An IDE is not an excuse - consider readers on GitHub, GitLab or BitBucket. Including the very source code you just read on this page.</p>
 </div>
 <p>Whenever you call <code>.something</code> on a node, the <code>__getattribute__</code> method of the object is called. In the case of omx, here's what this looks like.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">XNode</span><span class="p">:</span>
