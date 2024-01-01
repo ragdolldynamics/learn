@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cmdx-v-omx" class="md-skip">
+        <a href="#omx-by-animal-logic" class="md-skip">
           Skip to content
         </a>
       
@@ -2306,12 +2306,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cmdx-v-omx" class="md-nav__link">
-    cmdx v omx
+  <a href="#omx-by-animal-logic" class="md-nav__link">
+    omx by Animal Logic
   </a>
   
-    <nav class="md-nav" aria-label="cmdx v omx">
+    <nav class="md-nav" aria-label="omx by Animal Logic">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it?
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#first-impressions" class="md-nav__link">
@@ -2591,9 +2598,43 @@
                   <h1>cmdx v omx</h1>
                 
                 <p><img alt="image.png" src="https://content.ragdolldynamics.com/3f00363e-4576-49c6-bd50-b3998f18bf48.png" /></p>
-<h2 id="cmdx-v-omx">cmdx v omx</h2>
-<p>The <a href="https://animallogic.com/animal-logic/news/omx-release/">appearance of <code>omx</code></a> gave me an excellent opportunity to shed some light on the Maya API and how undo works, along with finding some inspiration for things to improve in <code>cmdx</code>.</p>
-<p>Let's go!</p>
+<h2 id="omx-by-animal-logic">omx by Animal Logic</h2>
+<p>The <a href="https://animallogic.com/animal-logic/news/omx-release/">appearance of <code>omx</code></a> gave me an excellent opportunity to shed some light on the Maya API and how undo is implemented, along with finding some inspiration for things to improve in <code>cmdx</code>.</p>
+<p><br></p>
+<h3 id="what-is-it">What is it?</h3>
+<p><a href="https://github.com/AnimalLogic/AL_omx">omx</a> and <a href="https://github.com/mottosso/cmdx">cmdx</a> provide an alternative to <code>maya.cmds</code> and <code>pymel</code> that is both faster and - in the case of <code>cmds</code> - more convenient.</p>
+<p>One of the big failings of <code>cmds</code> is nodes being referenced by name; such that when a name changes, the variable containing your node is no longer valid.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;newName&quot;</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span><span class="n">node</span> <span class="o">+</span> <span class="s2">&quot;.translateX&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="c1"># &quot;name&quot; does not exist!</span>
+</code></pre></div>
+<p>PyMEL solved this, and added a boatload of additional features like exposing Maya's native math classes for e.g. easy vector addition.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pymel</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pm</span>
+<span class="n">vec1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">vec2</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">vec1</span> <span class="o">+</span> <span class="n">vec2</span>
+</code></pre></div>
+<p>But it also added a performance overhead - importing the library can take seconds and generally using the library made code take several times longer than it would have via <code>cmds</code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Performance Comparison</p>
+<p>See <a href="#performance">below</a> for a brief comparison, along with the <a href="https://github.com/mottosso/cmdx?tab=readme-ov-file#measurements">README for <code>cmdx</code></a> and <a href="https://animallogic.github.io/AL_omx/introduction/perf_compare.html">documentation for <code>omx</code></a> for more.</p>
+</div>
+<p>For Ragdoll, we needed both performance and maths.</p>
+<p>For example, the <code>Load Physics</code> command can read a JSON and generate a complete Maya scene with Maya nodes, Ragdoll nodes, connections between them and attributes restored from disk in a handful of milliseconds. On par with how long it takes Maya to load a <code>.ma</code> or <code>.mb</code> file off disk.</p>
+<p>We built <code>cmdx</code> to provide the terse readability of PyMEL with the performance of <code>cmds</code>. Actually even <em>better</em> than <code>cmds</code>, as you'll find below, due to leveraging the Maya Python API 2.0.</p>
+<p>About two weeks ago, Animal Logic announced another open source contender called <code>omx</code> and this page is a comparison between the two. To compare them, we'll need a better understanding of Maya, undo and the "modifiers", so you'll also learn about how these work!</p>
+<div class="admonition hint">
+<p class="admonition-title">More alternatives</p>
+<p>The complete list of all other alternatives I know of, <a href="mailto:marcus@ragdolldynamics.com">let me know</a> if you know any more!</p>
+<ul>
+<li><a href="https://github.com/mottosso/cmdc">https://github.com/mottosso/cmdc</a></li>
+<li><a href="https://github.com/peerke88/cmdWrapper">https://github.com/peerke88/cmdWrapper</a></li>
+<li><a href="http://pythonhosted.org/MRV">http://pythonhosted.org/MRV</a></li>
+<li><a href="https://github.com/utatsuya/metan">https://github.com/utatsuya/metan</a></li>
+</ul>
+</div>
 <p><br></p>
 <h3 id="first-impressions">First Impressions</h3>
 <p>Let's start with a quick side-by-side.</p>
@@ -2771,18 +2812,22 @@
 <span class="c1"># cmdx</span>
 <span class="n">node</span><span class="p">[</span><span class="s2">&quot;tx&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div>
-<p>This may seem both harmless and subjective, but I found early on that accessing attributes via dot-syntax was unsafe due to possible naming conflicts.</p>
+<p>Somewhat subjective, and we've learnt from PyMEL that accessing attributes via the dot-syntax does work. But not without cost.</p>
+<p>Consider this.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Attribute, function or property?</span>
 <span class="n">node</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">node</span><span class="o">.</span><span class="n">flash</span><span class="o">.</span><span class="n">keyable</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">node</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
-<p>..did these even exist, or did we just add new variables to the object?</p>
-<div class="admonition hint">
-<p class="admonition-title">'But my IDE would tell me'</p>
-<p>An IDE is not an excuse - consider readers on GitHub, GitLab or BitBucket. Including the very source code you just read on this page.</p>
+<p>..did these even exist, or did we just add new variables to the Python object?</p>
+<div class="admonition question">
+<p class="admonition-title">Wouldn't my IDE warn about it?</p>
+<p>Consider readers on GitHub, GitLab or BitBucket; including the source code on this page.</p>
 </div>
 <p>Whenever you call <code>.something</code> on a node, the <code>__getattribute__</code> method of the object is called. In the case of omx, here's what this looks like.</p>
+<blockquote>
+<p><a href="https://github.com/AnimalLogic/AL_omx/blob/24cf525e596a6d12e21417c791b1d76a8130d942/AL/omx/_xnode.py#L75">AL/omx/_xnode.py#L75</a></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">XNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="c1"># (1)</span>
@@ -2830,6 +2875,9 @@
 <div class="highlight"><pre><span></span><code><span class="n">node</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;My Name&quot;</span>
 </code></pre></div>
 <p>Conversely, cmdx uses <code>__getitem__</code> instead. Here's what happens when you call <code>node["attr"]</code></p>
+<blockquote>
+<p><a href="https://github.com/mottosso/cmdx/blob/ddf276a9e7c3f8ee242fd293e797b01cf3cd7e6a/cmdx.py#L570">cmdx.py#L570</a></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="n">unit</span> <span class="o">=</span> <span class="kc">None</span>

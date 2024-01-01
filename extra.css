@@ -9,6 +9,12 @@
     src: url("Sora-ExtraBold.ttf") format("truetype");
 }
 
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2b2b2b;
+  --md-default-bg-color: #1b1b1b;
+  --md-header-border-bottom: 1px solid #f3f3f3;
+}
+
 body,
 input {
   font-family: "Roboto", helvetica;
@@ -53,7 +59,7 @@ a[title="Edit this page"] {
 .small-space {
   display: inline-block;
   min-width: 10px;
-  min-height: 10px; 
+  min-height: 10px;
 }
 
 .spacing {
@@ -68,7 +74,7 @@ a[title="Edit this page"] {
     max-width: 57rem;
 }
 
-/* There's typically some space at the top of each article 
+/* There's typically some space at the top of each article
    that we don't need, since we aren't showing h1 */
 .md-content__inner:before {
   height: 0;
@@ -207,7 +213,7 @@ input, select, textarea{
 
 .md-header[data-md-state] {
   box-shadow: none;
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: --md-header-border-bottom;
 }
 
 .md-typeset a, .md-typeset a:before {
@@ -271,7 +277,7 @@ Tables
 
 .md-typeset table:not([class]) td {
     border-top: none;
-    padding: 0.4rem 0.5rem; 
+    padding: 0.4rem 0.5rem;
 }
 
 .md-typeset table:not([class]) td {
@@ -491,7 +497,7 @@ a strong {
 }
 
 .md-nav__link {
-  margin-top: 0; 
+  margin-top: 0;
   padding-top: 4px;
   padding-bottom: 4px;
 }
