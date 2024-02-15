@@ -2696,7 +2696,7 @@
 <p><video autoplay class="poster" muted loop width=100% controls controls><source src="https://user-images.githubusercontent.com/2152766/145550147-56714786-3ac9-44b8-b73f-b85d34e53bf4.mp4" type="video/mp4"></video></p>
 
 <div class="hboxlayout justify-left">
-<a href="https://files.ragdolldynamics.com/api/public/dl/8rswPm8i/mocap_chap_final.zip" class="button red"><b>Download Final Scene</b></a>
+<a href="https://content.ragdolldynamics.com/e33a0b9b-a457-45ed-bd20-671524afa029.zip" class="button red"><b>Download Final Scene</b></a>
 </div>
 
 <p><br></p>
@@ -2756,11 +2756,8 @@
 <p>Not bad! But since we want our simulation to be close to the original mocap, we'll need to make some changes.</p>
 <p><br></p>
 <h4 id="stiffness-and-substeps">Stiffness and Substeps</h4>
-<p>The default solver substeps and iterations get you to a <code>Stiffness</code> of about <code>10</code>. In order to achieve a higher stiffness, we'll need more of those.</p>
+<p>In order for the character to more closely follow the animation, let's increase the stiffness and decrease the damping on the group that controls <em>all</em> markers.</p>
 <ol>
-<li>Select <code>rSolver</code></li>
-<li>Set <code>Substeps = 8</code></li>
-<li>Set <code>Iterations = 8</code></li>
 <li>Select <code>Hips_rGroup</code></li>
 <li>Set <code>Rotate Stiffness = 40</code></li>
 <li>Set <code>Rotate Damping = 0.25</code></li>
@@ -2804,12 +2801,12 @@
 <li>Go to frame <code>80</code></li>
 <li>Set a keyframe on both constraints <code>Stiffness = 0</code></li>
 <li>Go to frame <code>81</code></li>
-<li>Key <code>Stiffness = 0.5</code></li>
+<li>Key <code>Stiffness = 2000</code></li>
 </ol>
 <p>Likewise, we'll want the hands to release the box at some point later.</p>
 <ol>
 <li>Go to frame <code>178</code></li>
-<li>Key <code>Stiffness = 0.5</code></li>
+<li>Key <code>Stiffness = 2000</code></li>
 <li>Go to frame <code>179</code></li>
 <li>Key <code>Stiffness = 0</code></li>
 </ol>
