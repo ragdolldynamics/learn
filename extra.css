@@ -9,6 +9,12 @@
     src: url("Sora-ExtraBold.ttf") format("truetype");
 }
 
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2b2b2b;
+  --md-default-bg-color: #1b1b1b;
+  --md-header-border-bottom: 1px solid #f3f3f3;
+}
+
 body,
 input {
   font-family: "Roboto", helvetica;
@@ -27,6 +33,10 @@ img {
 a.md-nav__link img {
   width: 17px;
   margin-right: 3px;
+}
+
+.md-nav__link {
+  justify-content: flex-start;
 }
 
 [data-md-color-primary="white"] .md-nav__link--active,
@@ -203,7 +213,7 @@ input, select, textarea{
 
 .md-header[data-md-state] {
   box-shadow: none;
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: --md-header-border-bottom;
 }
 
 .md-typeset a, .md-typeset a:before {
