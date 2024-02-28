@@ -13,7 +13,7 @@
         <meta name="author" content="mottosso">
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/blender/2023.08.xx/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/blender/2024.02.29/">
       
       
       
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#showcase" class="md-skip">
           Skip to content
         </a>
       
@@ -280,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../2024.02.28/" class="md-tabs__link">
+        <a href="../../2024.02.29/" class="md-tabs__link">
           
   
   News
@@ -1491,11 +1491,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2024.02.28/" class="md-nav__link">
+      <a href="../../2024.02.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2024.02.28
+    2024.02.29
   </span>
   
 
@@ -2886,6 +2886,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#showcase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showcase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -2941,9 +2950,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uninstall" class="md-nav__link">
+  <a href="#update" class="md-nav__link">
     <span class="md-ellipsis">
-      Uninstall
+      Update
     </span>
   </a>
   
@@ -3149,6 +3158,16 @@
 <li><a href="#known issues">Known Issues</a></li>
 </ul>
 <p><br></p>
+<h3 id="showcase">Showcase</h3>
+<p>Let's set the stage. :)</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/t/7e05d7b8-6b41-479a-a4db-54dc181ba38f.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/37513626-7ee0-4043-84dd-5faa00179a9d.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/284989d2-d4a8-4f84-b32f-7c4a6c4aa53f.mp4" type="video/mp4"></video></p>
+<!--  -->
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/b7a422d9-a83b-4f6d-a7fc-aa6049be8c71.mp4" type="video/mp4"></video></p>
+<p><br></p>
 <h3 id="overview">Overview</h3>
 <p>Ragdoll is a <strong>real-time physics solver</strong> for animators originally built for Autodesk Maya and now available to <strong>Blender</strong>!</p>
 <p>Started development in 2021 by animator/programmer <a href="https://www.linkedin.com/in/marcusottosson/">Marcus Ottosson</a>, Ragdoll has since been adopted by just about every large visual effects company in the world and several AAA and indie games studios too.</p>
@@ -3188,6 +3207,8 @@
 <p>Ragdoll monitors your animation and provides you with a preview of what it would look like if you let physics take the wheel.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/f3c005f3-830f-4a5a-a883-770db09b1bc5.mp4" type="video/mp4"></video></p>
 <p>In this example, the blue character is your animation. It's the "guide" for the simulated version of your animation.</p>
+<p>Here's what that might look like in practice.</p>
+<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/26bebeea-18f9-48e6-b554-19a6aff6956a.mp4" type="video/mp4"></video></p>
 <p>Here's a more elaborate example, animation versus simulation towards the end.</p>
 <p><video autoplay class="poster" muted loop width=100%  controls><source src="https://content.ragdolldynamics.com/d97f8703-9cf0-4d42-9570-fb107893418d.mp4" type="video/mp4"></video></p>
 <p>Points of interest.</p>
@@ -3209,8 +3230,7 @@
 <th style="text-align: left;">Blender</th>
 <th style="text-align: center;">Windows</th>
 <th style="text-align: center;">Linux</th>
-<th style="text-align: center;">macOS (Intel)</th>
-<th style="text-align: center;">macOS (Apple)</th>
+<th style="text-align: center;">macOS</th>
 </tr>
 </thead>
 <tbody>
@@ -3218,14 +3238,12 @@
 <td style="text-align: left;">3.4</td>
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">✔️</td>
-<td style="text-align: center;">✔️</td>
-<td style="text-align: center;">✔️</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;">3.5</td>
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">✔️</td>
-<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
@@ -3233,48 +3251,43 @@
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td style="text-align: left;">4.0</td>
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">✔️</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">MacOS</p>
-<p>Tim Cook made it difficult with their transition to Metal, and Blender followed suit with version 3.5. Ragdoll was originally built with OpenGL and DirectX support and it'll take a moment to re-do all of this work (again!) for Metal.</p>
+<p>Tim Apple made it difficult with their transition to Metal, and Blender followed suit with version 3.5. Ragdoll was originally built with OpenGL and DirectX support and it'll take a moment to re-do all of this work (again!) for Metal.</p>
 </div>
 <p><br></p>
 <h4 id="install">Install</h4>
 <p>The Blender Addon is a bridge between Blender and "Ragdoll Core", our run-time engine powering Maya and the upcoming Ragdoll Standalone. As such, you will need both the Addon and Core to enjoy Ragdoll.</p>
 <ol>
-<li><a href="/download/core">Download Ragdoll Core</a></li>
-<li>Double-click to install</li>
-</ol>
-<p>Next, the Blender Addon.</p>
-<ol>
-<li><a href="/download/blender">Download Ragdoll for Blender</a></li>
+<li><a href="/blender/download">Download Ragdoll for Blender</a></li>
 <li>In Blender, go to <code>Edit &gt; Preferences...</code></li>
 <li>Go to the <code>Add-ons</code> page</li>
 <li>Click the <code>Install..</code> button at the top right and locate the Ragdoll addon <code>.zip</code> file you just downloaded.</li>
 <li>Then, search <code>Ragdoll</code></li>
-<li>Tick add-on enabling checkbox and you're all set.</li>
+<li>Enable the Addon</li>
+</ol>
+<p>Next, you'll need Ragdoll Core.</p>
+<ol>
+<li><a href="/sdk/download">Download &amp; Install Ragdoll Core</a></li>
 </ol>
 <p><img alt="257349865-447ad09e-3b18-4a2a-9bf3-d925332d0bf4.png" src="https://content.ragdolldynamics.com/6b63d8ef-06e8-4667-bb22-7c94416c98ba.png" /></p>
 <p><img alt="257350967-50e0a192-9f55-4e50-82a7-6d08b4cf4d14.png" src="https://content.ragdolldynamics.com/5c7fb279-0f6e-4c3b-a8fd-601ea99e803a.png" /></p>
 <p><br></p>
-<h4 id="uninstall">Uninstall</h4>
-<p>Ragdoll uses a compiled binary under the hood, in order to remove it from your system Ragdoll needs some special treatment.</p>
+<h4 id="update">Update</h4>
+<p>When the next shiny release of Ragdoll is released, here's what you do.</p>
 <ol>
-<li>Unload Ragdoll</li>
-<li>Restart Blender</li>
-<li>Back to Preferences and click <code>Remove</code></li>
+<li>Remove Ragdoll addon from Blender</li>
+<li>Follow the <a href="#install">Install steps above</a></li>
 </ol>
-<p>This enables the compiled Python library to be unlocked such that it can be deleted from your system.</p>
 <p><br></p>
 <h3 id="quickstart">Quickstart</h3>
 <p>In the Ragdoll menu, load some asset and fool around. <img alt="😊" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f60a.svg" title=":blush:" /></p>
