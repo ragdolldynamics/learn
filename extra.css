@@ -9,12 +9,6 @@
     src: url("Sora-ExtraBold.ttf") format("truetype");
 }
 
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #2b2b2b;
-  --md-default-bg-color: #1b1b1b;
-  --md-header-border-bottom: 1px solid #f3f3f3;
-}
-
 body,
 input {
   font-family: "Roboto", helvetica;
@@ -35,8 +29,13 @@ a.md-nav__link img {
   margin-right: 3px;
 }
 
+[dir=ltr] .md-nav__link .md-icon:last-child {
+  margin-left: inherit;
+}
+
 .md-nav__link {
   justify-content: flex-start;
+  gap: .15rem;
 }
 
 [data-md-color-primary="white"] .md-nav__link--active,
@@ -72,6 +71,29 @@ a[title="Edit this page"] {
 
 .md-grid {
     max-width: 57rem;
+}
+
+p.app {
+  font-size: 1.3em;
+  margin: 0.75em;
+  line-height: 0;
+}
+
+p.separator {
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+}
+
+div.apps {
+  width: 80%;
+}
+
+div.app {
+  width: 100%;
+  padding-bottom: 1px;
+
+  /* Make it look right on mobile */
+  /*margin-top: 15px;*/
 }
 
 /* There's typically some space at the top of each article
@@ -213,7 +235,11 @@ input, select, textarea{
 
 .md-header[data-md-state] {
   box-shadow: none;
-  border-bottom: --md-header-border-bottom;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.md-header--shadow {
+    box-shadow: none;
 }
 
 .md-typeset a, .md-typeset a:before {
@@ -355,8 +381,6 @@ Tables
   max-height: 400px;
   object-fit: fill;
   border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  /*mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
 }
 
 .hero-underlay {
@@ -494,13 +518,13 @@ a strong {
 
 .md-nav__item.md-nav__item--active {
   /*background-color: #e4f3ff;*/
+  display: inherit;
 }
 
 .md-nav__link {
   margin-top: 0;
   padding-top: 4px;
   padding-bottom: 4px;
-  justify-content: flex-start;
 }
 
 .md-typeset h1 {
@@ -779,6 +803,24 @@ div.tabs button.active p {
   border-bottom: 5px solid #2b6290;
 }
 
+.center-image {
+    height: 50px; /* Can be anything */
+    width: 50px; /* Can be anything */
+    position: relative;
+}
+
+.center-image img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
 .no-max-height {
   max-height: inherit !important;
@@ -809,6 +851,10 @@ div.tabs button.active p {
 
 .align-right {
   text-align: right;
+}
+
+.align-left {
+  text-align: left;
 }
 
 .padding-top {
@@ -875,30 +921,20 @@ div.tabs button.active p {
   opacity: 1;
 }
 
-/* Maya & Blender tabs */
-
-div.tabs {
-  padding-left: 1px;
+a.md-tabs__link {
+  font-size: 1.3em;
+    margin-top: .15rem;
 }
 
-div.tabs button.active {
-  color: #1f1f1f;
-  position: relative;
-  border-bottom: 6px solid steelblue;
-  font-weight: bold;
+li.md-tabs__item.md-tabs__item--active {
+  border: 1px solid #131313;
+  background: #212121;
+  color: white;
+  text-align: center;
 }
 
-div.tabs button {
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  color: #6363635e;
-  border: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  margin: 6px 15px 0px 0px;
-  transition: 0.2s;
-  font-size: 0.7rem;
+.md-tabs__item {
+    height: 1.2rem;
 }
 
 .tab-content {
@@ -980,6 +1016,14 @@ div.tab.software-option.disabled {
   cursor: pointer;
   height: 0;
   width: 0;
+}
+
+.md-nav--secondary .md-nav__title {
+    box-shadow: none !important;
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    box-shadow: none !important;
 }
 
 @media only screen and (max-width: 60em) {
