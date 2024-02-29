@@ -7,19 +7,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ragdoll now has a floating licence server!">
+        <meta name="description" content="Details of individual aspects of Ragdoll in Blender">
       
       
         <meta name="author" content="mottosso">
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/releases/2021.05.17/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/blender/reference/">
       
       
-        <link rel="prev" href="../2021.06.07/">
+        <link rel="prev" href="../download/">
       
       
-        <link rel="next" href="../2021.05.10/">
+        <link rel="next" href="../tutorials/manikin/">
       
       
       <link rel="icon" href="../../favicon-256x256.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Floating Licence Support - Learn Ragdoll</title>
+        <title>Reference - Learn Ragdoll</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#floating-licence-server" class="md-skip">
+        <a href="#properties" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Floating Licence Support
+              Reference
             
           </span>
         </div>
@@ -245,11 +245,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blender/home/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../home/" class="md-tabs__link">
           
   
   Blender
@@ -280,13 +282,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../2024.02.29/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../releases/2024.02.29/" class="md-tabs__link">
           
   
   News
@@ -1280,23 +1280,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1307,7 +1312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blender
@@ -1321,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blender/home/" class="md-nav__link">
+      <a href="../home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blender/download/" class="md-nav__link">
+      <a href="../download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,10 +1365,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../blender/reference/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1372,6 +1395,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rsolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      rSolver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      rMarker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      rGroup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rGroup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties Panel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1422,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blender/tutorials/manikin/" class="md-nav__link">
+      <a href="../tutorials/manikin/" class="md-nav__link">
         
   
     <img src="/icons/ragdoll_black.png">
@@ -1477,28 +1602,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1509,7 +1629,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             News
@@ -1523,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024.02.29/" class="md-nav__link">
+      <a href="../../releases/2024.02.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1544,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blender/2024.02.29/" class="md-nav__link">
+      <a href="../../releases/blender/2024.02.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1565,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023.10.03/" class="md-nav__link">
+      <a href="../../releases/2023.10.03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1586,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maya/2023.10.03/" class="md-nav__link">
+      <a href="../../releases/maya/2023.10.03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023.04.01/" class="md-nav__link">
+      <a href="../../releases/2023.04.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.11.29/" class="md-nav__link">
+      <a href="../../releases/2022.11.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1649,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.07.20/" class="md-nav__link">
+      <a href="../../releases/2022.07.20/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.06.15/" class="md-nav__link">
+      <a href="../../releases/2022.06.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1691,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.06.09/" class="md-nav__link">
+      <a href="../../releases/2022.06.09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1712,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.05.04/" class="md-nav__link">
+      <a href="../../releases/2022.05.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1733,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.03.14/" class="md-nav__link">
+      <a href="../../releases/2022.03.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.02.28/" class="md-nav__link">
+      <a href="../../releases/2022.02.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.02.14/" class="md-nav__link">
+      <a href="../../releases/2022.02.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1796,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.02.01/" class="md-nav__link">
+      <a href="../../releases/2022.02.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1817,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.01.21/" class="md-nav__link">
+      <a href="../../releases/2022.01.21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1838,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022.01.17/" class="md-nav__link">
+      <a href="../../releases/2022.01.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.12.15/" class="md-nav__link">
+      <a href="../../releases/2021.12.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1880,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.12.12/" class="md-nav__link">
+      <a href="../../releases/2021.12.12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1901,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.11.15/" class="md-nav__link">
+      <a href="../../releases/2021.11.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1922,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.10.25/" class="md-nav__link">
+      <a href="../../releases/2021.10.25/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.10.07/" class="md-nav__link">
+      <a href="../../releases/2021.10.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1964,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.09.27/" class="md-nav__link">
+      <a href="../../releases/2021.09.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1985,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.08.28/" class="md-nav__link">
+      <a href="../../releases/2021.08.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2006,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.08.06/" class="md-nav__link">
+      <a href="../../releases/2021.08.06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2027,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.07.27/" class="md-nav__link">
+      <a href="../../releases/2021.07.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2048,7 +2168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.07.15/" class="md-nav__link">
+      <a href="../../releases/2021.07.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2069,7 +2189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.07.02/" class="md-nav__link">
+      <a href="../../releases/2021.07.02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2090,7 +2210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.06.10/" class="md-nav__link">
+      <a href="../../releases/2021.06.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2111,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.06.07/" class="md-nav__link">
+      <a href="../../releases/2021.06.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2129,28 +2249,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2021.05.17
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../releases/2021.05.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2159,162 +2261,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#floating-licence-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Floating Licence Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mimic-ik" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mimic IK
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quality of Life
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#constraint-outliner-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      Constraint Outliner Style
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constraint-scale-rendering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Constraint Scale Rendering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constraint-maintain-offset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Constraint Maintain Offset
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installer-improvements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installer Improvements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rigid-scale-rendering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rigid Scale Rendering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scene-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scene Scale
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-select" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Select
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bulk-edits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bulk Edits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bulk Edits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-attribute-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Attribute Editor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-channel-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Channel Editor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-attribute-spreadsheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Attribute Spreadsheet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2327,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.05.10/" class="md-nav__link">
+      <a href="../../releases/2021.05.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2348,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.04.28/" class="md-nav__link">
+      <a href="../../releases/2021.04.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2369,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.04.23/" class="md-nav__link">
+      <a href="../../releases/2021.04.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2390,7 +2336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.04.11/" class="md-nav__link">
+      <a href="../../releases/2021.04.11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2411,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.03.25/" class="md-nav__link">
+      <a href="../../releases/2021.03.25/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2432,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.03.23/" class="md-nav__link">
+      <a href="../../releases/2021.03.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.03.11/" class="md-nav__link">
+      <a href="../../releases/2021.03.11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2474,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.03.04/" class="md-nav__link">
+      <a href="../../releases/2021.03.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2495,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.03.01/" class="md-nav__link">
+      <a href="../../releases/2021.03.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.02.07/" class="md-nav__link">
+      <a href="../../releases/2021.02.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2537,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.01.27/" class="md-nav__link">
+      <a href="../../releases/2021.01.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2558,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.01.17/" class="md-nav__link">
+      <a href="../../releases/2021.01.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2579,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.01.15/" class="md-nav__link">
+      <a href="../../releases/2021.01.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2600,7 +2546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.01.14/" class="md-nav__link">
+      <a href="../../releases/2021.01.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2621,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2021.01.04/" class="md-nav__link">
+      <a href="../../releases/2021.01.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2642,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.12.18/" class="md-nav__link">
+      <a href="../../releases/2020.12.18/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2663,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.12.07/" class="md-nav__link">
+      <a href="../../releases/2020.12.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.12.01/" class="md-nav__link">
+      <a href="../../releases/2020.12.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2705,7 +2651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.24/" class="md-nav__link">
+      <a href="../../releases/2020.11.24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2726,7 +2672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.23/" class="md-nav__link">
+      <a href="../../releases/2020.11.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.22/" class="md-nav__link">
+      <a href="../../releases/2020.11.22/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2768,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.17/" class="md-nav__link">
+      <a href="../../releases/2020.11.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2789,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.16/" class="md-nav__link">
+      <a href="../../releases/2020.11.16/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2810,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020.11.10/" class="md-nav__link">
+      <a href="../../releases/2020.11.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3134,91 +3080,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#floating-licence-server" class="md-nav__link">
+  <a href="#properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Floating Licence Server
+      Properties
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mimic-ik" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mimic IK
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-of-life" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quality of Life
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality of Life">
+    <nav class="md-nav" aria-label="Properties">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraint-outliner-style" class="md-nav__link">
+  <a href="#rsolver" class="md-nav__link">
     <span class="md-ellipsis">
-      Constraint Outliner Style
+      rSolver
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constraint-scale-rendering" class="md-nav__link">
+  <a href="#rmarker" class="md-nav__link">
     <span class="md-ellipsis">
-      Constraint Scale Rendering
+      rMarker
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constraint-maintain-offset" class="md-nav__link">
+  <a href="#rgroup" class="md-nav__link">
     <span class="md-ellipsis">
-      Constraint Maintain Offset
+      rGroup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rGroup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installer-improvements" class="md-nav__link">
+  <a href="#properties-panel" class="md-nav__link">
     <span class="md-ellipsis">
-      Installer Improvements
+      Properties Panel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rigid-scale-rendering" class="md-nav__link">
+  <a href="#workspace-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Rigid Scale Rendering
+      Workspace Tool
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#scene-scale" class="md-nav__link">
+  <a href="#top-menu" class="md-nav__link">
     <span class="md-ellipsis">
-      Scene Scale
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-select" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Select
+      Top Menu
     </span>
   </a>
   
@@ -3226,43 +3155,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bulk-edits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bulk Edits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bulk Edits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-attribute-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Attribute Editor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-channel-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Channel Editor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-attribute-spreadsheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Attribute Spreadsheet
-    </span>
-  </a>
   
 </li>
         
@@ -3290,154 +3182,162 @@
   
 
 
-  <h1>2021.05.17</h1>
+  <h1>Reference</h1>
 
-<p>Highlight for this release is support for <strong>Floating Licences</strong>!</p>
-<ul>
-<li><a href="#floating-licence-server"><strong>ADDED</strong> Floating Licence Server</a> Convenient big-studio licencing</li>
-<li><a href="#mimic-ik"><strong>ADDED</strong> Mimic IK</a> Turn mimic into a joint hierarchy, for IK and such</li>
-<li><a href="#quality-of-life"><strong>IMPROVED</strong> Quality of Life</a> More joy for you</li>
-<li><a href="#bulk-edits"><strong>TIP</strong> Bulk Edits</a> Some tips for a happier life</li>
-</ul>
+<h3 id="properties">Properties</h3>
+<p>Ragdoll exposes several properties you can use to tune your simulation, divided into several "archetypes". One of which is the physics solver itself, responsible for overall settings like start and end frames and quality parameters such as <code>Substeps</code>.</p>
 <p><br></p>
-<h2 id="floating-licence-server">Floating Licence Server</h2>
-<p>So far, Ragdoll has been activated on a per-machine basis. It's been node-locked.</p>
-<p>But in many cases, you are a studio with a team of artists using Ragdoll. That's when it becomes impractical for each artist to manage their own licences, or for licences to become associated with a single machine.</p>
-<p>Floating licences solve this problem. With it, you register a fixed amount of licences with a <em>server</em> somewhere on your network, and then have Maya "lease" licences off of it. For example, with 10 floating licences, 10 artists can use Ragdoll in parallel. On Maya shutdown or plug-in unload, the lease is "dropped" meaning it can be picked up by another artist, on some other machine.</p>
-<div class="admonition info">
-<p class="admonition-title">Heads-up SysAdmins</p>
-<p>On Windows, the floating licence mechanism is currently a dedicated DLL.</p>
-<p><img width=190 src=https://user-images.githubusercontent.com/2152766/118402547-407e4780-b662-11eb-9cdb-4965f62c930a.png></p>
-<p>This will be merged into the plug-in like on Linux in a future release.</p>
-</div>
-<p><strong>See also</strong></p>
-<ul>
-<li><a href="/floating-licence">Floating Licence Documentation</a></li>
-</ul>
-<p><br></p>
-<h2 id="mimic-ik">Mimic IK</h2>
-<p>The Mimic introduced in <a href="/releases/2021.05.10/#mimic">the last release</a> generated a clean hierarchy of transforms.</p>
-<p>This release introduced "mimik", which is a <em>joint hierarchy</em> suitable for skinning and IK. It's got a proper Joint Orient too, irregardless of what the original animation controls looked like.</p>
-<p><img alt="mimik" src="https://user-images.githubusercontent.com/2152766/118243758-b0d86d80-b496-11eb-82b0-f04ba458e507.gif" /></p>
-<p>They're great if IK is what you want, but they do make the overall hierarchy more complex and introduce an additional <code>jointOrient</code> offset onto the joints themselves. For that reason, <code>Transform</code> is the default node type and is currently the most simple mimic to work with.</p>
-<div class="admonition info">
-<p class="admonition-title">Room for Improvement</p>
-<p>There's still room for improvement, the user attributes remain on the blue control nodes rather than the joints themselves for now. This will be addressed in a future release.</p>
-</div>
-<video autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/118245987-55f44580-b499-11eb-94c6-77c53b973e44.mp4" type="video/mp4">
-</video>
-
-<p><br></p>
-<h2 id="quality-of-life">Quality of Life</h2>
-<p>More quality, less problems. Hacuna matata!</p>
-<p><br></p>
-<h3 id="constraint-outliner-style">Constraint Outliner Style</h3>
-<p>You can now choose how constraints appear in the outliner.</p>
+<h4 id="rsolver">rSolver</h4>
+<p>Responsible for overall simulation settings and keep track of what to include in the physics world.</p>
+<p><img alt="image.png" src="https://content.ragdolldynamics.com/bac13049-8891-419a-bdac-16ec43540486.png" /></p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Style</th>
-<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>nConstraint</code></td>
-<td style="text-align: left;">At the root of the outliner, as its own transform</td>
+<td style="text-align: left;">Enabled</td>
+<td style="text-align: left;">Whether to simulate or not</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>Maya Constraint</code></td>
-<td style="text-align: left;">As a child transform</td>
+<td style="text-align: left;">Export</td>
+<td style="text-align: left;">Include this solver when exporting the Ragdoll file to disk</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>Ragdoll</code></td>
-<td style="text-align: left;">As a shape</td>
+<td style="text-align: left;">Cache</td>
+<td style="text-align: left;">Keep simulated frames for the next time you playback your scene</td>
+</tr>
+<tr>
+<td style="text-align: left;">Start Time</td>
+<td style="text-align: left;">When to start simulating</td>
+</tr>
+<tr>
+<td style="text-align: left;">Simulate Every X Frames</td>
+<td style="text-align: left;">Enable stop-motion like simulation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Substeps</td>
+<td style="text-align: left;">Divide every Blender frame into this many "sub steps", improves quality at the expense of performance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Iterations</td>
+<td style="text-align: left;">Try this many times to solve each internal physics constraint</td>
+</tr>
+<tr>
+<td style="text-align: left;">Air Density</td>
+<td style="text-align: left;">The effect of air, 0 means space and 10 means water</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gravity</td>
+<td style="text-align: left;">Force applied to all Markers in the solver, to emulate gravity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time Scale</td>
+<td style="text-align: left;">Slow motion, or not</td>
+</tr>
+<tr>
+<td style="text-align: left;">Scene Scale</td>
+<td style="text-align: left;">When your character is not at a realistic e.g. 1.8m height, use this to compensate</td>
 </tr>
 </tbody>
 </table>
-<p>The <code>rRigid</code> node appears as a shape of any node you apply physics to, and normally constraints appear alongside them. But normal Maya constraints do not, and neither does the constraints you get with nCloth and nHair. So which do you prefer?</p>
-<p><strong>Ragdoll Style</strong></p>
-<p>As a shape, alongside the <code>rRigid</code> node.</p>
-<p><img alt="outlinerstyle1" src="https://user-images.githubusercontent.com/2152766/118120535-f5590000-b3e7-11eb-9335-137457c2f955.gif" /></p>
-<p><strong>Maya Constraint Style</strong></p>
-<p>As a child, similar to native Maya constraints.</p>
-<p><img alt="outlinerstyle2" src="https://user-images.githubusercontent.com/2152766/118120530-f427d300-b3e7-11eb-9d9b-224952c89054.gif" /></p>
-<p><strong>nConstraint Style</strong></p>
-<p>As a new transform at the root of the scene, similar to nCloth and nHair constraints. Group them, hide them; if you can imagine it, you can achieve it!</p>
-<p><img alt="outlinerstyle3" src="https://user-images.githubusercontent.com/2152766/118120525-f2f6a600-b3e7-11eb-8876-76b87b6b82fa.gif" /></p>
-<div class="admonition hint">
-<p class="admonition-title">Subjective</p>
-<p>Whichever you prefer, it has no effect on the simulation and is strictly related to the Outliner only. They can also be re-parented after being created, it really doesn't matter where they are. So organise away!</p>
-</div>
 <p><br></p>
-<h3 id="constraint-scale-rendering">Constraint Scale Rendering</h3>
-<p>The last release made constraints render poorly if the node they were parented to was <em>scaled</em>. The simulation was still fine, but you couldn't see what you were doing.</p>
-<p><strong>Before</strong></p>
-<p><img alt="constraintrendering2" src="https://user-images.githubusercontent.com/2152766/118113285-000e9780-b3de-11eb-8355-c22640cacb68.gif" /></p>
-<p><strong>After</strong></p>
-<p><img alt="constraintrendering3" src="https://user-images.githubusercontent.com/2152766/118113287-00a72e00-b3de-11eb-89b2-e416fd3ffc1a.gif" /></p>
+<h4 id="rmarker">rMarker</h4>
+<p>Tracker for your animation controls, like the red pill in The Matrix. This transmits information about each control to Ragdolll, such that it knows where to go and at which strength.</p>
+<p><img alt="image.png" src="https://content.ragdolldynamics.com/a405a22c-792c-4367-b694-341aff8c973a.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Enabled</td>
+<td style="text-align: left;">Whether to include this rMarker in the rSolver</td>
+</tr>
+<tr>
+<td style="text-align: left;">Export</td>
+<td style="text-align: left;">Include this Marker when exporting</td>
+</tr>
+<tr>
+<td style="text-align: left;">Behaviour</td>
+<td style="text-align: left;">Whether to simulate the control, or treat it as pure animation. The default is to inherit the value from the rGroup</td>
+</tr>
+<tr>
+<td style="text-align: left;">Translate Motion</td>
+<td style="text-align: left;">Should the control be allowed to translate?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotate Stiffness</td>
+<td style="text-align: left;">The "strength" at which to follow the animation control</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotate Damping</td>
+<td style="text-align: left;">The "resistance" at which to follow the animation control</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h3 id="constraint-maintain-offset">Constraint Maintain Offset</h3>
-<p>Constraints typically maintain their offset on creation, such that rigids do not abruptly snap together on simulation start.</p>
-<p>But it's optional, and if you don't maintain offset then they <em>would</em> snap together. With this release, the default behavior is now <em>soft</em> as opposed to infinitely strong.</p>
-<p><img alt="softmaintain" src="https://user-images.githubusercontent.com/2152766/118122597-f9d2e800-b3ea-11eb-8bdc-2ede430174ad.gif" /></p>
+<h4 id="rgroup">rGroup</h4>
+<p>Control the stiffness of multiple markers at once.</p>
+<p><img alt="image.png" src="https://content.ragdolldynamics.com/842f9777-eaf5-4a1c-b9a7-d4c93cb85f29.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Enabled</td>
+<td style="text-align: left;">Whether to include this rMarker in the rSolver</td>
+</tr>
+<tr>
+<td style="text-align: left;">Export</td>
+<td style="text-align: left;">Include this Group when exporting</td>
+</tr>
+<tr>
+<td style="text-align: left;">Self Collide</td>
+<td style="text-align: left;">Allow contained Markers to collide with each other</td>
+</tr>
+<tr>
+<td style="text-align: left;">Translate Motion</td>
+<td style="text-align: left;">Should the controls in this group be allowed to translate?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotate Stiffness</td>
+<td style="text-align: left;">Multiply this value with every Markers contained in the group</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotate Damping</td>
+<td style="text-align: left;">Likewise, multiply this value with every Markers contained in the group</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h3 id="installer-improvements">Installer Improvements</h3>
-<p>On Windows, the MSI installer can now be used to install <em>multiple</em> versions of Ragdoll simultaneously, with a dedicated uninstall option each.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118395063-51b65c80-b640-11eb-942e-4f1d0f0d9ca3.png" /></p>
-<p>This should also help clear out issues with <em>upgrading</em> using the MSI, which has been problematic in the past since the installer really didn't like overwriting files.</p>
-<p>On all platforms, multiple Maya module files now co-exist, which means that if you want to disable or switch versions you can do that by removing the offending version - rather than editing the text file itself like in previous versions of Ragdoll.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118395099-8aeecc80-b640-11eb-9e7b-add537d975a8.png" /></p>
+<h5 id="collection">Collection</h5>
+<p>Any new Ragdoll object is automatically added to a <code>Ragdoll</code> collection.</p>
+<p><img width="376" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/49b01d62-2b1a-415f-904e-7410c7b2a1f3"></p>
 <p><br></p>
-<h3 id="rigid-scale-rendering">Rigid Scale Rendering</h3>
-<p>Rendering of non-uniformly scaled rigid bodies has been improved and now respond interactively to scale changes. Notice in particular how scale is translated into sphere radius only along the X-axis. For non-uniform scale of a sphere, switch to <code>Shape Type = Mesh</code>.</p>
-<p><strong>Before</strong></p>
-<p><img alt="scalebefore" src="https://user-images.githubusercontent.com/2152766/118402342-6b1bd080-b661-11eb-8580-9acc1807b7b1.gif" /></p>
-<p><strong>After</strong></p>
-<video autoplay="autoplay" loop="loop" width="100%">
-   <source src="https://user-images.githubusercontent.com/2152766/118402464-e087a100-b661-11eb-9f01-d1aabf073453.mp4" type="video/mp4">
-</video>
-
+<h5 id="properties-panel">Properties Panel</h5>
+<p>Properties related to Ragdoll can all be found within the <code>Physics Properties</code> panel.</p>
+<p><img width="377" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/62d35219-96bf-4be1-8e08-9cf141b0286e"></p>
+<p>See the <code>Constraint Properties</code> constraints, logical!</p>
+<p><img width="376" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/5b5c4beb-ad30-40b8-a369-3e89f69de0f7"></p>
 <p><br></p>
-<h3 id="scene-scale">Scene Scale</h3>
-<p>The default distance unit in Maya is centimeters. Meaning <code>Translate X=5.0</code> means "5 centimeters along the X axis". And in some cases, characters get modeled by this unit too, to an average height of 160-190cm.</p>
-<p>But often this unit is ignored and now Ragdoll can too.</p>
-<div class="admonition info">
-<p class="admonition-title">Default Value</p>
-<p>Ragdoll has assumed a scene scale of 0.1 so far, meaning 10 centimeters meant 1 meter. That's the typical scale of most rigs, some having smaller - like the Fire Wolf at 0.01 - and some larger - like a real-world scale of 1.0.</p>
-<p>This value used to be reflected in <code>Gravity Y</code> as <code>98.2</code> meaning <code>98.2 cm/s2</code>. Which means that an object falling for 1 second would reach a velocity of 98.2 cm/s and keep increasing by the amount each second until reaching terminal velocity.</p>
-<p>It is now reflected in Scene Scale instead as 0.1. For a real-world scale, simply set this value to 1.0 and leave gravity unchanged.</p>
-</div>
-<p><img alt="image" src="https://user-images.githubusercontent.com/2152766/118354661-06c71700-b564-11eb-9bf5-929917dbcead.png" /></p>
-<p><img alt="scenescale2" src="https://user-images.githubusercontent.com/2152766/118354805-d7fd7080-b564-11eb-98f0-2c6325fd37d3.gif" /></p>
+<h5 id="workspace-tool">Workspace Tool</h5>
+<p>On the left-hand side you'll find the Ragdoll <code>Manipulator</code>. This is where you can manipulate shapes and limits, along with entering into Live Mode to interactively pose your character and verify thet contacts and limits behave to your liking.</p>
+<p><img width="380" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/b5454224-7995-459d-8c13-6222b1a5b3b8"></p>
 <p><br></p>
-<h3 id="quick-select">Quick Select</h3>
-<p>The quick-select commands now feature an option to ignore whatever is currently selected.</p>
-<ul>
-<li>Either <em>select all</em> of a certain type, like <code>rdRigid</code></li>
-<li>Or <em>filter</em> current selection by type, like <code>rdRigid</code></li>
-</ul>
-<p>Filtering grows more useful as your scenes grow large. When you have e.g. 2 characters and want to edit all constraints in one of them, then filtering is what you're looking for.</p>
-<p><img alt="selectselecter" src="https://user-images.githubusercontent.com/2152766/118117771-f12ae380-b3e3-11eb-9e64-60d63bb390c6.gif" /></p>
-<p><br></p>
-<h2 id="bulk-edits">Bulk Edits</h2>
-<p>The Maya Channel Box is great for editing multiple nodes at once.</p>
-<p>Select two or more nodes, change an attribute in the Channel Box, and the change is applied to each of the selected nodes at once. Win!</p>
-<p>But what about attributes that <em>aren't</em> in the Channel Box?</p>
-<p>Here are 3 ways in which you can bulk-edit a class of Ragdoll nodes in one-go. In each case, I'm using the <code>Ragdoll -&gt; Select</code> menu item to bulk-select all rigid bodies in the scene.</p>
-<p><br></p>
-<h3 id="1-attribute-editor">1. Attribute Editor</h3>
-<p>Also known as "the slow way". Simply edit each attribute, one at a time. Like watching paint dry. It's slow.</p>
-<p><img alt="bulkedits1" src="https://user-images.githubusercontent.com/2152766/118096421-3ee62280-b3c9-11eb-931f-ef712e33870a.gif" /></p>
-<p><br></p>
-<h3 id="2-channel-editor">2. Channel Editor</h3>
-<p>All attributes found in the Attribute Editor are also available in the Channel Editor. The most-commonly used ones are already exposed, but you can expose more.</p>
-<p><img alt="bulkedits2" src="https://user-images.githubusercontent.com/2152766/118096423-3f7eb900-b3c9-11eb-814c-ea1818a04022.gif" /></p>
-<p><br></p>
-<h3 id="3-attribute-spreadsheet">3. Attribute Spreadsheet</h3>
-<p>For total control, irregardless of the Channel Box and with searchability amongst attributes, you can also try the lesser-known Attribute Spreadsheet.</p>
-<p><img alt="bulkedits3" src="https://user-images.githubusercontent.com/2152766/118096441-45749a00-b3c9-11eb-9fcc-d986d0a47fd3.gif" /></p>
+<h5 id="top-menu">Top Menu</h5>
+<p>Most of the features can be found in top menu <code>Ragdoll</code> at the top.</p>
+<p><img width="380" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/7e5dd8bc-95c7-4a24-b81d-6e512193cfe7"></p>
 
 
 

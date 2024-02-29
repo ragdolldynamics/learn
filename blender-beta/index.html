@@ -1356,6 +1356,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../blender/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -1367,10 +1388,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1381,8 +1402,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
@@ -1512,11 +1533,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../releases/blender/2024.02.29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024.02.29 - Blender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../releases/2023.10.03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     2023.10.03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases/maya/2023.10.03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023.10.03 - Maya
   </span>
   
 
@@ -2649,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://forums.ragdolldynamics.com/t/questions-about-the-legal-part-of-selling-plugins-from-colleague-developer/1110/3" class="md-nav__link">
+      <a href="../blog/20231018_building_a_business/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3109,7 +3172,7 @@ In the meantime, we invite you to join us in shaping its final form for Blender 
 <li>Once we are satisfied, Ragdoll records the result and bakes it onto the rig</li>
 <li>Profit!</li>
 </ul>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/3357009/229128940-6798aeb1-62d5-4bea-90a9-f3b613660685.mp4" type="video/mp4"></video></p>
+<p><video class="poster" muted loop width=100%  controls autoplay><source src="https://user-images.githubusercontent.com/3357009/229128940-6798aeb1-62d5-4bea-90a9-f3b613660685.mp4" type="video/mp4"></video></p>
 <p>And that's basically what Ragdoll is for — adding the fun of physics to your animation workflow!</p>
 <p>To learn more about this Ragdoll Dragonfly, read below!</p>
 <h3 id="interface">Interface</h3>
@@ -3154,20 +3217,20 @@ And if a marker's behavior is set to Kinematic, it will 100% follow the input an
 <p>Since we will only apply an up-down movement to the rig base, just pick the <em>torax</em> (chest) of the Dragonfly for the first marker
 to follow that animation.</p>
 <p>Then, when assigning the next chain of markers, remember to also start from that <em>torax</em> bone.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/3357009/229093561-b9b143be-f717-4c9c-9856-5956a2d8e32f.mp4" type="video/mp4"></video></p>
+<p><video class="poster" muted loop width=100%  controls autoplay><source src="https://user-images.githubusercontent.com/3357009/229093561-b9b143be-f717-4c9c-9856-5956a2d8e32f.mp4" type="video/mp4"></video></p>
 <h4 id="offset-solver">Offset Solver</h4>
 <p>Other than changing the <code>Display Type</code> property to <code>Wire</code> in the Solver for a cleaner view, sometimes you may want a side-by-side
 view when editing markers. If that's the case, simply move the Solver node and all the marker shapes will step aside.</p>
 <p>You may want to uncheck <code>Lock Object Modes</code> for faster object and bone selection.</p>
 <p>Once done, move back and then activate the Manipulator tool for matching marker shapes to geometry.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/3357009/229097642-6f4bda2b-6ea4-4121-b37c-d6f1d329096e.mp4" type="video/mp4"></video></p>
+<p><video class="poster" muted loop width=100%  controls autoplay><source src="https://user-images.githubusercontent.com/3357009/229097642-6f4bda2b-6ea4-4121-b37c-d6f1d329096e.mp4" type="video/mp4"></video></p>
 <h4 id="ik-legs">IK Legs</h4>
 <p>You may also reference <a href="https://learn.ragdolldynamics.com/tutorials/manikin_ik/">this page</a>.</p>
 <p>Simply put, we don't want to assign markers directly to IK controllers since physics is more like an FK thing.
 So instead, we would assign them to the bones that are driven by IK controls.</p>
 <p>With this Dragonfly rig, although we can find them, they are basically locked.
 To work around that, the idea is to add an extra bone (the gray one in the middle) and make our own FK to drive IK.</p>
-<p><video autoplay class="poster" muted loop width=100%  controls><source src="https://user-images.githubusercontent.com/3357009/229101563-4c97ac6d-5541-4c5a-9858-b7b99739cbb7.mp4" type="video/mp4"></video></p>
+<p><video class="poster" muted loop width=100%  controls autoplay><source src="https://user-images.githubusercontent.com/3357009/229101563-4c97ac6d-5541-4c5a-9858-b7b99739cbb7.mp4" type="video/mp4"></video></p>
 <h4 id="scene-scale">Scene Scale</h4>
 <p>This Dragonfly is quite a big one. To get a much real-world result, we have to tune down the scene scale.</p>
 <p><img width="601" alt="image" src="https://user-images.githubusercontent.com/3357009/229103392-7d10fa16-5899-407f-87ae-425602762a18.png"></p>
