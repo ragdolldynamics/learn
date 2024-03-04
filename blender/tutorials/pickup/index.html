@@ -7,36 +7,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Details of individual aspects of Ragdoll in Blender">
+        <meta name="description" content="The real-time physics solver for Maya">
       
       
         <meta name="author" content="mottosso">
       
       
-        <link rel="canonical" href="https://learn.ragdolldynamics.com/blender/reference/">
+        <link rel="canonical" href="https://learn.ragdolldynamics.com/blender/tutorials/pickup/">
       
       
-        <link rel="prev" href="../download/">
       
       
-        <link rel="next" href="../tutorials/manikin/">
-      
-      
-      <link rel="icon" href="../../favicon-256x256.png">
+      <link rel="icon" href="../../../favicon-256x256.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
 
     
       
-        <title>Reference - Learn Ragdoll</title>
+        <title>Pickup - Learn Ragdoll</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -55,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../extra.css">
+      <link rel="stylesheet" href="../../../extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,11 +76,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#manipulator" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +86,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Learn Ragdoll" class="md-header__button md-logo" aria-label="Learn Ragdoll" data-md-component="logo">
+    <a href="../../.." title="Learn Ragdoll" class="md-header__button md-logo" aria-label="Learn Ragdoll" data-md-component="logo">
       
-  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+  <img src="../../../ragdoll_silhouette_black_512.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reference
+              Pickup
             
           </span>
         </div>
@@ -195,7 +186,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../../../overview/" class="md-tabs__link">
         
   
     
@@ -212,7 +203,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../download/" class="md-tabs__link">
+      <a href="../../../download/" class="md-tabs__link">
         
   
     
@@ -231,7 +222,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../maya/home/" class="md-tabs__link">
+        <a href="../../../maya/home/" class="md-tabs__link">
           
   
   Maya
@@ -245,13 +236,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../home/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../home/" class="md-tabs__link">
           
   
   Blender
@@ -267,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../licencing/" class="md-tabs__link">
+      <a href="../../../licencing/" class="md-tabs__link">
         
   
     
@@ -286,7 +275,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../releases/2024.02.29/" class="md-tabs__link">
+        <a href="../../../releases/2024.02.29/" class="md-tabs__link">
           
   
   News
@@ -304,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/20240101_omx_vs_cmdx/" class="md-tabs__link">
+        <a href="../../../blog/20240101_omx_vs_cmdx/" class="md-tabs__link">
           
   
   Blog
@@ -322,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../sdk/home/" class="md-tabs__link">
+        <a href="../../../sdk/home/" class="md-tabs__link">
           
   
   SDK
@@ -338,7 +327,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
     
@@ -372,9 +361,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll" data-md-component="logo">
+    <a href="../../.." title="Learn Ragdoll" class="md-nav__button md-logo" aria-label="Learn Ragdoll" data-md-component="logo">
       
-  <img src="../../ragdoll_silhouette_black_512.png" alt="logo">
+  <img src="../../../ragdoll_silhouette_black_512.png" alt="logo">
 
     </a>
     Learn Ragdoll
@@ -401,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../download/" class="md-nav__link">
+      <a href="../../../download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maya/home/" class="md-nav__link">
+      <a href="../../../maya/home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maya/download/" class="md-nav__link">
+      <a href="../../../maya/download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/videos/" class="md-nav__link">
+      <a href="../../../tutorials/videos/" class="md-nav__link">
         
   
     <img src="/icons/camera_black.png">
@@ -582,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin/" class="md-nav__link">
+      <a href="../../../tutorials/manikin/" class="md-nav__link">
         
   
     <img src="/icons/ragdoll_black.png">
@@ -605,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ragdoll/" class="md-nav__link">
+      <a href="../../../tutorials/manikin_ragdoll/" class="md-nav__link">
         
   
     <img src="/icons/ragdoll_black.png">
@@ -628,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/manikin_ik/" class="md-nav__link">
+      <a href="../../../tutorials/manikin_ik/" class="md-nav__link">
         
   
     <img src="/icons/chain_black.png">
@@ -651,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/mocap_chap/" class="md-nav__link">
+      <a href="../../../tutorials/mocap_chap/" class="md-nav__link">
         
   
     <img src="/icons/mocap_black.png">
@@ -674,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/rookie_wasp/" class="md-nav__link">
+      <a href="../../../tutorials/rookie_wasp/" class="md-nav__link">
         
   
     <img src="/icons/wasp_black.png">
@@ -697,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/ragdog/" class="md-nav__link">
+      <a href="../../../tutorials/ragdog/" class="md-nav__link">
         
   
     <img src="/icons/bone_black.png">
@@ -720,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/cloth_emulation/" class="md-nav__link">
+      <a href="../../../tutorials/cloth_emulation/" class="md-nav__link">
         
   
     <img src="/icons/cloth_black.png">
@@ -743,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/self_walking/" class="md-nav__link">
+      <a href="../../../tutorials/self_walking/" class="md-nav__link">
         
   
     <img src="/icons/control_black.png">
@@ -766,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/bouncing_ball/" class="md-nav__link">
+      <a href="../../../tutorials/bouncing_ball/" class="md-nav__link">
         
   
     <img src="/icons/physics_black.png">
@@ -835,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/marker/" class="md-nav__link">
+      <a href="../../../documentation/marker/" class="md-nav__link">
         
   
     <img src="/icons/marker_black.png">
@@ -858,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/group/" class="md-nav__link">
+      <a href="../../../documentation/group/" class="md-nav__link">
         
   
     <img src="/icons/ragdoll_black.png">
@@ -881,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/solver/" class="md-nav__link">
+      <a href="../../../documentation/solver/" class="md-nav__link">
         
   
     <img src="/icons/solver_black.png">
@@ -904,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/environment/" class="md-nav__link">
+      <a href="../../../documentation/environment/" class="md-nav__link">
         
   
     <img src="/icons/environment_black.png">
@@ -927,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/manipulator/" class="md-nav__link">
+      <a href="../../../documentation/manipulator/" class="md-nav__link">
         
   
     <img src="/icons/manipulator_black.png">
@@ -950,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/live_mode/" class="md-nav__link">
+      <a href="../../../documentation/live_mode/" class="md-nav__link">
         
   
     <img src="/icons/magnet_black.png">
@@ -973,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/locomotion/" class="md-nav__link">
+      <a href="../../../documentation/locomotion/" class="md-nav__link">
         
   
     <img src="/icons/plan_black.png">
@@ -996,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/constraints/" class="md-nav__link">
+      <a href="../../../documentation/constraints/" class="md-nav__link">
         
   
     <img src="/icons/constraint_black.png">
@@ -1019,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/fields/" class="md-nav__link">
+      <a href="../../../documentation/fields/" class="md-nav__link">
         
   
     <img src="/icons/force_black.png">
@@ -1042,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/import_physics/" class="md-nav__link">
+      <a href="../../../documentation/import_physics/" class="md-nav__link">
         
   
     <img src="/icons/save_black.png">
@@ -1065,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/record_simulation/" class="md-nav__link">
+      <a href="../../../documentation/record_simulation/" class="md-nav__link">
         
   
     <img src="/icons/record_black.png">
@@ -1088,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/snap_to_simulation/" class="md-nav__link">
+      <a href="../../../documentation/snap_to_simulation/" class="md-nav__link">
         
   
     <img src="/icons/snap_black.png">
@@ -1111,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/retargeting/" class="md-nav__link">
+      <a href="../../../documentation/retargeting/" class="md-nav__link">
         
   
     <img src="/icons/retarget_black.png">
@@ -1134,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/level_of_detail/" class="md-nav__link">
+      <a href="../../../documentation/level_of_detail/" class="md-nav__link">
         
   
     <img src="/icons/hair2_black.png">
@@ -1157,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/cache/" class="md-nav__link">
+      <a href="../../../documentation/cache/" class="md-nav__link">
         
   
     <img src="/icons/bake_black.png">
@@ -1180,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/link/" class="md-nav__link">
+      <a href="../../../documentation/link/" class="md-nav__link">
         
   
     <img src="/icons/link_black.png">
@@ -1203,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/utilities/" class="md-nav__link">
+      <a href="../../../documentation/utilities/" class="md-nav__link">
         
   
     <img src="/icons/replace_black.png">
@@ -1234,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../menu/" class="md-nav__link">
+      <a href="../../../menu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/" class="md-nav__link">
+      <a href="../../../api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1280,28 +1269,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1312,7 +1296,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blender
@@ -1326,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../home/" class="md-nav__link">
+      <a href="../../home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../download/" class="md-nav__link">
+      <a href="../../download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,28 +1349,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Reference
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,99 +1361,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manipulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manipulator
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rsolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      rSolver
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rmarker" class="md-nav__link">
-    <span class="md-ellipsis">
-      rMarker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rgroup" class="md-nav__link">
-    <span class="md-ellipsis">
-      rGroup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="rGroup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#workspace-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workspace Tool
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collection
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1538,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorials/manikin/" class="md-nav__link">
+      <a href="../manikin/" class="md-nav__link">
         
   
     <img src="/icons/ragdoll_black.png">
@@ -1576,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../licencing/" class="md-nav__link">
+      <a href="../../../licencing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1634,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2024.02.29/" class="md-nav__link">
+      <a href="../../../releases/2024.02.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1655,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/blender/2024.02.29/" class="md-nav__link">
+      <a href="../../../releases/blender/2024.02.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1676,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2023.10.03/" class="md-nav__link">
+      <a href="../../../releases/2023.10.03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1697,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/maya/2023.10.03/" class="md-nav__link">
+      <a href="../../../releases/maya/2023.10.03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1718,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2023.04.01/" class="md-nav__link">
+      <a href="../../../releases/2023.04.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1739,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.11.29/" class="md-nav__link">
+      <a href="../../../releases/2022.11.29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1760,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.07.20/" class="md-nav__link">
+      <a href="../../../releases/2022.07.20/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1781,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.06.15/" class="md-nav__link">
+      <a href="../../../releases/2022.06.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1802,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.06.09/" class="md-nav__link">
+      <a href="../../../releases/2022.06.09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1823,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.05.04/" class="md-nav__link">
+      <a href="../../../releases/2022.05.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1844,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.03.14/" class="md-nav__link">
+      <a href="../../../releases/2022.03.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1865,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.02.28/" class="md-nav__link">
+      <a href="../../../releases/2022.02.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1886,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.02.14/" class="md-nav__link">
+      <a href="../../../releases/2022.02.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1907,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.02.01/" class="md-nav__link">
+      <a href="../../../releases/2022.02.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1928,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.01.21/" class="md-nav__link">
+      <a href="../../../releases/2022.01.21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1949,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2022.01.17/" class="md-nav__link">
+      <a href="../../../releases/2022.01.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1970,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.12.15/" class="md-nav__link">
+      <a href="../../../releases/2021.12.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.12.12/" class="md-nav__link">
+      <a href="../../../releases/2021.12.12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2012,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.11.15/" class="md-nav__link">
+      <a href="../../../releases/2021.11.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2033,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.10.25/" class="md-nav__link">
+      <a href="../../../releases/2021.10.25/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2054,7 +1927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.10.07/" class="md-nav__link">
+      <a href="../../../releases/2021.10.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2075,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.09.27/" class="md-nav__link">
+      <a href="../../../releases/2021.09.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2096,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.08.28/" class="md-nav__link">
+      <a href="../../../releases/2021.08.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2117,7 +1990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.08.06/" class="md-nav__link">
+      <a href="../../../releases/2021.08.06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2138,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.27/" class="md-nav__link">
+      <a href="../../../releases/2021.07.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2159,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.15/" class="md-nav__link">
+      <a href="../../../releases/2021.07.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2180,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.07.02/" class="md-nav__link">
+      <a href="../../../releases/2021.07.02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2201,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.06.10/" class="md-nav__link">
+      <a href="../../../releases/2021.06.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.06.07/" class="md-nav__link">
+      <a href="../../../releases/2021.06.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2243,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.05.17/" class="md-nav__link">
+      <a href="../../../releases/2021.05.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.05.10/" class="md-nav__link">
+      <a href="../../../releases/2021.05.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2285,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.28/" class="md-nav__link">
+      <a href="../../../releases/2021.04.28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.23/" class="md-nav__link">
+      <a href="../../../releases/2021.04.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2327,7 +2200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.04.11/" class="md-nav__link">
+      <a href="../../../releases/2021.04.11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2348,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.25/" class="md-nav__link">
+      <a href="../../../releases/2021.03.25/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2369,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.23/" class="md-nav__link">
+      <a href="../../../releases/2021.03.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2390,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.11/" class="md-nav__link">
+      <a href="../../../releases/2021.03.11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2411,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.04/" class="md-nav__link">
+      <a href="../../../releases/2021.03.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2432,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.03.01/" class="md-nav__link">
+      <a href="../../../releases/2021.03.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,7 +2326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.02.07/" class="md-nav__link">
+      <a href="../../../releases/2021.02.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2474,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.27/" class="md-nav__link">
+      <a href="../../../releases/2021.01.27/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2495,7 +2368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.17/" class="md-nav__link">
+      <a href="../../../releases/2021.01.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.15/" class="md-nav__link">
+      <a href="../../../releases/2021.01.15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2537,7 +2410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.14/" class="md-nav__link">
+      <a href="../../../releases/2021.01.14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2558,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2021.01.04/" class="md-nav__link">
+      <a href="../../../releases/2021.01.04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2579,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.18/" class="md-nav__link">
+      <a href="../../../releases/2020.12.18/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2600,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.07/" class="md-nav__link">
+      <a href="../../../releases/2020.12.07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2621,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.12.01/" class="md-nav__link">
+      <a href="../../../releases/2020.12.01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2642,7 +2515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.24/" class="md-nav__link">
+      <a href="../../../releases/2020.11.24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2663,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.23/" class="md-nav__link">
+      <a href="../../../releases/2020.11.23/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.22/" class="md-nav__link">
+      <a href="../../../releases/2020.11.22/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2705,7 +2578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.17/" class="md-nav__link">
+      <a href="../../../releases/2020.11.17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2726,7 +2599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.16/" class="md-nav__link">
+      <a href="../../../releases/2020.11.16/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/2020.11.10/" class="md-nav__link">
+      <a href="../../../releases/2020.11.10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2813,7 +2686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/20240101_omx_vs_cmdx/" class="md-nav__link">
+      <a href="../../../blog/20240101_omx_vs_cmdx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2834,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/20231018_building_a_business/" class="md-nav__link">
+      <a href="../../../blog/20231018_building_a_business/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2855,7 +2728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/20220809/" class="md-nav__link">
+      <a href="../../../blog/20220809/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2876,7 +2749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/20210728_announce_1_0/" class="md-nav__link">
+      <a href="../../../blog/20210728_announce_1_0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2897,7 +2770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/20210713_july28/" class="md-nav__link">
+      <a href="../../../blog/20210713_july28/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2963,7 +2836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/home/" class="md-nav__link">
+      <a href="../../../sdk/home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2984,7 +2857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/download/" class="md-nav__link">
+      <a href="../../../sdk/download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3005,7 +2878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/serialisation/" class="md-nav__link">
+      <a href="../../../sdk/serialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3033,7 +2906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3064,89 +2937,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manipulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manipulator
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rsolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      rSolver
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rmarker" class="md-nav__link">
-    <span class="md-ellipsis">
-      rMarker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rgroup" class="md-nav__link">
-    <span class="md-ellipsis">
-      rGroup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="rGroup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#workspace-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workspace Tool
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collection
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3164,181 +2954,7 @@
   
 
 
-  <h1>Reference</h1>
-
-<h3 id="manipulator">Manipulator</h3>
-<p>With Industry Standard keymapping, the Manipulator has a default interaction model.</p>
-<ul>
-<li><a href="https://learn.ragdolldynamics.com/documentation/manipulator">Primary Documentation</a></li>
-</ul>
-<p>With native Blender keymapping, the Middle-mouse button is occupied so instead:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Action</th>
-<th style="text-align: left;">Key</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Translate</td>
-<td style="text-align: left;">Ctrl + LMB</td>
-</tr>
-<tr>
-<td style="text-align: left;">Scale</td>
-<td style="text-align: left;">Ctrl + Shift + LMB</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rotate</td>
-<td style="text-align: left;">Ctrl + Alt + LMB</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="properties">Properties</h3>
-<p>Ragdoll exposes several properties you can use to tune your simulation, divided into several "archetypes". One of which is the physics solver itself, responsible for overall settings like start and end frames and quality parameters such as <code>Substeps</code>.</p>
-<p><br></p>
-<h4 id="rsolver">rSolver</h4>
-<p>Responsible for overall simulation settings and keep track of what to include in the physics world.</p>
-<p><img alt="image.png" src="https://content.ragdolldynamics.com/bac13049-8891-419a-bdac-16ec43540486.png" /></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Property</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Enabled</td>
-<td style="text-align: left;">Whether to simulate or not</td>
-</tr>
-<tr>
-<td style="text-align: left;">Export</td>
-<td style="text-align: left;">Include this solver when exporting the Ragdoll file to disk</td>
-</tr>
-<tr>
-<td style="text-align: left;">Cache</td>
-<td style="text-align: left;">Keep simulated frames for the next time you playback your scene</td>
-</tr>
-<tr>
-<td style="text-align: left;">Start Time</td>
-<td style="text-align: left;">When to start simulating</td>
-</tr>
-<tr>
-<td style="text-align: left;">Simulate Every X Frames</td>
-<td style="text-align: left;">Enable stop-motion like simulation</td>
-</tr>
-<tr>
-<td style="text-align: left;">Substeps</td>
-<td style="text-align: left;">Divide every Blender frame into this many "sub steps", improves quality at the expense of performance</td>
-</tr>
-<tr>
-<td style="text-align: left;">Iterations</td>
-<td style="text-align: left;">Try this many times to solve each internal physics constraint</td>
-</tr>
-<tr>
-<td style="text-align: left;">Air Density</td>
-<td style="text-align: left;">The effect of air, 0 means space and 10 means water</td>
-</tr>
-<tr>
-<td style="text-align: left;">Gravity</td>
-<td style="text-align: left;">Force applied to all Markers in the solver, to emulate gravity</td>
-</tr>
-<tr>
-<td style="text-align: left;">Time Scale</td>
-<td style="text-align: left;">Slow motion, or not</td>
-</tr>
-<tr>
-<td style="text-align: left;">Scene Scale</td>
-<td style="text-align: left;">When your character is not at a realistic e.g. 1.8m height, use this to compensate</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h4 id="rmarker">rMarker</h4>
-<p>Tracker for your animation controls, like the red pill in The Matrix. This transmits information about each control to Ragdolll, such that it knows where to go and at which strength.</p>
-<p><img alt="image.png" src="https://content.ragdolldynamics.com/a405a22c-792c-4367-b694-341aff8c973a.png" /></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Property</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Enabled</td>
-<td style="text-align: left;">Whether to include this rMarker in the rSolver</td>
-</tr>
-<tr>
-<td style="text-align: left;">Export</td>
-<td style="text-align: left;">Include this Marker when exporting</td>
-</tr>
-<tr>
-<td style="text-align: left;">Behaviour</td>
-<td style="text-align: left;">Whether to simulate the control, or treat it as pure animation. The default is to inherit the value from the rGroup</td>
-</tr>
-<tr>
-<td style="text-align: left;">Translate Motion</td>
-<td style="text-align: left;">Should the control be allowed to translate?</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rotate Stiffness</td>
-<td style="text-align: left;">The "strength" at which to follow the animation control</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rotate Damping</td>
-<td style="text-align: left;">The "resistance" at which to follow the animation control</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h4 id="rgroup">rGroup</h4>
-<p>Control the stiffness of multiple markers at once.</p>
-<p><img alt="image.png" src="https://content.ragdolldynamics.com/842f9777-eaf5-4a1c-b9a7-d4c93cb85f29.png" /></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Property</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Enabled</td>
-<td style="text-align: left;">Whether to include this rMarker in the rSolver</td>
-</tr>
-<tr>
-<td style="text-align: left;">Export</td>
-<td style="text-align: left;">Include this Group when exporting</td>
-</tr>
-<tr>
-<td style="text-align: left;">Self Collide</td>
-<td style="text-align: left;">Allow contained Markers to collide with each other</td>
-</tr>
-<tr>
-<td style="text-align: left;">Translate Motion</td>
-<td style="text-align: left;">Should the controls in this group be allowed to translate?</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rotate Stiffness</td>
-<td style="text-align: left;">Multiply this value with every Markers contained in the group</td>
-</tr>
-<tr>
-<td style="text-align: left;">Rotate Damping</td>
-<td style="text-align: left;">Likewise, multiply this value with every Markers contained in the group</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h5 id="workspace-tool">Workspace Tool</h5>
-<p>On the left-hand side you'll find the Ragdoll <code>Manipulator</code>. This is where you can manipulate shapes and limits, along with entering into Live Mode to interactively pose your character and verify thet contacts and limits behave to your liking.</p>
-<p><img width="380" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/b5454224-7995-459d-8c13-6222b1a5b3b8"></p>
-<p><br></p>
-<h5 id="collection">Collection</h5>
-<p>Any new Ragdoll object is automatically added to a <code>Ragdoll</code> collection.</p>
-<p><img width="376" alt="image" src="https://github.com/davidlatwe/sweet/assets/3357009/49b01d62-2b1a-415f-904e-7410c7b2a1f3"></p>
+  <h1>Pickup</h1>
 
 
 
@@ -3346,8 +2962,7 @@
 
 
 
-  
-  
+
 
 
 
@@ -3387,12 +3002,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../extra.js"></script>
+        <script src="../../../extra.js"></script>
       
     
   </body>
