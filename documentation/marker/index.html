@@ -931,18 +931,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kinematic" class="md-nav__link">
+  <a href="#animated" class="md-nav__link">
     <span class="md-ellipsis">
-      Kinematic
+      Animated
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dynamic" class="md-nav__link">
+  <a href="#simulated" class="md-nav__link">
     <span class="md-ellipsis">
-      Dynamic
+      Simulated
     </span>
   </a>
   
@@ -3283,18 +3283,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kinematic" class="md-nav__link">
+  <a href="#animated" class="md-nav__link">
     <span class="md-ellipsis">
-      Kinematic
+      Animated
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dynamic" class="md-nav__link">
+  <a href="#simulated" class="md-nav__link">
     <span class="md-ellipsis">
-      Dynamic
+      Simulated
     </span>
   </a>
   
@@ -3594,7 +3594,7 @@
 
 <p><br></p>
 <h3 id="behaviour">Behaviour</h3>
-<p>The <code>Behaviour</code> is how Ragdoll should interpret the controls you assign. Did you mean for them to remain animated, i.e. <code>Kinematic</code>? Or should they follow the control around, i.e. <code>Dynamic</code>?</p>
+<p>The <code>Behaviour</code> is how Ragdoll should interpret the controls you assign. Did you mean for them to remain animated, i.e. <code>Animated</code>? Or should they follow the control around, i.e. <code>Simulated</code>?</p>
 <p>The <code>Behaviour</code> can be set either for a whole group of markers, or each Marker individually.</p>
 <table>
 <thead>
@@ -3605,26 +3605,26 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Inherit</td>
-<td style="text-align: left;">Do whatever the group is doing, or <code>Dynamic</code> if there is no group</td>
+<td style="text-align: left;">Use Group</td>
+<td style="text-align: left;">Do whatever the group is doing, or <code>Simulated</code> if there is no group</td>
 </tr>
 <tr>
-<td style="text-align: left;">Kinematic</td>
+<td style="text-align: left;">Animated</td>
 <td style="text-align: left;">Follow the input <em>exactly</em>, physics need not apply</td>
 </tr>
 <tr>
-<td style="text-align: left;">Dynamic</td>
+<td style="text-align: left;">Simulated</td>
 <td style="text-align: left;">Follow the input approximately, with some <code>Stiffness</code> and <code>Damping</code></td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
-<h4 id="kinematic">Kinematic</h4>
+<h4 id="animated">Animated</h4>
 <p>Follow the input exactly, no exceptions. Not even collisions.</p>
 <p><video class="poster" muted loop width=100% controls controls autoplay><source src="https://user-images.githubusercontent.com/2152766/134478795-daa12066-c151-4fd5-a762-443b60a7fc45.mp4" type="video/mp4"></video></p>
 
 <p><br></p>
-<h4 id="dynamic">Dynamic</h4>
+<h4 id="simulated">Simulated</h4>
 <p>Follow the local pose of your animation.</p>
 <p><video class="poster" muted loop width=100% controls controls autoplay><source src="https://user-images.githubusercontent.com/2152766/134478800-e90f8928-b590-4b91-a314-bdcd9152cfef.mp4" type="video/mp4"></video></p>
 
