@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install" class="md-skip">
+        <a href="#install-on-windows" class="md-skip">
           Skip to content
         </a>
       
@@ -2936,9 +2936,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#install-on-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      Install
+      Install on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install on Linux
     </span>
   </a>
   
@@ -3026,9 +3035,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#install-on-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      Install
+      Install on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install on Linux
     </span>
   </a>
   
@@ -3082,9 +3100,25 @@
 </div>
 
 <p><br></p>
-<h2 id="install">Install</h2>
+<h2 id="install-on-windows">Install on Windows</h2>
 <p>To install Ragdoll Core, double-click the <code>RagdollCore.msi</code> you downloaded from above, and click through the dialogs.</p>
 <p><img alt="image.png" src="https://content.ragdolldynamics.com/b8241fe2-14d6-48f6-bc07-efd883eb42b8.png" /></p>
+<p><br></p>
+<h2 id="install-on-linux">Install on Linux</h2>
+<p>Ragdoll core installation on Linux is basically two steps:</p>
+<ol>
+<li>Download the <code>RagdollCore*.zip</code> above</li>
+<li>Unpack it in your home directory, i.e. <code>/home/user-name</code>, replacing <code>user-name</code> with your username</li>
+</ol>
+<p>For example, to install current latest core:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/
+wget<span class="w"> </span>https://content.ragdolldynamics.com/6fb6a202-bd24-4db0-8d03-40e8c306c20c/RagdollCore-linux-2024.03.07.zip
+unzip<span class="w"> </span>RagdollCore-linux-2024.03.07.zip
+</code></pre></div>
+<p>If you prefer to place core libraries in elsewhere, environment variable <code>RAGDOLL_CORE_PATH</code> can be used.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">RAGDOLL_CORE_PATH</span><span class="o">=</span>/home/user-name/ragdolldynamics/core/2024.03.07/lib
+</code></pre></div>
 
 
 
