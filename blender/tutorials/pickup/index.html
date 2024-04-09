@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The real-time physics solver for Maya">
+        <meta name="description" content="Mixamo plus motion capture with Ragdoll">
       
       
         <meta name="author" content="mottosso">
@@ -16,6 +16,10 @@
         <link rel="canonical" href="https://learn.ragdolldynamics.com/blender/tutorials/pickup/">
       
       
+        <link rel="prev" href="../advanced_setup/">
+      
+      
+        <link rel="next" href="../slapsass1/">
       
       
       <link rel="icon" href="../../../favicon-256x256.png">
@@ -75,6 +79,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#pickup" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -236,10 +245,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../home/" class="md-tabs__link">
           
   
@@ -275,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../releases/blender/2024.03.07/" class="md-tabs__link">
+        <a href="../../../releases/blender/2024.04.09/" class="md-tabs__link">
           
   
   News
@@ -1269,23 +1280,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1296,7 +1312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blender
@@ -1370,6 +1386,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1379,11 +1397,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -1397,7 +1415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -1418,6 +1436,168 @@
   
   <span class="md-ellipsis">
     Manikin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_setup/" class="md-nav__link">
+        
+  
+    <img src="/icons/chain_black.png">
+  
+  <span class="md-ellipsis">
+    Advanced Character Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <img src="/icons/convert_black.png">
+  
+  <span class="md-ellipsis">
+    Picking up a Puppet
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+    <img src="/icons/convert_black.png">
+  
+  <span class="md-ellipsis">
+    Picking up a Puppet
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pickup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pickup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slapsass1/" class="md-nav__link">
+        
+  
+    <img src="/icons/force_black.png">
+  
+  <span class="md-ellipsis">
+    Slap'n'Sass I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slapsass2/" class="md-nav__link">
+        
+  
+    <img src="/icons/force_black.png">
+  
+  <span class="md-ellipsis">
+    Slap'n'Sass II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge_solvers/" class="md-nav__link">
+        
+  
+    <img src="/icons/motor_black.png">
+  
+  <span class="md-ellipsis">
+    Merge Solvers
   </span>
   
 
@@ -1499,6 +1679,27 @@
             News
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../releases/blender/2024.04.09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024.04.09 - Blender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2958,6 +3159,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pickup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pickup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2975,9 +3193,62 @@
   
 
 
-  <h1>Pickup</h1>
+  <h1>Picking up a Puppet</h1>
 
+<video autoplay class="poster" muted="muted" loop="loop" width=100%>
+    <source src="https://content.ragdolldynamics.com/198cd5e2-4b84-4703-b13d-7854ff484d8e.mp4" type="video/mp4">
+</video>
 
+<h3 id="pickup">Pickup</h3>
+<p>A few weeks ago, <a href="https://www.kojimaproductions.jp/en">Kojima Productions</a> dropped a first trailer for Death Stranding 2, where they leveraged Ragdoll for a puppet being tossed around.</p>
+<ul>
+<li><a href="https://youtu.be/4NSjsZcojMM?t=178">https://youtu.be/4NSjsZcojMM?t=178</a></li>
+<li><a href="https://youtu.be/4NSjsZcojMM?t=367">https://youtu.be/4NSjsZcojMM?t=367</a></li>
+</ul>
+<p>While we await a breakdown from Kojima, we threw together our own breakdown and tutorial of how it could be made with Blender.</p>
+<p>Enjoy :)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=79s">01:19</a> Loading built-in assets</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=85s">01:25</a> Re-scaling of ragdolls</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=95s">01:35</a> Working with Scene Scale</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=135s">02:15</a> Snap to Simulation for Starting Pose</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=190s">03:10</a> Offsetting the Armature</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=240s">04:00</a> Removing left-over animation</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=261s">04:21</a> Second armature</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=335s">05:35</a> Reparent string to back</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=360s">06:00</a> Re-scaling the ground</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=405s">06:45</a> Tuning string behaviour</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=420s">07:00</a> Pick up string</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=455s">07:35</a> Posing the string</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=470s">07:50</a> Tuning string shapes</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=515s">08:35</a> Assigning to the Mixamo character</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=540s">09:00</a> Replacing meshes</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=570s">09:30</a> Separate meshes</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=640s">10:40</a> Animated Mixamo character</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=700s">11:40</a> Disabling Contacts</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=730s">12:10</a> Attaching string to finger</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=780s">13:00</a> Disabling pin translate stiffness</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=810s">13:30</a> Adjusting pin pivot</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=840s">14:00</a> Animating pin constraint on/off</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=875s">14:35</a> Tuning pin constraint</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=925s">15:25</a> The effect of mass</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=970s">16:10</a> Tuning the string</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1000s">16:40</a> The effect of 0 stiffness</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1030s">17:10</a> Tuning the manikin</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1080s">18:00</a> Coming alive</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1115s">18:35</a> Live Mode Posing</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1255s">20:55</a> Waking up with Rotate Stiffness</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1270s">21:10</a> More jiggle</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1310s">21:50</a> Normal keyframing</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1380s">23:00</a> Controlling the global facing direction</li>
+<li><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc&amp;t=1620s">27:00</a> Fainting towards the end</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=Rm3eY1EVzJc"><img alt="" src="https://content.ragdolldynamics.com/21ce7231-308c-4895-9cce-53e1898b36c6.png" /></a></p>
+<p><strong>Comments</strong></p>
+<ul>
+<li><a href="https://forums.ragdolldynamics.com/t/pickup-with-motion-capture-in-blender/1277">https://forums.ragdolldynamics.com/t/pickup-with-motion-capture-in-blender/1277</a></li>
+<li><a href="https://blenderartists.org/t/ragdoll-early-access/1515820/39">https://blenderartists.org/t/ragdoll-early-access/1515820/39</a></li>
+</ul>
 
 
 
@@ -2986,26 +3257,8 @@
 
 
   
-    
-  
   
 
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
-    </span>
-    2024-03-07
-  </span>
-
-    
-    
-    
-    
-  </aside>
 
 
 
