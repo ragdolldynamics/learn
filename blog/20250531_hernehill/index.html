@@ -3133,13 +3133,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rigging-perspective" class="md-nav__link">
+  <a href="#rigging-perspective-ragdoll-in-production" class="md-nav__link">
     <span class="md-ellipsis">
-      Rigging Perspective
+      Rigging Perspective: Ragdoll in Production
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Rigging Perspective">
+    <nav class="md-nav" aria-label="Rigging Perspective: Ragdoll in Production">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3234,12 +3234,11 @@
 <p><br></p>
 <p><video class="poster" muted loop width=100%  controls autoplay><source src="https://content.ragdolldynamics.com/3f9950d2-f0ba-4e2f-8dc6-ea0040fc7586.mp4" type="video/mp4"></video></p>
 <p>At Herne Hill, we adapted Ragdoll into our pipeline in late 2022.</p>
-<p>This was primarily driven by our rigging/CFX department. One of the earliest projects in which we made use of it was <a href="https://www.imdb.com/title/tt4419684/"><em>In the Lost Lands</em></a>. Below we would like to give you some insights into our lessons learned and offer some tips for others who are looking to integrate Ragdoll into their studio pipeline.</p>
+<p>This was primarily driven by our rigging/CFX department. One of the earliest projects in which we used it was <a href="https://www.imdb.com/title/tt4419684/">In the Lost Lands</a>. Below, we would like to give you some insights into our lessons learned and offer some tips for others who are looking to integrate Ragdoll Dynamics’ technology into their studio pipeline.</p>
 <p><br></p>
 <h3 id="pipeline-perspective">Pipeline Perspective</h3>
-<p>At the core of our rigging pipeline is a proprietary API.</p>
-<p>It contains utilities from file IO to <code>OpenMaya</code> wrappers as well as tools like our rig builder. Instead of creating joints, IK-handles and controls by hand, we compose a rig using the API in a <strong>build script</strong>. That build script handles everything from loading the model to exporting the individual rig representations like <strong>main</strong> for our in house anim team, <strong>FBX</strong> for crowds, or <strong>outsource</strong> for vendors. We call these scenes <strong>representations</strong>.</p>
-<p>Our CFX pipeline runs entirely through Houdini, with the majority of setups being <a href="https://www.sidefx.com/docs/houdini/Vellum/index.html">Vellum</a> hair, cloth, and muscle simulations. The artists are mostly the same as we believe that both disciplines are two sides of the same coin.</p>
+<p>At the core of our rigging pipeline is a proprietary API, which contains utilities from file IO to <code>OpenMaya</code> wrappers, as well as tools like our rig builder. But instead of creating joints, it handles and controls by hand - we compose a rig using the API in a <strong>build script</strong>. That build script handles everything, from loading the model to exporting the individual rig representations like <strong>main</strong> for our in-house anim team, <strong>FBX</strong> for crowds, or <strong>outsource</strong> for vendors. We call these scenes <strong>representations</strong>.</p>
+<p>Our CFX pipeline runs entirely through Houdini, with the majority of setups being <a href="https://www.sidefx.com/docs/houdini/Vellum/index.html">Vellum</a> hair, cloth, and muscle simulations. The artists are mostly the same, as we believe that both disciplines are two sides of the same coin.</p>
 <p><br></p>
 <h4 id="before-ragdoll">Before Ragdoll</h4>
 <p>Our pre-Ragdoll workflow for characters with clothing was fairly standard:</p>
@@ -3247,8 +3246,8 @@
 <li>Skinweight the cloth to the body joints and include a visibility switch.</li>
 <li>(Optionally) add one or two joints to let animators move cloth out of the way if necessary.</li>
 </ul>
-<p>Generally, animators would just hide that geometry though. The downside to this was the animation output often not being representative of the final shot. Therefore we usually had to wait for CFX artists to run their cloth simulations before assessing the full performance.</p>
-<p>The same goes for dynamic props interacting with characters such as ropes or chains. Even with a flexible rig, animators would need lots of time and iterations to create physically plausible animations. Combine that with requests for CFX to enhance the dynamics by actually simulating the prop, and you end up in a big mess.</p>
+<p>Generally, animators would just hide that geometry. The downside to this method: the animation output would often not be representative of the final shot. Therefore, we usually had to wait for CFX artists to run their cloth simulations before assessing the full performance.</p>
+<p>The same goes for dynamic props interacting with characters, such as ropes or chains. Even with a flexible rig, animators would need lots of time and iterations to create physically plausible animations. Combine that with requests for CFX to enhance the dynamics by actually simulating the prop, and you end up in a big mess.</p>
 <p>With Ragdoll we were hoping trying to achieve two things.</p>
 <ol>
 <li>Decrease the time to a first representative version of our shot</li>
@@ -3259,9 +3258,8 @@
 <blockquote>
 <p>Who builds the puppets?</p>
 </blockquote>
-<p>Whoever wants to!</p>
-<p>Some of our animators are eager to build Ragdoll puppets, so we let them. This is mostly for one-off shots. Having full access and control to the Ragdoll puppet enables workflows to animate with Ragdoll (think of the Ragdoll demos about finger interactions).</p>
-<p>But not every animator wants to configure simulation settings. Since our riggers do have experience setting up simulations (and build the rigs anyway), we let them do it. Through multiple iterations we arrived at a fairly automated workflow for building and managing the puppets which we'll discuss in more detail later.</p>
+<p>Whoever wants to! Some of our animators are eager to build Ragdoll puppets, so we let them. This is mostly for one-off shots. Having full access and control to the Ragdoll puppet enables workflows to animate with Ragdoll (think of the <a href="https://forums.ragdolldynamics.com/t/livestream-iii-hands-and-fingers/228">Ragdoll demos</a> about finger interactions).</p>
+<p>But not every animator wants to configure simulation settings. Since our riggers have experience setting up simulations (and build the rigs anyway), we let them do it. Through multiple iterations we arrived at a fairly automated workflow for building and managing the puppets which we'll discuss in more detail later.</p>
 <blockquote>
 <p>Which tools had to be rewritten/changed to accommodate Ragdoll puppets?</p>
 </blockquote>
@@ -3270,31 +3268,31 @@
 <p>What needed to change in the workflow?</p>
 </blockquote>
 <ul>
-<li>As Ragdoll works in the animation scene, controls for the desired motion have to exist in the first place. This meant adding joint chains to geometry we would previously not rig but rely on vertex simulations for.</li>
-<li>We learned later that the way we model geometry, in particular cloth, has become more important. Adding or removing details from the model strategically can have a great impact on the final look.</li>
-<li>Our animators got a small UI to manage their Ragdoll rigs but nothing significant changed for them either apart from being asked to run the simulation before submitting a new version for review.</li>
-<li>Most importantly, and this also leads to our biggest challenge still, is the review process. Animation and CFX have been distinct disciplines. If something needs to be dynamic, it's handled by CFX, if it's animated, it's animation. With Ragdoll, we added a dynamic component in animation, that requires more consideration during reviews.</li>
+<li>As Ragdoll works in the animation scene, controls for the desired motion have to exist in the first place. This meant <strong>adding joint chains to geometry</strong> that we would previously not rig but rely on vertex simulations for.</li>
+<li>We later learned that the way we modeled geometry, particularly cloth, had become increasingly important. And strategically adding or removing details from the model could have a great impact on the final look.</li>
+<li>Animators created a small UI to manage their Ragdoll rigs. But nothing significant changed aside from running the simulation before submitting a new version for review.</li>
+<li>Most importantly, and this also leads to our biggest challenge still: managing the review process. So far, animation and CFX were distinct disciplines. If something needs to be dynamic, it's handled by CFX; if it's animated, it's animation. With Ragdoll, we added a dynamic component in animation, which required more consideration during reviews.</li>
 </ul>
-<p>If the animated part of a character gets approved, we may still need some iterations on the dynamic part of the character. This leads to conflict in the traditional, separated and sequential pipeline because the dynamic portion of the shot happens during the animation step, therefore, the shot cannot yet proceed down the pipeline.</p>
-<p><br></p>
+<p>Even if the animated part of a character gets approved, the dynamic part may still need some iterations. This leads to conflict in the traditional, separated, and sequential pipeline because the dynamic portion of the shot happens during the animation step, and the shot can't proceed down the pipeline.
+<br></p>
 <h4 id="after-ragdoll">After Ragdoll</h4>
 <p>Like other tools, there are tasks at which Ragdoll is good and others at which it is not.</p>
-<p>A good rule of thumb we found is:</p>
+<p>We realised:</p>
 <div class="admonition hint">
-<p class="admonition-title">Rule of thumb</p>
+<p class="admonition-title">Top Tip</p>
 <p><em>"Everything in need of art direction or dynamics without vertex accurate collisions gets a Ragdoll pass.</em>"</p>
 </div>
 <ul>
-<li>Skirts and sometimes coats are easy and fast enough so we include them even in postviz rigs early on giving us a better idea of the shapes in the final shot.</li>
+<li>Animating skirts, and sometimes coats, is easy and fast enough, so we include them early, which gives us a better idea of their shapes in the final shot.</li>
 </ul>
 <p><video class="poster" muted loop width=100%  controls autoplay><source src="https://content.ragdolldynamics.com/6f632d90-7cfb-42d2-8c63-5585f853b2bb.mp4" type="video/mp4"></video></p>
 <ul>
-<li>CFX for crowd simulations has been easier than ever using Ragdoll as we were able integrated the simulations into our cycles rather than doing the simulation as a post process. This is a nice alternative to our much more labor intensive post crowd simulation process.</li>
+<li>CFX for crowd simulations has been easier than ever using Ragdoll. We were able to integrate the simulations into our cycles instead of doing the simulation as a post-process. This is a nice alternative to our much more labor-intensive post crowd simulation process.</li>
 </ul>
 <p><video class="poster" muted loop width=100% noautoplay controls><source src="https://content.ragdolldynamics.com/12b51032-bd34-4db6-bb5a-aca50503b9b3.mp4" type="video/mp4"></video></p>
 
 <ul>
-<li>Horse tails, manes, and reins are almost exclusively Ragdoll since the beginning.</li>
+<li>Horse tails, manes, and reins have been almost exclusively Ragdoll-powered since the beginning.</li>
 </ul>
 <p><video class="poster" muted loop width=100% noautoplay controls><source src="https://content.ragdolldynamics.com/577c4df6-26e1-457f-8b61-c3cb0ba8b61c.mp4" type="video/mp4"></video></p>
 
@@ -3309,55 +3307,50 @@
 <ul>
 <li>Ragdoll has given our animators a quick way to iterate on physically plausible ways of characters falling from cliffs.</li>
 </ul>
-<p>When we started, we were cautious and passed the Ragdoll rig as a separate representation to our animators. Unfortunately, that also meant that we created an extra hurdle for our animators who did not always want to swap rigs to run their simulations.</p>
-<p>After some time (much more than I'd like to admit) we gained the confidence to include Ragdoll in our main rigs, giving every animator access to the Ragdoll rigs directly. There has not been a single report of degraded performance or issues when all licenses were in use.</p>
+<p>When we started, we were cautious and passed the Ragdoll rig as a separate representation to our animators. Unfortunately, that also meant that we created an extra hurdle for those who didn't always want to swap rigs to run their simulations.</p>
+<p>After some time (much more than we'd like to admit), we gained the confidence to include Ragdoll in our main rigs, giving every animator direct access. There has not been a single report of degraded performance or issues when all licenses were in use.</p>
 <p>We also treat Ragdoll like any other software in our pipeline and lock the version for the duration of a project to prevent compatibility issues.</p>
 <p>We have since also added collision puppets (Ragdoll rigs without dynamic components) for all rigs by default.</p>
 <p><br></p>
 <h4 id="challenges">Challenges</h4>
-<p>I mentioned the review process earlier but it's worth going into more detail.</p>
-<p>Notes given on the dynamics of an animation version have to be addressed by the animator or the rigger. Since neither department has traditionally been responsible for dynamics, rigging and animation get approved with the problem being pushed downstream.</p>
-<p>Both animation and simulation are iterative processes. With Ragdoll sitting somewhere in the middle of both disciplines, it needs to be treated the same way. While Ragdoll can allow artists to quickly iterate versions, traditional workflows like Vellum are often preferred by supervisors for hero simulations due to the additional detail and accuracy in simulations.</p>
-<p>That said, Ragdoll was not meant to replace Vellum (or any traditional CFX workflows). We intended to use it primarily for our mid and background characters, allowing CFX artists to spend more time on hero characters. (Although we have used Ragdoll for characters fairly close to camera as well!)</p>
-<p>Here we ended up with characters simulated through Ragdoll (light blue) and Vellum (light green) side by side.</p>
+<p>I mentioned the review process earlier, but it's worth going into more detail.</p>
+<p>Notes given on the dynamics of an animation version have to be addressed by the animator or the rigger. Since neither department has traditionally been responsible for dynamics, rigging and animation get approved with the problems are pushed downstream.</p>
+<p>Both animation and simulation are iterative processes. With Ragdoll sitting somewhere in the middle of both disciplines, it needs to be treated accordingly. While Ragdoll can allow artists to quickly iterate versions, traditional workflows like Vellum are often preferred by supervisors for hero simulations due to the additional detail and accuracy.</p>
+<p>That said, Ragdoll was not meant to replace Vellum (or any traditional CFX workflows). We intended to use it primarily for our mid and background characters, allowing CFX artists to spend more time on hero characters. Although we have used Ragdoll for characters fairly close to camera as well!</p>
+<p>In this clip, we have characters simulated through Ragdoll (light blue) and Vellum (light green) side by side.</p>
 <p><video class="poster" muted loop width=100%  controls autoplay><source src="https://content.ragdolldynamics.com/3f9950d2-f0ba-4e2f-8dc6-ea0040fc7586.mp4" type="video/mp4"></video></p>
 <!--  -->
 <p><video class="poster" muted loop width=100%  controls autoplay><source src="https://content.ragdolldynamics.com/6a4558b4-40ba-46db-8378-507895f63fd1.mp4" type="video/mp4"></video></p>
-<p>Below is our Lead Rigging/CFX TD talking in more detail about how we build Ragdoll rigs and shots.</p>
+<p>The following sections are from our Lead Rigging/CFX TD, who goes into more detail about how we build Ragdoll rigs and shots.</p>
 <p><br></p>
-<h3 id="rigging-perspective">Rigging Perspective</h3>
+<h3 id="rigging-perspective-ragdoll-in-production">Rigging Perspective: Ragdoll in Production</h3>
 <p>Following the pipeline overview from our supervisor, this is a more focused look at how we, in rigging and tech art, adapted Ragdoll Dynamics at Herne Hill.</p>
-<p>Ragdoll isn't just something we tested, we tried to make it work at scale. That meant figuring out how to build it into our rigs, how to make it accessible for animators, and how to handle the realities of production, across different characters, shots and needs.</p>
-<p>Here's what we learned doing that.</p>
+<p>Ragdoll isn't just something we tested, we made it work at scale. That meant figuring out how to build it into our rigs, how to make it accessible for animators, and how to handle the realities of production, across different characters, shots, and needs.</p>
 <p><br></p>
 <h4 id="setup-philosophy">Setup Philosophy</h4>
 <p>The way we think about Ragdoll setups is pretty close to how we'd approach building a Houdini CFX setup: something robust, consistent, and designed to just work across most situations without extra effort. When an animator presses the “simulate” button before submitting to dailies, they shouldn't have to worry about tweaking parameters or redoing anything - the simulation should just land.</p>
-<p>That's a big difference from setups built directly by animators. Animator-led Ragdoll setups often focus on flexibility and artistic control, tools that are ergonomic, fun to play with, and easy to tweak. Our focus is more on consistency and automation. We want the simulation to complement the animation without becoming a process in itself.</p>
+<p>That's a big difference from setups built directly by animators. Animator-led ragdoll setups often focus on flexibility and artistic control, tools that are ergonomic, fun to play with, and easy to tweak. Our focus is more on consistency and automation. We want the simulation to complement the animation without becoming a process in itself.</p>
 <p>We're also using more classic Ragdoll setups in parallel, the kind that are art-directed manually using live recordings. Those are used on specific sequences, often as a first pass of animation rather than CFX. They've been especially useful for creature work or characters falling from cliffs or towers. Since those follow the same workflows you'll find in most <a href="https://learn.ragdolldynamics.com/tutorials/videos/">official Ragdoll tutorials</a>, we won't focus on them here.</p>
-<p>Instead, this article is about our other use of Ragdoll, where we treat it not as an animation tool but as a first pass of CFX. For things like tails, hair, skirts, scarfs or ropes, we want these elements to move dynamically from the start. We take the time to refine those setups once, properly, across several test scenes rather than adjusting them per shot.</p>
-<p>It means that one third of the time is spent building the rig in Maya, but two thirds is spent testing it across multiple animation scenes to find stable settings that work everywhere. It's not glamorous, but it pays off: we get results that are consistent and performant very early in the process.</p>
+<p>Instead, I will focus on Ragdoll, not as an animation tool, but as a first pass of CFX. For things like tails, hair, skirts, scarves, or ropes. Elements we want to move dynamically from the start, so we start by taking the time to refine those setups once, properly, across several test scenes rather than adjusting them per shot. This means that one-third of the time is spent building the rig in Maya, but two-thirds is spent testing it across multiple animation scenes to find stable settings that work everywhere. It's not glamorous, but it pays off: we get results that are consistent and performant very early in the process.</p>
 <p><br></p>
 <h4 id="building-the-ragdoll-rig">Building the Ragdoll Rig</h4>
-<p>Once the philosophy is clear, the build itself follows a pretty structured process. Everything starts in Maya, with the usual suspects: solver, group, markers, constraints.</p>
-<p>We use in-house tools to generate all of that quickly. Regarding shapes used, originally, we experimented with high-res shapes extracted from skinning weights for more accurate collisions, but we found that this actually caused a lot of instability in practice. So now, we stick with capsules, spheres and boxes.</p>
+<p>Once the philosophy is clear, the build itself follows a pretty structured process. Everything starts in Maya, with the usual suspects: solver, group, markers, constraints. We use in-house tools to generate all of that quickly.</p>
+<p>Regarding shapes used, originally, we experimented with high-res shapes extracted from skinning weights for more accurate collisions, but we found that this actually caused a lot of instability in practice. So now, we stick with capsules, spheres and boxes.</p>
 <div class="admonition hint">
-<p class="admonition-title">Lesson Learnt</p>
+<p class="admonition-title">Top Tips</p>
 <p><em>"Simpler shapes = more stable sims"</em></p>
 </div>
 <p>What really takes time isn't building the setup, but testing it.</p>
 <p>A good Ragdoll setup isn't one that looks great in one scene, it's one that behaves well in ten. So once the core is in place, we'll open up a range of animation shots: idle poses, running cycles, fast moves, subtle gestures. And we refine.</p>
-<p>Settings like..</p>
-<ul>
-<li><code>Rotate Stiffness</code></li>
-<li><code>Translate Stiffness</code></li>
-<li><code>Mass</code></li>
-<li><code>Limit Range</code></li>
-</ul>
-<p>And even <code>Shape Type</code> (Box vs. Capsule vs. Mesh). We dial them in until we find the values that consistently hold up.</p>
+<p>We adjust the settings until we find the values that consistently hold up, focusing on:
+- <code>Rotate Stiffness</code>
+- <code>Translate Stiffness</code>
+- <code>Mass</code>
+- <code>Limit Range</code>
+- <code>Shape Type</code> (Box vs. Capsule vs. Mesh)</p>
 <p>That's where <strong>presets</strong> come in.</p>
 <p>A setup that looks great for a static pose might fall apart on a running character. So we started building simulation presets - stable combinations of Ragdoll settings grouped by movement type. These presets can then be applied to the solver or to specific rGroups, depending on what the shot needs.</p>
-<p>And since we often have crowd shots with 10+ characters, managing all these solvers manually became a real pain. Animators would get lost trying to tweak settings across rigs, it wasn't scalable.</p>
-<p>That's what pushed us to develop a centralized tool.</p>
+<p>And since we often have crowd shots with 10+ characters, managing all these solvers manually became a real pain. Animators would get lost trying to tweak settings across rigs, it wasn't scalable. That's what pushed us to develop a centralized tool.</p>
 <p><br></p>
 <h4 id="custom-tooling">Custom Tooling</h4>
 <p>We built a custom UI to handle the growing complexity.</p>
@@ -3371,10 +3364,10 @@
 <p>But we didn't stop there.</p>
 <p>We wanted animators to stay in one window for everything Ragdoll-related. So we added:</p>
 <ul>
-<li>The ability to merge solvers (so different characters could interact),</li>
-<li>The option to unmerge them when needed,</li>
-<li>A way to assign environment geometry to a solver (collision walls, floors)</li>
-<li>And a preset editor</li>
+<li>The ability to merge solvers (so different characters could interact).</li>
+<li>The option to unmerge them when needed.</li>
+<li>A way to assign environment geometry to a solver (collision walls, floors).</li>
+<li>A preset editor.</li>
 </ul>
 <p>Most of these are features that already exist in the Ragdoll menu.</p>
 <p>We didn't re-invent anything, we just made the essential ones more accessible, especially when working with multiple rigs. Instead of relying on viewport or outliner selections, everything is centralized and filtered to what animators actually need to touch.</p>
@@ -3382,7 +3375,7 @@
 <p><img alt="ui.png" src="https://content.ragdolldynamics.com/25affcaf-097b-43da-8efa-87add754e024.png" /></p>
 <p><br></p>
 <h4 id="motion-multiplier-wind">Motion Multiplier + Wind</h4>
-<p>Some setups just don't hold when the character moves too much through the world, travel creates instability.</p>
+<p>Some setups don't hold when the character moves too much through the world, so travel creates instability.</p>
 <p>That's when we introduced the <em>motion multiplier</em>.</p>
 <p>It's a concept we often use in Houdini CFX: before running a simulation, we reduce the character's world-space motion, then restore it after the simulation. So a character running across the screen with a <code>0.5</code> multiplier will still run the same way but only travel half as far during the simulation. With a multiplier of 0, he'll run in place.</p>
 <table>
@@ -3402,9 +3395,7 @@
 
 <p><br></p>
 <p>By decoupling world motion from local dynamics, we gain massive stability. But of course, we didn't want to lose the feeling of movement, that sensation of wind, of speed.</p>
-<p>So we added a wind field.</p>
-<p>The direction is always opposite to the character's movement. That way, even when we neutralize motion for the sake of simulation, we keep the physical cues of movement alive. A character doesn't move, but their skirt flaps in the wind. It sounds like a trick, but it feels real.</p>
-<p>And it worked.</p>
+<p>So we added a wind field. Its direction always opposite to the character's movement. That way, even when we neutralize motion for the sake of simulation, we keep the physical cues of movement alive. A character doesn't move, but their skirt flaps in the wind. It sounds like a trick, but it feels real.</p>
 <table>
     <tr>
         <th>Wind Field Disabled</th>
@@ -3423,12 +3414,12 @@
 <p><br></p>
 <h4 id="production-changes">Production Changes</h4>
 <p>Integrating Ragdoll gave us something we hadn't seen in animation before - representative dynamics.</p>
-<p>From the first animation version, right after blocking stage, we could preview tails, chains, or cloth reacting to movement. It brought motion into the process early, and that alone helped improve both reviews and decision-making.</p>
+<p>From the first animation version, right after the blocking stage, we could preview tails, chains, or cloth reacting to movement. It brought motion into the process early, and that alone helped improve both reviews and decision-making.</p>
 <p>That said, rolling it out at scale wasn't perfect. Ragdoll is a new tool for many in the team, and while some curious and adventurous animators dove in, explored presets, and learned how to push the limits, others had very limited time, sometimes just a day, to pick it up. With our integration and the way Ragdoll fits into our workflow, many of the online tutorials became less applicable or harder to translate into our context.</p>
-<p>As a result, many animators used the tool as a black box, press simulate, get something moving. But when a supervisor note came in about dynamics rather than timing or posing, they sometimes struggled to respond. Without understanding what's under the hood, adjusting the simulation became frustrating. We often had to open the animation scenes ourselves, as rigging and CFX artists, to tweak the setup and meet the note. Once we stepped in, the shot would often get mentally tagged as “rigging's responsibility”, meaning <em>we</em> were expected to handle all future Ragdoll sims on it. And that's counterproductive, Ragdoll is meant to give animators more freedom, not signal that anything complex has to go back to rigging/CFX.</p>
-<p>And beyond the workflow, there are technical limitations. Compared to a detailed Vellum simulation, Ragdoll lacks the resolution to fully reshape high-detail cloth meshes. For example, robes or skirts with sculpted wrinkles look great as rest poses for Vellum, but in Ragdoll they hold those folds rigidly throughout the simulation. That raises questions about modeling intent.</p>
+<p>As a result, many animators used the tool as a black box, press simulate, and get something moving. But when a supervisor note came in about dynamics rather than timing or posing, they sometimes struggled to respond. Without understanding what's under the hood, adjusting the simulation became frustrating. We often had to open the animation scenes ourselves, as rigging and CFX artists, to tweak the setup and meet the note. Once we stepped in, the shot would often get mentally tagged as “rigging's responsibility”, meaning <em>we</em> were expected to handle all future Ragdoll sims on it. And that's counterproductive, Ragdoll is meant to give animators more freedom, not signal that anything complex has to go back to rigging/CFX.</p>
+<p>Beyond the workflow, there are technical limitations. Compared to a detailed Vellum simulation, Ragdoll lacks the resolution to fully reshape high-detail cloth meshes. For example, robes or skirts with sculpted wrinkles hold folds rigidly throughout the simulation. That raises questions about modeling intent.</p>
 <p>Should assets be sculpted for final CFX later, or neutralized for Ragdoll now?</p>
-<p>For rigid props, ropes, or tails, Ragdoll has been a solid win. It's quick, stable, and usually good enough for final without any handoff to Houdini.</p>
+<p>For rigid props, ropes, or tails, Ragdoll has been a solid win. It's quick, stable, and usually good enough for a final version without any handoff to Houdini.</p>
 <p><br></p>
 <h4 id="next-steps">Next Steps</h4>
 <p>Ragdoll isn't a replacement for Vellum or traditional cloth sims, but it's become an important tool in our pipeline. Used right, it helps us move faster, visualize earlier, and reduce the number of shots needing full CFX down the line.</p>
@@ -3471,7 +3462,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020-2024 Imbalance Ltd
+      Copyright &copy; 2020-2025 Imbalance Ltd.
     </div>
   
 </div>
